@@ -1,0 +1,556 @@
+class name="nominit"
+  join
+        xse:gawk in="verbsall.lst": '''
+           function etu(w) {  gsub("ä","a",w);gsub("ö","o",w);gsub("y","u",w);return w}
+           BEGIN { FS=","
+            while (getline<"vmids.csv">0) m[substr($1,3,2)]=$2 
+            for (i in m) print "<li>" i, "=" m[i]
+            
+            }
+            { 
+              w=etu($3)
+              en=substr(w,length(w),1) #-length(m[$1]))
+              if (en!=m[$1] "a") 
+              print en "/" m[$1] "a_" $1 w  
+             #if (substr($3,1,length(m[$1)!=)
+              } 
+         '''   
+  n      xse:shellexec: export LC_ALL=C;cat sana_tvt.lst | sort  >sanat_kotus.lst   # keep old to remind of it's origin in /sanakone (see sanakone/kotus.xsi)
+        xse:shellexec: export LC_ALL=C;cat ei_sana.lst | sort  >eis_sana.lst 
+        xse:gawk in=ei_vikaa.lst out=turha.tmp: '''
+          BEGIN { FS="\/"}
+          { print $1}
+        '''  
+        xse:shellexec: export LC_ALL=C;cat turha.tmp | sort  >eis_vikaa.lst 
+        pre
+          xse:shellexec: export LC_ALL=C; join -21 -11 -o 2.1 2.2   -e XXXX -a1 eis_vikaa.lst sanat_kotus.lst >sanat.all #|grep  XXX #|uniq   #>sanainfo.lst
+          #xse:shellexec: export LC_ALL=C; join -11 -21 -o 1.1 1.2 2.1  -e XXXX -a1 sanat_kotus.lst eis_vikaa.lst |grep -v XXX #|uniq   #>sanainfo.lst
+        hr:           
+  zz      pre
+          xse:shellexec: export LC_ALL=C; join -11 -21 -o 1.1 1.2 2.1  -e XXXX -a1 sanat_kotus.lst eis_sana.lst |grep -v XXX #|uniq   #>sanainfo.lst
+        #xse:shellexec: 
+
+  
+  yhdys
+    xse:gawk in="wifiana.txt" out=wifiana2.txt: '''
+      { #gsub(/^[ \t]+|[ \t]+$/, "", $0)  #trim 
+        gsub("#\\$", "X", $0)  #  "#" as last - hfst fiana Ordinals have these  
+        print  substr($0,2,length($0)-2)
+      }
+     '''
+    xmp
+     xse:gawk in=".txt": '''
+      function perusmuoto(muoto)  {  
+       if (index(muoto," A Pos Nom Sg")>0) return 1
+       if (index(muoto," N Nom Sg")>0) return 1
+       if (index(muoto," N Nom Sg")>0) return 1
+       if (index(muoto," Num Nom Pl")>0) return 1
+       if (index(muoto," Adv")>0) return 1
+       if (index(muoto," Ord")>0) return 1
+       if (index(muoto," V Inf1 Lat")>0) return 1
+       return 0
+      } 
+      BEGIN { sep="\\[\\[";FS="/"}
+      /Punct/ { print $0 > "yhdys_wikt.lst"
+        next}  #16000 wiktionaryssa merkattua yhdyssanaa
+      /Card\#/ { print $0 > "yhdys_card.lst"  ### muutama lukusana joiden yhdyssanaisuus merkattu oudosti
+        next}  #16000 wiktionaryssa merkattua yhdyssanaa
+      /\#/{ 
+            #if (length($1)<=10)
+          if (substr($1,length($1))!="t") { 
+            asama=0;ayhdys=0;
+            haku=substr($1,1,999)
+            #if (length(haku)>8) next;
+            for (i=2;i<=NF;i++)
+              if (index($i,"#")>0) { if (index($i,"\#")<length($i)) if (perusmuoto($i)) ayhdys=1}
+              else if (index($i,haku)==1) { asama=1}
+            if ( asama && ayhdys) { #sellaisenaan perusmuodossa ja myös joku risuaidoitettu muoto: suspekteja
+             s=s+1;print >"yhdys_seka.lst"  ######### enimmäkseen taivutettuja tai muuten sekavaa - heitetään pois (pitäis käydä läpi:toisinto, parkita,...)
+            }
+            else if (asama) { 
+               s=s+1; 
+              print ("==" $0 , haku)>"yhdys_ei.lst" # sellaisenaan, ei risuaitoja perusmuodossa.  Pidetään mukana
+            }
+             else 
+               if (ayhdys)  print ("" $1)>"yhdys_hfst.lst"  ########### #risuaidoitetu, ei sellaisenaan - selvä yhdyssana hfst:n mukaan. Pois.
+               else print > "yhdys_eiei.lst" ""  ######## 150 enimmäkseen taivutettuja, jokunen (verbejä) virhe: pii#leskellä V Inf1 Lat. Joutanee pois 
+           #print $i, " / "   $1  
+          #V Inf1 Lat
+          #a pOS nOM
+         #print "****" $0 "   "   
+          }
+         next
+       }
+       /\*/ { print $1 >"ei_sana.lst";next}  ######## 10000 hfst:lle tuntematonta sanaa
+       
+       //{ oks=0;
+           for (i=2;i<=NF;i++)
+              if (index($i,$1)==1) if (perusmuoto($i)) oks=1
+           for (i=2;i<=NF;i++)
+             print "/" $1 "/"  $i "/" , perusmuoto($i),index($i,$1)
+         if (oks)   print >"ei_vikaa.lst"   ##  22317 sanaa joiden ei epäillä olevan yhdyssanoja  (niitä kyllä on joukossa)
+         if (!oks) print >"ei_ymmarra.lst"  ###3409 enimmäkseen monikkoja yms taivutuksia .. joutanee pois
+         }
+       
+    ''' 
+  wiklist
+   xmp
+    xse:gawk in="wikilista.txt" out=wikithe.txt: '''
+    BEGIN { sep="\\[\\[";FS=":::"}
+    
+     // { #print "****" $0; ;
+       #if (NR>10000) exit
+       split($2,parts,sep);
+     st=""
+     for (i in parts)   { 
+       ast=substr(parts[i],1,index(parts[i],"]]")-1);
+       if (index(ast,"|")>0)
+         ast=substr(ast,1,index(ast,"|")-1);
+         if (index(ast," ")<1)
+          if (match(ast,/[^äöa-zA-ZÄÖ]/)==0)
+           st=st  tolower(ast) "\n"  
+           
+      }
+     print $1 st
+     }
+  
+   '''
+   xse:shellexec: cat  wikithe.txt |./fiana >wifiana.txt
+   h1: res in wifiana.txt
+  karsiwifi   #muunkieliset yms veke
+    xse:gawk in="fiwiktionary-20180520-pages-meta-current.xml" out=wik.txt: '''
+      BEGIN { FS="[><]"; g0=0;gogo=0;suomi=0;intext=0  
+      otsi="===Yläkäsit,===Vastak,===Synonyy,===Alakäs,==Osakäs,===Vierus,==Liitty,==Etymo"
+      split(otsi,ots,",")
+       }
+      /<title/ { if (go)
+                { if (suomi==1) print juttu>"keep.txt"; else print "EI:" juttu>"eisuomi.txt" }
+                 suomi=0
+                 if (match($3,/[^äöa-z\-]/)==0)
+                  { go=1;intext=0 }  #ei muuta kuin pieniä kirjaimia .. tavuviiva?
+                   else { go=0;gogo=0;sana=$3 
+                   }
+                 # print $3 go "************************************************************"
+                 #print "%" sana "%" match($3,/[^a-z]/)
+                 juttu="";
+                }
+      /^\*/ { print >"vex.txt" ;next}      
+      /<comment/ { next }    
+       /Luokka\:/    { if (index($0,"Suomen")<1) { print sana,"///" $0>"pois.txt";go=0} }    
+       /==Suomi/ { suomi=1;print  }
+      { if (go) juttu=juttu "\n" $0}          
+    '''   
+  wiktio
+   xmp
+    #xse:gawk in="wikitext.short" xout=wikilista.txt: '''
+    #xse:gawk in="fiwiktionary-20180520-pages-meta-current.xml" out=wikilista.txt: '''
+    xse:gawk in="wik.txt" out=wikilista2.txt: '''
+      BEGIN { FS="[><]"; g0=0;gogo=0;suomi=0;intext=0  
+      otsi="===Yläkäsit,===Vastak,===Synonyy,===Alakäs,==Osakäs,===Vierus,==Liitty,==Etymo"
+      split(otsi,ots,",")
+       }
+       
+       #//{ print $0, "in:"intext,"/fi:"suomi,"/go:" go,"/gogo:", gogo}
+      /<text/{ intext=1;suomi=0}
+      /<\/text/{ intext=0;xsuomi=0}
+       /==/{ if (index($0,"===")<1) { suomi=0;};gogo=0}
+       /<\/page>/{ if (seli!="") print sana yhdys ":::", seli; 
+         seli="";intext=0;suomi=0}
+      /<title/ {  if (match($3,/[^äöa-z\-]/)==0)
+                  { go=1;intext=0 }  #ei muuta kuin pieniä kirjaimia .. tavuviiva?
+                   else { go=0;gogo=0;sana=$3 
+                   }
+                  suomi=0 
+                  sana=$3
+                  yhdys=""
+                 #print "%" sana "%" match($3,/[^a-z]/)
+                }
+       /yhdyssana[^t]/{ yhdys="_"}         
+       /<text/ { if (index($0,"==Suomi")>0) { suomi=1} ;next   }           
+       /==Suomi/ { suomi=1;next}
+       /{ { [äöa..z]\-/ { suomi=0}
+       /{ { fi\-/ { suomi=1}
+       #/\{ \{ yhdyssana/{ suomi=0;go=0;gogo=0;next} 
+       /^====/ { if (go) for (k in ots) if (index($0,ots[k])>0) { gogo=1 ;next}}
+       /^#.*\[\[/ { if (go) if (suomi) seli=seli " " $0 }  #sometimes related words are on this kind of lines
+      {   if (gogo==1) if (suomi==1) {    seli=seli " " $0 
+        #match($0,/\[\[(.*?)\]\]/,hits) 
+        #seli=seli " " hits[0]
+        #for (i=1;i<=length(hits);i++) seli=seli "(" i "=" hits[i] ")"
+        }
+      } 
+    
+    '''
+  wiktest
+   xmp
+    xse:gawk in="turha.xxx" xout=wikilista.txt: '''
+       /page/ {print}
+      /title/ {if (match($3,/[^a-z]/)==0) print      }
+        {                  if (NR>15000) exit}
+       /text/ {print    }           
+       /<\/text/ {print  "******************"  }           
+       /==Suomi/ {print}
+       /====Liitty/ {print}
+       /====Synonyy/ {print}
+       /====YlÃ¤kÃ¤sitteet/ {print}
+    
+    '''
+  wnsyns
+     #BEGIN { FS="\t"}        { print $3} finwn-synsets.csv >syns.lst
+   pre  
+     xse:gawk in=turha.lst: '''
+        BEGIN { FS="\t"}     
+         {  print $2} 
+       ''' 
+   pre  
+     xse:gawk in=syns.lst out=turha.tst: '''
+        BEGIN { FS="|"}     
+         { if (NF>1) print $0} 
+       ''' 
+
+  muo
+    pre
+       xse:gawk in=vmids2.csv: '''
+        BEGIN { FS=","}
+         { if ($2!=$9) print "<li>" $1, $2 "/a", $9 "/essa"}
+        # { if ($2!=$9) print "<li>" $1, $2 "/a", $9 "/essa"}
+        #{ if ($3!=$11) print "<li>" $1, $3, $11 }
+       ''' 
+  hi
+    h1: hello
+  fixlista
+     h1: hello  
+     xse:shellexec: ./riimaa fixlista 
+     xse:shellexec: cat nomstosort.csv | sort > nomsall.csv
+  fixverbit
+     xse:shellexec: cat verbstosort.csv | sort -V > verbsall.csv
+  testaa
+     h1: hello  
+     xse:shellexec: ./riimaa testaa 
+  pilko   
+      xse:shellexec: ./riimaa pilko
+  sisin
+    pre
+     xse:gawk in=nomsall.csv: '''
+        BEGIN { FS=","}
+        {
+         #if (match($2,/[aeiou]/)==0)  print
+         if (match(substr($2,length($2),1),/[aeiou]/)==0)  print
+        } 
+      '''  
+       
+  etsi
+       ###xse:gawk in=noms4.csv: '''
+        BEGIN { FS=","}
+        {
+         if (prev!=$1) { print "<li>" prev;
+         for (vok in voks) print "," voks[vok];
+         delete voks}
+         voks[$3]=$3;
+         prev=$1 
+        } 
+      '''  
+      xse:shellexec: ./riimaa etsi 
+      ###xse:gawk in=noms4.csv: '''
+        BEGIN { FS=","}
+        { if (prev1!=$1) 
+          if ($3!="x023") if (length($3)==2) { print "<li>" $0; prev1=$1 }
+         }  
+      '''  
+  sanat
+    xmp
+      xse:gawk in=verbsall.lst out=v.lst: BEGIN { FS=","} { print $3}
+      xse:gawk in=nomsall.lst out=n.lst: BEGIN { FS=" "} { print $3}
+      xse:shellexec: export LC_ALL=C;cat v.lst n.lst |iconv -f ISO-8859-1//TRANSLIT -t UTF-8 |sort >nv.lst
+      xse:shellexec: export LC_ALL=C; cat kotuwrd.lst |sort >k.lst
+      xse:shellexec: export LC_ALL=C;comm -1 nv.lst k.lst
+  c    #xse:shellexec: cat kotuwrd.lst   |../sanakone/fiana > fiana.lst
+      xse:shellexec: cat fiana.lst | grep \# |egrep -v '(\/[^\#]*[\/$])' >yhtsans.lst
+      xse:gawk in=yhtsans.lst:  BEGIN { FS="/"} { print NR,substr($1,2)}
+      xse:gawk in=fiana.lst out=adjekt.lst:  BEGIN { FS="/"} /\ A\ Pos Nom/{ print substr($1,2)}
+      #xse:shellexec: iconv -t ISO-8859-1//TRANSLIT -f UTF-8 kotuwrd.lst >kotuiso.lst
+      xse:gawk in=verbsall.lst out=v.lst: BEGIN { FS=","} { print $3}
+      xse:gawk in=nomsall.lst out=n.lst: BEGIN { FS=","} { print $3}
+      xse:shellexec: cat v.lst nlist |iconv -f ISO-8859-1//TRANSLIT -t UTF-8 |sort 
+      ###pre
+        xse:shellexec: comm kotuiso.lst 
+        xse:shellexec: comm kotuiso.lst 
+      
+      #|grep \# |grep
+      
+  alku
+   h1: muinaishistoria .. jos joudut palaamaan tähän niin mieti mitä käsitöitä missäkin välissä pitää tehdä
+   xse:exit
+        pre
+      xse:gawk in="taivall.lst" out="taivlka.tmp": { if (substr($2,1,3)<52) len=sprintf("%03d",length($1));print substr($2,1,3),substr($2,4,1),"x"NR % 2 , len,$1}
+      xse:shellexec: sort taivlka.tmp >taivsort.tmp
+      # otetaan "otos" ekat poikkeavat
+      xse:shellexec: sort taivlka.tmp | rev | uniq -f 2 | rev >taivosa.tmp
+      xse:shellexec:  export LC_ALL=C; cat taivsort.tmp|sort |iconv -t ISO-8859-1//TRANSLIT -f UTF-8  > nomsall.tmp
+      xse:shellexec:  export LC_ALL=C; cat taivosa.tmp|sort |iconv -t ISO-885libre9-1//TRANSLIT -f UTF-8  > nomsosa.tmp
+      xse:gawk in=nomsall.tmp out=nomsall.lst: { if ($1<50) print $1,$2,$5} 
+      xse:gawk in=nomsosa.tmp out=nomosa.lst: { if ($1<50) print $1,$2,$5} 
+      : {?read('nomosa.lst')}
+       
+      #export LC_ALL=C;rev  noms.lst | uniq -f 1 | rev  
+  taka
+       xse:shellexec: ./nominoi taka nomsall.lst tmp
+       h2: helpompi greppailla voksoint normalisoitua listaa tiedostosta "tmp"
+       
+  ## tässä välissä tehty "listaaoudot" (lopussa), ja talletettu korjaustiedosto nimellä  noms.fix
+  listaaoudot 
+     xse:gawk in=lopvoks.txt  env="LC_ALL=C": BEGIN { FS=","} { st=st $2 ","} END{ print "<li>" tolower(st)}
+     xse:shellexec: ./nominoi listaaoudot
+     h2: noms.lst ->noms2_fixed.lst
+     h2: muista editoidA noms2_fixed.lst > noms.fix
+     xmp
+      xse:shellexec: head -100 noms2_fixed.lst
+  fixmonikot 
+     xse:shellexec: ./nominoi fixmonikot nomsall.lst noms3_fixed.lst
+     xmp
+       xse:shellexec: tail -100 noms3_fixed.lst
+     xmp
+       ## tuottaa (hardwired) noms2_fixed.lst
+       ## muuttaa jotkut kotuksesta poimitut sanat yksikölliseksi käsityönä tehtyyn listaan perustuen (perusmuotoa ei aina voi päätellä monikosta)
+       ## sanalistojen muuttaminen pitää joskus tehdä sujuvammaksi...
+       ##nomfix.lst + nomsall.lst ->nomsfixed1.lst
+  uuslista
+     h1: luolista 
+     xse:shellexec: ./nominoi {/form/w}
+  luolista
+     h1: luolista 
+     xse:shellexec: ./nominoi {/form/w}
+     h1:  noms3_fixed.lst -> noms3.csv
+     xmp
+       xse:shellexec: head -100 noms3.csv
+     
+     xse:shellexec: export LC_ALL=C;cat noms3.csv |sort >noms4.csv
+     h1: xse:shellexec: export LC_ALL=C;cat noms3.csv |sort >noms4.csv
+     xmp
+       xse:shellexec: tail -100 noms3.csv
+  lataasanat  
+     xse:shellexec: ./nominoi lataasanat
+     
+  listaa
+       xse:debug  
+      xse:shellexec: ./nominoi listaa {/form/w}
+      : </ul></ul></ul></ul></ul></ul>
+      h2: luki noms.csv (jonka teki "luolista"), tuottaa siitä nomssort3.csv ja listaa sanoja luokittain puuna
+  uudetmuodot
+     h1: luodaan uusi lista muodoista (kaikki muodot, järjestys sama kuin wiktionaryssa)
+     ul
+       xse:gawk in=muodot2.lst: BEGIN { FS=",";OFS=","; print "<table border=1>" } { if (NR>3) next; x="<td>" NR "</td> "; for (i=2;i<=NF;i++) { x=x "<td>" i " <b>" $i "</b></td>"} ; print "<tr>",x,"<tr>"}
+     pre 
+       xse:gawk in=muodot2.lst out=muodot3x.lst: BEGIN { FS=",";OFS=","} { if (NR>333) next; print $1 , $2, $4 ,$3   ,$4  ,$4  ,$5  ,$4   ,$4,   $4   ,$3  ,$4   ,$4,$4 ,$10 ,$9  ,$12 ,$12   ,$11  ,$12   ,$12   ,$12   ,$9,   $12,   $12 }  
+ 
+
+       #print $1 ,"",$3 ,$2    ,$3 ,$3 ,$4 ,$3 ,$3 ,$3 ,$2 ,$3  ,$3  ,$9 ,$11 ,$10 ,$11 ,$11 ,$12 ,$12 ,$10 ,$10 ,$9 }
+     pre: {?read('muodot3.lst')}
+  listaaoudotxx 
+     xse:gawk in=lopvoks.txt  env="LC_ALL=C": BEGIN { FS=","} { st=st $2 ","} END{ print "<li>" tolower(st)}
+     xse:shellexec: ./nominoi listaaoudot
+  ### h3: listaa t-loppuisia muotoja käsin läpikäytäväksi - mitkä monikkomuotoja, mistä puuttuu loppuvokaali perusmuodossa
+   h3:
+   
+   ul
+     #xse:gawk in="nomsall.lst" env="LC_ALL=C": '''
+     xse:gawk in="tmp" env="LC_ALL=C": '''
+       BEGIN{ FS=" "}
+       { 
+         ll=substr($3, length($3),1)
+           if (ll=="t") {
+         ll=substr($3, length($3)-1,2)
+           }
+         
+         #if (ll=="p") print 
+         if (olka!=$1) {
+          lst=""
+          n=asorti(lls,x)
+         for (ll in lls) {
+           lst=lst  lls[ll] "<b>" ll "</b>, "
+         
+         }
+         print "<li><b>" olka,"</b>",lst "</li>"
+         delete lls
+         }
+         lls[ll]=lls[ll]+1;
+         olka=$1; 
+       }
+     '''  
+  karsi
+   # käsin poistetaan vääriä sanoja,kotuksen ihmeellisyyksia - pitää vielä tutkia
+   hr  
+   xse:shellexec: grep -a 005 nomsall.lst  
+   #| grep -a -v i
+  hr  
+   ###xse:shellexec: grep -a 002 nomsall.lst  
+  hr  
+    pre
+     xse:gawk in=nomsall.lst: '''
+       BEGIN{ FS=" "}
+       
+       /t$/{ if ($1<32) print}
+       { if (length($3)>169) print}
+       /kaan$/ { print}
+       /kin$/ { if (length($3)>8 ) print}
+     '''    
+   hr  
+  gett
+     # xse:gawk in=nomsall.lst xout=nomstobefixed.lst: 
+     # xse:shellexec: export LC_ALL=C; gawk '
+     #xse:to  element="/"
+     xse:set var=cmd: 
+          
+          .  BEGIN { FS=" "}; 
+          . { if ($1<32) 
+          .  if (substr($3,length($3),1)=="t") 
+          . print $0 ,substr($3,length($3),1), length($3)
+          . } 
+        
+     hr   
+     #pre :  export LC_ALL=C; gawk '  {$cmd} ' nomsall.cmd
+     hr    
+     xse:debug 
+     
+     #xse:shellexec: export LC_ALL=C; gawk '  {$cmd} ' nomsall.cmd
+     #xse:to file=fixmon.awk
+     # : {$cmd}
+  verbitesti
+   pre
+    xse:gawk in="verbsall.lst" out="verbitest.lst": '''
+      BEGIN { FS=","}
+     { if ($1!=plk) { print  $3 }    else if ($2!=pav) print $3
+       plk=$1;pav=$2
+       }
+     '''
+    xse:gawk in=verbitest.lst out=verbitest.gen: ''' 
+      //{ print $1 " V Inf1 Lat"}
+      //{ print $1 " V Prs Act Sg1"}
+      //{ print $1 " V Prs Act Sg3"}
+      //{ print $1 " V Prs Pass ConNeg"}
+      //{ print $1 " V Pot Act Sg3"}
+      //{ print $1 " V Pst Act Sg3"}
+      //{ print $1 " V Pst Pass ConNeg"}
+      //{ print $1 " V Inf2 Act Ins"}
+      //{ print $1 " V Cond Act ConNeg"}
+      //{ print $1 " AgPrc Pos Nom Sg"}
+      //{ print $1 " V Impv Act Pl2"}
+    '''   
+    
+    
+            
+    xse:shellexec: cat verbitest.gen |./figen >vtest.tmp
+    xse:gawk in=vtest.tmp out=haku.lst:  { if (index($0,"?")<1) if (NF>2) print $(NF-1)}
+    #>verbitest.res
+  
+  nomtesti
+    pre
+      ###xse:gawk in="nomsall.lst": 
+       . BEGIN { FS=" " }
+       . {   
+        .   if ($1!=plk) { ex=ex ",'"  $3 "'"  ##uusi luokka
+       .       if (prev=="") prev=eka 
+       .       pex=pex ",'" prev "'";
+       .       p2=$2;
+       .       prev="";eka=$3}
+       .   plk=$1; 
+       .   if (prev=="") if ($2!=p2) { prev=$3; print $0, "**************"} 
+       . } 
+       . END { print "<li>" ex;   print  "<li>"pex }
+    h1: teelista      
+    pre
+      xse:gawk in="nomsall.lst" out="nomtest.lis": '''
+         BEGIN { FS=" "}          
+         { if ($1!=plk) {  print $3 ;did=1 }  
+         else if (1==1)
+         {  if (did<6)
+             { if ($2!=pav) 
+               {  print  $3
+                  did=did+1
+               }
+               else          if (did<3) { print  $3 ;did=did+1 }       
+             }     
+         }  
+         plk=$1
+         pav=$2
+       }      
+       '''
+    h1: poimittu 
+    hr
+    xse:shellexec: cat nomtest.lis |wc  
+    hr
+    xse:gawk in=nomtest.lis out=nomtest.gen: ''' 
+        //{ print $1 " N Nom Sg"}
+        //{ print $1 " N Gen Sg"}
+        //{ print $1 " N Par Sg"}
+        //{ print $1 " N Ine Sg"}
+        //{ print $1 " N Ela Sg"}
+        //{ print $1 " N Ill Sg"}
+        //{ print $1 " N Ade Sg"}
+        //{ print $1 " N Abl Sg"}
+        //{ print $1 " N All Sg"}
+        //{ print $1 " N Ess Sg"}
+        //{ print $1 " N Tra Sg"}
+        //{ print $1 " N Abe Sg"}
+        //{ print $1 " N Nom Pl"}
+        //{ print $1 " N Gen Pl"}
+      //{ print $1 " N Par Pl"}
+        //{ print $1 " N Ine Pl"}
+        //{ print $1 " N Ela Pl"}
+        //{ print $1 " N Ill Pl"}
+        //{ print $1 " N Ade Pl"}
+        //{ print $1 " N Abl Pl"}
+        //{ print $1 " N All Pl"}
+        //{ print $1 " N Ess Pl"}
+        //{ print $1 " N Tra Pl"}
+        //{ print $1 " N Abe Pl"}
+        //{ print $1 " N Ins Pl"}
+      '''           
+    h1: generoitu 
+    #xse:gawk in=ntest.tmp out=ntest.lst:  { if (index($0,"?")<1) if (NF>2) print $(NF-1)}
+    xse:shellexec: cat nomtest.gen |iconv -f ISO-8859-1//TRANSLIT -t UTF-8 |./figen |iconv -t ISO-8859-1//TRANSLIT -f UTF-8  >ntest.tmp
+    xse:gawk in=ntest.tmp out=ntest.lst:  { if (index($0,"?")<1) if (NF>2) print $(NF-1)}
+    #xse:gawk in=ntest.tmp out=ntest.lst:  /N Ill Sg/{ if (index($0,"?")<1) if (NF>2) print $(NF-1)}
+    hr
+     h4
+      xse:shellexec: cat ntest.lst |wc
+    #>verbitest.res
+  
+        
+  testaalistaa
+    pre
+     xse:gawk in=nomsort.csv: '''
+       BEGIN {  FS="," }
+       // {   
+       #print $2
+       if (length($6)<1  ) print
+       if (length($3)>2) print "<B>",$0,"!</B>"
+       #if ($4!=prev) if (substr($4,1,1)!=substr($4,2,1)) print #substr($4,1,1),substr($4,2,1)
+       prev=$4
+         voks[$3]=voks[$3]+1 ;avs[$4]=avs[$4]+1 }
+       END { 
+       print "<hr>"
+       for (s in voks) print "<li>" s," : ",voks[s]
+       print "<hr>"
+       print "<hr>"
+       for (s in avs) print "<li>" s," : ",avs[s]
+       }
+       
+     ''' 
+     # gawk '{print $2 " N Gen Pl" }' |./figen |gawk '{print $5}' > plgen.lst
+     
+     kansi 28 partit  kantta av:ss
+      -> partiti: a, jää kantt
+      -> mids(28,1)=--tt, jää kan + tieto että lopkon ja lopvok ignoroidaan 
+     
+     veden 27 av SS
+     -> genet N,  mid=--de, --> VE S ja I igno
+     
+     hauen 007 7 gen
+      g ->  HAUE
+      MID -E HAU,  IGNO vok I
+      kon: nocheck as usual
+      vok: ei tsekata -> HAU
+      av: -> HAU k/_, ei muutosta kun heikossa luokassa tyhjä
+      
+  

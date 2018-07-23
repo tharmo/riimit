@@ -1,0 +1,28 @@
+V052,a,,*,t,n,,t,,,,n,  // "*" toistaa loppuvokaalin
+V053,aa,a,aa,et,an,,et,a,a,a,an,
+V054,aa,a,aa,et,an,-s,et,a,a,a,an,  //-s: huutaa syö av-kons
+V055,aa,a,aa,et,an,-s,et,a,a,a,an,  //-s souTaa souSi
+V056,aa,a,a,et,an,o,et,a,a,a,an,
+V057,aa,a,aa,et,an,o,et,a,a,a,an,
+V058,ea,e,ee,et,en,,et,i,,e,en,
+V059,ea,e,ee,et,en,-s,et,i,,e,en,  // -s tunTea tunSi
+V060,ea,e,ee,et,en,t,et,i,,e,en,  // lähteä
+V061,ia,i,ii,it,in,,it,i,,i,in,
+V062,da,,,d,n,_,,d,_,,n,            // naIda syö sis-vokaalin ei naiiin vaan nain
+V063,da,,,d,n,_,,d,_,,n,            // saada  sai
+V064,da,,,d,n,__,,d,__,,n,          //viedä vein .. erikoistap. sama kun suo / soita nomineissa
+V065,da,,,d,n,_v,,d,_v,,n,           //käyDä kävi
+V066,sta,se,see,st,ss,s,s,st,s,s,ss,
+V067,*a,e,ee,*,*,,,*,,,*,            //lle, nne
+V068,da,tse,tsee,d,n,ts,,d,ts,,n,
+V069,ta,tse,tsee,t,nn,ts,t,t,ts,t,nn,
+V070,sta,kse,ksee,st,ss,ks,s,st,ks,s,ss,
+V071,da,-e,-kee,d,n,-,,hd,-k,h,hn,  //nähdä tehdä ...uniikkia sotkua, hoidettu koodissa /näkevät
+V072,ta,ne,nee,t,nn,n,t,t,n,t,nn,
+V073,ta,a,a,t,nn,s,t,t,,t,nn,
+V074,ta,a,aa,t,nn,s,t,t,a,t,nn,
+V075,ta,a,aa,t,nn,s,t,t,a,t,nn,
+V076,aa,a,aa,et,an,-s,et,a,a,a,an,    //taiTaa taiSin
+V077,aaja,x,ajaa,x,x,aj,x,x,aja,x,x,
+V078,aa,x,aa,x,x,x,x,x,a,x,x,
+V9071,xxhd,-e,-kee,hd,hn,,h,hd,k,h,hn,

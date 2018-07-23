@@ -1,0 +1,106 @@
+                 av: (4) 5,7,8,9,10,14,(28) 32,33,34,35,41,43,48,49
+1,  abo         , j     
+2,  hiomo       , j,id,itt     
+3,  avio        , id,itt    
+4,  elikko      , j1,id0,itt0  x
+5,  häkki        ,1,       x
+6,  agari       ,,-eid,eitt       
+7,  kaikki         ,1,       x
+8,  nukke        , j1     x  (ein1)
+9,  ankka         , -oj1   1x  (ain1)
+10,  fokka         , -i1    x (ain1)
+11,  itara       , -i,-oj,-oid,-oitt      //     itarien, itaroiden, itaroitten, (itarojen), (itarain)
+12,  urea        , -oid, -itt (ain)
+13,  aluna       , -oj,-oid,-itte  (ain)
+14,  ulappa      , -oj1,-oitt0  x (ain)
+15,  upea        , -id,-itt    //upeiden, upeitten, (upeain) 
+16,  kumpi       ,,      
+17,  keruu       , -id,-itt   
+18,  jää         , -id,-itt   
+19,  suo         , -id,-itt   
+20,  bukee       , -id,-itt   
+21,  gay         ,j, id,itt    
+22,  buffet      , 'id     
+23,  lohi        ,,       
+24,  uni         ,,-t       
+25,  liemi       ,,--nt       
+26,  veri        ,,-t       
+27,  mesi        ,,--tt       
+28,  kansi       ,1,--tt1       x
+29,  lapsi       ,,--st       
+30,  peitsi      ,,---st       
+31,  yksi        ,       
+32,  tytär       , i1,t0     x
+33,  astin       , nt0 ,mi1  x
+34,  hapan     , mi1,nt0    x
+35,  lämmin      , mi1,nt0   x   
+36,  alin        , mpi,nt   (ain)
+37,  vasen       , mpi,nt   (ain)
+38,  öinen       , st,si    
+39,  ajos        , ksi,st   
+40,  etuus       , ksi   
+41,  rakas        , id1,itt1    x
+42,  mies        , hi,st    
+43,  immyt        , id1,itt1    x
+44,  kevät       , id,itt    
+45,  sadas       , nsi   
+46,  tuhat       , nsi,nt   
+47,  mennyt      , -eid,-eitt  
+48,  hake         , id1,itt1   x 
+49,  huhmar      , i1,t0,eid1,eitt1     x
+
+
+itt-muodot aina vahvoja
+nt - vain 34,35 / heikkoja.. 
+
+
+                 ,in    
+1,  abo         , ih1    
+2,  hiomo       , ih    
+3,  avio        , ih    
+4,  elikko      , ,ih0/1    
+5,  cup         , -eih  
+6,  agar        , -eih1  
+7,  ovi         ,  1     
+8,  byte        , ih1    
+9,  eka         , -oih1  
+10,  boa         , -i1    
+11,  itara       , -i,-oih    
+12,  urea        , -oih  
+13,  aluna       , -oih  
+14,  urakka      , -oih0/1  
+15,  upea        , -isi,-ih  
+16,  kumpi       ,       
+17,  keruu       , -isi,-ih  
+18,  jää         , -ih   
+19,  suo         , -ih   
+20,  bukee       , -ih,-isi   
+21,  gay         , h    
+22,  buffet      , '     
+23,  lohi        ,       
+24,  uni         ,       
+25,  liemi       ,       
+26,  veri        ,       
+27,  mesi        ,       
+28,  kansi       , 1      
+29,  lapsi       ,       
+30,  peitsi      ,       
+31,  yksi        ,       
+32,  aamen       , i1     
+33,  astin       , mi1    
+34,  alaston     , mi1    
+35,  lämmin      , mi1    
+36,  alin        , mpi   
+37,  vasen       , mpi   
+38,  öinen       , si    
+39,  ajos        , ksi   
+40,  etuus       , ksi   
+41,  oras        , ih1,isi1   
+42,  mies        , hi    
+43,  ohut        , ih1, isi1   
+44,  kevät       , ih, isi   
+45,  sadas       , nsi   
+46,  tuhat       , nsi   
+47,  mennyt      , -eih, -eisi 
+48,  ane         , isi1   
+49,  huhmar      , i1,eis1,eih1,   

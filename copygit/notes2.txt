@@ -1,0 +1,119 @@
+jos midssissä kaksi miinusta, skipataan sekä vokaali että AV. 
+(onnekkaasti ? miinusluokissa ei koskaan kaksoisvokaalia - hyvä kuitenkin varmistaa jossain välissä. paitsi tie suo)
+
+AUTUAAN 041,s,a,,0,autu
+  gen > AUTUAA
+  mid _ > AUTUA
+  kon
+  vok a >AUTU
+  xvok a >ankeri
+  av nil
+  
+  
+SOIDEN 019,_,uo,,0,s  
+        mon gen: en > SOID
+        mid: --_id  > SO  - "_" käskee panna o muistiin  (tsai vok: uo->o 
+        kon
+        vok: uo > S, skipattiin 2 vok mutta tarkistettiin muistin pantu O 
+        
+
+    033,n,ai,kk,0,tut
+
+    VAJAIDEN 017,_,aa,jj,0,va
+      g > VAJAIDE
+      mid: -id > VAJA  , unohda VOK1  (vok: aa->a)
+      kon
+      vok: aa ->VAJ (toinen vok oli unohdettu)
+      av->VA
+      sana: VAJAIDEN
+
+    
+    hanhen 007,_,i,hh,0,han
+      g > HANHE
+      mid -e >  HANH ..  unohda I:n puute,  
+      kon: 
+      vok: uhohdettu, skippaa tsekkaus
+      AV: n -> HAN  (av NN=N, pudota ännä)
+      
+    HIEN 007 
+      g > KEO
+      mid - >  KEO .. unohda I:n puute,  
+      kon: >HAN ei muutenkaan tsekkausta 
+      vok: uhohdettu, skippaa tsekkaus
+      AV: -> HA  (av NN=N, pudota ännä)
+      
+     kuolleen 47 
+      gen ->KUOLLEE
+      mid -ee > KUOLL, unohda vok-vaatimus
+      kon T, ei tsekata -> KUOLL
+      vok: U, testi ohitettu -> KUOLL
+      av: L, -> KUOL
+       
+     AAKKOSEN 038 
+      gen AAKKOSE
+      mid --se > AAKKO, 
+      kon n, nocheck ->AAKKO
+      vok e, unohdettu (jo tark midissä)->
+      sana aakko, match
+      
+     HAAKSEN 031,_,i,ss,0,haak
+      gen HAAKSE
+      mid ---hde -> HAA kse ei tarkisteta, vaan vaaditaan hde --> 
+      kon
+      vok i oli unohdettu 
+      av s ! myös AV piti unohtaa!
+      
+      
+     
+      
+      
+    "-"  (pane muistiin että 1 skipataan VOK-testissä   
+    
+001 ,u ,uo ,o
+002 ,u ,o
+003 ,eo ,uo ,o ,e ,ie
+004 ,o
+005 , ,i ,a ,ou
+006 ,i
+007 ,i
+008 ,e ,ie
+009 ,a
+010 ,a
+011 ,a
+012 ,a
+013 ,a
+014 ,a
+015 ,a
+016 ,i ,a
+017 ,uu ,oo ,aa
+018 ,uu ,ui ,oo ,iu ,ii ,au ,ee ,ai ,oi ,ei ,aa
+019 ,uo ,ie
+020 ,uu ,oo ,ee ,aa
+021 ,u ,au ,ou ,eu ,e ,ie
+022 , ,a ,ou ,ai ,e
+023 ,i
+024 ,i
+025 ,i
+026 ,i
+027 ,i
+028 ,i
+029 ,i
+030 ,i
+031 ,i
+032 ,a ,e
+033 ,u ,ui ,i ,a ,ai ,oi ,e
+034 ,a ,o
+035 ,i
+036 ,i ,ai ,oi
+037 ,e
+038 ,i ,a ,e ,aa
+039 ,uu ,u ,iu ,i ,au ,a ,ou ,o ,eu ,e ,ie
+040 ,uu ,iu ,au ,ou ,eu
+041 ,u ,i ,a ,e
+042 ,ie
+043 ,u
+044 ,a
+045 ,a ,e
+046 ,a
+047 ,u ,ee
+048 ,u ,i ,e ,ie     

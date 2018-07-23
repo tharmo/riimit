@@ -1,0 +1,51 @@
+1,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    j,     j,     ,     ,    ih,     ,     ,     ,     ,     ,    ,  
+2,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    j,    it,     ,     ,    ih,     ,     ,     ,     ,     ,     ,
+3,     ,     ,    t,     ,     ,     ,     ,     ,     ,    ,     ,     ,     ,   id,    it,     ,      ,    ih,     ,     ,     ,     ,     ,     ,
+4,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    j,     j,     ,     ,    ih,     ,     ,     ,     ,     ,     ,
+5,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,      ,   -e,   -e,  -eih,   -e,   -e,   -e,     ,   -e,   -e,-e
+6,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,   -ej,    -e,  -e,  -eih,   -e,   -e,   -e,  -ej,   -e,   -e
+7,     ,   -e,  -e ,   -e,   -e,   -e,   -e,   -e,   -e,  -e ,   -e,   -e,   -e,     ,      ,    -,    -,      ,    -,    -,    -,    -,    -,    -
+8,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    j,     j,     ,     ,    ih,     ,     ,     ,     ,     ,   ,  
+9,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,  -oj,   -oj,   -o,   -o,  -oih,   -o,   -o,   -o,   -o,   -o,   -o
+10,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,   -i,   -i,    -,     -,    -i,    -,    -,    -,   -,    -,    -
+11,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,   -i,   -i,    -,     -,    -i,    -,    -,    -,   -,    -,    -
+12,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,  -oid,  -oit,  -o,   -o,  -oih,  -o,  -o,  -o,  -o,  -o,  -o,  -o
+13,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,  -oid,  -oit,  -o,   -o,  -oih,  -o,  -o,  -o,  -o,  -o,  -o,  -o
+14,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,   -oj,   -oj,  -o,   -o,  -oih,  -o,  -o,  -o,   -o,  -o,  -o,  -o
+15,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,  -id,  -it,    -,    -,  -isi,    -,    -,    -,  -,    -,    -,  -
+16,    ,   -a,   -a,   -a,   -a,   -a,   -a,   -a,   -a,   -a,   -a,   -a,   -a,     ,     ,    -,    -,      ,    -,    -,    -,   -,    -,    -,  -
+17,    ,     ,    t,     ,     ,   se,     ,     ,     ,    t,     ,     ,     ,  -id,  -it,    -,    -,  -isi,    -,    -,    -,  -,    -,    -,  -
+18,    ,     ,    t,     ,     ,    h,     ,     ,     ,    t,     ,     ,     ,  -id,  -it,    -,    -,   -ih,    -,    -,    -,  -,    -,    -,  -
+19,    ,     ,    t,     ,     ,    h,     ,     ,     ,    t,     ,     ,     ,--_id,--_it,  --_,  --_, --_ih,  --_,  --_,  --_,--_,  --_,  --_,  -
+20,    ,     ,    t,     ,     ,   se,     ,     ,     ,    t,     ,     ,     ,  -id,  -it,   -,   -,   -ih,   -,   -,   -,  -,   -,   -,  -
+21,    ,     ,    t,     ,     ,    h,     ,     ,     ,    t,     ,     ,     ,   id,   it,     ,     ,    ih,     ,     ,     ,   ,     ,     
+22,    ,     ,   't,     ,     , 'h_,     ,     ,     ,   't,     ,     ,     ,    ',    ',     ,     ,     ',     ,     ,     ,    ',     ,     
+23,    ,   -e,   -t,   -e,   -e,   -e,   -e,   -e,   -e,   -t,   -e,   -e,   -e,     ,    ,     -,     -,      ,     -,     -,     -,  -,     -,     -
+24,    ,   -e,   -t,   -e,   -e,   -e,   -e,   -e,   -e,   -t,   -e,   -e,   -e,     ,    ,   -,   -,      ,   -,   -,   -,   - ,   -,   -
+25,    ,   -e, --nt,   -e,   -e,   -e,   -e,   -e,   -e, --nt,   -e,   -e,   -e,     ,     ,    -,    -,      ,    -,    -,    -,  - ,    -,    -
+26,    ,   -e,   -t,   -e,   -e,   -e,   -e,   -e,   -e,   -t,   -e,   -e,   -e,     ,     ,    -,    -,      ,    -,    -,    -,   -,    -,    -
+27,    , --de, --tt, --de, --de, --te, --de, --de, --de, --tt, --de, --de, --de,     ,   ,    -,    -,      ,    -,    -,    -,  - ,    -,    -
+28,    ,  --*e, --tt,  --*e,  --*e,--te,  --*e,  --*e,  --*e, --tt,  --*e,  --*e,  --*e,     ,   ,    -,    -,      ,    -,    -,    -, -  ,    -,    -
+29,    ,  -e, ---st,  -e,  -e,   -e,  -e,  -e,  -e, -e,  -e,  -e,  -e,     ,     ,    -,    -,      ,    -,    -,    -,     -,    -,    -
+30,    ,   -e,---st,   -e,   -e,   -e,   -e,   -e,   -e, -e,   -e,   -e,   -e,     ,     ,    -,    -,      ,    -,    -,    -,    -,    -,    -
+31,  ,---hde,---ht,---hde,---hde,---hte,---hde,---hde,---hde,---hte,---hde,---hde,---hde,  ,,  -,  -,  ,  -,  -,  -,-,  -,  -
+32,   *,   *e,   *t,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *i,   *i,    *,    *,    *i,    *,    *,    *,   *,    *,    *
+33,   n,   me,   nt,   me,   me,    me,   me,   me,   me,   me,   me,   me,   me,   nt,   mi,     m,     m,     mi,     m,     m,     m,   m,     m,     m
+34,   n,   ma,   nt,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   mi,   mi,    m,    m,    mi,    m,    m,    m,   m,    m,    m
+35,   n,   ma,   nt,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   ma,   mi,   mi,  m,  m,    mi,  m,  m,  m,   m,  m,  m
+36,   n,  mma,   nt,  mma,  mma,  mpa,  mma,  mma,  mma,   mpa,  mma,  mma,  mma,  mpi,  mpi,   mm,   mm,   mpi,   mm,   mm,   mm,  mp,   mm,   mm
+37,   n,  mma,   nt,  mma,  mma,  mpa,  mma,  mma,  mma,   mpa,  mma,  mma,  mma,  mpi,  mpi,   mm,   mm,   mpi,   mm,   mm,   mm,  mp,   mm,   mm
+38,   n, --se, --st, --se, --se, --se, --se, --se, --se, --se, --se, --se, --se, --st, --si,  --s,  --s,  --si,  --s,  --s,  --s, --s,  --s,  --s
+39,   s,  kse,  st,  kse,  kse,  kse,  kse,  kse,  kse,  kse,  kse,  kse,  kse,  ksi,  ksi,  ks ,  ks ,   ksi,  ks ,  ks ,  ks ,  ks,  ks ,  ks 
+40,   s,   de,   tt,   de,   de,   te,   de,   de,   de,   te,   de,   de,   de,  ksi,  ksi,   ks,   ks,   ksi,   ks,   ks,   ks,  ks,   ks,   ks
+41,   s,    _,   st,    _,    _,  _se,    _,    _,    _,   _,    _,    _,    _,   id,   it,     ,     ,   isi,     ,     ,     ,   ,     ,     
+42,   s,   he,   st,   he,   he,   he,   he,   he,   he,   he,   he,   he,   he,   hi,   hi,   h,   h,    hi,   h,   h,   h,   h,   h,   h
+43,   t,    e,   tt,    e,    e,    e,    e,    e,    e,   e,    e,    e,    e,   id,   it,     ,     ,   isi,     ,     ,     ,   ,     ,     
+44,   t,    a,   tt,    a,    a,  ase,    a,    a,    a,   a,    a,    a,    a,   id,   it,     ,     ,   isi,     ,     ,     ,   ,     ,     
+45,   s,  nne,   tt,  nne,  nne,  nte,  nne,  nne,  nne,   nte,  nne,  nne,  nne,  nsi,  nsi,  ns,  ns,   nsi,  ns,  ns,  ns,  ns,  ns,  ns
+46,   t,  nne,   tt,  nne,  nne,  nte,  nne,  nne,  nne,   nte,  nne,  nne,  nne,  nsi,  nsi,  ns,  ns,   nsi,  ns,  ns,  ns,  ns,  ns,  ns
+47,   t,  -ee,   tt,  -ee,  -ee,-eese,  -ee,  -ee,  -ee,   -ee,  -ee,  -ee,  -ee, -eid, -eit,  -e,  -e, -eisi,  -e,  -e,  -e, -e,  -e,  -e
+48,   ,    _,   tt,    _,    _,   _se,    _,    _,    _,   _,    _,    _,    _,   id,   it,    ,    ,   isi,    ,    ,    ,   ,    ,    
+49,   *,   *e,   *t,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *e,   *i,   *i,    *,    *,    *i,    *,    *,    *,   *,    *,    *
+50,    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,      ,      ,     ,      ,      ,      ,     ,      ,      
+47,   t,  -ee,   tt,  -ee,  -ee,-eese,  -ee,  -ee,  -ee,   -ee,  -ee,  -ee,  -ee,   id,   it,    ,    ,   isi,    ,    ,    ,   it,    ,    

@@ -1,0 +1,49 @@
+001 ,uo, mon, eikons
+002, uo, 2monikkoa
+003, o, ,muutama aloe, oboe
+004, o, eipoik 
+005, i, monikkoja. paljon loppukons - jos ei "it" niin lisää perusmuotoon "i"
+006, i, kuten 005
+007, i, muutama -et monikko ONGELMA
+008, e, pari monikkoa
+009, a, parom
+010 ,a, ONGELMA ännloput  yhdeksäN kahdeksaN seitsemän
+011 ,a, 
+012 ,a,
+013 ,a,
+014 ,a,
+015 ,a,
+016 ,i, kumpikin kssn molemmat
+017 ,uao, tuplavok, 
+018 ,uieao, 
+019 ,oe, syö, juo jne outoluokka
+020 ,uaoe, tuplavok, E aina illatiivissa nugaaseen, fonduuseen. Mutta nugaAhAn, fionduUhUn. Voiddaan kyllä unohtaakin koko luokka 
+021 ,eu, vierassanoja, joutaa poiskin 
+022 ,,  kons-loppuisia ulkkiksia, joutaa vex 
+023 ,i,
+024 ,i,
+025 ,i
+026 ,i,
+027 ,i
+028 ,i
+029 ,i,
+030 ,i, peitsi veitsi vaan
+031 ,i, yksi haaksi kaksi
+032 ,NRL, piennar tyven sävel
+033 ,N, 338n, monikollisia mukana
+034 ,N, 567n, olemaTON (ei mon)
+035 ,N, vain lämmin
+036 ,N, superlatiiveja
+037 ,N, vain vasen
+038 ,N, 2i, 1a, 3615n, 60t, 1ö, (paljon monikkoja, kaikki: -> NEN>SET, pari pos.sug "minunlaiseni", ne pois)
+039 ,S, 2691s, 24t, 1ö, (paljon monikkoja, kaikki: KSET>S)
+040 ,S, uus yys ius iys / ei poikkeuksia
+041 ,S, monikot pitää hoitaa käsin
+042 ,S, vai mies
+043 ,T,  olut ut yt (ei poik)
+044 ,T, vain kevät venät
+045 ,S, ordinaaleja
+046 ,T, , tuhat
+047 ,T, part.perf, UT, YT 1 monikko liittoutuneet
+048 ,EIU, vokaali lopussa mutta heikko???? vokaali on E, paitsi ori,kiiru. Monikot kaikki EET. Yksiköillä olis asevaihtelu jos niitä käytettäis, mutta otetaan vain pois ET lopusta ja ollaan niinku ei oltaiskaan? 
+048 ,LNR, ei 

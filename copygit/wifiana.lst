@@ -1,0 +1,4955 @@
+Checking whether the transducer accepts a single blank as a word...
+Transducer successfully loaded
+^haarukka/haarukka N Nom Sg$ 
+^ruokailuväline/ruokailu#väline N Nom Sg$
+^pyörä/pyörä N Nom Sg$
+^haarukkaliitin/haarukka#liitin N Nom Sg$
+^mittaväli/mitta#väli N Nom Sg$
+^haara/haara N Nom Sg$
+^haarukoida/haarukoida V Inf1 Lat/haarukoida V Prs Pass ConNeg$
+^haarukointi/haarukointi N Nom Sg$
+^kahveli/kahveli N Nom Sg$
+^lusikka/lusikka N Nom Sg$
+^veitsi/veitsi N Nom Sg$
+
+^monikko/moni-#kko N Abbr Nom Sg/monikko N Nom Sg$ 
+^luku/luku N Nom Sg$
+^nomini/nomini N Nom Sg$
+^verbi/verbi N Nom Sg$
+^lukujono/luku#jono N Nom Sg$
+^äärellinen/äärellinen A Pos Nom Sg$
+^alkio/alkio N Nom Sg$
+^monikkomuoto/moni-#kko Abbr#muoto N Nom Sg/monikko#muoto N Nom Sg$
+^yksikkö/yksikkö N Nom Sg$
+^singulaari/singulaari N Nom Sg$
+^kaksikko/kaksikko N Nom Sg$
+^duaali/duaali A Pos Nom Sg$
+^kolmikko/kolmi-#kko N Abbr Nom Sg/kolmikko N Nom Sg$
+^triaali/*triaali$
+^paukaali/*paukaali$
+^luku/luku N Nom Sg$
+^pluraali/pluraali N Nom Sg$
+
+^yksikkö/yksikkö N Nom Sg$ 
+^mitta/mitta N Nom Sg$
+^mittaaminen/mitata V N Nom Sg/mittaaminen N Nom Sg$
+^mittayksikkö/mitta#yksikkö N Nom Sg$
+^miehistö/miehistö N Nom Sg$
+^singulaari/singulaari N Nom Sg$
+^luku/luku N Nom Sg$
+^osa/osa N Nom Sg$
+^komponentti/komponentti N Nom Sg$
+^duali/*duali$
+^kaksikko/kaksikko N Nom Sg$
+^monikko/moni-#kko N Abbr Nom Sg/monikko N Nom Sg$
+^suure/suu#re N/suure N Nom Sg$
+
+^verbi/verbi N Nom Sg$ 
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+^toiminta/toiminta N Nom Sg$
+^tila/tila N Nom Sg$
+^tekeminen/tehdä V N Nom Sg/tekeminen N Nom Sg$
+^oleminen/oleminen N Nom Sg/olla V N Nom Sg$
+^finiittimuoto/finiitti#muoto N Nom Sg$
+^nominaalimuoto/nominaali#muoto N Nom Sg$
+^verbaalinen/verbaalinen A Pos Nom Sg$
+^verbikantainen/verbi#-kantainen A Pos Nom Sg$
+^teonsana/teko#sana N Nom Sg/teon#sana N Nom Sg$
+
+^substantiivi/substantiivi N Nom Sg$ 
+^nomini/nomini N Nom Sg$
+^asia/asia N Nom Sg$
+^esine/esine N Nom Sg$
+^nimi/nimi N Nom Sg$
+^yleisnimi/yleis#nimi N Nom Sg/yleis-#nimi N Nom Sg$
+^appellatiivi/appellatiivi N Nom Sg$
+^erisnimi/erisnimi N Nom Sg$
+^propri/propri N Nom Sg$
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+^nimi/nimi N Nom Sg$
+
+^adjektiivi/adjektiivi N Nom Sg$ 
+^laatusana/laatu#sana N Nom Sg$
+^substantiivi/substantiivi N Nom Sg$
+^määre/määre N Nom Sg$
+^predikatiivi/predikatiivi N Nom Sg$
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+
+^lippu/lippu N Nom Sg$ 
+^tunnusmerkki/tunnus#merkki N Nom Sg$
+^valtio/valtio N Nom Sg$
+^symboli/symboli N Nom Sg$
+^kansallisuus/kansallisuus N Nom Sg$
+^tilaisuus/tilaisuus N Nom Sg$
+^kortti/kortti N Nom Sg$
+^lipuke/lipuke N Nom Sg$
+^liputus/liputus N Nom Sg$
+^piletti/piletti N Nom Sg$
+^tiketti/tiketti N Nom Sg$
+^viiri/viiri N Nom Sg$
+
+^kahdeksan/kahdeksan Num Gen Sg/kahdeksan Num Nom Sg/kahdeksan#$ 
+^numero/numero N Nom Sg$
+^seitsemän/seitsemän Num Gen Sg/seitsemän Num Nom Sg/seitsemän#$
+^yhdeksän/yhdeksän Num Gen Sg/yhdeksän Num Nom Sg/yhdeksän#$
+^kahdeksas/kahdeksas Num Ord Nom Sg/kahdeksas Ord#$
+^kahdeksainen/kahdeksainen N Nom Sg$
+^kahdeksikko/kahdeksikko N Nom Sg$
+^kahdeksas/kahdeksas Num Ord Nom Sg/kahdeksas Ord#$
+
+^numeraali/numeraali N Nom Sg$ 
+^lukusana/luku#sana N Nom Sg$
+^numeromerkki/numero#merkki N Nom Sg$
+^kardinaaliluku/kardinaali#luku N Nom Sg/kardinaali-#luku N Nom Sg$
+^ordinaaliluku/ordinaali#luku N Nom Sg/ordinaaliluku N Nom Sg$
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^kardinaaliluku/kardinaali#luku N Nom Sg/kardinaali-#luku N Nom Sg$
+^ordinaaliluku/ordinaali#luku N Nom Sg/ordinaaliluku N Nom Sg$
+^murtoluku/murto#luku N Nom Sg$
+
+^pronomini/pronomini N Nom Sg$ 
+^asemo/asemo N Nom Sg$
+^asemosana/ase#mosa N Ess Sg/asemo#sana N Nom Sg$
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+
+^yhdeksän/yhdeksän Num Gen Sg/yhdeksän Num Nom Sg/yhdeksän#$ 
+^kahdeksan/kahdeksan Num Gen Sg/kahdeksan Num Nom Sg/kahdeksan#$
+^kymmenen/kymmenen Num Gen Sg/kymmenen Num Nom Sg/kymmenen#$
+^yhdeksäs/yhdeksäs Num Ord Nom Sg/yhdeksäs Ord#$
+^yhdeksikkö/yhdeksikkö N Nom Sg$
+^yhdeksät/yhdeksän Num Nom Pl/yhdeksän#$
+^yhdeksikkö/yhdeksikkö N Nom Sg$
+
+^kävellä/kävellä V Inf1 Lat/kävellä V Prs Pass ConNeg$ 
+^hölkätä/hölkätä V Inf1 Lat/hölkätä V Prs Pass ConNeg$
+^juosta/juosta V Inf1 Lat/juosta V Prs Pass ConNeg$
+^käveleminen/käveleminen N Nom Sg/kävellä V N Nom Sg$
+^kävelyttää/kävelyttää V Inf1 Lat/kävelyttää V Prs Act Sg3$
+^käydä/käydä V Inf1 Lat/käydä V Prs Pass ConNeg$
+^käyskennellä/käyskennellä V Inf1 Lat/käyskennellä V Prs Pass ConNeg$
+^laahustaa/laahustaa V Inf1 Lat/laahustaa V Prs Act Sg3$
+^tallustaa/tallustaa V Inf1 Lat/tallustaa V Prs Act Sg3$
+
+^minä/mikä Pron Interr Ess Sg/mikä Pron Rel Ess Sg/minä Pron Pers Nom Sg$ 
+^sinä/se Pron Dem Ess Sg/sinä Pron Pers Nom Sg$
+^hän/hän Pron Pers Nom Sg$
+^me/me Pron Pers Nom Pl$
+^te/te Pron Pers Nom Pl$
+^he/he Interj/he Pron Pers Nom Pl$
+^mie/*mie$
+^sie/*sie$
+^myö/myödä V Impv Act Sg2/myödä V Prs Act ConNeg/myödä V Prs Act Sg3$
+^hyö/*hyö$
+^mnää/*mnää$
+^mä/mä Pron Pers Nom Sg$
+^mää/*mää$
+^meikä/meikä N Nom Sg$
+^meikäläinen/meikäläinen A Pos Nom Sg$
+^minuus/minuus N Nom Sg$
+^ego/ego N Nom Sg$
+^itse/itse/itse Pron Refl Nom Sg$
+^ego/ego N Nom Sg$
+^monadi/monadi N Nom Sg$
+
+^sanakirja/sana#kirja N Nom Sg/sanakirja N Nom Sg$ 
+^tietosanakirja/tieto#sana#kirja N Nom Sg/tieto#sanakirja N Nom Sg$
+^hakuteos/haku#teos N Nom Sg$
+^hakusana/haku#sana N Nom Sg$
+^artikkeli/artikkeli N Nom Sg$
+^sana/sana N Nom Sg$
+^kieli/kieli N Nom Sg/kieliä V Impv Act Sg2/kieliä V Prs Act ConNeg/kieliä V Pst Act Sg3$
+^kirja/kirja N Nom Sg$
+^sana/sana N Nom Sg$
+^sanasto/sanasto N Nom Sg$
+^leksikko/leksikko N Nom Sg$
+^tesaurus/tesaurus N Nom Sg$
+^semantiikka/semantiikka N Nom Sg$
+
+^wiki/wiki N Nom Sg$ 
+^muokata/muokata V Inf1 Lat/muokata V Prs Pass ConNeg$
+^Internet/Internet N Nom Sg/Internet N Prop Nom Sg$
+^wikilinkki/wiki#linkki N Nom Sg$
+
+^keltainen/keltainen A Pos Nom Sg/keltainen N Nom Sg$ 
+^väri/väri N Nom Sg$
+^punainen/punainen A Pos Nom Sg/punainen N Nom Sg$
+^sininen/sininen A Pos Nom Sg/sininen N Nom Sg$
+^pääväri/pää#väri N Nom Sg/pää-#väri N Nom Sg$
+^kelta-/kelta N Nom Sg TrunCo$
+^kellertää/kellertää V Inf1 Lat/kellertää V Prs Act Sg3$
+^kellastua/kellastua V Inf1 Lat$
+^kellertävä/kellertävä A Pos Nom Sg/kellertää PrsPrc Act Pos Nom Sg$
+^keltuainen/keltuainen N Nom Sg$
+
+^lapsi/lapsi N Nom Sg$ 
+^nuori/nuori A Pos Nom Sg/nuori N Nom Sg$
+^ihminen/ihminen N Nom Sg$
+^aikuistua/aikuistua V Inf1 Lat$
+^ihminen/ihminen N Nom Sg$
+^jälkeläinen/jälkeläinen N Nom Sg$
+^eläin/eläin N Nom Sg$
+^poikanen/poikanen N Nom Sg$
+^vasikka/vasikka N Nom Sg$
+^epana/*epana$
+^ipana/ipana N Nom Sg$
+^kakara/kakara N Nom Sg$
+^kersa/kersa N Nom Sg$
+^muksu/muksu N Nom Sg$
+^napero/napero N Nom Sg$
+^nappula/nappula N Nom Sg$
+^nuori/nuori A Pos Nom Sg/nuori N Nom Sg$
+^pienokainen/pien#okainen A Pos Nom Sg/pienokainen N Nom Sg/piki#okainen A Pos Nom Sg$
+^pallero/pallero N Nom Sg$
+^pirpana/pirpana N Nom Sg$
+^tyllerö/tyllerö N Nom Sg$
+^tytär/tytär N Nom Sg$
+^poika/poika N Nom Sg$
+^aikuinen/aikuinen A Pos Nom Sg$
+
+^sinä/se Pron Dem Ess Sg/sinä Pron Pers Nom Sg$ 
+^Te/Te Pron Pers Nom Pl$
+^sinutella/sinutella V Inf1 Lat/sinutella V Prs Pass ConNeg$
+^puhuttelumuoto/puhutella#muoto N Nom Sg/puhuttelu#muoto N Nom Sg$
+^minä/mikä Pron Interr Ess Sg/mikä Pron Rel Ess Sg/minä Pron Pers Nom Sg$
+^hän/hän Pron Pers Nom Sg$
+^me/me Pron Pers Nom Pl$
+^te/te Pron Pers Nom Pl$
+^he/he Interj/he Pron Pers Nom Pl$
+^sinut/sinut/sinä Pron Pers Acc Sg/sinä Pron Pers Nom Pl$
+^sinua/sinä Pron Pers Par Sg$
+
+^tervetuloa/terve#tuloa$ 
+^tervehdys/tervehdys N Nom Sg$
+
+^joka/joka/joka Pron Qnt Indef Nom Sg/joka Pron Rel Nom Sg$ 
+^jokainen/jokainen Pron Qnt Nom Sg$
+^kukin/kuki N Gen Sg/kukin Pron Qnt Nom Sg/kukka N Ins Pl/kukkia V Prs Act Sg1/kukkia V Pst Act Sg1$
+^korrelaatti/korrelaatti N Nom Sg$
+^postpositio/postpositio N Nom Sg$
+^mikä/mikä Pron Interr Nom Sg/mikä Pron Rel Nom Sg$
+^joka/joka/joka Pron Qnt Indef Nom Sg/joka Pron Rel Nom Sg$^-/- Punct Dash/- Punct Dash >>>$^aikainen/aikainen A Pos Nom Sg$
+^jokakesäinen/jokakesäinen A Pos Nom Sg$
+^jokapuolinen/jokapuolinen A Pos Nom Sg$
+^jokapäiväinen/jokapäiväinen A Pos Nom Sg$
+^jokatalvinen/jokatalvinen A Pos Nom Sg$
+^jokaviikkoinen/jokaviikkoinen A Pos Nom Sg$
+^jokavuotinen/jokavuotinen A Pos Nom Sg$
+^jokaöinen/jokaöinen A Pos Nom Sg$
+
+^kutsua/kutsu N Par Sg/kutsua V Inf1 Lat$ 
+^nimittää/nimittää V Inf1 Lat/nimittää V Prs Act Sg3$
+^sanoa/sanoa V Inf1 Lat$
+^kutsu/kutsu N Nom Sg/kutsua V Impv Act Sg2/kutsua V Prs Act ConNeg$
+
+^aleksitymia/*aleksitymia$ 
+^tunne/tunne N Nom Sg/tuntea V Impv Act Sg2/tuntea V Prs Act ConNeg$
+^aleksityyminen/aleksityyminen A Pos Nom Sg$
+
+^dysfasia/dysfasia N Nom Sg$ 
+^afasia/afasia N Nom Sg$
+^dysfaattinen/*dysfaattinen$
+
+^punainen/punainen A Pos Nom Sg/punainen N Nom Sg$ 
+^väri/väri N Nom Sg$
+^#/# Punct/# Unkwn$^Substantiivi/Substantiivi N Nom Sg$
+^vasemmistolainen/vasemmisto#lainen A Pos Nom Sg/vasemmistolainen A Pos Nom Sg$
+^kommunistinen/kommunistinen A Pos Nom Sg$
+^väri/väri N Nom Sg$
+^valo/valo N Nom Sg$
+^punakaarti/puna#kaarti N Nom Sg/puna-#kaarti N Nom Sg$
+^puna/puna N Nom Sg$
+^huulipuna/huuli#puna N Nom Sg$
+^poskipuna/poski#puna N Nom Sg$
+^punajuuri/puna#juuri N Nom Sg/puna-#juuri N Nom Sg$
+^punamulta/puna#multa N Nom Sg/puna-#multa N Nom Sg$
+^punastua/punastua V Inf1 Lat$
+^punata/punata V Inf1 Lat/punata V Prs Pass ConNeg$
+^punertaa/punertaa V Inf1 Lat/punertaa V Prs Act Sg3$
+^punertava/punertaa PrsPrc Act Pos Nom Sg/punertava A Pos Nom Sg/punertava N Nom Sg$
+^punikki/punikki N Nom Sg$
+^punoittaa/punoittaa V Inf1 Lat/punoittaa V Prs Act Sg3$
+^sinoberi/*sinoberi$
+
+^vihreä/vihreä A Pos Nom Sg/vihreä N Nom Sg$ 
+^väri/väri N Nom Sg$
+^luonto/luonto N Nom Sg$
+^arvo/arpoa V Impv Act Sg2/arpoa V Prs Act ConNeg/arvo N Nom Sg$
+^varjeleva/varjella PrsPrc Act Pos Nom Sg$
+^vehreä/vehreä A Pos Nom Sg$
+^vehmas/vehmas A Pos Nom Sg$
+^kokematon/kokea NegPrc Pos Nom Sg/kokematon A Pos Nom Sg$
+^epäkypsä/epä#kypsä N Nom Sg/epä-#kypsä A Pos Nom Sg/epäkypsä A Pos Nom Sg$
+^harjaantumaton/harjaantua NegPrc Pos Nom Sg/harjaantumaton A Pos Nom Sg$
+^tuore/tuore A Pos Nom Sg$
+^uusi/uusi A Pos Nom Sg/uusia V Impv Act Sg2/uusia V Prs Act ConNeg/uusia V Pst Act Sg3$
+^vehreä/vehreä A Pos Nom Sg$
+^vihreäpäinen/vihreä#-päinen A Pos Nom Sg$
+^vihertävä/vihertävä A Pos Nom Sg/vihertää PrsPrc Act Pos Nom Sg$
+^vihertää/vihertää V Inf1 Lat/vihertää V Prs Act Sg3$
+^vihertyä/vihertyä V Inf1 Lat$
+^vihertävä/vihertävä A Pos Nom Sg/vihertää PrsPrc Act Pos Nom Sg$
+^viher/*viher$
+^viheriö/viheriö N Nom Sg$
+^viherpeukalo/viher#peukalo N Nom Sg/viher-#peukalo N Nom Sg$
+^vihryt/*vihryt$
+
+^sininen/sininen A Pos Nom Sg/sininen N Nom Sg$ 
+^merensininen/meren#sininen A Pos Nom Sg/meri#sininen A Pos Nom Sg/meri#sininen N Nom Sg$
+^taivaansininen/taivaan#sininen A Pos Nom Sg/taivaansininen N Nom Sg/taivas#sininen A Pos Nom Sg/taivas#sininen N Nom Sg$
+^sini/se Pron Dem Gen Sg PxSg1/se Pron Dem Nom Pl PxSg1/se Pron Dem Nom Sg PxSg1/sini N Nom Sg$
+^sinertää/sinertää V Inf1 Lat/sinertää V Prs Act Sg3$
+^sinistyä/sinistyä V Inf1 Lat$
+^sinertävä/sinertävä A Pos Nom Sg/sinertää PrsPrc Act Pos Nom Sg$
+
+^syaani/syaani A Pos Nom Sg/syaani N Nom Sg$ 
+^sinivihreä/sini#vihreä A Pos Nom Sg/sini#vihreä N Nom Sg/sinivihreä N Nom Sg$
+^turkoosi/turkoosi N Nom Sg$
+
+^musta/musta A Pos Nom Sg/musta N Nom Sg/mä Pron Pers Ela Sg$ 
+^väri/väri N Nom Sg$
+^sysimusta/sysi#musta A Pos Nom Sg/sysi#musta N Nom Sg/sysimusta A Pos Nom Sg$
+^väri/väri N Nom Sg$
+^mustamaalata/musta#maa#lata N Nom Sg/musta#maalata V Inf1 Lat/musta#maalata V Prs Pass ConNeg$
+^muste/muste N Nom Sg$
+^mustelma/mustelma N Nom Sg$
+^Musti/Musti N Prop Nom Sg$
+^mustikka/mustikka N Nom Sg$
+^hiilenmusta/hiilen#musta N Nom Sg/hiilenmusta A Pos Nom Sg/hiili#musta A Pos Nom Sg/hiili#musta N Nom Sg$
+^mustaleimainen/musta#-leimainen A Pos Nom Sg/musta#lei#mainen A Pos Nom Sg/musta#leimainen A Pos Nom Sg$
+^mustapukuinen/musta#-pukuinen A Pos Nom Sg/musta#pukuinen A Pos Nom Sg$
+^mustapäinen/musta#-päinen A Pos Nom Sg/musta#päinen A Pos Nom Sg$
+^mustasilmäinen/musta#-silmäinen A Pos Nom Sg/musta#silmäinen A Pos Nom Sg$
+^mustasukkainen/musta#sukkainen A Pos Nom Sg$
+^mustavalkea/musta#valkea A Pos Nom Sg/musta#valkea N Nom Sg$
+^mustavalko/*mustavalko$
+^mustavalkoinen/musta#valkoinen A Pos Nom Sg/musta#valkoinen N Nom Sg$
+^pikimusta/piki#musta A Pos Nom Sg/piki#musta N Nom Sg/pikimusta A Pos Nom Sg$
+^sysimusta/sysi#musta A Pos Nom Sg/sysi#musta N Nom Sg/sysimusta A Pos Nom Sg$
+^valkoinen/valkoinen A Pos Nom Sg/valkoinen N Nom Sg$
+^mä/mä Pron Pers Nom Sg$
+^mutu/mutu N Nom Sg$
+^mustaihoinen/musta#-ihoinen A Pos Nom Sg/musta#ihoinen A Pos Nom Sg$
+^afroamerikkalainen/afro#amerikkalainen A Pos Nom Sg/afro#amerikkalainen N Nom Sg$
+^neekeri/neekeri N Nom Sg$
+^tummaihoinen/tumma#ihoinen A Pos Nom Sg/tummaihoinen N Nom Sg$
+^negridinen/negridinen A Pos Nom Sg$
+^ihminen/ihminen N Nom Sg$
+^negridi/*negridi$
+^neekeri/neekeri N Nom Sg$
+^nekru/nekru N Nom Sg$
+^murjaani/murjaani N Nom Sg$
+^mutiainen/mutiainen N Nom Sg$
+^mutakuono/muta#kuono N Nom Sg$
+^mutakeppi/muta#keppi N Nom Sg$
+^nokikeppi/noki#keppi N Nom Sg$
+^mokkakikkeli/mokka#kikkeli N Nom Sg$
+^mokkakorva/mokka#korva N Nom Sg$
+^rullahuuli/rulla#huuli N Nom Sg$
+^rullis/*rullis$
+
+^valkoinen/valkoinen A Pos Nom Sg/valkoinen N Nom Sg$ 
+^valkea/valkea A Pos Nom Sg/valkea N Nom Sg$
+^väri/väri N Nom Sg$
+^valkea/valkea A Pos Nom Sg/valkea N Nom Sg$
+^puhtaanvalkoinen/puhtaan#valkoinen A Pos Nom Sg$
+^sinkkivalkoinen/sinkki#valkoinen A Pos Nom Sg/sinkki#valkoinen N Nom Sg$
+^vitivalkoinen/viti#valkoinen A Pos Nom Sg/viti#valkoinen N Nom Sg$
+^valko-/valko- N TrunCo$
+^musta/musta A Pos Nom Sg/musta N Nom Sg/mä Pron Pers Ela Sg$
+^valkea/valkea A Pos Nom Sg/valkea N Nom Sg$
+^valkaista/valkaista V Inf1 Lat/valkaista V Prs Pass ConNeg$
+^valkoihoinen/valko#ihoinen A Pos Nom Sg/valko-#-ihoinen A Pos Nom Sg/valkoihoinen N Nom Sg$
+
+^purppura/purppura A Pos Nom Sg/purppura N Nom Sg$ 
+^violetti/violetti A Pos Nom Sg/violetti N Nom Sg$
+^punainen/punainen A Pos Nom Sg/punainen N Nom Sg$
+^liila/liila A Pos Nom Sg/liila N Nom Sg$
+^magenta/*magenta$
+^sinipunainen/sini#punainen A Pos Nom Sg/sini#punainen N Nom Sg/sinipunainen N Nom Sg$
+^violetti/violetti A Pos Nom Sg/violetti N Nom Sg$
+
+^magenta/*magenta$ 
+^sinipunainen/sini#punainen A Pos Nom Sg/sini#punainen N Nom Sg/sinipunainen N Nom Sg$
+
+^partikkeli/partikkeli N Nom Sg$ 
+^apusana/apu#sana N Nom Sg$
+^adpositio/adpositio N Nom Sg$
+^adverbi/adverbi N Nom Sg$
+^interjektio/interjektio N Nom Sg$
+^konjunktio/konjunktio N Nom Sg$
+^hiukkanen/hiukkanen N Nom Sg$
+^partikkelillinen/*partikkelillinen$
+^apusana/apu#sana N Nom Sg$
+
+^adverbi/adverbi N Nom Sg$ 
+^aika/aika/aika N Nom Sg$
+^paikka/paikka N Nom Sg$
+^tapa/tapa N Nom Sg/tappaa V Impv Act Sg2/tappaa V Prs Act ConNeg$
+^keino/keino N Nom Sg$
+^tila/tila N Nom Sg$
+^määrä/määrä N Nom Sg$
+^partikkeli/partikkeli N Nom Sg$
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+^seikkasana/seikka#sana N Nom Sg$
+
+^kahvi/kahvi N Nom Sg$ 
+^juoma/juoda AgPrc Pos Nom Sg/juoma N Nom Sg$
+^kahvipensas/kahvi#pensas N Nom Sg$
+^korvike/korvike N Nom Sg$
+^pannukarkeus/pannu#karkeus N Nom Sg$
+^sakkavesi/sakka#vesi N Nom Sg$
+^suodatinkarkeus/suodatin#karkeus N Nom Sg$
+^soroppi/*soroppi$
+^sumppi/sumppi N Nom Sg$
+
+^harmaa/harmaa A Pos Nom Sg/harmaa N Nom Sg$ 
+^väri/väri N Nom Sg$
+^tylsä/tylsä A Pos Nom Sg$
+^pilvinen/pilvinen A Pos Nom Sg$
+^hiirakko/hiirakko A Pos Nom Sg$
+
+^maito/maito N Nom Sg$ 
+^nisäkäs/nisäkäs N Nom Sg$
+^imeä/imeä V Inf1 Lat$
+^maitotölkki/maito#tölkki N Nom Sg$
+^maitiaisneste/maitiainen#neste N Nom Sg/maitiais#neste N Nom Sg$
+^hera/hera N Nom Sg$
+^karjatalous/karja#talous N Nom Sg$
+^kaseiini/kaseiini N Nom Sg$
+^kokomaito/koko#maito N Nom Sg$
+^kolloidikemia/kolloidi#kemia N Nom Sg$
+^kumissi/kumissi N Nom Sg$
+^lypsy/lypsy N Nom Sg$
+^lypsää/lypsää V Inf1 Lat/lypsää V Prs Act Sg3$
+^maidonvalkea/maidon#valkea A Pos Nom Sg/maito#valkea A Pos Nom Sg/maito#valkea N Nom Sg$
+^maidonvalkoinen/maidon#valkoinen A Pos Nom Sg/maito#valkoinen A Pos Nom Sg/maito#valkoinen N Nom Sg$
+^maiti/maiti N Nom Sg$
+^maitiaisneste/maitiainen#neste N Nom Sg/maitiais#neste N Nom Sg$
+^meijeritalous/meijeri#talous N Nom Sg$
+
+^sitruuna/sitruuna N Nom Sg$ 
+^ruutakasvit/ruudat#kasvi N Nom Pl/ruutakasvit N Nom Sg$
+^sitruspuu/sitrus#puu N Nom Sg$
+^sitrushedelmä/sitrus#hedelmä N Nom Sg$
+
+^oranssi/oranssi A Pos Nom Sg/oranssi N Nom Sg$ 
+^väri/väri N Nom Sg$
+^appelsiininvärinen/appelsiini#värinen A Pos Nom Sg$
+
+^englanti/englanti N Nom Sg$ 
+^Yhdysvallat/Yhdysvallat N Prop Nom Pl/Yhdysvalta N Prop Nom Pl$
+^Englanti/Englanti N Nom Sg/Englanti N Prop Nom Sg$
+^englanninkielinen/englannin#kielinen A Pos Nom Sg/englanti#-kielinen A Pos Nom Sg$
+^enkku/enkku N Nom Sg$
+^kielet/kieli N Nom Pl$
+
+^omena/omena N Nom Sg$ 
+^omenapuu/omena#puu N Nom Sg/omenapuu N Nom Sg$
+^hedelmä/hedelmä N Nom Sg$
+^epähedelmä/epä#hedelmä N Nom Sg/epä-#hedelmä N Nom Sg$
+^ulkonäkö/ulko#näkö N Nom Sg/ulko-#näkö N Nom Sg$
+^omenapuu/omena#puu N Nom Sg/omenapuu N Nom Sg$
+^omppu/omppu N Nom Sg$
+
+^hevonen/hevonen N Nom Sg$ 
+^ratsastus/ratsastus N Nom Sg$
+^nisäkäs/nisäkäs N Nom Sg$
+^kavioeläimet/kavio#eläin N Nom Pl$
+^kasvissyöjä/kasvis#syöjä A Pos Nom Sg/kasvis#syöjä N Nom Sg$
+^voimisteluteline/voimistelu#teline N Nom Sg$
+^hevosvoima/hevonen#voima N Nom Sg/hevos#voima N Nom Sg$
+^hevos-/hevonen N TrunCo$
+^hevosajot/hevonen#ajo N Nom Pl$
+^hevostyttö/hevonen#tyttö N Nom Sg$
+^hevosvetoinen/hevonen#vetoinen A Pos Nom Sg/hevos#vetoinen A Pos Nom Sg$
+^hirnua/hirnua V Inf1 Lat$
+^juhta/juhta N Nom Sg$
+^kastanja/kastanja N Nom Sg$
+^lämminverinen/lämmin#verinen A Pos Nom Sg$
+^rakuuna/rakuuna N Nom Sg$
+^ratsastaja/ratsastaja N Nom Sg$
+^tarpaani/tarpaani N Nom Sg$
+^täysverinen/täysverinen A Pos Nom Sg$
+^kavio/kavio N Nom Sg$
+^kavioeläin/kavio#eläin N Nom Sg$
+^keihäsluu/keihäs#luu N Nom Sg$
+^vuohinen/vuohinen N Nom Sg$
+^yösilmä/yö#silmä N Nom Sg$
+^hepo/hepo N Nom Sg$
+^heppa/heppa N Nom Sg$
+^koni/koni N Nom Sg$
+^kaakki/kaakki N Nom Sg$
+^humma/humma N Nom Sg$
+^polle/polle N Nom Sg$
+^luuska/luuska N Nom Sg$
+^kopukka/kopukka N Nom Sg$
+^koplukka/*koplukka$
+^heppa/heppa N Nom Sg$
+^arabialainen/ara#bi-#alainen A Pos Nom Sg/arabi#alainen A Pos Nom Sg/arabia#lainen A Pos Nom Sg/arabialainen A Pos Nom Sg$
+^hallakko/halla#kko N Abbr Nom Sg/hallakko N Nom Sg$
+^kimo/kimo A Pos Nom Sg/kimo N Nom Sg$
+^lämminverinen/lämmin#verinen A Pos Nom Sg$
+^ori/ori N Nom Sg$
+^poni/poni N Nom Sg$
+^päistärikkö/*päistärikkö$
+^ratsu/ratsu N Nom Sg$
+^ravuri/ravuri N Nom Sg$
+^ruuna/ruuna N Nom Sg$
+^tamma/tamma N Nom Sg$
+^varsa/varsa N Nom Sg$
+^harja/harja N Nom Sg$
+^kavio/kavio N Nom Sg$
+
+^kymmenen/kymmenen Num Gen Sg/kymmenen Num Nom Sg/kymmenen#$ 
+^luku/luku N Nom Sg$
+^yhdeksän/yhdeksän Num Gen Sg/yhdeksän Num Nom Sg/yhdeksän#$
+^yksitoista/yksitoista Card#/yksitoista Num Card Pl Nom/yksitoista Num Card Sg Nom$
+^kymmenes/kymmenes N Nom Sg/kymmenes Num Ord Nom Sg/kymmenes Ord#$
+^kymppi/kymppi N Nom Sg$
+
+^seitsemän/seitsemän Num Gen Sg/seitsemän Num Nom Sg/seitsemän#$ 
+^kuusi/kuu N Gen Sg PxSg2/kuu N Nom Pl PxSg2/kuu N Nom Sg PxSg2/kuusi N Nom Sg/kuusi Num Nom Sg/kuusi#$
+^kahdeksan/kahdeksan Num Gen Sg/kahdeksan Num Nom Sg/kahdeksan#$
+^seitsemäs/seitsemäs Num Ord Nom Sg/seitsemäs Ord#$
+^seiska/seiska N Nom Sg$
+^seitsikko/seitsikko N Nom Sg$
+^seitsenhaarainen/seitsen#haarainen A Pos Nom Sg/seitsen-#haarainen A Pos Nom Sg$
+
+^kuusi/kuu N Gen Sg PxSg2/kuu N Nom Pl PxSg2/kuu N Nom Sg PxSg2/kuusi N Nom Sg/kuusi Num Nom Sg/kuusi#$ 
+^viisi/viisi/viisi Num Nom Sg/viisi#$
+^seitsemän/seitsemän Num Gen Sg/seitsemän Num Nom Sg/seitsemän#$
+^kuudes/kuudes Num Ord Nom Sg/kuudes Ord#$
+^kuutio/kuutio N Nom Sg$
+^kuutonen/kuutonen N Nom Sg$
+^kuusiheteinen/kuusi#-heteinen A Pos Nom Sg$
+^kuusinkertainen/kuusinkertainen A Pos Nom Sg$
+^kuuset/kuusi N Nom Pl$
+^suku/suku N Nom Sg$
+^puu/puu N Nom Sg$
+^pihta/pihta N Nom Sg$
+^näre/näre N Nom Sg$
+^puu/puu N Nom Sg$
+^kuu/kuu N Nom Sg$
+^-/- Punct Dash/- Punct Dash >>>$^si/*si$
+
+^viisi/viisi/viisi Num Nom Sg/viisi#$ 
+^neljä/neljä Num Nom Sg/neljä#$
+^kuusi/kuu N Gen Sg PxSg2/kuu N Nom Pl PxSg2/kuu N Nom Sg PxSg2/kuusi N Nom Sg/kuusi Num Nom Sg/kuusi#$
+^viitonen/viitonen N Nom Sg$
+^viisikko/viisikko N Nom Sg$
+^viisikymmentä/viisikymmentä Card#/viisikymmentä Num Card Sg Nom$
+^viides/viides Num Ord Nom Sg/viides Ord#$
+^tapa/tapa N Nom Sg/tappaa V Impv Act Sg2/tappaa V Prs Act ConNeg$
+
+^neljä/neljä Num Nom Sg/neljä#$ 
+^luku/luku N Nom Sg$
+^kolme/kolme Num Nom Sg/kolme#$
+^viisi/viisi/viisi Num Nom Sg/viisi#$
+^neljäs/neljäs Num Ord Nom Sg/neljäs Ord#$
+^nelonen/nelonen N Nom Sg$
+^nelikko/neli#kko N Abbr Nom Sg/neli-#kko N Abbr Nom Sg/nelikko N Nom Sg$
+^neli/neli N Nom Sg$
+^nelistää/nelistää V Inf1 Lat/nelistää V Prs Act Sg3$
+^neliö/neliö N Nom Sg$
+^neljännes/neljännes N Nom Sg$
+^neljäs/neljäs Num Ord Nom Sg/neljäs Ord#$
+
+^kolme/kolme Num Nom Sg/kolme#$ 
+^luku/luku N Nom Sg$
+^kaksi/kaksi Num Nom Sg/kaksi#$
+^neljä/neljä Num Nom Sg/neljä#$
+^kolmas/kolmas Num Ord Nom Sg/kolmas Ord#$
+^kolmannes/kolmannes N Nom Sg$
+^kolmas/kolmas Num Ord Nom Sg/kolmas Ord#$
+^kolmonen/kolmonen N Nom Sg$
+^kolmikko/kolmi-#kko N Abbr Nom Sg/kolmikko N Nom Sg$
+^kolmio/kolmio N Nom Sg$
+
+^kaksi/kaksi Num Nom Sg/kaksi#$ 
+^luku/luku N Nom Sg$
+^yksi/yksi Num Nom Sg/yksi#$
+^kolme/kolme Num Nom Sg/kolme#$
+^toinen/toinen N Nom Sg/toinen Num Ord Nom Sg/toinen Ord#/toinen Pron Nom Sg$
+^kahdesti/kahdesti Adv$
+^kahdenvälinen/kahdenvälinen A Pos Nom Sg$
+^kahtalainen/kahtalainen A Pos Nom Sg$
+^kahtia/kahtia Adv$
+^kakkonen/kakkonen N Nom Sg$
+^kaksikko/kaksikko N Nom Sg$
+^kaksinen/kaksinen A Pos Nom Sg$
+^kaksonen/kaksonen N Nom Sg$
+^kaksihaarainen/*kaksihaarainen$
+^kaksinaisuus/kaksinaisuus N Nom Sg$
+^pari/pari N Nom Sg$
+^toinen/toinen N Nom Sg/toinen Num Ord Nom Sg/toinen Ord#/toinen Pron Nom Sg$
+
+^yksi/yksi Num Nom Sg/yksi#$ 
+^luku/luku N Nom Sg$
+^nolla/nolla N Nom Sg/nolla Num Nom Sg/nolla#/nollas N$
+^kaksi/kaksi Num Nom Sg/kaksi#$
+^ensimmäinen/ensimmäinen N Nom Sg/ensimmäinen Num Ord Nom Sg/ensimmäinen Ord#$
+^ensimmäinen/ensimmäinen N Nom Sg/ensimmäinen Num Ord Nom Sg/ensimmäinen Ord#$
+^eräs/eräs Pron Qnt Indef Nom Sg$
+^muuan/muuan Pron Qnt Indef Nom Sg$
+^ykkönen/ykkönen N Nom Sg$
+^sama/sama Pron Qnt Nom Sg$
+^eräs/eräs Pron Qnt Indef Nom Sg$
+^muuan/muuan Pron Qnt Indef Nom Sg$
+^pelkkä/pelkkä A Pos Nom Sg$
+
+^nolla/nolla N Nom Sg/nolla Num Nom Sg/nolla#/nollas N$ 
+^yksi/yksi Num Nom Sg/yksi#$
+^nollata/nollata V Inf1 Lat/nollata V Prs Pass ConNeg$
+^tyhjykkä/*tyhjykkä$
+
+^kumulatiivinen/kumu#latiivinen A Pos Nom Sg$ 
+^kumulaatio/kumulaatio N Nom Sg$
+^kumuloitua/kumuloida PrfPrc Pass Pos Par Sg/kumuloitua V Inf1 Lat$
+^kumulatiivisuus/*kumulatiivisuus$
+
+^kumuloitua/kumuloida PrfPrc Pass Pos Par Sg/kumuloitua V Inf1 Lat$ 
+^kasautua/kasa#utu N Par Sg/kasautua V Inf1 Lat$
+^kertyä/kertyä V Inf1 Lat$
+
+^kumulaatio/kumulaatio N Nom Sg$ 
+^kumuloitua/kumuloida PrfPrc Pass Pos Par Sg/kumuloitua V Inf1 Lat$
+^kumulatiivinen/kumu#latiivinen A Pos Nom Sg$
+
+^kvantitatiivinen/kvantitatiivinen A Pos Nom Sg$ 
+^määrällinen/määrällinen A Pos Nom Sg$
+^määrä/määrä N Nom Sg$
+^kvantiteetti/kvantiteetti N Nom Sg$
+^kvalitatiivinen/kvalitatiivinen A Pos Nom Sg$
+
+^kvalitatiivinen/kvalitatiivinen A Pos Nom Sg$ 
+^laadullinen/laadullinen A Pos Nom Sg$
+^laatu/laatu N Nom Sg$
+^kvaliteetti/kvaliteetti N Nom Sg$
+^kvantitatiivinen/kvantitatiivinen A Pos Nom Sg$
+^määrällinen/määrällinen A Pos Nom Sg$
+
+^nominaalinen/*nominaalinen$ 
+^nomini/nomini N Nom Sg$
+^nimellinen/nimellinen A Pos Nom Sg$
+^nominaali/nominaali N Nom Sg$
+^nominaalimuoto/nominaali#muoto N Nom Sg$
+
+^maksimi/maksi#mi N/maksi-#mi N/maksimi N Nom Sg$ 
+^maksimaalinen/maksi#-maalinen A Pos Nom Sg/maksi#maalinen A Pos Nom Sg/maksi-#-maalinen A Pos Nom Sg/maksi-#maalinen A Pos Nom Sg$
+^maksimoida/maksimoida V Inf1 Lat/maksimoida V Prs Pass ConNeg$
+^minimi/mini#mi N/mini-#mi N/minimi N Nom Sg$
+
+^minimi/mini#mi N/mini-#mi N/minimi N Nom Sg$ 
+^minimaalinen/mini#-maalinen A Pos Nom Sg/mini#maalinen A Pos Nom Sg/mini-#-maalinen A Pos Nom Sg/mini-#maalinen A Pos Nom Sg$
+^minimoida/minimoida V Inf1 Lat/minimoida V Prs Pass ConNeg$
+^maksimi/maksi#mi N/maksi-#mi N/maksimi N Nom Sg$
+
+^maksimoida/maksimoida V Inf1 Lat/maksimoida V Prs Pass ConNeg$ 
+^maksimi/maksi#mi N/maksi-#mi N/maksimi N Nom Sg$
+^maksimaalinen/maksi#-maalinen A Pos Nom Sg/maksi#maalinen A Pos Nom Sg/maksi-#-maalinen A Pos Nom Sg/maksi-#maalinen A Pos Nom Sg$
+^minimoida/minimoida V Inf1 Lat/minimoida V Prs Pass ConNeg$
+
+^minimoida/minimoida V Inf1 Lat/minimoida V Prs Pass ConNeg$ 
+^minimi/mini#mi N/mini-#mi N/minimi N Nom Sg$
+^minimaalinen/mini#-maalinen A Pos Nom Sg/mini#maalinen A Pos Nom Sg/mini-#-maalinen A Pos Nom Sg/mini-#maalinen A Pos Nom Sg$
+^maksimoida/maksimoida V Inf1 Lat/maksimoida V Prs Pass ConNeg$
+
+^maksimaalinen/maksi#-maalinen A Pos Nom Sg/maksi#maalinen A Pos Nom Sg/maksi-#-maalinen A Pos Nom Sg/maksi-#maalinen A Pos Nom Sg$ 
+^maksimi/maksi#mi N/maksi-#mi N/maksimi N Nom Sg$
+^maksimoida/maksimoida V Inf1 Lat/maksimoida V Prs Pass ConNeg$
+^minimaalinen/mini#-maalinen A Pos Nom Sg/mini#maalinen A Pos Nom Sg/mini-#-maalinen A Pos Nom Sg/mini-#maalinen A Pos Nom Sg$
+
+^minimaalinen/mini#-maalinen A Pos Nom Sg/mini#maalinen A Pos Nom Sg/mini-#-maalinen A Pos Nom Sg/mini-#maalinen A Pos Nom Sg$ 
+^minimi/mini#mi N/mini-#mi N/minimi N Nom Sg$
+^minimoida/minimoida V Inf1 Lat/minimoida V Prs Pass ConNeg$
+^maksimaalinen/maksi#-maalinen A Pos Nom Sg/maksi#maalinen A Pos Nom Sg/maksi-#-maalinen A Pos Nom Sg/maksi-#maalinen A Pos Nom Sg$
+
+^bruttokansantuote/brutto#kansa#tuote N Nom Sg/brutto#kansan#tuote N Nom Sg$ 
+^kansantalous/kansa#talous N Nom Sg/kansan#talous N Nom Sg$
+^nettokansantuote/netto#kansa#tuote N Nom Sg/netto#kansan#tuote N Nom Sg$
+^BKT/BKT Abbr/BKT Abbr Nom Sg$
+^bkt/bkt Abbr/bkt Abbr Nom Sg$
+^bruttokansantulo/brutto#kansa#tulo N Nom Sg/brutto#kansan#tulo N Nom Sg$
+^talouskasvu/talous#kasvu N Nom Sg$
+
+^päärynä/päärynä N Nom Sg$ 
+^tarhapäärynä/tarha#päärynä N Nom Sg$
+^hedelmäpuu/hedelmä#puu N Nom Sg$
+^viljellä/viljellä V Inf1 Lat/viljellä V Prs Pass ConNeg$
+^ruusukasvit/ruusu#kasvi N Nom Pl$
+^heimo/heimo N Nom Sg$
+^puu/puu N Nom Sg$
+^omenapuu/omena#puu N Nom Sg/omenapuu N Nom Sg$
+^hedelmä/hedelmä N Nom Sg$
+^päärynät/päärynä N Nom Pl$
+
+^yksitoista/yksitoista Card#/yksitoista Num Card Pl Nom/yksitoista Num Card Sg Nom$ 
+^luku/luku N Nom Sg$
+^kymmenen/kymmenen Num Gen Sg/kymmenen Num Nom Sg/kymmenen#$
+^kaksitoista/kaksitoista Card#/kaksitoista Num Card Pl Nom/kaksitoista Num Card Sg Nom$
+^yhdestoista/yhdestoista Num Sg Nom/yhdestoista#$
+
+^kaksitoista/kaksitoista Card#/kaksitoista Num Card Pl Nom/kaksitoista Num Card Sg Nom$ 
+^yksitoista/yksitoista Card#/yksitoista Num Card Pl Nom/yksitoista Num Card Sg Nom$
+^kolmetoista/kolmetoista Card#/kolmetoista Num Card Sg Nom$
+^luku/luku N Nom Sg$
+^kahdestoista/kahdestoista Num Pl Nom/kahdestoista Num Sg Nom/kahdestoista#$
+^tusina/tusina N Nom Sg$
+
+^kolmetoista/kolmetoista Card#/kolmetoista Num Card Sg Nom$ 
+^luku/luku N Nom Sg$
+^kaksitoista/kaksitoista Card#/kaksitoista Num Card Pl Nom/kaksitoista Num Card Sg Nom$
+^neljätoista/neljästoista Num Sg Nom/neljästoista#/neljätoista Card#/neljätoista Num Card Sg Nom$
+^kolmastoista/*kolmastoista$
+
+^neljätoista/neljästoista Num Sg Nom/neljästoista#/neljätoista Card#/neljätoista Num Card Sg Nom$ 
+^luku/luku N Nom Sg$
+^kolmetoista/kolmetoista Card#/kolmetoista Num Card Sg Nom$
+^viisitoista/viisitoista Card#/viisitoista Num Card Pl Nom/viisitoista Num Card Sg Nom$
+^neljästoista/*neljästoista$
+
+^viisitoista/viisitoista Card#/viisitoista Num Card Pl Nom/viisitoista Num Card Sg Nom$ 
+^luku/luku N Nom Sg$
+^neljätoista/neljästoista Num Sg Nom/neljästoista#/neljätoista Card#/neljätoista Num Card Sg Nom$
+^kuusitoista/kuusi#toinen N Par Sg/kuusitoista Card#/kuusitoista Num Card Pl Nom/kuusitoista Num Card Sg Nom$
+^viidestoista/*viidestoista$
+
+^adpositio/adpositio N Nom Sg$ 
+^suhdesana/suhde#sana N Nom Sg$
+^prepositio/prepositio N Nom Sg$
+^postpositio/postpositio N Nom Sg$
+^ennen/ennen Adp Po/ennen Adp Pr/ennen Adv$
+^prepositio/prepositio N Nom Sg$
+^postpositio/postpositio N Nom Sg$
+
+^interjektio/interjektio N Nom Sg$ 
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+^huutomerkki/huuto#merkki N Nom Sg$
+^onomatopoeettinen/onomatopoeettinen A Pos Nom Sg$
+^hei/hei Interj$
+^roiskis/roiskis Interj$
+^kaivanto/kaivanto N Nom Sg$
+^huudahduspartikkeli/huudahdus#partikkeli N Nom Sg$
+^interjektsioni/*interjektsioni$
+^kiihtosana/kiihto#sana N Nom Sg$
+^huudahdussana/huudahdus#sana N Nom Sg$
+
+^nti/nti Abbr$ 
+^neiti/neiti N Nom Sg$
+
+^rva/rva Abbr$ 
+^rouva/rouva N Nom Sg$
+^avioitua/avio#itu N Par Sg/avioitua V Inf1 Lat$
+
+^hra/hra N Abbr Nom Sg$ 
+^herra/herra N Nom Sg$
+
+^ruotsalainen/ruotsalainen A Pos Nom Sg/ruotsalainen N Nom Sg$ 
+^Ruotsi/Ruotsi N Nom Sg/Ruotsi N Prop Nom Sg$
+^Ruotsi/Ruotsi N Nom Sg/Ruotsi N Prop Nom Sg$
+^Ruotsi/Ruotsi N Nom Sg/Ruotsi N Prop Nom Sg$
+^hurri/hurri N Nom Sg$
+^Ruotsi/Ruotsi N Nom Sg/Ruotsi N Prop Nom Sg$
+^ruotsi/ruotsi N Nom Sg$
+^suomenruotsalainen/suomen#ruotsalainen A Pos Nom Sg/suomen#ruotsalainen N Nom Sg/suomi#ruotsalainen A Pos Nom Sg/suomi#ruotsalainen N Nom Sg$
+^ruotsinsuomalainen/ruotsi#suomalainen A Pos Nom Sg/ruotsin#suomalainen A Pos Nom Sg/ruotsin#suomalainen N Nom Sg$
+^ruotsinkielinen/ruotsi#-kielinen A Pos Nom Sg/ruotsin#kielinen A Pos Nom Sg$
+^ruotsitar/*ruotsitar$
+
+^ahma/ahma N Nom Sg$ 
+^näätäeläin/näätä#eläin N Nom Sg$
+
+^aamutähti/aamu#tähti N Nom Sg$ 
+^kointähti/koi#tähti N Nom Sg/koin#tähti N Nom Sg$
+^Venus/Venus N Prop Nom Sg$
+^lyömäase/lyömäase N Nom Sg$
+^iltatähti/ilta#tähti N Nom Sg$
+^piikkinuija/piikki#nuija N Nom Sg$
+
+^pudota/pudota V Inf1 Lat/pudota V Prs Pass ConNeg/pudottaa V Impv Act Sg2/pudottaa V Prs Act ConNeg$ 
+^alas/alas Adv$
+^vähetä/vähetä V Inf1 Lat/vähetä V Prs Pass ConNeg$
+^pienentyä/pienentyä V Inf1 Lat$
+^tyrmätä/tyrmätä V Inf1 Lat/tyrmätä V Prs Pass ConNeg$
+^tappelu/tapella V Nom Sg/tappelu N Nom Sg$
+^pahoinpitely/pahoin#pitely N Nom Sg/pahoinpidellä V Nom Sg$
+^syöty/syödä PrfPrc Pass Pos Nom Sg/syödä V Pst Pass ConNeg$
+^pudottaa/pudottaa V Inf1 Lat/pudottaa V Prs Act Sg3$
+^putous/putous N Nom Sg$
+^tippua/tippua V Inf1 Lat$
+^tipahtaa/tipahtaa V Inf1 Lat/tipahtaa V Prs Act Sg3$
+
+^pudottaa/pudottaa V Inf1 Lat/pudottaa V Prs Act Sg3$ 
+^pudota/pudota V Inf1 Lat/pudota V Prs Pass ConNeg/pudottaa V Impv Act Sg2/pudottaa V Prs Act ConNeg$
+^varistaa/varistaa V Inf1 Lat/varistaa V Prs Act Sg3$
+
+^p/p Abbr Nom Sg$ 
+^penni/penni N Nom Sg$
+^markka/markka N Nom Sg$
+
+^o/o Abbr Nom Sg$ 
+^on/olla V Prs Act Sg3$
+^olla/olla V Inf1 Lat/olla V Prs Pass ConNeg$
+
+^m/m Abbr/m Abbr Nom Sg/m Num Roman Nom Sg$ 
+^morfiini/morfi N Ill Sg PxSg1/morfiini N Nom Sg$
+
+^l/l Abbr/l Abbr Nom Sg/l Num Roman Nom Sg$ 
+^laudatur/laudatur N Nom Sg$
+
+^i/i Abbr/i Abbr Nom Sg/i Num Roman Nom Sg$ 
+^improbatur/improbatur N Nom Sg$
+
+^h/h Abbr/h Abbr Nom Sg$ 
+^heroiini/heroiini N Nom Sg$
+
+^e/e Abbr Nom Sg$ 
+^euro/euro N Nom Sg$
+^en/ei V Neg Sg1$
+
+^c/c Abbr/c Abbr Nom Sg/c Num Roman Nom Sg$ 
+^cis/cis N Nom Sg$
+^cisis/*cisis$
+^ces/ces N Nom Sg$
+^ceses/*ceses$
+
+^b/b Abbr Nom Sg$ 
+^bitti/bit#ti N/bitti N Nom Sg$
+^enharmoninen/enharmoninen A Pos Nom Sg$
+^ais/*ais$
+
+^a/a Abbr Nom Sg$ 
+^approbatur/approbatur N Nom Sg$
+^amfetamiini/amfetamiini N Nom Sg$
+^a-molli/a Abbr TrunComolli N Nom Sg$
+
+^t/t Abbr Nom Sg/tuo Pron Dem Nom Sg$ 
+^tunti/tunti N Nom Sg$
+^tavu/tavu N Nom Sg$
+^tie/tie N Nom Sg$
+
+^x/x Abbr Nom Sg/x Num Roman Nom Sg$ 
+^MDMA/*MDMA$
+^ekstaasi/ekstaasi N Nom Sg$
+
+^propri/propri N Nom Sg$ 
+^erisnimi/erisnimi N Nom Sg$
+
+^gamma/gamma N Nom Sg$ 
+^kreikka/kreikka N Nom Sg$
+^gammahydroksibutyraatti/gamma#hydroksi-#butyraatti N Nom Sg$
+^GBL/*GBL$
+^lakka/lakka N Nom Sg$
+^gammasäteily/gamma#säteily N Nom Sg$
+
+^helmikuu/helmi#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^tammikuu/tammi#kuu N Nom Sg/tammikuu N Nom Sg$
+^maaliskuu/maalis#kuu N Nom Sg$
+^helmikuinen/helmi#-kuinen A Pos Nom Sg/helmi#kuinen A Pos Nom Sg$
+
+^kuukausi/kuu#kausi N Nom Sg$ 
+^vuosi/vuo N Gen Sg PxSg2/vuo N Nom Pl PxSg2/vuo N Nom Sg PxSg2/vuosi N Nom Sg/vuotaa V Pst Act Sg3$
+^aika/aika/aika N Nom Sg$
+^Kuu/Kuu N Nom Sg/Kuu N Prop Nom Sg$
+^Maa/Maa N Nom Sg/Maa N Prop Nom Sg$
+^kuukausittainen/kuu#kausittainen A Pos Nom Sg$
+^kuukautiset/kuu#-kautinen A Pos Nom Pl/kuu#kautinen N Nom Pl$
+^elokuu/elo#kuu N Nom Sg$
+^heinäkuu/heinä#kuu N Nom Sg$
+^helmikuu/helmi#kuu N Nom Sg$
+^huhtikuu/huhtikuu N Nom Sg$
+^joulukuu/joulu#kuu N Nom Sg$
+^kesäkuu/kesä#kuu N Nom Sg$
+^lokakuu/loka#kuu N Nom Sg$
+^maaliskuu/maalis#kuu N Nom Sg$
+^marraskuu/marras#kuu N Nom Sg$
+^syyskuu/syys#kuu N Nom Sg/syys-#kuu N Nom Sg$
+^tammikuu/tammi#kuu N Nom Sg/tammikuu N Nom Sg$
+^toukokuu/touko#kuu N Nom Sg$
+^kuu/kuu N Nom Sg$
+
+^tammikuu/tammi#kuu N Nom Sg/tammikuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^joulukuu/joulu#kuu N Nom Sg$
+^helmikuu/helmi#kuu N Nom Sg$
+^tammikuinen/tammi#-kuinen A Pos Nom Sg/tammikuinen A Pos Nom Sg$
+
+^oyj/oyj Abbr/oyj Abbr Nom Sg$ 
+^osakeyhtiölaki/osake#yhtiö#laki N Nom Sg/osakeyhtiö#laki N Nom Sg$
+^osakeyhtiö/osake#yhtiö N Nom Sg/osakeyhtiö N Nom Sg$
+
+^olut/olut N Nom Sg$ 
+^vilja/vilja A Pos Nom Sg/vilja N Nom Sg$
+^ohra/ohra N Nom Sg$
+^alkoholijuoma/alkoholi#juoma N Nom Sg$
+^olvi/olvi N Nom Sg$
+^pilsneri/pilsneri N Nom Sg$
+^bisse/bisse N Nom Sg$
+^kalja/kalja N Nom Sg$
+^ööli/*ööli$
+^taari/*taari$
+^humala/humala N Nom Sg$
+^mallas/mallas N Nom Sg$
+^vierre/vierre N Nom Sg$
+^mäski/mäski N Nom Sg$
+^panna/panna N Nom Sg/panna V Inf1 Lat/panna V Prs Pass ConNeg$
+^humaloida/*humaloida$
+^pano/pano N Nom Sg$
+^mäyräkoira/mäyrä#koira N Nom Sg$
+^keissi/*keissi$
+^salkku/salkku N Nom Sg$
+^kontti/kontti N Nom Sg$
+^kori/kori N Nom Sg$
+^koppa/koppa N Nom Sg$
+
+^mm/mm Abbr/mm Abbr Nom Sg/mm Interj/mm Num Roman Nom Sg$ 
+^maustemitta/mauste#mitta N Nom Sg$
+
+^korkea/korkea A Pos Nom Sg$ 
+^pitkä/pitkä A Pos Nom Sg$
+^pystysuunta/pysty#suunta N Nom Sg$
+^laaja/laaja A Pos Nom Sg$
+^suuritaajuinen/suuri-#taajuinen A Pos Nom Sg$
+^diskantti/diskantti N Nom Sg$
+^kapea/kapea A Pos Nom Sg$
+^leveä/leveä A Pos Nom Sg$
+^lyhyt/lyhyt A Pos Nom Sg$
+^pitkä/pitkä A Pos Nom Sg$
+^syvä/syvä A Pos Nom Sg$
+^korkea-arvoinen/korkea-arvoinen A Pos Nom Sg$
+^korkeus/korkeus N Nom Sg$
+^korkeatuottoinen/*korkeatuottoinen$
+^matala/mata#la N/matala A Pos Nom Sg$
+^ylänkö/ylänkö N Nom Sg$
+^korkeapaine/korkea#paine N Nom Sg$
+^korkeus/korkeus N Nom Sg$
+^mataluus/mataluus N Nom Sg$
+
+^kyty/kyty N Nom Sg$ 
+^aviomies/avio#mies N Nom Sg$
+^veli/veli N Nom Sg$
+^lanko/lanko N Nom Sg$
+
+^lanko/lanko N Nom Sg$ 
+^aviopuoliso/avio#puoli#so N/avio#puoliso N Nom Sg$
+^veli/veli N Nom Sg$
+^sisarus/sisarus N Nom Sg$
+^aviomies/avio#mies N Nom Sg$
+^suoveri/suo#veri N Nom Sg$
+
+^käly/käly N Nom Sg$ 
+^aviopuoliso/avio#puoli#so N/avio#puoliso N Nom Sg$
+^sisko/sisko N Nom Sg$
+^sisarus/sisarus N Nom Sg$
+^vaimo/vaimo N Nom Sg$
+^nato/nato N Nom Sg$
+
+^nato/nato N Nom Sg$ 
+^avio/avio N Nom Sg$
+^käly/käly N Nom Sg$
+
+^miniä/min N Par Sg/mini N Par Sg/miniä N Nom Sg$ 
+^lapsi/lapsi N Nom Sg$
+^vaimo/vaimo N Nom Sg$
+^vävy/vävy N Nom Sg$
+
+^vävy/vävy N Nom Sg$ 
+^lapsi/lapsi N Nom Sg$
+^aviomies/avio#mies N Nom Sg$
+^miniä/min N Par Sg/mini N Par Sg/miniä N Nom Sg$
+^appi/appi N Nom Sg$
+^anoppi/anoppi N Nom Sg$
+
+^appi/appi N Nom Sg$ 
+^puoliso/puoli#so N/puoliso N Nom Sg$
+^isä/isä N Nom Sg$
+^anoppi/anoppi N Nom Sg$
+^sovellus/sovellus N Nom Sg$
+^applikaatio/applikaatio N Nom Sg$
+
+^anoppi/anoppi N Nom Sg$ 
+^appi/appi N Nom Sg$
+^käly/käly N Nom Sg$
+^lanko/lanko N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^mies/mies N Nom Sg$
+^puoliso/puoli#so N/puoliso N Nom Sg$
+^vaimo/vaimo N Nom Sg$
+^vävy/vävy N Nom Sg$
+^äiti/äiti N Nom Sg$
+
+^serkku/serkku N Nom Sg$ 
+^sisko/sisko N Nom Sg$
+^veli/veli N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+
+^pikkuserkku/pikku#serkku N Nom Sg/pikku-#serkku N Nom Sg$ 
+^isovanhempi/iso#vanha A Comp Nom Sg/iso#vanhempi N Nom Sg/iso-#vanha A Comp Nom Sg/iso-#vanhempi N Nom Sg$
+^sisarus/sisarus N Nom Sg$
+^lapsenlapsi/lapsenlapsi N Nom Sg/lapsi#lapsi N Nom Sg$
+^serkku/serkku N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+
+^täti/täti N Nom Sg$ 
+^isä/isä N Nom Sg$
+^äiti/äiti N Nom Sg$
+^sisar/sisar N Nom Sg$
+^nainen/naida V Pot Act Sg1/nainen N Nom Sg$
+^vanhahko/vanhahko A Pos Nom Sg$
+^eno/eno N Nom Sg$
+^setä/setä N Nom Sg$
+^tantta/tantta N Nom Sg$
+
+^setä/setä N Nom Sg$ 
+^isä/isä N Nom Sg$
+^veli/veli N Nom Sg$
+^äiti/äiti N Nom Sg$
+^mies/mies N Nom Sg$
+^täti/täti N Nom Sg$
+^eno/eno N Nom Sg$
+
+^eno/eno N Nom Sg$ 
+^äiti/äiti N Nom Sg$
+^veli/veli N Nom Sg$
+^joki/joki N Nom Sg$
+^setä/setä N Nom Sg$
+^täti/täti N Nom Sg$
+
+^agitaatio/agitaatio N Nom Sg$ 
+^yllytys/yllytys N Nom Sg$
+^kiihotus/kiihotus N Nom Sg$
+
+^agitaattori/agitaattori N Nom Sg$ 
+^yllyttäjä/yllyttäjä N Nom Sg$
+^kiihottaja/kiihottaja N Nom Sg$
+
+^fakta/fakta N Nom Sg$ 
+^tosiasia/tosi#asia N Nom Sg$
+
+^tosiasia/tosi#asia N Nom Sg$ 
+^todentaa/todentaa V Inf1 Lat/todentaa V Prs Act Sg3$
+^todellisuus/todellisuus N Nom Sg$
+^todellinen/todellinen A Pos Nom Sg$
+^tosi/toi Pron Dem Gen Sg PxSg2/toi Pron Dem Nom Pl PxSg2/toi Pron Dem Nom Sg PxSg2/tosi/tosi A Pos Nom Sg$
+^tosiasiallinen/tosi#asiallinen A Pos Nom Sg$
+^fakta/fakta N Nom Sg$
+^tosio/tosio N Nom Sg$
+
+^absoluuttinen/absoluuttinen A Pos Nom Sg$ 
+^ehdoton/ehdoton A Pos Nom Sg$
+^relatiivinen/relatiivinen A Pos Nom Sg$
+^suhteellinen/suhteellinen A Pos Nom Sg$
+
+^relatiivinen/relatiivinen A Pos Nom Sg$ 
+^suhteellinen/suhteellinen A Pos Nom Sg$
+^relatiivipronomini/relatiivi#pronomini N Nom Sg$
+^absoluuttinen/absoluuttinen A Pos Nom Sg$
+
+^absurdi/absurdi A Pos Nom Sg$ 
+^mieletön/mieletön A Pos Nom Sg$
+^järjetön/järjetön A Pos Nom Sg$
+^järjenvastainen/järjenvastainen A Pos Nom Sg/järki#vastainen A Pos Nom Sg$
+^absurdismi/*absurdismi$
+^järkevä/järkevä A Pos Nom Sg$
+
+^piste/piste N Nom Sg$ 
+^välimerkki/väli#merkki N Nom Sg$
+^alkio/alkio N Nom Sg$
+^rinne/rinne N Nom Sg$
+^pilkku/pilkku N Nom Sg$
+^pistelin/pistellä V Pst Act Sg1$
+^pistellä/pistellä V Inf1 Lat/pistellä V Prs Pass ConNeg$
+^pistely/pistely N Nom Sg$
+^pistemäisesti/*pistemäisesti$
+^pisteyttää/pisteyttää V Inf1 Lat/pisteyttää V Prs Act Sg3$
+^pistin/pistin N Nom Sg/pistää V Pst Act Sg1$
+^pisto/pisto N Nom Sg$
+^pistos/pistos N Nom Sg$
+^pinna/pinna N Nom Sg$
+^pointsi/pointsi N Nom Sg$
+^pojo/*pojo$
+
+^tietokone/tieto#kone N Nom Sg$ 
+^tietotekninen/tieto#tekninen A Pos Nom Sg$
+^käsitellä/käsitellä V Inf1 Lat/käsitellä V Prs Pass ConNeg$
+^ohjelmointi/ohjelmointi N Nom Sg$
+^konsoli/konsoli N Nom Sg$
+^ohjelma/ohjelma N Nom Sg$
+^ohjelmisto/ohjelmisto N Nom Sg$
+^pääkone/pää#kone N Nom Sg/pää-#kone N Nom Sg$
+^tietsikka/*tietsikka$
+^data/data N Nom Sg$
+^etäkone/etä-#kone N Nom Sg$
+^käyttöjärjestelmä/käyttö#järjestelmä N Nom Sg$
+^laskin/laskea V Pst Act Sg1/laski N Gen Sg/laskin N Nom Sg$
+^pelikonsoli/peli#konsoli N Nom Sg$
+^pääkone/pää#kone N Nom Sg/pää-#kone N Nom Sg$
+^tabletti/tabletti N Nom Sg$
+^hiiri/hiiri N Nom Sg$
+^keskusmuisti/keskus#muisti N Nom Sg$
+^mikroprosessori/mikro#prosessori N Nom Sg/mikro-#prosessori N Nom Sg$
+^monitori/moni-#tori N Nom Sg/monitori N Nom Sg$
+^näppäimistö/näppäimistö N Nom Sg$
+^prosessori/prosessori N Nom Sg$
+
+^rikos/rikos N Nom Sg$ 
+^laki/laki N Nom Sg$
+^rikkomus/rikkomus N Nom Sg$
+^rike/rike N Nom Sg$
+
+^esitutkinta/esi#tutkinta N Nom Sg/esi-#tutkinta N Nom Sg$ 
+^rikos/rikos N Nom Sg$
+^syyteharkinta/syyte#harkinta N Nom Sg$
+^rikostutkinta/rikos#tutkinta N Nom Sg$
+^R-ilmoitus/R Abbr TrunCoilmoitus N Nom Sg$
+^rikosilmoitus/rikos#ilmoitus N Nom Sg$
+
+^uhri/uhri N Nom Sg$ 
+^ihminen/ihminen N Nom Sg$
+^rikos/rikos N Nom Sg$
+^jumala/jumala N Nom Sg$
+^uhraus/uhraus N Nom Sg$
+
+^vahinko/vahinko N Nom Sg$ 
+^tarkoitus/tarkoitus N Nom Sg$
+^teko/teko N Nom Sg$
+^virtsa/virtsa N Nom Sg$
+^uloste/uloste N Nom Sg$
+^pissa/pissa N Nom Sg$
+^raskaaksi/raskas A Pos Tra Sg$
+^menetys/menetys N Nom Sg$
+^tappio/tappio N Nom Sg$
+^tuho/tuho N Nom Sg$
+^vahingoittaen/vahingoittaa V Inf2 Act Ins$
+^vahingoittamatta/vahingoittaa AgPrc Pos Abe Sg/vahingoittaa V Inf3 Abe$
+^vahingossa/vahinko N Ine Sg$
+
+^syyttäjä/syyttäjä N Nom Sg$ 
+^viranomainen/viran#omainen N Nom Sg/virka#-omainen A Pos Nom Sg/virka#omainen A Pos Nom Sg/virka#omainen N Nom Sg$
+^rikos/rikos N Nom Sg$
+^oikeus/oikeus N Nom Sg$
+^syyttää/syyttää V Inf1 Lat/syyttää V Prs Act Sg3$
+^valtakunnansyyttäjä/valta#kunnan#syyttäjä N Nom Sg/valta#kunta#syyttäjä N Nom Sg/valta-#kunta#syyttäjä N Nom Sg$
+^syyttämättäjättämispäätös/*syyttämättäjättämispäätös$
+
+^epäillä/epäillä V Inf1 Lat/epäillä V Prs Pass ConNeg$ 
+^epävarma/epä#varma A Pos Nom Sg/epä-#varma A Pos Nom Sg$
+^kyseenalaistaa/kyseenalaistaa V Inf1 Lat/kyseenalaistaa V Prs Act Sg3$
+^todenmukaisuus/toden#mukaisuus N Nom Sg$
+^luulla/luu N Ade Sg/luulla V Inf1 Lat/luulla V Prs Pass ConNeg$
+^uskoa/usko N Par Sg/uskoa V Inf1 Lat$
+^ajatella/ajatella V Inf1 Lat/ajatella V Prs Pass ConNeg$
+^luulla/luu N Ade Sg/luulla V Inf1 Lat/luulla V Prs Pass ConNeg$
+^uskoa/usko N Par Sg/uskoa V Inf1 Lat$
+^ajatella/ajatella V Inf1 Lat/ajatella V Prs Pass ConNeg$
+^vastuu/vastuu N Nom Sg$
+^epäily/epäily N Nom Sg$
+^epäileminen/epäillä V N Nom Sg$
+
+^varkaus/varkaus N Nom Sg$ 
+^varastaminen/varastaa V N Nom Sg/varastaminen N Nom Sg$
+^anastus/anastus N Nom Sg$
+^kavallus/kavallus N Nom Sg$
+^näpistys/näpistys N Nom Sg$
+^pihistys/*pihistys$
+^rosvous/rosvous N Nom Sg$
+^ryöstö/ryöstö N Nom Sg$
+^varastaa/varastaa V Inf1 Lat/varastaa V Prs Act Sg3$
+^varastaminen/varastaa V N Nom Sg/varastaminen N Nom Sg$
+
+^pahoinpitely/pahoin#pitely N Nom Sg/pahoinpidellä V Nom Sg$ 
+^vahingoittaminen/vahingoittaa V N Nom Sg/vahingoittaminen N Nom Sg$
+^kidutus/kidutus N Nom Sg$
+^pahoinpidellä/pahoinpidellä V Inf1 Lat/pahoinpidellä V Prs Pass ConNeg$
+
+^liikenne/liikenne N Nom Sg$ 
+^kulkuväline/kulku#väline N Nom Sg$
+^jalankulkija/jalan#kulkija N Nom Sg/jalka#kulkija N Nom Sg$
+^tavara/tavara N Nom Sg$
+^liikennöidä/liikennöidä V Inf1 Lat/liikennöidä V Prs Pass ConNeg$
+^merenkulku/meren#kulku N Nom Sg/meri#kulku N Nom Sg$
+
+^syyttää/syyttää V Inf1 Lat/syyttää V Prs Act Sg3$ 
+^väittää/väittää V Inf1 Lat/väittää V Prs Act Sg3$
+^syyllinen/syyllinen A Pos Nom Sg$
+^syyttäjä/syyttäjä N Nom Sg$
+^syyllinen/syyllinen A Pos Nom Sg$
+
+^väkivalta/väki#valta N Nom Sg$ 
+^voimakeinot/voima#keino N Nom Pl$
+^aggressio/aggressio N Nom Sg$
+^aggressiivisuus/aggressiivisuus N Nom Sg$
+^pahoinpitely/pahoin#pitely N Nom Sg/pahoinpidellä V Nom Sg$
+^perheväkivalta/perhe#väki#valta N Nom Sg$
+^väkivaltainen/väki#-valtainen A Pos Nom Sg/väki#valtainen A Pos Nom Sg$
+^väkivaltaisuus/väki#valtaisuus N Nom Sg$
+^väkivallanteko/väki#vallan#teko N Nom Sg/väki#valta#teko N Nom Sg$
+
+^ikä/ikä N Nom Sg$ 
+
+^päihtynyt/päihtynyt A Pos Nom Sg/päihtyä PrfPrc Act Pos Nom Sg/päihtyä V Pst Act ConNeg$ 
+^henkilö/henkilö N Nom Sg$
+^päihde/päihde N Nom Sg$
+^humalainen/humalainen A Pos Nom Sg$
+^huumaantunut/huumaantua PrfPrc Act Pos Nom Sg/huumaantua V Pst Act ConNeg/huumaantunut A Pos Nom Sg$
+^huumattu/huumata PrfPrc Pass Pos Nom Sg/huumata V Pst Pass ConNeg/huumattu A Pos Nom Sg$
+^päihdyksissä/päihdyksissä Adv$
+^päihdytetty/päihdyttää PrfPrc Pass Pos Nom Sg/päihdyttää V Pst Pass ConNeg$
+^päihtyneenä/päihtynyt A Pos Ess Sg/päihtyä PrfPrc Act Pos Ess Sg$
+^päihtymys/päihtymys N Nom Sg$
+^päissään/päissään Adv/pää N Ine Pl Px3$
+
+^libido/libido N Nom Sg$ 
+^sukupuolivietti/suku#puoli#vietti N Nom Sg/sukupuoli-#vietti N Nom Sg$
+
+^abnormaali/abnormaali A Pos Nom Sg$ 
+^poikkeava/poiketa PrsPrc Act Pos Nom Sg/poikkeava A Pos Nom Sg/poikkeava N Nom Sg$
+^normaali/normaali A Pos Nom Sg$
+^tavanomainen/tapa#-omainen A Pos Nom Sg/tapa#omainen A Pos Nom Sg/tapa#omainen N Nom Sg/tavan#omainen A Pos Nom Sg$
+^abnormi/abnormi A Pos Nom Sg$
+
+^normaali/normaali A Pos Nom Sg$ 
+^abnormaali/abnormaali A Pos Nom Sg$
+^epänormaali/epä#normaali N Nom Sg/epä-#normaali A Pos Nom Sg/epänormaali A Pos Nom Sg$
+^poikkeava/poiketa PrsPrc Act Pos Nom Sg/poikkeava A Pos Nom Sg/poikkeava N Nom Sg$
+^kohtisuora/kohtisuora A Pos Nom Sg$
+^normi/normi N Nom Sg$
+^nomeerata/*nomeerata$
+^normittaa/normittaa V Inf1 Lat/normittaa V Prs Act Sg3$
+^kohtisuora/kohtisuora A Pos Nom Sg$
+^ortogonaali/*ortogonaali$
+
+^autistinen/autistinen A Pos Nom Sg$ 
+^autismi/autismi N Nom Sg$
+^autismi/autismi N Nom Sg$
+
+^autismi/autismi N Nom Sg$ 
+^neurobiologinen/neurobiologinen A Pos Nom Sg$
+^kommunikaatio/kommunikaatio N Nom Sg$
+^autisti/autisti N Nom Sg$
+^autistinen/autistinen A Pos Nom Sg$
+
+^kommunikaatio/kommunikaatio N Nom Sg$ 
+^viestintä/viestin N Par Sg/viestintä N Nom Sg$
+^tiedonvälitys/tie#do#välitys N Nom Sg/tiedon#välitys N Nom Sg/tieto#välitys N Nom Sg$
+^puhe/puhe N Nom Sg$
+^eleet/ele N Nom Pl$
+^tunneviestintä/tunne#viestin N Par Sg/tunne#viestintä N Nom Sg$
+^data/data N Nom Sg$
+^tietoliikenne/tieto#liikenne N Nom Sg$
+^kommunikoida/kommunikoida V Inf1 Lat/kommunikoida V Prs Pass ConNeg$
+^kommunikatiivinen/kommunikatiivinen A Pos Nom Sg$
+
+^kemia/kemia N Nom Sg$ 
+^yläkoulu/ylä#koulu N Nom Sg/ylä-#koulu N Nom Sg$
+^lukio/lukio N Nom Sg$
+^henkilökemia/henkilö#kemia N Nom Sg$
+^alkemia/alkemia N Nom Sg$
+
+^koira/koira N Nom Sg$ 
+^susi/susi N Nom Sg/sä Pron Pers Gen Sg PxSg2/sä Pron Pers Nom Pl PxSg2/sä Pron Pers Nom Sg PxSg2$
+^kotieläin/koti#eläin N Nom Sg$
+^eläin/eläin N Nom Sg$
+^koirio/koi#rio N Nom Sg$
+^hauva/hauva N Nom Sg$
+^halli/halli N Nom Sg$
+^moppe/*moppe$
+^piski/piski N Nom Sg$
+^rakki/rakki N Nom Sg$
+^hurtta/hurtta N Nom Sg$
+^peni/peni N Nom Sg$
+^narttu/narttu N Nom Sg$
+^penikka/penikka N Nom Sg$
+^pystykorva/pysty#korva N Nom Sg$
+
+^anonyymi/anonyymi A Pos Nom Sg$ 
+^tuntematon/tuntea NegPrc Pos Nom Sg/tuntematon A Pos Nom Sg/tuntematon N Nom Sg$
+^nimetön/nimetön A Pos Nom Sg/nimetön N Nom Sg$
+^nimeämätön/nimetä NegPrc Pos Nom Sg/nimeämätön A Pos Nom Sg$
+
+^hiekkalaatikko/hiekka#laatikko N Nom Sg$ 
+^hiekka/hiekka N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^hiekkakakku/hiekka#kakku N Nom Sg$
+^hiekkalaatikkoleikki/hiekka#laatikko#leikki N Nom Sg$
+
+^pyromaani/pyro-#maa N Gen Sg PxSg1/pyro-#maa N Nom Pl PxSg1/pyro-#maa N Nom Sg PxSg1/pyromaani N Nom Sg$ 
+^tulipalo/tuli#palo N Nom Sg$
+
+^pyromania/pyro-#mani N Par Sg/pyro-#mania N Nom Sg/pyromania N Nom Sg$ 
+^tulipalo/tuli#palo N Nom Sg$
+^pyromaani/pyro-#maa N Gen Sg PxSg1/pyro-#maa N Nom Pl PxSg1/pyro-#maa N Nom Sg PxSg1/pyromaani N Nom Sg$
+
+^tamma/tamma N Nom Sg$ 
+^naaraspuolinen/naaras#puolinen A Pos Nom Sg$
+^hevonen/hevonen N Nom Sg$
+^naaras/naaras N Nom Sg$
+^ori/ori N Nom Sg$
+
+^ori/ori N Nom Sg$ 
+^uros/uros N Nom Sg$
+^kuohitsematon/kuohita NegPrc Pos Nom Sg/kuohitsematon A Pos Nom Sg$
+^hevonen/hevonen N Nom Sg$
+^mies/mies N Nom Sg$
+^orhi/orhi N Nom Sg$
+^orkku/orkku N Nom Sg$
+^oronen/*oronen$
+^ruuna/ruuna N Nom Sg$
+^valakka/valakka A Pos Nom Sg$
+^orhi/orhi N Nom Sg$
+^tamma/tamma N Nom Sg$
+
+^ruuna/ruuna N Nom Sg$ 
+^valakka/valakka A Pos Nom Sg$
+^kuohia/kuoha N Par Pl/kuohia V Inf1 Lat$
+^ori/ori N Nom Sg$
+^ruunata/*ruunata$
+^hevonen/hevonen N Nom Sg$
+
+^valakka/valakka A Pos Nom Sg$ 
+^tamma/tamma N Nom Sg$
+^ruuna/ruuna N Nom Sg$
+^kastroitu/kastroida PrfPrc Pass Pos Nom Sg/kastroida V Pst Pass ConNeg/kastroitu A Pos Nom Sg$
+
+^pöö/*pöö$ 
+^säikäyttää/säikäyttää V Inf1 Lat/säikäyttää V Prs Act Sg3$
+^böö/*böö$
+^hui/hui Interj$
+^iik/*iik$
+
+^konkelo/konkelo N Nom Sg$ 
+^puu/puu N Nom Sg$
+^nojata/nojata V Inf1 Lat/nojata V Prs Pass ConNeg$
+
+^häpykannus/häpy#kannus N Nom Sg$ 
+^palsami/palsa#mi N/palsami N Nom Sg$
+
+^mummi/mummi N Nom Sg$ 
+^isoäiti/iso#äiti N Nom Sg/iso-#äiti N Nom Sg$
+^mummo/mummo N Nom Sg$
+^mummu/mummu N Nom Sg$
+^mumma/*mumma$
+^muori/muori N Nom Sg$
+
+^paukkulanka/paukku#lanka N Nom Sg$ 
+^kaapeli/kaapeli N Nom Sg$
+^räjähde/räjähde N Nom Sg$
+^sähkö/sähkö N Nom Sg$
+
+^aakkonen/aakkonen N Nom Sg$ 
+^kirjain/kirja N Gen Pl/kirjain N Nom Sg$
+^aakkoset/aakkonen N Nom Pl$
+^aakkoshakemisto/aakkonen#hakemisto N Nom Sg$
+^aakkosjärjestelmä/aakkonen#järjestelmä N Nom Sg$
+^aakkosjärjestys/aakkonen#järjestys N Nom Sg/aakkos#järjestys N Nom Sg$
+^aakkosluettelo/aakkonen#luettelo N Nom Sg$
+^aakkosto/aakkosto N Nom Sg$
+^ääkkönen/ääkkönen N Nom Sg$
+^majuskeli/*majuskeli$
+^suuraakkonen/suur#aakkonen N Nom Sg/suur-#aakkonen N Nom Sg$
+^pienaakkonen/pien#aakkonen N Nom Sg/piki#aakkonen N Nom Sg$
+
+^aamu/aamu N Nom Sg$ 
+^yö/yö N Nom Sg$
+^päivä/päivä N Nom Sg$
+^vuorokaudenaika/vuoro#kauden#aika N Nom Sg/vuoro#kausi#aika N Nom Sg$
+^auringonnousu/auringon#nousu N Nom Sg/aurinko#nousu N Nom Sg$
+^aamupäivä/aamu#päivä N Nom Sg$
+^aamu-uninen/aamu#uninen A Pos Nom Sg/aamu-uninen A Pos Nom Sg$
+^päivä/päivä N Nom Sg$
+^ilta/ilta N Nom Sg$
+^yö/yö N Nom Sg$
+
+^abessiivi/abessiivi N Nom Sg$ 
+^vajanto/*vajanto$
+^sijamuoto/sija#muoto N Nom Sg$
+^vajanto/*vajanto$
+^abessiivisija/abessiivi#sija N Nom Sg$
+
+^säkä/säkä N Nom Sg$ 
+^tsäkä/*tsäkä$
+^onni/onni N Nom Sg$
+^onnenpotku/onnenpotku N Nom Sg/onni#potku N Nom Sg$
+^säkiä/säkiä N Nom Sg/säkä N Par Pl$
+^flaksi/flaksi N Nom Sg$
+^mäihä/mäihä N Nom Sg$
+^mäsis/mäsis N Nom Sg$
+^onni/onni N Nom Sg$
+^tuuri/tuuri N Nom Sg$
+^viuhka/viuhka N Nom Sg$
+^tsägä/*tsägä$
+
+^kuusitoista/kuusi#toinen N Par Sg/kuusitoista Card#/kuusitoista Num Card Pl Nom/kuusitoista Num Card Sg Nom$ 
+^luku/luku N Nom Sg$
+^viisitoista/viisitoista Card#/viisitoista Num Card Pl Nom/viisitoista Num Card Sg Nom$
+^seitsemäntoista/seitsemän-#toinen N Par Sg/seitsemäntoista Card#/seitsemäntoista Num Card Sg Gen/seitsemäntoista Num Card Sg Nom/seitsemästoista Num Sg Gen/seitsemästoista Num Sg Nom/seitsemästoista#$
+^kuudestoista/*kuudestoista$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^seitsemäntoista/seitsemän-#toinen N Par Sg/seitsemäntoista Card#/seitsemäntoista Num Card Sg Gen/seitsemäntoista Num Card Sg Nom/seitsemästoista Num Sg Gen/seitsemästoista Num Sg Nom/seitsemästoista#$ 
+^luku/luku N Nom Sg$
+^kuusitoista/kuusi#toinen N Par Sg/kuusitoista Card#/kuusitoista Num Card Pl Nom/kuusitoista Num Card Sg Nom$
+^kahdeksantoista/kahdeksantoista Card#/kahdeksantoista Num Card Sg Gen/kahdeksantoista Num Card Sg Nom/kahdeksastoista Num Sg Gen/kahdeksastoista Num Sg Nom/kahdeksastoista#$
+^seitsemästoista/*seitsemästoista$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^kotiäiti/koti#äiti N Nom Sg$ 
+^äiti/äiti N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+
+^iskusana/isku#sana N Nom Sg$ 
+^sanoma/san#oma A Pos Nom Sg/sanoa AgPrc Pos Nom Sg/sanoma N Nom Sg$
+^iskulause/isku#lause N Nom Sg$
+
+^kahdeksantoista/kahdeksantoista Card#/kahdeksantoista Num Card Sg Gen/kahdeksantoista Num Card Sg Nom/kahdeksastoista Num Sg Gen/kahdeksastoista Num Sg Nom/kahdeksastoista#$ 
+^luku/luku N Nom Sg$
+^seitsemäntoista/seitsemän-#toinen N Par Sg/seitsemäntoista Card#/seitsemäntoista Num Card Sg Gen/seitsemäntoista Num Card Sg Nom/seitsemästoista Num Sg Gen/seitsemästoista Num Sg Nom/seitsemästoista#$
+^yhdeksäntoista/yhdeksäntoista Card#/yhdeksäntoista Num Card Sg Gen/yhdeksäntoista Num Card Sg Nom/yhdeksästoista Num Sg Gen/yhdeksästoista Num Sg Nom/yhdeksästoista#$
+^kahdeksastoista/*kahdeksastoista$
+
+^yhdeksäntoista/yhdeksäntoista Card#/yhdeksäntoista Num Card Sg Gen/yhdeksäntoista Num Card Sg Nom/yhdeksästoista Num Sg Gen/yhdeksästoista Num Sg Nom/yhdeksästoista#$ 
+^luku/luku N Nom Sg$
+^kahdeksantoista/kahdeksantoista Card#/kahdeksantoista Num Card Sg Gen/kahdeksantoista Num Card Sg Nom/kahdeksastoista Num Sg Gen/kahdeksastoista Num Sg Nom/kahdeksastoista#$
+^kaksikymmentä/kaksikymmentä Card#/kaksikymmentä Num Card Sg Nom$
+^yhdeksästoista/*yhdeksästoista$
+
+^kaksikymmentä/kaksikymmentä Card#/kaksikymmentä Num Card Sg Nom$ 
+^yhdeksäntoista/yhdeksäntoista Card#/yhdeksäntoista Num Card Sg Gen/yhdeksäntoista Num Card Sg Nom/yhdeksästoista Num Sg Gen/yhdeksästoista Num Sg Nom/yhdeksästoista#$
+^kaksikymmentäyksi/kaksikymmentä#yksi Num Nom Sg/kaksikymmentä#yksi#/kaksikymmentäyksi Num Nom Sg/kaksikymmentäyksi#$
+^kahdeskymmenes/kahdes#kymmenes Num Nom Sg/kahdes#kymmenes#/kahdeskymmenes Num Sg Nom/kahdeskymmenes#$
+
+^thaimaalainen/thai#maa#lainen A Pos Nom Sg/thai#maalainen A Pos Nom Sg/thai#maalainen N Nom Sg$ 
+^Thaimaa/Thai#maa N Nom Sg/Thaimaa N Prop Nom Sg$
+^Thaimaa/Thai#maa N Nom Sg/Thaimaa N Prop Nom Sg$
+^kansalainen/kansa#lainen A Pos Nom Sg/kansa#lainen N Nom Sg$
+^thai/thai N Nom Sg$
+^Thaimaa/Thai#maa N Nom Sg/Thaimaa N Prop Nom Sg$
+
+^kaksikymmentäyksi/kaksikymmentä#yksi Num Nom Sg/kaksikymmentä#yksi#/kaksikymmentäyksi Num Nom Sg/kaksikymmentäyksi#$ 
+^luku/luku N Nom Sg$
+^kaksikymmentä/kaksikymmentä Card#/kaksikymmentä Num Card Sg Nom$
+^kaksikymmentä/kaksikymmentä Card#/kaksikymmentä Num Card Sg Nom$
+^kaksi/kaksi Num Nom Sg/kaksi#$
+^kahdeskymmenesensimmäinen/kahdes#kymmenes#ensimmäinen Num Nom Sg/kahdes#kymmenes#ensimmäinen#$
+^liite/liite N Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^jälkeläinen/jälkeläinen N Nom Sg$ 
+^yksilö/yksilö N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^tytär/tytär N Nom Sg$
+^poika/poika N Nom Sg$
+^kuvaannollinen/kuvaannollinen A Pos Nom Sg$
+^bambi/*bambi$
+^jälkikasvu/jälki#kasvu N Nom Sg$
+^karitsa/karitsa N Nom Sg$
+^pentu/pentu N Nom Sg$
+^penikka/penikka N Nom Sg$
+^poikanen/poikanen N Nom Sg$
+^varsa/varsa N Nom Sg$
+^vasa/vasa N Nom Sg$
+^vasikka/vasikka N Nom Sg$
+
+^poika/poika N Nom Sg$ 
+^miespuolinen/mies#puolinen A Pos Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^nuori/nuori A Pos Nom Sg/nuori N Nom Sg$
+^miespuolinen/mies#puolinen A Pos Nom Sg$
+^jälkeläinen/jälkeläinen N Nom Sg$
+^jääkiekko/jää#kiekko N Nom Sg$
+^kölli/kölli N Nom Sg$
+^nappula/nappula N Nom Sg$
+^nuorukainen/nuorukainen N Nom Sg$
+^jätkä/jätkä N Nom Sg$
+^jäbä/*jäbä$
+^kundi/kundi N Nom Sg$
+^tyttö/tyttö N Nom Sg$
+^tytär/tytär N Nom Sg$
+
+^kolmio/kolmio N Nom Sg$ 
+^monikulmio/moni-#-kulmio N Nom Sg/moni-#kulmio N Nom Sg/monikulmio N Nom Sg$
+^sivu/sivu/sivu N Nom Sg$
+^kulma/kulma N Nom Sg$
+^asunto/asunto N Nom Sg$
+^huone/huone N Nom Sg$
+^keittiö/keittiö N Nom Sg$
+^kylpyhuone/kylpy#huone N Nom Sg$
+^väistämisvelvollisuus/väistäminen#velvollisuus N Nom Sg/väistämis#velvollisuus N Nom Sg/väistää#velvollisuus N Nom Sg$
+^liikennemerkki/liikenne#merkki N Nom Sg$
+^kolme/kolme Num Nom Sg/kolme#$
+^kolmiottelu/kolmi#ottelu N Nom Sg/kolmi-#ottelu N Nom Sg$
+^kolmiosainen/kolmi#osainen A Pos Nom Sg/kolmi-#-osainen N Nom Sg/kolmi-#osainen A Pos Nom Sg$
+^kolmikulmio/kolmi-#-kulmio N Nom Sg/kolmi-#kulmio N Nom Sg$
+^trigoni/*trigoni$
+^kärkikolmio/kärki#kolmio N Nom Sg$
+^monikulmio/moni-#-kulmio N Nom Sg/moni-#kulmio N Nom Sg/monikulmio N Nom Sg$
+^yksiö/yksiö N Nom Sg$
+^kaksio/kaksio N Nom Sg$
+
+^maaliskuu/maalis#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^helmikuu/helmi#kuu N Nom Sg$
+^huhtikuu/huhtikuu N Nom Sg$
+^ajanilmaus/aika#ilmaus N Nom Sg$
+^kuukausi/kuu#kausi N Nom Sg$
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+
+^huhtikuu/huhtikuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^maaliskuu/maalis#kuu N Nom Sg$
+^toukokuu/touko#kuu N Nom Sg$
+^huhtikuinen/huhtikuinen A Pos Nom Sg$
+
+^toukokuu/touko#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^huhtikuu/huhtikuu N Nom Sg$
+^kesäkuu/kesä#kuu N Nom Sg$
+^toukokuinen/touko#-kuinen A Pos Nom Sg/touko#kuinen A Pos Nom Sg$
+
+^kesäkuu/kesä#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^toukokuu/touko#kuu N Nom Sg$
+^heinäkuu/heinä#kuu N Nom Sg$
+^kesäkuinen/kesä#-kuinen A Pos Nom Sg/kesä#kuinen A Pos Nom Sg$
+
+^heinäkuu/heinä#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^kesäkuu/kesä#kuu N Nom Sg$
+^elokuu/elo#kuu N Nom Sg$
+^heinäkuinen/heinä#-kuinen A Pos Nom Sg/heinä#kuinen A Pos Nom Sg$
+
+^elokuu/elo#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^heinäkuu/heinä#kuu N Nom Sg$
+^syyskuu/syys#kuu N Nom Sg/syys-#kuu N Nom Sg$
+^elokuinen/elo#-kuinen A Pos Nom Sg/elo#kuinen A Pos Nom Sg$
+
+^syyskuu/syys#kuu N Nom Sg/syys-#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^elokuu/elo#kuu N Nom Sg$
+^lokakuu/loka#kuu N Nom Sg$
+^syyskuinen/syys#kuinen A Pos Nom Sg/syys-#-kuinen A Pos Nom Sg$
+
+^lokakuu/loka#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^syyskuu/syys#kuu N Nom Sg/syys-#kuu N Nom Sg$
+^marraskuu/marras#kuu N Nom Sg$
+^lokakuinen/loka#-kuinen A Pos Nom Sg/loka#kuinen A Pos Nom Sg$
+
+^marraskuu/marras#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^lokakuu/loka#kuu N Nom Sg$
+^joulukuu/joulu#kuu N Nom Sg$
+^marraskuinen/marras#kuinen A Pos Nom Sg$
+
+^joulukuu/joulu#kuu N Nom Sg$ 
+^kuukausi/kuu#kausi N Nom Sg$
+^marraskuu/marras#kuu N Nom Sg$
+^tammikuu/tammi#kuu N Nom Sg/tammikuu N Nom Sg$
+^joulukuinen/joulu#-kuinen A Pos Nom Sg/joulu#kuinen A Pos Nom Sg$
+^talvikuu/talvi#kuu N Nom Sg$
+
+^maanantai/maanantai N Nom Sg$ 
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+^sunnuntai/sunnuntai N Nom Sg$
+^tiistai/tiistai N Nom Sg$
+^maanantaisin/maanantainen A Pos Ins Pl/maanantainen A Superl Nom Sg/maanantaisin Adv$
+^viikonpäivä/viikko#päivä N Nom Sg/viikon#päivä N Nom Sg$
+^tiistai/tiistai N Nom Sg$
+^keskiviikko/keski#viikko N Nom Sg/keski-#viikko N Nom Sg$
+^torstai/torstai N Nom Sg$
+^perjantai/perjantai N Nom Sg$
+^lauantai/lauantai N Nom Sg$
+^sunnuntai/sunnuntai N Nom Sg$
+
+^tiistai/tiistai N Nom Sg$ 
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+^maanantai/maanantai N Nom Sg$
+^keskiviikko/keski#viikko N Nom Sg/keski-#viikko N Nom Sg$
+^tiistaisin/tiistainen A Pos Ins Pl/tiistainen A Superl Nom Sg/tiistaisin Adv$
+
+^keskiviikko/keski#viikko N Nom Sg/keski-#viikko N Nom Sg$ 
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+^tiistai/tiistai N Nom Sg$
+^torstai/torstai N Nom Sg$
+^keskiviikkoinen/keski#viikkoinen A Pos Nom Sg/keski-#-viikkoinen A Pos Nom Sg$
+^keskiviikkoisin/keski#viikko#isi N Gen Sg/keski#viikko#isä N Ins Pl/keski#viikkoinen A Pos Ins Pl/keski#viikkoinen A Superl Nom Sg/keski#viikkoisin Adv/keski-#-viikkoinen A Pos Ins Pl/keski-#-viikkoinen A Superl Nom Sg/keski-#viikko#isi N Gen Sg/keski-#viikko#isä N Ins Pl$
+
+^torstai/torstai N Nom Sg$ 
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+^keskiviikko/keski#viikko N Nom Sg/keski-#viikko N Nom Sg$
+^perjantai/perjantai N Nom Sg$
+^helatorstai/hela#torstai N Nom Sg$
+^kiirastorstai/kiirastorstai N Nom Sg$
+^torstaisin/torstainen A Pos Ins Pl/torstainen A Superl Nom Sg/torstaisin Adv$
+
+^perjantai/perjantai N Nom Sg$ 
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+^torstai/torstai N Nom Sg$
+^lauantai/lauantai N Nom Sg$
+
+^lauantai/lauantai N Nom Sg$ 
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+^perjantai/perjantai N Nom Sg$
+^sunnuntai/sunnuntai N Nom Sg$
+^lauantaimakkara/lauantai#makkara N Nom Sg$
+^lauantaisauna/lauantai#sauna N Nom Sg$
+^lauantaisin/lauantainen A Pos Ins Pl/lauantainen A Superl Nom Sg/lauantaisin Adv$
+
+^sunnuntai/sunnuntai N Nom Sg$ 
+^viikko/viikko N Nom Sg$
+^päivä/päivä N Nom Sg$
+^lauantai/lauantai N Nom Sg$
+^maanantai/maanantai N Nom Sg$
+^palmusunnuntai/palmu#sunnuntai N Nom Sg$
+^pyhä/pyhä A Pos Nom Sg$
+^sunnuntaisin/sunnuntainen A Pos Ins Pl/sunnuntainen A Superl Nom Sg/sunnuntaisin Adv$
+
+^päivä/päivä N Nom Sg$ 
+^vuorokausi/vuoro#kausi N Nom Sg$
+^aamu/aamu N Nom Sg$
+^ilta/ilta N Nom Sg$
+^kello/kello N Nom Sg$
+^vuorokausi/vuoro#kausi N Nom Sg$
+^aurinko/aurinko N Nom Sg$
+^aamu/aamu N Nom Sg$
+^ilta/ilta N Nom Sg$
+^yö/yö N Nom Sg$
+^päivyri/päivyri N Nom Sg$
+^vuorokaudenaika/vuoro#kauden#aika N Nom Sg/vuoro#kausi#aika N Nom Sg$
+
+^ehtoo/ehtoo N Nom Sg$ 
+^ilta/ilta N Nom Sg$
+^ettone/ettone N Nom Sg$
+
+^alkio/alkio N Nom Sg$ 
+^kasvi/kasvi N Nom Sg$
+^eläin/eläin N Nom Sg$
+^ihminen/ihminen N Nom Sg$
+^hedelmöitys/hedelmöitys N Nom Sg$
+^raskausviikko/raskaus#viikko N Nom Sg$
+^joukko/joukko N Nom Sg$
+^olio/olio N Nom Sg$
+^luku/luku N Nom Sg$
+^matriisi/matriisi N Nom Sg$
+^vektori/vektori N Nom Sg$
+^funktio/funktio N Nom Sg$
+^muuttuja/muuttuja N Nom Sg$
+^taulukko/tau#lukko N Nom Sg/taulu#kko N Abbr Nom Sg/taulukko N Nom Sg$
+^tietorakenne/tieto#rakenne N Nom Sg$
+^blastula/blastula N Nom Sg$
+^embryo/embryo N Nom Sg$
+^joukko-oppi/joukko#oppi N Nom Sg/joukko-oppi N Nom Sg$
+^tsygootti/tsygootti N Nom Sg$
+^sikiö/sikiö N Nom Sg$
+^verso/verso N Nom Sg/versoa V Impv Act Sg2/versoa V Prs Act ConNeg$
+
+^kasvirasva/kasvi#rasva N Nom Sg$ 
+^rasva/rasva N Nom Sg$
+^kasviöljy/kasvi#öljy N Nom Sg$
+^kasvisrasva/kasvis#rasva N Nom Sg$
+^kasvirasvajäätelö/kasvi#rasva#jäätelö N Nom Sg$
+^margariini/margariini N Nom Sg$
+
+^aakkosellinen/aakkosellinen A Pos Nom Sg$ 
+^aakkonen/aakkonen N Nom Sg$
+^aakkosjärjestys/aakkonen#järjestys N Nom Sg/aakkos#järjestys N Nom Sg$
+^aakkonen/aakkonen N Nom Sg$
+
+^kieli/kieli N Nom Sg/kieliä V Impv Act Sg2/kieliä V Prs Act ConNeg/kieliä V Pst Act Sg3$ 
+^suu/suu N Nom Sg$
+^lihas/lihas N Nom Sg$
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^kielisoitin/kieli#soitin N Nom Sg$
+^puhallin/puhallin N Nom Sg$
+^lehti/lehti N Nom Sg/lehtiä V Pst Act Sg3$
+^soittokello/soitto#kello N Nom Sg$
+^läppä/läppä N Nom Sg$
+^uloke/uloke N Nom Sg$
+^iltti/iltti N Nom Sg$
+^tyyli/tyyli N Nom Sg$
+^kielenkäyttö/kielen#käyttö N Nom Sg/kieli#käyttö N Nom Sg$
+^filologia/filologi N Par Sg/filologia N Nom Sg$
+^kieliä/kieli N Par Pl/kieliä V Inf1 Lat$
+^murre/murre N Nom Sg$
+^puhe/puhe N Nom Sg$
+
+^salmiakki/salmiakki N Nom Sg$ 
+^musta/musta A Pos Nom Sg/musta N Nom Sg/mä Pron Pers Ela Sg$
+^makeinen/makeinen N Nom Sg$
+^ammoniumkloridi/ammonium#kloridi N Nom Sg/ammonium-#kloridi N Nom Sg/ammoniumkloridi N Nom Sg$
+^vinoneliö/vino#neliö N Nom Sg$
+
+^sata/sata N Nom Sg$ 
+^yhdeksän/yhdeksän Num Gen Sg/yhdeksän Num Nom Sg/yhdeksän#$
+^kymmenen/kymmenen Num Gen Sg/kymmenen Num Nom Sg/kymmenen#$
+^yhdeksän/yhdeksän Num Gen Sg/yhdeksän Num Nom Sg/yhdeksän#$
+^sadas/*sadas$
+^sadas/*sadas$
+^satakerta/sata#kerta N Nom Sg$
+^satakertainen/sata#-kertainen A Pos Nom Sg/sata#kertainen A Pos Nom Sg$
+^satakertaisuus/*satakertaisuus$
+^satakieli/sata#kieli N Nom Sg$
+^satakunta/sata#kunta N Nom Sg$
+^satanen/sataa V Pot Act Sg1/satanen N Nom Sg$
+
+^satayksi/*satayksi$ 
+^Luku/Luku N Nom Sg$
+^sata/sata N Nom Sg$
+^sadasyhdes/*sadasyhdes$
+^sadasensimmäinen/*sadasensimmäinen$
+^liite/liite N Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^kaksisataa/kaksisataa Card#/kaksisataa Num Card Sg Nom$ 
+^kahdessadas/kahdes#sadas Num Nom Sg/kahdes#sadas#$
+
+^diftongi/diftongi N Nom Sg$ 
+^vokaali/vokaali N Nom Sg$
+^triftongi/*triftongi$
+^kaksoisvokaali/kaksois-#vokaali N Nom Sg$
+^pariääntiö/pari#ääntiö N Nom Sg$
+^vokaaliyhtymä/vokaali#yhtymä N Nom Sg$
+
+^triftongi/*triftongi$ 
+^miau/miau Interj$
+^tau/tau N Nom Sg$
+^diftongi/diftongi N Nom Sg$
+^vokaaliyhtymä/vokaali#yhtymä N Nom Sg$
+
+^tuhat/tuhat Num Nom Sg/tuhat#$ 
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^tuhannes/*tuhannes$
+
+^tuhatyksi/*tuhatyksi$ 
+^tuhannesensimmäinen/*tuhannesensimmäinen$
+^tuhannesyhdes/*tuhannesyhdes$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^vegetaristi/vegetaristi N Nom Sg$ 
+^liha/liha N Nom Sg$
+^vegetarismi/vegetarismi N Nom Sg$
+^vegetarismi/vegetarismi N Nom Sg$
+^vegaani/vegaani N Nom Sg$
+^kasvissyöjä/kasvis#syöjä A Pos Nom Sg/kasvis#syöjä N Nom Sg$
+
+^aakkoshakemisto/aakkonen#hakemisto N Nom Sg$ 
+^aakkosjärjestys/aakkonen#järjestys N Nom Sg/aakkos#järjestys N Nom Sg$
+^hakemisto/hakemisto N Nom Sg$
+
+^vero/vero N Nom Sg$ 
+^kymmenykset/kymmenys N Nom Pl$
+^käyttömaksu/käyttö#maksu N Nom Sg$
+^manttaali/manttaali N Nom Sg$
+^tulli/tulli N Nom Sg$
+^tuulaaki/*tuulaaki$
+^suojeluraha/suojelu#raha N Nom Sg$
+^tuulaaki/*tuulaaki$
+
+^panna/panna N Nom Sg/panna V Inf1 Lat/panna V Prs Pass ConNeg$ 
+^kirkonkirous/kirkko#kirous N Nom Sg/kirkon#kirous N Nom Sg$
+^ekskommunikaatio/ekskommunikaatio N Nom Sg$
+^sulkeminen/sulkea V N Nom Sg/sulkeminen N Nom Sg$
+^kielto/kielto N Nom Sg$
+^anateema/anateema N Nom Sg$
+^ekskommunikaatio/ekskommunikaatio N Nom Sg$
+^kirkonkirous/kirkko#kirous N Nom Sg/kirkon#kirous N Nom Sg$
+^pannaanjulistettu/*pannaanjulistettu$
+^pannahinen/pannahinen N Nom Sg$
+^asettaa/asettaa V Inf1 Lat/asettaa V Prs Act Sg3$
+^toimittaa/toimittaa V Inf1 Lat/toimittaa V Prs Act Sg3$
+^viedä/viedä V Inf1 Lat/viedä V Prs Pass ConNeg$
+^tallettaa/tallettaa V Inf1 Lat/tallettaa V Prs Act Sg3$
+^pano/pano N Nom Sg$
+^määrätä/määrätä V Inf1 Lat/määrätä V Prs Pass ConNeg$
+^pakottaa/pakottaa V Inf1 Lat/pakottaa V Prs Act Sg3$
+^olut/olut N Nom Sg$
+^sahti/sahti N Nom Sg$
+^seksi/seksi N Nom Sg$
+^naida/naida V Inf1 Lat/naida V Prs Pass ConNeg$
+^kiksauttaa/kiksauttaa V Inf1 Lat/kiksauttaa V Prs Act Sg3$
+^hässiä/hässiä V Inf1 Lat$
+^sukupuoliyhteys/suku#puoli#yhteys N Nom Sg/sukupuoli-#yhteys N Nom Sg$
+^talletus/talletus N Nom Sg$
+^paneskella/paneskella V Inf1 Lat/paneskella V Prs Pass ConNeg$
+^panema/panna AgPrc Pos Nom Sg$
+^laittaa/laittaa V Inf1 Lat/laittaa V Prs Act Sg3$
+^pistää/pistää V Inf1 Lat/pistää V Prs Act Sg3$
+
+^kerma/kerma N Nom Sg$ 
+^maito/maito N Nom Sg$
+^maitotuote/maito#tuote N Nom Sg$
+^ydinfysiikka/ydin#fysiikka N Nom Sg/ydin-#fysiikka N Nom Sg$
+^säteilyenergia/säteily#energia N Nom Sg$
+^muuntuminen/muuntua V N Nom Sg/muuntuminen N Nom Sg$
+^suure/suu#re N/suure N Nom Sg$
+^liike-energia/liike#energia N Nom Sg/liike-energia N Nom Sg$
+^massayksikkö/massa#yksikkö N Nom Sg$
+^gray/gray N$
+^sperma/sperma N Nom Sg$
+^erikoiskerma/erikois#kerma N Nom Sg/erikois-#kerma N Nom Sg$
+^hapankerma/hapan#kerma N Nom Sg$
+^kahvikerma/kahvi#kerma N Nom Sg$
+^kerma-astia/kerma#astia N Nom Sg/kerma-astia N Nom Sg$
+^kermainen/kermainen A Pos Nom Sg$
+^kermajäätelö/kerma#jäätelö N Nom Sg$
+^kermajauhe/kerma#jauhe N Nom Sg$
+^kermajuusto/kerma#juusto N Nom Sg$
+^kermakahvi/kerma#kahvi N Nom Sg$
+^kermakakku/kerma#kakku N Nom Sg$
+^kermakannu/kerma#kannu N Nom Sg$
+^kermakaramelli/kerma#karamelli N Nom Sg$
+^kermakastike/kerma#kastike N Nom Sg$
+^kermakerros/kerma#kerros N Nom Sg$
+^kermakko/kerma#kko N Abbr Nom Sg/kermakko N Nom Sg$
+^kermaleivos/kerma#leivos N Nom Sg$
+^kermamaito/kerma#maito N Nom Sg$
+^kermanekka/*kermanekka$
+^kermanekku/kerma#nekku N Nom Sg$
+^kermankeltainen/kerma#keltainen A Pos Nom Sg/kerma#keltainen N Nom Sg/kerman#keltainen A Pos Nom Sg$
+^kermanvalkoinen/kerma#valkoinen A Pos Nom Sg/kerma#valkoinen N Nom Sg/kerman#valkoinen A Pos Nom Sg/kermanvalkoinen N Nom Sg$
+^kermavaahto/kerma#vaahto N Nom Sg$
+^kermaviili/kerma#viili N Nom Sg$
+^kestokerma/kesto#kerma N Nom Sg$
+^kevytkerma/kevyt#kerma N Nom Sg$
+^kuohukerma/kuohu#kerma N Nom Sg$
+^ranskankerma/ranska#kerma N Nom Sg/ranskan#kerma N Nom Sg$
+^vispikerma/vispikerma N Nom Sg$
+^vuolukerma/vuolu#kerma N Nom Sg$
+^kermanopeus/kerma#nopeus N Nom Sg$
+
+^suola/suo#la N/suola N Nom Sg$ 
+^Ioniyhdiste/Ioni#yhdiste N Nom Sg$
+^ionisidos/ioni#sidos N Nom Sg$
+^kationi/kationi N Nom Sg$
+^metalli/metalli N Nom Sg$
+^anioni/anioni N Nom Sg$
+^epämetalli/epä#metalli N Nom Sg/epä-#metalli N Nom Sg$
+^ioni/ioni N Nom Sg$
+^ruokasuola/ruoka#suo#la N/ruoka#suola N Nom Sg$
+^keittosuola/keitto#suo#la N/keitto#suola N Nom Sg$
+^natriumkloridi/natrium#kloridi N Nom Sg$
+^natriumkloridi/natrium#kloridi N Nom Sg$
+^salpietari/salpietari N Nom Sg$
+^suolaantua/suolaantua V Inf1 Lat$
+^suolata/suo#lata N Nom Sg/suolata V Inf1 Lat/suolata V Prs Pass ConNeg$
+^suolaus/suolaus N Nom Sg$
+
+^suolainen/suo#lainen A Pos Nom Sg/suolainen A Pos Nom Sg$ 
+^suola/suo#la N/suola N Nom Sg$
+^suola/suo#la N/suola N Nom Sg$
+
+^suora/suora A Pos Nom Sg/suora N Nom Sg$ 
+^mutka/mutka N Nom Sg$
+^kaartua/kaartua V Inf1 Lat$
+^suunta/suunta N Nom Sg$
+^kohtisuora/kohtisuora A Pos Nom Sg$
+^pystysuora/pysty#suora A Pos Nom Sg$
+^vaakasuora/vaaka#suora A Pos Nom Sg/vaaka#suora N Nom Sg$
+^kaunistelematon/kaunis#tele#maton A Pos Nom Sg/kaunistella NegPrc Pos Nom Sg$
+^mutkaton/mutkaton A Pos Nom Sg$
+^peittelemätön/peitellä NegPrc Pos Nom Sg/peittelemätön A Pos Nom Sg$
+^selvä/selvä A Pos Nom Sg$
+^vilpitön/vilpitön A Pos Nom Sg$
+^välitön/välitön A Pos Nom Sg$
+^suorakulmainen/suora#-kulmainen A Pos Nom Sg/suora#kulmainen A Pos Nom Sg$
+^suoranenäinen/suora#-nenäinen A Pos Nom Sg$
+^suoraan/suora A Pos Ill Sg/suora N Ill Sg/suoraan Adv$
+^suirassa/*suirassa$
+^suoraviivainen/suora#-viivainen A Pos Nom Sg/suora#viivainen A Pos Nom Sg$
+^suoro/*suoro$
+^kaareva/kaareva A Pos Nom Sg$
+^käyrä/käyrä A Pos Nom Sg/käyrä N Nom Sg$
+^mutkainen/mutkainen A Pos Nom Sg$
+^mutkitteleva/mutkitella PrsPrc Act Pos Nom Sg/mutkitteleva A Pos Nom Sg$
+^väärä/väärä A Pos Nom Sg$
+^pelikortti/peli#kortti N Nom Sg$
+^kohtisuora/kohtisuora A Pos Nom Sg$
+^pystysuora/pysty#suora A Pos Nom Sg$
+^suoraan/suora A Pos Ill Sg/suora N Ill Sg/suoraan Adv$
+^suorakulmainen/suora#-kulmainen A Pos Nom Sg/suora#kulmainen A Pos Nom Sg$
+^suoraselkäinen/suora#-selkäinen A Pos Nom Sg/suora#selkäinen A Pos Nom Sg$
+^suorasukainen/suora#-sukainen A Pos Nom Sg/suora#sukainen A Pos Nom Sg$
+^suoristaa/suoristaa V Inf1 Lat/suoristaa V Prs Act Sg3$
+^suoristus/suoristus N Nom Sg$
+^vaakasuora/vaaka#suora A Pos Nom Sg/vaaka#suora N Nom Sg$
+^suoruus/suoruus N Nom Sg$
+^väri/väri N Nom Sg$
+
+^kuolema/kuolema N Nom Sg/kuolla AgPrc Pos Nom Sg$ 
+^ihminen/ihminen N Nom Sg$
+^eläin/eläin N Nom Sg$
+^eliö/eliö N Nom Sg$
+^elämä/elämä N Nom Sg/elää AgPrc Pos Nom Sg$
+^hiipuminen/hiipua V N Nom Sg$
+^kuolemanvakava/kuolema#vakava A Pos Nom Sg/kuoleman#vakava A Pos Nom Sg$
+^kuolemanväsynyt/kuolema#väsynyt A Pos Nom Sg/kuoleman#väsynyt A Pos Nom Sg$
+^kuolla/kuolla V Inf1 Lat/kuolla V Prs Pass ConNeg$
+^kuollut/kuolla PrfPrc Act Pos Nom Sg/kuolla PrfPrc Pass Pos Nom Pl/kuolla V Pst Act ConNeg/kuollut A Pos Nom Sg/kuollut N Nom Sg$
+^syntymä/syntymä N Nom Sg/syntyä AgPrc Pos Nom Sg$
+^kuolo/kuolo N Nom Sg$
+^kalma/kalma N Nom Sg$
+^poismeno/poismeno N Nom Sg$
+^lähtö/lähtö N Nom Sg$
+^ikiuni/iki#uni N Nom Sg/iki-#uni N Nom Sg$
+
+^kaunis/kaunis A Pos Nom Sg$ 
+^havaitsija/havaitsija N Nom Sg$
+^esteettinen/esteettinen A Pos Nom Sg$
+^moraalinen/moraalinen A Pos Nom Sg$
+^mielihyvä/mieli#hyvä A Pos Nom Sg/mieli#hyvä N Nom Sg/mieli-#hyvä A Pos Nom Sg/mieli-#hyvä N Nom Sg$
+^komea/komea A Pos Nom Sg$
+^nätti/nätti A Pos Nom Sg$
+^puoleensavetävä/puoleensavetävä A Pos Nom Sg$
+^sievä/sievä A Pos Nom Sg$
+^soma/soma A Pos Nom Sg/soma N Nom Sg$
+^viehkeä/viehkeä A Pos Nom Sg$
+^suloinen/suloinen A Pos Nom Sg$
+^sorea/sorea A Pos Nom Sg$
+^sorja/sorja A Pos Nom Sg$
+^ihana/ihana A Pos Nom Sg$
+^hyvännäköinen/hyvä#näköinen A Pos Nom Sg/hyvän#näköinen A Pos Nom Sg$
+^upea/upea A Pos Nom Sg$
+^hieno/hieno A Pos Nom Sg$
+^korea/korea A Pos Nom Sg/korea N Nom Sg$
+^söpö/söpö A Pos Nom Sg$
+^sopusuhtainen/sopu#-suhtainen A Pos Nom Sg/sopu#suhtainen A Pos Nom Sg$
+^salskea/salskea A Pos Nom Sg$
+^ruma/ruma A Pos Nom Sg$
+^inhottava/inhota PrsPrc Pass Pos Nom Sg/inhottaa PrsPrc Act Pos Nom Sg/inhottava A Pos Nom Sg$
+^rujo/rujo A Pos Nom Sg$
+^muotopuoli/muoto#puoli N Nom Sg$
+^pahannäköinen/pahan#näköinen A Pos Nom Sg$
+^tökerö/tökerö A Pos Nom Sg$
+
+^pappa/pappa N Nom Sg$ 
+^isä/isä N Nom Sg$
+^äiti/äiti N Nom Sg$
+^vanha/vanha A Pos Nom Sg$
+^mies/mies N Nom Sg$
+^isoisä/iso#isä N Nom Sg/iso-#isä N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^lapsenlapsi/lapsenlapsi N Nom Sg/lapsi#lapsi N Nom Sg$
+^ukki/ukki N Nom Sg$
+^vaari/vaari/vaari N Nom Sg$
+^papparainen/papparainen N Nom Sg$
+
+^pasta/pasta N Nom Sg$ 
+^makaroni/makaroni N Nom Sg$
+^vehnäjauho/vehnä#jauho N Nom Sg$
+^vesi/vesi N Nom Sg$
+^tahna/tahna N Nom Sg$
+^lasagne/lasagne N Nom Sg$
+^makaroni/makaroni N Nom Sg$
+^spagetti/spagetti N Nom Sg$
+
+^puro/puro N Nom Sg$ 
+^joki/joki N Nom Sg$
+^vesiväylä/vesi#väylä N Nom Sg$
+^joki/joki N Nom Sg$
+^luoma/luoda AgPrc Pos Nom Sg/luoma N Nom Sg$
+^noro/noro N Nom Sg$
+^puromainen/puro#mainen A Pos Nom Sg$
+^puronen/puronen N Nom Sg$
+^vesioja/vesi#oja N Nom Sg$
+^virta/virta N Nom Sg$
+
+^peto/peto N Nom Sg$ 
+^eläin/eläin N Nom Sg$
+^väkivaltainen/väki#-valtainen A Pos Nom Sg/väki#valtainen A Pos Nom Sg$
+^julma/julma A Pos Nom Sg$
+^taitava/taitaa PrsPrc Act Pos Nom Sg/taitava A Pos Nom Sg$
+^riista/riista N Nom Sg$
+
+^rutto/rutto A Pos Nom Sg/rutto N Nom Sg$ 
+^tauti/tau#ti N/tauti N Nom Sg$
+^epidemia/epidemia N Nom Sg$
+^paiserutto/paise#rutto A Pos Nom Sg/paise#rutto N Nom Sg$
+
+^pelle/pelle N Nom Sg$ 
+^sirkus/sirkus N Nom Sg$
+^hupiukko/hupi#ukko N Nom Sg$
+^ilveilijä/ilveilijä N Nom Sg$
+^klovni/klovni N Nom Sg$
+
+^vino/vino A Pos Nom Sg$ 
+^pystysuora/pysty#suora A Pos Nom Sg$
+^vaakasuora/vaaka#suora A Pos Nom Sg/vaaka#suora N Nom Sg$
+^kalteva/kalteva A Pos Nom Sg$
+^seksuaalivähemmistö/*seksuaalivähemmistö$
+^sukupuolivähemmistö/suku#puoli#vähemmistö N Nom Sg/sukupuoli-#vähemmistö N Nom Sg$
+^vinoilla/vino A Pos Ade Pl/vinoilla V Inf1 Lat/vinoilla V Prs Pass ConNeg$
+^vinottain/vinottain Adv$
+^vinossa/vino A Pos Ine Sg/vinossa Adv$
+
+^silmä/silmä N Nom Sg$ 
+^ihminen/ihminen N Nom Sg$
+^eläin/eläin N Nom Sg$
+^elin/elin N Nom Sg/elää V Pst Act Sg1$
+^näköaisti/näkö#aisti N Nom Sg$
+^esine/esine N Nom Sg$
+^aukko/aukko N Nom Sg$
+^kolo/kolo N Nom Sg/koloa V Impv Act Sg2/koloa V Prs Act ConNeg$
+^neula/neula N Nom Sg$
+^reikä/reikä N Nom Sg$
+^neulansilmä/neula#silmä N Nom Sg/neulan#silmä N Nom Sg$
+^silmukka/silmukka N Nom Sg$
+^nähdä/nähdä V Inf1 Lat/nähdä V Prs Pass ConNeg$
+^näkö/näkö N Nom Sg$
+^elin/elin N Nom Sg/elää V Pst Act Sg1$
+^näköelin/näkö#elin N Nom Sg$
+^silmämuna/silmä#muna N Nom Sg$
+^mustuainen/mustuainen N Nom Sg$
+^pupilli/pupilli N Nom Sg$
+^silmäterä/silmä#terä N Nom Sg$
+^iiris/iiris N Nom Sg$
+^värikalvo/väri#kalvo N Nom Sg$
+
+^neulansilmä/neula#silmä N Nom Sg/neulan#silmä N Nom Sg$ 
+^pikkuportti/pikku-#portti N Nom Sg$
+^muuri/muuri N Nom Sg$
+^pääportti/pää#portti N Nom Sg/pää-#portti N Nom Sg$
+^neulansilmämutka/neula#silmä#mutka N Nom Sg/neulan#silmä#mutka N Nom Sg$
+^vuori/vuori N Nom Sg$
+
+^isoisä/iso#isä N Nom Sg/iso-#isä N Nom Sg$ 
+^isänisä/isä#isä N Nom Sg/isä#nisä N Nom Sg/isän#isä N Nom Sg$
+^äidinisä/äidin#isä N Nom Sg/äiti#isä N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^lapsenlapsi/lapsenlapsi N Nom Sg/lapsi#lapsi N Nom Sg$
+^isoäiti/iso#äiti N Nom Sg/iso-#äiti N Nom Sg$
+^pappa/pappa N Nom Sg$
+^vaari/vaari/vaari N Nom Sg$
+^paapa/*paapa$
+^ukki/ukki N Nom Sg$
+^vaija/*vaija$
+^äijä/äijä N Nom Sg$
+^paappa/paappa N Nom Sg$
+^taata/taata N Nom Sg/taata V Inf1 Lat/taata V Prs Pass ConNeg$
+^faari/*faari$
+^taatto/taatto N Nom Sg$
+^äijö/*äijö$
+^tuta/*tuta$
+^tuora/*tuora$
+
+^isoäiti/iso#äiti N Nom Sg/iso-#äiti N Nom Sg$ 
+^isä/isä N Nom Sg$
+^äiti/äiti N Nom Sg$
+^isovanhempi/iso#vanha A Comp Nom Sg/iso#vanhempi N Nom Sg/iso-#vanha A Comp Nom Sg/iso-#vanhempi N Nom Sg$
+^isovanhemmat/iso#vanha A Comp Nom Pl/iso#vanhempi N Nom Pl/iso-#vanha A Comp Nom Pl/iso-#vanhempi N Nom Pl$
+^isänäiti/isä#äiti N Nom Sg/isän#äiti N Nom Sg$
+^äidinäiti/äidin#äiti N Nom Sg/äiti#äiti N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^lapsenlapsi/lapsenlapsi N Nom Sg/lapsi#lapsi N Nom Sg$
+^isoisä/iso#isä N Nom Sg/iso-#isä N Nom Sg$
+^mamma/mamma N Nom Sg$
+^mummu/mummu N Nom Sg$
+^mummo/mummo N Nom Sg$
+^mummi/mummi N Nom Sg$
+^mumma/*mumma$
+^tummu/tummua V Impv Act Sg2/tummua V Prs Act ConNeg$
+^fammu/*fammu$
+
+^prinssi/prinssi N Nom Sg$ 
+^kuningas/kuningas N Nom Sg$
+^kuningatar/kuningatar N Nom Sg$
+^keisari/keisari N Nom Sg$
+^keisarinna/keisarinna N Nom Sg$
+^prinsessa/prinsessa N Nom Sg$
+
+^spede/*spede$ 
+^pelle/pelle N Nom Sg$
+^typerys/typerys N Nom Sg$
+
+^vesi/vesi N Nom Sg$ 
+^vety/vettyä V Impv Act Sg2/vettyä V Prs Act ConNeg/vety N Nom Sg$
+^happi/happi N Nom Sg$
+^yhdiste/yhdiste N Nom Sg$
+^palamistulos/palaa#tulos N Nom Sg/palaminen#tulos N Nom Sg$
+^neste/neste N Nom Sg$
+^jää/jää N Nom Sg/jäädä V Impv Act Sg2/jäädä V Prs Act ConNeg/jäädä V Prs Act Sg3$
+^virtsa/virtsa N Nom Sg$
+^hydrologia/hydro-#logia N Nom Sg/hydrologi N Par Sg/hydrologia N Nom Sg$
+^höyry/höyry N Nom Sg$
+^jää/jää N Nom Sg/jäädä V Impv Act Sg2/jäädä V Prs Act ConNeg/jäädä V Prs Act Sg3$
+^sumu/sumu N Nom Sg$
+^uhku/uhku N Nom Sg/uhkua V Impv Act Sg2/uhkua V Prs Act ConNeg$
+^limnologia/limnologi N Par Sg/limnologia N Nom Sg$
+^lämminvesi-/lämminvesi- N TrunCo$
+^vesijäähdytteinen/vesi#-jäähdytteinen A Pos Nom Sg/vesi#jäähdytteinen A Pos Nom Sg$
+^vesikko/vesi#kko N Abbr Nom Sg/vesikko N Nom Sg$
+^vesiliukoinen/vesi#liukoinen A Pos Nom Sg$
+^vesiohenteinen/vesi#ohenteinen A Pos Nom Sg$
+^vesiselvä/vesi#selvä A Pos Nom Sg$
+^vesistö/vesistö N Nom Sg$
+^vesittää/vesittää V Inf1 Lat/vesittää V Prs Act Sg3$
+^vesitäytteinen/vesi#täytteinen A Pos Nom Sg$
+^voda/voda N Nom Sg$
+^divetymonoksidi/di-#vety#mon#oksidi N Nom Sg/di-#vety#monoksidi N Nom Sg$
+
+^kastella/kastella V Inf1 Lat/kastella V Prs Pass ConNeg$ 
+^kaktus/kaktus N Nom Sg$
+^menestyä/menestyä V Inf1 Lat$
+^kukoistaa/kukoistaa V Inf1 Lat/kukoistaa V Prs Act Sg3$
+
+^komea/komea A Pos Nom Sg$ 
+^hyvännäköinen/hyvä#näköinen A Pos Nom Sg/hyvän#näköinen A Pos Nom Sg$
+^kaunis/kaunis A Pos Nom Sg$
+
+^neste/neste N Nom Sg$ 
+^juokseva/juokseva A Pos Nom Sg/juosta PrsPrc Act Pos Nom Sg$
+^aine/aine N Nom Sg$
+^jähmeys/jähmeys N Nom Sg$
+^hydrodynamiikka/hydro-#dynamiikka N Nom Sg/hydrodynamiikka N Nom Sg$
+^hydrostatiikka/hydro-#statiikka N Nom Sg/hydrostatiikka N Nom Sg$
+^liemi/liemi N Nom Sg$
+^liuos/liuos N Nom Sg$
+^mehu/mehu N Nom Sg$
+^plasma/plasma N Nom Sg$
+^viskositeetti/viskositeetti N Nom Sg$
+
+^joki/joki N Nom Sg$ 
+^vesi/vesi N Nom Sg$
+^uoma/uoma N Nom Sg$
+^aaloppi/*aaloppi$
+^alajuoksu/ala#juoksu N Nom Sg/ala-#juoksu N Nom Sg$
+^delta/delta N Nom Sg$
+^jolma/jolma N Nom Sg$
+^koski/koskea V Pst Act Sg3/koski N Nom Sg$
+^luoma/luoda AgPrc Pos Nom Sg/luoma N Nom Sg$
+^meanderoida/*meanderoida$
+^noro/noro N Nom Sg$
+^paisunta/*paisunta$
+^puro/puro N Nom Sg$
+^suisto/suisto N Nom Sg$
+^suvanto/suvanto N Nom Sg$
+^uoma/uoma N Nom Sg$
+^virta/virta N Nom Sg$
+^yläjuoksu/ylä#juoksu N Nom Sg/ylä-#juoksu N Nom Sg$
+
+^aakkostaa/aakkostaa V Inf1 Lat/aakkostaa V Prs Act Sg3$ 
+^aakkosjärjestys/aakkonen#järjestys N Nom Sg/aakkos#järjestys N Nom Sg$
+^aakkostaminen/aakkostaa V N Nom Sg/aakkostaminen N Nom Sg$
+^aakkosto/aakkosto N Nom Sg$
+
+^aakkosjärjestys/aakkonen#järjestys N Nom Sg/aakkos#järjestys N Nom Sg$ 
+^aakkonen/aakkonen N Nom Sg$
+^numerojärjestys/numero#järjestys N Nom Sg$
+
+^aallokko/aallokko N Nom Sg$ 
+^vaihtelu/vaihdella V Nom Sg/vaihtelu N Nom Sg$
+^aalto/aalto N Nom Sg$
+^aallokkoinen/*aallokkoinen$
+^laine/laine N Nom Sg$
+^aalto/aalto N Nom Sg$
+^merenkäynti/meren#käynti N Nom Sg/meri#käynti N Nom Sg$
+
+^tarkka/tarkka A Pos Nom Sg$ 
+^täsmällinen/täsmällinen A Pos Nom Sg$
+^yksityiskohtainen/yksityis#kohtainen A Pos Nom Sg$
+^osua/osua V Inf1 Lat$
+^huomioida/huomioida V Inf1 Lat/huomioida V Prs Pass ConNeg$
+^pedantti/pedantti A Pos Nom Sg$
+^saivarteleva/saivarrella PrsPrc Act Pos Nom Sg/saivarteleva A Pos Nom Sg$
+^terävä/terävä A Pos Nom Sg$
+^epätarkka/epä#tarkka A Pos Nom Sg/epä-#tarkka A Pos Nom Sg$
+^sumea/sumea A Pos Nom Sg$
+
+^tarkalleen/tarkalleen Adv/tarkka A Pos All Sg Px3$ 
+^tarkasti/tarkastaa V Pst Act Sg3/tarkasti Adv$
+^täsmälleen/täsmälleen$
+^prikulleen/prikku N All Sg Px3/prikulleen Adv$
+
+^rehellinen/rehellinen A Pos Nom Sg$ 
+^vilpitön/vilpitön A Pos Nom Sg$
+^rehellisyys/rehellisyys N Nom Sg$
+^epärehellinen/epä#rehellinen A Pos Nom Sg/epä-#rehellinen A Pos Nom Sg$
+
+^nähdä/nähdä V Inf1 Lat/nähdä V Prs Pass ConNeg$ 
+^aistia/aisti N Par Sg/aistia V Inf1 Lat$
+^havaita/havaita V Inf1 Lat/havaita V Prs Pass ConNeg$
+^ymmärtää/ymmärtää V Inf1 Lat/ymmärtää V Prs Act Sg3$
+^tajuta/tajuta V Inf1 Lat/tajuta V Prs Pass ConNeg$
+^tavata/tavata V Inf1 Lat/tavata V Prs Pass ConNeg$
+^kohdata/kohdata V Inf1 Lat/kohdata V Prs Pass ConNeg$
+^näkemys/näkemys N Nom Sg$
+^mielikuva/mieli#kuva N Nom Sg/mieli-#kuva N Nom Sg$
+^tulkita/tulkita V Inf1 Lat/tulkita V Prs Pass ConNeg$
+^kokea/kokea V Inf1 Lat$
+^aavistaa/aavistaa V Inf1 Lat/aavistaa V Prs Act Sg3$
+^ennakoida/ennakoida V Inf1 Lat/ennakoida V Prs Pass ConNeg$
+^ennustaa/ennustaa V Inf1 Lat/ennustaa V Prs Act Sg3$
+^huomata/huomata V Inf1 Lat/huomata V Prs Pass ConNeg$
+^katsella/katsella V Inf1 Lat/katsella V Prs Pass ConNeg$
+^katsoa/katsoa V Inf1 Lat$
+
+^kaksituhatta/kaksituhatta Card#/kaksituhatta Num Card Sg Nom$ 
+^luku/luku N Nom Sg$
+^kahdestuhannes/*kahdestuhannes$
+^liite/liite N Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^miljoona/miljoona Num Nom Sg/miljoona#$ 
+^tuhat/tuhat Num Nom Sg/tuhat#$
+^miljoonalaatikko/*miljoonalaatikko$
+^liite/liite N Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^miljardi/miljardi Num Nom Sg/miljardi#$ 
+^tuhat/tuhat Num Nom Sg/tuhat#$
+^miljoona/miljoona Num Nom Sg/miljoona#$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^ensimmäinen/ensimmäinen N Nom Sg/ensimmäinen Num Ord Nom Sg/ensimmäinen Ord#$ 
+^nollas/*nollas$
+^toinen/toinen N Nom Sg/toinen Num Ord Nom Sg/toinen Ord#/toinen Pron Nom Sg$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+^eka/eka A/eka A Pos Nom Sg$
+^yhdes/yhdes Num Nom Sg/yhdes#$
+^korkein/korkea A Pos Ins Pl/korkea A Superl Nom Sg/korkki N Ins Pl$
+^ylin/ylin A Pos Nom Sg$
+^ainoa/aino A Pos Par Sg/ainoa A Pos Nom Sg$
+^ainoa/aino A Pos Par Sg/ainoa A Pos Nom Sg$
+^ensi/ensi/entää V Pst Act Sg3$
+^ensimmäisenä/ensimmäinen N Ess Sg/ensimmäinen Num Ord Ess Sg/ensimmäinen Ord Ess#$
+^ensiksi/ensiksi Adv$
+^ensin/ensin Adv/entää V Pst Act Sg1$
+^viimeinen/viimeinen A Pos Nom Sg$
+
+^toinen/toinen N Nom Sg/toinen Num Ord Nom Sg/toinen Ord#/toinen Pron Nom Sg$ 
+^numero/numero N Nom Sg$
+^kaksi/kaksi Num Nom Sg/kaksi#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^ensimmäinen/ensimmäinen N Nom Sg/ensimmäinen Num Ord Nom Sg/ensimmäinen Ord#$
+^kolmas/kolmas Num Ord Nom Sg/kolmas Ord#$
+^jompikumpi/*jompikumpi$
+
+^kolmas/kolmas Num Ord Nom Sg/kolmas Ord#$ 
+^numero/numero N Nom Sg$
+^kolme/kolme Num Nom Sg/kolme#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^toinen/toinen N Nom Sg/toinen Num Ord Nom Sg/toinen Ord#/toinen Pron Nom Sg$
+^neljäs/neljäs Num Ord Nom Sg/neljäs Ord#$
+
+^neljäs/neljäs Num Ord Nom Sg/neljäs Ord#$ 
+^numero/numero N Nom Sg$
+^neljä/neljä Num Nom Sg/neljä#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^kolmas/kolmas Num Ord Nom Sg/kolmas Ord#$
+^viides/viides Num Ord Nom Sg/viides Ord#$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^viides/viides Num Ord Nom Sg/viides Ord#$ 
+^numero/numero N Nom Sg$
+^viisi/viisi/viisi Num Nom Sg/viisi#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^neljäs/neljäs Num Ord Nom Sg/neljäs Ord#$
+^kuudes/kuudes Num Ord Nom Sg/kuudes Ord#$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^kuudes/kuudes Num Ord Nom Sg/kuudes Ord#$ 
+^numero/numero N Nom Sg$
+^kuusi/kuu N Gen Sg PxSg2/kuu N Nom Pl PxSg2/kuu N Nom Sg PxSg2/kuusi N Nom Sg/kuusi Num Nom Sg/kuusi#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^viides/viides Num Ord Nom Sg/viides Ord#$
+^seitsemäs/seitsemäs Num Ord Nom Sg/seitsemäs Ord#$
+
+^seitsemäs/seitsemäs Num Ord Nom Sg/seitsemäs Ord#$ 
+^numero/numero N Nom Sg$
+^seitsemän/seitsemän Num Gen Sg/seitsemän Num Nom Sg/seitsemän#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^kuudes/kuudes Num Ord Nom Sg/kuudes Ord#$
+^kahdeksas/kahdeksas Num Ord Nom Sg/kahdeksas Ord#$
+
+^kahdeksas/kahdeksas Num Ord Nom Sg/kahdeksas Ord#$ 
+^numero/numero N Nom Sg$
+^kahdeksan/kahdeksan Num Gen Sg/kahdeksan Num Nom Sg/kahdeksan#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^seitsemäs/seitsemäs Num Ord Nom Sg/seitsemäs Ord#$
+^yhdeksäs/yhdeksäs Num Ord Nom Sg/yhdeksäs Ord#$
+
+^yhdeksäs/yhdeksäs Num Ord Nom Sg/yhdeksäs Ord#$ 
+^numero/numero N Nom Sg$
+^yhdeksän/yhdeksän Num Gen Sg/yhdeksän Num Nom Sg/yhdeksän#$
+^järjestysluku/järjestys#luku N Nom Sg/järjestysluku N Nom Sg$
+^kahdeksas/kahdeksas Num Ord Nom Sg/kahdeksas Ord#$
+^kymmenes/kymmenes N Nom Sg/kymmenes Num Ord Nom Sg/kymmenes Ord#$
+^Liite/Liite N Nom Sg/Liite N Prop Nom Sg$^:/: Punct$^Luvut/Luku N Nom Pl$
+
+^numero/numero N Nom Sg$ 
+^kirjoitusjärjestelmä/kirjoitus#järjestelmä N Nom Sg$
+^lukusana/luku#sana N Nom Sg$
+^numeraali/numeraali N Nom Sg$
+^merkki/merkki N Nom Sg$
+^numeromerkki/numero#merkki N Nom Sg$
+^merkintä/merkintä N Nom Sg$
+^asema/asema N Nom Sg$
+^koko/koko A/koko N Nom Sg/koko Pron Qnt$
+^osa/osa N Nom Sg$
+^sijainti/sija#ti N/sijainti N Nom Sg$
+^symboli/symboli N Nom Sg$
+^ohjelmanumero/ohjelma#numero N Nom Sg$
+^esitys/esitys N Nom Sg$
+^puhelinnumero/puhelin#numero N Nom Sg$
+^arvosana/arvo#sana N Nom Sg$
+^pistemäärä/piste#määrä N Nom Sg$
+^tulos/tulos N Nom Sg$
+^nro/nro Abbr/nro N Abbr Nom Sg$
+^numeraali/numeraali N Nom Sg$
+^numerointi/numerointi N Nom Sg$
+^numerologia/numero#logia N Nom Sg/numerologi N Par Sg/numerologia N Nom Sg$
+
+^haluta/haluta V Inf1 Lat/haluta V Prs Pass ConNeg/haluttaa V Impv Act Sg2/haluttaa V Prs Act ConNeg$ 
+^tahtoa/tahto N Par Sg/tahtoa V Inf1 Lat$
+^himoita/himoita V Inf1 Lat/himoita V Prs Pass ConNeg$
+
+^aallonharja/aallon#harja N Nom Sg/aalto#harja N Nom Sg$ 
+^aalto/aalto N Nom Sg$
+^aallonpohja/aallon#pohja N Nom Sg/aalto#pohja N Nom Sg$
+
+^aallonmurtaja/aallon#murtaja N Nom Sg/aalto#murtaja N Nom Sg$ 
+^satama/sataa AgPrc Pos Nom Sg/satama N Nom Sg$
+^aalto/aalto N Nom Sg$
+^ranta/ranta N Nom Sg$
+^maa-aines/maa#aines N Nom Sg/maa-aines N Nom Sg$
+^möljä/*möljä$
+^moolo/*moolo$
+
+^aallonpohja/aallon#pohja N Nom Sg/aalto#pohja N Nom Sg$ 
+^aalto/aalto N Nom Sg$
+
+^aalto/aalto N Nom Sg$ 
+^laine/laine N Nom Sg$
+^energia/energia N Nom Sg$
+^hyrsky/hyrsky N Nom Sg$
+^laine/laine N Nom Sg$
+^lakkapää/lakka#pää N Nom Sg$
+^maininki/maininki N Nom Sg$
+^tyrsky/tyrsky N Nom Sg$
+^vaahtopää/vaahto#pää N Nom Sg$
+
+^aallonpituus/aallon#pituus N Nom Sg/aalto#pituus N Nom Sg$ 
+^aalto/aalto N Nom Sg$
+^aaltopituus/aalto#pituus N Nom Sg$
+^yhteisymmärrys/yhteis#ymmärrys N Nom Sg/yhteis-#ymmärrys N Nom Sg$
+^ääniaalto/ääni#aalto N Nom Sg$
+^valoaalto/valo#aalto N Nom Sg$
+^aallonpituusalue/aallon#pituus#alue N Nom Sg/aalto#pituus#alue N Nom Sg$
+
+^ikärasismi/ikä#rasismi N Nom Sg$ 
+^ikä/ikä N Nom Sg$
+^syrjintä/syrjintä N Nom Sg$
+
+^lukijaisuus/*lukijaisuus$ 
+^herätysliike/herätys#liike N Nom Sg$
+
+^äitiysvoimistelu/äitiys#voimistelu N Nom Sg$ 
+^voimistelu/voimistelu N Nom Sg$
+^äiti/äiti N Nom Sg$
+^raskaus/raskaus N Nom Sg$
+
+^kaali/kaali N Nom Sg$ 
+^keräkaali/kerä#kaali N Nom Sg$
+^pää/pää N Nom Sg$
+^kaalit/kaali N Nom Pl$
+^akankaali/akan#kaali N Nom Sg/akka#kaali N Nom Sg$
+^brysselinkaali/brysseli#kaali N Nom Sg/brysselinkaali N Nom Sg$
+^hapankaali/hapan#kaali N Nom Sg$
+^hetekaali/hete#kaali N Nom Sg/hetekaali N Nom Sg$
+^hullukaali/hullu#kaali N Nom Sg$
+^kaalikeitto/kaali#keitto N Nom Sg$
+^kaalikorva/kaali#korva N Nom Sg$
+^kaalikärpänen/kaali#kärpänen N Nom Sg$
+^kaalikääryle/kaali#kääryle N Nom Sg$
+^kaalilaatikko/kaali#laatikko N Nom Sg$
+^kaalimaa/kaali#maa N Nom Sg$
+^kaalimato/kaali#mato N Nom Sg$
+^kaalinkerä/kaali#kerä N Nom Sg/kaalin#kerä N Nom Sg$
+^kaalinkupu/kaali#kupu N Nom Sg/kaalin#kupu N Nom Sg$
+^kaalinlehti/kaali#lehti N Nom Sg/kaalin#lehti N Nom Sg$
+^kaalintaimi/kaali#tai#mi N/kaali#taimi N Nom Sg/kaalin#taimi N Nom Sg$
+^kaaliperhonen/kaali#perhonen N Nom Sg$
+^kaalipiirakka/kaali#pii#rakka N Nom Sg/kaali#piirakka N Nom Sg$
+^kaalirapi/kaalirapi N Nom Sg$
+^kaaliyökkönen/kaali#yökkönen N Nom Sg$
+^käenkaali/käen#kaali N Nom Sg/käki#kaali N Nom Sg$
+^käenkaali-mustikkatyyppi/käen#kaali#mustikka#tyyppi N Nom Sg/käenkaali-mustikkatyyppi N Nom Sg/käki#kaali#mustikka#tyyppi N Nom Sg$
+^käenkaali-oravanmarjatyyppi/käen#kaali#orava#marja#tyyppi N Nom Sg/käen#kaali#oravanmarja#tyyppi N Nom Sg/käenkaali-oravanmarjatyyppi N Nom Sg/käki#kaali#orava#marja#tyyppi N Nom Sg/käki#kaali#oravanmarja#tyyppi N Nom Sg$
+^kanankaali/kana#kaali N Nom Sg/kanan#kaali N Nom Sg$
+^keräkaali/kerä#kaali N Nom Sg$
+^kiinankaali/kiina#kaali N Nom Sg/kiinan#kaali N Nom Sg$
+^koristekaali/koriste#kaali N Nom Sg$
+^kukkakaali/kukka#kaali N Nom Sg$
+^kupukaali/kupu#kaali N Nom Sg$
+^kurttukaali/kurttu#kaali N Nom Sg$
+^kyssäkaali/kyssä#kaali N Nom Sg$
+^lammaskaali/lammas#kaali N Nom Sg$
+^lehtikaali/lehti#kaali N Nom Sg$
+^linnunkaali/linnun#kaali N Nom Sg/lintu#kaali N Nom Sg$
+^maitokaali/maito#kaali N Nom Sg$
+^merikaali/meri#kaali N Nom Sg$
+^parsakaali/par#sakaali N Nom Sg/parsa#kaali N Nom Sg$
+^parsakaalikeitto/par#sakaali#keitto N Nom Sg/parsa#kaali#keitto N Nom Sg$
+^peltokaali/pelto#kaali N Nom Sg$
+^peltokanankaali/pelto#kana#kaali N Nom Sg/pelto#kanan#kaali N Nom Sg/pelto#kanankaali N Nom Sg$
+^pinaattikaali/pinaatti#kaali N Nom Sg$
+^pinaattikiinankaali/pinaatti#kiina#kaali N Nom Sg/pinaatti#kiinan#kaali N Nom Sg$
+^punakaali/puna#kaali N Nom Sg/puna-#kaali N Nom Sg$
+^rantakanankaali/ranta#kana#kaali N Nom Sg/ranta#kanan#kaali N Nom Sg$
+^ruusukaali/ruusu#kaali N Nom Sg$
+^rönsyakankaali/rönsy#akan#kaali N Nom Sg/rönsy#akankaali N Nom Sg/rönsy#akka#kaali N Nom Sg$
+^salaattikaali/salaatti#kaali N Nom Sg$
+^salaattikiinankaali/salaatti#kiina#kaali N Nom Sg/salaatti#kiinan#kaali N Nom Sg$
+^savoijinkaali/savoijinkaali N Nom Sg$
+^sellerikaali/selleri#kaali N Nom Sg$
+^valkokaali/valko#kaali N Nom Sg/valko-#kaali N Nom Sg$
+^villikaali/villi#kaali N Nom Sg$
+^vuonankaali/vuona#kaali N Nom Sg/vuonan#kaali N Nom Sg$
+
+^kaappi/kaappi N Nom Sg$ 
+^tavara/tavara N Nom Sg$
+^huonekalu/huone#kalu N Nom Sg$
+^hylly/hylly N Nom Sg/hyllyä V Impv Act Sg2/hyllyä V Prs Act ConNeg$
+^orsi/orsi N Nom Sg$
+^maali/maali N Nom Sg$
+
+^hei/hei Interj$ 
+^tervehdys/tervehdys N Nom Sg$
+^moi/moi Interj$
+^moro/moro Interj/moro N Nom Sg$
+^moikka/*moikka$
+^morjens/morjens Interj$
+^terve/terve A Pos Nom Sg/terve Interj$
+^mo/*mo$
+^heippa/heippa Interj$
+
+^kaikki/kaikki Pron Qnt Nom Sg$ 
+^jokainen/jokainen Pron Qnt Nom Sg$
+
+^kala/kala N Nom Sg$ 
+^selkärankainen/selkä#rankainen A Pos Nom Sg/selkärankainen N Nom Sg$
+^kidus/kidus N Nom Sg$
+^vesieläin/vesi#eläin N Nom Sg$
+^liha/liha N Nom Sg$
+^akvaario/akvaario N Nom Sg$
+^evä/evä N Nom Sg$
+^maiti/maiti N Nom Sg$
+^mäti/mäti N Nom Sg/mätiä V Pst Act Sg3$
+^rasvaevä‎/*rasvaevä‎$
+^pyrstö/pyrstö N Nom Sg$
+^suomu/suomu N Nom Sg$
+^suomustaa/suo#musta A Pos Par Sg/suo#musta N Par Sg/suomustaa V Inf1 Lat/suomustaa V Prs Act Sg3$
+^varsieväinen/varsi#eväinen N Nom Sg$
+^viuhkaeväinen/viuhka#eväinen N Nom Sg$
+^Kalat/Kala N Nom Pl/Kala N Prop Nom Pl$
+
+^kallis/kallis A Pos Nom Sg/kallis N Nom Sg$ 
+^hinnakas/hinnakas A Pos Nom Sg$
+^arvokas/arvokas A Pos Nom Sg$
+^rakas/rakas A Pos Nom Sg/rakas N Nom Sg$
+^arvokas/arvokas A Pos Nom Sg$
+^rakas/rakas A Pos Nom Sg/rakas N Nom Sg$
+^hinnakas/hinnakas A Pos Nom Sg$
+^hintava/hintava A Pos Nom Sg$
+^tyyris/tyyris A Pos Nom Sg$
+^halpa/halpa A Pos Nom Sg$
+^edullinen/edullinen A Pos Nom Sg$
+^huokea/huokea A Pos Nom Sg$
+
+^kana/kana N Nom Sg$ 
+^aitokana/aito#kana N Nom Sg$
+^kesy/kesy A Pos Nom Sg$
+^heltta/heltta N Nom Sg$
+^nainen/naida V Pot Act Sg1/nainen N Nom Sg$
+^japani/japani N Nom Sg$
+^tavukirjoitus/tavu#kirjoitus N Nom Sg$
+^kirjoitusmerkki/kirjoitus#merkki N Nom Sg$
+^kukko/kukko N Nom Sg$
+^broileri/broileri N Nom Sg$
+^tipu/tippua V Impv Act Sg2/tippua V Prs Act ConNeg/tipu N Nom Sg$
+^höyhen/höyhen N Nom Sg$
+^kotkottaa/kotkottaa V Inf1 Lat/kotkottaa V Prs Act Sg3$
+^sulka/sulka N Nom Sg$
+^kyniä/kyniä V Inf1 Lat/kynä N Par Pl$
+^kanala/kana#la N/kanala N Nom Sg$
+^lintu/lintu N Nom Sg$
+^untuvikko/untuvikko N Nom Sg$
+
+^kani/kani N Nom Sg$ 
+^kaniini/kani N Ill Sg PxSg1/kaniini N Nom Sg$
+^panttilainaamo/pantti#lainaamo N Nom Sg$
+^jänis/jänis N Nom Sg$
+^pupu/pupu N Nom Sg$
+^kanissa/kani N Ine Sg$
+^kanittaa/kanittaa V Inf1 Lat/kanittaa V Prs Act Sg3$
+
+^kapea/kapea A Pos Nom Sg$ 
+^leveys/leveys N Nom Sg$
+^lyhyt/lyhyt A Pos Nom Sg$
+^leveyssuunta/leveys#suunta N Nom Sg$
+^pieni/pieni A Pos Nom Sg/pieniä V Impv Act Sg2/pieniä V Prs Act ConNeg/pieniä V Pst Act Sg3$
+^korkea/korkea A Pos Nom Sg$
+^matala/mata#la N/matala A Pos Nom Sg$
+^pitkä/pitkä A Pos Nom Sg$
+^lyhyt/lyhyt A Pos Nom Sg$
+^syvä/syvä A Pos Nom Sg$
+^kaita/kaita A Pos Nom Sg/kaita N Nom Sg/kaita V Inf1 Lat/kaita V Prs Pass ConNeg$
+^leveä/leveä A Pos Nom Sg$
+
+^kuume/kuume N Nom Sg$ 
+^horkka/horkka N Nom Sg$
+^kuuma/kuuma A Pos Nom Sg$
+^kuumotus/*kuumotus$
+^kuumuus/kuumuus N Nom Sg$
+^ruumiinlämpö/ruumiin#lämpö N Nom Sg/ruumis#lämpö N Nom Sg$
+^pyreksia/*pyreksia$
+
+^jaa/jaa Interj/jakaa V Impv Act Sg2/jakaa V Prs Act ConNeg$ 
+^ajanlasku/aika#lasku N Nom Sg/ajan#lasku N Nom Sg$
+^jKr./jKr. Abbr$
+^eKr./eKr. Abbr$
+^eaa/eaa Abbr$
+^ääni/ääni N Nom Sg$
+^eduskunta/edus#kunta N Nom Sg$
+
+^eaa/eaa Abbr$ 
+^ajanlasku/aika#lasku N Nom Sg/ajan#lasku N Nom Sg$
+^eKr./eKr. Abbr$
+^jKr./jKr. Abbr$
+^jaa/jaa Interj/jakaa V Impv Act Sg2/jakaa V Prs Act ConNeg$
+
+^permeaasi/*permeaasi$ 
+
+^pleiotrooppinen/pleiotrooppinen A Pos Nom Sg$ 
+^ominaisuus/ominaisuus N Nom Sg$
+^monivaikutteinen/moni-#-vaikutteinen A Pos Nom Sg/monivaikutteinen A Pos Nom Sg$
+
+^aboriginaali/aboriginaali N Nom Sg$ 
+^asukas/asukas N Nom Sg$
+^alkuperäiskansa/alkuperäis#kansa N Nom Sg$
+^alkuasukas/alku#asukas N Nom Sg$
+^alkuperäisasukas/alkuperäis#asukas N Nom Sg$
+^originaali/originaali N Nom Sg$
+
+^ablatiivi/ablatiivi N Nom Sg$ 
+^ulkoeronto/ulko-#eronto N Nom Sg$
+^paikallissija/pai#kallis#sija N Nom Sg/paikallis#sija N Nom Sg/paikallis-#sija N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+^ablatiivisija/ablatiivi#sija N Nom Sg$
+
+^adessiivi/adessiivi N Nom Sg$ 
+^ulko-olento/ulko-#olento N Nom Sg$
+^paikallissija/pai#kallis#sija N Nom Sg/paikallis#sija N Nom Sg/paikallis-#sija N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+^adessiivisija/adessiivi#sija N Nom Sg$
+
+^allatiivi/allatiivi N Nom Sg$ 
+^ulkotulento/ulko-#tulento N Nom Sg$
+^paikallissija/pai#kallis#sija N Nom Sg/paikallis#sija N Nom Sg/paikallis-#sija N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+^allatiivisija/allatiivi#sija N Nom Sg$
+
+^elatiivi/elatiivi N Nom Sg$ 
+^sisäeronto/sisä-#eronto N Nom Sg$
+^sisäpaikallissija/sisä#paikallis#sija N Nom Sg/sisä-#pai#kallis#sija N Nom Sg/sisä-#paikallis#sija N Nom Sg/sisä-#paikallis-#sija N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^vokaalisointu/vokaali#sointu N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+^elatiivisija/elatiivi#sija N Nom Sg$
+
+^kapiteeli/kapiteeli N Nom Sg$ 
+^pylväs/pylväs N Nom Sg$
+^pilari/pilari N Nom Sg$
+^pilasteri/pilasteri N Nom Sg$
+^kirjasinlaji/kirjasin#laji N Nom Sg$
+
+^karhu/karhu N Nom Sg$ 
+^nisäkäs/nisäkäs N Nom Sg$
+^maksukehotus/maksu#kehotus N Nom Sg$
+^karhukirje/karhu#kirje N Nom Sg$
+^ohto/*ohto$
+^otso/otso N Nom Sg$
+^mesikämmen/mesi#kämmen N Nom Sg$
+^nalle/nalle N Nom Sg$
+^kontio/kontio N Nom Sg$
+^kouvo/*kouvo$
+
+^kasa/kasa N Nom Sg$ 
+^kumpare/kumpare N Nom Sg$
+^läjä/läjä N Nom Sg$
+^keko/keko N Nom Sg$
+^rovio/rovio N Nom Sg$
+^röykkiö/röykkiö N Nom Sg$
+
+^hindi/hindi N Nom Sg$ 
+^Intia/Intia N Prop Nom Sg$
+^Bangladesh/Bangladesh N Prop Nom Sg$
+^indoeurooppalainen/indoeurooppalainen A Pos Nom Sg/indoeurooppalainen N Nom Sg$
+^kieli/kieli N Nom Sg/kieliä V Impv Act Sg2/kieliä V Prs Act ConNeg/kieliä V Pst Act Sg3$
+
+^kalastaa/kalastaa V Inf1 Lat/kalastaa V Prs Act Sg3$ 
+^pyydystää/pyydystää V Inf1 Lat/pyydystää V Prs Act Sg3$
+^kala/kala N Nom Sg$
+^pyytää/pyytää V Inf1 Lat/pyytää V Prs Act Sg3$
+^atrain/atrain N Nom Sg$
+^kalastaminen/kalastaa V N Nom Sg$
+^katiska/katiska N Nom Sg$
+^linnustaa/linnustaa V Inf1 Lat/linnustaa V Prs Act Sg3$
+^onki/onki N Nom Sg/onkia V Pst Act Sg3$
+^perhovapa/perho#vapa N Nom Sg$
+^pitkäsiima/pitkä#siima N Nom Sg/pitkäsiima N Sg Nom$
+^rysä/rysä N Nom Sg$
+^sumppu/sumppu N Nom Sg$
+^verkko/verkko N Nom Sg$
+^virveli/virveli N Nom Sg$
+^jahdata/jahdata V Inf1 Lat/jahdata V Prs Pass ConNeg$
+^kelastaa/kelastaa V Inf1 Lat/kelastaa V Prs Act Sg3$
+^kokea/kokea V Inf1 Lat$
+^onkia/onki N Par Pl/onkia V Inf1 Lat$
+^perhokalastaa/per-#hoka#lasta N Par Sg$
+^tuulastaa/tuulastaa V Inf1 Lat/tuulastaa V Prs Act Sg3$
+^troolata/troolata V Inf1 Lat/troolata V Prs Pass ConNeg$
+^metsästää/metsästää V Inf1 Lat/metsästää V Prs Act Sg3$
+^virvelöidä/virvelöidä V Inf1 Lat/virvelöidä V Prs Pass ConNeg$
+^kelastaa/kelastaa V Inf1 Lat/kelastaa V Prs Act Sg3$
+
+^kalastaja/kalastaja N Nom Sg$ 
+^kalastava/kalastaa PrsPrc Act Pos Nom Sg$
+^henkilö/henkilö N Nom Sg$
+^ammattikalastaja/ammatti#kalastaja N Nom Sg/ammatti-#kalastaja N Nom Sg$
+^kala/kala N Nom Sg$
+^kalastus/kalastus N Nom Sg$
+^kalastelija/*kalastelija$
+
+^kal/*kal$ 
+^kalina/kali N Ess Sg/kalina N Nom Sg$
+
+^kalastella/kalastella V Inf1 Lat/kalastella V Prs Pass ConNeg$ 
+^kalastaa/kalastaa V Inf1 Lat/kalastaa V Prs Act Sg3$
+^kerätä/kerätä V Inf1 Lat/kerätä V Prs Pass ConNeg$
+^kärkkyä/kärkkyä V Inf1 Lat$
+^houkutella/houkutella V Inf1 Lat/houkutella V Prs Pass ConNeg$
+^hankkia/hankkia V Inf1 Lat$
+
+^kalastus/kalastus N Nom Sg$ 
+^kala/kala N Nom Sg$
+^narrata/narrata V Inf1 Lat/narrata V Prs Pass ConNeg$
+^kala/kala N Nom Sg$
+^kalastaa/kalastaa V Inf1 Lat/kalastaa V Prs Act Sg3$
+^kalastaja/kalastaja N Nom Sg$
+^kalastaminen/kalastaa V N Nom Sg$
+^kelastus/kelastus N Nom Sg$
+^pyydys/pyydys N Nom Sg$
+^syötti/syötti N Nom Sg/syöttää V Pst Act Sg3$
+^uistelu/uistelu N Nom Sg$
+^vetouistelu/veto#uistelu N Nom Sg/vetouistelu N Nom Sg$
+
+^kalauttaa/kalauttaa V Inf1 Lat/kalauttaa V Prs Act Sg3$ 
+^kolahtaa/kolahtaa V Inf1 Lat/kolahtaa V Prs Act Sg3$
+^kumea/kumea A Pos Nom Sg$
+^ääni/ääni N Nom Sg$
+^kalautella/kala#ute N Ade Sg$
+^kalautus/*kalautus$
+^iskeä/iskeä V Inf1 Lat$
+^lyödä/lyödä V Inf1 Lat/lyödä V Prs Pass ConNeg$
+
+^kalavelka/kala#velka N Nom Sg$ 
+^vääryys/vääryys N Nom Sg$
+^kauna/kauna N Nom Sg$
+^kosto/kosto N Nom Sg$
+
+^kalenteri/kalenteri N Nom Sg$ 
+^almanakka/almanakka N Nom Sg$
+^päivyri/päivyri N Nom Sg$
+
+^sei/sei N Nom Sg$ 
+^seiti/sei#ti N/seiti N Nom Sg$
+
+^otto/otto N Nom Sg$ 
+^ottaminen/ottaa V N Nom Sg/ottaminen N Nom Sg$
+^kohtaus/kohtaus N Nom Sg$
+^otos/otos N Nom Sg$
+^otanta/otanta N Nom Sg$
+^otos/otos N Nom Sg$
+^ottaa/ottaa V Inf1 Lat/ottaa V Prs Act Sg3$
+^ottaminen/ottaa V N Nom Sg/ottaminen N Nom Sg$
+
+^maakunta/maa#kunta N Nom Sg$ 
+^Suomi/Suo#mi N/Suomi N Nom Sg/Suomi N Prop Nom Sg/Suomia V Impv Act Sg2/Suomia V Prs Act ConNeg/Suomia V Pst Act Sg3$
+^poliittinen/poliittinen A Pos Nom Sg$
+^maaseutu/maa#seutu N Nom Sg$
+^maakuntalainen/maa#kunta#lainen A Pos Nom Sg/maa#kuntalainen A Pos Nom Sg/maa#kuntalainen N Nom Sg$
+
+^manifestaatio/manifestaatio N Nom Sg$ 
+^ilmetä/ilmetä V Inf1 Lat/ilmetä V Prs Pass ConNeg$
+^ilmentymä/ilmentymä N Nom Sg/ilmentyä AgPrc Pos Nom Sg$
+
+^byrokratia/byrokratia N Nom Sg$ 
+^organisaatio/organisaatio N Nom Sg$
+^hallintokoneisto/hallinto#koneisto N Nom Sg$
+^virkavaltaisuus/virka#valtaisuus N Nom Sg$
+^byrokraatti/byrokraatti N Nom Sg$
+^byrokraattinen/byrokraattinen A Pos Nom Sg$
+^organisaatio/organisaatio N Nom Sg$
+
+^kalikka/kalikka N Nom Sg$ 
+^puu/puu N Nom Sg$
+^keppi/keppi N Nom Sg$
+^palikka/palikka N Nom Sg$
+^pulikka/pulikka N Nom Sg$
+^puukalikka/puu#kalikka N Nom Sg$
+^pilke/pilke N Nom Sg$
+^kilpukka/kilpukka N Nom Sg$
+^kalista/kali N Ela Sg/kalista V Inf1 Lat/kalista V Prs Pass ConNeg/kalistaa V Impv Act Sg2/kalistaa V Prs Act ConNeg$
+^astalo/astalo N Nom Sg$
+
+^aita/aita N Nom Sg$ 
+^suoja/suoja N Nom Sg$
+^estejuoksu/este#juoksu N Nom Sg$
+^aidastaa/*aidastaa$
+^aidata/aidata V Inf1 Lat/aidata V Prs Pass ConNeg$
+^aitaus/aitaus N Nom Sg$
+^hakuli/*hakuli$
+^siula/*siula$
+
+^anorgasmia/*anorgasmia$ 
+^kyvyttömyys/kyvyttömyys N Nom Sg$
+^orgasmi/orgasmi N Nom Sg$
+
+^galanteria/*galanteria$ 
+^liehittely/liehitellä V Nom Sg/liehittely N Nom Sg$
+^mielistelevä/mielistelevä A Pos Nom Sg/mielistellä PrsPrc Act Pos Nom Sg$
+^käytös/käytös N Nom Sg$
+
+^hypernymia/hypernymia N Nom Sg$ 
+^sana/sana N Nom Sg$
+^merkitys/merkitys N Nom Sg$
+^hyperonyymi/hyperonyymi N Nom Sg$
+^meronymia/meronymia N Nom Sg$
+^semantiikka/semantiikka N Nom Sg$
+
+^hyponymia/hyponymia N Nom Sg$ 
+^alakäsitteisyys/alakäsitteisyys N Nom Sg$
+^hyponyymi/hyponyymi N Nom Sg$
+
+^meronymia/meronymia N Nom Sg$ 
+^merkitys/merkitys N Nom Sg$
+^meronyymi/meronyymi N Nom Sg$
+^hypernymia/hypernymia N Nom Sg$
+^semantiikka/semantiikka N Nom Sg$
+
+^polysemia/polysemia N Nom Sg$ 
+^sana/sana N Nom Sg$
+^polyseeminen/*polyseeminen$
+^polyseemi/*polyseemi$
+^semantiikka/semantiikka N Nom Sg$
+^monimerkityksellinen/moni-#merkityksellinen A Pos Nom Sg$
+^monimerkityksellisyys/moni-#merkityksellisyys N Nom Sg/monimerkityksellisyys N Nom Sg$
+^monimerkityksinen/moni-#-merkityksinen A Pos Nom Sg/monimerkityksinen A Pos Nom Sg$
+^monimerkityksisyys/moni-#-merkityksisyys N Nom Sg/monimerkityksisyys N Nom Sg$
+^monitulkintainen/moni-#-tulkintainen A Pos Nom Sg/moni-#tulkintainen A Pos Nom Sg/monitulkintainen A Pos Nom Sg$
+^monitulkintaisuus/moni-#-tulkintaisuus N Nom Sg/monitulkintaisuus N Nom Sg$
+^antonymia/antonymia N Nom Sg$
+^homonymia/homonymia N Nom Sg$
+^hyponymia/hyponymia N Nom Sg$
+^metonymia/metonymia N Nom Sg$
+^synonymia/synonymia N Nom Sg$
+
+^homofoni/homo#foni N Nom Sg/homofoni N Nom Sg$ 
+^sana/sana N Nom Sg$
+^ääntyä/ääntyä V Inf1 Lat$
+^merkitys/merkitys N Nom Sg$
+^englanti/englanti N Nom Sg$
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^homofonia/homo#foni N Par Sg/homofoni N Par Sg/homofonia N Nom Sg$
+^homografi/homografi N Nom Sg$
+^homonyymi/homo#nyy#mi N/homonyymi N Nom Sg$
+^heterofoni/hetero#foni N Nom Sg$
+
+^juntti/juntti N Nom Sg$ 
+^moukka/moukka N Nom Sg$
+^sivistymätön/sivistymätön A Pos Nom Sg/sivistyä NegPrc Pos Nom Sg$
+^typerys/typerys N Nom Sg$
+^stereotyyppinen/stereo#tyyppinen A Pos Nom Sg$
+^nauris/nauris N Nom Sg$
+^lanttu/lanttu N Nom Sg$
+
+^findie/*findie$ 
+^amatöörielokuva/amatööri#elo#kuva N Nom Sg$
+
+^asemointi/asemointi N Nom Sg$ 
+^markkina/markkina N Nom Sg$
+^kuluttaja/kuluttaja N Nom Sg$
+
+^komissio/komissio N Nom Sg$ 
+^välittäjä/välittäjä N Nom Sg$
+^palkkio/palkkio N Nom Sg$
+^arvopaperi/arvo#paperi N Nom Sg$
+^välityspalkkio/välitys#palkkio N Nom Sg$
+^provisio/provisio N Nom Sg$
+^toimeksianto/toimeksianto N Nom Sg$
+^komitea/komitea N Nom Sg$
+^toimikunta/toimi#kunta N Nom Sg$
+^valtuuskunta/valtuus#kunta N Nom Sg$
+^sekakomissio/seka#komissio N Nom Sg/seka-#komissio N Nom Sg$
+
+^stokastinen/stokastinen A Pos Nom Sg$ 
+^satunnainen/satunnainen A Pos Nom Sg$
+^statistinen/statistinen A Pos Nom Sg$
+
+^pilvenpiirtäjä/pilven#piirtäjä N Nom Sg/pilvi#piirtäjä N Nom Sg$ 
+^kerrostalo/kerros#talo N Nom Sg$
+
+^muukalainen/muukalainen A Pos Nom Sg$ 
+^ulkomaalainen/ulko#maa#lainen A Pos Nom Sg/ulko#maalainen A Pos Nom Sg/ulko#maalainen N Nom Sg/ulko-#maa#lainen A Pos Nom Sg/ulko-#maalainen A Pos Nom Sg$
+^henkilö/henkilö N Nom Sg$
+^olento/olento N Nom Sg$
+^avaruusolento/avaruus#olento N Nom Sg$
+^maakalainen/maa#kalainen A Pos Nom Sg/maakalainen N Nom Sg$
+
+^aamiainen/aamiainen N Nom Sg$ 
+^aamu/aamu N Nom Sg$
+^ateria/ateria N Nom Sg$
+^puuro/puuro N Nom Sg$
+^lounas/lounas N Nom Sg$
+^aamukahvi/aamu#kahvi N Nom Sg$
+^aamupala/aamu#pala N Nom Sg$
+
+^aika/aika/aika N Nom Sg$ 
+^aimo/aimo$
+^aikamoinen/aika#moinen A Pos Nom Sg$
+^aikainen/aikainen A Pos Nom Sg$
+^aikuinen/aikuinen A Pos Nom Sg$
+^aikalailla/aika#laki N Ade Pl/aika#laki N Ade Sg$
+^aikaisintaan/aika#isi#taka N Gen Sg/aikainen A Superl Par Sg Px3/aikaisintaan$
+^aikaistua/aikaistua V Inf1 Lat$
+^melko/melko$
+^melko/melko$
+^koko/koko A/koko N Nom Sg/koko Pron Qnt$
+^kelpo/kelpo A Pos Nom Sg/kelpo N Nom Sg$
+^aikaisin/aika#isi N Gen Sg/aika#isä N Ins Pl/aikainen A Pos Ins Pl/aikainen A Superl Nom Sg/aikaisin Adv$
+^maailmankaikkeus/maa#ilma#kaikkeus N Nom Sg/maa#ilman#kaikkeus N Nom Sg$
+^edetä/edetä V Inf1 Lat/edetä V Prs Pass ConNeg$
+^tapahtua/tapahtua V Inf1 Lat$
+^luonnonilmiö/luonnon#ilmiö N Nom Sg/luonto#ilmiö N Nom Sg$
+^kello/kello N Nom Sg$
+^suure/suu#re N/suure N Nom Sg$
+^kello/kello N Nom Sg$
+^ajanjakso/aika#jakso N Nom Sg/ajan#jakso N Nom Sg$
+^aikailu/aikailu N Nom Sg$
+^aikaileminen/aikailla V N Nom Sg$
+^aikamoinen/aika#moinen A Pos Nom Sg$
+^aikava/*aikava$
+^ajanmittaan/aika#mitta N Ill Sg$
+^hetki/hetki N Nom Sg$
+^tovi/tovi N Nom Sg$
+^tuokio/tuokio N Nom Sg$
+^kaikenaikaa/*kaikenaikaa$
+^minuutti/minuutti N Nom Sg$
+^päivä/päivä N Nom Sg$
+^sekunti/sekunti N Nom Sg$
+^tunti/tunti N Nom Sg$
+^vuorokausi/vuoro#kausi N Nom Sg$
+
+^akku/akku N Nom Sg$ 
+^sähkö/sähkö N Nom Sg$
+^jännitelähde/jännite#lähde N Nom Sg$
+^mikroprosessori/mikro#prosessori N Nom Sg/mikro-#prosessori N Nom Sg$
+^rekisteri/rekisteri N Nom Sg$
+^paineakku/paine#akku N Nom Sg$
+^paristo/paristo N Nom Sg$
+^patteri/patteri N Nom Sg$
+^akkumulaattori/akkumulaattori N Nom Sg$
+
+^asuntola/asu#tola N Nom Sg/asun#tola N Nom Sg/asunto#la N$ 
+^asumisoikeus/asua#oikeus N Nom Sg/asuminen#oikeus N Nom Sg/asumis#oikeus N Nom Sg$
+^opiskelija-asuntola/opiskelija#asu#tola N Nom Sg/opiskelija#asun#tola N Nom Sg/opiskelija#asunto#la N/opiskelija-asunto#la N/opiskelija-asuntola N Nom Sg$
+
+^baari/baari N Nom Sg$ 
+^tiski/tiski N Nom Sg$
+^drinkkibaari/drinkki#baari N Nom Sg$
+^ravintola/ravi#tola N Nom Sg/ravinto#la N/ravintola N Nom Sg/ravit#tola N Nom Sg$
+^pubi/pubi N Nom Sg$
+^kahvila/kahvi#la N/kahvila N Nom Sg$
+^kahvibaari/kahvi#baari N Nom Sg$
+^paine/pai N Com/paine N Nom Sg$
+^yksikkö/yksikkö N Nom Sg$
+^SI-järjestelmä/SI Abbr TrunCojärjestelmä N Nom Sg/SI-järjestelmä N Nom Sg$
+^Pa/Pa Abbr Nom Sg$
+^kapakka/kapakka N Nom Sg$
+
+^elokuva/elo#kuva N Nom Sg$ 
+^filmi/filmi N Nom Sg$
+^teos/teos N Nom Sg$
+^elokuvateatteri/elo#kuva#teatteri N Nom Sg$
+^televisio/tele#visio N Nom Sg/tele-#visio N Nom Sg$
+^elokuva-ala/elo#kuva#ala N Nom Sg/elo#kuva-ala N Nom Sg$
+^elokuvanäytös/elo#kuva#näytös N Nom Sg/elokuva#näytös N Nom Sg$
+^elokuvateatteri/elo#kuva#teatteri N Nom Sg$
+^filmata/filmata V Inf1 Lat/filmata V Prs Pass ConNeg$
+^elokuvata/elokuvata V Inf1 Lat/elokuvata V Prs Pass ConNeg$
+^mykkäfilmi/mykkä#filmi N Nom Sg$
+^raina/raina N Nom Sg$
+^filmi/filmi N Nom Sg$
+^leffa/leffa N Nom Sg$
+
+^kalina/kali N Ess Sg/kalina N Nom Sg$ 
+^kalista/kali N Ela Sg/kalista V Inf1 Lat/kalista V Prs Pass ConNeg/kalistaa V Impv Act Sg2/kalistaa V Prs Act ConNeg$
+^ääni/ääni N Nom Sg$
+^kalikka/kalikka N Nom Sg$
+
+^kalista/kali N Ela Sg/kalista V Inf1 Lat/kalista V Prs Pass ConNeg/kalistaa V Impv Act Sg2/kalistaa V Prs Act ConNeg$ 
+^helistä/helistä V Inf1 Lat/helistä V Prs Pass ConNeg/helistää V Impv Act Sg2/helistää V Prs Act ConNeg$
+^helistä/helistä V Inf1 Lat/helistä V Prs Pass ConNeg/helistää V Impv Act Sg2/helistää V Prs Act ConNeg$
+^kalikka/kalikka N Nom Sg$
+^kalina/kali N Ess Sg/kalina N Nom Sg$
+^kilistä/kili N Ela Sg/kilistä V Inf1 Lat/kilistä V Prs Pass ConNeg/kilistää V Impv Act Sg2/kilistää V Prs Act ConNeg$
+^kolista/kola N Ela Pl/koli N Ela Sg/kolista V Inf1 Lat/kolista V Prs Pass ConNeg/kolistaa V Impv Act Sg2/kolistaa V Prs Act ConNeg$
+
+^kalistaa/kalistaa V Inf1 Lat/kalistaa V Prs Act Sg3$ 
+^synnyttää/synnyttää V Inf1 Lat/synnyttää V Prs Act Sg3$
+^kalista/kali N Ela Sg/kalista V Inf1 Lat/kalista V Prs Pass ConNeg/kalistaa V Impv Act Sg2/kalistaa V Prs Act ConNeg$
+^ääni/ääni N Nom Sg$
+^kalikka/kalikka N Nom Sg$
+^kalina/kali N Ess Sg/kalina N Nom Sg$
+^kalisuttaa/kalisuttaa V Inf1 Lat/kalisuttaa V Prs Act Sg3$
+
+^kalisuttaa/kalisuttaa V Inf1 Lat/kalisuttaa V Prs Act Sg3$ 
+^kalistaa/kalistaa V Inf1 Lat/kalistaa V Prs Act Sg3$
+
+^kalja/kalja N Nom Sg$ 
+^käyttää/käyttää V Inf1 Lat/käyttää V Prs Act Sg3$
+^olut/olut N Nom Sg$
+^olut/olut N Nom Sg$
+^bisse/bisse N Nom Sg$
+^pilsneri/pilsneri N Nom Sg$
+^taari/*taari$
+
+^umpitavu/umpi#tavu N Nom Sg$ 
+^konsonantti/konsonantti N Nom Sg$
+^tavu/tavu N Nom Sg$
+
+^lisenssi/lisenssi N Nom Sg$ 
+^käyttölupa/käyttö#lupa N Nom Sg$
+^lupa/lupa N Nom Sg$
+^lisensoida/lisensoida V Inf1 Lat/lisensoida V Prs Pass ConNeg$
+
+^alamäkiajo/ala#mäki#ajo N Nom Sg/ala-#mäki#ajo N Nom Sg$ 
+^maastopyöräily/maasto#pyöräily N Nom Sg$
+^kilpailumuoto/kilpailu#muoto N Nom Sg$
+
+^halatti/halatti N Nom Sg$ 
+^kauhtana/kauhtana N Nom Sg$
+^viitta/viitta N Nom Sg$
+
+^subventio/subventio N Nom Sg$ 
+^tukipalkkio/tuki#palkkio N Nom Sg$
+^subventoida/subventoida V Inf1 Lat/subventoida V Prs Pass ConNeg$
+
+^aseteknikko/ase#teknikko N Nom Sg/asete#kni Abbr#kko N Abbr Nom Sg$ 
+^asekoulu/ase#koulu N Nom Sg$
+^aseteknikkolinja/ase#teknikko#linja N Nom Sg/asete#kni Abbr#kko Abbr#linja N Nom Sg$
+^teknikko/teknikko N Nom Sg$
+
+^tietokoneanimaatio/tieto#kone#animaatio N Nom Sg$ 
+^tietokone/tieto#kone N Nom Sg$
+^animaatio/animaatio N Nom Sg$
+
+^bensiinimoottori/bensiini#moottori N Nom Sg$ 
+^polttomoottori/poltto#moottori N Nom Sg$
+^bensiini/bensiini N Nom Sg$
+^ottomoottori/otto#moottori N Nom Sg$
+^bensiini/bensiini N Nom Sg$
+^moottori/moottori N Nom Sg$
+^polttomoottori/poltto#moottori N Nom Sg$
+^bensamoottori/bensa#moottori N Nom Sg$
+
+^sarkasmi/sarkasmi N Nom Sg$ 
+^satiiri/satiiri N Nom Sg$
+^sarkastinen/sarkastinen A Pos Nom Sg$
+
+^ironia/ironia N Nom Sg$ 
+^komedia/komedia N Nom Sg$
+^ironikko/ironikko N Nom Sg$
+^ironinen/ironinen A Pos Nom Sg$
+^ironisesti/ironisesti Adv$
+
+^sovinismi/sovinismi N Nom Sg$ 
+^ylimielinen/yli#mielinen A Pos Nom Sg/yli-#-mielinen A Pos Nom Sg/yli-#mielinen N Nom Sg$
+^ajattelu/ajatella V Nom Sg/ajattelu N Nom Sg$
+^miessovinismi/mies#sovinismi N Nom Sg$
+^sukupuolisovinismi/suku#puoli#sovinismi N Nom Sg/sukupuoli-#sovinismi N Nom Sg$
+
+^viita/viita N Nom Sg$ 
+^risukko/risu#kko N Abbr Nom Sg/risukko N Nom Sg$
+
+^oligarkia/oligarkia N Nom Sg$ 
+^oligarkki/oligarkki N Nom Sg$
+^oligarkkinen/oligarkkinen A Pos Nom Sg$
+^aristokratia/aristokratia N Nom Sg$
+^demokratia/demo#kratia N Nom Sg/demokratia N Nom Sg$
+
+^kvestuuri/*kvestuuri$ 
+^kvestori/kvestori N Nom Sg$
+
+^organismi/organismi N Nom Sg$ 
+^eliö/eliö N Nom Sg$
+
+^valtiokapitalismi/valtio#kapitalismi N Nom Sg$ 
+^kapitalismi/kapitalismi N Nom Sg$
+^valtio/valtio N Nom Sg$
+^tuotantoväline/tuotanto#väline N Nom Sg$
+^yhteisomistus/yhteis#omistus N Nom Sg/yhteis-#omistus N Nom Sg$
+^kommunismi/kommunismi N Nom Sg$
+^valtionyhtiö/valtio#yhtiö N Nom Sg/valtion#yhtiö N Nom Sg$
+^omistajaohjaus/omistaja#ohjaus N Nom Sg/omistajaohjaus N Nom Sg$
+
+^hautavajoama/hauta#vajoama N Nom Sg$ 
+^hauta/hauta N Nom Sg$
+^maankuori/maa#kuori N Nom Sg/maan#kuori N Nom Sg$
+
+^dogmatismi/dogmatismi N Nom Sg$ 
+^tiedollinen/tiedollinen A Pos Nom Sg$
+^asenne/asenne N Nom Sg$
+^totuus/totuus N Nom Sg$
+^epäillä/epäillä V Inf1 Lat/epäillä V Prs Pass ConNeg$
+^dogmaattinen/dogmaattinen A Pos Nom Sg$
+
+^ympärileikkaus/ympärileikkaus N Nom Sg$ 
+^fimoosi/*fimoosi$
+^esinahka/esi#nahka N Nom Sg/esi-#nahka N Nom Sg/esinahka N Nom Sg$
+^klitoris/klitoris N Nom Sg$
+^häpyhuuli/häpy#huuli N Nom Sg$
+^ulkosynnyttimet/ulko#synnyttimet N Nom Pl/ulko-#synnytin N Nom Pl/ulko-#synnyttimet N Nom Pl$
+^emätin/emätin N Nom Sg/emätti N Gen Sg$
+^ommella/ommel#la N/ommella V Inf1 Lat/ommella V Prs Pass ConNeg$
+^ympärileikata/ympärileikata V Inf1 Lat/ympärileikata V Prs Pass ConNeg$
+
+^auto/auto N Nom Sg$ 
+^moottorikäyttöinen/moottori#-käyttöinen A Pos Nom Sg/moottori#käyttöinen A Pos Nom Sg$
+^ajoneuvo/ajo#neuvo N Nom Sg$
+^henkilöauto/henkilö#auto N Nom Sg$
+^kuorma-auto/kuorma#auto N Nom Sg/kuorma-auto N Nom Sg$
+^linja-auto/linja#auto N Nom Sg/linja-auto N Nom Sg$
+^pakettiauto/paketti#auto N Nom Sg$
+^paloauto/palo#auto N Nom Sg$
+^alusta/alku N Ela Sg/alunen N Par Sg/alus N Par Sg/alusta Adv/alusta N Nom Sg/alustaa V Impv Act Sg2/alustaa V Prs Act ConNeg$
+^autovaltainen/auto#-valtainen A Pos Nom Sg/auto#valtainen A Pos Nom Sg$
+^kori/kori N Nom Sg$
+^lava/lava N Nom Sg$
+^lavetti/lavetti N Nom Sg$
+^perävaunu/perä#vaunu N Nom Sg$
+^kupé/*kupé$
+^biili/*biili$
+^kiesi/kiesi N Nom Sg$
+^kaara/kaara N Nom Sg$
+^kosla/kos#la N/kosla N Nom Sg$
+^automobiili/auto#mobiili N Nom Sg$
+^hyrysysy/*hyrysysy$
+
+^syödä/syödä V Inf1 Lat/syödä V Prs Pass ConNeg$ 
+^ruoka/ruoka N Nom Sg$
+^rasittaa/rasittaa V Inf1 Lat/rasittaa V Prs Act Sg3$
+^kuluttaa/kuluttaa V Inf1 Lat/kuluttaa V Prs Act Sg3$
+^lyödä/lyödä V Inf1 Lat/lyödä V Prs Pass ConNeg$
+^ruoka/ruoka N Nom Sg$
+^safkata/safkata V Inf1 Lat/safkata V Prs Pass ConNeg$
+^syöminen/syödä V N Nom Sg/syöminen N Nom Sg$
+^syönnös/syönnös N Nom Sg$
+^särppiä/*särppiä$
+^skruudata/*skruudata$
+
+^juoda/juoda V Inf1 Lat/juoda V Prs Pass ConNeg$ 
+^ottaa/ottaa V Inf1 Lat/ottaa V Prs Act Sg3$
+^neste/neste N Nom Sg$
+^suu/suu N Nom Sg$
+^niellä/niellä V Inf1 Lat/niellä V Prs Pass ConNeg$
+^usea/usea A Pos Nom Sg/usea Pron Qnt Nom Sg$
+^juopotella/juopotella V Inf1 Lat/juopotella V Prs Pass ConNeg$
+^ryypätä/ryypätä V Inf1 Lat/ryypätä V Prs Pass ConNeg$
+^juomavesi/juoma#vesi N Nom Sg$
+^päihtyä/päihtyä V Inf1 Lat$
+
+^arvosubjektivismi/arvo#subjektivismi N Nom Sg$ 
+^arvo/arpoa V Impv Act Sg2/arpoa V Prs Act ConNeg/arvo N Nom Sg$
+
+^metropoli/metro#poli N Nom Sg/metropoli N Nom Sg$ 
+^suurkaupunki/suur#kaupunki N Nom Sg/suur-#kaupunki N Nom Sg/suurkaupunki N Nom Sg$
+
+^ah/ah Interj$ 
+^ihastella/ihastella V Inf1 Lat/ihastella V Prs Pass ConNeg$
+
+^katamaraani/katamaraani N Nom Sg$ 
+^laiva/laiva N Nom Sg$
+^alus/alus N Nom Sg$
+^trimaraani/tri Abbr#mara N Ill Sg PxSg1/tri Abbr#mara N Par Sg PxSg1/tri-#mara N Ill Sg PxSg1/tri-#mara N Par Sg PxSg1/trimaraani N Nom Sg$
+
+^hän/hän Pron Pers Nom Sg$ 
+^puhutella/puhutella V Inf1 Lat/puhutella V Prs Pass ConNeg$
+^minä/mikä Pron Interr Ess Sg/mikä Pron Rel Ess Sg/minä Pron Pers Nom Sg$
+^sinä/se Pron Dem Ess Sg/sinä Pron Pers Nom Sg$
+^me/me Pron Pers Nom Pl$
+^te/te Pron Pers Nom Pl$
+^he/he Interj/he Pron Pers Nom Pl$
+
+^eksponentti/eksponentti N Nom Sg$ 
+^potenssi/potenssi N Nom Sg$
+^korottaa/korottaa V Inf1 Lat/korottaa V Prs Act Sg3$
+^kantaluku/kanta#luku N Nom Sg$
+^potenssi/potenssi N Nom Sg$
+
+^translatiivi/translatiivi N Nom Sg$ 
+^sijamuoto/sija#muoto N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^tulento/tulento N Nom Sg$
+^translatiivisija/translatiivi#sija N Nom Sg$
+
+^imperfekti/imperfekti N Nom Sg$ 
+^aikamuoto/aika#muoto N Nom Sg$
+^entiskestämä/*entiskestämä$
+^preesens/preesens N Nom Sg$
+^preteriti/preteriti N Nom Sg$
+^perfekti/perfekti N Nom Sg$
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+^kertoma/kertoa AgPrc Pos Nom Sg/kertoma N Nom Sg$
+
+^saunamaija/sauna#maija N Nom Sg$ 
+^maasiira/maa#siira N Nom Sg$
+^tarhasiira/tarha#siira N Nom Sg$
+
+^preteriti/preteriti N Nom Sg$ 
+^aikamuoto/aika#muoto N Nom Sg$
+^aikaluokka/aika#luokka N Nom Sg$
+^imperfekti/imperfekti N Nom Sg$
+^perfekti/perfekti N Nom Sg$
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+^preesens/preesens N Nom Sg$
+
+^turkoosi/turkoosi N Nom Sg$ 
+^sinivihreä/sini#vihreä A Pos Nom Sg/sini#vihreä N Nom Sg/sinivihreä N Nom Sg$
+^syaani/syaani A Pos Nom Sg/syaani N Nom Sg$
+
+^valkea/valkea A Pos Nom Sg/valkea N Nom Sg$ 
+^valkoinen/valkoinen A Pos Nom Sg/valkoinen N Nom Sg$
+^tuli/tuli N Nom Sg/tulla V Pst Act Sg3$
+^valkoinen/valkoinen A Pos Nom Sg/valkoinen N Nom Sg$
+^vitivalkea/viti#valkea A Pos Nom Sg/viti#valkea N Nom Sg$
+
+^ruskea/ruskea A Pos Nom Sg/ruskea N Nom Sg$ 
+^väri/väri N Nom Sg$
+^punaruskea/puna#ruskea A Pos Nom Sg/puna#ruskea N Nom Sg/puna-#ruskea A Pos Nom Sg/puna-#ruskea N Nom Sg/punaruskea N Nom Sg$
+^rusehtava/rusehtava A Pos Nom Sg$
+^ruskettua/ruskettua V Inf1 Lat$
+^ruskistaa/ruskistaa V Inf1 Lat/ruskistaa V Prs Act Sg3$
+^ruskistua/ruskistua V Inf1 Lat$
+^ruska/ruska N Nom Sg$
+^rusko/rusko N Nom Sg$
+^ruskuainen/ruskuainen N Nom Sg$
+^rusoposki/ruso#poski N Nom Sg$
+^vaaleanruskea/vaalea#ruskea A Pos Nom Sg/vaalea#ruskea N Nom Sg/vaalean#ruskea A Pos Nom Sg/vaalean#ruskea N Nom Sg$
+
+^tyttö/tyttö N Nom Sg$ 
+^naispuolinen/nainen#puolinen A Pos Nom Sg/nais#puolinen A Pos Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^nuori/nuori A Pos Nom Sg/nuori N Nom Sg$
+^jälkeläinen/jälkeläinen N Nom Sg$
+^tytär/tytär N Nom Sg$
+^typykkä/typykkä N Nom Sg$
+^likka/likka N Nom Sg$
+^kinkku/kinkku N Nom Sg$
+^kimuli/kimuli N Nom Sg$
+^misu/misu N Nom Sg$
+^mimmi/mimmi N Nom Sg$
+^friidu/*friidu$
+^poika/poika N Nom Sg$
+^nainen/naida V Pot Act Sg1/nainen N Nom Sg$
+
+^tytär/tytär N Nom Sg$ 
+^jälkeläinen/jälkeläinen N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^tyttö/tyttö N Nom Sg$
+^poika/poika N Nom Sg$
+^lapsi/lapsi N Nom Sg$
+^isä/isä N Nom Sg$
+^vanhempi/vanha A Comp Nom Sg/vanhempi N Nom Sg$
+^äiti/äiti N Nom Sg$
+
+^paitsio/paitsio N Nom Sg$ 
+
+^noitavaino/noita#vaino N Nom Sg$ 
+^vaino/vaino N Nom Sg$
+^syrjintä/syrjintä N Nom Sg$
+^noitarovio/noita#rovio N Nom Sg$
+
+^huulipuna/huuli#puna N Nom Sg$ 
+^huulet/huuli N Nom Pl$
+^kosmetiikkatuote/kosmetiikka#tuote N Nom Sg$
+^huulikiilto/huuli#kiilto N Nom Sg$
+^huulirasva/huuli#rasva N Nom Sg$
+
+^nero/nero N Nom Sg$ 
+^älykäs/älykäs A Pos Nom Sg$
+^yleisnero/yleis#nero N Nom Sg/yleis-#nero N Nom Sg$
+^neronleimaus/nero#leimaus N Nom Sg/neron#leimaus N Nom Sg$
+^neropatti/nero#patti A Pos Nom Sg/nero#patti N Nom Sg$
+^huippuälykäs/huippu#älykäs A Pos Nom Sg/huippu-#älykäs A Pos Nom Sg$
+
+^affekti/affekti N Nom Sg$ 
+^tunnepurkaus/tunne#purkaus N Nom Sg$
+
+^juna/juna N Nom Sg$ 
+^raide/raide N Nom Sg$
+^kulkuneuvo/kulku#neuvo N Nom Sg$
+^veturi/veturi N Nom Sg$
+^vaunu/vaunu N Nom Sg$
+^rata/rata N Nom Sg$
+^rautatie/rauta#tie N Nom Sg$
+^vaunu/vaunu N Nom Sg$
+
+^kelkka/kelkka N Nom Sg$ 
+^asema/asema N Nom Sg$
+
+^asema/asema N Nom Sg$ 
+^tilanne/tila N Gen Sg PxPl2/tila N Nom Pl PxPl2/tila N Nom Sg PxPl2/tilanne N Nom Sg/tilata V Pot Act ConNeg$
+^arvostus/arvostus N Nom Sg$
+^pysähtyä/pysähtyä V Inf1 Lat$
+^osio/osio N Nom Sg$
+^sijainti/sija#ti N/sijainti N Nom Sg$
+^paikka/paikka N Nom Sg$
+^radioasema/radio#asema N Nom Sg$
+^asemasta/asema N Ela Sg/asemasta Adv$
+^asemesta/ase#mesta Adp Po/ase#mesta Adp Pr/ase#mesta N Nom Sg$
+^shakkilauta/shakki#lauta N Nom Sg$
+^shakkinappula/shakki#nappula N Nom Sg$
+^linnoitus/linnoitus N Nom Sg$
+^siirtovaihto/siirto#vaihto N Nom Sg$
+
+^kulkuneuvo/kulku#neuvo N Nom Sg$ 
+^keino/keino N Nom Sg$
+^kulkea/kulkea V Inf1 Lat$
+^kulkuväline/kulku#väline N Nom Sg$
+^paikka/paikka N Nom Sg$
+^liikkua/liikkua V Inf1 Lat$
+^ajoneuvo/ajo#neuvo N Nom Sg$
+^kuljetusväline/kuljetus#väline N Nom Sg$
+^kulkeminen/kulkea V N Nom Sg/kulkeminen N Nom Sg$
+
+^baletti/baletti N Nom Sg$ 
+^musiikki/musiikki N Nom Sg$
+^tanssi/tanssi N Nom Sg/tanssia V Impv Act Sg2/tanssia V Prs Act ConNeg/tanssia V Pst Act Sg3$
+^ooppera/ooppera N Nom Sg$
+^ballerina/ballerina N Nom Sg$
+
+^tanssi/tanssi N Nom Sg/tanssia V Impv Act Sg2/tanssia V Prs Act ConNeg/tanssia V Pst Act Sg3$ 
+^ihminen/ihminen N Nom Sg$
+^jäsen/jäsen N Nom Sg$
+^musiikki/musiikki N Nom Sg$
+^tanssia/tanssi N Par Sg/tanssia V Inf1 Lat$
+^kappale/kappale N Nom Sg$
+^baletti/baletti N Nom Sg$
+^jenkka/jenkka N Nom Sg$
+^masurkka/masurkka N Nom Sg$
+^polkka/polkka N Nom Sg$
+^poloneesi/poloneesi N Nom Sg$
+^tanhu/tanhu N Nom Sg$
+^valssi/valssi N Nom Sg$
+
+^jäsen/jäsen N Nom Sg$ 
+^ihminen/ihminen N Nom Sg$
+^eläin/eläin N Nom Sg$
+^ruumiinosa/ruumiin#osa N Nom Sg/ruumis#osa N Nom Sg$
+^raaja/raaja N Nom Sg$
+^joukko/joukko N Nom Sg$
+^-/- Punct Dash/- Punct Dash >>>$^jäseninen/-jäseninen A Pos Nom Sg$
+^jäsenistö/jäsenistö N Nom Sg$
+^jäsennellä/jäsennellä V Inf1 Lat/jäsennellä V Prs Pass ConNeg$
+^jäsennys/jäsennys N Nom Sg$
+^jäsentely/jäsennellä V Nom Sg/jäsentely N Nom Sg$
+^jäsentenvälinen/jäsen#-välinen A Pos Nom Sg/jäsen#välinen N Nom Sg/jäsenten#välinen A Pos Nom Sg$
+^jäsentyä/jäsentyä V Inf1 Lat$
+^jäsentää/jäsentää V Inf1 Lat/jäsentää V Prs Act Sg3$
+^jäsenyys/jäsenyys N Nom Sg$
+^kunniajäsenyys/kunnia#jäsenyys N Nom Sg$
+^lauseenjäsennys/lause#jäsennys N Nom Sg/lauseen#jäsennys N Nom Sg$
+^liitännäisjäsenyys/liitännäis#jäsenyys N Nom Sg$
+^pakkojäsenyys/pakko#jäsenyys N Nom Sg$
+^tarkkailijajäsenyys/tarkkailija#jäsenyys N Nom Sg/tarkkailijajäsenyys N Nom Sg$
+^täysjäsenyys/täysjäsenyys N Nom Sg$
+^ulkojäsenyys/ulko#jäsenyys N Nom Sg/ulko-#jäsenyys N Nom Sg$
+
+^käsi/käsi N Nom Sg$ 
+^ihminen/ihminen N Nom Sg$
+^apina/apina N Nom Sg$
+^yläraaja/ylä#raaja N Nom Sg/ylä-#raaja N Nom Sg$
+^olkapää/olka#pää N Nom Sg$
+^korttikäsi/kortti#käsi N Nom Sg$
+^koura/koura N Nom Sg$
+^kourallinen/kourallinen A Pos Nom Sg/kourallinen N Nom Sg$
+^kämmen/kämmen N Nom Sg$
+^käpälä/käpälä N Nom Sg$
+^nyrkki/nyrkki N Nom Sg$
+^ranne/ranne N Nom Sg$
+^sormi/sormi N Nom Sg$
+^jälkikäteen/jälki#käsi N Ill Sg/jälki#käteen Adv$
+
+^sormi/sormi N Nom Sg$ 
+^käsi/käsi N Nom Sg$
+^peukalo/peukalo N Nom Sg$
+^etusormi/etu#sormi N Nom Sg/etu-#sormi N Nom Sg$
+^keskisormi/keski#sormi N Nom Sg/keski-#sormi N Nom Sg$
+^nimetön/nimetön A Pos Nom Sg/nimetön N Nom Sg$
+^pikkusormi/pikku#sormi N Nom Sg/pikku-#sormi N Nom Sg$
+^nimetön/nimetön A Pos Nom Sg/nimetön N Nom Sg$
+^peukalo/peukalo N Nom Sg$
+^rysty/rysty N Nom Sg$
+^näppi/näppi N Nom Sg$
+
+^risukko/risu#kko N Abbr Nom Sg/risukko N Nom Sg$ 
+^maasto/maasto N Nom Sg$
+
+^maasto/maasto N Nom Sg$ 
+^ympäristö/ympäristö N Nom Sg$
+^maa/maa N Nom Sg$
+^maaperä/maa#perä N Nom Sg$
+^seutu/seutu N Nom Sg$
+
+^ympäristö/ympäristö N Nom Sg$ 
+^itse/itse/itse Pron Refl Nom Sg$
+^ulkopuolinen/ulko#puolinen A Pos Nom Sg/ulko-#puolinen A Pos Nom Sg/ulkopuolinen N Nom Sg$
+^tila/tila N Nom Sg$
+^ekosysteemi/ekosysteemi N Nom Sg$
+^luonto/luonto N Nom Sg$
+^lähialue/lähi#alue N Nom Sg/lähi-#alue N Nom Sg$
+^pistejoukko/piste#joukko N Nom Sg$
+^lukujoukko/luku#joukko N Nom Sg$
+^ekosysteemi/ekosysteemi N Nom Sg$
+^ilmakehä/ilma#kehä N Nom Sg$
+^luonto/luonto N Nom Sg$
+^luonnonmukainen/luonnon#mukainen A Pos Nom Sg/luonto#mukainen A Pos Nom Sg$
+^maisema/maisema N Nom Sg$
+^maaperä/maa#perä N Nom Sg$
+^vesistö/vesistö N Nom Sg$
+
+^luonto/luonto N Nom Sg$ 
+^maapallo/maa#pallo N Nom Sg$
+^luonne/luo N Gen Sg PxPl2/luo N Nom Pl PxPl2/luo N Nom Sg PxPl2/luonne N Nom Sg$
+^ekologia/ekologi N Par Sg/ekologia N Nom Sg$
+^luonne/luo N Gen Sg PxPl2/luo N Nom Pl PxPl2/luo N Nom Sg PxPl2/luonne N Nom Sg$
+^luonnokas/*luonnokas$
+^luonnostaan/luonnos N Par Sg Px3/luonnos#taan Adv/luonnos#taka N Gen Sg/luonto N Ela Sg Px3$
+^luontainen/luontainen A Pos Nom Sg$
+^luonnonvarainen/luonnon#varainen A Pos Nom Sg/luonto#varainen A Pos Nom Sg$
+^luonnollisesti/luonnollisesti Adv$
+^luonnollistaa/*luonnollistaa$
+^luonnonharmaa/luonnon#harmaa A Pos Nom Sg/luonto#harmaa A Pos Nom Sg/luonto#harmaa N Nom Sg$
+^luonnontilainen/luonnon#tilainen A Pos Nom Sg$
+^luonnonvarainen/luonnon#varainen A Pos Nom Sg/luonto#varainen A Pos Nom Sg$
+^luonnotar/luonnotar N Nom Sg$
+^luonnokas/*luonnokas$
+^luontua/luontua V Inf1 Lat$
+^ympäristö/ympäristö N Nom Sg$
+
+^veturi/veturi N Nom Sg$ 
+^rautatiet/rauta#tie N Nom Pl$
+^juna/juna N Nom Sg$
+^moottoroitu/moottoroida PrfPrc Pass Pos Nom Sg/moottoroida V Pst Pass ConNeg/moottoroitu A Pos Nom Sg$
+^vetää/vetää V Inf1 Lat/vetää V Prs Act Sg3$
+^yhdistelmäajoneuvo/yhdistelmä#ajo#neuvo N Nom Sg$
+^vetoauto/veto#auto N Nom Sg/vetoauto N Nom Sg$
+^kone/kone N Nom Sg$
+^pässi/pässi N Nom Sg$
+^tenderi/tenderi N Nom Sg$
+
+^vuorokaudenaika/vuoro#kauden#aika N Nom Sg/vuoro#kausi#aika N Nom Sg$ 
+^vuorokausi/vuoro#kausi N Nom Sg$
+^vuorokausi/vuoro#kausi N Nom Sg$
+^aamu/aamu N Nom Sg$
+^päivä/päivä N Nom Sg$
+^iltapäivä/ilta#päivä N Nom Sg$
+^ilta/ilta N Nom Sg$
+^yö/yö N Nom Sg$
+^aamuyö/aamu#yö N Nom Sg$
+^aamupäivä/aamu#päivä N Nom Sg$
+^alkuilta/alku#ilta N Nom Sg$
+^loppuilta/loppu#ilta N Nom Sg$
+
+^vuodenaika/vuoden#aika N Nom Sg/vuosi#aika N Nom Sg$ 
+^vuosi/vuo N Gen Sg PxSg2/vuo N Nom Pl PxSg2/vuo N Nom Sg PxSg2/vuosi N Nom Sg/vuotaa V Pst Act Sg3$
+^vuosi/vuo N Gen Sg PxSg2/vuo N Nom Pl PxSg2/vuo N Nom Sg PxSg2/vuosi N Nom Sg/vuotaa V Pst Act Sg3$
+^kesä/kesä N Nom Sg$
+^syksy/syksy N Nom Sg$
+^talvi/talvi N Nom Sg$
+^kevät/kevät N Nom Sg$
+
+^talvi/talvi N Nom Sg$ 
+^syksy/syksy N Nom Sg$
+^kevät/kevät N Nom Sg$
+^vuodenaika/vuoden#aika N Nom Sg/vuosi#aika N Nom Sg$
+^talvella/talvi N Ade Sg$
+^talvikki/talvikki N Nom Sg$
+^talvikko/talvi#kko N Abbr Nom Sg$
+^talvinen/talvinen A Pos Nom Sg$
+^talvivihanta/talvi#vihanta A Pos Nom Sg$
+
+^kevät/kevät N Nom Sg$ 
+^talvi/talvi N Nom Sg$
+^kesä/kesä N Nom Sg$
+^talvi/talvi N Nom Sg$
+^kesä/kesä N Nom Sg$
+^syksy/syksy N Nom Sg$
+^kevätkesä/kevät#kesä N Nom Sg$
+^kevättalvi/kevät#talvi N Nom Sg$
+^keväinen/keväinen A Pos Nom Sg$
+
+^kesä/kesä N Nom Sg$ 
+^vuodenaika/vuoden#aika N Nom Sg/vuosi#aika N Nom Sg$
+^kevät/kevät N Nom Sg$
+^syksy/syksy N Nom Sg$
+^suvi/suvi N Nom Sg$
+^talvi/talvi N Nom Sg$
+^kevät/kevät N Nom Sg$
+^syksy/syksy N Nom Sg$
+
+^syksy/syksy N Nom Sg$ 
+^kesä/kesä N Nom Sg$
+^talvi/talvi N Nom Sg$
+^vuodenaika/vuoden#aika N Nom Sg/vuosi#aika N Nom Sg$
+^syys/syys$
+
+^suvi/suvi N Nom Sg$ 
+^kesä/kesä N Nom Sg$
+
+^ilta/ilta N Nom Sg$ 
+^päivä/päivä N Nom Sg$
+^yö/yö N Nom Sg$
+^auringonlasku/auringon#lasku N Nom Sg/aurinko#lasku N Nom Sg$
+^vuorokaudenaika/vuoro#kauden#aika N Nom Sg/vuoro#kausi#aika N Nom Sg$
+^aatto/aatto N Nom Sg$
+^aamu/aamu N Nom Sg$
+^päivä/päivä N Nom Sg$
+^yö/yö N Nom Sg$
+^ehtoo/ehtoo N Nom Sg$
+
+^yö/yö N Nom Sg$ 
+^vuorokaudenaika/vuoro#kauden#aika N Nom Sg/vuoro#kausi#aika N Nom Sg$
+^ilta/ilta N Nom Sg$
+^aamu/aamu N Nom Sg$
+^aamu/aamu N Nom Sg$
+^aamupäivä/aamu#päivä N Nom Sg$
+^ilta/ilta N Nom Sg$
+^iltapäivä/ilta#päivä N Nom Sg$
+^päivä/päivä N Nom Sg$
+
+^suomenkielinen/suomen#kielinen A Pos Nom Sg/suomi#-kielinen A Pos Nom Sg$ 
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^suomeksi/suomi N Tra Sg$
+^esittää/esittää V Inf1 Lat/esittää V Prs Act Sg3$
+^suomentaa/suomentaa V Inf1 Lat/suomentaa V Prs Act Sg3$
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^äidinkieli/äidin#kieli N Nom Sg/äiti#kieli N Nom Sg$
+^henkilö/henkilö N Nom Sg$
+
+^suomalainen/suomalainen A Pos Nom Sg$ 
+^Suomi/Suo#mi N/Suomi N Nom Sg/Suomi N Prop Nom Sg/Suomia V Impv Act Sg2/Suomia V Prs Act ConNeg/Suomia V Pst Act Sg3$
+^suomalais/*suomalais$
+^Suomi/Suo#mi N/Suomi N Nom Sg/Suomi N Prop Nom Sg/Suomia V Impv Act Sg2/Suomia V Prs Act ConNeg/Suomia V Pst Act Sg3$
+^kansalainen/kansa#lainen A Pos Nom Sg/kansa#lainen N Nom Sg$
+^kansalaisuus/kansalaisuus N Nom Sg$
+^kansallisuus/kansallisuus N Nom Sg$
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^Suomi/Suo#mi N/Suomi N Nom Sg/Suomi N Prop Nom Sg/Suomia V Impv Act Sg2/Suomia V Prs Act ConNeg/Suomia V Pst Act Sg3$
+^suomenkielinen/suomen#kielinen A Pos Nom Sg/suomi#-kielinen A Pos Nom Sg$
+
+^ajoneuvo/ajo#neuvo N Nom Sg$ 
+^ajaa/ajaa V Inf1 Lat/ajaa V Prs Act Sg3$
+^laite/laite N Nom Sg$
+^ilmaliikenne/ilma#liikenne N Nom Sg$
+^vesiliikenne/vesi#liikenne N Nom Sg$
+^alus/alus N Nom Sg$
+^kiskoliikenne/kisko#liikenne N Nom Sg$
+^pyörätuoli/pyörä#tuoli N Nom Sg$
+^lelu/lelu N Nom Sg$
+^auto/auto N Nom Sg$
+^kinneri/*kinneri$
+^kulkuneuvo/kulku#neuvo N Nom Sg$
+^polkupyörä/polku#pyörä N Nom Sg$
+^skootteri/skootteri N Nom Sg$
+^mopo/mopo N Nom Sg$
+^moottoripyörä/moottori#pyörä N Nom Sg$
+^kuorma-auto/kuorma#auto N Nom Sg/kuorma-auto N Nom Sg$
+^linja-auto/linja#auto N Nom Sg/linja-auto N Nom Sg$
+
+^laiva/laiva N Nom Sg$ 
+^alus/alus N Nom Sg$
+^vene/vene N Nom Sg$
+^alus/alus N Nom Sg$
+^autolautta/auto#lautta N Nom Sg$
+^kansi/kansi N Nom Sg$
+^paatti/paatti N Nom Sg$
+^parkki/parkki N Nom Sg$
+^purjealus/purje#alus N Nom Sg$
+^rahtialus/rahti#alus N Nom Sg$
+^laivaaminen/laivata V N Nom Sg$
+^laivaus/laivaus N Nom Sg$
+^laivue/laivue N Nom Sg$
+^laivuri/laivuri N Nom Sg$
+
+^sysimusta/sysi#musta A Pos Nom Sg/sysi#musta N Nom Sg/sysimusta A Pos Nom Sg$ 
+^musta/musta A Pos Nom Sg/musta N Nom Sg/mä Pron Pers Ela Sg$
+^musta/musta A Pos Nom Sg/musta N Nom Sg/mä Pron Pers Ela Sg$
+^sysi/sysi N Nom Sg/sysiä V Impv Act Sg2/sysiä V Prs Act ConNeg/sysiä V Pst Act Sg3$
+^sysipimeä/sysi#pimeä A Pos Nom Sg$
+^pikimusta/piki#musta A Pos Nom Sg/piki#musta N Nom Sg/pikimusta A Pos Nom Sg$
+^hiilenmusta/hiilen#musta N Nom Sg/hiilenmusta A Pos Nom Sg/hiili#musta A Pos Nom Sg/hiili#musta N Nom Sg$
+
+^sysi/sysi N Nom Sg/sysiä V Impv Act Sg2/sysiä V Prs Act ConNeg/sysiä V Pst Act Sg3$ 
+^puuhiili/puu#hiili N Nom Sg$
+^hiilto/hiilto N Nom Sg$
+^grillihiili/grilli#hiili N Nom Sg$
+^hiili/hiili N Nom Sg$
+^sysimusta/sysi#musta A Pos Nom Sg/sysi#musta N Nom Sg/sysimusta A Pos Nom Sg$
+^puu/puu N Nom Sg$
+
+^mummo/mummo N Nom Sg$ 
+^markka/markka N Nom Sg$
+^mummonmarkka/mummo#markka N Nom Sg$
+^isoäiti/iso#äiti N Nom Sg/iso-#äiti N Nom Sg$
+^mummi/mummi N Nom Sg$
+^mummu/mummu N Nom Sg$
+^mummu/mummu N Nom Sg$
+
+^mummu/mummu N Nom Sg$ 
+^isoäiti/iso#äiti N Nom Sg/iso-#äiti N Nom Sg$
+^isoäiti/iso#äiti N Nom Sg/iso-#äiti N Nom Sg$
+^mummi/mummi N Nom Sg$
+^mummo/mummo N Nom Sg$
+
+^me/me Pron Pers Nom Pl$ 
+
+^he/he Interj/he Pron Pers Nom Pl$ 
+^minä/mikä Pron Interr Ess Sg/mikä Pron Rel Ess Sg/minä Pron Pers Nom Sg$
+^sinä/se Pron Dem Ess Sg/sinä Pron Pers Nom Sg$
+^hän/hän Pron Pers Nom Sg$
+^me/me Pron Pers Nom Pl$
+^te/te Pron Pers Nom Pl$
+^ה/*ה$
+
+^te/te Pron Pers Nom Pl$ 
+^Te/Te Pron Pers Nom Pl$
+^minä/mikä Pron Interr Ess Sg/mikä Pron Rel Ess Sg/minä Pron Pers Nom Sg$
+^sinä/se Pron Dem Ess Sg/sinä Pron Pers Nom Sg$
+^hän/hän Pron Pers Nom Sg$
+^me/me Pron Pers Nom Pl$
+^he/he Interj/he Pron Pers Nom Pl$
+
+^tuo/tuoda V Impv Act Sg2/tuoda V Prs Act ConNeg/tuoda V Prs Act Sg3$ 
+^etäällä/etäällä Adv$
+^etäisyys/etä-#isyys N Nom Sg/etäisyys N Nom Sg$
+^tämä/tämä Pron Dem Nom Sg$
+^se/se Pron Dem Nom Sg$
+^se/se Pron Dem Nom Sg$
+^tämä/tämä Pron Dem Nom Sg$
+^hän/hän Pron Pers Nom Sg$
+^tämä/tämä Pron Dem Nom Sg$
+^tuo/tuoda V Impv Act Sg2/tuoda V Prs Act ConNeg/tuoda V Prs Act Sg3$
+^se/se Pron Dem Nom Sg$
+^nämä/nämä Pron Dem Nom Pl$
+^nuo/nuo Pron Dem Nom Pl$
+^ne/ne Pron Dem Nom Pl$
+^näin/nähdä V Pst Act Sg1/näin Adv/nämä Pron Dem Ins Pl$
+^noin/noin Adv/noki N Ins Pl/nuo Pron Dem Ins Pl$
+^niin/ne Pron Dem Ins Pl/niin Adv$
+^tuolla/tuolla Adv$
+^tuota/tuota/tuottaa V Impv Act Sg2/tuottaa V Prs Act ConNeg$
+^toi/toi Pron Dem Nom Sg/tuoda V Pst Act Sg3$
+^tossa/toi Pron Dem Ine Sg$
+^tohon/toi Pron Dem Ill Sg$
+^tosta/toi Pron Dem Ela Sg$
+^tota/toi Pron Dem Par Sg/tota$
+^tonne/toi Pron Dem Gen Sg PxPl2/toi Pron Dem Nom Pl PxPl2/toi Pron Dem Nom Sg PxPl2/tonne Adv$
+
+^aaltopahvi/aalto#pahvi N Nom Sg$ 
+^pahvi/pahvi N Nom Sg$
+^pahvilaatikko/pahvi#laatikko N Nom Sg$
+
+^se/se Pron Dem Nom Sg$ 
+
+^pahvi/pahvi N Nom Sg$ 
+^kartonki/kartonki N Nom Sg$
+^paperi/paperi N Nom Sg$
+^kartonki/kartonki N Nom Sg$
+^paperi/paperi N Nom Sg$
+
+^paperi/paperi N Nom Sg$ 
+^puu/puu N Nom Sg$
+^kartonki/kartonki N Nom Sg$
+^pahvi/pahvi N Nom Sg$
+^asiakirja/asia#kirja N Nom Sg$
+^todistus/todistus N Nom Sg$
+^asiapaperi/asia#paperi N Nom Sg$
+^henkilöllisyystodistus/henkilöllisyys#todistus N Nom Sg$
+^kivi/kivi N Nom Sg$
+^sakset/sakset N Nom Pl$
+^kämmen/kämmen N Nom Sg$
+^hioke/hioke N Nom Sg$
+^kartonki/kartonki N Nom Sg$
+^oksamassa/oksa#massa N Nom Sg$
+^pahvi/pahvi N Nom Sg$
+^paperikko/paperi#kko N Abbr Nom Sg/paperikko N Nom Sg$
+^paperinen/paperinen A Pos Nom Sg$
+^paperinmakuinen/paperi#makuinen A Pos Nom Sg/paperin#makuinen A Pos Nom Sg$
+^paperinohut/paperi#ohut A Pos Nom Sg/paperin#ohut A Pos Nom Sg$
+^sellu/sellu N Nom Sg$
+
+^kynä/kynä N Nom Sg$ 
+^lintu/lintu N Nom Sg$
+^sulka/sulka N Nom Sg$
+^ruoti/ruoti N Nom Sg/ruotia V Pst Act Sg3$
+^kuurna/kuurna N Nom Sg$
+^hautasuppilo/hauta#suppilo N Nom Sg$
+^tervahauta/terva#hauta N Nom Sg$
+^tervatynnyri/terva#tynnyri N Nom Sg$
+^kirjoitusväline/kirjoitus#väline N Nom Sg$
+^kyniä/kyniä V Inf1 Lat/kynä N Par Pl$
+^kynäelmä/*kynäelmä$
+^kynäilijä/kynäilijä N Nom Sg$
+^kynäillä/kynäillä V Inf1 Lat/kynäillä V Prs Pass ConNeg$
+^muste/muste N Nom Sg$
+^ruoti/ruoti N Nom Sg/ruotia V Pst Act Sg3$
+^sulka/sulka N Nom Sg$
+^tyviosa/tyvi#osa N Nom Sg$
+^väri/väri N Nom Sg$
+
+^akronyymi/akronyymi N Nom Sg$ 
+^kirjainsana/kirja#sana N Nom Sg/kirjain#sana N Nom Sg$
+
+^kyttä/kyttä N Nom Sg$ 
+^metsästäjä/metsästäjä N Nom Sg$
+^ampuja/ampu N Par Pl/ampuja N Nom Sg$
+^sala-ampuja/sala#ampu N Par Pl/sala#ampuja N Nom Sg/sala-#ampu N Par Pl/sala-#ampuja N Nom Sg/sala-ampuja N Nom Sg$
+^kyttääjä/kyttääjä N Nom Sg$
+^kyylä/kyylä N Nom Sg$
+^poliisietsivä/poliisi#etsivä A Pos Nom Sg/poliisi#etsivä N Nom Sg$
+^poliisi/pola N Ill Pl PxSg2/poli N Ill Sg PxSg2/poliisi N Nom Sg$
+^konstaapeli/konstaapeli N Nom Sg$
+^kytätä/kytätä V Inf1 Lat/kytätä V Prs Pass ConNeg$
+^poliisi/pola N Ill Pl PxSg2/poli N Ill Sg PxSg2/poliisi N Nom Sg$
+
+^kumi/kumi N Nom Sg$ 
+^polymeeri/polymeeri N Nom Sg$
+^luonnonkumi/luonnon#kumi N Nom Sg/luonto#kumi N Nom Sg$
+^pyyhekumi/pyyhe#kumi N Nom Sg$
+^kynä/kynä N Nom Sg$
+^kirjoitusjälki/kirjoitus#jälki N Nom Sg$
+^kondomi/kondomi N Nom Sg$
+^kondomi/kondomi N Nom Sg$
+^kumieristeinen/kumi#eristeinen A Pos Nom Sg$
+^kumikyllästeinen/kumi#kyllästeinen A Pos Nom Sg$
+^kumipäällysteinen/kumi#-päällysteinen A Pos Nom Sg/kumi#päällys#-teinen A Pos Nom Sg/kumi#päällysteinen A Pos Nom Sg$
+^kumipohjainen/kumi#-pohjainen A Pos Nom Sg/kumi#pohjainen A Pos Nom Sg$
+^kumipyöräinen/kumi#-pyöräinen A Pos Nom Sg/kumi#pyöräinen A Pos Nom Sg$
+^vulkanoida/vulkanoida V Inf1 Lat/vulkanoida V Prs Pass ConNeg$
+^vulkanoitu/vulkanoida PrfPrc Pass Pos Nom Sg/vulkanoida V Pst Pass ConNeg/vulkanoitu A Pos Nom Sg$
+
+^aamupala/aamu#pala N Nom Sg$ 
+^ateria/ateria N Nom Sg$
+^aamiainen/aamiainen N Nom Sg$
+
+^pahvilaatikko/pahvi#laatikko N Nom Sg$ 
+^pahvi/pahvi N Nom Sg$
+^laatikko/laatikko N Nom Sg$
+
+^kirja/kirja N Nom Sg$ 
+^paperiarkki/paperi#arkki N Nom Sg$
+^sidos/sidos N Nom Sg$
+^nidos/nidos N Nom Sg$
+^teksti/teksti N Nom Sg$
+^kuva/kuva N Nom Sg$
+^asiakirja/asia#kirja N Nom Sg$
+^todistus/todistus N Nom Sg$
+^kauppakirja/kauppa#kirja N Nom Sg$
+^jäsenkirja/jäsen#kirja N Nom Sg$
+^tilikirja/tili#kirja N Nom Sg$
+^henkiluettelo/henki#luettelo N Nom Sg$
+^paperimitta/paperi#mitta N Nom Sg$
+^arkki/arkki N Nom Sg$
+^almanakka/almanakka N Nom Sg$
+^arkki/arkki N Nom Sg$
+^journaali/*journaali$
+^kirjaus/kirjaus N Nom Sg$
+^muistio/muistio N Nom Sg$
+
+^ne/ne Pron Dem Nom Pl$ 
+^enää/enää Adv$
+^vain/vain Adv$
+^ainoastaan/ainoa A Pos Ela Sg Px3/ainoastaan Adv$
+^koskaan/kos N Nom Sg Foc_kAAn/koskaan Adv$
+^kukaan/kukaan Pron Qnt Nom Sg$
+^mikään/mikään Pron Qnt Nom Sg$
+^mikään/mikään Pron Qnt Nom Sg$
+
+^viikko/viikko N Nom Sg$ 
+^päivä/päivä N Nom Sg$
+^sekunti/sekunti N Nom Sg$
+^minuutti/minuutti N Nom Sg$
+^tunti/tunti N Nom Sg$
+^vuorokausi/vuoro#kausi N Nom Sg$
+^kuukausi/kuu#kausi N Nom Sg$
+^vuosi/vuo N Gen Sg PxSg2/vuo N Nom Pl PxSg2/vuo N Nom Sg PxSg2/vuosi N Nom Sg/vuotaa V Pst Act Sg3$
+
+^viikonpäivä/viikko#päivä N Nom Sg/viikon#päivä N Nom Sg$ 
+^päivä/päivä N Nom Sg$
+^viikko/viikko N Nom Sg$
+^maanantai/maanantai N Nom Sg$
+^tiistai/tiistai N Nom Sg$
+^keskiviikko/keski#viikko N Nom Sg/keski-#viikko N Nom Sg$
+^torstai/torstai N Nom Sg$
+^perjantai/perjantai N Nom Sg$
+^lauantai/lauantai N Nom Sg$
+^sunnuntai/sunnuntai N Nom Sg$
+^viikko/viikko N Nom Sg$
+^maanantai/maanantai N Nom Sg$
+^tiistai/tiistai N Nom Sg$
+^keskiviikko/keski#viikko N Nom Sg/keski-#viikko N Nom Sg$
+^torstai/torstai N Nom Sg$
+^perjantai/perjantai N Nom Sg$
+^lauantai/lauantai N Nom Sg$
+^sunnuntai/sunnuntai N Nom Sg$
+
+^arkisto/arkisto N Nom Sg$ 
+^dokumentti/dokumentti N Nom Sg$
+^arkistolaki/arkisto#laki N Nom Sg$
+^arkistointi/arkistointi N Nom Sg$
+^arkki/arkki N Nom Sg$
+^tietokanta/tieto#kanta N Nom Sg$
+^kansallisarkisto/*kansallisarkisto$
+
+^dokumentti/dokumentti N Nom Sg$ 
+^asiakirja/asia#kirja N Nom Sg$
+
+^kirje/kirje N Nom Sg$ 
+
+^pieni/pieni A Pos Nom Sg/pieniä V Impv Act Sg2/pieniä V Prs Act ConNeg/pieniä V Pst Act Sg3$ 
+^koko/koko A/koko N Nom Sg/koko Pron Qnt$
+^vähäinen/vähäinen A Pos Nom Sg$
+^fryyginen/*fryyginen$
+^puhdas/puhdas A Pos Nom Sg$
+^pikkuinen/pikkuinen A Pos Nom Sg$
+^pikku/pikku$
+^pikku-/pikku- N TrunCo$
+^pikkiriikkinen/pikkiriikkinen A Pos Nom Sg$
+^pikkuriikkinen/pikku#riikkinen A Pos Nom Sg$
+^pikkuruinen/pikkuruinen A Pos Nom Sg$
+^pienentää/pienentää V Inf1 Lat/pienentää V Prs Act Sg3$
+^pienimmäinen/*pienimmäinen$
+^peukaloinen/peukaloida V Pot Act Sg1/peukaloinen A Pos Nom Sg/peukaloinen N Nom Sg$
+^pilkkoa/pilkko N Par Sg/pilkkoa V Inf1 Lat$
+^snadi/snadi N Nom Sg$
+^iso/iso A Pos Nom Sg/iso N Nom Sg/iso-$
+^suuri/suuri A Pos Nom Sg$
+^buli/*buli$
+^valtava/valtava A Pos Nom Sg$
+
+^pensseli/pensseli N Nom Sg$ 
+^apuväline/apu#väline N Nom Sg$
+^maali/maali N Nom Sg$
+^alusta/alku N Ela Sg/alunen N Par Sg/alus N Par Sg/alusta Adv/alusta N Nom Sg/alustaa V Impv Act Sg2/alustaa V Prs Act ConNeg$
+^paletti/paletti N Nom Sg$
+^suti/suti N Nom Sg/sutia V Pst Act Sg3$
+^sivellin/sivellin N Nom Sg$
+
+^suti/suti N Nom Sg/sutia V Pst Act Sg3$ 
+^pensseli/pensseli N Nom Sg$
+^sivellin/sivellin N Nom Sg$
+^sutia/suti N Par Sg/sutia V Inf1 Lat$
+
+^maalaus/maalaus N Nom Sg$ 
+^taidemaalari/taide#maa#lari N Nom Sg/taide#maalari N Nom Sg$
+^taideteos/taide#teos N Nom Sg$
+^maalaaminen/maa#lata V N Nom Sg/maalaaminen N Nom Sg$
+^maali/maali N Nom Sg$
+^sinkitys/sinkitys N Nom Sg$
+^taide/tai#de N Prop/taide N Nom Sg$
+^taideteos/taide#teos N Nom Sg$
+
+^ruoka/ruoka N Nom Sg$ 
+^syödä/syödä V Inf1 Lat/syödä V Prs Pass ConNeg$
+^aperitiivi/aperitiivi N Nom Sg$
+^alkupala/alku#pala N Nom Sg$
+^ateria/ateria N Nom Sg$
+^aamiainen/aamiainen N Nom Sg$
+^aamupala/aamu#pala N Nom Sg$
+^elintarvike/elin#tarvike N Nom Sg$
+^päivällinen/päivällinen A Pos Nom Sg/päivällinen N Nom Sg$
+^lounas/lounas N Nom Sg$
+^illallinen/illallinen A Pos Nom Sg/illallinen N Nom Sg$
+^iltapala/ilta#pala N Nom Sg$
+^ravinto/ravinto N Nom Sg$
+^rehu/rehu N Nom Sg$
+^pöperö/pöperö N Nom Sg$
+^rehu/rehu N Nom Sg$
+^ruokailu/ruokailu N Nom Sg$
+^ruokailutauko/ruokailu#tau N Nom Sg Foc_kO/ruokailu#tauko N Nom Sg$
+^ruokkia/ruokki N Par Sg/ruokkia V Inf1 Lat$
+^ruokailija/ruokailija N Nom Sg$
+^ruokinta/ruokinta N Nom Sg$
+^sapuska/sapuska N Nom Sg$
+^safka/safka N Nom Sg$
+
+^ruokatunti/ruoka#tunti N Nom Sg$ 
+^tauko/tau N Nom Sg Foc_kO/tauko N Nom Sg$
+^ruoka/ruoka N Nom Sg$
+^kahvitunti/kahvi#tunti N Nom Sg$
+
+^tauko/tau N Nom Sg Foc_kO/tauko N Nom Sg$ 
+^keskeytys/keskeytys N Nom Sg$
+^jakso/jakso N Nom Sg$
+^vaikeneminen/vaieta V N Nom Sg/vaikeneminen N Nom Sg$
+^nuotti/nuotti N Nom Sg$
+^artikuloitua/artikuloida PrfPrc Pass Pos Par Sg$
+^kokotauko/koko#tau N Nom Sg Foc_kO/koko#tauko N Nom Sg$
+^täytetauko/täyte#tau N Nom Sg Foc_kO/täyte#tauko N Nom Sg$
+^breikki/breikki N Nom Sg$
+^paussi/paussi N Nom Sg$
+^puoliaika/puoli#aika N Nom Sg$
+^väliaika/väli#aika N Nom Sg$
+
+^jakso/jakso N Nom Sg$ 
+^luku/luku N Nom Sg$
+^numerosarja/numero#sarja N Nom Sg$
+^sarja/sarja N Nom Sg$
+^historia/historia N Nom Sg$
+^aikakausi/aika#kausi N Nom Sg$
+^signaali/signaali N Nom Sg$
+^periodi/periodi N Nom Sg$
+^sarja/sarja N Nom Sg$
+
+^peti/peti N Nom Sg$ 
+^paikka/paikka N Nom Sg$
+^rakennelma/rakennelma N Nom Sg$
+^tyyny/tyyny N Nom Sg$
+^peitto/peitto N Nom Sg$
+^pedata/pedata V Inf1 Lat/pedata V Prs Pass ConNeg$
+^petata/petata V Inf1 Lat/petata V Prs Pass ConNeg$
+^vuode/vuo#de N Prop/vuode N Nom Sg$
+^sänky/sänky N Nom Sg$
+^punkka/punkka N Nom Sg$
+
+^aikavyöhyke/aika#vyöhyke N Nom Sg$ 
+^maapallo/maa#pallo N Nom Sg$
+^UTC/*UTC$
+^aikakaistale/aika#kaistale N Nom Sg$
+^kellonaika/kello#aika N Nom Sg/kellon#aika N Nom Sg$
+^kesäaika/kesä#aika N Nom Sg$
+^normaaliaika/normaali#aika N Nom Sg/normaali-#aika N Nom Sg$
+^GMT/*GMT$^-/- Punct Dash/- Punct Dash >>>$^aika/aika/aika N Nom Sg$
+^UTC/*UTC$^-/- Punct Dash/- Punct Dash >>>$^aika/aika/aika N Nom Sg$
+
+^kompassi/kompassi N Nom Sg$ 
+^laite/laite N Nom Sg$
+^neula/neula N Nom Sg$
+^bussoli/*bussoli$
+^kartta/karsi N Par Sg/kartta N Nom Sg$
+^eksymä/eksymä N Nom Sg/eksyä AgPrc Pos Nom Sg$
+^eranto/eranto N Nom Sg$
+^suunnistus/suunnistus N Nom Sg$
+^suunta/suunta N Nom Sg$
+^suuntakehä/suunta#kehä N Nom Sg$
+^suuntima/suuntia AgPrc Pos Nom Sg/suuntima N Nom Sg$
+
+^luku/luku N Nom Sg$ 
+^numero/numero N Nom Sg$
+^lukumäärä/luku#määrä N Nom Sg$
+^kirja/kirja N Nom Sg$
+^määrä/määrä N Nom Sg$
+^lukutapahtuma/luku#tapahtuma N Nom Sg$
+^opiskelu/opiskelu N Nom Sg$
+^lukema/lukea AgPrc Pos Nom Sg/lukema N Nom Sg$
+^lukeminen/lukea V N Nom Sg/lukeminen N Nom Sg$
+^lukuset/lukunen N Nom Pl/lukuset N Nom Pl$
+^lukutaidoton/luku#taidoton A Pos Nom Sg/lukutaidoton N Nom Sg$
+^monikko/moni-#kko N Abbr Nom Sg/monikko N Nom Sg$
+^yksikkö/yksikkö N Nom Sg$
+
+^kartta/karsi N Par Sg/kartta N Nom Sg$ 
+^mittakaava/mitta#kaava N Nom Sg$
+^apuväline/apu#väline N Nom Sg$
+^karsta/karsta N Nom Sg$
+^raasilanka/*raasilanka$
+^korkeuskäyrä/korkeus#käyrä A Pos Nom Sg/korkeus#käyrä N Nom Sg$
+^merikortti/meri#kortti N Nom Sg$
+^suunta/suunta N Nom Sg$
+^suuntima/suuntia AgPrc Pos Nom Sg/suuntima N Nom Sg$
+^topografia/topografi N Par Sg/topografia N Nom Sg$
+
+^suunnistus/suunnistus N Nom Sg$ 
+^suunnistaminen/suunnistaa V N Nom Sg$
+^urheilulaji/urheilu#laji N Nom Sg$
+^kartta/karsi N Par Sg/kartta N Nom Sg$
+^kompassi/kompassi N Nom Sg$
+^rasti/rasti N Nom Sg/rastia V Impv Act Sg2/rastia V Prs Act ConNeg/rastia V Pst Act Sg3$
+
+^rasti/rasti N Nom Sg/rastia V Impv Act Sg2/rastia V Prs Act ConNeg/rastia V Pst Act Sg3$ 
+^vinoristi/vino#risti N Nom Sg$
+^suunnistus/suunnistus N Nom Sg$
+^tehtävä/tehdä PrsPrc Pass Pos Nom Sg/tehtävä N Nom Sg$
+^homma/homma N Nom Sg$
+^työ/työ N Nom Sg$
+^vaiva/vaiva N Nom Sg$
+^rastit/rasti N Nom Pl/rastia V Prs Act Sg2/rastia V Pst Act Sg2$
+^lemmikkikasvit/lemmikki#kasvi N Nom Pl$
+^laji/laji N Nom Sg$
+^risti/risti N Nom Sg/ristiä V Impv Act Sg2/ristiä V Prs Act ConNeg/ristiä V Pst Act Sg3$
+^ruksi/ruksi N Nom Sg$
+^rastia/rasti N Par Sg/rastia V Inf1 Lat$
+
+^ympyrä/ympyrä N Nom Sg$ 
+^halkaisija/halkaisija N Nom Sg$
+^jänne/jänne N Nom Sg$
+^kehä/kehä N Nom Sg$
+^ellipsi/ellipsi N Nom Sg$
+^pallo/pallo N Nom Sg$
+^piiri/piiri N Nom Sg$
+^pyöreä/pyöreä A Pos Nom Sg$
+^pyörähdyskappale/pyörähdys#kappale N Nom Sg$
+^säde/säde N Nom Sg$
+^ympyröidä/ympyröidä V Inf1 Lat/ympyröidä V Prs Pass ConNeg$
+^ympyräinen/*ympyräinen$
+^ympyrämäinen/*ympyrämäinen$
+^ympär/*ympär$
+^ympäri/ympäri Adv$
+
+^pyöreä/pyöreä A Pos Nom Sg$ 
+^ympyrä/ympyrä N Nom Sg$
+^pallomainen/pallo#mainen A Pos Nom Sg/pallomainen A Pos Nom Sg$
+^tukeva/tukea PrsPrc Act Pos Nom Sg/tukeva A Pos Nom Sg$
+^lihava/lihava A Pos Nom Sg$
+^pyöristyä/pyöristyä V Inf1 Lat$
+^kulmikas/kulmikas A Pos Nom Sg$
+^nelikulmainen/neli#-kulmainen A Pos Nom Sg/neli#kulmainen A Pos Nom Sg/neli-#-kulmainen A Pos Nom Sg$
+^pyöreähkö/pyöreähkö A Pos Nom Sg$
+^pyörä/pyörä N Nom Sg$
+^pyöristää/pyöristää V Inf1 Lat/pyöristää V Prs Act Sg3$
+^pyöreäpohjainen/pyöreä#pohjainen A Pos Nom Sg$
+^labiaali/labiaali N Nom Sg$
+^labiaalistunut/labiaalistua PrfPrc Act Pos Nom Sg/labiaalistua V Pst Act ConNeg$
+^lavea/lavea A Pos Nom Sg$
+
+^pallo/pallo N Nom Sg$ 
+^kalotti/kalotti N Nom Sg$
+^pallotella/pallotella V Inf1 Lat/pallotella V Prs Pass ConNeg$
+^palloilu/palloilu N Nom Sg$
+^pallero/pallero N Nom Sg$
+^pyöryle/*pyöryle$
+^sfääri/sfääri N Nom Sg$
+
+^nukke/nukke N Nom Sg$ 
+^leikkikalu/leikki#kalu N Nom Sg/leikki-#kalu N Nom Sg$
+^barbi/barbi N Nom Sg$
+
+^nallekarhu/nalle#karhu N Nom Sg$ 
+^leikkikalu/leikki#kalu N Nom Sg/leikki-#kalu N Nom Sg$
+^karhu/karhu N Nom Sg$
+^nalle/nalle N Nom Sg$
+^lelunalle/lelu#nalle N Nom Sg$
+
+^leikkikalu/leikki#kalu N Nom Sg/leikki-#kalu N Nom Sg$ 
+^lelu/lelu N Nom Sg$
+^esine/esine N Nom Sg$
+^lelu/lelu N Nom Sg$
+
+^lelu/lelu N Nom Sg$ 
+^leikkikalu/leikki#kalu N Nom Sg/leikki-#kalu N Nom Sg$
+
+^aaltoliike/aalto#liike N Nom Sg$ 
+^aalto/aalto N Nom Sg$
+^siniaalto/sini#aalto N Nom Sg$
+^undulaatio/undulaatio N Nom Sg$
+
+^aamiaisaika/aamiainen#aika N Nom Sg/aamiais#aika N Nom Sg$ 
+^ajankohta/aika#kohta N Nom Sg/ajan#kohta N Nom Sg$
+^aamiainen/aamiainen N Nom Sg$
+^aamupala/aamu#pala N Nom Sg$
+
+^aamiaishetki/aamiainen#hetki N Nom Sg$ 
+^aamupala/aamu#pala N Nom Sg$
+^aamiainen/aamiainen N Nom Sg$
+^aamiaisaika/aamiainen#aika N Nom Sg/aamiais#aika N Nom Sg$
+
+^fissiovoimala/fissio#voima#la N/fissio#voimala N Nom Sg$ 
+^ydinvoimala/ydin#voima#la N/ydin#voimala N Nom Sg/ydin-#voima#la N/ydin-#voimala N Nom Sg$
+
+^fissioreaktio/fissio#reaktio N Nom Sg$ 
+^ydinreaktio/ydin#reaktio N Nom Sg/ydin-#reaktio N Nom Sg$
+^atomi/atomi N Nom Sg$
+^ydin/ydin N Nom Sg$
+^ydinreaktio/ydin#reaktio N Nom Sg/ydin-#reaktio N Nom Sg$
+^fuusioreaktio/fuusio#reaktio N Nom Sg$
+
+^fissio/fissio N Nom Sg$ 
+^hajota/hajota V Inf1 Lat/hajota V Prs Pass ConNeg/hajottaa V Impv Act Sg2/hajottaa V Prs Act ConNeg$
+^fissioreaktio/fissio#reaktio N Nom Sg$
+^ydinfissio/ydin#fissio N Nom Sg/ydin-#fissio N Nom Sg$
+^fissiili/fis#siili N Nom Sg$
+^fuusio/fuusio N Nom Sg$
+
+^ulkopuoli/ulko#puoli N Nom Sg/ulko-#puoli N Nom Sg$ 
+^sisäpuoli/sisä#puoli N Nom Sg/sisä-#puoli N Nom Sg$
+^ulkopinta/ulko#pinta N Nom Sg/ulko-#pinta N Nom Sg$
+^päällinen/päällinen A Pos Nom Sg/päällinen N Nom Sg$
+^ulko/*ulko$
+^ulkoinen/ulkoinen A Pos Nom Sg$
+^puoli/puoli/puoli N Nom Sg$
+
+^sisäpuoli/sisä#puoli N Nom Sg/sisä-#puoli N Nom Sg$ 
+^ulkopuoli/ulko#puoli N Nom Sg/ulko-#puoli N Nom Sg$
+^sisäpinta/sisä#pinta N Nom Sg/sisä-#pinta N Nom Sg$
+^sisusta/sisu N Ela Sg/sisus N Par Sg/sisusta N Nom Sg/sisustaa V Impv Act Sg2/sisustaa V Prs Act ConNeg$
+
+^nanismi/*nanismi$ 
+^kääpiökasvuisuus/kääpiö#-kasvuisuus N Nom Sg$
+
+^prominentti/*prominentti$ 
+^huomattava/huomata PrsPrc Pass Pos Nom Sg/huomattava A Pos Nom Sg$
+^etevä/etevä A Pos Nom Sg$
+^silmiinpistävä/silmiinpistävä A Pos Nom Sg$
+^ulkoneva/ulko#neva A Pos Nom Sg/ulko-#neva N Nom Sg/ulota PrsPrc Act Pos Nom Sg$
+
+^keksi/keksi N Nom Sg/keksiä V Impv Act Sg2/keksiä V Prs Act ConNeg/keksiä V Pst Act Sg3$ 
+^eväste/eväste N Nom Sg$
+^pipari/pipari N Nom Sg$
+^palohaka/palo#haka N Nom Sg$
+^puoshaka/puoshaka N Nom Sg$
+^sestoin/sestoa V Pst Act Sg1$
+^sestoa/sestoa V Inf1 Lat$
+
+^leivos/leivos N Nom Sg$ 
+^leivonnainen/leivo#nainen N Nom Sg/leivon#nainen N Nom Sg$
+^paakelssi/*paakelssi$
+
+^leivonnainen/leivo#nainen N Nom Sg/leivon#nainen N Nom Sg$ 
+^jauhotaikina/jauho#tai#kina N Nom Sg/jauho#taikina N Nom Sg$
+^leipoa/leipoa V Inf1 Lat$
+^paistaa/paistaa V Inf1 Lat/paistaa V Prs Act Sg3$
+^elintarvike/elin#tarvike N Nom Sg$
+^leivos/leivos N Nom Sg$
+^paakelssi/*paakelssi$
+^tippaleipä/tippa#lei N Nom Sg Foc_pA/tippa#leipä N Nom Sg$
+
+^fuusio/fuusio N Nom Sg$ 
+^yhdistyä/yhdistyä V Inf1 Lat$
+^sulautua/sulautua V Inf1 Lat$
+^yritysfuusio/yritys#fuusio N Nom Sg$
+^ydinfuusio/ydin#fuusio N Nom Sg/ydin-#fuusio N Nom Sg$
+^fuusioreaktio/fuusio#reaktio N Nom Sg$
+^fuusiojazz/fuusio#jazz N Nom Sg$
+^fissio/fissio N Nom Sg$
+
+^fuusioitua/fuusio#itu N Par Sg/fuusioida PrfPrc Pass Pos Par Sg/fuusioitua V Inf1 Lat$ 
+^liittyä/liittyä V Inf1 Lat$
+^yhdistyä/yhdistyä V Inf1 Lat$
+^fuusio/fuusio N Nom Sg$
+^fuusioida/fuusioida V Inf1 Lat/fuusioida V Prs Pass ConNeg$
+
+^fuusioida/fuusioida V Inf1 Lat/fuusioida V Prs Pass ConNeg$ 
+^liittää/liittää V Inf1 Lat/liittää V Prs Act Sg3$
+^yhdistää/yhdistää V Inf1 Lat/yhdistää V Prs Act Sg3$
+^fuusio/fuusio N Nom Sg$
+
+^puu/puu N Nom Sg$ 
+^puuvartinen/puu#-vartinen A Pos Nom Sg/puu#vartinen A Pos Nom Sg$
+^pensas/pensas N Nom Sg$
+^kasvi/kasvi N Nom Sg$
+^koivu/koivu N Nom Sg$
+^puuaines/puu#aines N Nom Sg$
+^tuoli/tuoli N Nom Sg$
+^golfmaila/golf#maila N Nom Sg$
+^hake/hake N Nom Sg$
+^halko/halko N Nom Sg$
+^hirsi/hirsi N Nom Sg$
+^kaarna/kaarna N Nom Sg$
+^kanto/kanto N Nom Sg$
+^manto/manto N Nom Sg$
+^metsä/metsä N Nom Sg$
+^metsikkö/metsikkö N Nom Sg$
+^nila/nila N Nom Sg$
+^parkki/parkki N Nom Sg$
+^pilke/pilke N Nom Sg$
+^puusta/puu N Ela Sg$
+^pölli/pölli N Nom Sg/pölliä V Impv Act Sg2/pölliä V Prs Act ConNeg/pölliä V Pst Act Sg3$
+^taimi/tai#mi N/taimi N Nom Sg/taimia V Impv Act Sg2/taimia V Prs Act ConNeg/taimia V Pst Act Sg3$
+^tukki/tukki N Nom Sg/tukkia V Pst Act Sg3$
+^vesa/vesa N Nom Sg$
+^visa/visa N Nom Sg$
+
+^konjunktio/konjunktio N Nom Sg$ 
+^sidesana/side#sana N Nom Sg$
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$
+^rinnastuskonjunktio/rinnastus#konjunktio N Nom Sg$
+^alistuskonjunktio/alistus#konjunktio N Nom Sg$
+^looginen/looginen A Pos Nom Sg$
+^konnektiivi/konnektiivi N Nom Sg$
+^taivaankappale/taivaan#kappale N Nom Sg/taivas#kappale N Nom Sg$
+^aspekti/aspekti N Nom Sg$
+^ekliptika/ekliptika N Nom Sg$
+^alistuskonjunktio/alistus#konjunktio N Nom Sg$
+^rinnastuskonjunktio/rinnastus#konjunktio N Nom Sg$
+^alakonjunktio/ala#konjunktio N Nom Sg/ala-#konjunktio N Nom Sg$
+^yläkonjunktio/ylä#konjunktio N Nom Sg/ylä-#konjunktio N Nom Sg$
+
+^sanaluokka/sana#luokka N Nom Sg/sanaluokka N Nom Sg$ 
+^kielioppi/kieli#oppi N Nom Sg$
+^adjektiivi/adjektiivi N Nom Sg$
+^adpositio/adpositio N Nom Sg$
+^adverbi/adverbi N Nom Sg$
+^interjektio/interjektio N Nom Sg$
+^konjunktio/konjunktio N Nom Sg$
+^lukusana/luku#sana N Nom Sg$
+^nomini/nomini N Nom Sg$
+^numeraali/numeraali N Nom Sg$
+^partikkeli/partikkeli N Nom Sg$
+^postpositio/postpositio N Nom Sg$
+^prepositio/prepositio N Nom Sg$
+^pronomini/pronomini N Nom Sg$
+^substantiivi/substantiivi N Nom Sg$
+^suhdesana/suhde#sana N Nom Sg$
+^verbi/verbi N Nom Sg$
+
+^kirjainsana/kirja#sana N Nom Sg/kirjain#sana N Nom Sg$ 
+^akronyymi/akronyymi N Nom Sg$
+^lyhennesana/lyhenne#sana N Nom Sg$
+^alkukirjainlyhenne/alku#kirja#lyhenne N Nom Sg/alku#kirjain#lyhenne N Nom Sg$
+^lyhennesana/lyhenne#sana N Nom Sg$
+
+^ja/ja CC$ 
+^myös/myös Adv$
+^kopulatiivinen/kopulatiivinen A Pos Nom Sg$
+^rinnasteinen/rinnasteinen A Pos Nom Sg$
+^lista/lista N Nom Sg$
+^JA/JA CC$
+^tai/tai CC/tai N Nom Sg$
+^TAI/TAI CC/TAI N Nom Sg$
+
+^lintu/lintu N Nom Sg$ 
+^linnut/lintu N Nom Pl$
+^luokka/luokka N Nom Sg$
+^eläin/eläin N Nom Sg$
+^siipi/siipi N Nom Sg$
+^ankka/ankka N Nom Sg$
+^haikara/hai#kara N Nom Sg$
+^hanhi/hanhi N Nom Sg$
+^haukka/haukka N Nom Sg$
+^kotka/kotka N Nom Sg$
+^kottarainen/kottarainen N Nom Sg$
+^kyyhky/kyyhky N Nom Sg$
+^tavi/tavi N Nom Sg$
+^tiira/tiira N Nom Sg$
+^varis/varis N Nom Sg$
+^varpunen/varpunen N Nom Sg$
+^höyhen/höyhen N Nom Sg$
+^kivipiira/kivipiira N Nom Sg$
+^kupu/kupu N Nom Sg$
+^Linnunrata/Linnun#rata N Nom Sg/Linnunrata N Prop Nom Sg/Lintu#rata N Nom Sg$
+^pikkulintu/pikku#lintu N Nom Sg/pikku-#lintu N Nom Sg$
+^sulka/sulka N Nom Sg$
+^untuva/untuva N Nom Sg$
+^untuvikko/untuvikko N Nom Sg$
+
+^lentokone/lento#kone N Nom Sg$ 
+^siipi/siipi N Nom Sg$
+^ilma-alus/ilma#alus N Nom Sg/ilma-alus N Nom Sg$
+^matkustaja/matkustaja N Nom Sg$
+^rahti/rahti N Nom Sg$
+^helikopteri/helikopteri N Nom Sg$
+^hävittäjä/hävittäjä N Nom Sg$
+^korkeusperäsin/korkeus#peräsin N Nom Sg$
+^ilma-alus/ilma#alus N Nom Sg/ilma-alus N Nom Sg$
+^ilmailu/ilmailu N Nom Sg$
+^kone/kone N Nom Sg$
+^laskuteline/lasku#teline N Nom Sg$
+^lentokenttä/lento#kenttä N Nom Sg$
+^lennokki/lennokki N Nom Sg$
+^lento/lento N Nom Sg$
+^lentsikka/*lentsikka$
+^liidokki/liidokki N Nom Sg$
+^peräsin/peräsin N Nom Sg/perätä V Pst Act Sg1$
+^potkuri/potkuri N Nom Sg$
+^potkurikone/potkuri#kone N Nom Sg$
+^siipi/siipi N Nom Sg$
+^siiveke/siiveke N Nom Sg$
+^suihkukone/suihku#kone N Nom Sg$
+
+^puhelin/puhelin N Nom Sg/puhella V Pst Act Sg1$ 
+^puhe/puhe N Nom Sg$
+^laite/laite N Nom Sg$
+^valintalevy/valinta#levy N Nom Sg$
+^telefooni/tele#fooni N Nom Sg/tele-#fooni N Nom Sg$
+^telehvooni/*telehvooni$
+
+^kello/kello N Nom Sg$ 
+^aika/aika/aika N Nom Sg$
+^laite/laite N Nom Sg$
+^kellonaika/kello#aika N Nom Sg/kellon#aika N Nom Sg$
+^kellot/kello N Nom Pl$
+^lumikello/lumi#kello N Nom Sg$
+^alppikello/alppi#kello N Nom Sg$
+^kronometri/kronometri N Nom Sg$
+^ankkuri/ankkuri N Nom Sg$
+^heiluri/heiluri N Nom Sg$
+^liipotin/liipotin N Nom Sg/liipottaa V Pst Act Sg1$
+^osoitin/osoitin N Nom Sg/osoittaa V Pst Act Sg1$
+^pinteli/pinteli N Nom Sg$
+^viisari/viisari N Nom Sg$
+^kulkunen/kulkunen N Nom Sg$
+^tiimalasi/tiima#lasi N Nom Sg$
+^tiuku/tiukkua V Impv Act Sg2/tiukkua V Prs Act ConNeg/tiuku N Nom Sg$
+
+^talo/talo N Nom Sg$ 
+^asuinrakennus/asuin#rakennus N Nom Sg/asuin-#rakennus N Nom Sg$
+^asuintalo/asuin-#talo N Nom Sg$
+^maatila/maa#tila N Nom Sg$
+^työpaikka/työ#paikka N Nom Sg/työpaikka N Nom Sg$
+^kartano/kartano N Nom Sg$
+^kasarmi/kasarmi N Nom Sg$
+^koti/koti N Nom Sg$
+^maja/maja N Nom Sg$
+^mökki/mökki N Nom Sg$
+^piha/piha N Nom Sg$
+^tupa/tupa N Nom Sg$
+^rakennus/rakennus N Nom Sg$
+^tontti/tontti N Nom Sg$
+
+^katto/katto N Nom Sg$ 
+^huone/huone N Nom Sg$
+^sisäkatto/sisä#katto N Nom Sg/sisä-#katto N Nom Sg$
+^talo/talo N Nom Sg$
+^ulkokatto/ulko#katto N Nom Sg/ulko-#katto N Nom Sg$
+^vesikatto/vesi#katto N Nom Sg$
+^yläraja/ylä#raja N Nom Sg/ylä-#raja N Nom Sg$
+^aluskate/alunen#kate N Nom Sg/alus#kate N Nom Sg$
+^kate/kate N Nom Sg$
+^katos/katos N Nom Sg$
+^kurkihirsi/kurki#hirsi N Nom Sg$
+^laipio/laipio N Nom Sg$
+^lape/lape N Nom Sg$
+^niska/niska N Nom Sg$
+^ruode/ruode N Nom Sg$
+^yläpohja/ylä#pohja N Nom Sg/ylä-#pohja N Nom Sg$
+^laipio/laipio N Nom Sg$
+^laki/laki N Nom Sg$
+
+^kamera/kamera N Nom Sg$ 
+^filmi/filmi N Nom Sg$
+^kuvaus/kuvaus N Nom Sg$
+^kuvatallennin/kuva#tallennin N Nom Sg$
+^muistikortti/muisti#kortti N Nom Sg$
+^pokkari/pokkari N Nom Sg$
+
+^lattia/lattia N Nom Sg$ 
+^huone/huone N Nom Sg$
+^permanto/per-#manto N Nom Sg/permanto N Nom Sg$
+
+^huone/huone N Nom Sg$ 
+^rakennus/rakennus N Nom Sg$
+^heimo/heimo N Nom Sg$
+^klaani/klaani N Nom Sg$
+^suku/suku N Nom Sg$
+^huoneisto/huoneisto N Nom Sg$
+
+^paristo/paristo N Nom Sg$ 
+^sähköenergia/sähkö#energia N Nom Sg$
+^kemiallinen/kemiallinen A Pos Nom Sg$
+^sähköpari/sähkö#pari N Nom Sg$
+^akku/akku N Nom Sg$
+^sähköpari/sähkö#pari N Nom Sg$
+^patteri/patteri N Nom Sg$
+
+^pluratiivi/*pluratiivi$ 
+^monikkosana/moni-#kko Abbr#sana N Nom Sg/monikko#sana N Nom Sg$
+
+^algoritmi/algoritmi N Nom Sg$ 
+^algoritminen/algoritminen A Pos Nom Sg$
+
+^instruktiivi/instruktiivi N Nom Sg$ 
+^sijamuoto/sija#muoto N Nom Sg$
+^keino/keino N Nom Sg$
+^tapa/tapa N Nom Sg/tappaa V Impv Act Sg2/tappaa V Prs Act ConNeg$
+^sijapääte/sija#pääte N Nom Sg$
+^jalan/jalan Adv/jalka N Gen Sg$
+^instruktiivisija/instruktiivi#sija N Nom Sg$
+^keinonto/keinonto N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+
+^tiilitee/tiili#tee N Nom Sg/tiilitee N Nom Sg$ 
+^tiili/tiili N Nom Sg$
+^tee/tee N Nom Sg/tehdä V Impv Act Sg2/tehdä V Prs Act ConNeg$
+
+^imusuoni/imu#suo N Gen Sg PxSg1/imu#suo N Nom Pl PxSg1/imu#suo N Nom Sg PxSg1/imu#suoni N Nom Sg$ 
+^imuneste/imu#este N Nom Sg/imu#neste N Nom Sg$
+^suoni/suo N Gen Sg PxSg1/suo N Nom Pl PxSg1/suo N Nom Sg PxSg1/suoni N Nom Sg$
+
+^hiiri/hiiri N Nom Sg$ 
+^rottaeläimet/rotta#eläin N Nom Pl$
+^jyrsijät/jyrsijä N Nom Pl$
+^tietokone/tieto#kone N Nom Sg$
+^osoitinlaite/osoitin#laite N Nom Sg$
+
+^sana/sana N Nom Sg$ 
+^kieli/kieli N Nom Sg/kieliä V Impv Act Sg2/kieliä V Prs Act ConNeg/kieliä V Pst Act Sg3$
+^verbaalinen/verbaalinen A Pos Nom Sg$
+^miiminen/miiminen A Pos Nom Sg$
+^ilmausyksikkö/ilmaus#yksikkö N Nom Sg$
+^äänne/äänne N Nom Sg$
+^viittoma/viittoma N Nom Sg$
+^kirjoitusmerkki/kirjoitus#merkki N Nom Sg$
+^sanoitus/sanoitus N Nom Sg$
+^lupaus/lupaus N Nom Sg$
+^sananen/sananen N Nom Sg$
+^sanasilla/sana#silla N Nom Sg/sananen N Ade Pl/sanasilla Adv$
+^sananmittainen/sana#mittainen A Pos Nom Sg$
+^sananmukainen/sana#mukainen A Pos Nom Sg/sananmukainen A Pos Nom Sg$
+^sanantaitava/sana#taitava A Pos Nom Sg$
+^sanasto/sanasto N Nom Sg$
+^sane/sane N Nom Sg$
+^sanue/sanue N Nom Sg$
+^tavu/tavu N Nom Sg$
+
+^tuuli/tuuli N Nom Sg/tuulla V Pst Act Sg3$ 
+^paine/pai N Com/paine N Nom Sg$
+^ero/ero N Nom Sg$
+^ulkoilma/ulko#ilma N Nom Sg/ulko-#ilma N Nom Sg$
+^liike/liike N Nom Sg$
+^mieliala/mieli#ala N Nom Sg/mieli-#ala N Nom Sg$
+^myrsky/myrsky N Nom Sg$
+^tuuleenpyrkivä/*tuuleenpyrkivä$
+^tuulenpuoleinen/tuulen#puoleinen A Pos Nom Sg/tuuli#puoleinen A Pos Nom Sg/tuuli#puoleinen N Nom Sg$
+^tuulispää/tuulispää N Nom Sg$
+^vastainen/vastainen A Pos Nom Sg$
+^veto/veto N Nom Sg$
+
+^aaloe/aaloe N Nom Sg$ 
+^afrikkalainen/afrikkalainen A Pos Nom Sg$
+^mehikasvi/mehikasvi N Nom Sg$
+
+^saippua/saippua N Nom Sg$ 
+^pesuaine/pesu#aine N Nom Sg$
+^mäntysuopa/mänty#suo N Nom Sg Foc_pA/mänty#suopa N Nom Sg$
+^shampoo/shampoo N Nom Sg$
+^suihkugeeli/suihku#geeli N Nom Sg$
+^saipu/*saipu$
+^saipua/*saipua$
+^saiput/*saiput$
+^saippuoida/saippuoida V Inf1 Lat/saippuoida V Prs Pass ConNeg$
+^saippuoitua/saippuoida PrfPrc Pass Pos Par Sg/saippuoitu A Pos Par Sg/saippuoitua V Inf1 Lat$
+^saippuoitumaton/saippuoitua NegPrc Pos Nom Sg$
+^saippuoituminen/saippuoitua V N Nom Sg$
+^suopa/suo N Nom Sg Foc_pA/suoda V Impv Act Sg2 Foc_pA/suoda V Prs Act ConNeg Foc_pA/suoda V Prs Act Sg3 Foc_pA/suopa N Nom Sg$
+^saiput/*saiput$
+
+^aisti/aisti N Nom Sg/aistia V Impv Act Sg2/aistia V Prs Act ConNeg/aistia V Pst Act Sg3$ 
+^aistimus/aistimus N Nom Sg$
+^aistin/aisti N Gen Sg/aistia V Prs Act Sg1/aistia V Pst Act Sg1/aistin N Nom Sg$
+^ennakkoaavistus/ennakko#aavistus N Nom Sg/ennakko-#aavistus N Nom Sg$
+^havainto/havainto N Nom Sg$
+^yliherkkyys/yli#herkkyys N Nom Sg/yli-#herkkyys N Nom Sg$
+^haisti/haisti N Nom Sg$
+^maisti/maisti N Nom Sg$
+
+^haju/haju N Nom Sg$ 
+^hajuaisti/haju#aisti N Nom Sg$
+^ärsyke/ärsyke N Nom Sg$
+^nenä/nenä N Nom Sg$
+^miellyttävä/miellyttävä A Pos Nom Sg/miellyttää PrsPrc Act Pos Nom Sg/mieltyä PrsPrc Pass Pos Nom Sg$
+^epämiellyttävä/epä#miellyttävä A Pos Nom Sg/epä-#miellyttävä A Pos Nom Sg$
+^aavistus/aavistus N Nom Sg$
+^tieto/tieto N Nom Sg$
+^haista/hai N Ela Pl/hai N Ela Sg/haista V Inf1 Lat/haista V Prs Pass ConNeg/haistaa V Impv Act Sg2/haistaa V Prs Act ConNeg$
+^haisu/haisu N Nom Sg$
+^lemu/lemu N Nom Sg$
+^löyhkä/löyhkä A Pos Nom Sg/löyhkä N Nom Sg$
+^tuoksu/tuoksu N Nom Sg/tuoksua V Impv Act Sg2/tuoksua V Prs Act ConNeg$
+
+^nenä/nenä N Nom Sg$ 
+^kasvot/kasvo N Nom Pl/kasvot N Nom Pl$
+^haju/haju N Nom Sg$
+^hengityselimistö/hengitys#elimistö N Nom Sg$
+^sisäänhengitys/sisäänhengitys N Nom Sg$
+^kärkiosa/kärki#osa N Nom Sg$
+^uloke/uloke N Nom Sg$
+^hengittää/hengittää V Inf1 Lat/hengittää V Prs Act Sg3$
+^nenästää/*nenästää$
+^nenätti/nenätti N Nom Sg$
+^nenäytyä/nenä#yty N Par Sg$
+^niistää/niistää V Inf1 Lat/niistää V Prs Act Sg3$
+^haistaa/haistaa V Inf1 Lat/haistaa V Prs Act Sg3$
+^haistella/haistella V Inf1 Lat/haistella V Prs Pass ConNeg$
+^nuuhkia/nuuhkia V Inf1 Lat$
+^klyyvari/klyyvari N Nom Sg$
+^kuono/kuono N Nom Sg$
+^nenu/nenu N Nom Sg$
+^nenukka/*nenukka$
+^nenukki/*nenukki$
+^nokka/nokka N Nom Sg$
+^räkä/räkä N Nom Sg$
+^sierain/siera N Gen Pl/sierain N Nom Sg$
+
+^hajuaisti/haju#aisti N Nom Sg$ 
+^aisti/aisti N Nom Sg/aistia V Impv Act Sg2/aistia V Prs Act ConNeg/aistia V Pst Act Sg3$
+^haju/haju N Nom Sg$
+^havaita/havaita V Inf1 Lat/havaita V Prs Pass ConNeg$
+
+^animaatio/animaatio N Nom Sg$ 
+^piirrosfilmi/piirros#filmi N Nom Sg$
+^animoida/animoida V Inf1 Lat/animoida V Prs Pass ConNeg$
+
+^patsas/patsas N Nom Sg$ 
+^taideteos/taide#teos N Nom Sg$
+^kivi/kivi N Nom Sg$
+^kipsi/kipsi N Nom Sg$
+^metalli/metalli N Nom Sg$
+^veistos/veistos N Nom Sg$
+^muistomerkki/muisto#merkki N Nom Sg$
+
+^endeeminen/endeeminen A Pos Nom Sg$ 
+^esiintyä/esiintyä V Inf1 Lat$
+^alue/alue N Nom Sg$
+^sairaus/sairaus N Nom Sg$
+^epidemia/epidemia N Nom Sg$
+^paikallinen/paikallinen A Pos Nom Sg$
+^kotoperäinen/koto#-peräinen A Pos Nom Sg/koto#peräinen A Pos Nom Sg$
+
+^nominatiivi/nominatiivi N Nom Sg$ 
+^nomini/nomini N Nom Sg$
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^sijapääte/sija#pääte N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+^nominatiivisija/nominatiivi#sija N Nom Sg$
+^nomini/nomini N Nom Sg$
+^nom/*nom$^./. Punct$
+
+^genetiivi/genetiivi N Nom Sg$ 
+^omanto/omanto N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^gen/*gen$^./. Punct$
+^omanto/omanto N Nom Sg$
+
+^akkusatiivi/akkusatiivi N Nom Sg$ 
+^sijamuoto/sija#muoto N Nom Sg$
+^objekti/objekti N Nom Sg$
+^kokonaisobjekti/koko#nainen#objekti N Nom Sg/kokonais#objekti N Nom Sg$
+^totaaliobjekti/totaali#objekti N Nom Sg$
+^kuka/kuka Pron Interr Nom Sg$
+^ken/ken Pron Interr$
+^pronomini/pronomini N Nom Sg$
+^persoonapronomini/persoona#pronomini N Nom Sg$
+^partitiivi/partitiivi N Nom Sg$
+^kohdanto/kohdanto N Nom Sg$
+
+^sijamuoto/sija#muoto N Nom Sg$ 
+^sija/sija N Nom Sg$
+^taivutuskategoria/taivutus#kategoria N Nom Sg$
+^luku/luku N Nom Sg$
+^suku/suku N Nom Sg$
+^sija/sija N Nom Sg$
+^perusmuoto/perus#muoto N Nom Sg/perus-#muoto N Nom Sg$
+^nominatiivi/nominatiivi N Nom Sg$
+^taivutusmuoto/taivutus#muoto N Nom Sg$
+^sija/sija N Nom Sg$
+^kaasus/kaasus N Nom Sg$
+
+^partitiivi/partitiivi N Nom Sg$ 
+^sijamuoto/sija#muoto N Nom Sg$
+^osittaisuus/osittaisuus N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^vokaalisointu/vokaali#sointu N Nom Sg$
+^osanto/osanto N Nom Sg$
+^partitiivisija/partitiivi#sija N Nom Sg$
+
+^essiivi/essiivi N Nom Sg$ 
+^sijamuoto/sija#muoto N Nom Sg$
+^olento/olento N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^essiivisija/essiivi#sija N Nom Sg$
+
+^inessiivi/inessiivi N Nom Sg$ 
+^sisäolento/sisä-#olento N Nom Sg$
+^paikallissijamuoto/pai#kallis#sija#muoto N Nom Sg/paikallis#sija#muoto N Nom Sg/paikallis-#sija#muoto N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+
+^illatiivi/illatiivi N Nom Sg$ 
+^sisätulento/sisä-#tulento N Nom Sg$
+^paikallissijamuoto/pai#kallis#sija#muoto N Nom Sg/paikallis#sija#muoto N Nom Sg/paikallis-#sija#muoto N Nom Sg$
+^sijapääte/sija#pääte N Nom Sg$
+^illatiivisija/illatiivi#sija N Nom Sg$
+^sijamuoto/sija#muoto N Nom Sg$
+
+^komitatiivi/komitatiivi N Nom Sg$ 
+^sijapääte/sija#pääte N Nom Sg$
+^komitatiivisija/komitatiivi#sija N Nom Sg$
+^seuranto/seuranto N Nom Sg$
+
+^perfekti/perfekti N Nom Sg$ 
+^aikamuoto/aika#muoto N Nom Sg$
+^preesens/preesens N Nom Sg$
+^imperfekti/imperfekti N Nom Sg$
+^preteriti/preteriti N Nom Sg$
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+^päättymä/päättyä AgPrc Pos Nom Sg$
+
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$ 
+^aikamuoto/aika#muoto N Nom Sg$
+^preesens/preesens N Nom Sg$
+^imperfekti/imperfekti N Nom Sg$
+^preteriti/preteriti N Nom Sg$
+^perfekti/perfekti N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+^pluskv/*pluskv$^./. Punct$
+^ppf/*ppf$
+
+^futuuri/futuuri N Nom Sg$ 
+^aikamuoto/aika#muoto N Nom Sg$
+^preesens/preesens N Nom Sg$
+^johdannaissopimus/johdannais#sopimus N Nom Sg$
+^sitoutua/sitoutua V Inf1 Lat$
+^tulevaisuus/tule#vaisuus N Nom Sg/tulevaisuus N Nom Sg$
+^kohde-etuus/kohde#etuus N Nom Sg$
+^preesens/preesens N Nom Sg$
+^imperfekti/imperfekti N Nom Sg$
+^preteriti/preteriti N Nom Sg$
+^perfekti/perfekti N Nom Sg$
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$
+^pörssiarvo/pörssi#arvo N Nom Sg$
+^termiini/termi N Ill Sg PxSg1/termiini N Nom Sg$
+
+^positiivi/positiivi N Nom Sg$ 
+^perusaste/perus#aste N Nom Sg/perus-#aste N Nom Sg$
+^adjektiivi/adjektiivi N Nom Sg$
+^komparaatio/komparaatio N Nom Sg$
+^vertailuaste/vertailu#aste N Nom Sg$
+^urut/urut N Nom Pl$
+^diapositiivi/dia#positiivi N Nom Sg$
+^komparatiivi/komparatiivi N Nom Sg$
+^negatiivi/negatiivi N Nom Sg$
+^superlatiivi/super#latiivi N Nom Sg/super-#latiivi N Nom Sg/superlatiivi N Nom Sg$
+^posetiivi/posetiivi N Nom Sg$
+
+^komparatiivi/komparatiivi N Nom Sg$ 
+^voittoaste/voitto#aste N Nom Sg$
+^komparaatio/komparaatio N Nom Sg$
+^positiivi/positiivi N Nom Sg$
+^superlatiivi/super#latiivi N Nom Sg/super-#latiivi N Nom Sg/superlatiivi N Nom Sg$
+
+^superlatiivi/super#latiivi N Nom Sg/super-#latiivi N Nom Sg/superlatiivi N Nom Sg$ 
+^yliaste/yli-#aste N Nom Sg$
+^komparaatio/komparaatio N Nom Sg$
+^hyvä/hyvä A Pos Nom Sg/hyvä N Nom Sg$
+^paras/paras A Pos Nom Sg$
+^positiivi/positiivi N Nom Sg$
+^komparatiivi/komparatiivi N Nom Sg$
+
+^indikatiivi/indikatiivi N Nom Sg$ 
+^tapaluokka/tapa#luokka N Nom Sg/tapaluokka N Nom Sg$
+^tositapa/tosi#tapa N Nom Sg/tosittaa V Impv Act Sg2 Foc_pA/tosittaa V Prs Act ConNeg Foc_pA$
+^potentiaali/potentiaali N Nom Sg$
+^konditionaali/konditio#naali N Nom Sg/konditionaali N Nom Sg$
+^imperatiivi/imperatiivi N Nom Sg$
+^eventiivi/*eventiivi$
+^indikatiivinen/*indikatiivinen$
+
+^konditionaali/konditio#naali N Nom Sg/konditionaali N Nom Sg$ 
+^tapaluokka/tapa#luokka N Nom Sg/tapaluokka N Nom Sg$
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^indikatiivi/indikatiivi N Nom Sg$
+^potentiaali/potentiaali N Nom Sg$
+^imperatiivi/imperatiivi N Nom Sg$
+^eventiivi/*eventiivi$
+^subjunktiivi/subjunktiivi N Nom Sg$
+^konjunktiivi/konjunktiivi N Nom Sg$
+^ehtotapa/ehto#tapa N Nom Sg$
+
+^potentiaali/potentiaali N Nom Sg$ 
+^tapaluokka/tapa#luokka N Nom Sg/tapaluokka N Nom Sg$
+^-/- Punct Dash/- Punct Dash >>>$^ne/ne Pron Dem Nom Pl$
+^korkeusasema/korkeus#asema N Nom Sg$
+^painovoima/paino#voima N Nom Sg$
+^sähkökenttä/sähkö#kenttä N Nom Sg$
+^mahdollisuus/mahdollisuus N Nom Sg$
+^voimavara/voima#vara N Nom Sg$
+^eventiivi/*eventiivi$
+^indikatiivi/indikatiivi N Nom Sg$
+^imperatiivi/imperatiivi N Nom Sg$
+^konditionaali/konditio#naali N Nom Sg/konditionaali N Nom Sg$
+^mahdollisuus/mahdollisuus N Nom Sg$
+^potenssi/potenssi N Nom Sg$
+^potentaatti/*potentaatti$
+^potentia/*potentia$
+^potentiaalinen/potentiaalinen A Pos Nom Sg$
+^potentti/potentti A Pos Nom Sg$
+^voimavara/voima#vara N Nom Sg$
+^mahtotapa/mahtotapa N Nom Sg$
+
+^imperatiivi/imperatiivi N Nom Sg$ 
+^tapaluokka/tapa#luokka N Nom Sg/tapaluokka N Nom Sg$
+^suomi/suo#mi N/suomi N Nom Sg/suomia V Impv Act Sg2/suomia V Prs Act ConNeg/suomia V Pst Act Sg3$
+^jäännöslopuke/jäännös#lopuke N Nom Sg$
+^lähtekäämme/lähteä V Impv Act Pl1$
+^lähdetään/lähteä V Prs Pass Pe4$
+^indikatiivi/indikatiivi N Nom Sg$
+^optatiivi/optatiivi N Nom Sg$
+^potentiaali/potentiaali N Nom Sg$
+^konditionaali/konditio#naali N Nom Sg/konditionaali N Nom Sg$
+^eventiivi/*eventiivi$
+^imperatiivinen/imperatiivinen A Pos Nom Sg$
+^käskytapa/käsky#tapa N Nom Sg$
+
+^preesens/preesens N Nom Sg$ 
+^verbi/verbi N Nom Sg$
+^aikamuoto/aika#muoto N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+^aoristi/aoristi N Nom Sg$
+^imperfekti/imperfekti N Nom Sg$
+^perfekti/perfekti N Nom Sg$
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+^preteriti/preteriti N Nom Sg$
+
+^metri/-metri N Nom Sg/metri N Nom Sg$ 
+^pituus/pituus N Nom Sg$
+^SI-järjestelmä/SI Abbr TrunCojärjestelmä N Nom Sg/SI-järjestelmä N Nom Sg$
+^yksikkö/yksikkö N Nom Sg$
+^valonnopeus/valo#nopeus N Nom Sg/valon#nopeus N Nom Sg$
+^-/- Punct Dash/- Punct Dash >>>$^metri/-metri N Nom Sg/metri N Nom Sg$
+^metreinä/-metri N Ess Pl/metri N Ess Pl$
+^metreittäin/metreittäin Adv$
+
+^gramma/gramma N Nom Sg$ 
+^massa/massa N Nom Sg$
+^paino/paino N Nom Sg$
+^SI-järjestelmä/SI Abbr TrunCojärjestelmä N Nom Sg/SI-järjestelmä N Nom Sg$
+^yksikkö/yksikkö N Nom Sg$
+^mikrogramma/mikro#gramma N Nom Sg/mikro-#gramma N Nom Sg$
+^milligramma/milli#gramma N Nom Sg$
+^dekagramma/deka#gramma N Nom Sg/deka-#gramma N Nom Sg$
+^hehtogramma/hehto#gramma N Nom Sg$
+^kilogramma/kilo#gramma N Nom Sg$
+^sentaali/*sentaali$
+^tonni/tonni N Nom Sg$
+
+^sekunti/sekunti N Nom Sg$ 
+^minuutti/minuutti N Nom Sg$
+^aika/aika/aika N Nom Sg$
+^SI-järjestelmä/SI Abbr TrunCojärjestelmä N Nom Sg/SI-järjestelmä N Nom Sg$
+^yksikkö/yksikkö N Nom Sg$
+^cesium/cesium N Nom Sg$
+^perustila/perus#tila N Nom Sg/perus-#tila N Nom Sg$
+^ajanmitta/aika#mitta N Nom Sg$
+^tasokulma/taso#kulma N Nom Sg$
+^kaarisekunti/kaari#sekunti N Nom Sg$
+^kaariminuutti/kaari#minuutti N Nom Sg$
+^hetki/hetki N Nom Sg$
+^sävelaskel/sävel#askel N Nom Sg$
+^intervalli/intervalli N Nom Sg$
+^sekka/sekka N Nom Sg$
+^kuukausi/kuu#kausi N Nom Sg$
+^mikrosekunti/mikro#sekunti N Nom Sg/mikro-#sekunti N Nom Sg$
+^millisekunti/milli#sekunti N Nom Sg$
+^minuutti/minuutti N Nom Sg$
+^tunti/tunti N Nom Sg$
+^viikko/viikko N Nom Sg$
+^vuosi/vuo N Gen Sg PxSg2/vuo N Nom Pl PxSg2/vuo N Nom Sg PxSg2/vuosi N Nom Sg/vuotaa V Pst Act Sg3$
+^vuorokausi/vuoro#kausi N Nom Sg$
+^aste/aste N Nom Sg$
+^kaariminuutti/kaari#minuutti N Nom Sg$
+
+^klo/klo Abbr$ 
+^kello/kello N Nom Sg$
+^kellonaika/kello#aika N Nom Sg/kellon#aika N Nom Sg$
+
+^vuosi/vuo N Gen Sg PxSg2/vuo N Nom Pl PxSg2/vuo N Nom Sg PxSg2/vuosi N Nom Sg/vuotaa V Pst Act Sg3$ 
+^aika/aika/aika N Nom Sg$
+^Maa/Maa N Nom Sg/Maa N Prop Nom Sg$
+^Aurinko/Auri N Prop Gen Sg Foc_kO/Aurinko N Nom Sg/Aurinko N Prop Nom Sg$
+^v./v. Abbr$
+^a/a Abbr Nom Sg$
+^päivä/päivä N Nom Sg$
+^puolivuoti/puoli#vuo#ti N$^s/s Abbr/s Abbr Nom Sg$^-/- Punct Dash/- Punct Dash >>>$
+^sekunti/sekunti N Nom Sg$
+^minuutti/minuutti N Nom Sg$
+^tunti/tunti N Nom Sg$
+^vuorokausi/vuoro#kausi N Nom Sg$
+^viikko/viikko N Nom Sg$
+^kuukausi/kuu#kausi N Nom Sg$
+^ajastaika/ajastaika N Nom Sg$
+
+^prosentti/prosentti N Nom Sg$ 
+^prosenttimerkki/prosentti#merkki N Nom Sg$
+^kymmenys/kymmenys N Nom Sg$
+^promille/promille N Nom Sg$
+
+^maa/maa N Nom Sg$ 
+^maapallo/maa#pallo N Nom Sg$
+^maa-aines/maa#aines N Nom Sg/maa-aines N Nom Sg$
+^multa/multa N Nom Sg/mä Pron Pers Abl Sg$
+^valtio/valtio N Nom Sg$
+^maaseutu/maa#seutu N Nom Sg$
+^adessiivi/adessiivi N Nom Sg$
+^ablatiivi/ablatiivi N Nom Sg$
+^allatiivi/allatiivi N Nom Sg$
+^maapotentiaali/maa#potentiaali N Nom Sg$
+^maadoitus/maadoitus N Nom Sg$
+^pata/pata N Nom Sg$
+^hertta/hertta N Nom Sg$
+^risti/risti N Nom Sg/ristiä V Impv Act Sg2/ristiä V Prs Act ConNeg/ristiä V Pst Act Sg3$
+^ruutu/ruutu N Nom Sg$
+^kangas/kangas N Nom Sg$
+^korpi/korpi N Nom Sg$
+^letto/letto A Pos Nom Sg$
+^Maa/Maa N Nom Sg/Maa N Prop Nom Sg$
+^maadoitus/maadoitus N Nom Sg$
+^maailma/maa#ilma N Nom Sg$
+^maanmainio/maa#mainio A Pos Nom Sg/maan#mainio N Nom Sg$
+^maanpäällinen/maa#päällinen A Pos Nom Sg/maa#päällinen N Nom Sg/maan#päällinen A Pos Nom Sg$
+^maatto/maatto N Nom Sg$
+^maatua/maatua V Inf1 Lat$
+^manner/manner N Nom Sg$
+^multa/multa N Nom Sg/mä Pron Pers Abl Sg$
+^neva/neva N Nom Sg$
+^räme/räme N Nom Sg$
+^Vietnam/Vietnam N Nom Sg/Vietnam N Prop Nom Sg$
+^austroaasialainen/austroaasialainen N Nom Sg$
+^kieli/kieli N Nom Sg/kieliä V Impv Act Sg2/kieliä V Prs Act ConNeg/kieliä V Pst Act Sg3$
+
+^pata/pata N Nom Sg$ 
+^metallinen/metallinen A Pos Nom Sg$
+^keraaminen/keraaminen A Pos Nom Sg$
+^emaloitu/emaloida PrfPrc Pass Pos Nom Sg/emaloida V Pst Pass ConNeg$
+^pataruoka/pata#ruoka N Nom Sg$
+^muhennos/muhennos N Nom Sg$
+^korttipakka/kortti#pakka N Nom Sg$
+^maa/maa N Nom Sg$
+^kattila/katti#la N/kattila N Nom Sg$
+^paistinpannu/paisti#pannu N Nom Sg/paistin#pannu N Nom Sg$
+^uunivuoka/uuni#vuoka N Nom Sg$
+^hertta/hertta N Nom Sg$
+^ruutu/ruutu N Nom Sg$
+^risti/risti N Nom Sg/ristiä V Impv Act Sg2/ristiä V Prs Act ConNeg/ristiä V Pst Act Sg3$
+
+^ruutu/ruutu N Nom Sg$ 
+^neliö/neliö N Nom Sg$
+^televisio/tele#visio N Nom Sg/tele-#visio N Nom Sg$
+^näyttö/näyttö N Nom Sg$
+^otos/otos N Nom Sg$
+^ruutuhyppely/ruutu#hyppely N Nom Sg$
+^ikkunaruutu/ikkuna#ruutu N Nom Sg$
+^korttipakka/kortti#pakka N Nom Sg$
+^maa/maa N Nom Sg$
+^risuaita/risu#aita N Nom Sg$
+^pikkuruutuinen/pikku#ruutuinen A Pos Nom Sg/pikku-#ruutuinen A Pos Nom Sg$
+^ruudukas/ruudukas A Pos Nom Sg$
+^ruuta/*ruuta$
+^hertta/hertta N Nom Sg$
+^risti/risti N Nom Sg/ristiä V Impv Act Sg2/ristiä V Prs Act ConNeg/ristiä V Pst Act Sg3$
+^pata/pata N Nom Sg$
+
+^hertta/hertta N Nom Sg$ 
+^korttipakka/kortti#pakka N Nom Sg$
+^maa/maa N Nom Sg$
+
+^risti/risti N Nom Sg/ristiä V Impv Act Sg2/ristiä V Prs Act ConNeg/ristiä V Pst Act Sg3$ 
+^kristinusko/kristinusko N Nom Sg$
+^symboli/symboli N Nom Sg$
+^viite/viite N Nom Sg$
+^ristinmerkki/risti#merkki N Nom Sg/ristin#merkki N Nom Sg$
+^sukupuutto/sukupuutto N Nom Sg$
+^taksoni/taksoni N Nom Sg$
+^korttipakka/kortti#pakka N Nom Sg$
+^maa/maa N Nom Sg$
+^veikkaus/veikkaus N Nom Sg$
+^rasti/rasti N Nom Sg/rastia V Impv Act Sg2/rastia V Prs Act ConNeg/rastia V Pst Act Sg3$
+^ylennysmerkki/ylennys#merkki N Nom Sg$
+^taakka/taakka N Nom Sg$
+^vaikeus/vaikeus N Nom Sg$
+^vaiva/vaiva N Nom Sg$
+^vastoinkäyminen/vastoinkäyminen N Nom Sg$
+^ristiriitainen/risti#riitainen A Pos Nom Sg$
+
+^nomini/nomini N Nom Sg$ 
+^sijamuoto/sija#muoto N Nom Sg$
+^yksikkö/yksikkö N Nom Sg$
+^monikko/moni-#kko N Abbr Nom Sg/monikko N Nom Sg$
+^nominaalimuoto/nominaali#muoto N Nom Sg$
+^adjektiivi/adjektiivi N Nom Sg$
+^numeraali/numeraali N Nom Sg$
+^pronomini/pronomini N Nom Sg$
+^substantiivi/substantiivi N Nom Sg$
+
+^markka/markka N Nom Sg$ 
+^rahayksikkö/raha#yksikkö N Nom Sg$
+^penni/penni N Nom Sg$
+^euro/euro N Nom Sg$
+^mk/mk Abbr/mk Abbr Nom Sg$
+
+^euro/euro N Nom Sg$ 
+^rahayksikkö/raha#yksikkö N Nom Sg$
+^sentti/sentti N Nom Sg$
+
+^hintti/hintti N Nom Sg$ 
+^homoseksuaalinen/homo#seksuaalinen A Pos Nom Sg$
+^homo/homo N Nom Sg$
+^homoseksuaali/homoseksuaali N Nom Sg$
+^homppeli/homppeli N Nom Sg$
+^hinaaja/hinaaja N Nom Sg$
+^hinttari/hinttari N Nom Sg$
+^hinuri/hinuri N Nom Sg$
+
+^televisio/tele#visio N Nom Sg/tele-#visio N Nom Sg$ 
+^televisiojärjestelmä/tele#visio#järjestelmä N Nom Sg/tele-#visio#järjestelmä N Nom Sg/televisio#järjestelmä N Nom Sg$
+^televiso/*televiso$^-/- Punct Dash/- Punct Dash >>>$^ohjelma/ohjelma N Nom Sg$
+^televisiovastaanotin/tele#visio#vastaanotin N Nom Sg/tele-#visio#vastaanotin N Nom Sg$
+^televisiokanakanava/tele#visio#kana#kanava N Nom Sg/tele-#visio#kana#kanava N Nom Sg$
+^televisio-ohjelma/tele#visio#ohjelma N Nom Sg/tele#visio-ohjelma N Nom Sg/tele-#visio#ohjelma N Nom Sg$
+^vastaanotin/vastaanotin N Nom Sg/vastaanottaa V Pst Act Sg1$
+^televisiotoiminta/tele#visio#toiminta N Nom Sg/tele-#visio#toiminta N Nom Sg$
+^televisio-ohjelma/tele#visio#ohjelma N Nom Sg/tele#visio-ohjelma N Nom Sg/tele-#visio#ohjelma N Nom Sg$
+^joukkotiedotustoiminta/joukko#tiedotus#toiminta N Nom Sg$
+^juokkoviestintä/*juokkoviestintä$
+^juokkoviestintäväline/*juokkoviestintäväline$
+^media/media N Nom Sg$
+^radio/radio N Nom Sg$
+^näköradio/näkö#radio N Nom Sg$
+^telkkari/telkkari N Nom Sg$
+^telkku/telkku N Nom Sg$
+
+^olla/olla V Inf1 Lat/olla V Prs Pass ConNeg$ 
+^ominaisuus/ominaisuus N Nom Sg$
+^eksistentiaalilause/eksistentiaali#lause N Nom Sg$
+^adessiivi/adessiivi N Nom Sg$
+^aikamuoto/aika#muoto N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+
+^aikamuoto/aika#muoto N Nom Sg$ 
+^verbi/verbi N Nom Sg$
+^taivutus/taivutus N Nom Sg$
+^muoto/muoto N Nom Sg$
+^preesens/preesens N Nom Sg$
+^imperfekti/imperfekti N Nom Sg$
+^perfekti/perfekti N Nom Sg$
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$
+^aikaluokka/aika#luokka N Nom Sg$
+^tempus/tempus N Nom Sg$
+^futuuri/futuuri N Nom Sg$
+^imperfekti/imperfekti N Nom Sg$
+^perfekti/perfekti N Nom Sg$
+^pluskvamperfekti/pluskvamperfekti N Nom Sg$
+^preesens/preesens N Nom Sg$
+^preteriti/preteriti N Nom Sg$
+
+^pimeä/pimeä A Pos Nom Sg$ 
+^valo/valo N Nom Sg$
+^paha/paha A Pos Nom Sg$
+^synkkä/synkkä A Pos Nom Sg$
+^sivistymätön/sivistymätön A Pos Nom Sg/sivistyä NegPrc Pos Nom Sg$
+^tieto/tieto N Nom Sg$
+^hullu/hullu A Pos Nom Sg$
+^mielenvikainen/mielen#vikainen A Pos Nom Sg/mieli#-vikainen A Pos Nom Sg$
+^omituinen/omituinen A Pos Nom Sg$
+^laiton/laiton A Pos Nom Sg/laiton N Nom Sg/laitto N Gen Sg$
+^auringonvaloton/aurinko#valoton A Pos Nom Sg$
+^hämärä/hämärä A Pos Nom Sg$
+^pimentää/pimentää V Inf1 Lat/pimentää V Prs Act Sg3$
+^pimennys/pimennys N Nom Sg$
+^pimento/pimento N Nom Sg$
+^pimentyminen/pimentyä V N Nom Sg$
+^pimentymä/pimentyä AgPrc Pos Nom Sg$
+^pimentynyt/pimentyä PrfPrc Act Pos Nom Sg/pimentyä V Pst Act ConNeg$
+^pimentyvä/pimentyä PrsPrc Act Pos Nom Sg$
+^pimetä/pimetä V Inf1 Lat/pimetä V Prs Pass ConNeg$
+^pimittää/pimittää V Inf1 Lat/pimittää V Prs Act Sg3$
+^pimitä/pimittää V Impv Act Sg2/pimittää V Prs Act ConNeg$
+^pimiö/pimiö N Nom Sg$
+^tumma/tumma A Pos Nom Sg$
+^synkkä/synkkä A Pos Nom Sg$
+^valoisuus/valoisuus N Nom Sg$
+^valaistus/valaistus N Nom Sg$
+^valaista/valaista V Inf1 Lat/valaista V Prs Pass ConNeg/valas N Ela Pl$
+^valjeta/valjeta V Inf1 Lat/valjeta V Prs Pass ConNeg$
+^yö/yö N Nom Sg$
+^valoisa/valoisa A Pos Nom Sg$
+^vaalea/vaalea A Pos Nom Sg/vaalea N Nom Sg$
+^kirkas/kirkas A Pos Nom Sg$
+^tervejärkinen/terve#järkinen A Pos Nom Sg$
+^älykäs/älykäs A Pos Nom Sg$
+
+^ei/ei V Neg Sg3$ 
+^kieltomuoto/kielto#muoto N Nom Sg$
+^kieltoverbi/kielto#verbi N Nom Sg$
+^älä/ei V Impv Neg Sg2$
+^kyllä/kyllä Adv$
+^kieltoverbi/kielto#verbi N Nom Sg$
+
+^kyllä/kyllä Adv$ 
+^ei/ei V Neg Sg3$
+^runsaus/runsaus N Nom Sg$
+^riittävyys/riittävyys N Nom Sg$
+
+^tai/tai CC/tai N Nom Sg$ 
+^joko/joko CC$
+^vai/vai CC$
+^taitaa/taitaa V Inf1 Lat/taitaa V Prs Act Sg3$
+^tahi/tahi CC$
+^tahikka/tahikka CC$
+^taikka/taikka CC$
+^yhdyssanamuodoste/yhdyssana#muodoste N Nom Sg$
+^ja/ja CC$
+^tai-funktio/tai#funktio N Nom Sg$
+^vai/vai CC$
+
+^leveä/leveä A Pos Nom Sg$ 
+^leveyssuunta/leveys#suunta N Nom Sg$
+^laaja/laaja A Pos Nom Sg$
+^kapea/kapea A Pos Nom Sg$
+^korkea/korkea A Pos Nom Sg$
+^matala/mata#la N/matala A Pos Nom Sg$
+^pitkä/pitkä A Pos Nom Sg$
+^lyhyt/lyhyt A Pos Nom Sg$
+^syvä/syvä A Pos Nom Sg$
+^paksu/paksu A Pos Nom Sg$
+^ohut/ohut A Pos Nom Sg$
+
+^matala/mata#la N/matala A Pos Nom Sg$ 
+^pystysuunta/pysty#suunta N Nom Sg$
+^arvo/arpoa V Impv Act Sg2/arpoa V Prs Act ConNeg/arvo N Nom Sg$
+^korkea/korkea A Pos Nom Sg$
+^syvä/syvä A Pos Nom Sg$
+^sykloni/sykloni N Nom Sg$
+^matalikko/matalikko N Nom Sg$
+^alhainen/alhainen A Pos Nom Sg$
+^syvä/syvä A Pos Nom Sg$
+
+^väri/väri N Nom Sg$ 
+^näkyvä/näkyvä A Pos Nom Sg/näkyä PrsPrc Act Pos Nom Sg$
+^valo/valo N Nom Sg$
+^spektri/spektri N Nom Sg$
+^punainen/punainen A Pos Nom Sg/punainen N Nom Sg$
+^sininen/sininen A Pos Nom Sg/sininen N Nom Sg$
+^vihreä/vihreä A Pos Nom Sg/vihreä N Nom Sg$
+^väriaine/väri#aine N Nom Sg$
+^kirjo/kirjo N Nom Sg/kirjoa V Impv Act Sg2/kirjoa V Prs Act ConNeg$
+^kromaattinen/kromaattinen A Pos Nom Sg$
+^värjätty/värjätty A Pos Nom Sg/värjätä PrfPrc Pass Pos Nom Sg/värjätä V Pst Pass ConNeg$
+^värjätä/värjätä V Inf1 Lat/värjätä V Prs Pass ConNeg$
+^värjäys/värjäys N Nom Sg$
+^maali/maali N Nom Sg$
+^sävytys/sävytys N Nom Sg$
+^liite/liite N Nom Sg$^:/: Punct$

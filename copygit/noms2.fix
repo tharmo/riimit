@@ -1,0 +1,143 @@
+001 0 hilut t 5
+001 0 bailut t 6
+001 0 housut t 6
+001 0 mensut t 6
+001 0 vällyt t 6
+001 0 kimpsut t 7
+001 0 aivot t 5
+001 0 fudut t 5
+001 0 kemut t 5
+001 0 torut t 5
+001 0 kasvot t 6
+001 0 pöksyt t 6
+001 0 jortsut t 7
+001 0 kampsut t 7
+001 A menkut t 6 menkku
+001 A terkut t 6 terkku
+001 A farkut t 6 farkku
+001 B lemput t 6 lemppu
+001 D urut t 4 urku
+001 F pidot t 5 pito
+001 F käädyt t 6 kääty
+001 J opinnot t 7 opinto
+002 0 illatsut t 8 
+002 0 pippalot t 8
+003 0 kapiot t 6 
+005 0 beat t 4 biitti
+005 0 debet t 5 debeti
+005 0 jamit t 5 
+005 0 tarot t 5 taroti
+005 0 keimit t 6
+005 0 kiesit t 6
+005 0 kredit t 6 krediti
+005 0 kutrit t 6 
+005 0 market t 6 marketi
+005 0 output t 6 outputi
+005 0 paarit t 6
+005 0 reivit t 6
+005 0 tiibet t 6 tiibeti
+005 0 tilsit t 6 tilsiti
+005 0 burnout t 7 burnouti
+005 0 knesset t 7 knesseti
+005 0 senssit t 7
+005 0 sortsit t 7
+005 0 treffit t 7
+005 0 sanskrit t 8 sanskriiti
+005 0 camembert t 9 camemberti
+005 0 ekstranet t 9 -
+005 0 finanssit t 9
+005 0 roquefort t 9 roqueforti
+005 0 genitaalit t 10
+005 0 leggingsit t 10
+005 0 trenchcoat t 10 
+005 0 poltergeist t 11 poltergeisti
+005 0 universiadit t 12
+005 C establishment t 13 establismenti
+005 C input t 5 inputi
+005 C skeet t 5 skiiti
+005 C stout t 5 stouti
+005 C twist t 5 twisti
+005 0 geimit t 6
+005 C layout t 6 layouti
+005 C offset t 6 offseti
+005 0 rillit t 6
+005 0 prillit t 7
+005 0 whippet t 7 whippetti
+005 0 glasnost t 8 glasnosti
+005 0 shortsit t 8
+005 C copyright t 9 copyrighti
+005 C croissant t 9 croisanti
+005 0 resurssit t 9
+005 C management t 10 managementi
+005 C understatement t 14 -
+005 C pinsetit t 8 pinsetti
+005 C kastanjetit t 11 kastanjetti
+005 F pihdit t 6 pihti
+005 G tongit t 6 tonki
+005 G juomingit t 9 juominki
+005 G kalsongit t 9 kalsonki
+005 G syömingit t 9 syöminki
+006 0 liperit t 7
+006 0 kalterit t 8
+006 0 kummarit t 8
+006 0 simmarit t 8
+006 0 uikkarit t 8
+006 0 nyyttärit t 9
+006 0 vankkurit t 9
+006 0 bikinit t 7
+006 0 loparit t 7
+006 0 tekarit t 7
+006 0 dongarit t 8
+006 0 kalsarit t 8
+006 0 kekkerit t 8
+006 0 kinkerit t 8
+006 0 kokkarit t 8
+006 0 polvarit t 8
+006 0 sammarit t 8
+006 0 henkselit t 9
+006 0 hiihtarit t 9
+006 0 lantsarit t 9
+006 0 penkkarit t 9
+006 0 polttarit t 9
+006 0 synttärit t 9
+007 0 sakset t 6 saksi
+007 0 päitset t 7 päitsi
+007 0 suitset t 7 suitsi
+007 G länget t 6 länki
+008 0 bänet t 5
+008 0 ravet t 5
+009 0 silat t 5
+009 0 hatkat t 6
+009 0 kihlat t 6
+009 0 tangat t 6
+009 0 tirsat t 6
+009 0 perskat t 7
+009 0 bermudat t 8
+009 A menkat t 6 menkka
+009 B hipat t 5 hippa
+010 0 pässinpökkimät t 14
+010 0 pökät t 5
+010 0 käräjät t 7
+010 0 oltavat t 7
+012 0 atulat t 6
+012 0 kakkulat t 8
+012 0 orgiat t 6
+012 0 hippulat t 8
+012 0 markkinat t 9
+012 0 passiivat t 9
+013 0 aktiivat t 8
+014 A rintsikat t 9 rintsikka
+016 H molemmat t 8 molempi
+017 0 talkoot t 7
+017 0 hynttyyt t 8
+018 0 häät t 4
+020 0 bileet t 6
+022 0 buffet t 6 buffee
+022 0 ragoût t 6 raguu
+022 0 beignet t 7 beignee
+022 0 gourmet t 7 gourmee
+022 0 parfait t 7 parfee
+022 0 nougat t 6 nugaa
+022 0 bouquet t 7 bukee
+022 0 passepartout t 12 paspartuu
+099 asdfasdf asdfasdf asdf adf asddf asdf

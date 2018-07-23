@@ -1,0 +1,101 @@
+1 3 kehua V Inf1 Lat$ ^kehua
+2 2 kehua V Inf1 Act Tra Sg PxPl1$ ^kehuaksemme
+3 2 kehua V Inf1 Act Tra Sg PxSg1$ ^kehuakseni
+4 2 kehua V Inf1 Act Tra Sg PxPl2$ ^kehuaksenne
+5 2 kehua V Inf1 Act Tra Sg PxSg2$ ^kehuaksesi
+6 3 kehua V Impv Act Sg2 ^kehu
+7 #roskaa 6 4 kehua V Prs Act ConNeg$ ^kehu
+8 5 kehua V Prs Act Pl1$ ^kehumme
+9 3 kehua V Prs Act Sg1$ ^kehun
+10 3 kehua V Prs Act Sg2$ ^kehut
+11 2 kehua V Prs Act Pl2$ ^kehutte
+### 12 2 kehua PrsPrc Act Pos Nom Pl ^kehuvat
+12 3 kehua V Prs Act Pl3 ^kehuvat
+13 2 kehua V Prs Act Sg3$ ^kehuu
+14 2 kehua V Prs Pass ConNeg$ ^kehuta
+15 3 kehua V Prs Pass Pe4$ ^kehutaan
+16 2 kehua PrfPrc Pass Pos Nom Pl$ ^kehutut
+17 2 kehua V Pot Act Sg3$ ^kehunee
+18 2 kehua V Pot Act Pl1$ ^kehunemme
+19 2 kehua V Pot Act Sg1$ ^kehunen
+20 2 kehua V Pot Act Sg2$ ^kehunet
+21 2 kehua V Pot Act Pl2$ ^kehunette
+22 3 kehua V Pot Act Pl3$ ^kehunevat
+
+
+
+23 2 kehua PrfPrc Act Pos Nom Sg ^kehunut
+###23 3 kehua V Pst Act ConNeg$ ^kehunut
+
+
+24 2 kehua V Pst Act Sg3$ ^kehui
+25 2 kehua V Pst Act Pl1$ ^kehuimme
+26 3 kehua V Pst Act Sg1$ ^kehuin
+27 2 kehua V Pst Act Sg2$ ^kehuit
+28 2 kehua V Pst Act Pl2$ ^kehuitte
+29 3 kehua V Pst Act Pl3$ ^kehuivat
+30 2 kehua V Inf2 Pass Ine$ ^kehuttaessa
+31 2 kehua V Cond Pass Pe4$ ^kehuttaisiin
+32 2 kehua V Impv Pass Pe4$ ^kehuttakoon
+33 2 kehua V Inf3 Pass Ins$ ^kehuttaman
+34 2 kehua V Pot Pass Pe4$ ^kehuttaneen
+35 2 kehua PrsPrc Pass Pos Nom Sg ^kehuttava
+36 2 kehua V Pst Pass Pe4$ ^kehuttiin
+
+###37 2 kehua PrfPrc Pass Pos Nom Sg ^kehuttu
+37 3 kehua V Pst Pass ConNeg$ ^kehuttu
+
+38 2 kehua V Inf2 Act Ins$ ^kehuen
+39 2 kehua V Inf2 Act Ine Sg$ ^kehuessa
+
+### ??? 40 3 kehua V Cond Act ConNeg ^kehuisi
+40 4 kehua V Cond Act Sg3$ ^kehuisi
+
+41 5 kehua V Cond Act Pl1$ ^kehuisimme
+42 4 kehua V Cond Act Sg1$ ^kehuisin
+43 3 kehua V Cond Act Sg2$ ^kehuisit
+44 2 kehua V Cond Act Pl2$ ^kehuisitte
+45 2 kehua V Cond Act Pl3$ ^kehuisivat
+46 2 kehua AgPrc Pos Nom Sg$ ^kehuma
+
+47 3 kehua AgPrc Pos Ill Sg ^kehumaan
+####47 4 kehua V Inf3 Ill$ ^kehumaan
+
+48 3 kehua V Act Inf5 Px3$ ^kehumaisillaan
+49 3 kehua V Act Inf5 PxPl1$ ^kehumaisillamme
+50 3 kehua V Act Inf5 PxSg1$ ^kehumaisillani
+51 3 kehua V Act Inf5 PxPl2$ ^kehumaisillanne
+52 3 kehua V Act Inf5 PxSg2$ ^kehumaisillasi
+
+###53 2 kehua AgPrc Pos Ade Sg ^kehumalla
+53 3 kehua V Inf3 Ade$ ^kehumalla
+
+###54 2 kehua AgPrc Pos Gen Sg ^kehuman
+54 3 kehua V Inf3 Man$ ^kehuman
+
+####55 3 kehua AgPrc Pos Ine Sg ^kehumassa
+55 4 kehua V Inf3 Ine$ ^kehumassa
+
+###56 2 kehua AgPrc Pos Ela Sg ^kehumasta
+56 3 kehua V Inf3 Ela$ ^kehumasta
+
+###57 3 kehua AgPrc Pos Abe Sg ^kehumatta
+57 4 kehua V Inf3 Abe$ ^kehumatta
+
+58 2 kehua V N Nom Sg ^kehuminen
+
+### 59 2 kehua AgPrc Pos Ela Pl ^kehumista
+59 3 kehua V N Par Sg ^kehumista
+
+###60 2 kehua AgPrc Pos Ela Pl ^kehumista
+60 3 kehua V N Par Sg ^kehumista
+
+61 2 kehua PrsPrc Act Pos Nom Sg ^kehuva
+
+62 2 kehua PrsPrc Act Pos Nom Pl ^kehuvat
+###62 3 kehua V Prs Act Pl3 ^kehuvat
+63 2 kehua V Impv Act Pl2$ ^kehukaa
+64 2 kehua V Impv Act Pl1$ ^kehukaamme
+
+kehumista
+kehuvat

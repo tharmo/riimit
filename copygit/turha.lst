@@ -1,0 +1,1000 @@
+  1 This software and database is being provided to you, the LICENSEE, by  
+  2 Princeton University under the following license.  By obtaining, using  
+  3 and/or copying this software and database, you agree that you have  
+  4 read, understood, and will comply with these terms and conditions.:  
+  5   
+  6 Permission to use, copy, modify and distribute this software and  
+  7 database and its documentation for any purpose and without fee or  
+  8 royalty is hereby granted, provided that you agree to comply with  
+  9 the following copyright notice and statements, including the disclaimer,  
+  10 and that the same appear on ALL copies of the software, database and  
+  11 documentation, including modifications that you make for internal  
+  12 use or for distribution.  
+  13   
+  14 WordNet 3.0 Copyright 2006 by Princeton University.  All rights reserved.  
+  15   
+  16 THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON  
+  17 UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR  
+  18 IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON  
+  19 UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES OF MERCHANT-  
+  20 ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE  
+  21 OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT  
+  22 INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR  
+  23 OTHER RIGHTS.  
+  24   
+  25 The name of Princeton University or Princeton may not be used in  
+  26 advertising or publicity pertaining to distribution of the software  
+  27 and/or database.  Title to copyright in this software, database and  
+  28 any associated documentation shall at all times remain with  
+  29 Princeton University and LICENSEE agrees to preserve same.  
+00001740 29 v 03 hengittää 0 henkäistä 0 respiroida 0 018 * 00004298 v 0000 * 00005136 v 0000 $ 00002492 v 0000 $ 00002258 v 0000 + 00831299 n 0303 ^ 00005136 v 0103 ^ 00004298 v 0101 + 00831299 n 0101 ~ 00002492 v 0000 ~ 00002662 v 0000 ~ 00002883 v 0000 ~ 00003742 v 0000 ~ 00003979 v 0000 ~ 00004298 v 0000 ~ 00005136 v 0000 ~ 00006711 v 0000 ~ 00007424 v 0000 ~ 00017365 v 0000 01 + 01 00 | draw air into, and expel out of, the lungs; "I can breathe better when the air is clean"; "The patient is respiring"  
+00002258 29 v 01 hengittää 1 004 @ 02017186 v 0000 $ 00001740 v 0000 + 03324526 a 0101 + 00830916 n 0101 01 + 01 00 | undergo the biomedical and metabolic processes of respiration by taking up oxygen and producing carbon monoxide  
+00002492 29 v 01 hengähtää_helpotuksesta 0 003 @ 00001740 v 0000 $ 00001740 v 0000 + 03324526 a 0101 01 + 01 00 | breathe easily again, as after exertion or anxiety  
+00002662 29 v 01 tukahtua 0 002 @ 00001740 v 0000 + 14179574 n 0101 01 + 01 00 | breathe with great difficulty, as when experiencing a strong emotion; "She choked with emotion when she spoke about her deceased husband"  
+00002883 29 v 02 saada_hyperventilaatiokohtaus 0 hyperventiloida 0 002 @ 00001740 v 0000 $ 00003089 v 0000 01 + 01 00 | breathe excessively hard and fast; "The mountain climber started to hyperventilate"  
+00003089 29 v 01 aiheuttaa_hyperventilaatiokohtaus<unconfirmed/> 0 002 @ 00076812 v 0000 $ 00002883 v 0000 01 + 01 00 | produce hyperventilation in; "The nurses had to hyperventilate the patient"  
+00003287 29 v 01 aspiroida 0 002 @ 00005136 v 0000 + 00836770 n 0103 01 + 01 00 | suck in (air)  
+00003385 29 v 01 röyhtäistä 0 004 @ 00102614 v 0000 + 00121845 n 0101 + 00121845 n 0102 + 00121845 n 0104 01 + 01 00 | expel gas from the stomach; "In China it is polite to burp at the table"  
+00003582 29 v 01 pakottaa_ulos 0 001 @ 00102614 v 0000 01 + 01 00 | emit or cause to move with force of effort; "force out the air"; "force out the splinter"  
+00003742 29 v 03 hikata 0 nikotella 0 hikotella 0 004 @ 00001740 v 0000 + 14484029 n 0301 + 14484029 n 0202 + 14484029 n 0101 01 + 01 00 | breathe spasmodically, and make a sound; "When you have to hiccup, drink a glass of cold water"  
+00003979 29 v 03 huokailla 0 huokaista 0 huoata 0 010 @ 00001740 v 0000 + 07447995 n 0301 + 07173934 n 0301 + 07173934 n 0303 + 07173934 n 0304 + 07173934 n 0202 + 07447995 n 0101 + 07173934 n 0101 + 07173934 n 0103 + 07173934 n 0104 01 + 01 00 | heave or utter a sigh; breathe deeply and heavily; "She sighed sadly"  
+00004298 29 v 01 hengittää_ulos 0 004 @ 00001740 v 0000 ! 00005136 v 0101 ~ 00006534 v 0000 ~ 00007059 v 0000 01 + 01 00 | expel air; "Exhale when you lift the weight"  
+00004470 29 v 01 pidätellä 0 001 @ 02317498 v 0000 01 + 01 00 | keep from exhaling or expelling; "hold your breath"  
+00004590 29 v 09 hengittää_ulos 1 levitä 0 levittää<unconfirmed/> 0 päästää_ulos<unconfirmed/> 0 kantautua_jostakin 0 kulkeutua_jostakin 0 levitä_jostakin 0 säteillä_jostakin 0 kantautua 0 002 @ 00102614 v 0000 + 15244586 n 0801 01 + 01 00 | give out (breath or an odor); "The chimney exhales a thick smoke"  
+00004912 29 v 01 aivastaa 0 005 @ 00010339 v 0000 * 00004298 v 0000 + 14438209 n 0101 + 14438209 n 0102 + 10747912 n 0101 01 + 01 00 | exhale spasmodically, as when an irritant entered one's nose; "Pepper makes me sneeze"  
+00005136 29 v 03 vetää_henkeä 0 inhaloida 0 hengittää_sisään 0 008 @ 00001740 v 0000 ! 00004298 v 0101 ~ 00003287 v 0000 ~ 00007651 v 0000 ~ 00099386 v 0000 ~ 00106524 v 0000 ~ 01146665 v 0000 ~ 01147974 v 0000 01 + 01 00 | draw in (air); "Inhale deeply"; "inhale the fresh mountain air"; "The patient has trouble inspiring"; "The lung cancer patient cannot inspire air very well"  
+00005526 29 v 05 puuskuttaa 0 puhkua 0 huohottaa 0 haukkoa_henkeään 0 läähättää 0 003 @ 00007059 v 0000 + 00834212 n 0302 + 00834500 n 0201 01 + 01 00 | breathe noisily, as when one is exhausted; "The runners reached the finish line, panting heavily"  
+00005786 29 v 02 yskiä 0 köhiä 0 011 @ 00006288 v 0000 ^ 00006288 v 0201 ^ 02103591 v 0201 ^ 00006288 v 0101 ^ 02103591 v 0101 + 14483684 n 0101 + 14483684 n 0102 + 14483684 n 0103 + 14483684 n 0104 ~ 00006128 v 0000 ~ 00035757 v 0000 01 + 01 00 | exhale abruptly, as when one has a chest cold or congestion; "The smoker coughs all day"  
+00006128 29 v 02 yskiä_hakkaavaa_yskää 0 köhiä 1 001 @ 00005786 v 0000 01 + 01 00 | cough spasmodically; "The patient with emphysema is hacking all day"  
+00006288 29 v 02 yskiä 1 sylkeä 0 007 @ 00102224 v 0000 + 13596661 n 0101 + 10768135 n 0102 + 00122899 n 0103 ~ 00005786 v 0000 ~ 00099521 v 0000 ~ 00099968 v 0000 01 + 01 00 | discharge (phlegm or sputum) from the lungs and out of the mouth  
+00006534 29 v 01 tuhahtaa 0 003 @ 00004298 v 0000 + 00834500 n 0103 + 10748859 n 0101 01 + 01 00 | make a snorting sound by exhaling hard; "The critic snorted contemptuously"  
+00006711 29 v 03 vinkua 0 hengittää_pihisten 0 pihistä 0 003 @ 00001740 v 0000 + 00836334 n 0303 + 00836334 n 0101 01 + 01 00 | breathe with difficulty  
+00006868 29 v 03 puhkua 1 läähättää 1 puuskuttaa 1 002 @ 00007059 v 0000 + 00834500 n 0101 01 + 01 00 | blow hard and loudly; "he huffed and puffed as he made his way up the mountain"  
+00007059 29 v 02 puhaltaa_ilmaa_keuhkoista 0 puhaltaa<broader/> 0 006 @ 00004298 v 0000 + 00835483 n 0202 + 00835483 n 0102 ~ 00005526 v 0000 ~ 00006868 v 0000 ~ 00007300 v 0000 01 + 01 00 | exhale hard; "blow on the soup to cool it down"  
+00007300 29 v 01 puhaltaa_sisään 0 002 @ 00007059 v 0000 $ 00077655 v 0000 01 + 01 00 | blow or breathe hard on or into  
+00007424 29 v 01 haukotella 0 004 @ 00001740 v 0000 + 00837186 n 0101 + 00837186 n 0102 + 10931665 n 0101 01 + 01 00 | utter a yawn, as from lack of oxygen or when one is tired; "The child yawned during the long performance"  
+00007651 29 v 02 niiskuttaa 0 tuhista 0 003 @ 00005136 v 0000 + 00836102 n 0202 + 10748008 n 0101 01 + 01 00 | inhale audibly through the nose; "the sick student was sniffling in the back row"  
+00007846 29 v 06 räpäyttää 0 räpäyttää_silmää 0 iskeä_silmää 0 räpyttää_silmää 0 räpytellä 0 räpyttää 0 007 @ 00010339 v 0000 + 00122237 n 0201 + 00122237 n 0202 + 00122237 n 0101 + 00122237 n 0102 ~ 00008181 v 0000 ~ 00008304 v 0000 01 + 01 00 | briefly shut the eyes; "The TV announcer never seems to blink"  
+00008181 29 v 01 räpyttää 1 002 @ 00007846 v 0000 + 01260030 n 0101 01 + 01 00 | wink or blink, especially repeatedly  
+00008304 29 v 02 räpytellä 1 vinkata 0 001 @ 00007846 v 0000 01 + 01 00 | wink briefly; "bat one's eyelids"  
+00008416 29 v 01 iskeä_silmää 1 001 @ 00946676 v 0000 01 + 01 00 | signal by winking; "She winked at him"  
+00008527 29 v 04 iskeä_silmää 2 räpytellä 2 räpyttää 2 räpyttää_silmiä 0 007 @ 00446403 v 0000 + 00122237 n 0401 + 00122237 n 0402 + 00122237 n 0301 + 00122237 n 0302 + 00122237 n 0201 + 00122237 n 0202 01 + 01 00 | force to go away by blinking; "blink away tears"  
+00008806 29 v 01 katsoa_kieroon 0 001 @ 00034972 v 0000 01 + 01 00 | cross one's eyes as if in strabismus; "The children squinted so as to scare each other"  
+00008965 29 v 02 siristellä 0 siristää 0 001 @ 00034309 v 0000 01 + 01 00 | partly close one's eyes, as when hit by direct blinding light; "The driver squinted as the sun hit his windshield"  
+00009161 29 v 01 säpsähtää 0 002 @ 00034972 v 0000 + 06922474 n 0101 01 + 01 00 | make a face indicating disgust or dislike; "She winced when she heard his pompous speech"  
+00009339 29 v 06 pudottaa 0 varistaa 0 luoda_nahka 0 olla_karvanlähtö 0 olla_sulkasato 0 luoda_nahkansa 0 002 @ 01452438 v 0000 ~ 00009571 v 0000 01 + 01 00 | cast off hair, skin, horn, or feathers; "our dog sheds every Spring"  
+00009571 29 v 02 hilseillä 0 kesiä 0 002 @ 00009339 v 0000 + 11593849 n 0101 01 + 01 00 | peel off in scales; "dry skin desquamates"  
+00009708 29 v 02 nykiä 0 nytkähtää 0 008 @ 00010148 v 0000 $ 01810779 v 0000 + 00336964 n 0205 + 14486357 n 0101 + 00336964 n 0102 + 00336964 n 0101 + 00336964 n 0104 ~ 00009979 v 0000 01 + 01 00 | make an uncontrolled, short, jerky motion; "his face is twitching"  
+00009979 29 v 01 väristä 0 002 @ 00009708 v 0000 + 14486831 n 0101 01 + 01 00 | make fine, irregular, rapid twitching movements; "His heart fibrillated and he died"  
+00010148 29 v 02 liikkua_tahtomattaan 0 liikkua_refleksinomaisesti 0 004 @ 01752647 v 0000 ~ 00009708 v 0000 ~ 00014079 v 0000 ~ 00014275 v 0000 01 + 01 00 | move in an uncontrolled manner  
+00010339 29 v 02 toimia_väkisin 0 toimia_refleksinomaisesti 0 005 @ 00010541 v 0000 ~ 00004912 v 0000 ~ 00007846 v 0000 ~ 00099181 v 0000 ~ 00100433 v 0000 01 + 01 00 | act in an uncontrolled manner  
+00010541 29 v 04 toimia 0 käyttäytyä 0 tehdä 0 menetellä 0 036 $ 01648327 v 0000 $ 00013672 v 0000 ^ 02030357 v 0101 ^ 02030357 v 0102 ~ 00010339 v 0000 ~ 00011504 v 0000 ~ 00011669 v 0000 ~ 00011789 v 0000 ~ 00011929 v 0000 ~ 00012049 v 0000 ~ 00012210 v 0000 ~ 00012321 v 0000 ~ 00012490 v 0000 ~ 00012700 v 0000 ~ 00012862 v 0000 ~ 00012968 v 0000 ~ 00013059 v 0000 ~ 00013237 v 0000 ~ 00013396 v 0000 ~ 00013672 v 0000 ~ 00013898 v 0000 ~ 00102823 v 0000 ~ 00104090 v 0000 ~ 00104592 v 0000 ~ 00104701 v 0000 ~ 01707750 v 0000 ~ 01925603 v 0000 ~ 02272048 v 0000 ~ 02406372 v 0000 ~ 02407301 v 0000 ~ 02408321 v 0000 ~ 02476542 v 0000 ~ 02480339 v 0000 ~ 02483818 v 0000 ~ 02485796 v 0000 ~ 02601328 v 0000 01 + 01 00 | behave in a certain manner; show a certain behavior; conduct or comport oneself; "You should act like an adult"; "Don't behave like a fool"; "What makes her do this way?"; "The dog acts ferocious, but he is really afraid of people"  
+00011504 29 v 01 tehdä_kaikkensa 0 001 @ 00010541 v 0000 01 + 01 00 | try very hard to please someone; "She falls over backwards when she sees her mother-in-law"  
+00011669 29 v 02 rohjeta 0 tohtia 0 001 @ 00010541 v 0000 01 + 01 00 | take liberties or act with too much confidence  
+00011789 29 v 01 käyttäytyä_vulgaaristi 0 001 @ 00010541 v 0000 01 + 01 00 | act in a vulgar manner; "The drunkard tends to vulgarize"  
+00011929 29 v 01 optimoida 0 001 @ 00010541 v 0000 01 + 01 00 | act as an optimist and take a sunny view of the world  
+00012049 29 v 01 puoskaroida 0 004 @ 00010541 v 0000 ;c 00612602 n 0000 + 00633097 n 0101 + 10630146 n 0101 01 + 01 00 | act as a medical quack or a charlatan  
+00012210 29 v 01 uhata 0 001 @ 00010541 v 0000 01 + 01 00 | act in a threatening manner; "A menacing person"  
+00012321 29 v 01 tehdä 1 003 @ 00010541 v 0000 $ 02253244 v 0000 $ 02190206 v 0000 01 + 01 00 | act in a certain way so as to acquire; "make friends"; "make enemies"  
+00012490 29 v 06 mahtailla 0 rehennellä 0 uhota 0 rehvastella 0 herrastella 0 ylvästellä 0 002 @ 00010541 v 0000 + 10812094 n 0201 01 + 01 00 | act in an arrogant, overly self-assured, or conceited manner  
+00012700 29 v 01 käyttäytyä_jäätävästi 0 001 @ 00010541 v 0000 01 + 01 00 | suddenly behave coldly and formally; "She froze when she saw her ex-husband"  
+00012862 29 v 01 huikennella 0 001 @ 00010541 v 0000 01 + 01 00 | behave extremely cruelly and brutally  
+00012968 29 v 01 romantisoida 0 001 @ 00010541 v 0000 01 + 01 00 | act in a romantic way  
+00013059 29 v 02 olla_tunteellinen 0 tunteilla 0 002 @ 00010541 v 0000 + 01214946 n 0201 01 + 01 00 | act in a sentimental way or indulge in sentimental thoughts or expression  
+00013237 29 v 01 hutiloida 0 003 @ 00010541 v 0000 + 00080371 n 0104 + 10010177 n 0101 01 + 01 00 | spoil by behaving clumsily or foolishly; "I bungled it!"  
+00013396 29 v 02 pelata 0 leikkiä 0 002 @ 00010541 v 0000 + 00047602 n 0101 01 + 01 00 | engage in an activity as if it were a game rather than take it seriously; "They played games on their opponents"; "play the stock market"; "play with her feelings"; "toy with an idea"  
+00013672 29 v 02 esittää 0 leikkiä 1 003 @ 00010541 v 0000 $ 00010541 v 0000 $ 01646270 v 0000 01 + 01 00 | pretend to have certain qualities or state of mind; "He acted the idiot"; "She plays deaf when the news are bad"  
+00013898 29 v 03 matkia 0 pelleillä 0 pilkata 0 001 @ 00010541 v 0000 01 + 01 00 | act as a stooge, in a compliant or subordinate manner; "He stooged for the flamboyant Senator"  
+00014079 29 v 05 tutista 0 täristä 0 vapista 0 väristä 1 vavista 0 003 @ 00010148 v 0000 + 14126716 n 0302 + 14126716 n 0201 01 + 01 00 | move with or as if with a tremor; "his hands shook"  
+00014275 29 v 03 täristä 1 hytistä 0 vavista 1 001 @ 00010148 v 0000 01 + 01 00 | shake, as from cold; "The children are shivering--turn on the heat!"  
+00014431 29 v 01 levätä 0 004 @ 01486015 v 0000 ! 00014561 v 0101 ~ 00014718 v 0000 ~ 00016739 v 0000 01 + 01 00 | be at rest  
+00014561 29 v 02 olla_aktiivinen 0 olla_liikkeessä 0 002 ! 00014431 v 0101 ~ 01993115 v 0000 01 + 01 00 | be in a state of action; "she is always moving"  
+00014718 29 v 09 nukkua 0 koisata 0 vetää_lonkkaa 0 levyttää 0 vetää_unta_palloon 0 uinua 0 goijata 0 tutia 0 torkkua 0 029 @ 00014431 v 0000 ^ 00016127 v 0901 ^ 01125627 v 0901 ^ 01125403 v 0901 ! 00020823 v 0901 ^ 00016127 v 0801 ^ 01125627 v 0801 ^ 01125403 v 0801 ! 00020823 v 0801 ^ 00016127 v 0701 ^ 01125627 v 0701 ^ 01125403 v 0701 ! 00020823 v 0701 ^ 00016127 v 0601 ^ 01125627 v 0601 ^ 01125403 v 0601 ! 00020823 v 0601 ^ 00016127 v 0101 ^ 01125627 v 0101 ^ 01125403 v 0101 ! 00020823 v 0101 + 05714849 n 0101 + 15415101 n 0101 + 10741610 n 0101 ~ 00015395 v 0000 ~ 00015826 v 0000 ~ 00016127 v 0000 ~ 00016272 v 0000 ~ 00016530 v 0000 01 + 01 00 | be asleep  
+00015395 29 v 02 nukkua_yhdessä<unconfirmed/> 0 nukkua_yhdessä<approximate/> 1 001 @ 00014718 v 0000 01 + 01 00 | sleep fully clothed in the same bed with one's betrothed  
+00015570 29 v 03 torkahtaa 0 torkkua 1 nuokkua 0 008 @ 00015826 v 0000 ^ 00017634 v 0306 ^ 00017634 v 0307 ^ 00017634 v 0206 + 00858534 n 0201 ^ 00017634 v 0207 + 00858106 n 0104 + 00858534 n 0102 01 + 01 00 | sleep lightly or for a short period of time  
+00015826 29 v 03 torkahtaa 1 ottaa_nokkaunet 0 ottaa_nokoset 0 003 @ 00014718 v 0000 + 15415101 n 0105 ~ 00015570 v 0000 01 + 01 00 | take a siesta; "She naps everyday after lunch for an hour"  
+00016021 29 v 01 nukkua_liian_pitkään 0 001 * 00014718 v 0000 01 + 01 00 | sleep longer than intended  
+00016127 29 v 01 nukkua_pitempään_aamulla 0 001 @ 00014718 v 0000 01 + 01 00 | sleep later than usual or customary; "On Sundays, I sleep in"  
+00016272 29 v 03 nukkua_talviunta 0 talvehtia 0 horrostaa 0 005 @ 00014718 v 0000 ! 00016530 v 0301 ! 00016530 v 0302 ! 00016530 v 0101 ! 00016530 v 0102 01 + 01 00 | sleep during winter; "Bears must eat a lot of food before they hibernate in their caves"  
+00016530 29 v 02 olla_kesähorroksessa 0 suvehtia 0 005 @ 00014718 v 0000 ! 00016272 v 0201 ! 00016272 v 0203 ! 00016272 v 0101 ! 00016272 v 0103 01 + 01 00 | sleep during summer; "certain animals estivate"  
+00016739 29 v 01 torkkua 2 004 @ 00014431 v 0000 ^ 00017634 v 0103 + 00858534 n 0102 ~ 00016933 v 0000 01 + 01 00 | be on the verge of sleeping; "The students were drowsing in the 8 AM class"  
+00016933 29 v 01 nuokkua 1 001 @ 00016739 v 0000 01 + 01 00 | be almost asleep; "The old man sat nodding by the fireplace"  
+00017058 29 v 01 nuokkua 2 000 01 + 01 00 | let the head fall forward through drowsiness; "The old man was nodding in his chair"  
+00017189 29 v 01 nukahtaa 0 001 @ 00017634 v 0000 01 + 01 00 | fall asleep fast, as when one is extremely tired; "after the long drive, we zonked out and slept for 10 hours"  
+00017365 29 v 03 kuorsata 0 vetää_hirsiä 0 vedellä_hirsiä 0 006 @ 00001740 v 0000 * 00014718 v 0000 + 07448732 n 0101 + 10748752 n 0101 + 00835904 n 0102 + 00835904 n 0101 01 + 01 00 | breathe noisily during one's sleep; "she complained that her husband snores"  
+00017634 29 v 07 nukahtaa 1 väsähtää 0 torkahtaa 2 simahtaa 0 vaipua_uneen 0 uinahtaa 0 pilkkiä 0 002 ! 00019061 v 0101 ~ 00017189 v 0000 01 + 01 00 | change from a waking to a sleeping state; "he always falls asleep during lectures"  
+00017875 29 v 04 asettua_nukkumaan_jhk 0 mennä_nukkumaan 0 yöpyä 0 käydä_makuulle 0 002 @ 00018240 v 0000 ~ 00018059 v 0000 01 + 01 00 | go to bed; "We bedded down at midnight"  
+00018059 29 v 03 yöpyä 1 yöpyä_tilapäisesti 0 nukkua 1 001 @ 00017875 v 0000 01 + 01 00 | sleep in a convenient place; "You can crash here, though it's not very comfortable"  
+00018240 29 v 09 käydä_nukkumaan 0 mennä_nukkumaan 1 asettua_nukkumaan 0 ryömiä_peiton_alle<unconfirmed/> 0 painaa_pää_tyynyyn<unconfirmed/> 0 painua_pehkuihin 0 nukahtaa<broader/> 2 mennä_levolle 0 mennä_sänkyyn 0 005 ! 00018664 v 0201 ! 00018664 v 0202 ! 00018664 v 0101 ! 00018664 v 0102 ~ 00017875 v 0000 01 + 01 00 | prepare for sleep; "I usually turn in at midnight"; "He goes to bed at the crack of dawn"  
+00018664 29 v 02 nousta_ylös_vuoteesta 0 nousta_ylös 0 006 ! 00018240 v 0201 ! 00018240 v 0202 + 00325964 n 0201 ! 00018240 v 0101 ! 00018240 v 0102 + 00325964 n 0101 01 + 01 00 | get up and out of bed; "I get up at 7 A.M. every day"; "They rose early"; "He uprose at night"  
+00018943 29 v 01 herättää 0 001 @ 01889204 v 0000 01 + 01 00 | cause to rise; "The sergeant got us up at 2 A.M."  
+00019061 29 v 03 herätä 0 herättää 1 havahtua 0 010 @ 00142253 v 0000 * 00014718 v 0000 + 05712404 n 0201 + 10892500 n 0201 + 01254779 n 0201 + 01254779 n 0203 ! 00017634 v 0101 + 01254779 n 0101 + 10892500 n 0101 + 01254779 n 0103 01 + 01 00 | stop sleeping; "She woke up to the sound of the alarm clock"  
+00019374 29 v 03 havahtua 1 herätä 1 herättää 2 013 @ 00123109 v 0000 + 10892630 n 0301 + 05712404 n 0301 ! 00019888 v 0201 ! 00019888 v 0202 + 01254779 n 0201 + 10892630 n 0201 + 01254779 n 0203 ! 00019888 v 0101 ! 00019888 v 0102 ~ 00019792 v 0000 ~ 00022591 v 0000 ~ 00104447 v 0000 01 + 01 00 | cause to become awake or conscious; "He was roused by the drunken men in the street"; "Please wake me at 6 AM."  
+00019792 29 v 01 herättää_uudelleen 0 001 @ 00019374 v 0000 01 + 01 00 | awaken once again  
+00019888 29 v 02 nukuttaa 0 vaivuttaa_uneen 0 006 @ 00123109 v 0000 > 00014718 v 0000 ! 00019374 v 0201 ! 00019374 v 0202 ! 00019374 v 0101 ! 00019374 v 0102 01 + 01 00 | make fall asleep; "The soft music caused us to fall asleep"  
+00020121 29 v 01 vaikuttaa 0 011 @ 00123109 v 0000 ~ 00020444 v 0000 ~ 00020653 v 0000 ~ 00022883 v 0000 ~ 00023315 v 0000 ~ 00025698 v 0000 ~ 00026079 v 0000 ~ 00031701 v 0000 ~ 00103976 v 0000 ~ 00697992 v 0000 ~ 01138243 v 0000 01 + 01 00 | act physically on; have an effect upon; "the medicine affects my heart rate"  
+00020444 29 v 02 hyökätä 0 syövyttää 0 003 @ 00020121 v 0000 + 13555439 n 0202 + 09949525 n 0101 01 + 01 00 | begin to injure; "The cancer cells are attacking his liver"; "Rust is attacking the metal"  
+00020653 29 v 01 haavautua 0 004 @ 00020121 v 0000 + 14333452 n 0101 + 03361973 a 0101 + 14333452 n 0102 01 + 01 00 | affect with an ulcer; "Her stomach was ulcerated"  
+00020823 29 v 01 herätä 2 006 ! 00014718 v 0101 ! 00014718 v 0106 ! 00014718 v 0107 ! 00014718 v 0108 ! 00014718 v 0109 ~ 00021007 v 0000 01 + 01 00 | be awake, be alert, be there  
+00021007 29 v 01 valvoa 0 001 @ 00020823 v 0000 01 + 01 00 | not go to bed; "Don't stay up so late--you have to go to work tomorrow"; "We sat up all night to watch the election"  
+00021187 29 v 01 pitää_hereillä 0 001 > 00021007 v 0000 01 + 01 00 | prevent from going to bed at night; "The anticipation of the trip kept the children up all night"; "I kept myself up all night studying for the exam"  
+00021411 29 v 03 hypnotisoida 0 lumota 0 ottaa_valtoihinsa 0 005 @ 00022883 v 0000 + 10328497 n 0102 + 14148188 n 0101 + 10328497 n 0101 ~ 00021600 v 0000 01 + 01 00 | induce hypnosis in  
+00021600 29 v 02 saattaa_transsitilaan 0 lumota 1 001 @ 00021411 v 0000 01 + 01 00 | put into a trance  
+00021705 29 v 02 nukuttaa 1 puuduttaa 0 010 @ 00082334 v 0000 ! 00022591 v 0201 + 02735538 n 0204 ! 00022591 v 0101 + 02735538 n 0103 ~ 00022085 v 0000 ~ 00022185 v 0000 ~ 00022288 v 0000 ~ 00022453 v 0000 ~ 02101545 v 0000 01 + 01 00 | administer an anesthetic drug to; "The patient must be anesthetized before the operation"; "anesthetize the gum before extracting the teeth"  
+00022085 29 v 01 nukuttaa_eetterillä 0 001 @ 00021705 v 0000 01 + 01 00 | anesthetize with ether  
+00022185 29 v 01 puuduttaa_kokaiinilla 0 001 @ 00021705 v 0000 01 + 01 00 | anesthetize with cocaine  
+00022288 29 v 01 nukuttaa_kloroformilla 0 001 @ 00021705 v 0000 01 + 01 00 | anesthetize with chloroform; "Doctors used to put people under by chloroforming them"  
+00022453 29 v 01 puuduttaa_jäädyttämällä<unconfirmed/> 0 002 @ 00021705 v 0000 ;c 00671223 n 0000 01 + 01 00 | anesthetize by cold  
+00022591 29 v 04 palauttaa<note>jtak_mieleen</note> 0 tuoda<note>jtak_mieleen</note> 0 virvoittaa 0 herättää<note>muistoja</note> 3 004 @ 00019374 v 0000 ! 00021705 v 0101 ! 00021705 v 0102 ~ 00095742 v 0000 01 + 01 00 | return to consciousness; "These pictures bring back sad memories"  
+00022883 29 v 03 rauhoittaa 0 antaa_rauhoittavia_lääkkeitä 0 antaa_rauhoittavia 0 012 @ 00020121 v 0000 ! 00023315 v 0301 ! 00023315 v 0302 ! 00023315 v 0201 ! 00023315 v 0202 ! 00023315 v 0101 + 00695493 n 0101 + 02445446 a 0102 + 04498851 n 0101 + 04498851 n 0102 ! 00023315 v 0102 ~ 00021411 v 0000 01 + 01 00 | cause to be calm or quiet as by administering a sedative to; "The patient must be sedated before the operation"  
+00023315 29 v 02 piristää 0 stimuloida 0 014 @ 00020121 v 0000 ! 00022883 v 0201 ! 00023734 v 0201 ! 00022883 v 0202 ! 00022883 v 0203 ! 00022883 v 0101 + 04349893 n 0101 ! 00023734 v 0101 ! 00022883 v 0102 ! 00022883 v 0103 ~ 00023860 v 0000 ~ 00024745 v 0000 ~ 00028700 v 0000 ~ 00188999 v 0000 01 + 01 00 | cause to be alert and energetic; "Coffee and tea stimulate me"; "This herbal infusion doesn't stimulate"  
+00023734 29 v 01 viedä_energiaa 0 003 @ 00219360 v 0000 ! 00023315 v 0101 ! 00023315 v 0102 01 + 01 00 | deprive of energy  
+00023860 29 v 01 katekoida<unconfirmed/> 0 001 @ 00023315 v 0000 01 + 01 00 | inject with libidinal energy  
+00023969 29 v 01 piristyä 0 002 @ 00090251 v 0000 + 03962477 n 0101 01 + 01 00 | gain or regain energy; "I picked up after a nap"  
+00024102 29 v 02 pyörtyä 0 menettää_tajuntansa 0 002 @ 00024308 v 0000 + 07532449 n 0101 01 + 01 00 | pass out from weakness, physical or emotional distress due to a loss of blood supply to the brain  
+00024308 29 v 02 menettää_tajuntansa 1 pyörtyä 1 003 @ 00142253 v 0000 + 05713545 n 0201 ~ 00024102 v 0000 01 + 01 00 | lose consciousness due to a sudden trauma, for example  
+00024489 29 v 04 palata_tajuihinsa 0 virota 0 elpyä 0 tulla_tajuihinsa 0 003 @ 00142253 v 0000 $ 00095742 v 0000 $ 00024745 v 0000 01 + 01 00 | return to consciousness; "The patient came to quickly"; "She revived after the doctor gave her an injection"  
+00024745 29 v 07 tehdä_eloisaksi 0 herättää_henkiin 0 elävöittää 0 entisöidä 0 korjata 0 herättää_eloon 0 virkistää 0 003 @ 00023315 v 0000 $ 00024489 v 0000 + 01047025 n 0301 01 + 01 00 | give new life or energy to; "A hot soup will revive me"; "This will renovate my spirits"; "This treatment repaired my health"  
+00025077 29 v 03 virkistää 1 piristää 1 elävöittää 1 006 @ 00123109 v 0000 ^ 00025282 v 0203 ^ 00025282 v 0204 ^ 00025282 v 0205 ^ 00025282 v 0202 ! 00073348 v 0101 01 + 01 00 | make fresh again  
+00025282 29 v 05 raikastaa 0 virkistää 2 piristää 2 siistiytyä 0 virkistäytyä 0 003 @ 00106949 v 0000 + 00400155 n 0201 ~ 00025519 v 0000 01 + 01 00 | become or make oneself fresh again; "She freshened up after the tennis game"  
+00025519 29 v 01 pestä 0 004 @ 00025282 v 0000 + 00258432 n 0101 + 00258947 n 0101 + 00258947 n 0102 01 + 01 00 | wash one's face and hands; "She freshened up in the bathroom"  
+00025698 29 v 01 jännittyä 0 005 @ 00020121 v 0000 > 00026532 v 0000 ! 00026079 v 0101 + 14669580 n 0101 ~ 00027706 v 0000 01 + 01 00 | cause to be tense and uneasy or nervous or anxious; "he got a phone call from his lawyer that tensed him up"  
+00025947 29 v 01 vääntää 0 001 @ 01169542 v 0000 01 + 01 00 | twist (a body part) into a strained position; "crick your neck"  
+00026079 29 v 02 rentouttaa 0 tehdä_rentoutuneeksi 0 008 @ 00020121 v 0000 > 00026773 v 0000 ! 00025698 v 0101 + 04102496 n 0102 + 07575475 n 0102 + 09525270 n 0101 + 02445872 a 0101 ~ 00026350 v 0000 01 + 01 00 | cause to feel relaxed; "A hot bath always relaxes me"  
+00026350 29 v 02 rentoutua 0 vapautua 0 001 @ 00026079 v 0000 01 + 01 00 | release from mental strain, tension, or formality; "unbend the mind from absorbing too much information"  
+00026532 29 v 02 jännittyä 1 pingottua 0 005 @ 00142253 v 0000 ! 00026773 v 0101 + 14669580 n 0101 + 05607942 n 0101 ! 00026773 v 0106 01 + 01 00 | become tense, nervous, or uneasy; "He tensed up when he saw his opponent enter the room"  
+00026773 29 v 06 rentoutua 1 höllentää 0 löysentää 0 hellittää 0 ottaa_rennosti 0 rauhoittua 0 008 @ 00142253 v 0000 ! 00026532 v 0601 ! 00026532 v 0101 + 01061885 n 0102 + 13667250 n 0101 + 02445872 a 0101 ~ 00027155 v 0000 ~ 00027338 v 0000 01 + 01 00 | become less tense, rest, or take one's ease; "He relaxed in the hot tub"; "Let's all relax after a hard day's work"  
+00027155 29 v 03 rentoutua 2 oleilla 0 oleskella 0 001 @ 00026773 v 0000 01 + 01 00 | engage in passive relaxation; "After a hard day's work, I vegetate in front of the television"  
+00027338 29 v 04 istua_mukavasti 0 ottaa_rennosti 1 levätä 1 rentoutua 3 001 @ 00026773 v 0000 01 + 01 00 | settle into a comfortable sitting position  
+00027493 29 v 03 verryttää 0 lämmitellä 0 verrytellä 0 002 @ 00097428 v 0000 + 01142151 n 0201 01 + 01 00 | make one's body limber or suppler by stretching, as if to prepare for strenuous physical activity  
+00027706 29 v 01 venytellä 0 005 @ 00025698 v 0000 + 00628648 n 0101 + 00628648 n 0102 ~ 00027958 v 0000 ~ 00028500 v 0000 01 + 01 00 | extend one's limbs or muscles, or the entire body; "Stretch your legs!"; "Extend your right arm above your head"  
+00027958 29 v 01 sitoa_raajat_haralleen 0 001 @ 00027706 v 0000 01 + 01 00 | stretch out completely; "They spread-eagled him across the floor"  
+00028103 29 v 03 työntää_esiin 0 kurkottaa 0 ojentaa 0 003 @ 00946676 v 0000 + 05330884 n 0302 ~ 00028344 v 0000 01 + 01 00 | thrust or extend out; "He held out his hand"; "point a finger"; "extend a hand"; "the bee exserted its sting"  
+00028344 29 v 01 yliojentaa 0 002 @ 00028103 v 0000 + 00369369 n 0101 01 + 01 00 | extend a joint beyond its normal range; "Don't hyperextend your elbow"  
+00028500 29 v 02 kurkottaa 1 kurkottautua 0 002 @ 00027706 v 0000 + 02039299 n 0101 01 + 01 00 | stretch (the neck) so as to see better; "The women craned their necks to see the President drive by"  
+00028700 29 v 02 elvyttää 0 virkistää 3 003 @ 00023315 v 0000 + 01047025 n 0202 + 09520946 n 0102 01 + 01 00 | impart vigor, strength, or vitality to; "Exercise is invigorating"  
+00028884 29 v 01 hymyillä 0 010 @ 00034972 v 0000 + 06921311 n 0101 + 06921311 n 0102 + 06921311 n 0103 + 10745769 n 0101 ~ 00029191 v 0000 ~ 00029336 v 0000 ~ 00029707 v 0000 ~ 00029859 v 0000 ~ 00033172 v 0000 01 + 01 00 | change one's facial expression by spreading the lips, often to signal pleasure  
+00029191 29 v 01 paljastaa_hymykuopat 0 001 @ 00028884 v 0000 01 + 01 00 | produce dimples while smiling; "The child dimpled up to the adults"  
+00029336 29 v 04 hymyillä_leveästi 0 virnistää 0 virnuilla 0 virnistellä 0 011 @ 00028884 v 0000 + 10279004 n 0301 + 10279004 n 0302 + 06921311 n 0306 + 06921311 n 0304 + 06921311 n 0305 + 10279004 n 0201 + 10279004 n 0202 + 06921311 n 0206 + 06921311 n 0204 + 06921311 n 0205 01 + 01 00 | to draw back the lips and reveal the teeth, in a smile, grimace, or snarl  
+00029707 29 v 02 hymyillä_säteilevästi 0 loistaa 0 001 @ 00028884 v 0000 01 + 01 00 | smile radiantly; express joy through one's facial expression  
+00029859 29 v 03 hymyillä_omahyväisesti 0 hymyillä_teeskennellen 0 hymyillä_teennäisesti 0 002 @ 00028884 v 0000 ~ 00030041 v 0000 01 + 01 00 | smile affectedly or derisively  
+00030041 29 v 01 virnistellä 1 001 @ 00029859 v 0000 01 + 01 00 | to smirk contemptuously  
+00030134 29 v 02 kiljua 0 ulvoa 0 002 @ 00032354 v 0000 + 07433179 n 0101 01 + 01 00 | laugh loudly and harshly  
+00030248 29 v 01 hörönauraa 0 001 @ 00032354 v 0000 01 + 01 00 | laugh a deep, hearty laugh  
+00030344 29 v 02 nauraa_äänekkäästi 0 ulvoa 1 002 @ 00032354 v 0000 + 07171237 n 0201 01 + 01 00 | laugh unrestrainedly and heartily  
+00030483 29 v 02 hihittää 0 tirskua 0 004 @ 00032354 v 0000 + 07172456 n 0203 + 07172456 n 0205 + 07172456 n 0101 01 + 01 00 | laugh quietly  
+00030628 29 v 03 kikattaa 0 tirskua 1 hihittää 1 003 @ 00032354 v 0000 + 10842700 n 0102 + 07172102 n 0101 01 + 01 00 | laugh nervously; "The girls giggled when the rock star came into the classroom"  
+00030832 29 v 02 tirskahtaa 0 hohottaa 0 001 @ 00032354 v 0000 01 + 01 00 | laugh unrestrainedly  
+00030931 29 v 02 luhistua 0 murtua 0 001 @ 00219360 v 0000 01 + 01 00 | weaken or destroy in spirit or body; "His resistance was broken"; "a man broken by the terrible experience of near-death"  
+00031127 29 v 02 romahtaa 0 lyyhistyä 0 004 @ 00064780 v 0000 + 14187960 n 0101 ~ 00031315 v 0000 ~ 00031801 v 0000 01 + 01 00 | collapse due to fatigue, an illness, or a sudden attack  
+00031315 29 v 02 kuolla_kuin_kärpäsiä 0 pudota_kuin_kärpäsiä 0 001 @ 00031127 v 0000 01 + 01 00 | rapidly collapse, die, or drop out in large numbers; "the contestants dropped like flies when the thermometer hit one hundred degrees"  
+00031556 29 v 03 kouristaa 0 krampata 0 vetää_suonta 0 001 @ 00064780 v 0000 01 + 01 00 | suffer from sudden painful contraction of a muscle  
+00031701 29 v 01 kouristaa 1 001 @ 00020121 v 0000 01 + 01 00 | affect with or as if with a cramp  
+00031801 29 v 02 kompastua 0 kaatua 0 001 @ 00031127 v 0000 01 + 01 00 | fall forward and down; "The old woman went over without a sound"  
+00031941 29 v 01 käkättää 0 002 @ 00032354 v 0000 + 07171855 n 0101 01 + 01 00 | emit a loud, unpleasant kind of laughing  
+00032069 29 v 03 hekottaa 0 hohottaa 1 nauraa_äänekkäästi 1 001 @ 00032354 v 0000 01 + 01 00 | laugh boisterously  
+00032189 29 v 03 hihittää 2 höröttää 0 myhähdellä 0 003 @ 00032354 v 0000 + 07171970 n 0201 + 07171970 n 0102 01 + 01 00 | laugh quietly or with restraint  
+00032354 29 v 04 nauraa 0 ilmaista_iloa 0 ilmaista_hilpeyttä 0 iloita 0 027 @ 01725152 v 0000 ^ 00768696 v 0401 ^ 00768696 v 0402 ^ 00816259 v 0405 ^ 00816259 v 0403 ! 00065334 v 0401 ! 00065334 v 0402 ^ 00768696 v 0101 ^ 00768696 v 0102 ^ 00816259 v 0105 ^ 00816259 v 0103 ! 00065334 v 0101 + 07171444 n 0101 + 10383085 n 0101 + 06921786 n 0101 ! 00065334 v 0102 ~ 00030134 v 0000 ~ 00030248 v 0000 ~ 00030344 v 0000 ~ 00030483 v 0000 ~ 00030628 v 0000 ~ 00030832 v 0000 ~ 00031941 v 0000 ~ 00032069 v 0000 ~ 00032189 v 0000 ~ 00032949 v 0000 ~ 00033049 v 0000 01 + 01 00 | produce laughter  
+00032949 29 v 01 nauraa_kippurassa 0 001 @ 00032354 v 0000 01 + 01 00 | be overcome with laughter  
+00033049 29 v 01 hekottaa 1 002 @ 00032354 v 0000 + 07171759 n 0101 01 + 01 00 | laugh loudly and in an unrestrained way  
+00033172 29 v 02 hymyillä_ivallisesti 0 virnuilla 1 005 @ 00028884 v 0000 $ 00033431 v 0000 + 10747735 n 0201 + 06761760 n 0201 + 06761536 n 0102 01 + 01 00 | smile contemptuously; "she sneered at her little sister's efforts to play the song on the piano"  
+00033431 29 v 02 hymyillä_ivallisesti 1 virnuilla 2 005 @ 00902070 v 0000 $ 00033172 v 0000 + 10747735 n 0201 + 06761760 n 0201 + 06761536 n 0102 01 + 01 00 | express through a scornful smile; "she sneered her contempt"  
+00033654 29 v 04 rypistää_otsaansa 0 mulkaista 0 kurtistaa_kulmiaan 0 mulkoilla 0 003 @ 00034972 v 0000 + 00878247 n 0202 ~ 00034530 v 0000 01 + 01 00 | look angry or sullen, wrinkle one's forehead, as if to signal disapproval  
+00033885 29 v 04 mulkaista 1 katsoa_vihaisesti 0 tuijottaa_vihaisesti 0 mulkoilla 1 002 @ 00034112 v 0000 + 00878247 n 0102 01 + 01 00 | look at with a fixed gaze; "The girl glared at the man who tried to make a pass at her"  
+00034112 29 v 01 tuijottaa 0 004 @ 02037443 v 0000 + 10779909 n 0101 + 00877901 n 0101 ~ 00033885 v 0000 01 + 01 00 | fixate one's eyes; "The ancestor in the painting is staring down menacingly"  
+00034309 29 v 01 näyttää_jltak 0 002 @ 02488161 v 0000 ~ 00008965 v 0000 01 + 01 00 | have a certain outward or facial expression; "How does she look?"; "The child looks unhappy"; "She looked pale after the surgery"  
+00034530 29 v 02 mulkaista 2 katsoa_vihaisesti 1 001 @ 00033654 v 0000 01 + 01 00 | frown with displeasure  
+00034639 29 v 01 kohauttaa 0 002 @ 00946676 v 0000 ^ 00711353 v 0101 01 + 01 00 | raise one's shoulders to indicate indifference or resignation  
+00034785 29 v 02 taputtaa 0 läimäyttää 0 003 @ 00946676 v 0000 + 06735959 n 0103 + 10056511 n 0101 01 + 01 00 | clap one's hands together; "The children were clapping to the music"  
+00034972 29 v 03 irvistää 0 ilmehtiä 0 irvistellä 0 008 @ 00709901 v 0000 + 06920750 n 0101 ~ 00008806 v 0000 ~ 00009161 v 0000 ~ 00028884 v 0000 ~ 00033654 v 0000 ~ 00035319 v 0000 ~ 00035446 v 0000 01 + 01 00 | contort the face to indicate a certain mental or emotional state; "He grimaced when he saw the amount of homework he had to do"  
+00035319 29 v 01 vääntää 1 001 @ 00034972 v 0000 01 + 01 00 | twist into a strained configuration; "screw up one's face"  
+00035446 29 v 01 mutristaa 0 003 @ 00034972 v 0000 + 06920925 n 0101 + 06920925 n 0103 01 + 01 00 | make a sad face and thrust out one's lower lip; "mop and mow"; "The girl pouted"  
+00035629 29 v 01 niistää 0 001 @ 00102224 v 0000 01 + 01 00 | free of obstruction by blowing air through; "blow one's nose"  
+00035757 29 v 02 selvittää_kurkkua 0 rykiä 0 001 @ 00005786 v 0000 01 + 01 00 | clear mucus or food from one's throat; "he cleared his throat before he started to speak"  
+00035932 29 v 01 käydä_suihkussa 0 001 @ 00036251 v 0000 01 + 01 00 | take a shower; wash one's body in the shower; "You should shower after vigorous exercise"  
+00036096 29 v 01 hautoa 0 002 @ 00038442 v 0000 + 00708213 n 0101 01 + 01 00 | bathe with warm water or medicated lotions; "His legs should be fomented"  
+00036251 29 v 03 kylpeä 0 käydä_kylvyssä 0 peseytyä 0 004 @ 00036440 v 0000 + 00258432 n 0301 + 09973019 n 0101 ~ 00035932 v 0000 01 + 01 00 | cleanse the entire body; "bathe daily"  
+00036440 29 v 02 siistiä 0 puhdistaa 0 011 @ 00040763 v 0000 + 00254360 n 0201 + 00254360 n 0102 ~ 00036251 v 0000 ~ 00036831 v 0000 ~ 00037013 v 0000 ~ 00037553 v 0000 ~ 00038442 v 0000 ~ 00038736 v 0000 ~ 00042248 v 0000 ~ 00474849 v 0000 01 + 01 00 | clean one's body or parts thereof, as by washing; "clean up before you see your grandparents"; "clean your fingernails before dinner"  
+00036831 29 v 01 puhdistaa_nuolemalla 0 002 @ 00036440 v 0000 $ 00037013 v 0000 01 + 01 00 | to cleanse (itself or another animal) by licking; "The cat washes several times a day"  
+00037013 29 v 02 puhdistaa 1 pestä 1 011 @ 00036440 v 0000 $ 00036831 v 0000 + 00696688 n 0201 + 00258947 n 0201 + 00258947 n 0202 ^ 00025519 v 0101 ~ 00037309 v 0000 ~ 00037401 v 0000 ~ 00037761 v 0000 ~ 00042392 v 0000 ~ 00445621 v 0000 01 + 01 00 | cleanse (one's body) with soap and water  
+00037309 29 v 01 pestä_sienellä 0 001 @ 00037013 v 0000 01 + 01 00 | wash with a sponge  
+00037401 29 v 02 kuurata 0 pestä 2 002 @ 00037013 v 0000 + 00255112 n 0101 01 + 01 00 | wash thoroughly; "surgeons must scrub prior to an operation"  
+00037553 29 v 02 saippuoida 0 vaahdottaa 0 005 @ 00036440 v 0000 * 00037013 v 0000 + 09454788 n 0201 + 09557508 n 0202 + 04282570 n 0101 01 + 01 00 | rub soap all over, usually with the purpose of cleaning  
+00037761 29 v 02 kurlata 0 huuhdella 0 002 @ 00037013 v 0000 + 14984489 n 0101 01 + 01 00 | rinse one's mouth and throat with mouthwash; "gargle with this liquid"  
+00037926 29 v 03 ajaa_karvat 0 ajaa_partansa 0 ajella 0 005 @ 00040763 v 0000 + 00258000 n 0202 + 00258000 n 0102 ~ 00038240 v 0000 ~ 00038326 v 0000 01 + 01 00 | remove body hair with a razor  
+00038121 29 v 02 poistaa_karvat 0 epiloida 0 001 @ 00169848 v 0000 01 + 01 00 | remove body hair; "epilate her legs"  
+00038240 29 v 01 ajaa_parta 0 001 @ 00037926 v 0000 01 + 01 00 | shave with a razor  
+00038326 29 v 01 ajella_munkin_pää 0 001 @ 00037926 v 0000 01 + 01 00 | shave the head of a newly inducted monk  
+00038442 29 v 02 kylvettää 0 pestä_jkta_ammeessa 0 008 @ 00036440 v 0000 + 09973019 n 0101 + 00426713 n 0101 + 00261071 n 0101 + 00261071 n 0102 + 02836409 n 0101 + 02835685 n 0101 ~ 00036096 v 0000 01 + 01 00 | clean one's body by immersion into water; "The child should bathe every day"  
+00038736 29 v 01 huuhdella 1 003 @ 00036440 v 0000 + 03255596 n 0101 + 00695915 n 0101 01 + 01 00 | direct a spray of water into a bodily cavity, for cleaning  
+00038897 29 v 03 kammata 0 suoria 0 selvittää 0 005 @ 00040763 v 0000 + 03104123 n 0101 + 00260090 n 0101 ~ 00039148 v 0000 ~ 00040620 v 0000 01 + 01 00 | smoothen and neaten with or as with a comb; "comb your hair before dinner"; "comb the wool"  
+00039148 29 v 03 silottaa 0 siistiä 1 harjata 0 001 @ 00038897 v 0000 01 + 01 00 | give a smooth and glossy appearance; "slick one's hair"  
+00039290 29 v 05 koristella 0 laittaa 0 kammata 1 tehdä_kampaus 0 asetella 0 005 @ 00040763 v 0000 $ 00045987 v 0000 + 05293603 n 0301 ~ 00039531 v 0000 ~ 00039891 v 0000 01 + 01 00 | arrange attractively; "dress my hair for the wedding"  
+00039531 29 v 01 leikata_polkkatukka 0 001 @ 00039290 v 0000 01 + 01 00 | cut hair in the style of a bob; "Bernice bobs her hair these days!"  
+00039675 29 v 01 kammata_nostettu_tukkalaite 0 001 @ 01597006 v 0000 01 + 01 00 | style women's hair in a pompadour  
+00039793 29 v 01 taivuttaa 0 001 @ 00039891 v 0000 01 + 01 00 | make a marcel in a woman's hair  
+00039891 29 v 01 taivuttaa 1 004 @ 00039290 v 0000 ~ 00039793 v 0000 ~ 00040070 v 0000 ~ 00040226 v 0000 01 + 01 00 | set waves in; "she asked the hairdresser to wave her hair"  
+00040070 29 v 03 aallottaa 0 rihlata 0 uurtaa 0 001 @ 00039891 v 0000 01 + 01 00 | make wavy with a heated goffering iron; "goffer the trim of the dress"  
+00040226 29 v 01 permanentata 0 002 @ 00039891 v 0000 + 05297236 n 0101 01 + 01 00 | give a permanent wave to; "She perms her hair"  
+00040360 29 v 03 laittaa_muotovaahtoa 0 laittaa_geeliä 0 levittää_geeliä 0 001 @ 00040763 v 0000 01 + 01 00 | apply a styling gel to; "she mousses her hair"  
+00040523 29 v 01 panna_jhk_pomadaa 0 001 @ 00040763 v 0000 01 + 01 00 | apply pomade to (hair)  
+00040620 29 v 01 tupeerata 0 001 @ 00038897 v 0000 01 + 01 00 | ruffle (one's hair) by combing the ends towards the scalp, for a full effect  
+00040763 29 v 03 huolitella 0 huolitella<unconfirmed/> 1 siistiä 2 015 @ 00284990 v 0000 ~ 00036440 v 0000 ~ 00037926 v 0000 ~ 00038897 v 0000 ~ 00039290 v 0000 ~ 00040360 v 0000 ~ 00040523 v 0000 ~ 00041184 v 0000 ~ 00041349 v 0000 ~ 00042843 v 0000 ~ 00043118 v 0000 ~ 00043302 v 0000 ~ 00043435 v 0000 ~ 00043623 v 0000 ~ 00043864 v 0000 01 + 01 00 | care for one's external appearance; "He is always well-groomed"  
+00041184 29 v 01 siistiytyä 1 002 @ 00040763 v 0000 + 00254360 n 0103 01 + 01 00 | make oneself clean, presentable or neat; "Clean up before you go to the party"  
+00041349 29 v 02 meikata 0 ehostaa 0 006 @ 00040763 v 0000 + 03746211 n 0101 ~ 00041611 v 0000 ~ 00041821 v 0000 ~ 00041945 v 0000 ~ 00042530 v 0000 01 + 01 00 | apply make-up or cosmetics to one's face to appear prettier; "She makes herself up every morning"  
+00041611 29 v 01 korostaa 0 002 @ 00041349 v 0000 + 03551182 n 0101 01 + 01 00 | apply a highlighter to one's cheeks or eyebrows in order to make them more prominent; "highlight the area above your eyebrows"  
+00041821 29 v 01 levittää_huulipunaa 0 001 @ 00041349 v 0000 01 + 01 00 | apply lipstick to; "She lipsticked her mouth"  
+00041945 29 v 01 laittaa_poskipunaa 0 001 @ 00041349 v 0000 01 + 01 00 | redden by applying rouge to; "she rouged her cheeks"  
+00042073 29 v 01 käyttää_hoitoainetta 0 001 @ 00042392 v 0000 01 + 01 00 | apply conditioner to in order to make smooth and shiny; "I condition my hair after washing it"  
+00042248 29 v 01 puhdistaa_hammaslangalla 0 001 @ 00036440 v 0000 01 + 01 00 | use dental floss to clean; "floss your teeth after every meal"  
+00042392 29 v 02 pestä_tukka 0 pestä_tukkansa_shampoolla 0 002 @ 00037013 v 0000 ~ 00042073 v 0000 01 + 01 00 | use shampoo on (hair)  
+00042530 29 v 01 puuteroida 0 004 @ 00041349 v 0000 + 04024653 n 0103 + 10595392 n 0101 ~ 00042725 v 0000 01 + 01 00 | apply powder to; "She powdered her nose"; "The King wears a powdered wig"  
+00042725 29 v 01 talkita 0 002 @ 00042530 v 0000 + 15201452 n 0101 01 + 01 00 | apply talcum powder to (one's body)  
+00042843 29 v 01 hoitaa_käsiä_ja_kynsiä 0 001 @ 00040763 v 0000 01 + 01 00 | care for (one's hand) by cutting and shaping the nails, etc.  
+00042986 29 v 01 hoitaa_käsiä_ja_kynsiä 1 001 @ 01490724 v 0000 01 + 01 00 | trim carefully and neatly; "manicure fingernails"  
+00043118 29 v 02 parturoida 0 leikata_hiukset 0 003 @ 00040763 v 0000 + 09968192 n 0101 + 09968192 n 0103 01 + 01 00 | perform the services of a barber: cut the hair and/or beard of  
+00043302 29 v 01 tehdä_jalkahoito 0 001 @ 00040763 v 0000 01 + 01 00 | care for one's feet by cutting and shaping the nails, etc.  
+00043435 29 v 02 laittautua 0 kaunistautua 0 001 @ 00040763 v 0000 01 + 01 00 | use special care in dressing, making-up, etc.; "She dolled herself up for the night out with her friends"  
+00043623 29 v 07 koristautua 0 siistiytyä 2 tälläytyä 0 pyntätä 0 siistiä 3 sliipata 0 kaunistautua 1 001 @ 00040763 v 0000 01 + 01 00 | dress and groom with particular care, as for a special occasion; "He spruced up for the party"  
+00043864 29 v 02 parfymoida 0 käyttää_hajuvettä 0 004 @ 00040763 v 0000 + 03948203 n 0102 + 03947752 n 0102 + 05747544 n 0103 01 + 01 00 | apply perfume to; "She perfumes herself every day"  
+00044060 29 v 04 laittautua 1 tälläytyä 1 koristautua 1 pukeutua 0 004 @ 00044550 v 0000 $ 00046847 v 0000 + 02754087 n 0403 + 00828862 n 0201 01 + 01 00 | dress or groom with elaborate care; "She likes to dress when going to the opera"  
+00044302 29 v 01 ylipukeutua 0 001 @ 00044550 v 0000 01 + 01 00 | dress up showily; "He pranked himself out in his best clothes"  
+00044433 29 v 01 pukeutua_mauttomasti 0 001 @ 00044550 v 0000 01 + 01 00 | dress up in a cheap and provocative way  
+00044550 29 v 08 ylipukeutua 1 laittautua 2 pynttäytyä 0 laittautua_hienoksi 0 tälläytyä 2 asustaa 0 pyntätä 1 pukeutua 1 012 @ 00046847 v 0000 $ 00045095 v 0000 $ 00051893 v 0000 + 02782346 n 0601 ^ 00046847 v 0201 ! 00045653 v 0201 ! 00045653 v 0102 ~ 00044060 v 0000 ~ 00044302 v 0000 ~ 00044433 v 0000 ~ 00045354 v 0000 ~ 00045537 v 0000 01 + 01 00 | put on special clothes to appear particularly appealing and attractive; "She never dresses up, even when she goes to the opera"; "The young girls were all fancied up for the party"  
+00045095 29 v 01 pukeutua 2 006 @ 00046847 v 0000 $ 00046847 v 0000 $ 00044550 v 0000 + 02782346 n 0102 + 10162571 n 0101 ~ 00052356 v 0000 01 + 01 00 | dress in a certain manner; "She dresses in the latest Paris fashion"; "he dressed up in a suit and tie"  
+00045354 29 v 01 vaatettaa<narrower/> 0 001 @ 00044550 v 0000 01 + 01 00 | adorn with a robe  
+00045449 29 v 01 pukeutua<broader/> 3 001 @ 00048265 v 0000 01 + 01 00 | dress primly  
+00045537 29 v 01 ylipukeutua<approximate/> 2 001 @ 00044550 v 0000 01 + 01 00 | dress up garishly and tastelessly  
+00045653 29 v 02 pukeutua_rennosti 0 alipukeutua<unconfirmed/> 0 003 @ 00046847 v 0000 ! 00044550 v 0201 ! 00044550 v 0102 01 + 01 00 | dress informally and casually; "On Fridays, employees can underdress"  
+00045861 29 v 01 laittautua<approximate/> 3 001 @ 00046847 v 0000 01 + 01 00 | dress very carefully and in a finicky manner  
+00045987 29 v 06 järjestää_hiukset 0 kammata 2 sukia 0 harjata 1 puhdistaa 2 siistiä 4 002 @ 00284990 v 0000 $ 00039290 v 0000 01 + 01 00 | give a neat appearance to; "groom the dogs"; "dress the horses"  
+00046197 29 v 01 laihduttaa 0 004 @ 00142253 v 0000 ! 00046476 v 0101 + 13665256 n 0101 ~ 00046334 v 0000 01 + 01 00 | take off weight  
+00046334 29 v 01 hikoilla<approximate/> 0 001 @ 00046197 v 0000 01 + 01 00 | lose weight by sweating; "I sweated off 3 pounds in the sauna"  
+00046476 29 v 01 lihoa 0 005 @ 00142253 v 0000 ! 00046197 v 0101 + 10247946 n 0101 ~ 00046691 v 0000 ~ 00104328 v 0000 01 + 01 00 | increase (one's body weight); "She gained 20 pounds when she stopped exercising"  
+00046691 29 v 03 pyöristyä 0 lihoa 1 tukevoitua 0 001 @ 00046476 v 0000 01 + 01 00 | become round, plump, or shapely; "The young woman is fleshing out"  
+00046847 29 v 02 pukeutua 4 pukea 0 020 @ 00106949 v 0000 $ 00044060 v 0000 $ 00045095 v 0000 $ 00048265 v 0000 ^ 00045653 v 0101 ^ 00044550 v 0102 ! 00050146 v 0101 + 10162438 n 0101 + 00828542 n 0101 + 02754087 n 0103 ! 00050146 v 0102 ~ 00044550 v 0000 ~ 00045095 v 0000 ~ 00045653 v 0000 ~ 00045861 v 0000 ~ 00047360 v 0000 ~ 00050824 v 0000 ~ 00051735 v 0000 ~ 00052095 v 0000 ~ 00166151 v 0000 01 + 01 00 | put on clothes; "we had to dress quickly"; "dress the patient"; "Can the child dress by herself?"  
+00047360 29 v 02 pukea<note>lämpimästi</note> 1 pukeutua 5 001 @ 00046847 v 0000 01 + 01 00 | dress warmly; "Mother bundled up the children for the long way to school"  
+00047532 29 v 01 laittaa_hattu_päähän 0 002 @ 00050824 v 0000 ~ 00047890 v 0000 01 + 01 00 | put on or wear a hat; "He was unsuitably hatted"  
+00047679 29 v 03 sovittaa 0 koettaa 0 kokeilla 0 002 @ 00050824 v 0000 + 00795571 n 0102 01 + 01 00 | put on a garment in order to see whether it fits and looks nice; "Try on this sweater to see how it looks"  
+00047890 29 v 01 pukeutua_myssyyn 0 001 @ 00047532 v 0000 01 + 01 00 | dress in a bonnet  
+00047981 29 v 02 olla 0 pitää 0 001 @ 02513334 v 0000 01 + 01 00 | have or show an appearance of; "wear one's hair in a certain way"  
+00048118 29 v 03 olla 1 olla_yllään 0 pitää 1 001 @ 02513334 v 0000 01 + 01 00 | have on one's person; "He wore a red ribbon"; "bear a scar"  
+00048265 29 v 05 pukea 2 vaatettaa 1 hankkia_vaatetus 0 varustaa_vaatteilla 0 varustaa 0 026 @ 00142253 v 0000 $ 00046847 v 0000 + 03081156 n 0201 + 03446790 n 0201 + 02754087 n 0201 + 03446790 n 0202 ! 00050146 v 0101 + 10162438 n 0101 + 00828542 n 0101 + 02754087 n 0103 ! 00050146 v 0102 ~ 00045449 v 0000 ~ 00048923 v 0000 ~ 00049085 v 0000 ~ 00049204 v 0000 ~ 00049292 v 0000 ~ 00049386 v 0000 ~ 00049490 v 0000 ~ 00049584 v 0000 ~ 00049744 v 0000 ~ 00049931 v 0000 ~ 00050027 v 0000 ~ 00051636 v 0000 ~ 00051893 v 0000 ~ 00052202 v 0000 ~ 00103837 v 0000 01 + 01 00 | provide with clothes or put clothes on; "Parents must feed and dress their child"  
+00048923 29 v 02 peittää 0 pukeutua 6 002 @ 00048265 v 0000 + 00828369 n 0101 01 + 01 00 | clothe, as if for protection from the elements; "cover your head!"  
+00049085 29 v 01 pukeutua_pikkutakkiin 0 001 @ 00048265 v 0000 01 + 01 00 | put a jacket on; "The men were jacketed"  
+00049204 29 v 01 pukeutua_kaapuun 0 001 @ 00048265 v 0000 01 + 01 00 | put a frock on  
+00049292 29 v 01 pukea_paita_päälleen 0 001 @ 00048265 v 0000 01 + 01 00 | put a shirt on  
+00049386 29 v 01 pukeutua_johonkin_tiettyyn_asuun 0 001 @ 00048265 v 0000 01 + 01 00 | put a habit on  
+00049490 29 v 01 verhota 0 001 @ 00048265 v 0000 01 + 01 00 | provide or cover with a cloak  
+00049584 29 v 01 ylipukea 0 002 @ 00048265 v 0000 ! 00049744 v 0101 01 + 01 00 | dress too warmly; "You should not overclothe the child--she will be too hot"  
+00049744 29 v 01 alipukeutua 1 002 @ 00048265 v 0000 ! 00049584 v 0101 01 + 01 00 | dress without sufficient warmth; "She was underdressed for the hiking trip and suffered hypothermia"  
+00049931 29 v 01 pukeutua_korsettiin 0 001 @ 00048265 v 0000 01 + 01 00 | dress with a corset  
+00050027 29 v 01 kengittää 0 001 @ 00048265 v 0000 01 + 01 00 | furnish with shoes; "the children were well shoed"  
+00050146 29 v 02 riisuutua 0 riisuuntua 0 009 @ 00175555 v 0000 $ 00173659 v 0000 ! 00046847 v 0201 ! 00048265 v 0201 + 14581003 n 0201 ! 00046847 v 0101 ! 00048265 v 0101 + 14581003 n 0101 ~ 00050628 v 0000 01 + 01 00 | get undressed; "please don't undress in front of everybody!"; "She strips in front of strangers every night for a living"  
+00050491 29 v 01 kuoria 0 001 @ 00050628 v 0000 01 + 01 00 | take off, as with some difficulty; "He peeled off his blood-soaked shirt"  
+00050628 29 v 01 riisua 0 005 @ 00050146 v 0000 ~ 00050491 v 0000 ~ 00051494 v 0000 ~ 00175724 v 0000 ~ 01525866 v 0000 01 + 01 00 | remove clothes; "take off your shirt--it's very hot in here"  
+00050824 29 v 03 pukea 3 pukea_ylleen 0 sonnustautua 0 005 @ 00046847 v 0000 ~ 00047532 v 0000 ~ 00047679 v 0000 ~ 00051192 v 0000 ~ 00051293 v 0000 01 + 01 00 | put clothing on one's body; "What should I wear today?"; "He put on his best suit for the wedding"; "The princess donned a long blue dress"; "The queen assumed the stately robes"; "He got into his jeans"  
+00051192 29 v 01 kietoa_huiviin 0 001 @ 00050824 v 0000 01 + 01 00 | wrap in or adorn with a scarf  
+00051293 29 v 01 pujahtaa 0 003 @ 00050824 v 0000 ! 00051494 v 0101 + 04270323 n 0101 01 + 01 00 | put on with ease or speed; "slip into something more comfortable after work"; "slip on one's shoes"  
+00051494 29 v 01 riisuutua 1 002 @ 00050628 v 0000 ! 00051293 v 0101 01 + 01 00 | take off with ease or speed; "She slipped off her jacket"  
+00051636 29 v 01 pukea_takkiin 0 001 @ 00048265 v 0000 01 + 01 00 | cover or provide with a coat  
+00051735 29 v 02 pukeutua_vastakkaisen_sukupuolen_vaatteisiin 0 pukeutua_ristiin 0 001 @ 00046847 v 0000 01 + 01 00 | dress in the clothes of the other sex  
+00051893 29 v 02 pukeutua 7 pukeutua<broader/> 8 004 @ 00048265 v 0000 $ 00044550 v 0000 + 03142142 n 0201 + 03142142 n 0101 01 + 01 00 | dress in a costume; "We dressed up for Halloween as pumpkins"  
+00052095 29 v 01 pukeutua_keikarimaiseen_tyyliin 0 001 @ 00046847 v 0000 01 + 01 00 | dress like a dandy  
+00052202 29 v 02 pukeutua 9 pukeutua_kaapuun 1 002 @ 00048265 v 0000 $ 00052356 v 0000 01 + 01 00 | clothe formally; especially in ecclesiastical robes  
+00052356 29 v 01 pukeutua a 002 @ 00045095 v 0000 $ 00052202 v 0000 01 + 01 00 | clothe oneself in ecclesiastical garments  
+00052481 29 v 03 olla_päällä 0 olla_yllään 1 pitää 2 001 * 00046847 v 0000 01 + 01 00 | be dressed in; "She was wearing yellow that day"  
+00052627 29 v 02 hedelmöittää 0 siittää 0 012 @ 00123109 v 0000 + 00844693 n 0205 + 00844693 n 0206 + 00844693 n 0101 + 07490588 n 0101 + 07490588 n 0102 + 00844693 n 0102 ~ 00052941 v 0000 ~ 00053226 v 0000 ~ 00053470 v 0000 ~ 00053807 v 0000 ~ 00054139 v 0000 01 + 01 00 | introduce semen into (a female)  
+00052941 29 v 01 idättää 0 002 @ 00052627 v 0000 $ 01253819 v 0000 01 + 01 00 | render fertile and preserve by placing between layers of earth or sand; "stratify seeds"  
+00053115 29 v 01 elävöityä 0 001 @ 01752647 v 0000 01 + 01 00 | show signs of life; "the fetus quickened"  
+00053226 29 v 05 hedelmöittää 1 panna_paksuksi 0 laittaa_pulla_uuniin 0 tehdä_raskaaksi 0 siittää 1 004 @ 00052627 v 0000 $ 00053470 v 0000 + 07490588 n 0101 + 07490588 n 0102 01 + 01 00 | make pregnant; "He impregnated his wife again"  
+00053470 29 v 01 hedelmöittää 2 005 @ 00052627 v 0000 $ 00053226 v 0000 + 07490588 n 0101 + 07490588 n 0102 ~ 00053669 v 0000 01 + 01 00 | fertilize and cause to grow; "the egg was impregnated"  
+00053669 29 v 01 rokottaa 0 001 @ 00053470 v 0000 01 + 01 00 | impregnate with the virus or germ of a disease in order to render immune  
+00053807 29 v 01 ristipölyttää 0 003 @ 00052627 v 0000 > 00054005 v 0000 + 07491153 n 0101 01 + 01 00 | cause to undergo cross-fertilization; "Mendel cross-fertilized different kinds of beans"  
+00054005 29 v 01 ristipölyttyä 0 002 @ 00142253 v 0000 + 07491153 n 0101 01 + 01 00 | undergo cross-fertilization; become fertile  
+00054139 29 v 01 pölyttää 0 003 @ 00052627 v 0000 + 07490985 n 0101 + 02188066 n 0101 01 + 01 00 | fertilize by transfering pollen  
+00054275 29 v 01 tulla_raskaaksi 0 003 @ 00142253 v 0000 * 01370604 v 0000 ~ 00067053 v 0000 01 + 01 00 | become pregnant; undergo conception; "She cannot conceive"; "My daughter was conceived in Christmas Day"  
+00054488 29 v 01 paritella<approximate/> 0 001 @ 01370604 v 0000 01 + 01 00 | mate successfully; of livestock  
+00054600 29 v 04 saada_perillinen 0 saada_jälkikasvua 0 synnyttää 0 siittää 2 003 @ 01551677 v 0000 + 00849686 n 0301 + 07380749 n 0302 01 + 01 00 | make children; "Abraham begot Isaac"; "Men often father children but don't recognize them"  
+00054847 29 v 01 ejakuloida 0 002 @ 00102224 v 0000 + 10177753 n 0101 01 + 01 00 | eject semen  
+00054944 29 v 02 lisääntyä 0 jatkaa_sukua 0 009 @ 01551677 v 0000 ;c 06066096 n 0000 + 13668067 n 0101 + 00849297 n 0101 + 00849686 n 0102 ~ 00055282 v 0000 ~ 00055845 v 0000 ~ 00056009 v 0000 ~ 00059780 v 0000 01 + 01 00 | have offspring or produce more individuals of a given animal or plant; "The Bible tells people to procreate"  
+00055282 29 v 02 kasvattaa 0 lisääntyä 1 003 @ 00054944 v 0000 ;c 06066096 n 0000 ~ 00055431 v 0000 01 + 01 00 | multiply sexually or asexually  
+00055431 29 v 01 kasvattaa 1 002 @ 00055282 v 0000 ;c 06066096 n 0000 01 + 01 00 | propagate asexually; "The bacterial growth vegetated along"  
+00055576 29 v 01 lisäännyttää 0 004 @ 00496149 v 0000 ;c 00017252 n 0000 > 00055282 v 0000 ~ 00055751 v 0000 01 + 01 00 | cause to propagate, as by grafting or layering  
+00055751 29 v 01 ympätä 0 001 @ 00055576 v 0000 01 + 01 00 | insert a bud for propagation  
+00055845 29 v 02 hedelmöidä 0 tehdä_hedelmää 0 003 @ 00054944 v 0000 + 13242538 n 0101 + 13603548 n 0101 01 + 01 00 | bear fruit; "the apple trees fructify"  
+00056009 29 v 02 synnyttää 1 lisääntyä 2 003 @ 00054944 v 0000 + 00849686 n 0202 ~ 00056238 v 0000 01 + 01 00 | have young (animals) or reproduce (organisms); "pandas rarely breed in captivity"; "These bacteria reproduce"  
+00056238 29 v 01 versoa 0 001 @ 00056009 v 0000 01 + 01 00 | breed freely and abundantly  
+00056329 29 v 02 kutea 0 laskea_mätimunia 0 003 @ 01483665 v 0000 + 02540134 n 0101 ~ 00056495 v 0000 01 + 01 00 | lay spawn; "The salmon swims upstream to spawn"  
+00056495 29 v 01 kutea 1 001 @ 00056329 v 0000 01 + 01 00 | spawn; "oysters spat"  
+00056579 29 v 02 synnyttää 2 saada_lapsi 0 022 @ 01676994 v 0000 * 00054275 v 0000 $ 00058645 v 0000 + 00048914 n 0101 + 07376706 n 0101 + 07376706 n 0102 + 15278586 n 0102 + 15278586 n 0103 + 13650700 n 0101 + 13650700 n 0102 ~ 00057319 v 0000 ~ 00057417 v 0000 ~ 00057555 v 0000 ~ 00057676 v 0000 ~ 00057803 v 0000 ~ 00057922 v 0000 ~ 00058073 v 0000 ~ 00058190 v 0000 ~ 00058326 v 0000 ~ 00058433 v 0000 ~ 00058523 v 0000 ~ 00058645 v 0000 01 + 01 00 | cause to be born; "My wife had twins yesterday!"  
+00057088 29 v 01 olla_synnyttämässä 0 001 * 00056579 v 0000 01 + 01 00 | be in confinement for childbirth  
+00057199 29 v 01 synnyttää 3 002 @ 02017186 v 0000 * 00056579 v 0000 01 + 01 00 | undergo the efforts of childbirth  
+00057319 29 v 01 synnyttää<broader/> 4 001 @ 00056579 v 0000 01 + 01 00 | give birth to twins  
+00057417 29 v 01 synnyttää 5 001 @ 00056579 v 0000 01 + 01 00 | give birth; used for animals; "The cow dropped her calf this morning"  
+00057555 29 v 01 varsoa 0 002 @ 00056579 v 0000 + 02402667 n 0101 01 + 01 00 | give birth to a foal; "the mare foaled"  
+00057676 29 v 01 penikoida 0 002 @ 00056579 v 0000 + 01351569 n 0101 01 + 01 00 | give birth to cubs; "bears cub every year"  
+00057803 29 v 01 saada_pentuja 0 001 @ 00056579 v 0000 01 + 01 00 | have kittens; "our cat kittened again this year"  
+00057922 29 v 02 karitsoida 0 vuonia 0 003 @ 00056579 v 0000 + 02438967 n 0202 + 02438967 n 0101 01 + 01 00 | give birth to a lamb; "the ewe lambed"  
+00058073 29 v 02 synnyttää_pesue 0 poikia 0 001 @ 00056579 v 0000 01 + 01 00 | give birth to a litter of animals  
+00058190 29 v 02 penikoida 1 poikia 1 003 @ 00056579 v 0000 + 01351208 n 0102 + 01351208 n 0101 01 + 01 00 | birth; "the dog whelped"  
+00058326 29 v 01 porsia 0 002 @ 00056579 v 0000 + 13597768 n 0101 01 + 01 00 | give birth; "sows farrow"  
+00058433 29 v 01 vasikoida 0 001 @ 00056579 v 0000 01 + 01 00 | have fawns; "deer fawn"  
+00058523 29 v 02 vasikoida 1 poikia 2 001 @ 00056579 v 0000 01 + 01 00 | birth; "the whales calve at this time of year"  
+00058645 29 v 06 olla_raskaana 0 synnyttää 6 odottaa 0 kantaa 0 odottaa_lasta 0 olla_pulla_uunissa 0 004 @ 00056579 v 0000 * 00054275 v 0000 $ 00058957 v 0000 $ 00056579 v 0000 01 + 01 00 | be pregnant with; "She is bearing his child"; "The are expecting another child in January"; "I am carrying his child"  
+00058957 29 v 01 odottaa_lasta 1 002 @ 00689839 v 0000 $ 00058645 v 0000 01 + 01 00 | look forward to the birth of a child; "She is expecting in March"  
+00059111 29 v 01 kantaa<note>raskauden_loppuun_saakka</note> 1 002 * 00058645 v 0000 ! 00059343 v 0101 01 + 01 00 | carry out a pregnancy; "She decided to carry the child to term, even though the foetus was shown to be defective"  
+00059343 29 v 01 saada_keskenmeno 0 002 @ 00059455 v 0000 ! 00059111 v 0101 01 + 01 00 | suffer a miscarriage  
+00059455 29 v 03 keskeyttää 0 abortoida 0 tehdä_abortti 0 003 @ 00102224 v 0000 * 00054275 v 0000 ~ 00059343 v 0000 01 + 01 00 | terminate a pregnancy by undergoing an abortion  
+00059637 29 v 01 keskenmennä<unconfirmed/> 0 001 @ 00349370 v 0000 01 + 01 00 | cease development, die, and be aborted; "an aborting fetus"  
+00059780 29 v 02 hautoa 1 suojata 0 007 @ 00054944 v 0000 * 01899561 v 0000 $ 01371991 v 0000 $ 00062452 v 0000 + 03599820 n 0102 + 13609946 n 0101 + 13561957 n 0102 01 + 01 00 | sit on (eggs); "Birds brood"; "The female covers the eggs"  
+00060020 29 v 06 kuohita 0 kastroida 0 salvaa 0 leikata 0 poistaa_munasarjat 0 steriloida 0 004 @ 00061028 v 0000 + 00667827 n 0201 + 00692730 n 0201 ~ 00060248 v 0000 01 + 01 00 | remove the ovaries of; "Is your cat spayed?"  
+00060248 29 v 01 poistaa_munasarjat 1 001 @ 00060020 v 0000 01 + 01 00 | remove the ovaries of (female mammals such as cats)  
+00060375 29 v 03 kuohita 1 salvaa 1 kastroida 1 004 @ 00061028 v 0000 + 00692538 n 0103 ~ 00060552 v 0000 ~ 00060691 v 0000 01 + 01 00 | remove the testicles of a male animal  
+00060552 29 v 02 kastroida<note>kukko</note> 2 salvaa 2 002 @ 00060375 v 0000 + 01819432 n 0202 01 + 01 00 | convert a cock into a capon  
+00060691 29 v 03 kuohita 2 kastroida 3 salvaa 3 001 @ 00060375 v 0000 01 + 01 00 | cut off the testicles (of male animals such as horses); "the vet gelded the young horse"  
+00060865 29 v 01 sterilisoida 0 001 @ 00061028 v 0000 01 + 01 00 | remove the vas deferens; "many men choose to be vasectomized as a form of safe birth control"  
+00061028 29 v 06 steriloida 1 kuohita 3 tehdä_sukupuolettomaksi 0 riistää_sukupuolettomaksi 0 kastroida 4 leikata 1 008 @ 00081528 v 0000 + 00692287 n 0101 + 00692287 n 0102 + 00692730 n 0102 + 00692287 n 0103 ~ 00060020 v 0000 ~ 00060375 v 0000 ~ 00060865 v 0000 01 + 01 00 | make infertile; "in some countries, people with genetically transmissible disabilites are sterilized"  
+00061412 29 v 01 tehdä_kasvojenkohotusleikkaus 0 001 @ 00081528 v 0000 01 + 01 00 | perform cosmetic surgery on someone's face  
+00061542 29 v 01 porata 0 001 @ 00081528 v 0000 01 + 01 00 | operate on with a trephine  
+00061632 29 v 02 menstruoida 0 olla_kuukautiset 0 003 @ 00073206 v 0000 * 00061821 v 0000 + 13631858 n 0101 01 + 01 00 | undergo menstruation; "She started menstruating at the age of 11"  
+00061821 29 v 01 tuottaa_munasoluja 0 001 @ 00102224 v 0000 01 + 01 00 | produce and discharge eggs; "women ovulate about once every month"  
+00061963 29 v 01 steriloida 2 005 @ 00086828 v 0000 + 00257238 n 0101 + 02785378 n 0102 + 00257238 n 0102 ~ 00062299 v 0000 01 + 01 00 | make free from bacteria  
+00062126 29 v 01 desinfioida 0 001 @ 00086828 v 0000 01 + 01 00 | disinfect with an antiseptic; "The animals were antisepticized by the veterinarian before the operation"  
+00062299 29 v 02 autoklaavata 0 käsitellä_autoklaavissa 0 002 @ 00061963 v 0000 + 02785378 n 0101 01 + 01 00 | subject to the action of an autoclave  
+00062452 29 v 01 kuoriutua 0 002 @ 00351991 v 0000 $ 00059780 v 0000 01 + 01 00 | emerge from the eggs; "young birds, fish, and reptiles hatch"  
+00062598 29 v 01 ärsyttää 0 007 @ 00203083 v 0000 ! 00063215 v 0101 + 02446909 a 0101 + 14656962 n 0101 ! 00063215 v 0102 ~ 02027862 v 0000 ~ 02028018 v 0000 01 + 01 00 | excite to an abnormal condition, or chafe or inflame; "Aspirin irritates my stomach"  
+00062859 29 v 01 tulehtua 0 004 @ 00199154 v 0000 $ 00063027 v 0000 + 01242451 a 0101 + 14459436 n 0101 01 + 01 00 | become inflamed; get sore; "His throat inflamed"  
+00063027 29 v 01 tulehduttaa 0 004 @ 00203083 v 0000 $ 00062859 v 0000 + 01242451 a 0101 + 14459436 n 0101 01 + 01 00 | cause inflammation in; "The repetitive motion inflamed her joint"  
+00063215 29 v 02 lievittää 0 tyynnyttää 0 003 @ 00063408 v 0000 ! 00062598 v 0201 ! 00062598 v 0101 01 + 01 00 | cause to feel better; "the medicine soothes the pain of the inflammation"  
+00063408 29 v 04 helpottaa 0 huojentaa 0 lieventää 0 lievittää 1 005 @ 00200972 v 0000 + 01412000 a 0301 + 00355438 n 0301 ~ 00063215 v 0000 ~ 00080225 v 0000 01 + 01 00 | provide physical relief, as from pain; "This pill will relieve your headaches"  
+00063665 29 v 01 hieroa 0 003 @ 00076812 v 0000 + 10432362 n 0101 + 00659037 n 0101 01 + 01 00 | give a massage to; "She massaged his sore back"  
+00063812 29 v 01 sattua 0 005 @ 00064008 v 0000 > 02030061 v 0000 ~ 00068965 v 0000 ~ 00069784 v 0000 ~ 00069931 v 0000 01 + 01 00 | give trouble or pain to; "This exercise will hurt your back"  
+00064008 29 v 01 voida_huonosti 0 004 @ 00123109 v 0000 ~ 00063812 v 0000 ~ 00072914 v 0000 ~ 00073348 v 0000 01 + 01 00 | cause to feel unwell; "She was indisposed"  
+00064176 29 v 03 kärsiä 0 potea 0 kitua 0 012 @ 02488161 v 0000 ! 00064604 v 0301 ! 00064604 v 0201 ! 00064604 v 0101 + 07555604 n 0101 + 14447356 n 0101 + 05067187 n 0101 + 10726585 n 0103 ~ 00064479 v 0000 ~ 00075800 v 0000 ~ 00076703 v 0000 ~ 01135645 v 0000 01 + 01 00 | feel pain or be in pain  
+00064479 29 v 01 olla 2 002 @ 00064176 v 0000 $ 00064780 v 0000 01 + 01 00 | suffer from; be ill with; "She has arthritis"  
+00064604 29 v 01 voida_hyvin 0 004 @ 02488161 v 0000 ! 00064176 v 0101 ! 00064176 v 0102 ! 00064176 v 0103 01 + 01 00 | be healthy; feel good; "She has not been well lately"  
+00064780 29 v 02 kärsiä 1 saada 0 006 @ 02016841 v 0000 $ 00064479 v 0000 + 10726585 n 0103 ~ 00031127 v 0000 ~ 00031556 v 0000 ~ 01709077 v 0000 01 + 01 00 | undergo (as of injuries and illnesses); "She suffered a fracture in the accident"; "He had an insulin shock after eating three candy bars"; "She got a bruise on her leg"; "He got his arm broken in the scuffle"  
+00065153 29 v 06 vaikertaa 0 kitistä 0 inistä 0 itkeä 0 valittaa 0 vikistä 0 002 @ 00065334 v 0000 + 07255645 n 0201 01 + 01 00 | cry weakly or softly; "she wailed with pain"  
+00065334 29 v 02 itkeä 1 kyynelehtiä 0 015 @ 01725152 v 0000 $ 00065857 v 0000 ! 00032354 v 0201 ! 00032354 v 0204 ! 00032354 v 0101 + 00867447 n 0101 + 07059804 n 0101 + 10901685 n 0101 + 00867447 n 0102 ! 00032354 v 0104 ~ 00065153 v 0000 ~ 00066037 v 0000 ~ 00066157 v 0000 ~ 00066317 v 0000 ~ 00066471 v 0000 01 + 01 00 | shed tears because of sadness, rage, or pain; "She cried bitterly when she heard the news of his death"; "The girl in the wheelchair wept with frustration when she could not get up the stairs"  
+00065857 29 v 01 itkeä 2 003 @ 00123109 v 0000 $ 00065334 v 0000 + 00867447 n 0101 01 + 01 00 | bring into a particular state by crying; "The little boy cried himself to sleep"  
+00066037 29 v 03 huutaa 0 kailottaa 0 karjua 0 001 @ 00065334 v 0000 01 + 01 00 | cry loudly; "Don't bawl in public!"  
+00066157 29 v 01 kyynelehtiä 1 003 @ 00065334 v 0000 + 05441413 n 0101 + 13624177 n 0102 01 + 01 00 | fill with tears or shed tears; "Her eyes were tearing"  
+00066317 29 v 01 nyyhkyttää 0 003 @ 00065334 v 0000 + 00867983 n 0101 + 00867983 n 0102 01 + 01 00 | weep convulsively; "He was sobbing inconsolably"  
+00066471 29 v 09 niiskuttaa 1 nyyhkyttää 1 pillittää 0 ruikuttaa 0 tuhista 1 itkeä 3 parkua 0 vollottaa 0 nyyhkiä 0 007 @ 00065334 v 0000 + 00867795 n 0303 + 00867795 n 0201 + 00867795 n 0202 + 00867795 n 0204 + 10904868 n 0104 + 00836102 n 0101 01 + 01 00 | cry or whine with snuffling; "Stop snivelling--you got yourself into this mess!"  
+00066819 29 v 01 hikoilla 1 006 @ 00071634 v 0000 ^ 00046334 v 0101 + 05441877 n 0101 + 13652891 n 0101 + 10553845 n 0101 ~ 00068812 v 0000 01 + 01 00 | excrete perspiration through the pores in the skin; "Exercise makes one sweat"  
+00067053 29 v 01 ylihedelmöittää 0 001 @ 00054275 v 0000 01 + 01 00 | conceive when a fetus is already present in the uterus  
+00067183 29 v 04 tihkua 0 kohota 0 pursua 0 erittää 0 010 @ 00071634 v 0000 + 07486145 n 0101 ~ 00067519 v 0000 ~ 00067671 v 0000 ~ 00067798 v 0000 ~ 00067915 v 0000 ~ 00068059 v 0000 ~ 00068205 v 0000 ~ 00068329 v 0000 ~ 00106681 v 0000 01 + 01 00 | release (a liquid) in drops or small quantities; "exude sweat through the pores"  
+00067519 29 v 01 tiputtaa 0 001 @ 00067183 v 0000 01 + 01 00 | give off (a liquid); "The doctor distilled a few drops of disinfectant onto the wound"  
+00067671 29 v 02 olla_täynnä 0 höyrytä 0 001 @ 00067183 v 0000 01 + 01 00 | be wet with sweat or blood, as of one's face  
+00067798 29 v 01 hikoilla 2 002 @ 00067183 v 0000 + 13687607 n 0101 01 + 01 00 | give off (water) through the skin  
+00067915 29 v 01 purkautua 0 002 @ 00067183 v 0000 + 14130398 n 0101 01 + 01 00 | geology: cause molten material, such as lava, to pour forth  
+00068059 29 v 02 valua 0 vuotaa 0 001 @ 00067183 v 0000 01 + 01 00 | exude profusely; "She was streaming with sweat"; "His nose streamed blood"  
+00068205 29 v 01 erittää_pihkaa 0 001 @ 00067183 v 0000 01 + 01 00 | exude or form gum; "these trees gum in the Spring"  
+00068329 29 v 02 erittää 1 vapauttaa 0 006 @ 00067183 v 0000 + 13667419 n 0201 + 13671619 n 0101 + 05363802 n 0102 + 05363802 n 0103 ~ 00068618 v 0000 01 + 01 00 | generate and separate from cells or bodily fluids; "secrete digestive juices"; "release a hormone into the blood stream"  
+00068618 29 v 02 vuotaa_vettä 0 kostua 0 001 @ 00068329 v 0000 01 + 01 00 | secrete or form water, as tears or saliva; "My mouth watered at the prospect of a good dinner"; "His eyes watered"  
+00068812 29 v 02 läkähtyä_kuumuuteen 0 läkähtyä 0 001 @ 00066819 v 0000 01 + 01 00 | suffer from intense heat; "we were sweltering at the beach"  
+00068965 29 v 02 haavoittaa 0 satuttaa 0 019 @ 00063812 v 0000 ~ 00069400 v 0000 ~ 00069568 v 0000 ~ 00069688 v 0000 ~ 00070073 v 0000 ~ 00070564 v 0000 ~ 00087763 v 0000 ~ 00088371 v 0000 ~ 00088607 v 0000 ~ 00088988 v 0000 ~ 00089484 v 0000 ~ 00100288 v 0000 ~ 00104213 v 0000 ~ 00105000 v 0000 ~ 01086754 v 0000 ~ 01177953 v 0000 ~ 01254536 v 0000 ~ 01431243 v 0000 ~ 01543054 v 0000 01 + 01 00 | cause injuries or bodily harm to  
+00069400 29 v 03 polkea 0 talloa 0 tallata 0 001 @ 00068965 v 0000 01 + 01 00 | injure by trampling or as if by trampling; "The passerby was trampled by an elephant"  
+00069568 29 v 01 aiheuttaa_aivotärähdys 0 001 @ 00068965 v 0000 01 + 01 00 | injure the brain; sustain a concussion  
+00069688 29 v 01 vammauttaa<broader/> 0 001 @ 00068965 v 0000 01 + 01 00 | injure with a calk  
+00069784 29 v 02 loukata 0 satuttaa 1 002 @ 00063812 v 0000 ~ 00300860 v 0000 01 + 01 00 | cause bodily suffering to and make sick or indisposed  
+00069931 29 v 01 olla_sopimaton 0 001 @ 00063812 v 0000 01 + 01 00 | not be very easily digestible; "Spicy food disagrees with some people"  
+00070073 29 v 01 kiduttaa 0 008 @ 00068965 v 0000 + 10845970 n 0101 + 00420219 n 0101 + 14456264 n 0101 + 00421326 n 0102 + 10845689 n 0101 ~ 00070348 v 0000 ~ 00070443 v 0000 01 + 01 00 | subject to torture; "The sinners will be tormented in Hell, according to the Bible"  
+00070348 29 v 01 kiduttaa<broader/> 1 001 @ 00070073 v 0000 01 + 01 00 | torture on the rack  
+00070443 29 v 02 tehdä_marttyyriksi 0 kiduttaa 2 001 @ 00070073 v 0000 01 + 01 00 | torture and torment like a martyr  
+00070564 29 v 02 venähtää 0 nyrjähtää 0 002 @ 00068965 v 0000 + 14422456 n 0103 01 + 01 00 | strain abnormally; "I pulled a muscle in my leg when I jumped up"; "The athlete pulled a tendon in the competition"  
+00070781 29 v 08 päästää 0 virtsata 0 pissiä 0 tehdä_lätäkkö 0 pissata 0 tehdä_tarpeensa 0 kusta 0 heittää_vettä 0 013 @ 00071634 v 0000 $ 00072478 v 0000 $ 00071226 v 0000 + 10570355 n 0501 + 13651716 n 0502 + 14991398 n 0503 + 13651716 n 0501 + 14991398 n 0304 + 10570355 n 0202 + 14991398 n 0201 + 13634067 n 0201 ~ 00071371 v 0000 ~ 00071525 v 0000 01 + 01 00 | eliminate urine; "Again, the cat had made on the expensive rug"  
+00071226 29 v 01 virtsata 1 002 @ 00071634 v 0000 $ 00070781 v 0000 01 + 01 00 | pass after the manner of urine; "The sick men urinated blood"  
+00071371 29 v 01 kastella 0 001 @ 00070781 v 0000 01 + 01 00 | make one's bed or clothes wet by urinating; "This eight year old boy still wets his bed"  
+00071525 29 v 01 lorottaa<unconfirmed/> 0 001 @ 00070781 v 0000 01 + 01 00 | urinate, of cattle and horses  
+00071634 29 v 03 erittää 2 ulostaa 0 poistaa 0 010 @ 00102224 v 0000 + 02894961 a 0101 + 13591951 n 0103 ~ 00066819 v 0000 ~ 00067183 v 0000 ~ 00070781 v 0000 ~ 00071226 v 0000 ~ 00071929 v 0000 ~ 00072478 v 0000 ~ 00074594 v 0000 01 + 01 00 | eliminate from the body; "Pass a kidney stone"  
+00071929 29 v 02 ulostaa 1 erittää 3 003 @ 00071634 v 0000 + 00674288 a 0102 ~ 00072076 v 0000 01 + 01 00 | excrete or discharge from the body  
+00072076 29 v 01 imeä 0 004 @ 00071929 v 0000 ;c 00671223 n 0000 $ 01775927 v 0000 + 00842322 n 0101 01 + 01 00 | empty or clean (a body cavity) by the force of suction; "suction the uterus in an abortion"  
+00072285 29 v 01 tyhjentää_suoli 0 002 @ 00076812 v 0000 > 00071929 v 0000 01 + 01 00 | excrete or evacuate (someone's bowels or body); "The doctor decided that the patient must be purged"  
+00072478 29 v 07 tyhjentää_suoli 1 ulostaa 2 paskoa 0 paskantaa 0 kakkia 0 tehdä_tarpeensa 1 kakata 0 009 @ 00071634 v 0000 $ 00070781 v 0000 + 13673526 n 0301 + 13578677 n 0302 + 14990228 n 0303 + 10129492 n 0303 + 10129492 n 0201 + 13578677 n 0201 ~ 00072825 v 0000 01 + 01 00 | have a bowel movement; "The dog had made in the flower beds"  
+00072825 29 v 01 sontia 0 001 @ 00072478 v 0000 01 + 01 00 | defecate; used of animals  
+00072914 29 v 02 aiheuttaa_ummetusta 0 ummettaa 0 002 @ 00064008 v 0000 ~ 00073081 v 0000 01 + 01 00 | cause to be constipated; "These foods tend to constipate you"  
+00073081 29 v 02 aiheuttaa_ummetusta 1 ummettaa 1 002 @ 00072914 v 0000 + 14496552 n 0201 01 + 01 00 | constipate severely  
+00073206 29 v 02 vuotaa_verta 0 vuotaa_verta_voimakkaasti 0 002 @ 00102224 v 0000 ~ 00061632 v 0000 01 + 01 00 | lose blood from one's body  
+00073348 29 v 02 väsyä 0 uupua 0 006 @ 00064008 v 0000 > 00074333 v 0000 + 14138005 n 0201 ! 00025077 v 0101 ~ 00073611 v 0000 ~ 00074206 v 0000 01 + 01 00 | exhaust or get tired through overuse or great strain or stress; "We wore ourselves out on this hike"  
+00073611 29 v 06 uuvuttaa 0 käyttää_loppuun 0 lyödä 0 väsyttää 0 ajaa_loppuun 0 näännyttää 0 004 @ 00073348 v 0000 ~ 00073911 v 0000 ~ 00074076 v 0000 ~ 00346556 v 0000 01 + 01 00 | wear out completely; "This kind of work exhausts me"; "I'm beat"; "He was all washed up after the exam"  
+00073911 29 v 01 uupua 1 002 @ 00073611 v 0000 + 14139688 n 0101 01 + 01 00 | exhaust physically or emotionally; "She was frazzled after the visit of her in-laws"  
+00074076 29 v 01 väsyttää 1 001 @ 00073611 v 0000 01 + 01 00 | exhaust by allowing to pull on the line; "play a hooked fish"  
+00074206 29 v 03 väsyä_liikaa 0 väsyttää_liikaa 0 uuvuttaa_liikaa 0 001 @ 00073348 v 0000 01 + 01 00 | tire excessively  
+00074333 29 v 03 kyllästyä 0 uupua 2 väsyä 1 004 @ 00089828 v 0000 + 07598266 n 0301 ~ 00097252 v 0000 ~ 01690746 v 0000 01 + 01 00 | lose interest or become bored with something or somebody; "I'm so tired of your mother and her complaints about my food"  
+00074594 29 v 08 oksentaa 0 tyhjentää_suolensa 0 antaa_ylen 0 yökätä 0 yrjötä 0 heittää_laattaa 0 laatata 0 purjota 0 010 @ 00071634 v 0000 ! 00075398 v 0801 ! 00075398 v 0701 + 14991640 n 0703 + 00230358 n 0402 ! 00075398 v 0101 + 10888418 n 0101 + 03310856 n 0102 + 00123124 n 0101 + 14991640 n 0101 01 + 01 00 | eject the contents of the stomach through the mouth; "After drinking too much, the students vomited"; "He purged continuously"; "The patient regurgitated the food we gave him last night"  
+00075107 29 v 04 purkautua 1 syöstä 0 sylkeä 1 ryöpytä 0 001 @ 00102224 v 0000 01 + 01 00 | eject or send out in large quantities, also metaphorical; "the volcano spews out molten rocks every day"; "The editors of the paper spew out hostile articles about the Presidential candidate"  
+00075398 29 v 01 pystyä_pitämään_sisällään 0 003 ! 00074594 v 0101 ! 00074594 v 0107 ! 00074594 v 0108 01 + 01 00 | manage not to throw up  
+00075546 29 v 03 yökätä 1 kakistella 0 yökkäillä 0 001 + 00230358 n 0302 01 + 01 00 | make an unsuccessful effort to vomit; strain to vomit  
+00075694 29 v 02 tukehduttaa 0 tukahduttaa 0 001 @ 00085754 v 0000 01 + 01 00 | cause to retch or choke  
+00075800 29 v 04 haukkoa_henkeä 0 tukehtua 0 tikahtua 0 pakahtua 0 002 @ 00064176 v 0000 + 14179574 n 0201 01 + 01 00 | struggle for breath; have insufficient oxygen intake; "he swallowed a fishbone and gagged"  
+00076014 29 v 02 tukahduttaa 1 kuristaa 0 002 @ 01330332 v 0000 > 00002662 v 0000 01 + 01 00 | constrict (someone's) throat and keep from breathing  
+00076164 29 v 01 paleltua 0 001 @ 00076432 v 0000 01 + 01 00 | be cold; "I could freeze to death in this office when the air conditioning is turned on"  
+00076318 29 v 02 olla_helteen_uuvuttama 0 läkähtyä 1 001 @ 00076432 v 0000 01 + 01 00 | be uncomfortably hot  
+00076432 29 v 02 kärsiä 2 potea 1 003 @ 02488161 v 0000 ~ 00076164 v 0000 ~ 00076318 v 0000 01 + 01 00 | feel unwell or uncomfortable; "She is suffering from the hot weather"  
+00076611 29 v 01 narskuttaa 0 001 @ 01336495 v 0000 01 + 01 00 | grind together, of teeth  
+00076703 29 v 02 kiusata 0 vaivata 0 002 @ 00064176 v 0000 + 14176593 n 0202 01 + 01 00 | be ill or unwell  
+00076812 29 v 01 hoitaa 0 025 + 00658091 n 0101 ~ 00003089 v 0000 ~ 00063665 v 0000 ~ 00072285 v 0000 ~ 00077504 v 0000 ~ 00077655 v 0000 ~ 00077817 v 0000 ~ 00077974 v 0000 ~ 00078193 v 0000 ~ 00078321 v 0000 ~ 00078567 v 0000 ~ 00078686 v 0000 ~ 00078893 v 0000 ~ 00079033 v 0000 ~ 00080390 v 0000 ~ 00080527 v 0000 ~ 00081376 v 0000 ~ 00081528 v 0000 ~ 00081908 v 0000 ~ 00083652 v 0000 ~ 00084732 v 0000 ~ 00087924 v 0000 ~ 00106165 v 0000 ~ 00363969 v 0000 ~ 00617670 v 0000 01 + 01 00 | provide treatment for; "The doctor treated my broken leg"; "The nurses cared for the bomb victims"; "The patient must be treated right away or she will die"; "Treat the infection with antibiotics"  
+00077504 29 v 01 korjata 1 002 @ 00076812 v 0000 + 00252963 a 0101 01 + 01 00 | treat a defect; "The new contact lenses will correct for his myopia"  
+00077655 29 v 01 puhaltaa_sisään<approximate/> 1 002 @ 00076812 v 0000 $ 00007300 v 0000 01 + 01 00 | treat by blowing a powder or vapor into a bodily cavity  
+00077817 29 v 01 vieroittaa 0 002 @ 00076812 v 0000 + 00699576 n 0101 01 + 01 00 | treat for alcohol or drug dependence; "He was detoxified in the clinic"  
+00077974 29 v 01 huuhdella 2 002 @ 00076812 v 0000 + 00695648 n 0101 01 + 01 00 | supply with a constant flow or sprinkling of some liquid, for the purpose of cooling, cleansing, or disinfecting; "irrigate the wound"  
+00078193 29 v 01 jodioida 0 001 @ 00076812 v 0000 01 + 01 00 | treat with iodine so as to prevent infection; "iodize a wound"  
+00078321 29 v 01 hoitaa 1 003 @ 00076812 v 0000 ;c 00612602 n 0000 ~ 00078447 v 0000 01 + 01 00 | give medical treatment to  
+00078447 29 v 01 hoitaa_eläimiä 0 002 @ 00078321 v 0000 ;c 00612602 n 0000 01 + 01 00 | provide veterinary care for  
+00078567 29 v 01 hoitaa 2 002 @ 00076812 v 0000 ;c 00612602 n 0000 01 + 01 00 | provide (a person) with medical care  
+00078686 29 v 01 hoitaa 3 003 @ 00076812 v 0000 ;c 00612602 n 0000 + 10501433 n 0101 01 + 01 00 | try to cure by special care of treatment, of an illness or injury; "He nursed his cold with Chinese herbs"  
+00078893 29 v 02 käsitellä 0 manipuloida 0 001 @ 00076812 v 0000 01 + 01 00 | treat manually, as with massage, for therapeutic purposed  
+00079033 29 v 02 antaa 0 jakaa 0 010 @ 00076812 v 0000 ;c 00612602 n 0000 * 02208862 v 0000 + 13393581 n 0201 + 01080743 n 0201 + 00695187 n 0101 ~ 00079294 v 0000 ~ 00079418 v 0000 ~ 00083845 v 0000 ~ 02209064 v 0000 01 + 01 00 | give or apply (medications)  
+00079294 29 v 01 siirtää 0 002 @ 00079033 v 0000 ;c 00612602 n 0000 01 + 01 00 | give a transfusion (e.g., of blood) to  
+00079418 29 v 02 digitalisoida 0 hoitaa_digitaliksella 0 005 @ 00079033 v 0000 ;c 00612602 n 0000 + 00709902 n 0101 + 00709902 n 0102 + 15195162 n 0101 01 + 01 00 | administer digitalis such that the patient benefits maximally without getting adverse effects  
+00079679 29 v 04 terveyttää 0 parantaa 0 tervehdyttää 0 hoitaa 4 008 @ 00080050 v 0000 ;c 00612602 n 0000 * 00076812 v 0000 + 01046748 a 0201 + 01230538 a 0201 + 04104202 n 0203 + 04104202 n 0206 ~ 00090773 v 0000 01 + 01 00 | provide a cure for, make healthy again; "The treatment cured the boy's acne"; "The quack pretended to heal patients but never managed to"  
+00080050 29 v 02 auttaa 0 olla_avuksi 0 003 @ 00200972 v 0000 ~ 00079679 v 0000 ~ 02191854 v 0000 01 + 01 00 | improve the condition of; "These pills will help the patient"  
+00080225 29 v 02 helpottaa 1 lievittää 2 002 @ 00063408 v 0000 + 00354858 n 0201 01 + 01 00 | lessen pain or discomfort; alleviate; "ease the pain in your legs"  
+00080390 29 v 02 helpottaa 2 parantaa 1 002 @ 00076812 v 0000 ;c 00612602 n 0000 01 + 01 00 | provide relief for; "remedy his illness"  
+00080527 29 v 01 sitoa 0 004 @ 00076812 v 0000 ;c 00612602 n 0000 ~ 00080706 v 0000 ~ 00080867 v 0000 01 + 01 00 | apply a bandage or medication to; "dress the victim's wounds"  
+00080706 29 v 02 panna_haude 0 hautoa 2 003 @ 00080527 v 0000 ;c 00612602 n 0000 + 04024058 n 0201 01 + 01 00 | dress by covering with a therapeutic substance  
+00080867 29 v 02 sitoa 1 laastaroida 0 003 @ 00080527 v 0000 ;c 00612602 n 0000 ~ 00081071 v 0000 01 + 01 00 | dress by covering or binding; "The nurse bandaged a sprained ankle"; "bandage an incision"  
+00081071 29 v 01 sitoa 2 004 @ 00080867 v 0000 ;c 06091641 n 0000 + 00153548 n 0101 + 00152699 n 0101 01 + 01 00 | bind with a bandage or ligature; "ligate the artery"  
+00081241 29 v 02 kiinnittää 0 sitoa 3 002 @ 01284698 v 0000 ;c 00612602 n 0000 01 + 01 00 | secure (a sprained joint) with a strap  
+00081376 29 v 01 lastoittaa 0 003 @ 00076812 v 0000 ;c 00612602 n 0000 + 04311731 n 0101 01 + 01 00 | support with a splint; "splint a broken finger"  
+00081528 29 v 02 leikata 2 operoida 0 007 @ 00076812 v 0000 ;c 00612602 n 0000 + 01233785 a 0204 ~ 00061028 v 0000 ~ 00061412 v 0000 ~ 00061542 v 0000 ~ 00081798 v 0000 01 + 01 00 | perform surgery on; "The doctors operated on the patient but failed to save his life"  
+00081798 29 v 01 iskeä_suonta 0 002 @ 00081528 v 0000 ;c 00612602 n 0000 01 + 01 00 | practice venesection  
+00081908 29 v 02 lääkitä 0 hoitaa_lääkkeillä 0 010 @ 00076812 v 0000 ;c 00612602 n 0000 + 06071573 n 0101 + 00663909 n 0101 + 03772280 n 0102 + 01231204 a 0101 + 03772280 n 0101 + 00612602 n 0101 ~ 00082334 v 0000 ~ 00083506 v 0000 01 + 01 00 | treat medicinally, treat with medicine  
+00082200 29 v 01 keinohedelmöittää 0 002 @ 00479242 v 0000 ;c 00612602 n 0000 01 + 01 00 | impregnate with a medicinal substance  
+00082334 29 v 01 huumata 0 007 @ 00081908 v 0000 ;c 00612602 n 0000 ~ 00021705 v 0000 ~ 00082566 v 0000 ~ 00082917 v 0000 ~ 00083094 v 0000 ~ 00085886 v 0000 01 + 01 00 | administer a drug to; "They drugged the kidnapped tourist"  
+00082566 29 v 02 antaa_dopingaineita 0 antaa_sääntöjenvastaisia_aineita 0 003 @ 00082334 v 0000 ;c 00612602 n 0000 ~ 00082791 v 0000 01 + 01 00 | give a narcotic to; "The athletes were dope by the coach before the race"  
+00082791 29 v 01 doupata<note>ravihevosta</note> 0 002 @ 00082566 v 0000 ;c 00612602 n 0000 01 + 01 00 | dope (a racehorse)  
+00082917 29 v 02 ottaa_yliannos 0 kuolla_yliannostukseen 0 001 @ 00082334 v 0000 01 + 01 00 | dose too heavily; "The rock star overdosed and was found dead in his hotel room"  
+00083094 29 v 03 nukuttaa 2 huumata 1 tainnuttaa 0 001 @ 00082334 v 0000 01 + 01 00 | administer narcotics to  
+00083206 29 v 05 voidella 0 öljytä 0 antaa_viimeinen_voitelu 0 sivellä_lääkkeellä 0 voidella_linimentillä 0 005 @ 00829589 v 0000 + 15101999 n 0201 + 00712969 n 0102 + 09923135 n 0101 + 01040426 n 0101 01 + 01 00 | administer an oil or ointment to; often in a religious ceremony of blessing  
+00083506 29 v 01 voidella_salvalla 0 002 @ 00081908 v 0000 ;c 00612602 n 0000 01 + 01 00 | apply a salve to, usually for the purpose of healing  
+00083652 29 v 02 iskeä_suonta 1 avata_laskimo 0 002 @ 00076812 v 0000 ;c 00612602 n 0000 01 + 01 00 | draw blood; "In the old days, doctors routinely bled patients as part of the treatment"  
+00083845 29 v 04 ruiskuttaa 0 piikittää 0 injektoida 0 pistää 0 007 @ 00079033 v 0000 ;c 00612602 n 0000 $ 01521093 v 0000 + 14985043 n 0102 + 01387830 a 0102 ~ 00084131 v 0000 ~ 00084372 v 0000 01 + 01 00 | give an injection to; "We injected the glucose into the patient's vein"  
+00084131 29 v 01 infundoida 0 003 @ 00083845 v 0000 ;c 00612602 n 0000 + 00325174 n 0101 01 + 01 00 | introduce into the body through a vein, for therapeutic purposes; "Some physiologists infuses sugar solutions into the veins of animals"  
+00084372 29 v 02 rokottaa 1 tehdä_immuuniksi 0 008 @ 00083845 v 0000 ;c 00612602 n 0000 + 00824381 n 0101 + 10340700 n 0101 + 00824196 n 0102 + 14489008 n 0101 + 04546187 n 0101 + 00824196 n 0104 01 + 01 00 | perform vaccinations or produce immunity in by inoculation; "We vaccinate against scarlet fever"; "The nurse vaccinated the children in the school"  
+00084732 29 v 02 kupata 0 laskea_verta 0 003 @ 00076812 v 0000 ;c 00612602 n 0000 + 00699039 n 0101 01 + 01 00 | treat by applying evacuated cups to the patient's skin  
+00084902 29 v 01 sairastua 0 004 @ 00199154 v 0000 ~ 00085092 v 0000 ~ 00085200 v 0000 ~ 00087659 v 0000 01 + 01 00 | get sick; "She fell sick last Friday, and now she is in the hospital"  
+00085092 29 v 01 tulla_kalpeaksi_ja_sairaaksi 0 001 @ 00084902 v 0000 01 + 01 00 | become pale and sickly  
+00085200 29 v 04 saada_tauti 0 sairastua 1 tulla_sairaaksi<unconfirmed/><note>rakenteessa_be_taken_ill</note> 0 saada 1 004 @ 00084902 v 0000 $ 00085531 v 0000 + 00083460 n 0201 ~ 00085531 v 0000 01 + 01 00 | be stricken by an illness, fall victim to an illness; "He got AIDS"; "She came down with pneumonia"; "She took a chill"  
+00085531 29 v 01 sairastua 2 003 @ 00085200 v 0000 $ 00085200 v 0000 ~ 00085667 v 0000 01 + 01 00 | contract; "did you catch a cold?"  
+00085667 29 v 01 vilustua 0 001 @ 00085531 v 0000 01 + 01 00 | come down with a cold  
+00085754 29 v 01 oksettaa 0 002 @ 00100288 v 0000 ~ 00075694 v 0000 01 + 01 00 | make sick or ill; "This kind of food sickens me"  
+00085886 29 v 01 myrkyttää 0 004 @ 00082334 v 0000 $ 01268555 v 0000 + 00228201 n 0101 ~ 00086076 v 0000 01 + 01 00 | administer poison to; "She poisoned her husband but he did not die"  
+00086076 29 v 02 päihdyttää 0 huumata 2 003 @ 00085886 v 0000 + 03614274 n 0101 + 01223884 a 0101 01 + 01 00 | have an intoxicating effect on, of a drug  
+00086234 29 v 02 tartuttaa 0 saastuttaa 0 009 @ 00474584 v 0000 + 14612945 n 0201 ! 00086828 v 0101 ! 00086828 v 0102 + 01232955 a 0101 + 02232778 a 0102 + 13616717 n 0102 ~ 00086501 v 0000 ~ 00086693 v 0000 01 + 01 00 | contaminate with a disease or microorganism  
+00086501 29 v 01 superinfektoida<unconfirmed/> 0 002 @ 00086234 v 0000 + 14307373 n 0101 01 + 01 00 | infect (an infected cell) further or infect a cell already containing similar organisms  
+00086693 29 v 01 noeta 0 002 @ 00086234 v 0000 ;c 00916191 n 0000 01 + 01 00 | affect with smut or mildew, as of a crop such as corn  
+00086828 29 v 02 desinfektoida 0 desinfioida 1 014 @ 01471312 v 0000 ! 00086234 v 0201 + 03235569 n 0201 + 02234210 a 0203 + 02234210 a 0204 + 00709566 n 0201 ! 00086234 v 0101 + 03235569 n 0101 + 02234210 a 0103 + 02234210 a 0104 + 00709566 n 0101 ~ 00061963 v 0000 ~ 00062126 v 0000 ~ 00087216 v 0000 01 + 01 00 | destroy microorganisms or pathogens by cleansing; "disinfect a wound"  
+00087216 29 v 01 kloorata 0 003 @ 00086828 v 0000 + 14769739 n 0101 + 00709722 n 0101 01 + 01 00 | disinfect with chlorine; "chlorinate a pool"  
+00087362 29 v 01 tartuttaa 1 004 @ 02216139 v 0000 + 01232955 a 0101 + 02232778 a 0102 ~ 00087562 v 0000 01 + 01 00 | communicate a disease to; "Your children have infected you with this head cold"  
+00087562 29 v 01 tartuttaa<broader/> 2 001 @ 00087362 v 0000 01 + 01 00 | infect with a canker  
+00087659 29 v 01 tarttua<broader/> 0 001 @ 00084902 v 0000 01 + 01 00 | become infected with a canker  
+00087763 29 v 02 traumatisoida 0 järkyttää 0 004 @ 00068965 v 0000 + 07355498 n 0201 + 14408989 n 0102 + 14408598 n 0101 01 + 01 00 | inflict a trauma upon  
+00087924 29 v 01 antaa_sähköshokkeja 0 002 @ 00076812 v 0000 ~ 00088049 v 0000 01 + 01 00 | subject to electrical shocks  
+00088049 29 v 01 stimuloida 1 002 @ 00087924 v 0000 + 13604110 n 0101 01 + 01 00 | stimulate (muscles) by administering a shock  
+00088179 29 v 03 silpoa 0 turmella 0 pahoinpidellä 0 004 @ 00088371 v 0000 + 07487365 n 0101 + 10476129 n 0101 ~ 01226651 v 0000 01 + 01 00 | destroy or injure severely; "mutilated bodies"  
+00088371 29 v 03 runnella 0 vammauttaa 1 silpoa 1 003 @ 00068965 v 0000 ~ 00088179 v 0000 ~ 00089112 v 0000 01 + 01 00 | injure or wound seriously and leave permanent disfiguration or mutilation; "people were maimed by the explosion"  
+00088607 29 v 05 nyrjäyttää 0 reväyttää 0 venähdyttää 0 venäyttää 0 niksauttaa 0 004 @ 00068965 v 0000 + 14485901 n 0403 + 14422456 n 0201 + 14422747 n 0101 01 + 01 00 | twist suddenly so as to sprain; "wrench one's ankle"; "The wrestler twisted his shoulder"; "the hikers sprained their ankles when they fell"; "I turned my ankle and couldn't walk for several days"  
+00088988 29 v 01 mennä_sijoiltaan 0 001 @ 00068965 v 0000 01 + 01 00 | sprain or dislocate slightly; "subluxate the hip"  
+00089112 29 v 04 tehdä_raajarikoksi 0 tehdä_ontuvaksi 0 rampauttaa 0 vammauttaa 2 002 @ 00088371 v 0000 ~ 00089340 v 0000 01 + 01 00 | deprive of the use of a limb, especially a leg; "The accident has crippled her for life"  
+00089340 29 v 02 vammautua_kinnerjänteestä<unconfirmed/> 0 rampauttaa 1 001 @ 00089112 v 0000 01 + 01 00 | cripple by cutting the hamstring  
+00089484 29 v 04 vaurioitua 0 tulla_toimintakyvyttömäksi 0 lamautua 0 vammautua 0 004 @ 00068965 v 0000 + 14673439 n 0401 + 14673439 n 0402 ~ 00089715 v 0000 01 + 01 00 | injure permanently; "He was disabled in a car accident"  
+00089715 29 v 01 leikata_kinner<unconfirmed/> 0 001 @ 00089484 v 0000 01 + 01 00 | disable by cutting the hock  
+00089828 29 v 05 kehittyä 0 huonontua 0 taantua 0 degeneroitua 0 heiketä 0 011 @ 00199154 v 0000 ! 00090251 v 0501 ! 00090251 v 0503 + 14565692 n 0401 ! 00090251 v 0201 + 13583382 n 0201 + 14687011 n 0201 ! 00090251 v 0203 ~ 00074333 v 0000 ~ 00091192 v 0000 ~ 00091459 v 0000 01 + 01 00 | grow worse; "Her condition deteriorated"; "Conditions in the slums degenerated"; "The discussion devolved into a shouting match"  
+00090251 29 v 03 tointua 0 toipua 0 tervehtyä 0 014 @ 00200276 v 0000 $ 00090773 v 0000 ! 00089828 v 0302 ! 00089828 v 0305 + 10091573 n 0201 + 02690638 a 0201 + 13572321 n 0201 + 02690638 a 0203 ! 00089828 v 0102 + 13572321 n 0101 + 01232086 a 0101 ! 00089828 v 0105 ~ 00023969 v 0000 ~ 00090631 v 0000 01 + 01 00 | get over an illness or shock; "The patient is recuperating"  
+00090631 29 v 01 parantua 0 001 @ 00090251 v 0000 01 + 01 00 | recover quickly; "After the surgery, the patient snapped back in a few days"  
+00090773 29 v 03 parantua 1 virkistyä 0 tervehtyä 1 002 @ 00079679 v 0000 $ 00090251 v 0000 01 + 01 00 | restore to good health or strength  
+00090917 29 v 08 sortua_uudelleen 0 hairahtaa 0 sortua 0 uusia_rikos 0 taantua 1 jäädä_jälkeen 0 kokea_takaisku 0 langeta 0 003 @ 00376642 v 0000 + 00074318 n 0401 + 00074110 n 0104 01 + 01 00 | go back to bad behavior; "Those who recidivate are often minor criminals"  
+00091192 29 v 09 kitua 1 riutua 0 kadottaa_puhtinsa 0 kuihtua 0 nääntyä 0 räytyä 0 heikentyä 0 heiketä 1 virua 0 003 @ 00089828 v 0000 + 10380491 n 0202 + 10380491 n 0101 01 + 01 00 | become feeble; "The prisoner has be languishing for years in the dungeon"  
+00091459 29 v 02 riutua 1 virua 1 002 @ 00089828 v 0000 ~ 00095010 v 0000 01 + 01 00 | become physically weaker; "Political prisoners are wasting away in many prisons all over the world"  
+00091648 29 v 02 surkastua 0 näivettyä 0 001 @ 00235154 v 0000 01 + 01 00 | undergo atrophy; "Muscles that are not used will atrophy"  
+00091786 29 v 01 laajentua<broader/> 0 001 @ 00224781 v 0000 01 + 01 00 | undergo hypertrophy; "muscles can hypertrophy when people take steroids"  
+00091935 29 v 01 saada_höyhenet 0 001 @ 00092064 v 0000 01 + 01 00 | grow feathers; "The young sparrows are fledging already"  
+00092064 29 v 06 kasvattaa 2 kehittyä 1 tuottaa 0 saada 2 hankkia 0 tulla 0 016 @ 00106949 v 0000 $ 00525431 v 0000 + 00048317 n 0402 + 13607289 n 0206 + 13607289 n 0203 ~ 00091935 v 0000 ~ 00092643 v 0000 ~ 00092912 v 0000 ~ 00093041 v 0000 ~ 00093252 v 0000 ~ 00093359 v 0000 ~ 00093485 v 0000 ~ 00093583 v 0000 ~ 00094134 v 0000 ~ 00094266 v 0000 ~ 00105720 v 0000 01 + 01 00 | come to have or undergo a change of (physical features and attributes); "He grew a beard"; "The patient developed abdominal pains"; "I got funny spots all over my body"; "Well-developed breasts"  
+00092643 29 v 01 kasvaa_uudelleen 0 001 @ 00092064 v 0000 01 + 01 00 | grow anew or continue growth after an injury or interruption; "parts of the trunk of this tree can regrow"; "some invertebrates can regrow limbs or their tail after they lost it due to an injury"  
+00092912 29 v 01 saada<note>idiomin_osa</note> 3 001 @ 00092064 v 0000 01 + 01 00 | develop suddenly; "The tire sprang a leak"  
+00093041 29 v 03 itää 0 orastaa 0 versoa 1 004 @ 00092064 v 0000 + 13605350 n 0302 + 07780604 n 0302 + 13272112 n 0202 01 + 01 00 | put forth and grow sprouts or shoots; "the plant sprouted early this year"  
+00093252 29 v 01 vesoa 0 001 @ 00092064 v 0000 01 + 01 00 | grow shoots in the form of stools or tillers  
+00093359 29 v 01 lehtiä 0 003 @ 00092064 v 0000 + 13259840 n 0101 + 13259840 n 0102 01 + 01 00 | produce leaves, of plants  
+00093485 29 v 01 muodostaa_palkoja 0 001 @ 00092064 v 0000 01 + 01 00 | produce pods, of plants  
+00093583 29 v 01 saada_hampaita 0 001 @ 00092064 v 0000 01 + 01 00 | grow teeth; cut the baby teeth; "The little one is teething now"  
+00093719 29 v 01 puhjeta 0 002 @ 00225899 v 0000 $ 00105720 v 0000 01 + 01 00 | grow through the gums; "The new tooth is cutting"  
+00093851 29 v 01 ankylosoitua<unconfirmed/> 0 002 @ 00225899 v 0000 ;c 00612602 n 0000 01 + 01 00 | undergo ankylosis; "joints ankylose"  
+00093990 29 v 02 ankylosoida 0 ankylosoida<unconfirmed/> 1 002 @ 01240254 v 0000 ;c 00612602 n 0000 01 + 01 00 | produce ankylosis by surgery  
+00094134 29 v 01 koteloitua 0 002 @ 00092064 v 0000 + 02338728 n 0101 01 + 01 00 | develop into a pupa; "the insect larva pupate"  
+00094266 29 v 02 kerätä 0 koota 0 001 @ 00092064 v 0000 01 + 01 00 | develop; "we worked up an as of an appetite"  
+00094384 29 v 01 märkiä 0 006 @ 00102224 v 0000 $ 00094743 v 0000 + 14306272 n 0102 + 13598560 n 0101 + 05453389 n 0103 + 02984533 a 0101 01 + 01 00 | ripen and generate pus; "her wounds are festering"  
+00094590 29 v 01 vetää 0 003 @ 02398559 v 0000 $ 02006620 v 0000 ~ 00094743 v 0000 01 + 01 00 | cause to localize at one point; "Draw blood and pus"  
+00094743 29 v 04 mädättää 0 märkiä 1 märättää 0 kypsyttää 0 006 @ 00094590 v 0000 $ 00094384 v 0000 + 13598560 n 0301 + 05453389 n 0303 + 13598560 n 0201 + 05453389 n 0203 01 + 01 00 | cause to ripen and discharge pus; "The oil suppurates the pustules"  
+00095010 29 v 04 aiheuttaa_kuolio 0 synnyttää_kuolio 0 kuoleutua 0 kuolioitua 0 004 @ 00091459 v 0000 + 14436959 n 0401 + 11635105 n 0401 + 11635105 n 0301 01 + 01 00 | undergo necrosis; "the tissue around the wound necrosed"  
+00095240 29 v 02 uudistaa 0 kehittää 0 002 @ 00200972 v 0000 ~ 00243973 v 0000 01 + 01 00 | restore strength; "This food revitalized the patient"  
+00095390 29 v 01 nuorentua 0 002 @ 00095549 v 0000 + 11653670 n 0101 01 + 01 00 | become young again; "The old man rejuvenated when he became a grandfather"  
+00095549 29 v 02 uudestisyntyä 0 uudistua 0 006 @ 00106949 v 0000 + 13666448 n 0202 + 00272559 n 0202 + 13666448 n 0102 + 00272559 n 0102 ~ 00095390 v 0000 01 + 01 00 | undergo regeneration  
+00095742 29 v 01 elvyttää 1 006 @ 00022591 v 0000 > 00024489 v 0000 $ 00024489 v 0000 + 01046775 n 0101 ~ 00095969 v 0000 ~ 00096210 v 0000 01 + 01 00 | cause to regain consciousness; "The doctors revived the comatose man"  
+00095969 29 v 04 käynnistää 0 käynnistää<approximate/> 1 käynnistää_uudelleen 0 uudelleenkäynnistää 0 001 @ 00095742 v 0000 01 + 01 00 | cause to load (an operating system) and start the initial processes; "boot your computer"  
+00096210 29 v 03 herättää_henkiin 1 herättää 4 herättää_kuolleista 0 002 @ 00095742 v 0000 $ 00096468 v 0000 01 + 01 00 | cause to become alive again; "raise from the dead"; "Slavery is already dead, and cannot be resurrected"; "Upraising ghosts"  
+00096468 29 v 03 herätä_henkiin 0 nousta_kuolleista 0 herätä_kuolleista 0 003 @ 01918695 v 0000 $ 00096210 v 0000 + 07383779 n 0202 01 + 01 00 | return from the dead; "Christ is risen!"; "The dead are to uprise"  
+00096686 29 v 02 rupeutua 0 arpeutua 0 002 @ 00096932 v 0000 + 05300869 n 0101 01 + 01 00 | form a scab; "the wounds will eventually scab"  
+00096827 29 v 02 arpeutua 1 parantua 2 001 @ 00096932 v 0000 01 + 01 00 | grow new skin over an injury  
+00096932 29 v 01 parantua 3 005 @ 00200276 v 0000 + 13610067 n 0101 ~ 00096686 v 0000 ~ 00096827 v 0000 ~ 00097118 v 0000 01 + 01 00 | get healthy again; "The wound is healing slowly"  
+00097118 29 v 02 rakeistaa 0 rouhia 0 001 @ 00096932 v 0000 01 + 01 00 | form granulating tissue; "wounds and ulcers can granulate"  
+00097252 29 v 03 uupua 3 hiipua 0 väsyä 2 001 @ 00074333 v 0000 01 + 01 00 | use up all one's strength and energy and stop working; "At the end of the march, I pooped out"  
+00097428 29 v 04 harjoittaa 0 harjoitella 0 treenata 0 kuntoilla 0 007 * 01752647 v 0000 $ 00098148 v 0000 ~ 00027493 v 0000 ~ 00097699 v 0000 ~ 00097896 v 0000 ~ 00098873 v 0000 ~ 01099699 v 0000 01 + 01 00 | do physical exercise; "She works out in the gym every day"  
+00097699 29 v 01 harjoitella 1 003 @ 00097428 v 0000 $ 00799040 v 0000 + 00893469 n 0101 01 + 01 00 | exercise in order to prepare for an event or competition; "She is training for the Olympics"  
+00097896 29 v 01 voimistella 0 002 @ 00097428 v 0000 ~ 00098022 v 0000 01 + 01 00 | do gymnastics, roll and turn skillfully  
+00098022 29 v 01 kieriä 0 001 @ 00097896 v 0000 01 + 01 00 | execute a roll, in tumbling; "The gymnasts rolled and jumped"  
+00098148 29 v 02 harjoittaa 1 teettää_työtä 0 004 @ 02303540 v 0000 > 00097428 v 0000 $ 00097428 v 0000 ~ 00098444 v 0000 01 + 01 00 | give a workout to; "Some parents exercise their infants"; "My personal trainer works me hard"; "work one's muscles"; "this puzzle will exercise your mind"  
+00098444 29 v 03 lämmitellä 1 verrytellä 1 lämmittää 0 005 @ 02303540 v 0000 @ 00098148 v 0000 + 01142151 n 0301 + 01142151 n 0101 ~ 00098728 v 0000 01 + 01 00 | cause to do preliminary exercises so as to stretch the muscles; "The coach warmed up the players before the game"  
+00098728 29 v 01 verrytellä 2 001 @ 00098444 v 0000 01 + 01 00 | cause to become limber; "The violist limbered her wrists before the concert"  
+00098873 29 v 01 jännittää 0 001 @ 00097428 v 0000 01 + 01 00 | give a healthy elasticity to; "Let's tone our muscles"  
+00098997 29 v 01 venytellä 1 002 @ 01752647 v 0000 + 00342063 n 0101 01 + 01 00 | extend one's body or limbs; "Let's stretch for a minute--we've been sitting here for over 3 hours"  
+00099181 29 v 04 pierrä 0 päästää_ilmaa 0 pieraista 0 piereskellä 0 004 @ 00010339 v 0000 + 00839387 n 0401 + 00839387 n 0301 + 00839387 n 0101 01 + 01 00 | expel intestinal gases through the anus  
+00099386 29 v 01 niiskuttaa 2 003 @ 00005136 v 0000 + 00836102 n 0101 + 10904868 n 0104 01 + 01 00 | snuff up mucus through the nose  
+00099521 29 v 02 sylkeä 2 syljeskellä 0 015 @ 00006288 v 0000 ^ 00006288 v 0202 ^ 02103591 v 0202 + 10768135 n 0201 + 00122899 n 0202 + 00122899 n 0201 + 05452183 n 0201 + 13661672 n 0202 ^ 00006288 v 0102 ^ 02103591 v 0102 + 10768135 n 0101 + 00122899 n 0102 + 00122899 n 0101 + 05452183 n 0101 + 13661672 n 0102 01 + 01 00 | expel or eject (saliva or phlegm or sputum) from the mouth; "The father of the victim spat at the alleged murderer"  
+00099968 29 v 04 räkäistä 0 sylkeä 3 sylkäistä 0 roiskia_sylkeä 0 001 @ 00006288 v 0000 01 + 01 00 | spit up in an explosive manner  
+00100109 29 v 01 lyödä_varpaansa 0 001 @ 01182485 v 0000 01 + 01 00 | strike (one's toe) accidentally against an object; "She stubbed her toe in the dark and now it's broken"  
+00100288 29 v 01 vahingoittaa 0 002 @ 00068965 v 0000 ~ 00085754 v 0000 01 + 01 00 | cause or do harm to; "These pills won't harm your system"  
+00100433 29 v 01 kuolata 0 003 @ 00010339 v 0000 + 13670257 n 0101 ~ 00100597 v 0000 01 + 01 00 | produce saliva; "We salivated when he described the great meal"  
+00100597 29 v 01 kuolata 1 005 @ 00100433 v 0000 + 05452649 n 0101 + 10162961 n 0102 ^ 01748782 v 0101 ^ 01748782 v 0102 01 + 01 00 | let saliva drivel from the mouth; "The baby drooled"  
+00100786 29 v 01 punastua 0 004 @ 00273188 v 0000 + 00122640 n 0101 + 14171769 n 0103 + 14171769 n 0105 01 + 01 00 | turn red, as if in embarrassment or shame; "The girl blushed when a young man whistled as she walked by"  
+00101010 29 v 02 kalveta 0 vaaleta 0 002 @ 00273188 v 0000 + 05014436 n 0103 01 + 01 00 | turn pale, as if in fear  
+00101127 29 v 01 kalventaa 0 001 @ 00123109 v 0000 01 + 01 00 | make pale or sickly; "alcohol etiolates your skin"  
+00101244 29 v 02 ruskettua 0 päivettyä 0 004 @ 00273188 v 0000 + 14413824 n 0101 + 13683217 n 0101 ~ 00101406 v 0000 01 + 01 00 | get a tan, from wind or sun  
+00101406 29 v 02 päivettyä 1 ruskettua 1 002 @ 00101244 v 0000 + 14413824 n 0201 01 + 01 00 | get a tan from being exposed to the sun  
+00101544 29 v 04 ottaa_aurinkoa 0 lämmitellä_auringonpaisteessa 0 olla_auringossa 0 paistatella_päivää 0 001 @ 01485556 v 0000 01 + 01 00 | expose one's body to the sun  
+00101720 29 v 02 palaa 0 polttaa_itsensä_auringossa 0 001 @ 00273188 v 0000 01 + 01 00 | get a sunburn by overexposure to the sun  
+00101853 29 v 01 levitä 1 001 @ 01321686 v 0000 01 + 01 00 | become systemic and spread throughout the body; "this kind of infection generalizes throughout the immune system"  
+00102031 29 v 02 metastasoida 0 lähettää_etäpesäkkeitä 0 001 @ 01321686 v 0000 01 + 01 00 | spread throughout the body; "the cancer had metastasized and the patient could not be saved"  
+00102224 29 v 04 päästää 1 pakottaa_ulos 1 syöstä 1 vapauttaa 1 011 + 13667419 n 0401 ~ 00006288 v 0000 ~ 00035629 v 0000 ~ 00054847 v 0000 ~ 00059455 v 0000 ~ 00061821 v 0000 ~ 00071634 v 0000 ~ 00073206 v 0000 ~ 00075107 v 0000 ~ 00094384 v 0000 ~ 00102614 v 0000 01 + 01 00 | eliminate (a substance); "combustion products are exhausted in the engine"; "the plant releases a gas"  
+00102614 29 v 02 päästää 2 poistaa 1 007 @ 00102224 v 0000 + 01248398 n 0101 ~ 00003385 v 0000 ~ 00003582 v 0000 ~ 00004590 v 0000 ~ 00283111 v 0000 ~ 00499869 v 0000 01 + 01 00 | expel (gases or odors)  
+00102823 29 v 04 laskea_leikkiä 0 vitsailla 0 ilvehtiä 0 pilailla 0 006 @ 00010541 v 0000 + 06822532 n 0403 + 00429824 n 0401 + 06822532 n 0201 + 00429824 n 0202 ~ 00103050 v 0000 01 + 01 00 | act in a funny or teasing way  
+00103050 29 v 03 pelleillä 1 pelehtiä 0 ilveillä 0 003 @ 00102823 v 0000 + 00513171 n 0102 + 06825798 n 0102 01 + 01 00 | act as or like a clown  
+00103200 29 v 01 tuntea_olonsa_jksk 0 003 @ 02488161 v 0000 ~ 00103473 v 0000 ~ 00103644 v 0000 01 + 01 00 | be conscious of a physical, mental, or emotional state; "My cold is gone--I feel fine today"; "She felt tired after the long hike"; "She felt sad after her loss"  
+00103473 29 v 01 tuntea_olonsa_loistavaksi 0 001 @ 00103200 v 0000 01 + 01 00 | be in excellent health and spirits; "he feels like a million after he got the promotion"  
+00103644 29 v 02 läkähtyä 2 tukahtua 1 002 @ 00103200 v 0000 + 00291078 a 0201 01 + 01 00 | feel uncomfortable for lack of fresh air; "The room was hot and stuffy and we were suffocating"  
+00103837 29 v 02 pukeutua_iltapukuun<unconfirmed/> 0 pukeutua_kaapuun<unconfirmed/> 2 001 @ 00048265 v 0000 01 + 01 00 | dress in a gown  
+00103976 29 v 01 aiheuttaa_keltatauti 0 001 @ 00020121 v 0000 01 + 01 00 | affect with, or as if with, jaundice  
+00104090 29 v 01 hölmöillä 0 002 @ 00010541 v 0000 + 06650826 n 0101 01 + 01 00 | act in a trivial or ineffective way  
+00104213 29 v 01 ajaa_yli 0 001 @ 00068965 v 0000 01 + 01 00 | injure or kill by running over, as with a vehicle  
+00104328 29 v 01 lihoa 2 001 @ 00046476 v 0000 01 + 01 00 | gain (weight); "He packed on two pounds over the summer"  
+00104447 29 v 01 herättää 5 001 @ 00019374 v 0000 01 + 01 00 | rouse somebody from sleep with a call; "I was called at 5 A.M. this morning"  
+00104592 29 v 02 olla 3 pitää 3 001 @ 00010541 v 0000 01 + 01 00 | behave in a certain way; "make merry"  
+00104701 29 v 01 olla_tekevinään_jtak 0 001 @ 00010541 v 0000 01 + 01 00 | begin or appear to begin an action; "He made as if to shake my hand"  
+00104849 29 v 02 hellittää 1 laantua 0 001 @ 00147921 v 0000 01 + 01 00 | diminish or discontinue abruptly; "The patient's fever broke last night"  
+00105000 29 v 01 murtaa 0 004 @ 00068965 v 0000 $ 00105176 v 0000 + 14415382 n 0101 + 00376293 n 0101 01 + 01 00 | fracture a bone of; "I broke my foot while playing hockey"  
+00105176 29 v 01 murtaa 1 005 $ 00105000 v 0000 $ 00105540 v 0000 + 14415382 n 0101 + 00376293 n 0101 ~ 00105352 v 0000 01 + 01 00 | break (a bone); "She broke her clavicle"  
+00105352 29 v 01 murtaa_uudelleen 0 001 @ 00105176 v 0000 01 + 01 00 | break (a bone) that was previously broken but mended in an abnormal way; "The surgeon had to refracture her wrist"  
+00105540 29 v 02 murtua 1 haljeta 0 003 @ 00353463 v 0000 $ 00105176 v 0000 + 14415382 n 0101 01 + 01 00 | become fractured; "The tibia fractured from the blow of the iron pipe"  
+00105720 29 v 01 puhjeta 1 002 @ 00092064 v 0000 $ 00093719 v 0000 01 + 01 00 | have grow through the gums; "The baby cut a tooth"  
+00105853 29 v 01 ojentaa 1 002 @ 02197517 v 0000 $ 00105999 v 0000 01 + 01 00 | proffer (a body part); "She gave her hand to her little sister"  
+00105999 29 v 01 antautua 0 002 @ 00764243 v 0000 $ 00105853 v 0000 01 + 01 00 | consent to engage in sexual intercourse with a man; "She gave herself to many men"  
+00106165 29 v 01 kääriä 0 002 @ 00076812 v 0000 + 03902841 n 0101 01 + 01 00 | treat the body or any part of it by wrapping it, as with blankets or sheets, and applying compresses to it, or stuffing it to provide cover, containment, or therapy, or to absorb blood; "The nurse packed gauze in the wound"; "You had better pack your swollen ankle with ice"  
+00106524 29 v 02 nuuskata 0 nuuskia 0 003 @ 00005136 v 0000 + 00882443 n 0202 + 00882443 n 0102 01 + 01 00 | inhale audibly through the nose; "snuff coke"  
+00106681 29 v 01 vaahdota 0 002 @ 00067183 v 0000 ~ 00106827 v 0000 01 + 01 00 | exude or expel foam; "the angry man was frothing at the mouth"  
+00106827 29 v 01 vaahdota 1 001 @ 00106681 v 0000 01 + 01 00 | exude sweat or lather; "this unfit horse lathers easily"  
+00106949 30 v 01 muuttua 0 196 ! 00115134 v 0101 + 11561104 n 0101 + 07353031 n 0101 ~ 00025282 v 0000 ~ 00046847 v 0000 ~ 00092064 v 0000 ~ 00095549 v 0000 ~ 00110684 v 0000 ~ 00111023 v 0000 ~ 00111171 v 0000 ~ 00112002 v 0000 ~ 00113537 v 0000 ~ 00116855 v 0000 ~ 00117954 v 0000 ~ 00119426 v 0000 ~ 00119930 v 0000 ~ 00121848 v 0000 ~ 00122209 v 0000 ~ 00122520 v 0000 ~ 00131299 v 0000 ~ 00131669 v 0000 ~ 00134942 v 0000 ~ 00136497 v 0000 ~ 00137284 v 0000 ~ 00140978 v 0000 ~ 00142253 v 0000 ~ 00146560 v 0000 ~ 00152342 v 0000 ~ 00157695 v 0000 ~ 00157903 v 0000 ~ 00158332 v 0000 ~ 00166339 v 0000 ~ 00166491 v 0000 ~ 00189392 v 0000 ~ 00198112 v 0000 ~ 00203802 v 0000 ~ 00205647 v 0000 ~ 00208800 v 0000 ~ 00213800 v 0000 ~ 00214939 v 0000 ~ 00223277 v 0000 ~ 00231789 v 0000 ~ 00232214 v 0000 ~ 00232724 v 0000 ~ 00233025 v 0000 ~ 00243615 v 0000 ~ 00247485 v 0000 ~ 00247828 v 0000 ~ 00259801 v 0000 ~ 00264361 v 0000 ~ 00264558 v 0000 ~ 00272974 v 0000 ~ 00273188 v 0000 ~ 00275061 v 0000 ~ 00297035 v 0000 ~ 00304276 v 0000 ~ 00305631 v 0000 ~ 00320012 v 0000 ~ 00327571 v 0000 ~ 00334297 v 0000 ~ 00341610 v 0000 ~ 00347257 v 0000 ~ 00356673 v 0000 ~ 00360540 v 0000 ~ 00363371 v 0000 ~ 00363511 v 0000 ~ 00371135 v 0000 ~ 00373906 v 0000 ~ 00380876 v 0000 ~ 00389607 v 0000 ~ 00396504 v 0000 ~ 00397856 v 0000 ~ 00404920 v 0000 ~ 00406345 v 0000 ~ 00420519 v 0000 ~ 00421207 v 0000 ~ 00428854 v 0000 ~ 00429105 v 0000 ~ 00439348 v 0000 ~ 00445744 v 0000 ~ 00452573 v 0000 ~ 00452773 v 0000 ~ 00459623 v 0000 ~ 00464717 v 0000 ~ 00473449 v 0000 ~ 00474207 v 0000 ~ 00480805 v 0000 ~ 00481827 v 0000 ~ 00483240 v 0000 ~ 00490818 v 0000 ~ 00503620 v 0000 ~ 00505047 v 0000 ~ 00505381 v 0000 ~ 00505853 v 0000 ~ 00506631 v 0000 ~ 00506932 v 0000 ~ 00507045 v 0000 ~ 00507487 v 0000 ~ 00508492 v 0000 ~ 00509478 v 0000 ~ 00512157 v 0000 ~ 00512291 v 0000 ~ 00516000 v 0000 ~ 00516821 v 0000 ~ 00517073 v 0000 ~ 00517162 v 0000 ~ 00517783 v 0000 ~ 00518061 v 0000 ~ 00518206 v 0000 ~ 00518318 v 0000 ~ 00518840 v 0000 ~ 00519083 v 0000 ~ 00522013 v 0000 ~ 00522899 v 0000 ~ 00523180 v 0000 ~ 00523296 v 0000 ~ 00525147 v 0000 ~ 00525431 v 0000 ~ 00526828 v 0000 ~ 00526992 v 0000 ~ 00528136 v 0000 ~ 00528274 v 0000 ~ 00529014 v 0000 ~ 00530812 v 0000 ~ 00531655 v 0000 ~ 00532412 v 0000 ~ 00532971 v 0000 ~ 00534393 v 0000 ~ 00535076 v 0000 ~ 00536628 v 0000 ~ 00540564 v 0000 ~ 00540675 v 0000 ~ 00542708 v 0000 ~ 00543350 v 0000 ~ 00543849 v 0000 ~ 00544343 v 0000 ~ 00544614 v 0000 ~ 00544959 v 0000 ~ 00545945 v 0000 ~ 00546574 v 0000 ~ 00548374 v 0000 ~ 00549313 v 0000 ~ 00550439 v 0000 ~ 00550555 v 0000 ~ 00550880 v 0000 ~ 00551023 v 0000 ~ 00551292 v 0000 ~ 00552627 v 0000 ~ 00553286 v 0000 ~ 00553993 v 0000 ~ 00554586 v 0000 ~ 00554698 v 0000 ~ 00555021 v 0000 ~ 00555775 v 0000 ~ 00556250 v 0000 ~ 00557135 v 0000 ~ 00557609 v 0000 ~ 00558277 v 0000 ~ 00559105 v 0000 ~ 00559430 v 0000 ~ 00559722 v 0000 ~ 00560986 v 0000 ~ 00561455 v 0000 ~ 00562298 v 0000 ~ 00562667 v 0000 ~ 00564386 v 0000 ~ 00564614 v 0000 ~ 00565153 v 0000 ~ 00566160 v 0000 ~ 00618738 v 0000 ~ 00628254 v 0000 ~ 01031666 v 0000 ~ 01495539 v 0000 ~ 01670215 v 0000 ~ 01699514 v 0000 ~ 01885140 v 0000 ~ 01898445 v 0000 ~ 01901549 v 0000 ~ 01903615 v 0000 ~ 02017186 v 0000 ~ 02022643 v 0000 ~ 02055848 v 0000 ~ 02124230 v 0000 ~ 02280689 v 0000 ~ 02358286 v 0000 ~ 02401529 v 0000 ~ 02421742 v 0000 ~ 02485391 v 0000 ~ 02509080 v 0000 ~ 02509337 v 0000 ~ 02510561 v 0000 ~ 02548294 v 0000 ~ 02548457 v 0000 ~ 02603171 v 0000 ~ 02625830 v 0000 ~ 02635251 v 0000 01 + 01 00 | undergo a change; become different in essence; losing one's or its original nature; "She changed completely as she grew older"; "The weather changed last night"  
+00110684 30 v 02 sulautua 0 vaihtua_vähitellen 0 002 @ 00106949 v 0000 $ 00110894 v 0000 01 + 01 00 | pass from one quality such as color to another by a slight degree; "the butterfly wings shade to yellow"  
+00110894 30 v 01 muuttua_vähitellen 0 002 @ 00123109 v 0000 $ 00110684 v 0000 01 + 01 00 | vary slightly; "shade the meaning"  
+00111023 30 v 02 geeliytyä 0 hyytelöityä 0 002 @ 00106949 v 0000 + 14724948 n 0101 01 + 01 00 | become a gel; "The solid, when heated, gelled"  
+00111171 30 v 02 raaistua 0 eläimellistyä 0 004 @ 00106949 v 0000 + 00274338 n 0101 + 01332473 a 0105 + 01332473 a 0107 01 + 01 00 | become brutal or insensitive and unfeeling  
+00111351 30 v 02 raaistaa 0 eläimellistää 0 004 @ 00123109 v 0000 + 00274338 n 0101 + 01332473 a 0105 + 01332473 a 0107 01 + 01 00 | make brutal, unfeeling, or inhuman; "Life in the camps had brutalized him"  
+00111564 30 v 01 sulattaa<note>karamelliksi</note> 0 002 @ 00112360 v 0000 ;c 00247197 n 0000 01 + 01 00 | convert to caramel  
+00111692 30 v 01 rasteroida 0 003 @ 00112360 v 0000 ;c 06156804 n 0000 + 04084329 n 0101 01 + 01 00 | convert (an image) into pixels  
+00111827 30 v 02 sulaa<note>karamelliksi</note> 0 karamellisoitua 0 002 @ 00112002 v 0000 ;c 00247197 n 0000 01 + 01 00 | be converted into caramel; "The sugar caramelized"  
+00112002 30 v 02 muuttua 1 muuntua 0 011 @ 00106949 v 0000 ;c 06112587 n 0000 $ 00112360 v 0000 + 00374729 a 0201 + 00374729 a 0202 + 00374729 a 0101 + 00374729 a 0102 ~ 00111827 v 0000 ~ 00115030 v 0000 ~ 00262484 v 0000 ~ 00272833 v 0000 01 + 01 00 | change in nature, purpose, or function; undergo a chemical change; "The substance converts to an acid"  
+00112360 30 v 01 muuttaa 0 040 @ 00123109 v 0000 $ 00112002 v 0000 + 00398519 n 0101 + 01081292 a 0101 ~ 00111564 v 0000 ~ 00111692 v 0000 ~ 00113264 v 0000 ~ 00113380 v 0000 ~ 00113670 v 0000 ~ 00113803 v 0000 ~ 00114016 v 0000 ~ 00114257 v 0000 ~ 00114496 v 0000 ~ 00114653 v 0000 ~ 00114781 v 0000 ~ 00114919 v 0000 ~ 00312936 v 0000 ~ 00371029 v 0000 ~ 00373413 v 0000 ~ 00443227 v 0000 ~ 00486111 v 0000 ~ 00488787 v 0000 ~ 00492332 v 0000 ~ 00492524 v 0000 ~ 00507971 v 0000 ~ 00530442 v 0000 ~ 00535792 v 0000 ~ 00548488 v 0000 ~ 00555166 v 0000 ~ 00563153 v 0000 ~ 00563262 v 0000 ~ 00563368 v 0000 ~ 00563496 v 0000 ~ 00563601 v 0000 ~ 00563713 v 0000 ~ 00563821 v 0000 ~ 00563940 v 0000 ~ 00564037 v 0000 ~ 00564131 v 0000 ~ 00948533 v 0000 01 + 01 00 | change the nature, purpose, or function of something; "convert lead into gold"; "convert hotels into jails"; "convert slaves to laborers"  
+00113264 30 v 01 maatua 0 002 @ 00112360 v 0000 + 13612610 n 0101 01 + 01 00 | convert (plant remains) into humus  
+00113380 30 v 01 muuttaa_verbiksi 0 002 @ 00112360 v 0000 ;c 05684466 n 0000 01 + 01 00 | convert into a verb; "many English nouns have become verbalized"  
+00113537 30 v 01 kreolistua 0 002 @ 00106949 v 0000 + 06949031 n 0101 01 + 01 00 | develop into a creole; "pidgins often creolize"  
+00113670 30 v 01 muodostaa_itiöitä 0 003 @ 00112360 v 0000 ;c 06094780 n 0000 $ 01677214 v 0000 01 + 01 00 | convert into spores  
+00113803 30 v 03 kirjoittaa_romaaniksi 0 kehittää_romaaniksi 0 tehdä_romaaniksi 0 001 @ 00112360 v 0000 01 + 01 00 | convert into the form or the style of a novel; "The author novelized the historical event"  
+00114016 30 v 01 muuntaa_elohopea_harmaaksi_jauheeksi<approximate/> 0 002 @ 00112360 v 0000 ;c 06112587 n 0000 01 + 01 00 | convert (metallic mercury) into a grey powder consisting of minute globules, as by shaking with chalk or fatty oil  
+00114257 30 v 01 opalisoida 0 002 @ 00112360 v 0000 + 14823609 n 0101 01 + 01 00 | replace or convert into opal; "opalized tree trunks"  
+00114395 30 v 01 opalisoida 1 002 @ 00123109 v 0000 + 14823609 n 0101 01 + 01 00 | make opalescent  
+00114496 30 v 01 vastaanottaa 0 002 @ 00112360 v 0000 + 04090358 n 0101 01 + 01 00 | convert into sounds or pictures; "receive the incoming radio signals"  
+00114653 30 v 01 palauttaa_ennalleen 0 001 @ 00112360 v 0000 01 + 01 00 | convert back; "Hollywood is reconverting old films"  
+00114781 30 v 01 mallastaa 0 004 @ 00112360 v 0000 $ 00114919 v 0000 $ 00182306 v 0000 + 07950649 n 0101 01 + 01 00 | convert into malt  
+00114919 30 v 01 imellyttää 0 002 @ 00112360 v 0000 $ 00114781 v 0000 01 + 01 00 | convert grain into malt  
+00115030 30 v 01 valmistua_maltaiksi 0 001 @ 00112002 v 0000 01 + 01 00 | turn into malt, become malt  
+00115134 30 v 02 jäädä 0 pysyä 0 008 @ 02488161 v 0000 ! 00106949 v 0101 ~ 00115547 v 0000 ~ 00116027 v 0000 ~ 02377060 v 0000 ~ 02586136 v 0000 ~ 02612510 v 0000 ~ 02621938 v 0000 01 + 01 00 | stay the same; remain in a certain state; "The dress remained wet after repeated attempts to dry it"; "rest assured"; "stay alone"; "He remained unmoved by her tears"; "The bad weather continued for another week"  
+00115547 30 v 01 pysyä_poissa 0 001 @ 00115134 v 0000 01 + 01 00 | remain outside  
+00115632 30 v 01 jatkua 0 005 @ 02488161 v 0000 + 05085252 n 0104 ~ 00229280 v 0000 ~ 02529447 v 0000 ~ 02582038 v 0000 01 + 01 00 | exist over a prolonged period of time; "The bad weather continued for two more weeks"  
+00115853 30 v 03 pysytellä_ajan_tasalla 0 pysyä_ajan_tasalla 0 seurata 0 001 $ 00698795 v 0000 01 + 01 00 | keep informed; "He kept up on his country's foreign policies"  
+00116027 30 v 02 pitää_pintansa 0 pysyä_paikoillaan 0 001 @ 00115134 v 0000 01 + 01 00 | maintain the same position; wait it out; "Let's not make a decision--let's sit tight"  
+00116207 30 v 01 erilaistua 0 001 @ 00157903 v 0000 01 + 01 00 | become distinct and acquire a different character  
+00116324 30 v 03 lajiutua 0 erilaistua 1 erikoistua 0 003 @ 00244177 v 0000 + 13677489 n 0301 + 13677733 n 0101 01 + 01 00 | evolve so as to lead to a new species or develop in a way most suited to the environment  
+00116540 30 v 01 erilaistua 2 003 @ 00245039 v 0000 ! 00116702 v 0101 + 13677489 n 0101 01 + 01 00 | become different during development; "cells differentiate"  
+00116702 30 v 01 taantua_erilaistumisessa<unconfirmed/> 0 002 @ 00245039 v 0000 ! 00116540 v 0101 01 + 01 00 | lose specialization in form or function  
+00116855 30 v 02 muuttua 2 mutatoitua 0 002 @ 00106949 v 0000 ~ 00117102 v 0000 01 + 01 00 | undergo mutation; "cells mutate"  
+00116983 30 v 01 muuttua_valtimovereksi 0 001 @ 00123109 v 0000 01 + 01 00 | change venous blood into arterial blood  
+00117102 30 v 01 palautua 0 001 @ 00116855 v 0000 01 + 01 00 | undergo reversion, as in a mutation  
+00117203 30 v 02 tehdä_jksik 0 saada_jku_tekemään_jtak 0 004 @ 00123109 v 0000 ~ 00117584 v 0000 ~ 00117717 v 0000 ~ 02607321 v 0000 01 + 01 00 | give certain properties to something; "get someone mad"; "She made us look silly"; "He made a fool of himself at the meeting"; "Don't make this into a big deal"; "This invention will make you a millionaire"; "Make yourself clear"  
+00117584 30 v 02 tehdä_jstak_jtak 0 tehdä 0 001 @ 00117203 v 0000 01 + 01 00 | cause to become; "The shot rendered her immobile"  
+00117717 30 v 01 saada<unconfirmed/> 0 001 @ 00117203 v 0000 01 + 01 00 | cause to move; cause to be in a certain position or condition; "He got his squad on the ball"; "This let me in for a big surprise"; "He got a girl into trouble"  
+00117954 30 v 02 olla 0 kokea 0 004 @ 00106949 v 0000 + 07342078 n 0201 + 06013518 n 0201 ~ 02616892 v 0000 01 + 01 00 | undergo; "The stocks had a fast run-up"  
+00118117 30 v 02 vaihdella_vuoroja 0 vuorotella 0 003 @ 02264893 v 0000 + 01009884 n 0101 ~ 00118298 v 0000 01 + 01 00 | do something in turns; "We take turns on the night shift"  
+00118298 30 v 01 vuorottaa 0 001 @ 00118117 v 0000 01 + 01 00 | take turns working; "the workers spell every four hours"  
+00118421 30 v 04 vaihdella 0 vuorotella 1 heilahdella 0 hyppiä 0 003 @ 00120057 v 0000 + 01009884 n 0202 + 01009884 n 0101 01 + 01 00 | go back and forth; swing back and forth between two states or conditions  
+00118633 30 v 07 vaihtaa 0 vaihtaa<broader/> 1 luovia 0 muuttaa 1 vaihdella 1 kääntyä<broader/> 0 kääntää_kelkkansa 0 004 @ 00134942 v 0000 + 00351468 n 0301 + 07496799 n 0204 + 07496799 n 0104 01 + 01 00 | reverse (a direction, attitude, or course of action)  
+00118902 30 v 01 korvata 0 001 @ 00123109 v 0000 01 + 01 00 | cause to change places; "interchange this screw for one of a smaller size"  
+00119041 30 v 01 vaskularisoida<unconfirmed/> 0 003 @ 00123109 v 0000 $ 00559722 v 0000 + 13690207 n 0101 01 + 01 00 | make vascular; "the yolk sac is gradually vascularized"  
+00119218 30 v 01 hienontaa_kuumentamalla 0 003 @ 00123109 v 0000 $ 00119426 v 0000 + 07438119 n 0101 01 + 01 00 | to roast or calcine so as to cause to crackle or until crackling stops; "decrepitate salts"  
+00119426 30 v 01 rätistä 0 003 @ 00106949 v 0000 $ 00119218 v 0000 + 07438119 n 0102 01 + 01 00 | undergo decrepitation and crackle; "The salt decrepitated"  
+00119587 30 v 01 panna_säröilemään 0 001 @ 00120057 v 0000 01 + 01 00 | to become, or to cause to become, covered with a network of small cracks; "The blazing sun crackled the desert sand"  
+00119782 30 v 01 rakentaa_lähiöitä<approximate/> 0 001 @ 00123109 v 0000 01 + 01 00 | make suburban in character; "highly suburbanized cities"  
+00119930 30 v 01 esikaupunkimaistua 0 001 @ 00106949 v 0000 01 + 01 00 | take on suburban character; "the city suburbanized"  
+00120057 30 v 03 vaihdella 2 muuttaa 2 muuttua 3 019 + 05869869 n 0303 + 00195674 n 0101 + 03035854 n 0101 + 02649556 a 0101 + 02183382 a 0101 + 02652993 a 0101 ~ 00118421 v 0000 ~ 00119587 v 0000 ~ 00120709 v 0000 ~ 00120864 v 0000 ~ 00121219 v 0000 ~ 00291616 v 0000 ~ 00295858 v 0000 ~ 00296063 v 0000 ~ 00422629 v 0000 ~ 00422826 v 0000 ~ 00423500 v 0000 ~ 00513811 v 0000 ~ 02623569 v 0000 01 + 01 00 | become different in some particular way, without permanently losing one's or its former characteristics or essence; "her mood changes in accordance with the weather"; "The supermarket's selection of vegetables varies according to the season"  
+00120709 30 v 01 muunnella 0 001 @ 00120057 v 0000 01 + 01 00 | vary the frequency, amplitude, phase, or other characteristic of (electromagnetic waves)  
+00120864 30 v 01 linnuttaa<unconfirmed/> 0 001 @ 00120057 v 0000 01 + 01 00 | to modify microorganisms by repeated culture in the developing chick embryo  
+00121020 30 v 02 optimoida 0 tehostaa 0 002 @ 00166491 v 0000 + 00263194 n 0101 01 + 01 00 | modify to achieve maximum efficiency in storage capacity or time or cost; "optimize a computer program"  
+00121219 30 v 01 siirtyä 0 004 @ 00120057 v 0000 ~ 00121432 v 0000 ~ 00121628 v 0000 ~ 01887429 v 0000 01 + 01 00 | go or proceed from one point to another; "the debate moved from family values to the economy"  
+00121432 30 v 01 astua 0 001 @ 00121219 v 0000 01 + 01 00 | move or proceed as if by steps into a new situation; "She stepped into a life of luxury"; "he won't step into his father's footsteps"  
+00121628 30 v 02 selata 0 vierittää 0 002 @ 00121219 v 0000 ;c 06156804 n 0000 01 + 01 00 | move through text or graphics in order to display parts that do not fit on the screen; "Scroll down to see the entire text"  
+00121848 30 v 02 rullata 0 kääriä 0 003 @ 00106949 v 0000 $ 00422026 v 0000 $ 00421831 v 0000 01 + 01 00 | show certain properties when being rolled; "The carpet rolls unevenly"; "dried-out tobacco rolls badly"  
+00122064 30 v 01 rullata 1 001 @ 00137284 v 0000 01 + 01 00 | take the shape of a roll or cylinder; "the carpet rolled out"; "Yarn rolls well"  
+00122209 30 v 02 lasittua 0 tulla_poissaolevaksi 0 001 @ 00106949 v 0000 01 + 01 00 | become glassy or take on a glass-like appearance; "Her eyes glaze over when she is bored"  
+00122387 30 v 01 mullistaa 0 001 @ 00123109 v 0000 01 + 01 00 | change radically; "E-mail revolutionized communication in academe"  
+00122520 30 v 09 muuttua_toiseksi 0 muuttua_toisenlaiseksi 0 tulla_toiseksi 0 tulla_toisenlaiseksi 0 kasvaa<unconfirmed/> 0 kehittyä<unconfirmed/> 0 kypsyä<unconfirmed/> 0 tulla_joksikin_vähitellen<unconfirmed/> 0 tulla 0 005 @ 00106949 v 0000 $ 00142253 v 0000 + 07381039 n 0603 ~ 00122982 v 0000 ~ 00274675 v 0000 01 + 01 00 | pass into a condition gradually, take on a specific property or attribute; become; "The weather turned nasty"; "She grew angry"  
+00122982 30 v 01 kaljuuntua 0 001 @ 00122520 v 0000 01 + 01 00 | grow bald; lose hair on one's head; "He is balding already"  
+00123109 30 v 01 muuttaa 3 410 > 00106949 v 0000 + 09729662 n 0101 + 13979854 n 0101 + 11561104 n 0101 + 07353031 n 0101 + 00375630 a 0101 + 00375630 a 0102 + 00204078 n 0101 + 00376563 a 0101 ~ 00019374 v 0000 ~ 00019888 v 0000 ~ 00020121 v 0000 ~ 00025077 v 0000 ~ 00052627 v 0000 ~ 00064008 v 0000 ~ 00065857 v 0000 ~ 00101127 v 0000 ~ 00110894 v 0000 ~ 00111351 v 0000 ~ 00112360 v 0000 ~ 00114395 v 0000 ~ 00116983 v 0000 ~ 00117203 v 0000 ~ 00118902 v 0000 ~ 00119041 v 0000 ~ 00119218 v 0000 ~ 00119782 v 0000 ~ 00122387 v 0000 ~ 00130864 v 0000 ~ 00131064 v 0000 ~ 00131497 v 0000 ~ 00131803 v 0000 ~ 00131991 v 0000 ~ 00132176 v 0000 ~ 00132452 v 0000 ~ 00132951 v 0000 ~ 00133826 v 0000 ~ 00136004 v 0000 ~ 00136171 v 0000 ~ 00138420 v 0000 ~ 00141706 v 0000 ~ 00144881 v 0000 ~ 00145552 v 0000 ~ 00147678 v 0000 ~ 00149781 v 0000 ~ 00153057 v 0000 ~ 00157378 v 0000 ~ 00158147 v 0000 ~ 00159229 v 0000 ~ 00162035 v 0000 ~ 00177963 v 0000 ~ 00186650 v 0000 ~ 00186895 v 0000 ~ 00187027 v 0000 ~ 00187499 v 0000 ~ 00187642 v 0000 ~ 00188200 v 0000 ~ 00194967 v 0000 ~ 00195879 v 0000 ~ 00197036 v 0000 ~ 00197762 v 0000 ~ 00198263 v 0000 ~ 00200972 v 0000 ~ 00203083 v 0000 ~ 00209456 v 0000 ~ 00212847 v 0000 ~ 00213396 v 0000 ~ 00215401 v 0000 ~ 00216614 v 0000 ~ 00219360 v 0000 ~ 00222199 v 0000 ~ 00232724 v 0000 ~ 00236463 v 0000 ~ 00242694 v 0000 ~ 00243034 v 0000 ~ 00246437 v 0000 ~ 00246712 v 0000 ~ 00246815 v 0000 ~ 00248313 v 0000 ~ 00251838 v 0000 ~ 00260131 v 0000 ~ 00262922 v 0000 ~ 00263329 v 0000 ~ 00264186 v 0000 ~ 00264750 v 0000 ~ 00265011 v 0000 ~ 00265808 v 0000 ~ 00268619 v 0000 ~ 00274226 v 0000 ~ 00276140 v 0000 ~ 00278807 v 0000 ~ 00280068 v 0000 ~ 00285323 v 0000 ~ 00287370 v 0000 ~ 00288001 v 0000 ~ 00290815 v 0000 ~ 00293345 v 0000 ~ 00294117 v 0000 ~ 00295591 v 0000 ~ 00300240 v 0000 ~ 00300368 v 0000 ~ 00300582 v 0000 ~ 00303323 v 0000 ~ 00304800 v 0000 ~ 00304987 v 0000 ~ 00305763 v 0000 ~ 00306041 v 0000 ~ 00315156 v 0000 ~ 00318044 v 0000 ~ 00328024 v 0000 ~ 00329717 v 0000 ~ 00343988 v 0000 ~ 00352746 v 0000 ~ 00356108 v 0000 ~ 00360842 v 0000 ~ 00361545 v 0000 ~ 00363217 v 0000 ~ 00364675 v 0000 ~ 00365798 v 0000 ~ 00369618 v 0000 ~ 00369871 v 0000 ~ 00370518 v 0000 ~ 00370662 v 0000 ~ 00371355 v 0000 ~ 00371513 v 0000 ~ 00371771 v 0000 ~ 00372026 v 0000 ~ 00372158 v 0000 ~ 00372978 v 0000 ~ 00373079 v 0000 ~ 00374110 v 0000 ~ 00374736 v 0000 ~ 00375566 v 0000 ~ 00376023 v 0000 ~ 00376467 v 0000 ~ 00377128 v 0000 ~ 00377294 v 0000 ~ 00377514 v 0000 ~ 00382306 v 0000 ~ 00382443 v 0000 ~ 00387728 v 0000 ~ 00388168 v 0000 ~ 00388426 v 0000 ~ 00388691 v 0000 ~ 00389242 v 0000 ~ 00389902 v 0000 ~ 00390713 v 0000 ~ 00391681 v 0000 ~ 00392943 v 0000 ~ 00393159 v 0000 ~ 00393376 v 0000 ~ 00393716 v 0000 ~ 00396165 v 0000 ~ 00396310 v 0000 ~ 00396712 v 0000 ~ 00396862 v 0000 ~ 00397063 v 0000 ~ 00397248 v 0000 ~ 00397655 v 0000 ~ 00398144 v 0000 ~ 00398380 v 0000 ~ 00398627 v 0000 ~ 00399067 v 0000 ~ 00399250 v 0000 ~ 00399430 v 0000 ~ 00399553 v 0000 ~ 00403253 v 0000 ~ 00403368 v 0000 ~ 00403905 v 0000 ~ 00405770 v 0000 ~ 00406529 v 0000 ~ 00407245 v 0000 ~ 00407409 v 0000 ~ 00417631 v 0000 ~ 00419865 v 0000 ~ 00423192 v 0000 ~ 00424397 v 0000 ~ 00424994 v 0000 ~ 00425291 v 0000 ~ 00426145 v 0000 ~ 00427312 v 0000 ~ 00429799 v 0000 ~ 00431631 v 0000 ~ 00432739 v 0000 ~ 00433092 v 0000 ~ 00433259 v 0000 ~ 00434513 v 0000 ~ 00437334 v 0000 ~ 00441033 v 0000 ~ 00442783 v 0000 ~ 00446264 v 0000 ~ 00452239 v 0000 ~ 00453146 v 0000 ~ 00453885 v 0000 ~ 00454285 v 0000 ~ 00459312 v 0000 ~ 00462934 v 0000 ~ 00463241 v 0000 ~ 00463544 v 0000 ~ 00463823 v 0000 ~ 00465278 v 0000 ~ 00470030 v 0000 ~ 00471672 v 0000 ~ 00475045 v 0000 ~ 00475475 v 0000 ~ 00476652 v 0000 ~ 00480021 v 0000 ~ 00481305 v 0000 ~ 00481518 v 0000 ~ 00482331 v 0000 ~ 00482694 v 0000 ~ 00483076 v 0000 ~ 00483592 v 0000 ~ 00485627 v 0000 ~ 00486328 v 0000 ~ 00486794 v 0000 ~ 00489084 v 0000 ~ 00492214 v 0000 ~ 00493069 v 0000 ~ 00493796 v 0000 ~ 00495757 v 0000 ~ 00495908 v 0000 ~ 00498951 v 0000 ~ 00500071 v 0000 ~ 00500635 v 0000 ~ 00501660 v 0000 ~ 00501948 v 0000 ~ 00502991 v 0000 ~ 00503473 v 0000 ~ 00504222 v 0000 ~ 00504550 v 0000 ~ 00504732 v 0000 ~ 00504872 v 0000 ~ 00505237 v 0000 ~ 00505981 v 0000 ~ 00506502 v 0000 ~ 00507386 v 0000 ~ 00508120 v 0000 ~ 00511230 v 0000 ~ 00512599 v 0000 ~ 00512702 v 0000 ~ 00512875 v 0000 ~ 00513097 v 0000 ~ 00513967 v 0000 ~ 00514139 v 0000 ~ 00514278 v 0000 ~ 00514405 v 0000 ~ 00514592 v 0000 ~ 00514730 v 0000 ~ 00515710 v 0000 ~ 00515860 v 0000 ~ 00516143 v 0000 ~ 00516285 v 0000 ~ 00516688 v 0000 ~ 00517344 v 0000 ~ 00517509 v 0000 ~ 00517644 v 0000 ~ 00517917 v 0000 ~ 00518447 v 0000 ~ 00518583 v 0000 ~ 00520834 v 0000 ~ 00522557 v 0000 ~ 00523801 v 0000 ~ 00523897 v 0000 ~ 00524438 v 0000 ~ 00525300 v 0000 ~ 00526337 v 0000 ~ 00527095 v 0000 ~ 00527249 v 0000 ~ 00527440 v 0000 ~ 00527529 v 0000 ~ 00527701 v 0000 ~ 00528857 v 0000 ~ 00531347 v 0000 ~ 00531475 v 0000 ~ 00531778 v 0000 ~ 00531885 v 0000 ~ 00532017 v 0000 ~ 00532153 v 0000 ~ 00532801 v 0000 ~ 00533283 v 0000 ~ 00533433 v 0000 ~ 00533672 v 0000 ~ 00534002 v 0000 ~ 00534252 v 0000 ~ 00534901 v 0000 ~ 00535430 v 0000 ~ 00535976 v 0000 ~ 00536256 v 0000 ~ 00536431 v 0000 ~ 00537633 v 0000 ~ 00538402 v 0000 ~ 00538520 v 0000 ~ 00538815 v 0000 ~ 00539021 v 0000 ~ 00539194 v 0000 ~ 00540184 v 0000 ~ 00541199 v 0000 ~ 00541504 v 0000 ~ 00542097 v 0000 ~ 00542254 v 0000 ~ 00542471 v 0000 ~ 00543105 v 0000 ~ 00544171 v 0000 ~ 00544800 v 0000 ~ 00545264 v 0000 ~ 00545477 v 0000 ~ 00545743 v 0000 ~ 00546425 v 0000 ~ 00546770 v 0000 ~ 00547025 v 0000 ~ 00547198 v 0000 ~ 00547369 v 0000 ~ 00547570 v 0000 ~ 00548219 v 0000 ~ 00549005 v 0000 ~ 00550290 v 0000 ~ 00550716 v 0000 ~ 00551752 v 0000 ~ 00551933 v 0000 ~ 00552053 v 0000 ~ 00552154 v 0000 ~ 00552413 v 0000 ~ 00552734 v 0000 ~ 00553069 v 0000 ~ 00553449 v 0000 ~ 00553620 v 0000 ~ 00554208 v 0000 ~ 00555276 v 0000 ~ 00555965 v 0000 ~ 00556108 v 0000 ~ 00556373 v 0000 ~ 00556545 v 0000 ~ 00556982 v 0000 ~ 00557365 v 0000 ~ 00557807 v 0000 ~ 00558119 v 0000 ~ 00558481 v 0000 ~ 00558641 v 0000 ~ 00558804 v 0000 ~ 00558932 v 0000 ~ 00559273 v 0000 ~ 00559586 v 0000 ~ 00559914 v 0000 ~ 00560127 v 0000 ~ 00560300 v 0000 ~ 00560836 v 0000 ~ 00561176 v 0000 ~ 00561689 v 0000 ~ 00561811 v 0000 ~ 00562839 v 0000 ~ 00564248 v 0000 ~ 00564467 v 0000 ~ 00565298 v 0000 ~ 00565893 v 0000 ~ 00566020 v 0000 ~ 00596485 v 0000 ~ 00892047 v 0000 ~ 00898590 v 0000 ~ 00917637 v 0000 ~ 01009656 v 0000 ~ 01049526 v 0000 ~ 01054238 v 0000 ~ 01142758 v 0000 ~ 01154632 v 0000 ~ 01192336 v 0000 ~ 01192458 v 0000 ~ 01192606 v 0000 ~ 01199179 v 0000 ~ 01220615 v 0000 ~ 01230010 v 0000 ~ 01283473 v 0000 ~ 01303112 v 0000 ~ 01312401 v 0000 ~ 01380367 v 0000 ~ 01402253 v 0000 ~ 01427753 v 0000 ~ 01432363 v 0000 ~ 01471312 v 0000 ~ 01472790 v 0000 ~ 01511401 v 0000 ~ 01520479 v 0000 ~ 01544955 v 0000 ~ 01597204 v 0000 ~ 01605611 v 0000 ~ 01724212 v 0000 ~ 01724421 v 0000 ~ 01744679 v 0000 ~ 01899389 v 0000 ~ 02023489 v 0000 ~ 02034049 v 0000 ~ 02045662 v 0000 ~ 02067096 v 0000 ~ 02073260 v 0000 ~ 02095189 v 0000 ~ 02100103 v 0000 ~ 02159914 v 0000 ~ 02204190 v 0000 ~ 02223880 v 0000 ~ 02321367 v 0000 ~ 02358114 v 0000 ~ 02408430 v 0000 ~ 02421594 v 0000 ~ 02423573 v 0000 ~ 02463597 v 0000 ~ 02485594 v 0000 ~ 02486629 v 0000 ~ 02509491 v 0000 ~ 02510294 v 0000 ~ 02630421 v 0000 01 + 01 00 | cause to change; make different; cause a transformation; "The advent of the automobile may have altered the growth pattern of the city"; "The discussion has changed my thinking about the issue"  
+00130729 30 v 02 tehdä_aistilliseksi 0 tehdä_lihalliseksi 0 001 @ 02463597 v 0000 01 + 01 00 | debase through carnal gratification  
+00130864 30 v 01 tehdä_värittömäksi_riistämällä_valo 0 002 @ 00123109 v 0000 ;c 00017252 n 0000 01 + 01 00 | bleach and alter the natural development of (a green plant) by excluding sunlight  
+00131064 30 v 02 raaistaa 1 tehdä_raaemmaksi 0 004 @ 00123109 v 0000 $ 00131299 v 0000 + 00274518 n 0101 + 00274518 n 0102 01 + 01 00 | make crude or savage in behavior or speech; "his years in prison have barbarized the young man"  
+00131299 30 v 02 raaistaa 2 tehdä_raaemmaksi 1 004 @ 00106949 v 0000 $ 00131064 v 0000 + 00274518 n 0101 + 00274518 n 0102 01 + 01 00 | become crude or savage or barbaric in behavior or language  
+00131497 30 v 02 muuttaa_alkaliseksi 0 muuttaa_emäksiseksi 0 002 @ 00123109 v 0000 ;c 06112587 n 0000 01 + 01 00 | make (a substance) alkaline; "The oxide is alkalized"  
+00131669 30 v 02 muuttua_alkaliseksi 0 muuttua_emäksiseksi 0 002 @ 00106949 v 0000 ;c 06112587 n 0000 01 + 01 00 | become alkaline  
+00131803 30 v 03 tehdä_myytiksi 0 mytologisoida 0 käsitellä_myyttinä 0 002 @ 00123109 v 0000 ! 00132176 v 0101 01 + 01 00 | make into a myth; "The Europeans have mythicized Rte. 66"  
+00131991 30 v 01 allegorisoida 0 004 @ 00123109 v 0000 + 06407244 n 0101 + 06924098 n 0102 + 09910639 n 0101 01 + 01 00 | make into an allegory; "The story was allegorized over time"  
+00132176 30 v 02 selittää_rationaalisesti 0 demytologisoida 0 004 @ 00123109 v 0000 ;c 06472138 n 0000 + 06813376 n 0201 ! 00131803 v 0101 01 + 01 00 | remove the mythical element from (writings); "the Bible should be demythologized and examined for its historical value"  
+00132452 30 v 02 saada 1 saattaa 0 003 @ 00123109 v 0000 ^ 02427390 v 0101 ^ 00415253 v 0106 01 + 01 00 | bring into a different state; "this may land you in jail"  
+00132618 30 v 01 maallistaa 0 002 @ 00142253 v 0000 + 01152302 n 0101 01 + 01 00 | make secular and draw away from a religious orientation; "Ataturk secularized Turkey"  
+00132789 30 v 02 kautsuttaa 0 kumittaa 0 002 @ 01209427 v 0000 + 15141262 n 0201 01 + 01 00 | coat or impregnate with rubber; "rubberize fabric for rain coats"  
+00132951 30 v 01 raaistaa 3 001 @ 00123109 v 0000 01 + 01 00 | make less subtle or refined; "coarsen one's ideals"  
+00133068 30 v 03 eloksoida 0 peittää_oksidikalvolla 0 anodisoida 0 001 @ 01209427 v 0000 01 + 01 00 | coat a metal with an oxide coat  
+00133206 30 v 01 muodostaa_sitraattia 0 001 @ 00142253 v 0000 01 + 01 00 | cause to form a salt or ester of citric acid  
+00133328 30 v 02 saattaa_tasapainoon 0 tasapainottaa 0 005 @ 00142253 v 0000 ;c 06112587 n 0000 + 14020365 n 0201 + 14056792 n 0201 + 13566272 n 0202 01 + 01 00 | bring to a chemical stasis or equilibrium  
+00133535 30 v 03 jättää 0 antaa_olla 0 jättää_taakseen 0 003 @ 02603830 v 0000 $ 02608019 v 0000 ~ 00478205 v 0000 01 + 01 00 | leave unchanged or undisturbed or refrain from taking; "leave it as is"; "leave the young fawn alone"; "leave the flowers that you see in the park behind"  
+00133826 30 v 04 vaikuttaa 0 koskea 0 koskettaa 0 liittyä 0 017 @ 00123109 v 0000 + 11562846 n 0101 + 00162129 n 0103 ~ 00134265 v 0000 ~ 00134411 v 0000 ~ 00134536 v 0000 ~ 00134685 v 0000 ~ 00484666 v 0000 ~ 00496149 v 0000 ~ 00543490 v 0000 ~ 00802156 v 0000 ~ 00988746 v 0000 ~ 01156357 v 0000 ~ 02019705 v 0000 ~ 02396461 v 0000 ~ 02424255 v 0000 ~ 02486268 v 0000 01 + 01 00 | have an effect upon; "Will the new rules affect me?"  
+00134265 30 v 01 antaa_isku 0 001 @ 00133826 v 0000 01 + 01 00 | affect adversely; "The court ruling struck a blow at the old segregation laws"  
+00134411 30 v 01 vaikuttaa<approximate/> 1 001 @ 00133826 v 0000 01 + 01 00 | cause repercussions; have an unwanted effect  
+00134536 30 v 01 käydä_voimille 0 001 @ 00133826 v 0000 01 + 01 00 | produce an effect or strain on somebody; "Each step told on his tired legs"  
+00134685 30 v 01 vaikuttaa 2 001 @ 00133826 v 0000 01 + 01 00 | have an effect for good or ill; "Her efforts will redound to the general good"  
+00134830 30 v 01 altistaa_bakteereille 0 001 @ 02019705 v 0000 01 + 01 00 | subject to the action of bacteria  
+00134942 30 v 03 muuttua_päinvastaiseksi 0 vaihtua 0 vaihtaa_päinvastaiseksi 0 022 @ 00106949 v 0000 ^ 01449126 v 0201 ^ 01449126 v 0202 ^ 01449689 v 0201 ^ 01449689 v 0202 ^ 01449689 v 0203 ^ 01449126 v 0203 ^ 01449126 v 0204 ^ 01449126 v 0205 ^ 01449689 v 0204 ~ 00118633 v 0000 ~ 00135624 v 0000 ~ 00135802 v 0000 ~ 00137108 v 0000 ~ 00195139 v 0000 ~ 00197591 v 0000 ~ 00370085 v 0000 ~ 00373620 v 0000 ~ 00376642 v 0000 ~ 00383234 v 0000 ~ 00830150 v 0000 ~ 01459198 v 0000 01 + 01 00 | change to the contrary; "The trend was reversed"; "the tides turned against him"; "public opinion turned when it was revealed that the president had an affair with a White House intern"  
+00135624 30 v 01 keikauttaa 0 001 @ 00134942 v 0000 01 + 01 00 | cause a complete reversal of the circumstances; "The tables are turned now that the Republicans are in power!"  
+00135802 30 v 01 kommutoida 0 002 @ 00134942 v 0000 + 03107875 n 0101 01 + 01 00 | reverse the direction of (an alternating electric current) each half cycle so as to produce a unidirectional current  
+00136004 30 v 02 muuttaa_alkemiallisesti 0 muuttaa_alkemiallisesti<unconfirmed/> 1 002 @ 00123109 v 0000 ;c 06112587 n 0000 01 + 01 00 | alter (elements) by alchemy  
+00136171 30 v 01 käyttää 0 002 @ 00123109 v 0000 ;c 00247197 n 0000 01 + 01 00 | make alcoholic, as by fermenting; "alcoholize prunes"  
+00136311 30 v 01 säilöä_alkoholiin 0 002 @ 00479242 v 0000 ;c 00247197 n 0000 01 + 01 00 | treat or infuse with alcohol; "alcoholize the fruit and let them sit in the refrigerator"  
+00136497 30 v 01 muunnella<approximate/> 1 029 @ 00106949 v 0000 ~ 00258782 v 0000 ~ 00259024 v 0000 ~ 00259370 v 0000 ~ 00298029 v 0000 ~ 00298684 v 0000 ~ 00314673 v 0000 ~ 00322254 v 0000 ~ 00325562 v 0000 ~ 00355620 v 0000 ~ 00357097 v 0000 ~ 00357572 v 0000 ~ 00367730 v 0000 ~ 00383434 v 0000 ~ 00386038 v 0000 ~ 00387514 v 0000 ~ 00417897 v 0000 ~ 00428116 v 0000 ~ 00429493 v 0000 ~ 00430458 v 0000 ~ 00430687 v 0000 ~ 00431112 v 0000 ~ 00432238 v 0000 ~ 00482568 v 0000 ~ 00488280 v 0000 ~ 00488449 v 0000 ~ 01399463 v 0000 ~ 01953634 v 0000 ~ 02358769 v 0000 01 + 01 00 | change in physical make-up  
+00137108 30 v 01 vaihtaa 2 004 @ 00134942 v 0000 + 07496799 n 0104 + 00200921 n 0102 + 00200921 n 0104 01 + 01 00 | change over, change around, as to a new order or sequence  
+00137284 30 v 01 muuttaa_muotoa 0 015 @ 00106949 v 0000 ~ 00122064 v 0000 ~ 00137816 v 0000 ~ 00256010 v 0000 ~ 00381922 v 0000 ~ 00422026 v 0000 ~ 00447544 v 0000 ~ 00460471 v 0000 ~ 00461179 v 0000 ~ 00526411 v 0000 ~ 01170012 v 0000 ~ 01224726 v 0000 ~ 01948058 v 0000 ~ 01965838 v 0000 ~ 01991365 v 0000 01 + 01 00 | assume a different shape or form  
+00137640 30 v 01 yksilöidä<approximate/> 0 002 @ 00138420 v 0000 + 04804310 n 0103 01 + 01 00 | give individual shape or form to; "Language that individuates his memories"  
+00137816 30 v 02 tulla_rakeiseksi 0 tehdä_rakeinen_pinta 0 001 @ 00137284 v 0000 01 + 01 00 | become granular  
+00137929 30 v 01 solmia 0 002 @ 00138420 v 0000 + 03847460 n 0101 01 + 01 00 | form a knot or bow in; "tie a necktie"  
+00138049 30 v 01 porrastaa 0 001 @ 00138420 v 0000 01 + 01 00 | make into terraces as for cultivation; "The Incas terraced their mountainous land"  
+00138198 30 v 01 harottaa<approximate/> 0 001 @ 00138420 v 0000 01 + 01 00 | shape like a fork; "She forked her fingers"  
+00138321 30 v 01 ryhmittyä 0 001 @ 00140978 v 0000 01 + 01 00 | form a constellation or cluster  
+00138420 30 v 01 muovata 0 036 @ 00123109 v 0000 + 04720793 n 0101 + 05096501 n 0101 + 10418618 n 0102 + 04213408 n 0101 + 03411564 n 0101 + 03412131 n 0101 + 05959930 n 0101 + 00925063 n 0101 ~ 00137640 v 0000 ~ 00137929 v 0000 ~ 00138049 v 0000 ~ 00138198 v 0000 ~ 00139191 v 0000 ~ 00139306 v 0000 ~ 00139409 v 0000 ~ 00139528 v 0000 ~ 00139725 v 0000 ~ 00139903 v 0000 ~ 00140073 v 0000 ~ 00140486 v 0000 ~ 00140583 v 0000 ~ 00140691 v 0000 ~ 00141280 v 0000 ~ 00141415 v 0000 ~ 00141539 v 0000 ~ 00256232 v 0000 ~ 00292544 v 0000 ~ 00447823 v 0000 ~ 00460257 v 0000 ~ 00460739 v 0000 ~ 00460878 v 0000 ~ 00461058 v 0000 ~ 00461348 v 0000 ~ 01461604 v 0000 ~ 01520082 v 0000 01 + 01 00 | give shape or form to; "shape the dough"; "form the young child's character"  
+00139191 30 v 01 hioa_päältä_tasaiseksi 0 001 @ 00138420 v 0000 01 + 01 00 | shape or cut with a flat surface  
+00139306 30 v 01 mitoittaa 0 001 @ 00138420 v 0000 01 + 01 00 | shape or form to required dimensions  
+00139409 30 v 01 rullata 2 002 @ 00138420 v 0000 + 13998364 n 0104 01 + 01 00 | shape by rolling; "roll a cigarette"  
+00139528 30 v 01 muokata 0 002 @ 00138420 v 0000 $ 00416935 v 0000 01 + 01 00 | flatten, stretch, or mold metal or glass, by rolling or by pulling it through a die or by stretching; "draw steel"  
+00139725 30 v 01 iskeä<unconfirmed/> 0 002 @ 00138420 v 0000 $ 01604839 v 0000 01 + 01 00 | cause to form (an electric arc) between electrodes of an arc lamp; "strike an arc"  
+00139903 30 v 01 kiteyttää 0 002 @ 00138420 v 0000 + 05802508 n 0101 01 + 01 00 | cause to take on a definite and clear shape; "He tried to crystallize his thoughts"  
+00140073 30 v 01 kiertää 0 001 @ 00138420 v 0000 01 + 01 00 | form into twists; "Twist the strips of dough"  
+00140185 30 v 01 saavuttaa_huippunsa 0 001 @ 00140978 v 0000 01 + 01 00 | rise to, or form, a summit; "The helmet culminated in a crest"  
+00140324 30 v 03 rakeistaa 0 tulla_rakeiseksi 1 tehdä_rakeinen_pinta 1 003 @ 00140978 v 0000 > 00137816 v 0000 + 00925684 n 0103 01 + 01 00 | form into grains  
+00140486 30 v 01 pirstoa 0 001 @ 00138420 v 0000 01 + 01 00 | form into slivers; "sliver wood"  
+00140583 30 v 01 louhia_harjanteeksi<unconfirmed/> 0 001 @ 00138420 v 0000 01 + 01 00 | form into a ridge  
+00140691 30 v 01 savuta 0 001 @ 00138420 v 0000 01 + 01 00 | form a plume; "The chimneys were pluming the sky"; "The engine was pluming black smoke"  
+00140842 30 v 02 kasautua_palloksi 0 kasautua_keräksi 0 002 @ 00140978 v 0000 + 07429939 n 0202 01 + 01 00 | assume a globular shape  
+00140978 30 v 01 muodostaa 0 011 @ 00106949 v 0000 ~ 00138321 v 0000 ~ 00140185 v 0000 ~ 00140324 v 0000 ~ 00140842 v 0000 ~ 01423526 v 0000 ~ 01520607 v 0000 ~ 01520724 v 0000 ~ 01520823 v 0000 ~ 02507652 v 0000 ~ 02508962 v 0000 01 + 01 00 | assume a form or shape; "the water formed little beads"  
+00141280 30 v 01 pyöristää 0 003 @ 00138420 v 0000 + 04144046 n 0101 ~ 00142009 v 0000 01 + 01 00 | make round; "round the edges"  
+00141415 30 v 01 pyältää 0 001 @ 00138420 v 0000 01 + 01 00 | shape or cut in scallops; "scallop the hem of the dress"  
+00141539 30 v 01 neliöidä 0 003 @ 00138420 v 0000 + 04320976 n 0101 + 14000993 n 0101 01 + 01 00 | make square; "Square the circle"; "square the wood with a file"  
+00141706 30 v 03 pyöristää 1 pyöristää_alas 0 pyöristää_ylös 0 001 @ 00123109 v 0000 01 + 01 00 | express as a round number; "round off the amount"  
+00141866 30 v 01 suipistaa_suutaan 0 001 @ 01330332 v 0000 01 + 01 00 | contract one's lips; "She primmed her lips after every bite of food"  
+00142009 30 v 02 mutristaa 0 suipistaa 0 002 @ 00141280 v 0000 ~ 00142146 v 0000 01 + 01 00 | contract one's lips into a rounded shape  
+00142146 30 v 01 suipistaa 1 001 @ 00142009 v 0000 01 + 01 00 | round one's lips as if intending to kiss  
+00142253 30 v 02 kääntyä 1 muuttua 4 079 @ 00106949 v 0000 $ 02509968 v 0000 $ 00122520 v 0000 ^ 00200684 v 0101 ^ 01730958 v 0101 + 07477299 n 0101 ~ 00019061 v 0000 ~ 00024308 v 0000 ~ 00024489 v 0000 ~ 00026532 v 0000 ~ 00026773 v 0000 ~ 00046197 v 0000 ~ 00046476 v 0000 ~ 00048265 v 0000 ~ 00054005 v 0000 ~ 00054275 v 0000 ~ 00132618 v 0000 ~ 00133206 v 0000 ~ 00133328 v 0000 ~ 00143905 v 0000 ~ 00145678 v 0000 ~ 00199154 v 0000 ~ 00200276 v 0000 ~ 00214772 v 0000 ~ 00227137 v 0000 ~ 00231457 v 0000 ~ 00251254 v 0000 ~ 00257666 v 0000 ~ 00258006 v 0000 ~ 00259562 v 0000 ~ 00260015 v 0000 ~ 00260280 v 0000 ~ 00260910 v 0000 ~ 00263203 v 0000 ~ 00298527 v 0000 ~ 00349370 v 0000 ~ 00351991 v 0000 ~ 00352501 v 0000 ~ 00359977 v 0000 ~ 00360216 v 0000 ~ 00362988 v 0000 ~ 00363764 v 0000 ~ 00364191 v 0000 ~ 00365016 v 0000 ~ 00366753 v 0000 ~ 00378220 v 0000 ~ 00397473 v 0000 ~ 00417121 v 0000 ~ 00417340 v 0000 ~ 00431464 v 0000 ~ 00431806 v 0000 ~ 00432597 v 0000 ~ 00433485 v 0000 ~ 00436615 v 0000 ~ 00441956 v 0000 ~ 00442187 v 0000 ~ 00442392 v 0000 ~ 00442584 v 0000 ~ 00442942 v 0000 ~ 00451648 v 0000 ~ 00458549 v 0000 ~ 00480153 v 0000 ~ 00480330 v 0000 ~ 00480914 v 0000 ~ 00481022 v 0000 ~ 00482103 v 0000 ~ 00483837 v 0000 ~ 00487399 v 0000 ~ 00487538 v 0000 ~ 00502675 v 0000 ~ 01291165 v 0000 ~ 01291322 v 0000 ~ 01479095 v 0000 ~ 01687963 v 0000 ~ 02241252 v 0000 ~ 02386615 v 0000 ~ 02519822 v 0000 ~ 02634034 v 0000 ~ 02637183 v 0000 01 + 01 00 | undergo a transformation or a change of position or action; "We turned from Socialism to Capitalism"; "The people turned against the President when he stole the election"  
+00143905 30 v 05 joutua_jhk 0 joutua_jkn_piiriin 0 pudota 0 tulla_jksk 0 tulla_joksikin 0 010 @ 00142253 v 0000 ^ 02417930 v 0000 ^ 02425320 v 0000 ^ 00325562 v 0000 ^ 00385878 v 0000 ^ 01064153 v 0000 ^ 01911922 v 0000 ^ 00199682 v 0000 ~ 00144457 v 0000 ~ 00144717 v 0000 01 + 01 00 | pass suddenly and passively into a state of body or mind; "fall into a trap"; "She fell ill"; "They fell out of favor"; "Fall in love"; "fall asleep"; "fall prey to an imposter"; "fall into a strange way of thinking"; "she fell to pieces after she lost her work"  
+00144457 30 v 01 pudota 1 001 @ 00143905 v 0000 01 + 01 00 | fall or sink into a state of exhaustion or death; "shop til you drop"  
+00144590 30 v 04 hävitä 0 vähetä 0 heiketä 0 laimeta 0 001 @ 00413416 v 0000 01 + 01 00 | diminish in size or intensity  
+00144717 30 v 02 rakastua 0 ihastua 0 001 @ 00143905 v 0000 01 + 01 00 | begin to experience feelings of love towards; "She fell in love with her former student"  
+00144881 30 v 01 suspensoida 0 004 @ 00123109 v 0000 ;c 06112587 n 0000 + 14725522 n 0102 ~ 00145071 v 0000 01 + 01 00 | cause to be held in suspension in a fluid; "suspend the particles"  
+00145071 30 v 01 keskeyttää_uudelleen 0 002 @ 00144881 v 0000 ;c 06112587 n 0000 01 + 01 00 | put back into suspension; "resuspend particles"  
+00145217 30 v 01 selvitä 0 002 @ 00145678 v 0000 * 01119581 v 0000 01 + 01 00 | become sober after excessive alcohol consumption; "Keep him in bed until he sobers up"  
+00145387 30 v 01 selvitä 1 001 @ 00145678 v 0000 01 + 01 00 | become more realistic; "After thinking about the potential consequences of his plan, he sobered up"  
+00145552 30 v 02 selvittää 0 vakavoittaa 0 001 @ 00123109 v 0000 01 + 01 00 | cause to become sober; "A sobering thought"  
+00145678 30 v 06 muuttua_jksik 0 tulla_jksik 0 mennä 0 joutua 0 päästä 0 tulla 1 021 @ 00142253 v 0000 ^ 00241815 v 0501 ^ 00241815 v 0504 ^ 01061390 v 0507 ^ 01058924 v 0502 ^ 00241815 v 0401 ^ 00241815 v 0404 ^ 01061390 v 0407 ^ 01058924 v 0402 ^ 00241815 v 0201 ^ 00241815 v 0204 ^ 01061390 v 0207 ^ 01058924 v 0202 ~ 00145217 v 0000 ~ 00145387 v 0000 ~ 00146359 v 0000 ~ 00503160 v 0000 ~ 00528725 v 0000 ~ 00536822 v 0000 ~ 00537951 v 0000 ~ 00538111 v 0000 01 + 01 00 | enter or assume a certain state or condition; "He became annoyed when he heard the bad news"; "It must be getting more serious"; "her face went red with anger"; "She went into ecstasy"; "Get going!"  
+00146359 30 v 01 tulla_joksikin 1 001 @ 00145678 v 0000 01 + 01 00 | arrive at a certain condition through repeated motion; "The stitches of the hem worked loose after she wore the skirt many times"  
+00146560 30 v 03 mukautua 0 sopeutua 0 tottua 0 016 @ 00106949 v 0000 + 07424890 n 0201 + 07424890 n 0202 + 13546590 n 0202 + 01080449 a 0202 + 00048007 a 0203 + 13546590 n 0101 + 00048007 a 0102 ~ 00147349 v 0000 ~ 00147811 v 0000 ~ 00156723 v 0000 ~ 00306799 v 0000 ~ 00382579 v 0000 ~ 00441268 v 0000 ~ 02430231 v 0000 ~ 02540927 v 0000 01 + 01 00 | adapt or conform oneself to new or different conditions; "We must adjust to the bad economic situation"  
+00147019 30 v 02 seurata 1 noudattaa 0 002 @ 01668201 v 0000 ~ 00147196 v 0000 01 + 01 00 | behave in accordance or in agreement with; "Follow a pattern"; "Follow my example"  
+00147196 30 v 02 noudattaa 1 toimia_mukaisesti 0 001 @ 00147019 v 0000 01 + 01 00 | be or act in accordance with; "Go by this rule and you'll be safe"  
+00147349 30 v 02 sopeutua_uudestaan 0 sopeutua 1 002 @ 00146560 v 0000 + 00198793 n 0101 01 + 01 00 | adjust anew; "After moving back to America, he had to readjust"  
+00147517 30 v 01 suhteuttaa 0 004 @ 00288001 v 0000 + 13936210 n 0101 ~ 00414541 v 0000 ~ 00414713 v 0000 01 + 01 00 | adjust in size relative to other things  
+00147678 30 v 01 uudelleenkouluttaa 0 001 @ 00123109 v 0000 01 + 01 00 | cause somebody to adapt or reform socially or politically  
+00147811 30 v 01 sopeutua_uudestaan 1 001 @ 00146560 v 0000 01 + 01 00 | adapt anew; "He readapted himself"  
+00147921 30 v 06 vähentyä 0 pienentyä 0 vähetä 1 pudota 2 pienetä 0 laskea 0 045 @ 00166339 v 0000 ! 00153361 v 0601 ! 00153361 v 0602 ! 00153361 v 0603 ! 00153361 v 0604 + 07411755 n 0603 ! 00153361 v 0605 ! 00153361 v 0501 ! 00153361 v 0502 ! 00153361 v 0503 ! 00153361 v 0504 ! 00153361 v 0505 + 05143150 n 0401 + 13577105 n 0202 ! 00153361 v 0101 ! 00153361 v 0102 ! 00153361 v 0103 ! 00153361 v 0104 + 07411755 n 0101 + 05141241 n 0101 ! 00153361 v 0105 ~ 00104849 v 0000 ~ 00149052 v 0000 ~ 00149258 v 0000 ~ 00149389 v 0000 ~ 00149561 v 0000 ~ 00151786 v 0000 ~ 00153226 v 0000 ~ 00217878 v 0000 ~ 00231214 v 0000 ~ 00234150 v 0000 ~ 00235154 v 0000 ~ 00238290 v 0000 ~ 00257475 v 0000 ~ 00260426 v 0000 ~ 00261110 v 0000 ~ 00282938 v 0000 ~ 00306975 v 0000 ~ 00308336 v 0000 ~ 00416589 v 0000 ~ 00418098 v 0000 ~ 00419983 v 0000 ~ 00420124 v 0000 ~ 00425880 v 0000 ~ 00526697 v 0000 01 + 01 00 | decrease in size, extent, or range; "The amount of homework decreased towards the end of the semester"; "The cabin pressure fell dramatically"; "her weight fell to under a hundred pounds"; "his voice fell to a whisper"  
+00149052 30 v 02 kutistua 0 kuihtua 0 002 @ 00147921 v 0000 + 00359754 n 0101 01 + 01 00 | decrease in size, range, or extent; "His earnings shrank"; "My courage shrivelled when I saw the task before me"  
+00149258 30 v 01 vähentää 0 002 @ 00147921 v 0000 + 00353729 n 0101 01 + 01 00 | diminish gradually; "Interested tapered off"  
+00149389 30 v 01 pudota 3 002 @ 00147921 v 0000 + 07411755 n 0102 01 + 01 00 | fall or diminish; "The number of students in this course dropped off after the first test"  
+00149561 30 v 04 häipyä 0 hävitä 1 rynnätä 0 haihtua 0 002 @ 00147921 v 0000 $ 01982909 v 0000 01 + 01 00 | decrease rapidly and disappear; "the money vanished in las Vegas"; "all my stock assets have vaporized"  
+00149781 30 v 05 kasvattaa 0 korottaa 0 laajentaa 0 lisätä 0 suurentaa 0 032 @ 00123109 v 0000 ! 00427312 v 0501 ! 00427312 v 0401 ! 00427312 v 0301 ! 00427312 v 0201 + 00362639 n 0201 + 13872247 n 0202 + 05140454 n 0201 ! 00427312 v 0101 + 07412599 n 0101 ~ 00150747 v 0000 ~ 00150976 v 0000 ~ 00151315 v 0000 ~ 00151509 v 0000 ~ 00151691 v 0000 ~ 00155647 v 0000 ~ 00233908 v 0000 ~ 00240492 v 0000 ~ 00246215 v 0000 ~ 00257139 v 0000 ~ 00282329 v 0000 ~ 00302683 v 0000 ~ 00309655 v 0000 ~ 00374557 v 0000 ~ 00414879 v 0000 ~ 00418569 v 0000 ~ 00418728 v 0000 ~ 00425598 v 0000 ~ 00425777 v 0000 ~ 00478576 v 0000 ~ 00520159 v 0000 ~ 02109329 v 0000 01 + 01 00 | make bigger or more; "The boss finally increased her salary"; "The university increased the number of students it admitted"  
+00150575 30 v 01 tukahduttaa 0 001 @ 00427312 v 0000 01 + 01 00 | reduce the incidence or severity of or stop; "suppress a yawn"; "this drug can suppress the hemorrhage"  
+00150747 30 v 01 jatkaa 0 002 @ 00149781 v 0000 $ 00470216 v 0000 01 + 01 00 | increase in quantity or bulk by adding a cheaper substance; "stretch the soup by adding some more cream"; "extend the casserole with a little rice"  
+00150976 30 v 04 kasvattaa 1 lisätä 1 suurentaa 1 laajentaa 1 009 @ 00149781 v 0000 + 07424706 n 0302 + 01411304 a 0303 + 00364959 n 0303 + 01411304 a 0202 + 00364959 n 0202 + 07424706 n 0101 + 01411304 a 0101 + 00364959 n 0101 01 + 01 00 | enlarge or increase; "The recent speech of the president augmented tensions in the Near East"  
+00151315 30 v 02 kasvattaa 2 kehittää 0 003 @ 00149781 v 0000 + 00371983 n 0202 + 00371983 n 0101 01 + 01 00 | enlarge, develop, or increase by degrees or in stages; "build up your savings"  
+00151509 30 v 01 laajentaa 2 005 @ 00149781 v 0000 + 00365589 n 0102 ~ 00521068 v 0000 ~ 00521317 v 0000 ~ 00549147 v 0000 01 + 01 00 | make larger; "She enlarged the flower beds"  
+00151691 30 v 02 kohottaa 0 nostaa 0 001 @ 00149781 v 0000 01 + 01 00 | raise; "up the ante"  
+00151786 30 v 01 romahtaa 0 001 @ 00147921 v 0000 01 + 01 00 | fall sharply; "stock prices broke"  
+00151886 30 v 03 nousta 0 kohota 0 kiivetä 0 005 @ 00224781 v 0000 + 07425729 n 0302 + 00363796 n 0103 ~ 00152155 v 0000 ~ 00152936 v 0000 01 + 01 00 | increase in value or to a higher point; "prices climbed steeply"; "the value of our house rose sharply last year"  
+00152155 30 v 04 nousta_huimasti 0 ampaista_ylös 0 kohota 1 nousta 1 001 @ 00151886 v 0000 01 + 01 00 | go or move upward; "The stock market soared after the cease-fire was announced"  
+00152342 30 v 03 nousta 2 hypätä 0 kiivetä_ylös 0 001 @ 00106949 v 0000 01 + 01 00 | rise in rank or status; "Her new novel jumped high on the bestseller list"  
+00152508 30 v 01 nousta_nopeasti 0 002 @ 00419477 v 0000 + 07468336 n 0101 01 + 01 00 | increase suddenly and significantly; "Prices jumped overnight"  
+00152661 30 v 02 karttua 0 kasvaa 1 003 @ 00153361 v 0000 + 00371763 n 0104 ~ 00152811 v 0000 01 + 01 00 | grow by addition; "The interest accrues"  
+00152811 30 v 02 edistää 0 lisätä 2 001 @ 00152661 v 0000 01 + 01 00 | contribute; "Everything redounded to his glory"  
+00152936 30 v 01 nousta 3 002 @ 00151886 v 0000 $ 02174009 v 0000 01 + 01 00 | advance in price; "stocks were bulling"  
+00153057 30 v 01 hellittää 0 002 @ 00123109 v 0000 + 15415951 n 0101 01 + 01 00 | reduce pressure or intensity; "he eased off the gas pedal and the car slowed down"  
+00153226 30 v 05 lieventyä 0 rauhoittua 0 hellittää 1 hiipua 0 helpottua 0 001 @ 00147921 v 0000 01 + 01 00 | become less intense  
+00153361 30 v 05 kasvaa 2 laajentua 0 lisääntyä 0 nousta 4 suurentua 0 039 @ 00166339 v 0000 ! 00147921 v 0501 ! 00147921 v 0505 ! 00147921 v 0506 ! 00147921 v 0401 + 13615468 n 0401 ! 00147921 v 0405 ! 00147921 v 0406 ! 00147921 v 0301 ! 00147921 v 0305 ! 00147921 v 0306 ! 00147921 v 0201 ! 00147921 v 0205 ! 00147921 v 0206 ! 00147921 v 0101 + 07412599 n 0101 ! 00147921 v 0105 ! 00147921 v 0106 ~ 00152661 v 0000 ~ 00154223 v 0000 ~ 00154353 v 0000 ~ 00154506 v 0000 ~ 00154663 v 0000 ~ 00155215 v 0000 ~ 00155505 v 0000 ~ 00155955 v 0000 ~ 00178681 v 0000 ~ 00220915 v 0000 ~ 00221496 v 0000 ~ 00224781 v 0000 ~ 00240072 v 0000 ~ 00295391 v 0000 ~ 00307967 v 0000 ~ 00309436 v 0000 ~ 00418864 v 0000 ~ 00419477 v 0000 ~ 00419726 v 0000 ~ 00526574 v 0000 ~ 00534568 v 0000 01 + 01 00 | become bigger or greater in amount; "The amount of work increased"  
+00154223 30 v 02 kohota_jyrkästi 0 nousta 5 001 @ 00153361 v 0000 01 + 01 00 | manifest a sharp increase; "the voltage spiked"  
+00154353 30 v 04 kartuttaa 0 lisätä 3 nostaa 1 täydentää 0 001 @ 00153361 v 0000 01 + 01 00 | have an increased effect; "This adds to my worries"  
+00154506 30 v 02 lisätä 4 kasvaa 3 001 @ 00153361 v 0000 01 + 01 00 | increase or develop; "the peace movement gained momentum"; "the car gathers speed"  
+00154663 30 v 02 räjähtää 0 päästää_valloilleen 0 002 @ 00153361 v 0000 + 07468168 n 0101 01 + 01 00 | increase rapidly and in an uncontrolled manner; "The population of India is exploding"; "The island's rodent population irrupted"  
+00154906 30 v 01 laajentua 1 002 @ 00224781 v 0000 ~ 00420252 v 0000 01 + 01 00 | become larger or bigger  
+00155014 30 v 03 kasvaa 4 suurentua 1 laajeta 0 005 @ 00224781 v 0000 + 07424706 n 0202 + 01411304 a 0203 + 07424706 n 0101 + 01411304 a 0101 01 + 01 00 | grow or intensify; "The pressure augmented"  
+00155215 30 v 01 muodostua_pyramidiksi 0 001 @ 00153361 v 0000 01 + 01 00 | increase rapidly and progressively step by step on a broad base  
+00155357 30 v 03 korottaa 1 nousta 6 enetä 0 001 @ 00419477 v 0000 01 + 01 00 | rise in rate or price; "The stock market gained 24 points today"  
+00155505 30 v 02 paisua_kuin_lumivyöry 0 paisua 0 001 @ 00153361 v 0000 01 + 01 00 | increase or accumulate at a rapidly accelerating rate  
+00155647 30 v 01 korottaa 2 002 @ 00149781 v 0000 ~ 00155816 v 0000 01 + 01 00 | raise the level or amount of something; "raise my salary"; "raise the price of bread"  
+00155816 30 v 03 kasvattaa 3 kohottaa 1 nostaa 2 001 @ 00155647 v 0000 01 + 01 00 | increase or raise; "OPEC bumped up the price of oil"  
+00155955 30 v 09 karttua 1 kumuloitua 0 kasautua 0 kasaantua 0 keräytyä 0 kerääntyä 0 kokoontua 0 kertyä 0 akkumuloitua 0 009 @ 00153361 v 0000 + 01013958 n 0601 + 08490223 n 0306 + 00371763 n 0202 + 00050915 a 0202 + 08024385 n 0206 ~ 00156352 v 0000 ~ 00156499 v 0000 ~ 00549944 v 0000 01 + 01 00 | collect or gather; "Journals are accumulating in my office"; "The work keeps piling up"  
+00156352 30 v 02 kasaantua 1 ruuhkautua 0 003 @ 00155955 v 0000 + 08016315 n 0202 + 08016315 n 0101 01 + 01 00 | accumulate and create a backlog  
+00156499 30 v 01 yhdistyä 0 001 @ 00155955 v 0000 01 + 01 00 | grow or become attached by accretion; "The story accreted emotion"  
+00156632 30 v 01 lisätä 5 001 @ 02204914 v 0000 01 + 01 00 | pile up (debts or scores)  
+00156723 30 v 03 mukautua 1 sopeutua 2 sulautua 1 009 @ 00146560 v 0000 ! 00157903 v 0301 + 13554734 n 0302 + 14052737 n 0302 ! 00157903 v 0201 + 13554734 n 0201 + 14052737 n 0201 ! 00157903 v 0101 ~ 00157037 v 0000 01 + 01 00 | become similar to one's environment; "Immigrants often want to assimilate quickly"  
+00157037 30 v 02 akkulturoitua 0 sopeutua_vieraaseen_kulttuuriin 0 005 @ 00156723 v 0000 + 01126974 n 0203 + 01126974 n 0102 + 03358929 a 0102 ~ 00157235 v 0000 01 + 01 00 | assimilate culturally  
+00157235 30 v 01 hävittää_heimoidentiteetti 0 001 @ 00157037 v 0000 01 + 01 00 | cause members of a tribe to lose their cultural identity  
+00157378 30 v 04 mukauttaa 0 sopeuttaa 0 sulauttaa 0 yhtäläistää 0 009 @ 00123109 v 0000 ! 00158147 v 0401 ! 00158147 v 0301 + 13554734 n 0302 + 14052737 n 0302 ! 00158147 v 0201 + 13554734 n 0201 + 14052737 n 0201 ! 00158147 v 0101 01 + 01 00 | make similar; "This country assimilates immigrants very quickly"  
+00157695 30 v 02 sulautua 2 yhdistyä 1 004 @ 00106949 v 0000 ;c 06205393 n 0000 ! 00158332 v 0201 ! 00158332 v 0101 01 + 01 00 | become similar in sound; "The nasal assimilates to the following consonant"  
+00157903 30 v 01 erilaistua 3 005 @ 00106949 v 0000 ! 00156723 v 0101 ! 00156723 v 0102 ! 00156723 v 0103 ~ 00116207 v 0000 01 + 01 00 | become dissimilar or less similar; "These two related tribes of people gradually dissimilated over time"  
+00158147 30 v 01 erilaistaa 0 005 @ 00123109 v 0000 ! 00157378 v 0101 ! 00157378 v 0102 ! 00157378 v 0103 ! 00157378 v 0104 01 + 01 00 | make dissimilar; cause to become less similar  
+00158332 30 v 01 dissimiloitua 0 005 @ 00106949 v 0000 ;c 06205393 n 0000 ! 00157695 v 0101 ! 00157695 v 0102 + 13586576 n 0101 01 + 01 00 | become dissimilar by changing the sound qualities; "These consonants dissimilate"  
+00158557 30 v 02 vaihtaa 3 muuntaa 0 008 @ 00159862 v 0000 $ 00529750 v 0000 + 01090745 n 0201 ~ 00158963 v 0000 ~ 00159109 v 0000 ~ 00159389 v 0000 ~ 00184948 v 0000 ~ 01545141 v 0000 01 + 01 00 | exchange or replace with another, usually of the same kind or category; "Could you convert my dollars into pounds?"; "He changed his name"; "convert centimeters into inches"; "convert holdings into shares"  
+00158963 30 v 01 tasasuunnata 0 002 @ 00158557 v 0000 + 07470310 n 0101 01 + 01 00 | convert into direct current; "rectify alternating current"  
+00159109 30 v 01 hyödyntää 0 001 @ 00158557 v 0000 01 + 01 00 | convert (from an investment trust to a unit trust)  
+00159229 30 v 03 lieventää_rangaistusta 0 muuntaa 1 vaihtaa 4 002 @ 00123109 v 0000 + 01162757 n 0301 01 + 01 00 | exchange a penalty for a less severe one  
+00159389 30 v 02 kapitalisoida 0 pääomittaa 0 003 @ 00158557 v 0000 + 13463669 n 0201 ~ 00159559 v 0000 01 + 01 00 | convert (a company's reserve funds) into capital  
+00159559 30 v 01 omistaa_tarvetta_suurempi_pääoma 0 001 @ 00159389 v 0000 01 + 01 00 | capitalize beyond what the business or the profit-making prospects warrant  
+00159725 30 v 01 muuntaa 2 003 @ 00370662 v 0000 + 13686037 n 0101 + 04499432 n 0101 01 + 01 00 | cause transduction (of energy forms)  
+00159862 30 v 02 korvata_uudella 0 vaihtaa 5 009 @ 01564108 v 0000 $ 02301075 v 0000 + 07496799 n 0203 + 00202214 n 0202 + 05730094 n 0101 + 00202214 n 0101 ~ 00158557 v 0000 ~ 00160401 v 0000 ~ 00555603 v 0000 01 + 01 00 | substitute a person or thing for (another that is broken or inefficient or lost or no longer working or yielding what is expected); "He replaced the old razor blade"; "We need to replace the secretary that left a month ago"; "the insurance will replace the lost income"; "This antique vase can never be replaced"  
+00160401 30 v 01 vaihtaa 6 001 @ 00159862 v 0000 01 + 01 00 | remove or replace the coverings of; "Father had to learn how to change the baby"; "After each guest we changed the bed linens"  
+00160592 30 v 05 panna_kuntoon 0 kunnostaa 0 kohentaa 0 remontoida 0 uudistaa 0 002 @ 01564108 v 0000 ~ 00160819 v 0000 01 + 01 00 | make brighter and prettier; "we refurbished the guest wing"; "My wife wants us to renovate"  
+00160819 30 v 01 saneerata_keskiluokkaiseen_makuun_sopivaksi 0 001 @ 00160592 v 0000 01 + 01 00 | renovate so as to make it conform to middle-class aspirations; "gentrify a row of old houses"; "gentrify the old center of town"  
+00161048 30 v 02 parannella 0 rukata 0 001 @ 01564108 v 0000 01 + 01 00 | to patch up or renovate; repair or restore; "They revamped their old house before selling it"  
+00161218 30 v 02 kuvioida_uudelleen 0 pinnoittaa 0 001 @ 01564108 v 0000 01 + 01 00 | give new treads to (a tire)  
+00161334 30 v 04 kunnostaa 1 entisöidä 0 uudistaa 1 peruskorjata 0 002 @ 01564108 v 0000 + 10647548 n 0102 01 + 01 00 | restore to a previous or better condition; "They renovated the ceiling of the Sistine Chapel"  
+00161552 30 v 02 virkistää 0 piristää 0 004 @ 01564108 v 0000 + 00400155 n 0101 + 07975329 n 0101 ~ 00471184 v 0000 01 + 01 00 | make (to feel) fresh; "The cool water refreshed us"  
+00161739 30 v 02 elävöittää 0 elvyttää 0 002 @ 01564108 v 0000 + 01045999 n 0103 01 + 01 00 | give new life or vigor to  
+00161867 30 v 01 elävöittää 1 002 @ 00215401 v 0000 ! 00163810 v 0101 01 + 01 00 | make more lively or vigorous; "The treatment at the spa vitalized the old man"  
+00162035 30 v 01 elävöittää 2 001 @ 00123109 v 0000 01 + 01 00 | give life to; "The eggs are vitalized"  
+00162145 30 v 01 lujittaa 0 002 @ 00215401 v 0000 + 00829938 n 0101 01 + 01 00 | produce in a version designed to withstand rough usage; "Detroit ruggedized the family car"  
+00162320 30 v 02 lujittaa 1 vahvistaa 0 001 @ 00214939 v 0000 01 + 01 00 | make firm or secure; strengthen; "consolidate one's gains"; "consolidate one's hold on first place"  
+00162497 30 v 01 kovettaa 0 001 @ 00430687 v 0000 01 + 01 00 | make or form into a solid or hardened mass; "consolidate fibers into boards"  
+00162639 30 v 01 kiinteytyä 0 001 @ 00430458 v 0000 01 + 01 00 | form into a solid mass or whole; "The mud had consolidated overnight"  
+00162777 30 v 01 tehdä_kestäväksi 0 007 @ 00214939 v 0000 ~ 00163040 v 0000 ~ 00163154 v 0000 ~ 00163262 v 0000 ~ 00163430 v 0000 ~ 00163574 v 0000 ~ 00163678 v 0000 01 + 01 00 | make resistant (to harm); "proof the materials against shrinking in the dryer"  
+00163040 30 v 01 pommisuojata 0 002 @ 00162777 v 0000 + 02898012 n 0101 01 + 01 00 | make safe against bombings  
+00163154 30 v 01 panssaroida 0 001 @ 00162777 v 0000 01 + 01 00 | make bulletproof; "bulletproof the car"  
+00163262 30 v 02 tehdä_lapsiturvalliseksi 0 varmistaa_lapsiturvalliseksi 0 001 @ 00162777 v 0000 01 + 01 00 | make safe against children; "childproof the apartment"  
+00163430 30 v 01 tehdä_idioottivarmaksi 0 001 @ 00162777 v 0000 01 + 01 00 | proof against human misuse or error; "foolproof this appliance"  
+00163574 30 v 01 tehdä_tulenkestäväksi 0 001 @ 00162777 v 0000 01 + 01 00 | make resistant to fire  
+00163678 30 v 02 tehdä_säänkestäväksi 0 suojata_säältä 0 001 @ 00162777 v 0000 01 + 01 00 | make resistant to bad weather  
+00163810 30 v 01 heikentää 0 003 @ 00219360 v 0000 ! 00161867 v 0101 ~ 00163977 v 0000 01 + 01 00 | sap of life or energy; "The recession devitalized the economy"  
+00163977 30 v 01 vesittää 0 001 @ 00163810 v 0000 01 + 01 00 | take away a vital or essential part of; "the compromise among the parties eviscerated the bill that had been proposed"  
+00164163 30 v 02 heikentää 1 horjuttaa 0 001 @ 00219360 v 0000 01 + 01 00 | undermine or cause to waver; "my faith has been shaken"; "The bad news shook her hopes"  
+00164331 30 v 03 kasvaa_uudestaan 0 uudentua 0 uudistua 0 001 @ 01551677 v 0000 01 + 01 00 | form or produce anew; "regenerate hatred"  
+00164468 30 v 02 synnyttää_uudelleen 0 uudistaa 2 001 @ 00165354 v 0000 01 + 01 00 | cause to appear in a new form; "the old product was reincarnated to appeal to a younger market"  
+00164653 30 v 02 uudentua 1 uudistua 1 003 @ 02507438 v 0000 + 00272559 n 0202 + 00272559 n 0102 01 + 01 00 | be formed or shaped anew  
+00164790 30 v 03 uudistua 2 ryhdistäytyä 0 valaistua 0 002 @ 00200276 v 0000 $ 00374110 v 0000 01 + 01 00 | change for the better; "The lazy student promised to reform"; "the habitual cheater finally saw the light"  
+00165009 30 v 01 syöksähtää 0 002 @ 00200276 v 0000 ;c 00523830 n 0000 01 + 01 00 | see one's performance improve; "He levelled the score and then surged ahead"  
+00165176 30 v 01 kasvattaa_uudestaan 0 001 @ 01553807 v 0000 01 + 01 00 | replace (tissue or a body part) through the formation of new tissue; "The snake regenerated its tail"  
+00165354 30 v 04 elvyttää 1 palauttaa 0 tuoda_eloa 0 elävöittää 3 005 @ 01564108 v 0000 + 00271132 n 0201 + 01429339 a 0202 ~ 00164468 v 0000 ~ 00165617 v 0000 01 + 01 00 | return to life; get or give new life or energy; "The week at the spa restored me"  
+00165617 30 v 02 elvyttää 2 herätä_henkiin 0 002 @ 00165354 v 0000 ~ 00165868 v 0000 01 + 01 00 | restore from a depressed, inactive, or unused state; "He revived this style of opera"; "He resurrected the tango in this remote part of Argentina"  
+00165868 30 v 01 elvyttää 3 002 @ 00165617 v 0000 ;c 08513952 n 0000 01 + 01 00 | revive (a cancelled will or a libel)  
+00165991 30 v 01 elpyä 0 002 @ 00302054 v 0000 + 01045999 n 0101 01 + 01 00 | be brought back to life, consciousness, or strength; "Interest in ESP revived"  
+00166151 30 v 01 vaihtaa_vaatteita 0 003 @ 00046847 v 0000 $ 00529750 v 0000 + 03035695 n 0101 01 + 01 00 | change clothes; put on different clothes; "Change before you go to the opera"  
+00166339 30 v 01 muuttaa_kokoa 0 004 @ 00106949 v 0000 ~ 00147921 v 0000 ~ 00153361 v 0000 ~ 00311066 v 0000 01 + 01 00 | change in size or magnitude  
+00166491 30 v 02 muuttaa 4 muokata 1 019 @ 00106949 v 0000 + 07353031 n 0101 + 03810089 n 0101 + 09729662 n 0101 + 00376563 a 0101 ~ 00121020 v 0000 ~ 00167027 v 0000 ~ 00167140 v 0000 ~ 00167372 v 0000 ~ 00167548 v 0000 ~ 00167710 v 0000 ~ 00168032 v 0000 ~ 00194841 v 0000 ~ 00198368 v 0000 ~ 00294722 v 0000 ~ 00423728 v 0000 ~ 00494327 v 0000 ~ 00937407 v 0000 ~ 01513150 v 0000 01 + 01 00 | make less severe or harsh or extreme; "please modify this letter to make it more polite"; "he modified his views on same-gender marriage"  
+00167027 30 v 01 temperoida 0 001 @ 00166491 v 0000 01 + 01 00 | modify the temperature of; "attemper the air"  
+00167140 30 v 01 synkopoida 0 007 @ 00166491 v 0000 ;c 05751155 n 0000 + 10816733 n 0101 + 07132032 n 0101 + 07102240 n 0101 + 07102240 n 0102 + 07132032 n 0102 01 + 01 00 | modify the rhythm by stressing or accenting a weak beat  
+00167372 30 v 02 päivittää 0 ajantasaistaa 0 002 @ 00166491 v 0000 + 00402480 n 0101 01 + 01 00 | modernize or bring up to date; "We updated the kitchen in the old house"  
+00167548 30 v 02 päivittää 1 ajantasaistaa 1 003 @ 00166491 v 0000 ;c 00950509 n 0000 + 00402480 n 0101 01 + 01 00 | bring to the latest state of technology  
+00167710 30 v 01 virittää 0 001 @ 00166491 v 0000 01 + 01 00 | make more powerful; "he souped up the old cars"  
+00167825 30 v 02 määrätä 0 määrittää 0 006 @ 00178681 v 0000 ;c 06202763 n 0000 + 06360954 n 0202 + 13921355 n 0202 + 06360954 n 0101 + 06360954 n 0103 01 + 01 00 | add a modifier to a constituent  
+00168032 30 v 01 lisätä_kermaa 0 001 @ 00166491 v 0000 01 + 01 00 | add cream to one's coffee, for example  
+00168143 30 v 01 moduloida 0 001 @ 00288001 v 0000 01 + 01 00 | adjust the pitch, tone, or volume of  
+00168246 30 v 03 parantaa 0 rikastuttaa 0 rikastaa 0 008 @ 00200972 v 0000 ! 00169302 v 0301 ! 00169302 v 0201 + 00267085 n 0201 ! 00169302 v 0101 ~ 00169026 v 0000 ~ 00169728 v 0000 ~ 00484275 v 0000 01 + 01 00 | make better or improve in quality; "The experience enriched her understanding"; "enriched foods"  
+00168559 30 v 01 kehittää 1 008 @ 00200972 v 0000 $ 00397856 v 0000 $ 01561447 v 0000 $ 00580647 v 0000 $ 00246815 v 0000 + 00947972 n 0102 ~ 00168921 v 0000 ~ 00519333 v 0000 01 + 01 00 | change the use of and make available or usable; "develop land"; "The country developed its natural resources"; "The remote areas of the country were gradually built up"  
+00168921 30 v 01 saneerata 0 001 @ 00168559 v 0000 01 + 01 00 | change the plans for the use of (land)  
+00169026 30 v 02 täydentää 1 täyttää 0 001 @ 00168246 v 0000 01 + 01 00 | make bigger or better or more complete  
+00169147 30 v 01 optimoida 1 002 @ 00457203 v 0000 + 00263194 n 0101 01 + 01 00 | make optimal; get the most out of; use best; "optimize your resources"  
+00169302 30 v 02 riistää 0 köyhdyttää 0 006 @ 00199154 v 0000 + 01147569 n 0201 ! 00168246 v 0101 ! 00168246 v 0102 ! 00168246 v 0103 ~ 00169586 v 0000 01 + 01 00 | take away  
+00169484 30 v 01 heiketä 1 001 @ 00199154 v 0000 01 + 01 00 | get worse; "Her health is declining"  
+00169586 30 v 02 erottaa 0 lakkauttaa 0 002 @ 00169302 v 0000 ;c 01030919 n 0000 01 + 01 00 | deprive (an established church) of its status  
+00169728 30 v 02 rikastaa 1 kuristaa 0 001 @ 00168246 v 0000 01 + 01 00 | reduce the air supply; "choke a carburetor"  
+00169848 30 v 04 irrottaa 0 poistaa 0 ottaa_pois 0 vetää_jk_pois_jstak 0 114 + 00059887 n 0401 ^ 00615691 v 0202 ~ 00038121 v 0000 ~ 00172255 v 0000 ~ 00172472 v 0000 ~ 00172587 v 0000 ~ 00172744 v 0000 ~ 00172871 v 0000 ~ 00173015 v 0000 ~ 00173154 v 0000 ~ 00173275 v 0000 ~ 00173407 v 0000 ~ 00173659 v 0000 ~ 00174018 v 0000 ~ 00174184 v 0000 ~ 00174338 v 0000 ~ 00174465 v 0000 ~ 00174585 v 0000 ~ 00174695 v 0000 ~ 00174848 v 0000 ~ 00174990 v 0000 ~ 00175142 v 0000 ~ 00175257 v 0000 ~ 00175384 v 0000 ~ 00175555 v 0000 ~ 00175813 v 0000 ~ 00176069 v 0000 ~ 00176186 v 0000 ~ 00176296 v 0000 ~ 00176413 v 0000 ~ 00176513 v 0000 ~ 00176636 v 0000 ~ 00176746 v 0000 ~ 00176912 v 0000 ~ 00177022 v 0000 ~ 00177283 v 0000 ~ 00177430 v 0000 ~ 00177553 v 0000 ~ 00177640 v 0000 ~ 00177772 v 0000 ~ 00177868 v 0000 ~ 00186551 v 0000 ~ 00190441 v 0000 ~ 00190556 v 0000 ~ 00191149 v 0000 ~ 00192672 v 0000 ~ 00193041 v 0000 ~ 00193189 v 0000 ~ 00193338 v 0000 ~ 00193561 v 0000 ~ 00193796 v 0000 ~ 00193918 v 0000 ~ 00194036 v 0000 ~ 00305167 v 0000 ~ 00357283 v 0000 ~ 00434257 v 0000 ~ 00471056 v 0000 ~ 00480665 v 0000 ~ 00486528 v 0000 ~ 00501534 v 0000 ~ 00501812 v 0000 ~ 00510959 v 0000 ~ 00511499 v 0000 ~ 00521468 v 0000 ~ 00535196 v 0000 ~ 00537100 v 0000 ~ 00548624 v 0000 ~ 00550145 v 0000 ~ 00552887 v 0000 ~ 00553854 v 0000 ~ 00554427 v 0000 ~ 00565715 v 0000 ~ 01087265 v 0000 ~ 01190657 v 0000 ~ 01199964 v 0000 ~ 01200280 v 0000 ~ 01200706 v 0000 ~ 01206205 v 0000 ~ 01208661 v 0000 ~ 01208834 v 0000 ~ 01209306 v 0000 ~ 01219471 v 0000 ~ 01251341 v 0000 ~ 01254731 v 0000 ~ 01255708 v 0000 ~ 01257309 v 0000 ~ 01295546 v 0000 ~ 01296573 v 0000 ~ 01303246 v 0000 ~ 01304176 v 0000 ~ 01335028 v 0000 ~ 01376206 v 0000 ~ 01422795 v 0000 ~ 01424517 v 0000 ~ 01426748 v 0000 ~ 01427121 v 0000 ~ 01428139 v 0000 ~ 01431101 v 0000 ~ 01452438 v 0000 ~ 01467417 v 0000 ~ 01471153 v 0000 ~ 01479317 v 0000 ~ 01487695 v 0000 ~ 01514702 v 0000 ~ 01515467 v 0000 ~ 01525966 v 0000 ~ 01526100 v 0000 ~ 01527907 v 0000 ~ 01543260 v 0000 ~ 01775419 v 0000 ~ 01909164 v 0000 ~ 01981656 v 0000 ~ 02006620 v 0000 ~ 02210862 v 0000 01 + 01 00 | remove something concrete, as by lifting, pushing, or taking off, or remove something abstract; "remove a threat"; "remove a wrapper"; "Remove the dirty dishes from the table"; "take the gun from your pocket"; "This machine withdraws heat from the environment"  
+00172255 30 v 01 poistaa 1 001 @ 00169848 v 0000 01 + 01 00 | remove from a culture or a living or dead body, as for the purposes of transplantation; "The Chinese are said to harvest organs from executed criminals"  
+00172472 30 v 01 latvoa<unconfirmed/> 0 001 @ 00169848 v 0000 01 + 01 00 | remove the tip from; "tip artichokes"  
+00172587 30 v 01 poistaa 2 001 @ 00169848 v 0000 01 + 01 00 | remove the stem from; "for automatic natural language processing, the words must be stemmed"  
+00172744 30 v 02 leikata_pois 0 poistaa 3 002 @ 00169848 v 0000 ;c 06091641 n 0000 01 + 01 00 | surgically remove (an organ)  
+00172871 30 v 01 poistaa_ydin 0 002 @ 00169848 v 0000 ;c 06091641 n 0000 01 + 01 00 | remove (a tumor or eye) from an enveloping sac or cover  
+00173015 30 v 01 tyhjentää 0 003 @ 00169848 v 0000 ;c 06091641 n 0000 + 00673582 n 0102 01 + 01 00 | remove the contents of (an organ)  
+00173154 30 v 01 poistaa_ydin 1 002 @ 00169848 v 0000 ;c 06066096 n 0000 01 + 01 00 | remove the nucleus from (a cell)  
+00173275 30 v 01 kuoria 0 003 @ 00169848 v 0000 ;c 00671223 n 0000 + 00670022 n 0101 01 + 01 00 | remove the cortex of (an organ)  
+00173407 30 v 01 äyskäröidä 0 002 @ 00169848 v 0000 $ 00173542 v 0000 01 + 01 00 | remove (water) from a vessel with a container  
+00173542 30 v 01 äyskäröidä 1 002 @ 00434513 v 0000 $ 00173407 v 0000 01 + 01 00 | empty (a vessel) by bailing  
+00173659 30 v 05 riisua 0 riisuutua 0 raastaa 0 repiä 0 riisuuntua 0 005 @ 00169848 v 0000 $ 00050146 v 0000 + 14581003 n 0501 + 14581003 n 0201 + 14581003 n 0101 01 + 01 00 | remove (someone's or one's own) clothes; "The nurse quickly undressed the accident victim"; "She divested herself of her outdoor clothes"; "He disinvested himself of his garments"  
+00174018 30 v 02 irrottaa 1 poistaa 4 004 @ 00169848 v 0000 ;c 00671223 n 0000 + 00392177 n 0203 + 00392177 n 0102 01 + 01 00 | remove an organ or bodily structure  
+00174184 30 v 02 puhdistaa 0 nyppiä 0 001 @ 00169848 v 0000 01 + 01 00 | remove unwanted substances from, such as feathers or pits; "Clean the turkey"  
+00174338 30 v 01 puhdistaa 1 001 @ 00169848 v 0000 01 + 01 00 | remove shells or husks from; "clean grain before milling it"  
+00174465 30 v 01 puhaltaa 0 001 @ 00169848 v 0000 01 + 01 00 | blow away or off with a current of air; "winnow chaff"  
+00174585 30 v 01 nyppiä 1 001 @ 00169848 v 0000 01 + 01 00 | remove in small bits; "pick meat from a bone"  
+00174695 30 v 02 selvittää_kurkkua 0 kakistella 0 001 @ 00169848 v 0000 01 + 01 00 | free (the throat) by making a rasping sound; "Clear the throat"  
+00174848 30 v 03 korjata_pois 0 kuljettaa_pois 0 ottaa_pois 1 001 @ 00169848 v 0000 01 + 01 00 | remove muck, clear away muck, as in a mine  
+00174990 30 v 01 nostaa 3 001 @ 00169848 v 0000 01 + 01 00 | remove from a surface; "the detective carefully lifted some fingerprints from the table"  
+00175142 30 v 01 nostaa 4 001 @ 00169848 v 0000 01 + 01 00 | take off or away by decreasing; "lift the pressure"  
+00175257 30 v 01 nostaa 5 001 @ 00169848 v 0000 01 + 01 00 | remove from a seedbed or from a nursery; "lift the tulip bulbs"  
+00175384 30 v 03 repäistä 0 riuhtaista 0 repiä_irti 0 001 @ 00169848 v 0000 01 + 01 00 | rip off violently and forcefully; "The passing bus tore off her side mirror"  
+00175555 30 v 01 ottaa_pois 2 004 @ 00169848 v 0000 ~ 00050146 v 0000 ~ 00192563 v 0000 ~ 00192802 v 0000 01 + 01 00 | take away or remove; "Take that weight off me!"  
+00175724 30 v 01 riisua_takki 0 001 @ 00050628 v 0000 01 + 01 00 | remove a cloak from  
+00175813 30 v 02 ottaa_pois 3 poistaa 5 007 @ 00169848 v 0000 ! 00178681 v 0101 ~ 00177159 v 0000 ~ 00462230 v 0000 ~ 00767476 v 0000 ~ 00954618 v 0000 ~ 01392892 v 0000 01 + 01 00 | take out or remove; "take out the chicken after adding the vegetables"  
+00176069 30 v 01 poistaa_kivet 0 001 @ 00169848 v 0000 01 + 01 00 | remove the pits from; "pit plums and cherries"  
+00176186 30 v 01 poistaa_siemenet 0 001 @ 00169848 v 0000 01 + 01 00 | remove the seeds from; "seed grapes"  
+00176296 30 v 01 nostaa_saranoilta 0 001 @ 00169848 v 0000 01 + 01 00 | remove the hinges from; "unhinge the door"  
+00176413 30 v 01 kuoria 1 001 @ 00169848 v 0000 01 + 01 00 | remove the shucks from; "shuck corn"  
+00176513 30 v 01 kuoria 2 002 @ 00169848 v 0000 + 13247379 n 0101 01 + 01 00 | remove the hulls from; "hull the berries"  
+00176636 30 v 01 poistaa_muruset 0 001 @ 00169848 v 0000 01 + 01 00 | remove crumbs from; "crumb the table"  
+00176746 30 v 02 jäytää 0 kalvaa 0 001 @ 00169848 v 0000 01 + 01 00 | remove or withdraw gradually: "These new customs are chipping away at the quality of life"  
+00176912 30 v 01 nyppiä 2 002 @ 00169848 v 0000 + 04986100 n 0105 01 + 01 00 | remove the burls from cloth  
+00177022 30 v 02 hävittää 0 tuhota 0 001 @ 00169848 v 0000 01 + 01 00 | destroy or break forcefully; "The windows were knocked out"  
+00177159 30 v 01 kerätä<broader/> 0 001 @ 00175813 v 0000 01 + 01 00 | remove used dishes from the table in restaurants  
+00177283 30 v 02 huuhdella 0 puhdistaa 2 003 @ 00169848 v 0000 ;c 06112587 n 0000 + 00254360 n 0201 01 + 01 00 | remove unwanted substances from  
+00177430 30 v 01 poistaa_aivolisäke 0 002 @ 00169848 v 0000 ;c 00671223 n 0000 01 + 01 00 | remove the pituitary glands  
+00177553 30 v 01 poistaa_kaasua 0 001 @ 00169848 v 0000 01 + 01 00 | remove gas from  
+00177640 30 v 02 kuoria 3 poistaa_kuori 0 002 @ 00169848 v 0000 + 13247102 n 0101 01 + 01 00 | remove the husks from; "husk corn"  
+00177772 30 v 01 poistaa<broader/> 6 001 @ 00169848 v 0000 01 + 01 00 | remove the burrs from  
+00177868 30 v 02 häipyä 1 hälvetä 0 001 @ 00169848 v 0000 01 + 01 00 | remove from sight  
+00177963 30 v 02 järjestää 0 raivata 0 006 @ 00123109 v 0000 $ 00191149 v 0000 ^ 00177868 v 0201 ^ 00177868 v 0202 ! 00178171 v 0101 ! 00178171 v 0103 01 + 01 00 | rid of obstructions; "Clear your desk"  
+00178171 30 v 03 täyttää_sikin_sokin 0 sotkea 0 sekoittaa 0 003 @ 00437334 v 0000 ! 00177963 v 0301 ! 00177963 v 0101 01 + 01 00 | fill a space in a disorderly way  
+00178340 30 v 02 rasittaa 0 ylikuormittaa 0 001 @ 00437334 v 0000 01 + 01 00 | fill to excess so that function is impaired; "Fear clogged her mind"; "The story was clogged with too many details"  
+00178537 30 v 01 täyttää_piripintaan<huom/> 0 001 @ 00437334 v 0000 01 + 01 00 | fill as much as possible; "brim a cup to good fellowship"  
+00178681 30 v 01 lisätä 6 029 @ 00153361 v 0000 $ 02622241 v 0000 ! 00175813 v 0101 + 00363164 n 0101 + 00363164 n 0102 + 00363164 n 0103 ~ 00167825 v 0000 ~ 00179515 v 0000 ~ 00179680 v 0000 ~ 00179824 v 0000 ~ 00180086 v 0000 ~ 00180245 v 0000 ~ 00180482 v 0000 ~ 00180844 v 0000 ~ 00180960 v 0000 ~ 00181114 v 0000 ~ 00183496 v 0000 ~ 00183642 v 0000 ~ 00185907 v 0000 ~ 00186008 v 0000 ~ 00186159 v 0000 ~ 00186381 v 0000 ~ 00189535 v 0000 ~ 00190323 v 0000 ~ 00216763 v 0000 ~ 01302021 v 0000 ~ 01311878 v 0000 ~ 02218050 v 0000 ~ 02240608 v 0000 01 + 01 00 | make an addition (to); join or combine or unite with others; increase the quality, quantity, size or scope of; "We added two students to that dorm room"; "She added a personal note to her letter"; "Add insult to injury"; "Add some extra plates to the dinner table"  
+00179515 30 v 02 koristella_tarpeettomasti 0 parannella_tarpeettomasti 0 001 @ 00178681 v 0000 01 + 01 00 | make unnecessary additions to what is already complete  
+00179680 30 v 02 liittää_mukaan 0 lisätä 7 001 @ 00178681 v 0000 01 + 01 00 | attach or add; "I adjoin a copy of your my lawyer's letter"  
+00179824 30 v 01 sekoittaa_joukkoon 0 001 @ 00178681 v 0000 01 + 01 00 | add by mixing or blending on or attaching; "work in the butter and the dough will get the right consistency"; "In his speech, the presidential candidate worked in a lot of learned words"  
+00180086 30 v 02 lisätä 8 tehdä_lisäys 0 003 @ 00178681 v 0000 + 02703497 n 0102 + 02703497 n 0103 01 + 01 00 | make an addition; "Let's add on to this"  
+00180245 30 v 01 sisällyttää 0 003 @ 00178681 v 0000 ;c 06112587 n 0000 + 00372829 n 0101 01 + 01 00 | add as part of something else; put in as part of a set, group, or category; "We must include this chemical element in the group"  
+00180482 30 v 01 sekoittaa 1 006 @ 00178681 v 0000 + 00541205 a 0101 + 07429524 n 0101 + 00379380 n 0101 + 00379380 n 0103 ~ 00180703 v 0000 01 + 01 00 | add as an additional element or part; "mix water into the drink"  
+00180703 30 v 01 pirskauttaa 0 001 @ 00180482 v 0000 01 + 01 00 | add an enlivening or altering element to; "blue paint dashed with white"  
+00180844 30 v 01 lisätä 9 001 @ 00178681 v 0000 01 + 01 00 | add to something existing; "She put on a sun room"  
+00180960 30 v 01 butyloida 0 003 @ 00178681 v 0000 ;c 06112587 n 0000 + 15142960 n 0101 01 + 01 00 | introduce the butyl group into a chemical compound  
+00181114 30 v 01 lisätä a 001 @ 00178681 v 0000 01 + 01 00 | add to the odometer; "He put on 1,000 miles on this trip"  
+00181237 30 v 01 jodioida 0 006 @ 00496149 v 0000 ;c 06112587 n 0000 + 13620849 n 0101 + 13620849 n 0102 + 13620849 n 0103 + 14776546 n 0101 01 + 01 00 | treat with iodine; "iodize salt"  
+00181426 30 v 01 nitrata 0 003 @ 00496149 v 0000 ;c 06112587 n 0000 + 15150422 n 0101 01 + 01 00 | treat with nitric acid, so as to change an organic compound into a nitrate; "nitroglycerin is obtained by nitrating glycerol"  
+00181653 30 v 02 mädättää_mädätyssäiliössä<unconfirmed/> 0 saostaa_lietealtaassa<unconfirmed/> 0 001 @ 00496149 v 0000 01 + 01 00 | treat in a tank; "tank animal refuse"  
+00181834 30 v 02 hapettaa 0 ilmastaa 0 003 @ 00496149 v 0000 + 14783157 n 0101 + 13649022 n 0101 01 + 01 00 | impregnate, combine, or supply with oxygen; "oxygenate blood"  
+00182008 30 v 01 merseroida 0 002 @ 00496149 v 0000 + 11303908 n 0101 01 + 01 00 | treat to strengthen and improve the luster; "mercerize cotton"  
+00182156 30 v 02 varustaa_selkämyksellä 0 varustaa_selustalla 0 001 @ 00214939 v 0000 01 + 01 00 | strengthen by providing with a back or backing  
+00182306 30 v 01 mallastaa 1 004 @ 00496149 v 0000 $ 00114781 v 0000 + 07950298 n 0101 + 07988019 n 0101 01 + 01 00 | treat with malt or malt extract; "malt beer"  
+00182471 30 v 01 fluorata 0 003 @ 00496149 v 0000 + 00364814 n 0101 + 15007065 n 0101 01 + 01 00 | subject to fluoridation; treat with fluoride; "fluoridized water"; "fluoridize the teeth of children"  
+00182674 30 v 01 käsitellä_kreosootilla 0 001 @ 00496149 v 0000 01 + 01 00 | treat with creosote; "creosoted wood"  
+00182793 30 v 01 kloorata 0 004 @ 00496149 v 0000 + 13568659 n 0101 + 14769739 n 0101 + 00709722 n 0101 01 + 01 00 | treat or combine with chlorine; "chlorinated water"  
+00182964 30 v 02 hiilihapottaa 0 karbonoida 0 004 @ 00496149 v 0000 + 14934608 n 0201 + 13563182 n 0101 + 14933189 n 0101 01 + 01 00 | treat with carbon dioxide; "Carbonated soft drinks"  
+00183153 30 v 01 hoitaa<unconfirmed/><note>kamferilla</note> 0 001 @ 00496149 v 0000 01 + 01 00 | treat with camphor  
+00183272 30 v 02 bromata 0 käsitellä_bromilla 0 002 @ 00496149 v 0000 + 14767307 n 0101 01 + 01 00 | treat with bromine  
+00183396 30 v 01 käsitellä_ammoniakilla 0 001 @ 00496149 v 0000 01 + 01 00 | treat with ammonia  
+00183496 30 v 01 tuoda 0 001 @ 00178681 v 0000 01 + 01 00 | to introduce (a new aspect or element); "He injected new life into the performance"  
+00183642 30 v 01 tehdä_reunospohjaus 0 001 @ 00178681 v 0000 01 + 01 00 | put a welt on; "welt the shoes"  
+00183751 30 v 03 panna_sisään 0 sulkea_sisäänsä 0 laittaa 0 013 @ 01432934 v 0000 ~ 00184106 v 0000 ~ 00184249 v 0000 ~ 00184367 v 0000 ~ 00184576 v 0000 ~ 00184658 v 0000 ~ 00184753 v 0000 ~ 00185066 v 0000 ~ 00185167 v 0000 ~ 00185490 v 0000 ~ 00185618 v 0000 ~ 00185789 v 0000 ~ 01521093 v 0000 01 + 01 00 | introduce; "Insert your ticket here"  
+00184106 30 v 01 työntää 0 002 @ 00183751 v 0000 $ 00184249 v 0000 01 + 01 00 | insert as a plug; "She plugged a cork in the wine bottle"  
+00184249 30 v 01 kytkeä 0 002 @ 00183751 v 0000 $ 00184106 v 0000 01 + 01 00 | insert a plug into; "plug the wall"  
+00184367 30 v 01 istuttaa 0 002 @ 00183751 v 0000 ~ 00184481 v 0000 01 + 01 00 | introduce a microorganism into  
+00184481 30 v 01 kylvää 0 001 @ 00184367 v 0000 01 + 01 00 | inoculate with microorganisms  
+00184576 30 v 01 sijoittaa 0 001 @ 00183751 v 0000 01 + 01 00 | set or place in  
+00184658 30 v 01 kaataa_lasiin 0 001 @ 00183751 v 0000 01 + 01 00 | put in a glass container  
+00184753 30 v 01 katetroida 0 004 @ 00183751 v 0000 + 03014048 n 0101 + 00323289 n 0102 + 00323289 n 0101 01 + 01 00 | insert a catheter into (a body part); "catheterize the patient's bladder"  
+00184948 30 v 01 pestä_rahaa 0 001 @ 00158557 v 0000 01 + 01 00 | convert illegally obtained funds into legal ones  
+00185066 30 v 01 panna_kuppiin 0 001 @ 00183751 v 0000 01 + 01 00 | put into a cup; "cup the milk"  
+00185167 30 v 01 lisätä b 004 @ 00183751 v 0000 + 00380534 n 0101 + 00380534 n 0102 ~ 00185345 v 0000 01 + 01 00 | introduce one's writing or speech with certain expressions  
+00185345 30 v 01 välilehdittää 0 001 @ 00185167 v 0000 01 + 01 00 | intersperse alternately, as of protective covers for book illustrations  
+00185490 30 v 01 syöttää 0 001 @ 00183751 v 0000 01 + 01 00 | introduce continuously; "feed carrots into a food processor"  
+00185618 30 v 02 livauttaa 0 sujauttaa 0 001 @ 00183751 v 0000 01 + 01 00 | insert inconspicuously or quickly or quietly; "He slipped some money into the waiter's hand"  
+00185789 30 v 02 sujauttaa 1 ujuttaa 0 001 @ 00183751 v 0000 01 + 01 00 | insert surreptitiously or without warrant  
+00185907 30 v 01 sovittaa_väliin 0 001 @ 00178681 v 0000 01 + 01 00 | insert (days) in a calendar  
+00186008 30 v 02 pilkuttaa 0 välimerkittää 0 003 @ 00178681 v 0000 + 00388947 n 0101 ~ 00958987 v 0000 01 + 01 00 | insert punctuation marks into  
+00186159 30 v 02 liittää_ketjuksi 0 liittää_peräkkäin 0 002 @ 00178681 v 0000 $ 01405059 v 0000 01 + 01 00 | add by linking or joining so as to form a chain or series; "concatenate terms"; "concatenate characters"  
+00186381 30 v 01 liittää 0 001 @ 00178681 v 0000 01 + 01 00 | add as if on a string; "string these ideas together"; "string up these songs and you'll have a musical"  
+00186551 30 v 01 karistaa 0 001 @ 00169848 v 0000 01 + 01 00 | remove with a flick (of the hand)  
+00186650 30 v 02 aktivoida 0 ottaa_käyttöön 0 007 @ 00123109 v 0000 ! 00187642 v 0201 ! 00187642 v 0101 + 14858505 n 0101 + 00240680 n 0101 + 00240680 n 0102 ~ 00188075 v 0000 01 + 01 00 | make active or more active; "activate an old file"  
+00186895 30 v 01 aktivoida 1 003 @ 00123109 v 0000 + 13545809 n 0101 + 13545809 n 0102 01 + 01 00 | make (substances) radioactive  
+00187027 30 v 03 aktivoida 2 ilmastaa 1 ilmata 0 007 @ 00123109 v 0000 + 14977245 n 0301 + 02706686 n 0301 + 14977245 n 0201 + 02706686 n 0201 + 13545809 n 0101 + 13545809 n 0102 01 + 01 00 | aerate (sewage) so as to favor the growth of organisms that decompose organic matter  
+00187306 30 v 02 hajota_biologisesti 0 hajota_luonnossa 0 001 @ 00204747 v 0000 01 + 01 00 | break down naturally through the action of biological agents; "Plastic bottles do not biodegrade"  
+00187499 30 v 01 aktivoida 3 003 @ 00123109 v 0000 + 13545809 n 0101 + 13545809 n 0102 01 + 01 00 | make more adsorptive; "activate a metal"  
+00187642 30 v 04 inaktivoida 0 kytkeä_pois_päältä 0 deaktivoida 0 kytkeä_pois 0 005 @ 00123109 v 0000 ! 00186650 v 0101 ! 00186650 v 0102 + 13615080 n 0101 ~ 00261534 v 0000 01 + 01 00 | make inactive; "they deactivated the file"  
+00187879 30 v 01 vapauttaa_vakinaisesta_palveluksesta 0 001 @ 01048545 v 0000 01 + 01 00 | remove from active military status or reassign; "The men were deactivated after five years of service"  
+00188075 30 v 02 aktivoida_uudestaan 0 uudelleenaktivoida 0 001 @ 00186650 v 0000 01 + 01 00 | activate (an old file) anew  
+00188200 30 v 03 vaimentaa 0 tylsistää 0 latistaa 0 005 @ 00123109 v 0000 ! 00188999 v 0101 ~ 00188499 v 0000 ~ 00188628 v 0000 ~ 00379130 v 0000 01 + 01 00 | make less lively, intense, or vigorous; impair in vigor, force, activity, or sensation; "Terror blunted her feelings"; "deaden a sound"  
+00188499 30 v 02 turruttaa 0 hillitä 0 001 @ 00188200 v 0000 01 + 01 00 | reduce the edge or violence of; "obtunded reflexes"  
+00188628 30 v 03 jähmettää 0 kivettää 0 kovettaa 1 001 @ 00188200 v 0000 01 + 01 00 | cause to become stonelike or stiff or dazed and stunned; "The horror petrified his feelings"; "Fear petrified her thinking"  
+00188845 30 v 02 piristää 1 virkistää 1 001 @ 00188999 v 0000 01 + 01 00 | make more interesting or lively; "juice up a party"; "pep up your paper"  
+00188999 30 v 05 elvyttää 4 virkistää 2 elävöittää 4 piristää 2 elähdyttää 0 005 @ 00023315 v 0000 + 04677070 n 0404 ! 00188200 v 0101 ~ 00188845 v 0000 ~ 00189244 v 0000 01 + 01 00 | make lively; "let's liven up this room a bit"  
+00189244 30 v 03 rohkaista 0 valaa_innostusta 0 piristää 3 001 @ 00188999 v 0000 01 + 01 00 | infuse with spirit; "The company spirited him up"  
+00189392 30 v 01 vaimentua 0 001 @ 00106949 v 0000 01 + 01 00 | become lifeless, less lively, intense, or active; lose life, force, or vigor  
+00189535 30 v 02 sekoittaa 2 yhdistää 0 009 @ 00178681 v 0000 + 00378194 n 0202 + 08026525 n 0201 + 00869705 n 0201 + 00869705 n 0202 ~ 00189799 v 0000 ~ 00189946 v 0000 ~ 00535626 v 0000 ~ 00618421 v 0000 01 + 01 00 | put or add together; "combine resources"  
+00189799 30 v 01 yhdistää 1 001 @ 00189535 v 0000 01 + 01 00 | make into a total; "Can we totalize these different ideas into one philosophy?"  
+00189946 30 v 01 yhdistää_uudelleen 0 001 @ 00189535 v 0000 01 + 01 00 | to combine or put together again  
+00190056 30 v 01 tiristää 0 001 @ 00190152 v 0000 01 + 01 00 | draw the last milk (of cows)  
+00190152 30 v 01 lypsää 0 003 @ 01775419 v 0000 $ 00190323 v 0000 ~ 00190056 v 0000 01 + 01 00 | take milk from female mammals; "Cows need to be milked every morning"  
+00190323 30 v 01 lisätä_maitoa 0 002 @ 00178681 v 0000 $ 00190152 v 0000 01 + 01 00 | add milk to; "milk the tea"  
+00190441 30 v 01 repiä 1 001 @ 00169848 v 0000 01 + 01 00 | take off or remove; "strip a wall of its wallpaper"  
+00190556 30 v 01 poistaa<broader/> 7 002 @ 00169848 v 0000 ;c 06112587 n 0000 01 + 01 00 | remove a constituent from a liquid  
+00190684 30 v 01 irrottaa 2 001 @ 01198700 v 0000 01 + 01 00 | remove the thread (of screws)  
+00190779 30 v 01 hakata_paljaaksi 0 003 @ 00191149 v 0000 ~ 00191554 v 0000 ~ 00191868 v 0000 01 + 01 00 | lay bare; "denude a forest"  
+00190916 30 v 01 raivata 1 001 @ 00191149 v 0000 01 + 01 00 | remove all the trees at one time; "clear-cut an acre of forest"  
+00191044 30 v 01 raivata 2 001 @ 00191149 v 0000 01 + 01 00 | remove tree stumps from; "stump a field"  
+00191149 30 v 01 puhdistaa 3 007 @ 00169848 v 0000 $ 00177963 v 0000 $ 00191392 v 0000 ~ 00190779 v 0000 ~ 00190916 v 0000 ~ 00191044 v 0000 ~ 00191706 v 0000 01 + 01 00 | remove; "clear the leaves from the lawn"; "Clear snow from the road"  
+00191392 30 v 01 raivata 3 002 @ 01551677 v 0000 $ 00191149 v 0000 01 + 01 00 | make a way or path by removing objects; "Clear a path through the dense forest"  
+00191554 30 v 01 saada_lehdet_putoamaan 0 001 @ 00190779 v 0000 01 + 01 00 | strip the leaves or branches from; "defoliate the trees with pesticides"  
+00191706 30 v 02 kaataa_metsä 0 poistaa_metsä 0 001 @ 00191149 v 0000 01 + 01 00 | remove the trees from; "The landscape was deforested by the enemy attacks"  
+00191868 30 v 02 kasketa 0 polttaa 0 001 @ 00190779 v 0000 01 + 01 00 | clear land of its vegetation by burning it off  
+00191989 30 v 01 polttaa 1 004 @ 00251838 v 0000 + 00504176 a 0101 ~ 00192369 v 0000 ~ 00369028 v 0000 01 + 01 00 | burn with heat, fire, or radiation; "The iron burnt a hole in my dress"  
+00192179 30 v 02 palelluttaa<unconfirmed/> 0 paleltua<unconfirmed/> 0 001 @ 00251838 v 0000 01 + 01 00 | damage by frost; "The icy precipitation frosted the flowers and they turned brown"  
+00192369 30 v 01 huuhtoa_kiehuvalla_vedellä 0 001 @ 00191989 v 0000 01 + 01 00 | burn with a hot liquid or steam; "She scalded her hands when she turned on the faucet and hot water came out"  
+00192563 30 v 01 poistaa_kynnet 0 001 @ 00175555 v 0000 01 + 01 00 | remove the claws from; "declaw a cat"  
+00192672 30 v 01 poistaa_myrkkyhampaat 0 001 @ 00169848 v 0000 01 + 01 00 | remove the fangs from; "defang the poisonous snake"  
+00192802 30 v 01 poistaa_sarvet 0 002 @ 00175555 v 0000 ~ 00192922 v 0000 01 + 01 00 | take the horns off (an animal)  
+00192922 30 v 01 tehdä_sarvettomaksi 0 001 @ 00192802 v 0000 01 + 01 00 | destroy undeveloped horn buds (of cattle)  
+00193041 30 v 01 poistaa_luut 0 002 @ 00169848 v 0000 ;c 00015441 n 0000 01 + 01 00 | remove the bones from; "bone the turkey before roasting it"  
+00193189 30 v 03 suolistaa 0 poistaa_sisukset 0 poistaa_sisälmykset 0 001 @ 00169848 v 0000 01 + 01 00 | remove the entrails of; "draw a chicken"  
+00193338 30 v 02 kuoria 4 silpiä 0 005 @ 00169848 v 0000 + 01930981 n 0101 + 11831699 n 0101 + 10719400 n 0101 ~ 00193663 v 0000 01 + 01 00 | remove from its shell or outer covering; "shell the legumes"; "shell mussels"  
+00193561 30 v 01 kuoria 5 001 @ 00169848 v 0000 01 + 01 00 | remove from the shell; "shuck oysters"  
+00193663 30 v 02 silpiä 1 kuoria 6 001 @ 00193338 v 0000 01 + 01 00 | take something out of its shell or pod; "pod peas or beans"  
+00193796 30 v 01 poistaa<broader/> 8 001 @ 00169848 v 0000 01 + 01 00 | remove the tusks of animals; "tusk an elephant"  
+00193918 30 v 01 poistaa_sarvet 1 001 @ 00169848 v 0000 01 + 01 00 | prevent the growth of horns of certain animals  
+00194036 30 v 02 skalpeerata 0 viedä_päänahka 0 002 @ 00169848 v 0000 ~ 00194190 v 0000 01 + 01 00 | remove the scalp of; "The enemies were scalped"  
+00194190 30 v 01 poistaa 9 001 @ 00194036 v 0000 01 + 01 00 | remove (hair) by scalping  
+00194280 30 v 01 hillitä 1 001 @ 00424397 v 0000 01 + 01 00 | make less fast or intense; "moderate your speed"  
+00194394 30 v 02 lieventää 0 helpottaa 0 005 @ 00427312 v 0000 + 01884142 a 0101 + 06786693 n 0102 + 01412000 a 0102 ~ 00194600 v 0000 01 + 01 00 | make less severe or harsh; "mitigating circumstances"  
+00194600 30 v 02 lieventää 1 keventää 0 001 @ 00194394 v 0000 01 + 01 00 | alleviate or remove (pressure or stress) or make less oppressive; "relieve the pressure and the stress"; "lighten the burden of caring for her elderly parents"  
+00194841 30 v 02 määritellä 0 tarkentaa 0 001 @ 00166491 v 0000 01 + 01 00 | make more specific; "qualify these remarks"  
+00194967 30 v 04 remontoida 1 rakentaa_uudelleen 0 uusia 0 rempata 0 001 @ 00123109 v 0000 01 + 01 00 | do over, as of (part of) a house; "We are remodeling these rooms"  
+00195139 30 v 02 korjata 0 oikaista 0 006 @ 00134942 v 0000 + 00262148 n 0202 ! 00197591 v 0101 + 00262148 n 0101 ~ 00195377 v 0000 ~ 00195693 v 0000 01 + 01 00 | make right or correct; "Correct the mistakes"; "rectify the calculation"  
+00195377 30 v 04 oikaista 1 parantaa 1 korjata 1 muuttaa 5 007 @ 00195139 v 0000 + 00671186 a 0402 + 00262448 n 0302 + 00100653 n 0301 + 00262448 n 0203 + 10645659 n 0101 + 00262148 n 0102 01 + 01 00 | set straight or right; "remedy these deficiencies"; "rectify the inequities in salaries"; "repair an oversight"  
+00195693 30 v 03 korjata_virheet 0 debugata 0 etsiä_ja_poistaa_virheet 0 001 @ 00195139 v 0000 01 + 01 00 | locate and correct errors in a computer program code; "debug this program"  
+00195879 30 v 03 muokata 2 toimittaa 0 editoida 0 009 @ 00123109 v 0000 + 06468335 n 0201 + 10645797 n 0201 ~ 00196691 v 0000 ~ 00196916 v 0000 ~ 00197217 v 0000 ~ 00197410 v 0000 ~ 00603763 v 0000 ~ 00767333 v 0000 01 + 01 00 | prepare for publication or presentation by correcting, revising, or adapting; "Edit a book on lexical semantics"; "she edited the letters of the politician so as to omit the most personal passages"  
+00196308 30 v 03 poistaa a käyttää_punakynää 0 pyyhkiä 0 001 @ 00655398 v 0000 01 + 01 00 | cut or eliminate; "she edited the juiciest scenes"  
+00196459 30 v 02 sensuroida 0 lyhentää 0 005 @ 00237219 v 0000 + 00395829 n 0101 + 10203331 n 0101 + 00395468 n 0101 + 00395468 n 0102 01 + 01 00 | edit by omitting or modifying parts considered indelicate; "bowdlerize a novel"  
+00196691 30 v 03 lisätä_tekstiin 0 muuttaa 6 väärentää 0 005 @ 00195879 v 0000 + 10206363 n 0301 + 00751511 n 0301 + 01065763 n 0104 + 06767072 n 0101 01 + 01 00 | insert words into texts, often falsifying it thereby  
+00196916 30 v 02 raivata 4 muokata_pilkkomalla 0 001 @ 00195879 v 0000 01 + 01 00 | significantly cut up a manuscript  
+00197036 30 v 02 leikata 0 editoida 1 003 @ 00123109 v 0000 $ 00237219 v 0000 + 00944933 n 0102 01 + 01 00 | cut and assemble the components of; "edit film"; "cut recording tape"  
+00197217 30 v 02 estää_jnk_esittäminen 0 sensuroida 1 001 @ 00195879 v 0000 01 + 01 00 | suppress by censorship as for political reasons; "parts of the newspaper article were blacked out"  
+00197410 30 v 03 peittää 0 peittää_näkyvistä 0 poistaa b 001 @ 00195879 v 0000 01 + 01 00 | cut out, as for political reasons; "several line in the report were blanked out"  
+00197591 30 v 01 väärentää 1 004 @ 00134942 v 0000 ! 00195139 v 0101 + 10206363 n 0101 + 00751511 n 0101 01 + 01 00 | falsify knowingly; "She falsified the records"  
+00197762 30 v 03 lannistaa 0 kurittaa 0 alistaa 0 001 @ 00123109 v 0000 01 + 01 00 | correct by punishment or discipline  
+00197885 30 v 03 kouluttaa 0 totuttaa 0 ajaa_sisään 0 003 @ 00294117 v 0000 > 00198112 v 0000 $ 00198112 v 0000 01 + 01 00 | make submissive, obedient, or useful; "The horse was tough to break"; "I broke in the new intern"  
+00198112 30 v 01 murtaa 0 002 @ 00106949 v 0000 $ 00197885 v 0000 01 + 01 00 | be broken in; "If the new teacher won't break, we'll add some stress"  
+00198263 30 v 03 hillitä 2 pitää_aisoissa 0 taltuttaa 0 001 @ 00123109 v 0000 01 + 01 00 | restrain  
+00198368 30 v 02 turmella 0 pilata 0 002 @ 00166491 v 0000 ~ 00470216 v 0000 01 + 01 00 | alter from the original  
+00198484 30 v 02 käyttää_väärin 0 väärinkäyttää 0 003 @ 01107407 v 0000 ~ 00199007 v 0000 ~ 01110553 v 0000 01 + 01 00 | change the inherent purpose or function of something; "Don't abuse the system"; "The director of the factory misused the funds intended for the health care of his workers"  
+00198789 30 v 02 käyttää_väärin 1 väärinkäyttää 1 001 @ 01107407 v 0000 01 + 01 00 | use wrongly or improperly or excessively; "Her husband often abuses alcohol"; "while she was pregnant, she abused drugs"  
+00199007 30 v 01 vääristellä<approximate/> 0 001 @ 00198484 v 0000 01 + 01 00 | violate or abuse; "This writer really fractures the language"  
+00199154 30 v 04 huonontua 0 rappeutua 0 heiketä 2 pahentua 0 016 @ 00142253 v 0000 ! 00200276 v 0401 + 13583382 n 0203 + 14547717 n 0201 ! 00200276 v 0101 ~ 00062859 v 0000 ~ 00084902 v 0000 ~ 00089828 v 0000 ~ 00169302 v 0000 ~ 00169484 v 0000 ~ 00199570 v 0000 ~ 00199682 v 0000 ~ 00199993 v 0000 ~ 00200110 v 0000 ~ 00242408 v 0000 ~ 00551449 v 0000 01 + 01 00 | grow worse; "Conditions in the slum worsened"  
+00199570 30 v 01 romahtaa 1 001 @ 00199154 v 0000 01 + 01 00 | suffer a sudden downfall, overthrow, or defeat  
+00199682 30 v 04 luisua_alaspäin 0 tippua 0 tipahtaa 0 pudota 4 002 @ 00199154 v 0000 ~ 00199838 v 0000 01 + 01 00 | get worse; "My grades are slipping"  
+00199838 30 v 03 hairahtaa 0 sortua 0 lipsua_periaatteistaan 0 001 @ 00199682 v 0000 01 + 01 00 | drop to a lower level, as in one's morals or standards  
+00199993 30 v 01 huonontua 1 002 @ 00199154 v 0000 $ 00200110 v 0000 01 + 01 00 | get worse; "His grades suffered"  
+00200110 30 v 02 kärsiä 0 menettää 0 002 @ 00199154 v 0000 $ 00199993 v 0000 01 + 01 00 | be set at a disadvantage; "This author really suffers in translation"  

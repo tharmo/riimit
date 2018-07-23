@@ -1,0 +1,2 @@
+gawk: cmd. line:1: '      BEGIN {FS="'"}
+gawk: cmd. line:1: ^ invalid char ''' in expression

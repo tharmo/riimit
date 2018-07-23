@@ -1,0 +1,40 @@
+  <page>
+    <title>sisäpeli</title>
+    <ns>0</ns>
+    <id>483037</id>
+    <revision>
+      <id>3330900</id>
+      <timestamp>2017-10-16T15:38:40Z</timestamp>
+t@timoh-kone:~/riimitin$ grep "<title>sisäpeli"  fiwiktionary-20180520-pages-meta-current.xml  -A 50 -B5
+|loppu}}</text>
+      <sha1>ngutnq56pg1pwel8nst5frdu5vgjlsa</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>sisäpeli</title>
+    <ns>0</ns>
+    <id>483037</id>
+    <revision>
+      <id>3330900</id>
+      <timestamp>2017-10-16T15:38:40Z</timestamp>
+      <contributor>
+        <ip>82.203.156.163</ip>
+      </contributor>
+      <comment>Ak: Uusi sivu:  ==Suomi==  ===Substantiivi=== {{fi-subs|si|säpeli}} #{{yhteys|urheilu|k=fi}} [[pesäpallo|pesäpallon]] vuoro  ====Etymologia==== {{ety|fi|yhdyssana|sisä|peli}}  ====Liittyvät...</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve">
+==Suomi==
+
+===Substantiivi===
+{{fi-subs|si|säpeli}}
+#{{yhteys|urheilu|k=fi}} [[pesäpallo|pesäpallon]] vuoro
+
+====Etymologia====
+{{ety|fi|yhdyssana|sisä|peli}}
+
+====Liittyvät sanat====
+*[[sisävuoro]], [[peruslyönti]], [[koppi]], [[pomppu]], [[eteneminen]]</text>
+      <sha1>m95yyzjulw0aexs5o3td1bt6m0u4n1h</sha1>
+    </revision>
+  </page>

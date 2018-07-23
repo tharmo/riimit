@@ -1,0 +1,5 @@
+gawk: cmd. line:1: BEGIN blocks must have an action part
+gawk: cmd. line:1: BEGIN }{print $0 ,,$2 ,$1    ,$2 ,$2 ,$3 ,$2 ,$2 ,$2 ,$1 ,$2  ,$2  ,$6 ,$8 ,$7 ,$10 ,$10 ,$11 ,$10 ,$10 ,$10 ,$8 }
+gawk: cmd. line:1:       ^ syntax error
+gawk: cmd. line:1: BEGIN }{print $0 ,,$2 ,$1    ,$2 ,$2 ,$3 ,$2 ,$2 ,$2 ,$1 ,$2  ,$2  ,$6 ,$8 ,$7 ,$10 ,$10 ,$11 ,$10 ,$10 ,$10 ,$8 }
+gawk: cmd. line:1:                   ^ syntax error
