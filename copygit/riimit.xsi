@@ -20,7 +20,9 @@ class name="nominit"
      }
      END { print lks, sis, avs}
     ''' 
-    
+  parpl
+   pre
+    xse:gawk in=nmids.csv: { print "1:" $1,"\t2:" $2,"\t" $17,"\t" $35,"\t" $36}  
   poimiverbit
    h1: poimi 
    pre 
@@ -246,9 +248,10 @@ class name="nominit"
                             for (i=1;i<=length(ww);i++)
                               r=substr(ww,i,1) r;return r}  
                            function taka(w) {  gsub("ä","a",w);gsub("ö","o",w);gsub("y","u",w);return w}
+                           
                            BEGIN { FS=","  
-                            while (getline<"vmids.csv">0) m[substr($1,3,2)]=$2 
-                            while (getline<"nmids2.csv">0) { gsub(/^[ \t]+|[ \t]+$/, "", $2); m[substr($1,1,2)]=$2 }
+                            while (getline<"vmids.csv">0) { gsub(/^[ \t]+|[ \t]+$/, "", $2);m[substr($1,1,2)]=$2;  }
+                            while (getline<"nmids.csv">0) { gsub(/^[ \t]+|[ \t]+$/, "", $2); m[substr($1,1,2)]=$2;print "__"  substr($1,1,2),$2 }
                             #for (i in m) print "<li>!" i "=" m[i] "/"
                             avidits="0,A,B,C,D,E,F,G,H,I,J,K,L,M"
                             avvahvats=" ,k,p,t,k,p,t,k,p,t,t,t,k,k"
@@ -256,6 +259,7 @@ class name="nominit"
                             FS=" "
                             #print "<h3>vahvat:[" avvahvats "][" substr(avvahvats,av,1) "]</h3>"
                             #print "<h3>heikot:[" avheikots "][" substr(avheikots,av,1) "]</h3>"
+                            for (i in m) print ":::" i,m[i]
                             }
             //{
             ###vokaalisointu  
@@ -290,23 +294,26 @@ class name="nominit"
               if ($2>51) #verbit 
                 lend=lend "a" #$1=substr($1,1,length($1)-1)   #verbeillä perusmuodossa aina a jota ei jostain syystä mids-taulukossa
             ### palottelu ja sijakohtaisen osan poisto: w-sanarunko,   av, sis=lisävokaalit av:n perässä  
+              if ($2==71) print "****************" w,"/e:" lend,length(lend) " !!!!!" $1
               w=substr(w,1,length(w)-length(lend)) #pestä > pe+stä
               db =db "/E:" w "(" en  ")"
               if (myav=="" && avv!="" && index("aeiou",substr(w,length(w)))>0) { ### jos ei astevaihtelua, niin vain yksi vokaali sisuskaluihin
                  sis=substr(w,length(w))  ###vokaali 
                   #if (avv!="" && avh!="xx") { #print "menikö oikein?" $0;           if (index("aeiou",substr(w,length(w)-1,1))>0)                 xxx=99}
-                if ($2==32) print "****************" w,sis,lend "!" $0
+                if ($2==71) print "****************" w,sis,lend "!" $0
                  }
               else sis=vow(w)  #  ... jos tyhjä heikko, niin kaikki vokaalit ei mee sisiin
               #if (sis=="" && lend=="") print "****************" w,sis,lend "!" $0
-              if ($2==32) print "****************" w,sis,lend,"%" myav, "!" $0
+              if ($2==71) print "****************" w,"/s:" sis,"/e:" lend,"%" myav, "!" $0
               #if (length(sis)>2)  {              print "eieieieieieieie"   ### ei näitä ookaan, pois tää pätkä         sis=substr(sis,length(sis)-1)        #if ($3!="0")           {            x=1                db=db "(((" $0 ")))"          }            } 
               w=substr(w,1,length(w)-length(sis))
               db = d b "\\S:" w "(" sis ")"
             ###  PILKO AV
               if (myav!=""){ 
                  if (myav!=substr(w,length(w))) {       ##loppuu konsonanttiin, joka ei ole luokan tunnuspääte eikä astevaiht-konsonantti (luokat 32 ja 49 + pirun jälsi)  
-                    print "ONGELMA:" $0 ,"(" w ")                                     %" av avh "-" $3 "/" substr(w,length(w)) $0
+                    #print "ONGELMA:" $0 ,"(" w ")                                     %" av avh "-" $3 "/" substr(w,length(w)) $0, myav
+                   #      print "ONGELMA:" #$0 ,"(" w ")  " "/e:" lend, "s:" sis
+                    
                  };
                  w=substr(w,1,length(w)-length(myav))
               }

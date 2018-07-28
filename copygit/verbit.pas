@@ -58,12 +58,12 @@ end;
 const luokkia=24;sikoja=66;
 const VprotoLOPut:array[0..11] of ansistring =('a','a', 'n', '', 'a', 'ut', 'i', 'tu', 'en', 'isi', 'kaa', 'emme');
 const
-vHEIKOTSIJAT =[5,6,7,8,9,10,13,14,15,24,25,26,27,29,30,31,32,33,34,35,36];
+vvahvanheikot =[5,6,7,8,9,10,13,14,15,24,25,26,27,29,30,31,32,33,34,35,36];
 //VVAHVAT: ,0,1,2,3,4,11,12,16,17,18,19,20,21,22,23,28,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65
-hHEIKOTSIJAT=[0,1,2,3,4,13,14,15,16,17,18,19,20,21,22,29,30,31,32,33,34,35,36,37,38,62,63,64,65];
-sijanimet:array[0..66] of ansistring =
+vheikonheikot=[0,1,2,3,4,13,14,15,16,17,18,19,20,21,22,29,30,31,32,33,34,35,36,37,38,62,63,64,65];
+vsijanimet:array[0..66] of ansistring =
   ('V Inf1 Lat ','V Inf1 Act Tra Sg PxPl1 ','V Inf1 Act Tra Sg PxSg1 ','V Inf1 Act Tra Sg PxPl2 ','V Inf1 Act Tra Sg PxSg2 ','V Impv Act Sg2 ','V Prs Act ConNeg ','V Prs Act Pl1 ','V Prs Act Sg1 ','V Prs Act Sg2 ','V Prs Act Pl2 ','V Prs Act Pl3 ','V Prs Act Sg3 ','V Prs Pass ConNeg ','V Prs Pass Pe4 ','PrfPrc Pass Pos Nom Pl ','V Pot Act Sg3 ','V Pot Act Pl1 ','V Pot Act Sg1 ','V Pot Act Sg2 ','V Pot Act Pl2 ','V Pot Act Pl3 ','PrfPrc Act Pos Nom Sg ','V Pst Act Sg3 ','V Pst Act Pl1 ','V Pst Act Sg1 ','V Pst Act Sg2 ','V Pst Act Pl2 ','V Pst Act Pl3 ','V Inf2 Pass Ine ','V Cond Pass Pe4 ','V Impv Pass Pe4 ','V Inf3 Pass Ins ','V Pot Pass Pe4 ','PrsPrc Pass Pos Nom Sg ','V Pst Pass Pe4 ','V Pst Pass ConNeg ','V Inf2 Act Ins ','V Inf2 Act Ine Sg ','V Cond Act Sg3 ','V Cond Act Pl1 ','V Cond Act Sg1 ','V Cond Act Sg2 ','V Cond Act Pl2 ','V Cond Act Pl3 ','AgPrc Pos Nom Sg ','AgPrc Pos Ill Sg ','V Act Inf5 Px3 ','V Act Inf5 PxPl1 ','V Act Inf5 PxSg1 ','V Act Inf5 PxPl2 ','V Act Inf5 PxSg2 ','V Inf3 Ade ','V Inf3 Man ','V Inf3 Ine ','V Inf3 Ela ','V Inf3 Abe ','V N Nom Sg ','V N Par Sg ','V N Par Sg ','PrsPrc Act Pos Nom Sg ','PrsPrc Act Pos Nom Pl ','V Impv Act Pl2 ','V Impv Act Pl1 ','V Impv Act Sg3','V Impv Act Pl3','V Act Inf5 Px3 ');
-sijaesim:array[0..66] of ansistring = ('kehua','kehuaksemme','kehuakseni','kehuaksenne','kehuaksesi','kehu',{'VIRHE',}'kehu','kehumme','kehun','kehut','kehutte','kehuvat','kehuu','kehuta','kehutaan','kehutut','kehunee','kehunemme','kehunen','kehunet','kehunette','kehunevat','kehunut','kehui','kehuimme','kehuin','kehuit','kehuitte','kehuivat','kehuttaessa','kehuttaisiin','kehuttakoon','kehuttaman','kehuttaneen','kehuttava','kehuttiin','kehuttu','kehuen','kehuessa','kehuisi','kehuisimme','kehuisin','kehuisit','kehuisitte','kehuisivat','kehuma','kehumaan','kehumaisillaan','kehumaisillamme','kehumaisillani','kehumaisillanne','kehumaisillasi','kehumalla','kehuman','kehumassa','kehumasta','kehumatta','kehuminen','kehumista','kehumista','kehuva','kehuvat','kehukaa','kehukaamme','koon','koot','kehumaisillansa');
+vsijaesim:array[0..66] of ansistring = ('kehua','kehuaksemme','kehuakseni','kehuaksenne','kehuaksesi','kehu',{'VIRHE',}'kehu','kehumme','kehun','kehut','kehutte','kehuvat','kehuu','kehuta','kehutaan','kehutut','kehunee','kehunemme','kehunen','kehunet','kehunette','kehunevat','kehunut','kehui','kehuimme','kehuin','kehuit','kehuitte','kehuivat','kehuttaessa','kehuttaisiin','kehuttakoon','kehuttaman','kehuttaneen','kehuttava','kehuttiin','kehuttu','kehuen','kehuessa','kehuisi','kehuisimme','kehuisin','kehuisit','kehuisitte','kehuisivat','kehuma','kehumaan','kehumaisillaan','kehumaisillamme','kehumaisillani','kehumaisillanne','kehumaisillasi','kehumalla','kehuman','kehumassa','kehumasta','kehumatta','kehuminen','kehumista','kehumista','kehuva','kehuvat','kehukaa','kehukaamme','koon','koot','kehumaisillansa');
 vesims: array[1..27] of ansistring =('hioa', 'sulaa', 'pieksää', 'soutaa', 'jauhaa', 'kaataa', 'laskea', 'tuntea', 'lähteä', 'kolhia', 'naida', 'saada', 'viedä', 'käydä', 'päästä', 'puhella', 'aterioida', 'suudita', 'piestä', 'nähdä', 'parata', 'niiata', 'kasketa', 'nimetä', 'taitaa', 'kumajaa', 'kaikaa');
 //'trio', 'plasebo', 'oboe', 'viidakko', 'kebab', 'diesel', 'hanhi', 'boutique', 'dia', 'kahdeksan', 'apaja', 'idea', 'orkidea', 'kahakka', 'juohea', 'taempi', 'vajaa', 'maa', 'tie', 'nugaa', 'reggae', 'buffet', 'lohi', 'ruuhi', 'loimi', 'huoli', 'paasi', 'kansi', 'lapsi', 'peitsi', 'kaksi', 'sävel', 'morsian', 'hapan', 'lämmin', 'parahin', 'vasen', 'sulhanen', 'iskias', 'vakaus', 'uskalias', 'mies', 'ohut', 'kevät', 'neljäs', 'tuhat', 'kuollut', 'poikue', 'sammal');
 
@@ -194,8 +194,8 @@ begin
    lust:=lmmids[lu,sija];
    if (lu+51=71) then if ((sijat[sija].hparad=2) and  (sija>10)) then lust:='-ek' else if  (sija in [23,28]) then lust:='-k';
    vahvaluokka:=(lu+51<63) or (lu+51 in [76]);
-   if vahvaluokka then vahvasija:=not (sija in vheikotsijat)
-   else vahvasija:=not (sija in hheikotsijat);
+   if vahvaluokka then vahvasija:=not (sija in vheikonheikot)
+   else vahvasija:=not (sija in vheikonheikot);
    if pos('_',lust)>0 then if pos('__',lust)>0 then cut:=2 else cut:=1;
       cutav:=pos('-',lust)>0;
    //if cut=0 then exit;
@@ -234,11 +234,11 @@ begin
   write(^j,'             ');
   for j:=0 to sikoja do
     if (j in  [0,5,9,12,13,16,23,36,37,39,45]) then
-    write(',',copy(sijaesim[j]+'                   ',1,16));
+    write(',',copy(vsijaesim[j]+'                   ',1,16));
   write(^j,'             ');
   for j:=0 to sikoja do
     if (j in  [0,5,9,12,13,16,23,36,37,39,45]) then
-    write(',',copy(sijanimet[j]+'              ',1,16));
+    write(',',copy(vsijanimet[j]+'              ',1,16));
   write(^j,'             ');
   for j:=0 to sikoja do
     if (j in  [0,5,9,12,13,16,23,36,37,39,45]) then
@@ -284,8 +284,8 @@ function vh(lu,si:integer):string;
   begin
    //  if lu+51<64 then result:=ifs(si in vHEIKOtsijat,'','!!')
    //ELSE  result:=ifs(si in HHEIKOtsijat,'','!!')
-   if lu+51<64 then TAG:=ifs(si in vHEIKOtsijat,'SPAN','B')
- ELSE  tAG:=ifs(si in HHEIKOtsijat,'SPAN','B');
+   if lu+51<64 then TAG:=ifs(si in vvahvanheikot,'SPAN','B')
+ ELSE  tAG:=ifs(si in vHEIKOnheikot,'SPAN','B');
 WRITELN('<TD><',TAG,'>'+reversestring(LMMIDS[LU,SI])+'</'+TAG+'></td>');
   end;
 begin
@@ -597,8 +597,8 @@ begin
   lkasopi:=copy(koita,1,length(mid));
   //lkasopi:=mid;
   heikkomuoto:=false;
-  if curlka.vahva then begin if  sija in vheikotsijat then heikkomuoto:=true;end
-  else  if  sija in hheikotsijat then heikkomuoto:=true;
+  if curlka.vahva then begin if  sija in vvahvanheikot then heikkomuoto:=true;end
+  else  if  sija in vheikonheikot then heikkomuoto:=true;
   if d then   writeln('<li>LK:',lka+52,red(lkajatko),' / ', blue(lkasopi), curlka.ekasis,'-',curlka.vikasis,koita,'(',mid,')',heikkomuoto,'</li>');
   //if d then for sisus:=curlka.ekasis to curlka.vikasis do writeln('!\',siss[sisus].sis);
   if d then   writeln('<ul>');
@@ -991,11 +991,13 @@ for j:=0 to 66 do
     //if hitpos>0 then writeln(' [:<b>',j,reversestring(mylop),':</b>', hitpos,haku,'] ');
     if hitpos=1 then  //EIIKÄ TÄTÄ KUN KAIKKI ON KÄÄNNETTU
    begin
-    sikalauma.addobject(copy(haku,length(mylop)+1),tobject(j));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
+        sikalauma.addobject(mylop,tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
+
+    //sikalauma.addobject(copy(haku,length(mylop)+1)+','+mylop,tobject(j));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
 //    writeln('+++',j);
   //ei etsitä riimejä suoraa päätteistä (grillasi/ maisillasi)
    end else if pos(haku,mylop)=1 then
-   sikalauma.addobject('',tobject(j));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
+   sikalauma.addobject('',tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
  end;
 end;
 
@@ -1146,17 +1148,21 @@ end;
 
 
 procedure tverbit.createsija(si:integer;ss:ansistring);
-var sl:tstringlist;ms:tsija; j:word;
+var sl:tstringlist;ms:tsija; j:word;num:integer;
 begin
 try
 sl:=tstringlist.create;
 sl.commatext:=ss;
-sijat[si].num:=strtointdef(sl[0],98);
+num:=strtointdef(sl[0],98);
+sijat[si].num:=num;
 sijat[si].vparad:=strtointdef(sl[1],255);
 sijat[si].hparad:=strtointdef(sl[3],255);
 sijat[si].vv:=sl[2]='v1';
 sijat[si].hv:=sl[4]='h1';
 sijat[si].ending:=reversestring(sl[5]);
+sijat[si].onverbi:=true;
+sijat[si].name:=vsijanimet[num];
+sijat[si].esim:=vsijaesim[num];
 //writeln('<li>',si,':',sl.commatext,':');
 
 for j:=0 to 27 do
@@ -1213,6 +1219,7 @@ begin
   createsija(i,slist[i]);
   if sijat[i].vv then  vvahvat:=vvahvat+','+inttostr(i) else vheikot:=vheikot+','+inttostr(i);
   if sijat[i].hv then hvahvat:=hvahvat+','+inttostr(i) else hheikot:=hheikot+','+inttostr(i);
+  //writeln('<li>',i,':',vsijanimet[i],'/',vsijaesim[i],' <b>',reversestring(sijat[i].ending),'</b>');
  end;
  {for i:=1 to 11 do
   begin
@@ -1283,8 +1290,8 @@ begin
       //if pos('*',mymid)>0 then begin mymid[length(mymid)]:=sofar[length(sofar)];end;
       if pos('*',mymid)>0 then begin mymid[length(mymid)]:=SIS[length(SIS)];end;
       sika:=sijat[si];
-      if vahvaluokka then vahvasija:=NOT(si in vHEIKOTSIJAT)
-      else vahvasija:=not (si in hHEIKOTSIJAT);
+      if vahvaluokka then vahvasija:=NOT(si in vvahvanHEIKOT)
+      else vahvasija:=not (si in vHEIKOnheikot);
       if astva='' then myav:='' else
       if vahvasija then  myav:=astva[1] else
       if length(astva)>1 then myav:=astva[2] else myav:='';

@@ -60,9 +60,9 @@ const nendings:array[0..33] of ansistring=('','n','a','ssa','sta','n','lla','lta
 //const navexamples:array[1..49] of ansistring=('ukko','hiomo','avio','elikko','cup','agar','kaikki','byte','eka','boa','itara','urea','aluna','urakka','upea','kumpi','keruu','jää','suo','bukee','gay','buffet','lohi','uni','liemi','veri','mesi','jälsi','lapsi','peitsi','yksi','tytär','astin','alaston','lämmin','alin','vasen','öinen','ajos','etuus','rakas','mies','immyt','kevät','sadas','tuhat','mennyt','hake','kinner');
 
 const nexamples:array[1..49] of ansistring=('ukko','hiomo','avio','elikko','häkki','agar','kaikki','nukke','ankka','fokka','itara','urea','aluna','ulappa','upea','kumpi','keruu','jää','suo','bukee','gay','buffet','lohi','uni','liemi','veri','mesi','jälsi','lapsi','peitsi','yksi','tytär','asetin','hapan','lämmin','alin','vasen','öinen','ajos','etuus','rakas','mies','immyt','kevät','sadas','tuhat','mennyt','hake','kinner');
-const nsijnams:array[1..34]of ansistring =('N Nom Sg','N Gen Sg','N Par Sg','N Ine Sg','N Ela Sg','N Ill Sg','N Ade Sg','N Abl Sg','N All Sg','N Ess Sg','N Tra Sg','N Abe Sg','N Nom Pl','N Gen Pl','N Par Pl','N Ine Pl','N Ela Pl','N Ill Pl','N Ade Pl','N Abl Pl','N All Pl','N Ess Pl','N Tra Pl','N Abe Pl','N Ins Pl','N Gen Pl','N Gen Pl','N Gen Pl','N Gen Pl','N Gen Pl','N Ill Pl','N Ill Pl','N Par Pl','N Par Pl ');
+const nsijnams:array[0..34]of ansistring =('N Nom Sg','N Gen Sg','N Par Sg','N Ine Sg','N Ela Sg','N Ill Sg','N Ade Sg','N Abl Sg','N All Sg','N Ess Sg','N Tra Sg','N Abe Sg','N Nom Pl','N Gen Pl','N Par Pl','N Ine Pl','N Ela Pl','N Ill Pl','N Ade Pl','N Abl Pl','N All Pl','N Ess Pl','N Tra Pl','N Abe Pl','N Ins Pl','N Gen Pl','N Gen Pl','N Gen Pl','N Gen Pl','N Gen Pl','N Ill Pl','N Ill Pl','N Par Pl','N Par Pl','xx');
 
-const nsijesims:array[1..34]of ansistring =('ilo','ilon','iloa','ilossa','ilosta','iloon','ilolla','ilolta','ilolle','ilona','iloksi','ilotta','ilot','ilojen','iloja','iloissa','iloista','iloihin','iloilla','iloilta','iloille','iloina','iloiksi','iloitta','iloin','ilojen','omenoiden','omenoitten','ulappain','unten','uniin','iloihin','iloja','omenoita');
+const nsijesims:array[0..34]of ansistring =('ilo','ilon','iloa','ilossa','ilosta','iloon','ilolla','ilolta','ilolle','ilona','iloksi','ilotta','ilot','ilojen','iloja','iloissa','iloista','iloihin','iloilla','iloilta','iloille','iloina','iloiksi','iloitta','iloin','ilojen','omenoiden','omenoitten','ulappain','unten','uniin','iloihin','iloja','omenoita','xx');
 
 
 
@@ -96,7 +96,7 @@ begin
    write(',',copy(inttostr(j)+'              ',1,8));
   write(^j,'             ');
   for j:=0 to scount do
-   write(',',copy(nsijesims[j]+'              ',1,8));
+  write(',',copy(nsijesims[j]+'              ',1,8),sijat[j].esim);
   write(^j,'             ');
   for j:=0 to scount do
    begin
@@ -109,9 +109,9 @@ begin
    write(',',copy(sijat[j].ending+'              ',1,8));
   write(^j);
 
-  for i:=0 to 48 do
+  for i:=1 to 48 do
   begin
-     write(i+1,'  ;',copy(nexamples[i+1]+'                ',1,12));
+     write(i,'  ;',copy(nexamples[i]+'                ',1,12));
 
      for j:=0 to scount do
      begin
@@ -218,12 +218,13 @@ for j:=0 to scount do
     //writeln('<li>sija?',haku,'=',mylop,'@',hitpos);
      if pos('*',mylop)>0 then if haku[1]='n' then begin hitpos:=1;mylop:='n';end;
     //writeln(' [',mylop, hitpos,'] ');
-    //writeln('<li>XZ:',haku, '//',mylop);
+    //writeln('<li>:',j,haku, '//',mylop,hitpos);
     if hitpos=1 then  //EIIKÄ TÄTÄ KUN KAIKKI ON KÄÄNNETTU
    begin
 
-    sikalauma.addobject(copy(haku,length(mylop)+1),tobject(j));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
-    //writeln('+',j,reversestring(haku));
+    sikalauma.addobject(mylop,tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
+    //sikalauma.addobject(copy(haku,length(mylop)+1)+','+mylop,tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
+    //writeln('<li>+',j,mylop);
    end;
  end;
 end;
@@ -444,7 +445,7 @@ mlist:=tstringlist.create;
      for j:=0 to scount do
      begin
         try
-      lmmids[i][j]:=reversestring(mlist[j]);
+      lmmids[i+1][j]:=reversestring(mlist[j]);
       //WRITELN(' ',J,lmmids[i][j]);
       except writeln('???fail;',i,' ',j);end;
       //sijat[j].
@@ -458,11 +459,15 @@ mlist:=tstringlist.create;
     sijat[i].hv:=not (i in nheikonheikot);
     sijat[i].ending:=trim(nendings[i]);
     sijat[i].num:=i;
+    sijat[i].onverbi:=false;
+    sijat[i].name:=nsijnams[i];
+    sijat[i].esim:=nsijesims[i];
+
     //if d then
-    //writeln('<li>sija:',i,' /',sijat[i].ending,' /v:',sijat[i].vv, '/h:',sijat[i].hv);
+   // writeln('<li>sija:',i,' /end:',sijat[i].ending,' /v:',sijat[i].vv, '/h:',sijat[i].hv,' ',sijat[i].name,' (',sijat[i].esim,')');
   end;
-  writeln('<hr>LISTedSIJAT');
-  writeln('<hr></pre>');
+ // writeln('<hr>LISTedSIJAT');
+ // writeln('<hr><pre>');
  // if d then for i:=990
  for i:=099 to  49 do
   begin

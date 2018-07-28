@@ -38,7 +38,7 @@ implementation
   if i>51 then
    for j:=0 to 65 do
         if (j in  [0,5,9,12,13,16,23,36,37,39,45]) then
-          res.add(st[i]+' '+trim(sijanimet[j]));
+          res.add(st[i]+' '+trim(vsijanimet[j]));
     res.savetofile('esim.gen');
 
    //writeln(st[i]);
@@ -88,7 +88,7 @@ implementation
   if i>51 then
    for j:=0 to 65 do
         if (j in  [0,5,9,12,13,16,23,36,37,39,45]) then
-          res.add(st[i]+' '+trim(sijanimet[j]));
+          res.add(st[i]+' '+trim(vsijanimet[j]));
     res.savetofile('esim.gen');
  // 27 [t/d],  ->S/S NomSG + melk kaikki monikkomuodot
  // 31 yksi yksikössä td/vahvlka yhden yhtä, -> S/S nom sg + monikot ks
@@ -110,8 +110,8 @@ begin
  //nominit.siivoosijat;exit;
  //etsi(allresus);
 SANASTO:=tsanasto.create;
-sanasto.luesanat('sanatuus.csv');
-sanasto.listaa;
+//sanasto.luesanat('sanatuus.csv');
+//sanasto.listaa;
 exit;
  riimii:=triimitin.create;
  riimii.tulokset;

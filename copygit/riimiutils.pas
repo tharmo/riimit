@@ -14,13 +14,15 @@ type tsija=record
   num,vparad,hparad:byte;
   vmuomids,hmuomids:array[1..16] of byte;
   ending:string[15];
-
+  onverbi:boolean;
+  name,esim:string[16];
 end;
 
 
 type tvhaku=record hakunen:string[15];sija:byte;eietu,eitaka:boolean;end;
 //type tvhakuset=array of tvhaku;
-type thakunen=record koko,akon,loppu:string;lk,sija:word;eietu,eitaka:boolean;end;
+//type thakunen=record koko,akon,loppu:string;lk,sija:word;eietu,eitaka:boolean;end;
+type thakunen=class(tobject) koko,akon,loppu:string;lk,sija:word;eietu,eitaka,isverb:boolean;end;
 
 procedure tsekkaa(haku:ansistring;etuko:boolean;hits,riimit:tstringlist);
 //procedure tsekkaatavut(haku:ansistring;etuko:boolean;hits,riimit:tstringlist);
