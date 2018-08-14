@@ -222,7 +222,8 @@ for j:=0 to scount do
     if hitpos=1 then  //EIIKÄ TÄTÄ KUN KAIKKI ON KÄÄNNETTU
    begin
 
-    sikalauma.addobject(mylop,tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
+    //sikalauma.addobject(reversestring(mylop),tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
+    sikalauma.addobject((mylop),tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
     //sikalauma.addobject(copy(haku,length(mylop)+1)+','+mylop,tobject(@sijat[j]));//@sijat[j]));  //TEMPPUILUA, NUMERO PANNAAN OBJEKTIPOINTTERIIN
     //writeln('<li>+',j,mylop);
    end;

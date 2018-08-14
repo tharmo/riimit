@@ -90,7 +90,7 @@ try
       if pos(sana[i],'aou')>0 then eietu:=true;
       if pos(sana[i],'äöy')>0 then eitaka:=true;
   end;
-  if eitaka and eietu then begin  eietu:=false;eitaka:=false;end;
+  //if eitaka and eietu then begin  eietu:=false;eitaka:=false;end;
 except writeln('failcvoksointu');raise;end;
  //writeln('%%',sana,eietu,eitaka);
 end;
@@ -189,10 +189,10 @@ end;
 function hyphenfirev(w:ansistring;tavus:tstringlist):ansistring;
   var i,k,len,vpos:integer;hy,vocs,alkkon:ansistring;ch,chprev:ansichar;lasttag:ansistring;haddiftong:boolean;
 begin
-  tAvus:=tstringlist.create;//just for test
+  //tAvus:=tstringlist.create;//just for test
   tavus.clear;
   //write('<pre>',w,':=',reversestring(w));//test
-  w:=reversestring(w);//test
+//  w:=reversestring(w);//test
   len:=length(w);
  if len=0 then exit;
  result:='';//w[len];
@@ -237,7 +237,7 @@ begin
  else tavus.insert(0,'');
  result:=alkkon+'_'+result;
 //  result:=tavus.commatext;
-  //writeln('<li>tavut;',result,' ',tavus.commatext);
+ // writeln('<li>tavut;',tavus.commatext,'</li>');
 end;
 
 procedure tsekkaa(haku:ansistring;etuko:boolean;hits,riimit:tstringlist);

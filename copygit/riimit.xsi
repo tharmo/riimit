@@ -1,4 +1,36 @@
 class name="nominit"
+  99
+    h1: ‰‰llˆsi‰
+    pre
+     xse:shellexec: cat sanat.all |grep -a 99| iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat.ansi
+     #xse:shellexec: export LC_ALL=fi_FI.utf8;cat sanat99.ansi | sort 
+     #xse:shellexec: cat sanat.all |grep 99|gawk '{ print $1}'|rev|iconv -t ISO-8859-1//TRANSLIT -f UTF-8|sort >sanat99.tmp
+     xse:gawk in=sanat.ansi out=sanat99.ansi: '''
+                function etu(w) { gsub("‰","a",w);gsub("ˆ","o",w);gsub("y","u",w);return w}
+                function isetu(w) { if (index(w,"a")>0) return 1;if (index(w,"o")>0) return 1;if (index(w,"u")>0); return 0}
+                function rev(ww) { r="";
+                            for (i=1;i<=length(ww);i++)
+                              r=substr(ww,i,1) r;
+                              return r}  
+
+                { if ($2==99) print rev(etu($1)), isetu($0)}
+     '''           
+     #xse:shellexec: cat sanat99.aou | sort 
+  d  xse:shellexec: cat sanat.all |grep 99|gawk '{ print $1}'|iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat99.ansi
+     #xse:shellexec: export LC_ALL=C;cat sanat.all |rev |iconv -t ISO-8859-1//TRANSLIT -f UTF-8|grep 99 >sanat99.ansi
+     # |rev |sort |wc
+   hr
+    pre 
+     xse:shellexec: export LC_ALL=fi_FI.utf8;cat sanat99.tmp |sort|iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat99.ansi
+  yhys
+    xmp 
+      xse:gawk in="../sanakone/kotuslista.txt" out=yhdys_kot.lst env="LC_ALL=C": '''
+       { if (index($0,"<tn>")>0) next 
+         san=substr($0,index($0,"<s>"),99);
+         san=substr(san,4,index($0,"</s>")-8);
+          print san
+       }
+      ''' 
   sanaesims
     xse:gawk in=sanatuus.csv: '''
      BEGIN { FS=","}
@@ -124,7 +156,7 @@ class name="nominit"
              
               return res;
             }
-           function etu(w) {  gsub("√§","a",w);gsub("√∂","o",w);gsub("y","u",w);return w}
+           function etu(w) {  gsub("‰","a",w);gsub("ˆ","o",w);gsub("y","u",w);return w}
            BEGIN { FS=","  
             while (getline<"vmids.csv">0) m[substr($1,3,2)]=$2 
             #for (i in m) print "<li>" i, "=" m[i]
@@ -187,7 +219,7 @@ class name="nominit"
               #split(st,lets,"")
               ##for (i in lets) 
             }
-           function etu(w) {  gsub("√§","a",w);gsub("√∂","o",w);gsub("y","u",w);return w}
+           function etu(w) {  gsub("‰","a",w);gsub("ˆ","o",w);gsub("y","u",w);return w}
            BEGIN { FS="," 
             while (getline<"nmids2.csv">0) { 
              gsub(/^[ \t]+|[ \t]+$/, "", $2)
@@ -247,7 +279,7 @@ class name="nominit"
                            function rev(ww) { r="";
                             for (i=1;i<=length(ww);i++)
                               r=substr(ww,i,1) r;return r}  
-                           function taka(w) {  gsub("√§","a",w);gsub("√∂","o",w);gsub("y","u",w);return w}
+                           function taka(w) {  gsub("‰","a",w);gsub("ˆ","o",w);gsub("y","u",w);return w}
                            
                            BEGIN { FS=","  
                             while (getline<"vmids.csv">0) { gsub(/^[ \t]+|[ \t]+$/, "", $2);m[substr($1,1,2)]=$2;  }
@@ -276,7 +308,7 @@ class name="nominit"
                  else 
                   { w1=w1 substr(w,1,1);w=substr(w,2)}
             ### ASTEVAIHTELU      
-              lend=m[$2]  #$2=luokka, lend=luokan perusmuodon loppulis√§
+              lend=m[$2]  #$2=luokka, lend=luokan perusmuodon loppulis‰
               av=index(avidits,$3)  #astevaihtelutunnus
               avv=substr(avvahvats,av,1) # av-tunnusta vastaava vahva konsonantti
               avh=substr(avheikots,av,1) # -"- heikko
@@ -286,31 +318,31 @@ class name="nominit"
               if ($2>=52) if ($2<63 || $2==76) myav=avv;  else myav=avh # verbeille .. 
               if ($2<52) if ($2<32) myav=avv;  else myav=avh  # nomineille.. 
               db=w "/" lend "/" $4  #debug
-            ### LUOKAN 67 SEKOILU (oisko "LLA" mahd loppup√§√§te kaikille (?)  sanoille?  
+            ### LUOKAN 67 SEKOILU (oisko "LLA" mahd loppup‰‰te kaikille (?)  sanoille?  
               xkon=""
-              if (lend=="*") { lend=substr(w,length(w)-1,1);xkon=lend;lend=lend lend }  #piereskell√§, pierr√§ /kahdentuva konsonantti lka 67
+              if (lend=="*") { lend=substr(w,length(w)-1,1);xkon=lend;lend=lend lend }  #piereskell‰, pierr‰ /kahdentuva konsonantti lka 67
               if ($2==32 || $2==49) { xkon=substr(w,length(w),1);w=substr(w,1,length(w)-1) }
             ### verb loppu-a  
               if ($2>51) #verbit 
-                lend=lend "a" #$1=substr($1,1,length($1)-1)   #verbeill√§ perusmuodossa aina a jota ei jostain syyst√§ mids-taulukossa
-            ### palottelu ja sijakohtaisen osan poisto: w-sanarunko,   av, sis=lis√§vokaalit av:n per√§ss√§  
+                lend=lend "a" #$1=substr($1,1,length($1)-1)   #verbeill‰ perusmuodossa aina a jota ei jostain syyst‰ mids-taulukossa
+            ### palottelu ja sijakohtaisen osan poisto: w-sanarunko,   av, sis=lis‰vokaalit av:n per‰ss‰  
               if ($2==71) print "****************" w,"/e:" lend,length(lend) " !!!!!" $1
-              w=substr(w,1,length(w)-length(lend)) #pest√§ > pe+st√§
+              w=substr(w,1,length(w)-length(lend)) #pest‰ > pe+st‰
               db =db "/E:" w "(" en  ")"
               if (myav=="" && avv!="" && index("aeiou",substr(w,length(w)))>0) { ### jos ei astevaihtelua, niin vain yksi vokaali sisuskaluihin
                  sis=substr(w,length(w))  ###vokaali 
-                  #if (avv!="" && avh!="xx") { #print "menik√∂ oikein?" $0;           if (index("aeiou",substr(w,length(w)-1,1))>0)                 xxx=99}
+                  #if (avv!="" && avh!="xx") { #print "menikˆ oikein?" $0;           if (index("aeiou",substr(w,length(w)-1,1))>0)                 xxx=99}
                 if ($2==71) print "****************" w,sis,lend "!" $0
                  }
-              else sis=vow(w)  #  ... jos tyhj√§ heikko, niin kaikki vokaalit ei mee sisiin
+              else sis=vow(w)  #  ... jos tyhj‰ heikko, niin kaikki vokaalit ei mee sisiin
               #if (sis=="" && lend=="") print "****************" w,sis,lend "!" $0
               if ($2==71) print "****************" w,"/s:" sis,"/e:" lend,"%" myav, "!" $0
-              #if (length(sis)>2)  {              print "eieieieieieieie"   ### ei n√§it√§ ookaan, pois t√§√§ p√§tk√§         sis=substr(sis,length(sis)-1)        #if ($3!="0")           {            x=1                db=db "(((" $0 ")))"          }            } 
+              #if (length(sis)>2)  {              print "eieieieieieieie"   ### ei n‰it‰ ookaan, pois t‰‰ p‰tk‰         sis=substr(sis,length(sis)-1)        #if ($3!="0")           {            x=1                db=db "(((" $0 ")))"          }            } 
               w=substr(w,1,length(w)-length(sis))
               db = d b "\\S:" w "(" sis ")"
             ###  PILKO AV
               if (myav!=""){ 
-                 if (myav!=substr(w,length(w))) {       ##loppuu konsonanttiin, joka ei ole luokan tunnusp√§√§te eik√§ astevaiht-konsonantti (luokat 32 ja 49 + pirun j√§lsi)  
+                 if (myav!=substr(w,length(w))) {       ##loppuu konsonanttiin, joka ei ole luokan tunnusp‰‰te eik‰ astevaiht-konsonantti (luokat 32 ja 49 + pirun j‰lsi)  
                     #print "ONGELMA:" $0 ,"(" w ")                                     %" av avh "-" $3 "/" substr(w,length(w)) $0, myav
                    #      print "ONGELMA:" #$0 ,"(" w ")  " "/e:" lend, "s:" sis
                     
@@ -351,7 +383,7 @@ class name="nominit"
           //  {  for (s=2;s<=NF;s++) 
            if (index($s,"\#")<1 && index($s,"kehua ")==1) print NR,s,$s,  "   ",$1}
         '''    
-        # k√§sin k√§yty l√§pi merkaten turhat muodot
+        # k‰sin k‰yty l‰pi merkaten turhat muodot
         hr
         xse:gawk in="kehu.tmp": ''' 
           BEGIN { FS=" " }            
@@ -466,8 +498,8 @@ class name="nominit"
         #xse:shellexec: 
 
   
-  ### haluttaisiin kaikki sanat wikist√§ ja kotuksesta jotka eiv√§t ole wikin, kotuksen tai hfst:n mukaan selv√§sti yhdyssanoja
-  yhdys2  # my√∂hemmin: nyt on karsittu my√∂s kotuksen ei-yhdyssanoja jos ne puuttuu wiktionaaryst√§
+  ### haluttaisiin kaikki sanat wikist‰ ja kotuksesta jotka eiv‰t ole wikin, kotuksen tai hfst:n mukaan selv‰sti yhdyssanoja
+  yhdys2  # myˆhemmin: nyt on karsittu myˆs kotuksen ei-yhdyssanoja jos ne puuttuu wiktionaaryst‰
     xse:gawk in=yhdys_wikt.lst out=yhdys_wikt.tmp : '''
       BEGIN { FS="/"} { print $1}
     '''
@@ -482,9 +514,9 @@ class name="nominit"
     xse:shellexec: comm yhdys_hfst.sanat yhdys_wikt.sanat -13 |wc
     xse:shellexec: comm yhdys_hfst.sanat yhdys_wikt.sanat -23 |wc
     xse:shellexec: uniq yhdys_hfst.sanat yhdys_wikt.sanat  |wc
-  yhdys  ##erittelee yhdyssanaep√§ilystatuksen mukaan tiedostoihin: ei-yhdyssanoiksi eis_vikaa ja yhdys_ei.lst
-    # luetaan hfst-tulosrivit (analysoitu kaikki wiktionaryst√§ l√∂ydetyt sanat)
-       # kaikenlaista add hoc temppuilua. Hfstss√§ moka, yhdyssanoiksi tulee kaikki jotka voidaan sellaiseksi kuvitella, ja sanaraja tulee yhden arvauksen mukaisesti   
+  yhdys  ##erittelee yhdyssanaep‰ilystatuksen mukaan tiedostoihin: ei-yhdyssanoiksi eis_vikaa ja yhdys_ei.lst
+    # luetaan hfst-tulosrivit (analysoitu kaikki wiktionaryst‰ lˆydetyt sanat)
+       # kaikenlaista add hoc temppuilua. Hfstss‰ moka, yhdyssanoiksi tulee kaikki jotka voidaan sellaiseksi kuvitella, ja sanaraja tulee yhden arvauksen mukaisesti   
     xse:gawk in="wifiana.txt" out=wifiana2.txt: '''   
       { #gsub(/^[ \t]+|[ \t]+$/, "", $0)  #trim .. ei taidettu tarvita
         gsub("#\\$", "X", $0)  #  "#" as last - hfst fiana Ordinaaliluvuilla hassu extra "#"
@@ -505,7 +537,7 @@ class name="nominit"
       } 
       BEGIN { sep="\\[\\[";FS="/"}
       /Punct/ { print $0 > "yhdys_wikt.lst"
-        next}  #16000 wiktionaryssa merkattua yhdyssanaa joita ei p√§√§stet√§ jatkoon
+        next}  #16000 wiktionaryssa merkattua yhdyssanaa joita ei p‰‰stet‰ jatkoon
       /Card\#/ { print $0 > "yhdys_card.lst"  ### muutama lukusana joiden yhdyssanaisuus merkattu oudosti
         next}  
       /\#/{ 
@@ -517,16 +549,16 @@ class name="nominit"
             for (i=2;i<=NF;i++)
               if (index($i,"#")>0) { if (index($i,"\#")<length($i)) if (perusmuoto($i)) ayhdys=1}
               else if (index($i,haku)==1) { asama=1}
-            if ( asama && ayhdys) { #sellaisenaan perusmuodossa ja my√∂s joku risuaidoitettu muoto: suspekteja
-             s=s+1;print >"yhdys_seka.lst"  ######### enimm√§kseen taivutettuja tai muuten sekavaa - heitet√§√§n pois (pit√§is k√§yd√§ l√§pi:toisinto, parkita,...)
+            if ( asama && ayhdys) { #sellaisenaan perusmuodossa ja myˆs joku risuaidoitettu muoto: suspekteja
+             s=s+1;print >"yhdys_seka.lst"  ######### enimm‰kseen taivutettuja tai muuten sekavaa - heitet‰‰n pois (pit‰is k‰yd‰ l‰pi:toisinto, parkita,...)
             }
             else if (asama) { 
                s=s+1; 
-              print ("==" $0 , haku)>"yhdys_ei.lst" # sellaisenaan, ei risuaitoja perusmuodossa.  Pidet√§√§n mukana
+              print ("==" $0 , haku)>"yhdys_ei.lst" # sellaisenaan, ei risuaitoja perusmuodossa.  Pidet‰‰n mukana
             }
              else 
-               if (ayhdys)  print ("" $1)>"yhdys_hfst.lst"  ########### #risuaidoitetu, ei sellaisenaan - selv√§ yhdyssana hfst:n mukaan. Pois.
-               else print > "yhdys_eiei.lst" ""  ######## 150 enimm√§kseen taivutettuja, jokunen (verbej√§) virhe: pii#leskell√§ V Inf1 Lat. Joutanee pois 
+               if (ayhdys)  print ("" $1)>"yhdys_hfst.lst"  ########### #risuaidoitetu, ei sellaisenaan - selv‰ yhdyssana hfst:n mukaan. Pois.
+               else print > "yhdys_eiei.lst" ""  ######## 150 enimm‰kseen taivutettuja, jokunen (verbej‰) virhe: pii#leskell‰ V Inf1 Lat. Joutanee pois 
            #print $i, " / "   $1  
           #V Inf1 Lat
           #a pOS nOM
@@ -535,7 +567,7 @@ class name="nominit"
          next
        }
        /\*/ { print $1 >"ei_sana.lst";next}  ######## 10000 hfst:lle tuntematonta sanaa, aika turhaa kamaa
-       ### j√§ljell√§ risuaidattomat
+       ### j‰ljell‰ risuaidattomat
        //{ oks=0;
            for (i=2;i<=NF;i++)
            { 
@@ -544,14 +576,14 @@ class name="nominit"
            }
            print $1, lka, oks
            #for (i=2;i<=NF;i++)           print "/" $1 "/"  $i "/" , perusmuoto($i),index($i,$1)
-         if (oks)   print $1 " " lka>"ei_vikaa.lst"   ##  22317 sanaa joiden ei ep√§ill√§ (wiki,hfst) olevan yhdyssanoja  (niit√§ kyll√§ on joukossa)
-         if (!oks) print  $1 " " lka>"ei_ymmarra.lst"  ###3409 enimm√§kseen monikkoja yms taivutuksia .. joutanee pois
+         if (oks)   print $1 " " lka>"ei_vikaa.lst"   ##  22317 sanaa joiden ei ep‰ill‰ (wiki,hfst) olevan yhdyssanoja  (niit‰ kyll‰ on joukossa)
+         if (!oks) print  $1 " " lka>"ei_ymmarra.lst"  ###3409 enimm‰kseen monikkoja yms taivutuksia .. joutanee pois
          }
        
     ''' 
   wiklist
    xmp
-    xse:gawk in="wikilista.txt" out=wikithe.txt: '''  ## siivotaan wikist√§ poimittuja etsim√§ll√§ [[*]] -sulkujen sis√§ll√∂t
+    xse:gawk in="wikilista.txt" out=wikithe.txt: '''  ## siivotaan wikist‰ poimittuja etsim‰ll‰ [[*]] -sulkujen sis‰llˆt
     BEGIN { sep="\\[\\[";FS=":::"}
     
      // { #print "****" $0; ;
@@ -563,7 +595,7 @@ class name="nominit"
        if (index(ast,"|")>0)
          ast=substr(ast,1,index(ast,"|")-1);
          if (index(ast," ")<1)
-          if (match(ast,/[^√§√∂a-zA-Z√Ñ√ñ]/)==0)  # vain akkosista koostuvia
+          if (match(ast,/[^‰ˆa-zA-Zƒ÷]/)==0)  # vain akkosista koostuvia
            st=st  tolower(ast) "\n"  
            
       }
@@ -571,20 +603,20 @@ class name="nominit"
      }
   
    '''
-   ### wikin sanat ja sanojen sanaviittaukset (syno, liittyv√§t, ..) sy√∂tet√§√§n hfst:n analysaattorille
+   ### wikin sanat ja sanojen sanaviittaukset (syno, liittyv‰t, ..) syˆtet‰‰n hfst:n analysaattorille
    xse:shellexec: cat  wikithe.txt |./fiana >wifiana.txt
    h1: res in wifiana.txt
   karsiwifi   #muunkieliset yms veke
     xse:gawk in="fiwiktionary-20180520-pages-meta-current.xml" out=wik.txt: '''
       BEGIN { FS="[><]"; g0=0;gogo=0;suomi=0;intext=0  
-      otsi="===Yl√§k√§sit,===Vastak,===Synonyy,===Alak√§s,==Osak√§s,===Vierus,==Liitty,==Etymo"
+      otsi="===Yl‰k‰sit,===Vastak,===Synonyy,===Alak‰s,==Osak‰s,===Vierus,==Liitty,==Etymo"
       split(otsi,ots,",")
        }
       /<title/ { if (go)
                 { if (suomi==1) print juttu>"keep.txt"; else print "EI:" juttu>"eisuomi.txt" }
                  suomi=0
-                 if (match($3,/[^√§√∂a-z\-]/)==0)
-                  { go=1;intext=0 }  #ei muuta kuin pieni√§ kirjaimia .. tavuviiva?
+                 if (match($3,/[^‰ˆa-z\-]/)==0)
+                  { go=1;intext=0 }  #ei muuta kuin pieni‰ kirjaimia .. tavuviiva?
                    else { go=0;gogo=0;sana=$3 
                    }
                  # print $3 go "************************************************************"
@@ -603,7 +635,7 @@ class name="nominit"
     #xse:gawk in="fiwiktionary-20180520-pages-meta-current.xml" out=wikilista.txt: '''
     xse:gawk in="wik.txt" out=wikilista2.txt: '''
       BEGIN { FS="[><]"; g0=0;gogo=0;suomi=0;intext=0  
-      otsi="===Yl√§k√§sit,===Vastak,===Synonyy,===Alak√§s,==Osak√§s,===Vierus,==Liitty,==Etymo"
+      otsi="===Yl‰k‰sit,===Vastak,===Synonyy,===Alak‰s,==Osak‰s,===Vierus,==Liitty,==Etymo"
       split(otsi,ots,",")
        }
        
@@ -613,8 +645,8 @@ class name="nominit"
        /==/{ if (index($0,"===")<1) { suomi=0;};gogo=0}
        /<\/page>/{ if (seli!="") print sana yhdys ":::", seli; 
          seli="";intext=0;suomi=0}
-      /<title/ {  if (match($3,/[^√§√∂a-z\-]/)==0)
-                  { go=1;intext=0 }  #ei muuta kuin pieni√§ kirjaimia .. tavuviiva?
+      /<title/ {  if (match($3,/[^‰ˆa-z\-]/)==0)
+                  { go=1;intext=0 }  #ei muuta kuin pieni‰ kirjaimia .. tavuviiva?
                    else { go=0;gogo=0;sana=$3 
                    }
                   suomi=0 
@@ -625,7 +657,7 @@ class name="nominit"
        /yhdyssana[^t]/{ yhdys="_"}         
        /<text/ { if (index($0,"==Suomi")>0) { suomi=1} ;next   }           
        /==Suomi/ { suomi=1;next}
-       /{ { [√§√∂a..z]\-/ { suomi=0}
+       /{ { [‰ˆa..z]\-/ { suomi=0}
        /{ { fi\-/ { suomi=1}
        #/\{ \{ yhdyssana/{ suomi=0;go=0;gogo=0;next} 
        /^====/ { if (go) for (k in ots) if (index($0,ots[k])>0) { gogo=1 ;next}}
@@ -649,7 +681,7 @@ class name="nominit"
        /==Suomi/ {print}
        /====Liitty/ {print}
        /====Synonyy/ {print}
-       /====Yl√É¬§k√É¬§sitteet/ {print}
+       /====Yl√§k√§sitteet/ {print}
     
     '''
   wnsyns
@@ -738,7 +770,7 @@ class name="nominit"
       #|grep \# |grep
       
   alku
-   h1: muinaishistoria .. jos joudut palaamaan t√§h√§n niin mieti mit√§ k√§sit√∂it√§ miss√§kin v√§liss√§ pit√§√§ tehd√§
+   h1: muinaishistoria .. jos joudut palaamaan t‰h‰n niin mieti mit‰ k‰sitˆit‰ miss‰kin v‰liss‰ pit‰‰ tehd‰
    xse:exit
         pre
       xse:gawk in="taivall.lst" out="taivlka.tmp": { if (substr($2,1,3)<52) len=sprintf("%03d",length($1));print substr($2,1,3),substr($2,4,1),"x"NR % 2 , len,$1}
@@ -756,7 +788,7 @@ class name="nominit"
        xse:shellexec: ./nominoi taka nomsall.lst tmp
        h2: helpompi greppailla voksoint normalisoitua listaa tiedostosta "tmp"
        
-  ## t√§ss√§ v√§liss√§ tehty "listaaoudot" (lopussa), ja talletettu korjaustiedosto nimell√§  noms.fix
+  ## t‰ss‰ v‰liss‰ tehty "listaaoudot" (lopussa), ja talletettu korjaustiedosto nimell‰  noms.fix
   listaaoudot 
      xse:gawk in=lopvoks.txt  env="LC_ALL=C": BEGIN { FS=","} { st=st $2 ","} END{ print "<li>" tolower(st)}
      xse:shellexec: ./nominoi listaaoudot
@@ -770,8 +802,8 @@ class name="nominit"
        xse:shellexec: tail -100 noms3_fixed.lst
      xmp
        ## tuottaa (hardwired) noms2_fixed.lst
-       ## muuttaa jotkut kotuksesta poimitut sanat yksik√∂lliseksi k√§sity√∂n√§ tehtyyn listaan perustuen (perusmuotoa ei aina voi p√§√§tell√§ monikosta)
-       ## sanalistojen muuttaminen pit√§√§ joskus tehd√§ sujuvammaksi...
+       ## muuttaa jotkut kotuksesta poimitut sanat yksikˆlliseksi k‰sityˆn‰ tehtyyn listaan perustuen (perusmuotoa ei aina voi p‰‰tell‰ monikosta)
+       ## sanalistojen muuttaminen pit‰‰ joskus tehd‰ sujuvammaksi...
        ##nomfix.lst + nomsall.lst ->nomsfixed1.lst
   uuslista
      h1: luolista 
@@ -794,9 +826,9 @@ class name="nominit"
        xse:debug  
       xse:shellexec: ./nominoi listaa {/form/w}
       : </ul></ul></ul></ul></ul></ul>
-      h2: luki noms.csv (jonka teki "luolista"), tuottaa siit√§ nomssort3.csv ja listaa sanoja luokittain puuna
+      h2: luki noms.csv (jonka teki "luolista"), tuottaa siit‰ nomssort3.csv ja listaa sanoja luokittain puuna
   uudetmuodot
-     h1: luodaan uusi lista muodoista (kaikki muodot, j√§rjestys sama kuin wiktionaryssa)
+     h1: luodaan uusi lista muodoista (kaikki muodot, j‰rjestys sama kuin wiktionaryssa)
      ul
        xse:gawk in=muodot2.lst: BEGIN { FS=",";OFS=","; print "<table border=1>" } { if (NR>3) next; x="<td>" NR "</td> "; for (i=2;i<=NF;i++) { x=x "<td>" i " <b>" $i "</b></td>"} ; print "<tr>",x,"<tr>"}
      pre 
@@ -808,7 +840,7 @@ class name="nominit"
   listaaoudotxx 
      xse:gawk in=lopvoks.txt  env="LC_ALL=C": BEGIN { FS=","} { st=st $2 ","} END{ print "<li>" tolower(st)}
      xse:shellexec: ./nominoi listaaoudot
-  ### h3: listaa t-loppuisia muotoja k√§sin l√§pik√§yt√§v√§ksi - mitk√§ monikkomuotoja, mist√§ puuttuu loppuvokaali perusmuodossa
+  ### h3: listaa t-loppuisia muotoja k‰sin l‰pik‰yt‰v‰ksi - mitk‰ monikkomuotoja, mist‰ puuttuu loppuvokaali perusmuodossa
    h3:
    
    ul
@@ -837,7 +869,7 @@ class name="nominit"
        }
      '''  
   karsi
-   # k√§sin poistetaan v√§√§ri√§ sanoja,kotuksen ihmeellisyyksia - pit√§√§ viel√§ tutkia
+   # k‰sin poistetaan v‰‰ri‰ sanoja,kotuksen ihmeellisyyksia - pit‰‰ viel‰ tutkia
    hr  
    xse:shellexec: grep -a 005 nomsall.lst  
    #| grep -a -v i
@@ -999,8 +1031,8 @@ class name="nominit"
      # gawk '{print $2 " N Gen Pl" }' |./figen |gawk '{print $5}' > plgen.lst
      
      kansi 28 partit  kantta av:ss
-      -> partiti: a, j√§√§ kantt
-      -> mids(28,1)=--tt, j√§√§ kan + tieto ett√§ lopkon ja lopvok ignoroidaan 
+      -> partiti: a, j‰‰ kantt
+      -> mids(28,1)=--tt, j‰‰ kan + tieto ett‰ lopkon ja lopvok ignoroidaan 
      
      veden 27 av SS
      -> genet N,  mid=--de, --> VE S ja I igno
@@ -1010,6 +1042,6 @@ class name="nominit"
       MID -E HAU,  IGNO vok I
       kon: nocheck as usual
       vok: ei tsekata -> HAU
-      av: -> HAU k/_, ei muutosta kun heikossa luokassa tyhj√§
+      av: -> HAU k/_, ei muutosta kun heikossa luokassa tyhj‰
       
   

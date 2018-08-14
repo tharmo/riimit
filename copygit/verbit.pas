@@ -1188,16 +1188,16 @@ begin
   for si:=0 to 64 do
    writeln('<td>',sijat[si].vparad,' ',sijat[si].hparad,'</td>');
   writeln('</tr>');
-  writeln('</tr><tr><td></td>');
+  writeln('<tr><td>xx</td> ');
   for si:=0 to 64 do
-   writeln('<td>',reversestring(sijat[si].ending),'</td>');
+   writeln('<td>',si,reversestring(sijat[si].ending),'</td>');
   writeln('</tr>');
   for lu:=0 to luokkia do
   begin
     //if (lu+52>59) or (lu>63)  then continue;
-    writeln('<tr><td>',ifs(luoks[lu].vahva,'<b>'+inttostr(lu+52)+'</b>',inttostr(lu+52)),'</td');
+    writeln('<tr><td>',ifs(luoks[lu].vahva,'<b>'+inttostr(lu+52)+'</b>',inttostr(lu+52)),'</td>');
     for si:=0 to 64 do
-    writeln('<td>',reversestring(lmmids[lu,si]),'</td>');
+    writeln('<td>',lu,si,reversestring(lmmids[lu,si]),'</td>');
     //writeln('<td>',lmmids[lu,sijat[si].vparad],'</td>');
     writeln('</tr>');
    end;
