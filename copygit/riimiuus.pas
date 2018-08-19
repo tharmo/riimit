@@ -37,7 +37,7 @@ type tsanasto=class(tobject)
 implementation
 uses riimitys,math;
 procedure do99;
-type tnod=record rlen,yhted,jump,ed,lev:word;taka:boolean;end;
+type tnod=record rlen,yhted,jump,ed,lev,len:word;etu,tie:boolean;letter:ansichar;end;
 type txnod=record ch:ansichar;jump,ed,lev,olisana:word;taka:boolean;end;
 type tlet=record c:ansichar;w:word;end;
 var
@@ -48,28 +48,57 @@ var
       d:boolean;
      lets:array[0..23] of tlet;
      //jumps,palalen:array[1..2068] of word;
-     nodes:array[0..2088] of tnod;
-     xnodes:array[0..12000] of txnod;
+     nodes:array[0..28088] of tnod;
+     //xnodes:array[0..12000] of txnod;
      xnn:word;
      a:word;
      lres,sres:tstringlist;
    function ww(www:string):string;begin result:=copy(www,1,length(www)-2);
    end;
 
+   function sexact(haku:ansistring):boolean;  //kutsutaan kun haku on edellyt ekaan (k‰‰nt) vokaaliin
+    var ww,epoint,cp,hlen,cc:word;d:boolean;
+   begin
+   d:=false;
+   //d:=true;
+      ww:=1;
+     epoint:=30000;hlen:=length(haku);
+     cp:=1;cc:=0;
+     if d then writeln('.<li>@',ww,'..',reversestring(haku),' ',cp,'<ul>');
+     while ww<=epoint do
+     begin
+        //writeln('#',ww,'<b>!',nodes[ww].letter,'</b>');
+        cc:=cc+1;if cc>30000 then break;
+        if nodes[ww].letter=haku[cp] then
+        begin
+           if (nodes[ww].len=hlen) and (pos(haku,yy[ww])=1) then begin writeln('found:<b>',reversestring(yy[ww]),'</b>');exit; end; //fullhit
+           if not nodes[ww].tie then
+            begin cp:=cp+1;
+            if nodes[ww].jump>0 then epoint:=nodes[ww].jump;  //
+            end;
+
+           if d then writeln('<li>+',nodes[ww].letter,reversestring(yy[ww]),' ',reversestring(copy(yy[ww],cp,length(yy[ww])-3-cp))
+             ,'|<b>',reversestring(copy(yy[ww],1,cp)),'</b>_',nodes[ww].letter,epoint,' /next:',haku[cp],'<ul>');
+           ww:=ww+1;
+        end //ei, koklaa seuraavaa
+        else
+        begin
+          if d then writeln('-<b>',nodes[ww].letter,'</b>','',reversestring(yy[ww]),epoint);
+          ww:=nodes[ww].jump;
+          if ww=0 then begin writeln('<li>haku:', reversestring(haku),'<b> not found</b>');exit;end;
+
+        end;
+        if ww>epoint then writeln('nomorego');
+    end;
+   end;
+
    function shorthits(san:ansistring;w,slen,sfar:word):tstringlist; //etsi sanat joissa vain konsonantti tietyn kohdan edell‰
    var i,j,epoint:integer;  //ei huomio tuplakons viel‰
    begin
      epoint:=nodes[w].jump;
+     try
      if d then writeln('<li>tryshort@',w,'..',epoint,' ',reversestring(yy[w]),' ',san,'/L:',slen,'/F:',sfar);
      w:=w+1;
-     {while sfar<slen do
-     begin
-        while true do
-        begin
-
-           exit;
-         end;
-     end;}
      while w<=epoint do
      begin
        if d then writeln('<li>SHORT',sfar,slen
@@ -78,6 +107,7 @@ var
        begin
          if d then writeln('???',w,reversestring(COPY(yy[w],SFAR)+'/'+SAN),'!');
          //if length(yy[w])=sfar then writeln('hihithithithit!');
+
          w:=w+1;sfar:=sfar+1;
          if sfar+1=slen then
          begin
@@ -97,14 +127,8 @@ var
        end;
        if yy[w][sfar]<SAN[sfAR] then w:=w+1 else  w:=nodes[w].jump;
        if w=0 then exit;
-       {if (length(yy[w])<slen+1)  //and (pos(yy[w][c],konsonantit)>0)
-       then
-      begin
-        writeln('<li>short:',reversestring(yy[w]));
-      end;
-      if nodes[w].jump=0 then break;
-      w:=nodes[w].jump;}
      end;
+     except writeln('nono sex act');end;
    end;
 
    function tavuraja(a,b:ansichar):boolean;  //huom k‰‰nteinen suunta
@@ -123,7 +147,7 @@ var
         var i,j,uto,muntavut,muntavutb:word;a,b:char;
         begin
            uto:=max(nodes[ww].jump,ww+1);
-           if d then writeln('<li>GW:',ww, '//',uto,copy(reversestring(yy[ww]),3),'//',cutp,'/',tc,'<ul>');
+           if d then writeln('<li>GW:',ww, '//',uto,copy(reversestring(yy[ww]),3),'//',cutp,cp,'/',tc,'<ul>');
 
            //if ww=635 then writeln('<li>MIKƒMƒTTƒƒ? ',nodes[ww].jump,'.',uto,'/',ww,yy[ww]);
            //if prevvok then if pos(yy[ww][cutp],konsonantit)>0 then tc:=tc+1;
@@ -132,23 +156,16 @@ var
              muntavut:=0;//tc;
              muntavutb:=0;
              for i:=cutp to length(yy[ww]) do if tavuraja(yy[ww][i-1],yy[ww][i]) then muntavut:=muntavut+1;
-             //writeln('<li><tt>',reversestring(copy(yy[ww],1,nodes[ww].yhted)),'...  </tt>',muntavut mod 2=1);
              //if muntavut<4 then
-            if d then  writeln('<li><tt>',reversestring(copy(yy[ww],cutp)),'...  </tt>',muntavut mod 2=1);
+            if d then  writeln('<li><tt>',reversestring(copy(yy[ww],cutp)),'...  </tt>',muntavut mod 2=1,' ',yy[ww]);
+            try
             if muntavut mod 2=1 then lres.add(reversestring(yy[ww]));
              //writeln('////');
-            // for i:=1 to length(yy[ww]) do if tavuraja(yy[ww][i-1],yy[ww][i]) then muntavutb:=muntavutb+1;
-                 //(pos(yy[ww][i-1],vokaalit)>0) and (pos(yy[ww][i],vokaalit)<1) then      begin muntavut:=muntavut+1;      writeln('*',yy[ww][i],muntavut);
-            //     writeln('{',yy[ww][cutp-1],yy[ww][cutp],'}');
-             //if tavuraja(yy[ww][cutp],yy[ww][cutp+1]) then tc:=tc+1;
-             //ww:=ww+1;
-             //writeln( ' :/sana:',MUNTAVUTb,' /pala:<i style="color:red">',MUNTAVUT,'</i> :S:',TC, '..<b>',yy[ww-1][cutp],'</b>',cutp);
-             //writeln('<ul><li>*',tc,' ',reversestring(copy(yy[ww],1,length(yy[ww])-2)),' <b>{',yy[ww][cutp],']</b>');
-             //getword(ww,tc,cutp+1);
              ww:=ww+1;//nodes[ww].jump;
              //break;
+             except writeln('<hr>NOGW',muntavut,'/',w);raise; end;
            end;
-           writeln('</ul>');
+           if d then writeln('</ul>');
 
         end;
 
@@ -156,9 +173,10 @@ var
     begin
     d:=true;
     //d:=false;
+     try
       upto:=nodes[w].jump;
         hk:=copy(haku,cp+1);  //haun mahdollinen alkukonsonantti
-        if d then writeln('<li>trying to find "',reversestring(hk),'" before <b>',reversestring(copy(yy[w],1,cp)),'</b>',cp, ' ',w,'..',nodes[w].jump);
+        if d then writeln('<li>trying to find "',reversestring(hk),'" before <b>',reversestring(copy(yy[w],1,cp)),'</b>',cp, ' ',w,'..',nodes[w].jump,yy[w]);
         //if hk='' then writeln('nothin to find... almost anything goes');
         w:=w+1;cp:=cp+1;
         while (w<upto) and (w<>0) do
@@ -170,45 +188,53 @@ var
           if (pos(yy[w][cp],konsonantit)<1) and (isdifto(yy[w][cp],yy[w][cp-1])) then
                //writeln('.. diftonki ', yy[w][cp],yy[w][cp-1],' ei kelpaa')
           else getword(w,0,cp);
-          if d then writeln('</ul>');
+          if d then writeln('###</ul>');
           w:=nodes[w].jump;
           if w=0 then exit;
         end;  //yhden tason jutut
-
+       except writeln('<hr>jatko'); end;
     end;
     function etsitarkka(haku:ANSISTRING):word;
-    var upto,xtavut,i,j,w,cc,xshortcut,solong,mores,lenh,checkpoint,hakulen:integer;
+    var hitle,shitle,upto,xtavut,i,j,w,cc,xshortcut,solong,mores,lenh,checkpoint,hakulen,lensin:integer;
          sofar,san,AKON,SINKON,sinful,resst:ansistring;
          d:boolean;
          ohit:tstringlist;
          lets:array[1..30] of word;
     begin
-     // lres:=tstringlist.create;
+      lres:=tstringlist.create;
         d:=false;
+        d:=true;
         fillchar(lets,sizeof(lets),0);
         resst:='';
-        //d:=true;
         upto:=yy.count-1;
+        hitle:=0;shitle:=0;
+        lenh:=length(haku);
+        lensin:=lenh;
+        for i:=lenh downto 1 do if pos(haku[i],vokaalit)>0 then break else lensin:=lensin-1;
         //ohit:=tstringlist.create;
         try try
         w:=1;solong:=0;cc:=0;checkpoint:=1;
-        if d then writeln('<li>HAKU:',reversestring(haku),'/');except writeln('mit‰vittuu');end;
+        if d then writeln('<li>HAKU:',reversestring(haku),lensin,'/');except writeln('mit‰vittuu');end;
 
         while true do
         begin
-          if w>upto then begin writeln('<li>not found',w,'/',upto);break;end;
+          if w>=upto then begin resst:=resst+('!!!!!');break;end;//<li>not found',w,'/',upto);break;end;
           cc:=cc+1;
           if cc>3000 then exit;
+          //if checkpoint>length(san) then breaK;
           try
           san:=copy(yy[w],1,length(yy[w])-2);
           except writeln('zzzzzzzzzz');break;end;
           if san[checkpoint]=haku[checkpoint]  then  //m‰ts‰‰ vertailukohtaan asti
           begin
             if nodes[w].jump>0 then upto:=nodes[w].jump;
+            if lensin=checkpoint then begin writeln('xxx<hr/>');testaajatkot(w,haku,checkpoint);end;
             lets[checkpoint]:=w;
-            if san=haku then begin resst:=resst+' '+inttostr(w)+reversestring(yy[w]);break; end;
+            shitle:=checkpoint;
+            if san=haku then begin hitle:=checkpoint;resst:=resst+'<b style="color:blue">'+inttostr(w)+' '+reversestring(yy[w])+'</b> ';end;//break; end;
             //if san=haku then begin lres.add(reversestring(san));break; end;
-            if d then writeln('<li><b>',san[checkpoint],'</b>!',w,reversestring(san),'/',checkpoint,'/',nodes[w].yhted,copy(san,1,checkpoint),'<b>',copy(san,checkpoint+1),'</b>?','}');
+            if d then writeln('<li><b>',san[checkpoint],'</b>!',w,reversestring(san),'/',checkpoint,'/',nodes[w].yhted,copy(san,1,checkpoint),'<b>',copy(san,checkpoint+1),'</b>?','}UPTO',w,'/',upto);
+
             w:=w+1;checkpoint:=checkpoint+1;
             if d then writeln(' /next',w,'@',checkpoint,' <b>',upto,'</b><ul>');
           end else
@@ -218,7 +244,7 @@ var
              '/:<b>',checkpoint,reversestring(copy(san,1,nodes[w].yhted)),'</b>:-->',copy(haku,1,nodes[w].yhted),nodes[w].jump
              , ' /cp:',checkpoint,'/lenh:',lenh,'/sink:',sinkon,'_',copy(san,1,checkpoint),'/torlen:',copy(san,1,nodes[w].rlen),'!',';');
             //,pos(copy(san,1,checkpoint),sinkon);
-            if nodes[w].jump=0 then begin writeln('<li>NOGO#',reversestring(yy[w]),checkpoint,'<b style="color:red">',san[checkpoint],'</b>!',haku[checkpoint]);
+            if nodes[w].jump=0 then begin //writeln('<li>NOGO#',reversestring(yy[w]),checkpoint,'<b style="color:red">',san[checkpoint],'</b>!',haku[checkpoint]);
               //writeln('<pre>',yy[w],^j,haku,^j,'123456789012345</pre>');
               break;end else //w:=w+1 else
             w:=nodes[w].jump;
@@ -230,10 +256,17 @@ var
         end;
         finally //for i:=1 to mores do writeln('</ul>');
         //writeln('</ul></ul></ul></ul></ul></ul></ul></ul></ul></ul><div style="border:2px solid black">',lres.text,' ',haku,'</div>');
-         if resst<>'' then writeln('<li>',resst) else writeln('<li>notfound:',haku);
+         if shitle<>hitle then
+         begin
+         if resst<>'' then writeln('<li>',resst,hitle,shitle) else writeln('<li>notfound:',haku);
          //for i:=1 to 20 do writeln(lets[i]);
          for i:=1 to 20 do  if lets[i]<>0 then writeln(i,reversestring(copy(yy[lets[i]],i+1,length(yy[lets[i]])-i-1)),'<b>',reversestring(copy(yy[lets[i]],1,i)),'</b>');
         //lres.Free;
+         end;
+        end;
+        for i:=1 to 20 do  if lets[i]<>0 then
+        begin
+         writeln(i,reversestring(copy(yy[lets[i]],i+1,length(yy[lets[i]])-i-1)),'<b>',reversestring(copy(yy[lets[i]],1,i)),'</b>');
         end;
     end;
 
@@ -280,6 +313,7 @@ var
            //or (pos(san,sinkon)=1) then  //lyhyt sana  sis‰ltyy hakuun .. alkukonsonantin ei tarttis sis‰lty‰
            //baana/anaa!2/4naab
            //if pos(sinkon,copy(san,1,nodes[w].rlen))=1 then
+           //if lenh=checkpoint then begin writeln('xxx<hr/>');testaajatkot(w,haku,checkpoint);end;
            if pos(sinkon,copy(san,1,nodes[w].rlen))=1 then   //konsonantittomat versiot
             //  if tavuraja(san[checkpoint],san[checkpoint+1]) then
             if tavuraja(san[length(sinkon)],san[length(sinkon)+1]) then
@@ -361,27 +395,37 @@ var
    begin lets[ii].c:=#0;lets[ii].w:=11111;
    end;
   end;
-var i,j,sn:word;sana,lyh,edsana:ansistring;
+var i,j,sn:integer;edsana,lyh,sana:ansistring;
 begin
 yy:=tstringlist.Create;
 yy.Delimiter:=' ';yy.StrictDelimiter:=true;
 //eds:=tstringlist.Create;
 //eds.commatext:=('itsaemuk 0,itsaemu 0');eds.sort;writeln(eds.commatext);
+{yy.LoadFromFile('sanatuus.csv');
+for i:=0 to yy.count-1 do
+ yy[i]:=reversestring(yy[i]);
+yy.sort;
+writeln('<li>loaded ',yy.count, ' words<pre>',yy.text);
+
+exit;
 yy.LoadFromFile('sanat99.ansi');
+}
+yy.LoadFromFile('sanatall.ansi');
 //writeln('<pre>',yy.text);
 yy.sort;
 yy.Insert(0,'');
 //writeln('<hr>',yy.text);
 edsana:=yy[0];edlen:=length(edsana);
 fillchar(lets,sizeof(lets),0);
-fillchar(xnodes,sizeof(xnodes),0);
+//fillchar(xnodes,sizeof(xnodes),0);
 for i:=1 to 23 do begin lets[i].c:=#0;lets[i].w:=0;end;
 //for i:=1 to length(yy[0]) do begin lets[i].c:=yy[0][i];lets[i].w:=0;end;
 mAXLEN:=0;curlev:=01;
 writeln(' gogogogog<style type="text/css">div { border:1px solid red;margin-left:1em}</style>');
 nodes[0].lev:=1;
-curlev:=1;
+curlev:=0;
 xnn:=0;
+d:=false;
 {for i:=1 to yy.count-1 do  //jos tekis yhden mittasii noodeja.. aivo solmussa, jos ei sittenk‰‰n...
 begin
    sana:=w(yy[i]);
@@ -405,69 +449,104 @@ begin
    //IF MAXLEN<LENGTH(YY[I]) THEN MAXLEN:=LENGTH(YY[I]);
  1  }
    nodes[0].yhted:=1;
-
+ nollaa(curlev+1);
  for i:=1 to yy.count-1 do
  begin
+  try
+  //if (i>1876) and (i<=1879) then d:=true else d:=false;
   sana:=ww(yy[i]);
-  //if length(sana)>18 then writeln('<li>LONG:',i,'::',reversestring(sana));
+  //if length(sana)>20 then continue;
+  //if length(sana)>18 then
+  if d then writeln('<li>:', i,' @',curlev,'::',reversestring(sana), ' ');
+  //
+  //continue;
+  nodes[i].tie:=false;
   nodes[i].jump:=0;
   nodes[i].rlen:=length(sana);for j:=length(sana) downto length(sana)-3  do if pos(yy[i][j],vokaalit)>0 then break else nodes[i].rlen:=nodes[i].rlen-1;
-  for a:=1 to length(sana)+1 do
+  nodes[i].len:=length(sana);
+  nodes[i].etu:=yy[i][length(yy[i])]='0';
+  except writeln('???',i,sana);raise;end;
+  for a:=1 to curlev+1 do //length(sana)+1 do
   begin
+      if d then write('_',sana[a]);
      //writeln(a,sana[a],lets[a].c,lets[a].w);
-     if a>length(sana) then //.. //ravakasti r‰v‰k‰sti
+     if a>length(sana) then //.. //ravakasti r‰v‰k‰sti  .. loppuun asti
      begin
+         if d then writeln('<li>koko::',reversestring(yy[i]),'/',reversestring(yy[i-1]),curlev) ;
          nodes[i].ed:=i-1;
          nodes[i-1].jump:=i;
-         nodes[i].yhted:=a;
-         nodes[i].lev:=nodes[i-1].lev;
-         writeln('<li>samasana:',sana,a);
+         nodes[i-1].tie:=true;
+         nodes[i].yhted:=nodes[i-1].yhted+1;
+         nodes[i].lev:=min(a,nodes[i-1].lev);
+         nodes[i].letter:=sana[curlev];
+         lets[curlev].w:=i;
+         //lets[nodes[i].lev-1].w:=i;
+         //writeln('<li>samasana:',sana,a);
          //for j:=1 to 12 do  writeln(' *',lets[j].c,sana[j]);
          break;
      end;
 
-     if (lets[a].c=#0) then  //sana suoraa jatkoa edelliselle
+     if (lets[a].c=#0) //and (a<=curlev)
+     then  //sana suoraa jatkoa edelliselle  .. ei tarpeen?
      begin
       try
+       if d then writeln('//');
       //if pos('itsaep',sana)>0  then  begin writeln(' *<li>voivoi;',a,' ',reversestring(sana), ' -',yy[i-1],'/+',yy[i+1]);
       //writeln('<li>',a,'/jatko',a,reversestring(yy[i]),'/',reversestring(yy[i-1]));     // for j:=1 to length(sana) do writeln(lets[j].w);
       nodes[i].yhted:=min(a,nodes[i-1].yhted+1);
-      for j:=nodes[i].yhted to length(sana) do begin lets[j].c:=sana[j];lets[j].w:=i;end;
+      nodes[i].lev:=nodes[i-1].lev+1;
+      nodes[i].letter:=sana[curlev+1];
+
+      //for j:=curlev to length(sana) do begin lets[j].c:=sana[j];lets[j].w:=i;end;
       //for j:=nodes[i].yhted to length(sana) do begin writeln('*',j,sana[j]);end;
-      nollaa(length(sana)+1);
+      nollaa(curlev+1);
+      //nollaa(length(sana)+1);
       if i=634 then begin writeln('<hr>');for j:=1 to length(sana) do writeln(copy(yy[lets[j].w],1,j)+'|',copy(yy[lets[j].w],j+1));end;
       nodes[i].ed:=i-1;
       if lets[a].w<>i then if nodes[lets[a].w].yhted>=nodes[i].yhted then  nodes[lets[a].w].jump:=i;
       //nodes[i-1].jump:=i;
       //yy[i]:=yy[i]+'XXX';
-      curlev:=curlev+1;nodes[i].lev:=curlev;
+      curlev:=curlev+1;
+      lets[curlev].w:=i;
+      lets[curlev].c:=sana[curlev];
+      nodes[i].lev:=curlev;
       break;
       except writeln('??');end;
      end else
      if lets[a].c<>sana[a] then  //kohta jossa poikkeaa edelt‰j‰st‰
      begin
        try
-       nollaa(length(sana)+1);
-       nodes[i].ed:=lets[a-1].w;
-        nodes[i].yhted:=min(a,nodes[i-1].yhted+1);
+         if d then writeln('##',a);
+         nollaa(a+1);
+         nollaa(curlev+1);
+         nodes[i].ed:=lets[a-1].w;
+         nodes[i].yhted:=min(a,nodes[i-1].yhted+1);
+       //if i=9622 then
+        curlev:=a;//nodes[i].lev;
         if nodes[lets[a].w].yhted>=nodes[i].yhted then  nodes[lets[a].w].jump:=i;
-        for j:=nodes[i].yhted to length(sana) do begin lets[j].c:=sana[j];lets[j].w:=i;end;
-        nodes[i].lev:=nodes[nodes[i].ed].lev+1;
-       curlev:=nodes[i].lev;
+        //for j:=nodes[i].yhted to length(sana) do begin lets[j].c:=sana[j];lets[j].w:=i;end;
+        lets[a].c:=sana[a];lets[a].w:=i;
+        nodes[i].lev:=a;//nodes[nodes[i].ed].lev+1;
+        nodes[i].letter:=sana[curlev];
        break;
-       except writeln('<li>',i,' ',curlev,'?????',a,reversestring(yy[i]));break;end;
+       except writeln('<li>',i,' ',curlev,'?????pieleenmen',a,reversestring(yy[lets[curlev-1].w]));break;end;
      end
      else  begin  //keep going
-        nodes[i].yhted:=a;end;
+       if d then writeln('.'); nodes[i].yhted:=a;end;
    end;
+   if d then  writeln('',i,' <b>',curlev,copy(yy[i],1,curlev),'</b> !!!',a,reversestring(yy[lets[curlev-1].w]),' ',lets[a].w,':');
+   if d then  for j:=1 to curlev+1 do writeln(lets[j].c,j);
   end;
  try
    writeln('zxc');
-   for i:=1 to 50 do
+   sexact(reversestring('hallinnoida'));
+   for i:=1 to 5000 do //5000 do //50000 do
    begin
-   sn:=random(2066)+1;
+   sn:=random(20066)+1;
    sana:=ww(yy[sn]);
-   try etsitarkka(sana);except writeln('<li>failetsi;',sana,sn);end;
+   writeln('<li>etsi;',sana,sn);
+   //try etsitarkka(sana);except writeln('<li>failetsi;',sana,sn);end;
+   try sexact(sana);except writeln('<li>failetsi;',sana,sn);end;
 
    end;
 //   haepa('');
@@ -475,16 +554,19 @@ begin
   except writeln('eietsi<hr>');end;
   writeln('</ul></ul></ul></ul></ul></ul></ul></ul></ul></ul>LISTAA<div>');
   curlev:=01;
+  //exit;
   for i:=1 to yy.count-1 do
   begin
   try
     sana:=ww(yy[i]);
+    if nodes[i].etu then
+     sana:=etu(sana);
    for j:=curlev downto nodes[i].lev do writeln('</div>');
    except writeln('___');writeln('<li>########',j,'#i:',i,'/nodlev:',' /curlev:',curlev);end;
    try
    //writeln('<div>',reversestring(copy(yy[i],nodes[i].yhted))+'<b>', reversestring(copy(yy[i],1,nodes[i].yhted-1)),'</b> ',nodes[i].lev,' ',reversestring(yy[nodes[i].jump]));
-   writeln('<div>',nodes[i].rlen,':',i,' ',nodes[i].lev,' ',nodes[i].yhted,' ',reversestring(copy(sana,nodes[i].yhted+1))
-     +'<b style="color:blue">',reversestring(copy(sana,1,nodes[i].yhted)),'</b> ',copy(reversestring(yy[nodes[i].jump]),3),'  ->',nodes[i].jump,' ',nodes[i].yhted,'/',yy[i]);
+   writeln('<div>',i,';',nodes[i].lev,nodes[i].letter,'!',i,' ',nodes[i].lev,' :',nodes[i].yhted,' ',reversestring(copy(sana,nodes[i].yhted+1))
+     +'<b style="color:blue">',reversestring(copy(sana,1,nodes[i].yhted)),'</b> ',copy(reversestring(yy[nodes[i].jump]),3),'  ->',nodes[i].jump,' ',nodes[i].yhted,'/',yy[i],nodes[i].tie);
    except writeln('___');writeln('<li>zzz',j,'#i:',i,'/nodlev:',nodes[i].jump,' /curlev:',curlev);raise;end;
    try
    curlev:=nodes[i].lev;

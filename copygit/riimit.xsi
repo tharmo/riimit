@@ -16,6 +16,19 @@ class name="nominit"
                 { if ($2==99) print rev(etu($1)), isetu($0)}
      '''           
      #xse:shellexec: cat sanat99.aou | sort 
+  allrev
+     xse:shellexec: cat sanat.all | iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat.ansi
+     xse:gawk in=sanat.ansi out=sanatall.ansi: '''
+                function etu(w) { gsub("ä","a",w);gsub("ö","o",w);gsub("y","u",w);return w}
+                function isetu(w) { if (index(w,"a")>0) return 1;if (index(w,"o")>0) return 1;if (index(w,"u")>0); return 0}
+                function rev(ww) { r="";
+                            for (i=1;i<=length(ww);i++)
+                              r=substr(ww,i,1) r;
+                              return r}  
+
+                { print rev(etu($1)), isetu($0)}
+     '''           
+   
   d  xse:shellexec: cat sanat.all |grep 99|gawk '{ print $1}'|iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat99.ansi
      #xse:shellexec: export LC_ALL=C;cat sanat.all |rev |iconv -t ISO-8859-1//TRANSLIT -f UTF-8|grep 99 >sanat99.ansi
      # |rev |sort |wc
