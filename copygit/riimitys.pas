@@ -99,7 +99,7 @@ implementation
    //writeln(st[i]);
  end;
 procedure riimei;
-var riimii:triimitin;verbit:tverbit;nominit:tnominit;sanasto:tsanaSTO;
+var riimii:triimitin;verbit:tverbit;nominit:tnominit;sanasto:tsanaSTO;//eitait:teitaivu;
 begin
  //ILKO;
 // nomforms;    exit;
@@ -109,6 +109,9 @@ begin
  //nomforms;
  //nominit.siivoosijat;exit;
  //etsi(allresus);
+ //eitait.etsilista;
+ //eitait.listaa;
+ //exit;
 SANASTO:=tsanasto.create;
 //sanasto.luesanat('sanatuus.csv');
 //sanasto.listaa;

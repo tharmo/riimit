@@ -1,0 +1,25 @@
+class name=fiwn
+ listids
+   pre
+     xse:gawk in=index.sense out=sense.nums: '''
+      BEGIN { FS=" "}
+      { zz=match($0,"[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]",a);
+        if (a[0]!="") print a[0] ,$0 
+      
+      
+      }
+     '''
+     xse:shellexec: cat sense.nums |sort >sense.snums
+     HR
+     xse:gawk in=sense.snums out=sense.nums: '''
+      BEGIN { FS=" "}
+      { if ($1!=prev) { if (n>2) print all "\n";all=""; n=0 }
+       prev=$1;
+       if (index($2,"_")==0) { 
+         n=n+1;
+         all=all "\n" substr($2,1,index($2,"%")-1)  
+       } 
+      
+      }
+     '''
+     xse:shellexec: cat sense.nums |iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >../riimitin/sense.nums

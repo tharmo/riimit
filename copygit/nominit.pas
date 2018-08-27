@@ -271,7 +271,7 @@ begin
       luoks[clka].ekasis:=csis+1;
       if (clka<31) then  luoks[clka].vahva:=true else  luoks[clka].vahva:=false;
       prlim:=0;
-      //writeln('</UL><li>luokka:',clka,'  ',sana,'<UL>');
+      //writeln('<li>luokka:',clka,'  ',sana,luoks[clka].vahva,luoks[clka].kot,'<UL>');
       //luoks[clka].kot:=strtointdef(awl[0],99);
     end;
 

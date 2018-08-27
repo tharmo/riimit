@@ -1,7 +1,7 @@
 class name="nominit"
   99
     h1: äällösiä
-    pre
+    pre  # sanat all= 
      xse:shellexec: cat sanat.all |grep -a 99| iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat.ansi
      #xse:shellexec: export LC_ALL=fi_FI.utf8;cat sanat99.ansi | sort 
      #xse:shellexec: cat sanat.all |grep 99|gawk '{ print $1}'|rev|iconv -t ISO-8859-1//TRANSLIT -f UTF-8|sort >sanat99.tmp
@@ -16,9 +16,44 @@ class name="nominit"
                 { if ($2==99) print rev(etu($1)), isetu($0)}
      '''           
      #xse:shellexec: cat sanat99.aou | sort 
-  allrev
-     xse:shellexec: cat sanat.all | iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat.ansi
-     xse:gawk in=sanat.ansi out=sanatall.ansi: '''
+  partikkelit
+    pre
+       ###xse:gawk in=wifiana2.txt: '''
+         BEGIN { FS=" "}
+         { { if (index($1,"Pron#")>0) print } 
+       '''  
+       xse:gawk in=partikkelit.txt out=partikkelit.tmp: '''
+         { if (index($0,"   ")==1 &&  NF==1)  print $1} 
+       '''
+       #xse:shellexec: cat partikkelit.tmp| iconv -f ISO-8859-1//TRANSLIT -f UTF-8  >partikkelit.     
+       xse:shellexec: cat partikkelit.tmp|rev| sort|  iconv -t ISO-8859-1//TRANSLIT -f UTF-8|sort > partikkelit.lst
+  allrev  # sanat.all=utf, nom&verb&osa99
+      
+     #xse:shellexec: cat sanat.all |gawk '{ print $1}' |rev >sanat.tmp
+     xse:shellexec: export LC_ALL=fi_FI.utf8;cat sanat.all partikkelit.tmp |gawk '{ print $1}' |rev |sort |uniq|iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanatall.arev
+     #xse:shellexec: cat sanat.tmp | iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat.ansi
+     pre 
+     xse:shellexec: cat sanatall.arev
+  laskesyno
+     xse:shellexec: cat wikithe.ansi syn_fn.ansi >syn_allx.ansi
+     xse:gawk xin=wikithe.ansi in=syn_allx.ansi xin=syn_fn.ansi  out="test.syn": '''
+       { if ($0=="") { print rivi;rivi="";next}
+        rivi=rivi "," $0
+       
+       }
+     '''
+     pre
+       xse:shellexec: cat test.syn | sort
+     ###xse:gawk in=syn_all.ansi: '''
+       { if ($0=="") { mems[m]=mems[m]+1;m=0;next }
+        m=m+1
+        if (m>30) print 
+       }
+       END { for (i=1;i<67;i++) if (mems[i]>0) print "<li>" i,mems[i]}
+     
+      '''     
+  q  
+     ###xse:gawk in=sanat.tmp out=sanatall.ansi env="LC_ALL=C": '''
                 function etu(w) { gsub("ä","a",w);gsub("ö","o",w);gsub("y","u",w);return w}
                 function isetu(w) { if (index(w,"a")>0) return 1;if (index(w,"o")>0) return 1;if (index(w,"u")>0); return 0}
                 function rev(ww) { r="";
@@ -26,13 +61,17 @@ class name="nominit"
                               r=substr(ww,i,1) r;
                               return r}  
 
-                { print rev(etu($1)), isetu($0)}
+                { print ($1)}
+                # { print rev(etu($1)), isetu($0)}
      '''           
+     ##ppp   
+     #xse:shellexec: cat sanat.all |grep 99|gawk '{ print $1}'| rev |iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat99.ansi
+     xse:shellexec: cat sanat.all |grep 99|gawk '{ print $1}'| rev |iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat99.ansi
+     xse:shellexec: cat sanat99.ansi partikkelit.lst |gawk '{ print $1}'>eitaivu.lst
    
-  d  xse:shellexec: cat sanat.all |grep 99|gawk '{ print $1}'|iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat99.ansi
      #xse:shellexec: export LC_ALL=C;cat sanat.all |rev |iconv -t ISO-8859-1//TRANSLIT -f UTF-8|grep 99 >sanat99.ansi
      # |rev |sort |wc
-   hr
+  hr
     pre 
      xse:shellexec: export LC_ALL=fi_FI.utf8;cat sanat99.tmp |sort|iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanat99.ansi
   yhys
@@ -177,7 +216,7 @@ class name="nominit"
             avvahvats=" ,k,p,t,k,p,t,k,p,t,t,t,k,k"
             avheikots=" , , , , ,v,d,g,m,l,n,r,j,v"      
             FS=" "
-            }
+            }yhdys_kot
             /V$/{  
                taka=0;
               if (index($1,"a")>0) taka=1; 
@@ -273,7 +312,7 @@ class name="nominit"
         #xse:shellexec: export LC_ALL=C;cat pilko.tmp | sort  
          
         hr     
-  osat
+  osatyhdys_kot
         pre
         xse:gawk in="sanat.all" xout="pilko.tmp": '''
                             function vow(st) {   ## otetaan diftongi lopusta
@@ -510,18 +549,29 @@ class name="nominit"
           xse:shellexec: export LC_ALL=C; join -11 -21 -o 1.1  2.1  -e XXXX -a1 sanat_kotus.lst eis_sana.lst |grep -v XXX #|uniq   #>sanainfo.lst
         #xse:shellexec: 
 
-  
+  wikiyhdys #  
   ### haluttaisiin kaikki sanat wikistä ja kotuksesta jotka eivät ole wikin, kotuksen tai hfst:n mukaan selvästi yhdyssanoja
   yhdys2  # myöhemmin: nyt on karsittu myös kotuksen ei-yhdyssanoja jos ne puuttuu wiktionaarystä
     xse:gawk in=yhdys_wikt.lst out=yhdys_wikt.tmp : '''
       BEGIN { FS="/"} { print $1}
     '''
-    xse:shellexec:  export LC_ALL=C;cat yhdys_wikt.tmp |sort |uniq >yhdys_wikt.sanat
-    xse:shellexec:  export LC_ALL=C;cat yhdys_hfst.lst |sort | uniq>yhdys_hfst.sanat
+    xse:shellexec:  cat yhdys_wikt.tmp |sort |uniq >yhdys_wikt.sanat
+    xse:shellexec:  cat yhdys_hfst.lst |sort | uniq>yhdys_hfst.sanat
     xse:shellexec: cat yhdys_hfst.sanat |wc
     xse:shellexec: cat  yhdys_wikt.sanat |wc
     xse:shellexec: tail yhdys_wikt.sanat
-    
+  yyy  
+    xse:shellexec:  cat yhdys_kot.lst |iconv -f ISO-8859-1//TRANSLIT -t UTF-8|sort | uniq>yhdys_kot.sanat
+    xse:shellexec: cat yhdys_kot.sanat yhdys_wikt.sanat yhdys_hfst.sanat |sort |uniq |iconv -t ISO-8859-1//TRANSLIT -f UTF-8|sort > yhdys_all.lst
+    xse:shellexec: cat yhdys_kot.sanat yhdys_wikt.sanat yhdys_hfst.sanat |sort |uniq  > yhdys_all.utf
+    ##wikt.sanat unicode hfsst
+  pre
+      xse:shellexec: ls -l yhdys_*.sanat
+    pre
+      xse:shellexec: comm --help
+    xse:shellexec: cat yhdys_wikt.sanat | sort >y_wik.tmp  
+    xse:shellexec: cat yhdys_hfst.sanat | sort >y_hfst.tmp  
+    xse:shellexec: comm y_hfst.tmp y_wik.tmp -23 |wc
     xse:shellexec: comm yhdys_hfst.sanat yhdys_wikt.sanat -3 |wc
     xse:shellexec: comm yhdys_wikt.sanat yhdys_hfst.sanat -3 |wc
     xse:shellexec: comm yhdys_hfst.sanat yhdys_wikt.sanat -13 |wc
@@ -685,7 +735,7 @@ class name="nominit"
     '''
   wiktest
    xmp
-    xse:gawk in="turha.xxx" xout=wikilista.txt: '''
+    xse:gawk in="turha.xxx" xout=wikilistaturha.txt: '''
        /page/ {print}
       /title/ {if (match($3,/[^a-z]/)==0) print      }
         {                  if (NR>15000) exit}

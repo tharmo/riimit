@@ -1,0 +1,582 @@
+::prepositiot
+    ennen
+
+I
+
+    ilman
+
+J
+
+    juurikaan
+
+K
+
+    keskelle
+    keskellä
+    keskeltä
+    kohti
+
+L
+
+    loitolla
+    loitolle
+    loitolta
+
+P
+
+    paitsi
+    per
+    päin
+
+R
+
+    riippumatta
+
+S
+
+    sou
+
+V
+
+    vastoin
+
+Y
+
+    ylle
+    ympäri
+    
+
+    
+::konjuktiot
+
+E
+
+    eli
+    elikkä
+    ellä
+    ennen kuin
+    entä
+    es
+    et
+    että
+
+J
+
+    ja
+    jahka
+    joko
+    jollei
+    jolleivät
+    jollemme
+    jollen
+    jollet
+    jollette
+    jos
+    joska
+    jos kohta
+    jospa
+    jossei
+    joten
+    jotenka
+    jotta
+
+K
+
+    koska
+    koskei
+    ku
+    kuha
+    kuin
+    kun
+    kunnes
+    kuten
+    -kä
+
+L
+
+    lipo
+
+M
+
+    mikäli
+    milloin
+    mut
+    mutta
+
+N
+
+    niin
+    niin kuin
+    notta
+
+S
+
+    sekä
+    siis
+    sillä
+    sun
+
+T
+
+    tahi
+    tai
+    taikka
+
+V
+
+    vaan
+    vai
+    vaikka
+
+Y
+
+    ynnä
+    
+::diskurs
+    muuten
+    sivumennen
+
+::interjektiot
+A
+    aah
+    aamen
+    ah
+    ahaa
+    ai
+    aiih
+    ajatella
+    alas
+    ammuu
+    anteeksi
+    appajee
+    apropoo
+    apua
+    asento
+    au
+    auts
+
+B
+
+    bingo
+    blääh
+    buu
+    böö
+
+E
+
+    ehe-ehe
+    ehei
+    ei
+    eipäs
+    ei vaiskaan
+    eläköön
+
+H
+
+    ha
+    haa
+    hah
+    haista paska
+    halleluja
+    haloo
+    halvattu
+    hau
+    heh
+    hei
+    hei-hei
+    heippa
+    heipparallaa
+    heips
+    helkkari
+    helkutti
+    helvetti
+    hep
+    herranjestas
+    hetkinen
+    heureka
+    hihii
+    himpura
+    himskatti
+    hitsi
+    hitto
+    hittolainen
+    hmmm
+    hmph
+    hoi
+    hokkuspokkus
+    hoosianna
+    hui
+    huoh
+    huomenta
+    huomio
+    huomiseen
+    hups
+    hurraa
+    hus
+    huutis
+    hyi
+    hys
+    hyvä
+    hyvästi
+    hyvät naiset ja herrat
+    hyvää iltaa
+    hyvää huomenta
+    hyvää päivää
+    hä
+    häh
+    höh
+    höpsis
+    höpsistä
+    höpönlöpön
+
+I
+
+    iik
+    itku
+
+J
+
+    jaa
+    jassoo
+    jaxuhali
+    jee
+    jep
+    jes
+    jihuu
+    jiihaa
+    jou
+    jukra
+    juku
+    jumalauta
+    jumankauta
+    jumpe
+    jumprahuiti
+    jumprahuti
+    juu
+    juupas
+    jäkäti-jäkäti
+
+K
+
+    kappas
+    kas
+    katin kontit
+    katinkontit
+    katos
+    kehveli
+    kerpele
+    kiitos
+    kiitti
+    kippis
+    kirosana
+    kis
+    kissan viikset
+    kissanviikset
+    kot
+    Kristus
+    krooh
+    kukkuu
+    kuulemiin
+    kuulemisiin
+    kyllä
+    kääk
+
+L
+
+    lempo
+    loiskis
+    lällällää
+
+M
+
+    mars
+    mau
+    miau
+    mo
+    moi
+    moikka
+    molskis
+    morjens
+    moro
+    morso
+    muikku
+    muu
+    mää
+
+N
+
+    nam
+    niinpä
+    no
+    nuku hyvin
+    nähdään
+    näkemiin
+    näkemisiin
+    nöf
+
+O
+
+    oh
+    oho
+    ohoi
+    oi
+    OK
+    okka
+    okra
+    ole hyvä
+    olkaa hyvä
+    olkaa hyvät
+    onnea
+    oo
+    ooh
+    ookoo
+    oolrait
+    oukkidoukki
+
+P
+
+    pam
+    paskanmarjat
+    peeveli
+    peijakas
+    perkele
+    perse
+    perskele
+    perskuta
+    perskutarallaa
+    pihkura
+    piip
+    pirskatti
+    piru
+    pläts
+    plöts
+    poks
+    presiis
+    ptruu
+    pusi
+    puskii
+    pyh
+    pyyh
+    päivää
+    pöö
+
+R
+
+    reps
+    röh
+    röyh
+
+S
+
+    saakeli
+    saatana
+    sain
+    samperi
+    seis
+    selkis
+    selvä
+    sentään
+    siistiä
+        sipu sipu
+    sisään
+    siunausta
+    skool
+    soo
+    sorge
+    sori
+    sus
+
+T
+
+    tattis
+    tehkää hyvin
+    terppa
+    terse
+    terska
+    terve
+    tervehdys
+    tervetuloa
+    tota
+    tsau
+    tsaukki
+    tse
+    tuli on irti
+    tuota
+    tuut
+    tä
+    tööt
+
+V
+
+    vau
+    vitsi
+    vittu
+    vitut
+    voi
+    voi helvetti
+
+Y
+
+    yäk
+    yök
+
+Ä
+
+    äh
+    ärrinmurrin
+    äsh
+    ätsih
+    äyh
+    ää
+    ääh
+
+Ö
+
+    öitä
+    
+    
+::postpositiot    
+
+A
+
+    aikana
+    alapuolella
+    alapuolelle
+    alapuolelta
+    ali
+    alla
+    alle
+    asti
+
+E
+
+    edelle
+    edellä
+    edessä
+    edestä
+    eteen
+
+J
+
+    johdosta
+    jälkeen
+
+K
+
+    kanssa
+    karkuun
+    kautta
+    kesken
+    kimppuun
+    kimpussa
+    kimpusta
+    kohden
+    kohtaan
+    kohti
+
+L
+
+    lisäksi
+    luo
+    luokse
+    luona
+    luota
+    lähtien
+    läpi
+    lävitse
+
+M
+
+    mennessä
+    mukaan
+    mukaisesti
+    myötä
+
+N
+
+    nenitse
+    nähden
+
+O
+
+    oheen
+    ohella
+    ohelle
+    ohelta
+    ohessa
+    ohesta
+
+P
+
+    parissa
+    perässä
+    perästä
+    perään
+    poikitse
+    puolesta
+    päin
+    päähän
+    päällä
+    päältä
+    päästä
+
+S
+
+    seassa
+    seasta
+    sekaan
+    sijaan
+    sisäpuolella
+    sisäpuolelle
+    sisäpuolelta
+    suhteen
+
+T
+
+    taakse
+    takaa
+    takana
+    toimesta
+    tykö
+    tykönä
+    tyköä
+    tyynni
+    tähden
+
+U
+
+    ulkopuolella
+    ulkopuolelle
+    ulkopuolelta
+
+V
+
+    varrella
+    varressa
+    varten
+    vastaan
+    vasten
+    verran
+    viereen
+    vierelle
+    vierellä
+    viereltä
+    vieressä
+    vierestä
+    vuoksi
+    välillä
+    välissä
+    välistä
+
+Y
+
+    ylitse
+    yläpuolella
+    yläpuolelle
+    yläpuolelta
+    ympäri
+    ympärillä
+
+Ä
+
+    äärellä

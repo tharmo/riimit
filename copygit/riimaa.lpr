@@ -6,7 +6,7 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  Classes, SysUtils, CustApp, riimitys,nominit, riimiutils, verbit, etsi
+  Classes, SysUtils, CustApp, riimitys,nominit, riimiutils, verbit, etsi  //, roskaa
   { you can add units after this };
 
 type

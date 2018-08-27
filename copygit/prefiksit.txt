@@ -1,0 +1,218 @@
+A
+
+    aero-
+    ala-
+    ali-
+    ambi-
+    amino-
+    anemo-
+    angio-
+    antropo-
+    areo-
+    arkki-
+    astro-
+    asuin-
+    atmo-
+    auto-
+    avo-
+
+B
+
+    bio-
+    but-
+
+C
+
+    cis-
+
+D
+
+    dek-
+    deka-
+    dekstro-
+    desi-
+    di-
+    dys-
+
+E
+
+    ei-
+    ekso-
+    ekstra-
+    elektro-
+    elin
+    eno-
+    epi-
+    epä-
+    esi-
+    eso-
+    et-
+    etä-
+    euro-
+    ex-
+
+F
+
+    ferr-
+    foto-
+
+G
+
+    geo-
+    giga-
+
+H
+
+    haja-
+    hehto-
+    heks-
+    heksa-
+    hept-
+    hepta-
+    hetero
+    hiero-
+    holo-
+    homeo-
+    homo-
+    hydro-
+    hygro-
+    hyper-
+    hypo-
+
+I
+
+    iki-
+    irto-
+    iso-
+
+J
+
+    jotta-
+
+K
+
+    kaksois-
+    karyo-
+    kata-
+    kauka-
+    kauko-
+    kelta-
+    kemo-
+    keski-
+    kilo-
+    kitu-
+    kloro-
+    ko-
+    kolmois-
+    kryo-
+    kvasi-
+    kyber-
+
+L
+
+    laaka-
+    lehmi-
+    lisä-
+    lito-
+    luki-
+    lähi-
+
+M
+
+    makro-
+    mega-
+    meso-
+    met-
+    meta-
+    mikro-
+    milli-
+    mono-
+
+N
+
+    nano-
+    neli-
+    nelois-
+    neo-
+    non-
+    nona-
+    nyky-
+
+O
+
+    okt-
+    okta-
+    oligo-
+
+P
+
+    paleo-
+    para-
+    pent-
+    penta-
+    perus-
+    pika-
+    piko-
+    poly-
+    prop-
+    prosopo-
+    psykro-
+    pyro-
+
+R
+
+    radio-
+
+S
+
+    sateenkaari-
+    semi-
+    sentti-
+    sika-
+    siko-
+    sino-
+    sisä-
+    sosio-
+    sub-
+    suhu-
+    super-
+    syn-
+
+T
+
+    taka-
+    tako-
+    talasso-
+    tasa-
+    tele-
+    teo-
+    tera-
+    tetra-
+    trans-
+    tri-
+    täys-
+
+U
+
+    ulko-
+    ultra-
+    uus-
+
+V
+
+    valko-
+    vasta-
+    viher-
+    vihki-
+
+Y
+
+    yhdys-
+    yksöis-
+    yli-
+    yltiö-
+    ylä-
+
+Ä
+
+    äkki-
