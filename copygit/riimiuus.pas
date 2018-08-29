@@ -39,16 +39,19 @@ type tsanasto=class(tobject)
  siss:array[0..255] of tsis;
  avs:array[0..1200] of tav;
  sans:array[0..32767] of tsan;
+ sanalista:array[0..32767] of string[20];
  verbit:tverbit;
  nominit:tnominit;
  eitaivu:teitaivu;
  hakulista:tstringlist;
  hitlist:array[1..30000] of word;hitcount:integer;
+ sanoja:tstringlist;
  procedure numeroikaikki;
  //0-pohjasia, mutta data alkaa 1:st‰
  procedure luesanat(fn:string);
  procedure listaa;
  procedure hae;
+ function generate(snum:word):ansistring;
  procedure concor;
  function luohaku(fn:string):tstringlist;
  function etsiyks(hakusana,hakuakon,hakukoko:string;hakueietu,hakueitaka:boolean;sika:tsija;aresu:tstringlist;onjolist:tlist;var hits:word):word;
@@ -402,69 +405,229 @@ begin
   //FOR I:=0 TO 10000 DO WRITELN(yy[I]);
 end;
 procedure tsanasto.concor;
-var numsf:textfile;line,s:ansistring;i,n,b:word;
+var numsf:textfile;line,s:ansistring;
     cc:array [0..35000] of array [0..15] of word;
     lnums:array[0..15] of word;
-  function setnum(num:word):word;
-   var j:word;
-  begin
-    for j:=1 to 15 do
-     if lnums[j]=num then break
-     else if lnums[j]=0 then
-     begin
-       lnums[j]:=num;
-       lnums[0]:=lnums[0]+1;
-       break;
-     end;
-  end;
+    function setnum(num:word):word;
+     var j:word;
+    begin
+      for j:=0 to 15 do
+       if lnums[j]=num then continue
+       else if lnums[j]=0 then
+       begin
+         lnums[j]:=num;
+         //lnums[0]:=lnums[0]+1;
+         break;
+       end;
+    end;
+    function setmat(a,b:word):word;
+     var j:word;
+    begin
+      for j:=0 to 15 do
+       if cc[a,j]=b then break
+       else if cc[a,j]=0 then
+       begin
+         cc[a,j]:=b;
+         break;
+       end;
+    end;
+    procedure listmat;
+    var row,col:word;
+    begin
+      for row:=0 to 30000 do
+       if cc[row,0]<>0 then
+       begin
+         writeln('<li>',row,': ');
+        for col:=0 to 15 do
+        if cc[row,col]=0 then break else
+         writeln(sanoja[cc[row,col]],',');
+      end;
+    end;
 
-var c:integer;
+var i,j,n,b:word;c:integer;
 begin
+sanoja:=tstringlist.create;
+sanoja.loadfromfile('sanat_ok.ansi');
 assign(numsf,'syn_ok.num');  //synonyymit/liittyv‰t sanat
 //assign(inf,'sanatall.arev');  //kaikki ei-yhdyssanat
 reset(numsf);
 //writeln('<pre>');
+for i:=0 to 30000 do cc[i,0]:=i;
 c:=0;
  while not eof(numsf) do
  begin
-  c:=c+1;if c>50 then break;
+  c:=c+1;//if c>5000 then break;
   readln(numsf,line);
   b:=1;
-  writeln('<li>');;
+  //writeln('<li>');;
   for i:=1 to length(line) do
      if line[i]=',' then begin setnum(strtointdef(s,-999));s:='';end
     else s:=s+line[i];
-  for i:=1 to lnums[0] do writeln(lnums[i]);
+  for i:=0 to 15 do if lnums[i]=0 then break else
+   for j:=0 to 15 do if lnums[j]=0 then break else
+    setmat(lnums[i],lnums[j]);
+   //writeln(lnums[i]);
   fillchar(lnums,sizeof(lnums),0);
+  cc[1]:=lnums;
  end;
-
  close(numsf);
+ listmat;
 end;
+
+
+function tsanasto.generate(snum:word):ansistring;
+  function red(st:string):string; begin result:='<b style="color:red">'+st+'</b>';  end;
+  function blue(st:string):string;  begin result:='<b style="color:blue">'+st+'</b>';  end;
+
+var runko,sisu,astva:str16;aresu:tstringlist;hakutakvok:boolean;
+ lukn,sijax,prlim,x:integer;
+si,sikanum,ha,lkx:integer;
+sika:tsija;
+ d,vahvaluokka,vahvasija:boolean;
+ gsana:string;
+ luokka,sis,av,san:word;
+ //curlkacursis,cura
+  { $H-}
+  //((lk,sis,av,san,sija:integer;
+  //hakunen:tvhaku;
+  //mymid,mysis,myav,mysana,mysija,lopvok,myend:str16;
+   sikalauma, riimit,xxresu:tstringlist;
+
+function sijaa(curlka:tlka;cursis:tsis;curav:tav;cursan:tsan):ansistring;
+var vokdbl,vokvex,konvex,kondbl:boolean;mid:ansistring;
+begin
+     if luokka<52 then  //mid:=verbit.lmmids[luokka-52,si] else mid:=nominit.lmmids[luokka,si];
+     begin
+       mid:=nominit.lmmids[luokka,0];
+       if curlka.vahva then if  not (si in nvahvanvahvat) then vahvasija:=false;  //vv hh
+       if not curlka.vahva then if  (si in nheikonheikot) then vahvasija:=false;  //vv hh
+     end  else
+     begin
+       mid:='a'+verbit.lmmids[luokka-52,0];
+       if curlka.vahva then begin if  si in vvahvanheikot then vahvasija:=false;end
+       else  if  si in vheikonheikot then vahvasija:=false;
+     end;
+     if mid='!' then exit;
+     if (mid<>'') and (mid[1]='_') then //begin vokdbl:=true;delete(mid,1,1);end;
+       mysis:='ii' else MYSIS:=MYSIS[1]+MYSIS;  //loppuii vierasp sanoissa lka 5
+     if (mid<>'') {and (length(koita)>0)} and (mid[1]='-') then  begin vokvex:=true;delete(mid,1,1);{delete(koita,1,0);} end;
+       gsana:=reversestring(mid+siss[sis].sis+ifs(vahvasija,avs[av].v,avs[av].h)+sans[snum].san+sans[snum].akon);
+             //san; if konvex then if curlka.kot=60 then  delete(sana,1,1);  //vain "l‰hte‰" monikot l‰ksin
+             //av:   if konvex then if myav<>'' then begin delete(myav,1,1);end;
+             //sis;          if kondbl then if curlka.kot=67 then mysis:=MYSIS[1]+MYSIS;
+                  //                 if vokdbl then if mysis='' then mysis:='ii' else MYSIS:=MYSIS[1]+MYSIS;  //loppuii vierasp sanoissa lka 5
+            //           if vokvex then f curlka.kot=64 //vied‰ vei then       delete(mysis,2,1) else delete(mysis,1,1);
+         if not sans[snum].takavok then gsana:=etu(gsana);
+         if taka(gsana)<>taka(sanoja[snum]) then
+             writeln('<li> ',snum,gsana,'/',sanoja[snum],'.',luokka,curlka.vahva,vahvasija);
+
+end;
+
+var curlka:tlka;
+begin
+  si:=0;
+  for lUOKKA:=0 to 78 do
+  begin
+    //writeln('<h4>LKA:',luokka,'</h4>');
+    if lks[luokka].vikasana>=snum then
+    begin
+      curlka:=lks[luokka];
+      vahvasija:=true;
+      if luokka<52 then
+      begin
+      for sis:=lks[lUOKka].ekasis to lks[lUOKka].vikasis do
+      if siss[sis].vikasana>=snum then
+       for AV:=SISS[SIS].ekaAV to SISS[SIS].VIKAAV do
+        if avs[av].vikasana>=snum then
+        //if avs[av].v<>avs[av].h then
+        begin
+          for si:=0 to sikoja do
+            sijaa(curlka,siss[sis],avs[av],sans[snum]);
+            //function sijaa(curlka:tlka;cursis:tsis;curav:tav;cursan:tsan):ansistring;
+          end;
+          exit;
+        end;
+      end;
+         //for SAN:=AVS[AV].ekasana to avs[av].VIKAsana do
+     //writeln('<hr>');
+    end;
+  end;
+ //for sana:=0 to 28000 do writeln(sans[sana].san);
+ //exit;
+{   d:=true;
+   //d:=false;
+    //if d then
+    writeln('<h3>RUNKO:',runko,'/',astva,'/',sis,'</h3></ul>');
+    //writeln('<li>',luokka,'/',scount);
+    //for si:=0 to scount-1 do writeln('/',lmmids[luokka,si]);
+    vahvaluokka:=luokka+52<63;
+    for si:=0 to sikoja-1 do
+    begin try
+//!      mymid:=lmmids[luokka,si];
+      if pos('?',mymid)>0 then continue;
+//!      myend:=reversestring(sijat[si].ending);
+
+      sofar:=runko;
+      //writeln('[',mymid,'|',myend,']');
+      //if pos('*',mymid)>0 then begin mymid[length(mymid)]:=sofar[length(sofar)];end;
+      if pos('*',mymid)>0 then begin mymid[length(mymid)]:=SIS[length(SIS)];end;
+//!      sika:=sijat[si];
+      if vahvaluokka then vahvasija:=NOT(si in vvahvanHEIKOT)
+      else vahvasija:=not (si in vHEIKOnheikot);
+      if astva='' then myav:='' else
+      if vahvasija then  myav:=astva[1] else
+      if length(astva)>1 then myav:=astva[2] else myav:='';
+      sofar:=sofar+myav+sis;
+
+      while (mymid<>'') and (mymid[length(mymid)]='-') do begin delete(mymid,length(mymid),1);delete(sofar,length(sofar),1);end;
+      if pos('!',mymid)=1 then continue;
+      sofar:=sofar+reversestring(mymid);
+      sofar:=sofar+myend;
+      if not hakutakvok then sofar:=etu(sofar);
+      if d then writeln('<li>',luokka+52,'#',si,' ',sofar,sana);//,' [',runko,'|',myav,'|',sis,'|',mymid,'|',myend,vAHVALUOKKA,']</li>');
+       //if not hakutakvok then sofar:=etu(sofar);
+      aresu.addobject(sofar,tobject(ptrint(sana)));
+      except writeln('nomuoto',luokka,'#',si);end;
+     end;
+     if d then writeln('</ul>');
+   //end;
+ }
+//end;
+
+
 procedure tsanasto.numeroikaikki;
 var instream,hitfs,misfs:tfilestream;
-     inf,outf,misfile,numfile:textfile;
-     sana,hakurunko,akon,hakukoko,hitline:ansistring;
+     inf,synf,sanaf,misfile,numfile:textfile;
+     sana,prevsana,hakurunko,akon,hakukoko,hitline:ansistring;
      hakueietu,hakueitaka:boolean;
      j,hitnum,ghits,hits:word;
      cc:integer;
      linehits:tlist;
      olisana,ekasana:boolean;
 begin
+ sanoja:=tstringlist.create;
+sanoja.loadfromfile('testisanat.ansi');
+ for j:=1 to 26000 do
+ generate(j);exit;
  concor;exit;
  linehits:=tlist.create;
 //inf:=tfilestream.create('wikithe.txt',fmopenread);  //synonyymit/liittyv‰t sanat
 //assign(inf,'gutsanat.iso');  //synonyymit/liittyv‰t sanat
 //assign(inf,'sense.nums');  //synonyymit/liittyv‰t sanat
 //assign(inf,'wikithe.ansi');  //synonyymit/liittyv‰t sanat
-assign(inf,'syn_all.ansi');  //synonyymit/liittyv‰t sanat
+assign(inf,'syn_allx.ansi');  //synonyymit/liittyv‰t sanat
 //assign(inf,'sanatall.arev');  //kaikki ei-yhdyssanat
 reset(inf);
-assign(outf,'syn_ok.ansi');  //synonyymit/liittyv‰t sanat
-rewrite(outf);
+assign(synf,'syn_ok.ansi');  //synonyymit/liittyv‰t sanat
+rewrite(synf);
+assign(sanaf,'sanat_ok.ansi');  //synonyymit/liittyv‰t sanat
+rewrite(sanaf);
 assign(misfile,'testimiss.the');  //synonyymit/liittyv‰t sanat
 assign(numfile,'syn_ok.num');  //synonyymit/liittyv‰t sanat
 rewrite(misfile);
 rewrite(numfile);
+
+fillchar(sanalista,sizeof(sanalista),0);
   cc:=0;
   hitcount:=0;eitaivu.hitcount:=0;
   writeln('<li>xxx');
@@ -479,28 +642,32 @@ rewrite(numfile);
      try
      cc:=cc+1;
       if cc>212388 then break;
+      //if cc>10000 then break;
      readln(inf,sana);
      if sana='' then
      begin
          //writeln('<hr>');
          if olisana and (ghits>1)then
          begin
-           writeln(outf,hitline);
+          //writeln(' //',prevsana,integer(linehits[0]));
+          sanalista[integer(linehits[0])]:=copy(prevsana,1,20);
+           writeln(synf,hitline);
            for j:=0 to linehits.count-1 do write(numfile,inttostr(integer(linehits[j]))+',');
            if (linehits.Count>0) then  writeln(numfile,'') else writeln(numfile);
-           end else  writeln(reversestring(sana));
+           end;// else  writeln(reversestring(sana));
            ghits:=0;hitline:='';
          linehits.clear; olisana:=false;ekasana:=true;continue;
      end;
-
      //if sana<>'tyt‰r' then continue;
      sana:=stringreplace(trim(sana),'_','',[rfReplaceAll]);
      sana:=stringreplace((sana),'-','',[rfReplaceAll]);
+
+     if ekasana then prevsana:=sana;
      sana:=reversestring(sana);
      akon:='';
      //if sana='' then begin writeln(outf,'*****');continue;end else
      voksointu(sana,hakueietu,hakueitaka);
-     if hakueitaka and hakueietu then   continue;
+     if hakueitaka and hakueietu then   continue;   //autorit‰‰risten harmiksi
      hakurunko:=taka((sana));
      hakukoko:=sana;
      hits:=0;
@@ -509,11 +676,11 @@ rewrite(numfile);
      //res:=res+
      if hitnum=0 then hitnum:= etsiyks(hakurunko,akon,hakukoko,hakueietu,hakueitaka,
      verbit.sijat[0],nil,nil,hits); //verb permuo p‰‰ttyy "a"
-     if hitnum=0 then begin hitnum:=eitaivu.sexact(sana);if hitnum<>0 then hitnum:=30000+hitnum;end;
+     if hitnum=0 then begin hitnum:=eitaivu.sexact(sana);if hitnum<>0 then hitnum:=26000+hitnum;end;
      //if hits>0 then writeln('!!!',hitlist[hitcount],sans[hitlist[hitcount]].san,sans[hitlist[hitcount]].akon);//<li>H: ',sans[hitlist[hitcount]].san,sans[hitlist[hitcount]].akon,'#',hitlist[hitcount]);
      if hits=0 then if hitnum>0 then hits:=hits+1;// else writeln('<li>;:',reversestring(sana),'</li>');
      if ekasana then if hits>0 then olisana:=true;
-     //writeln('<li>',reversestring(sana),hits,olisana);
+     //if ekasana then writeln('<li>',reversestring(sana),hitnum);
      ekasana:=false;
      //if hits>1 then writeln(outf,akon,sana,'=',trim(res),' ',cc,'!',hits);// else writeln(outf,'--',akon+sana);//'<b style="color:red">'+akon+sana+'</b> ');
      //if hitnum>>0 then writeln(misfile,hitnum,',',string(sana));
@@ -538,11 +705,13 @@ rewrite(numfile);
     writeln('<li>didit');
   finally
     close(inf);
-    close(outf);
+    close(synf);
     close(misfile);
     close(numfile);
   //hitfs.free;misfs.free;
   end;
+  for cc:=0 to 30000 do  writeln(sanaf,sanalista[cc]);
+  closefile(sanaf);
 end;
 
 constructor tsanasto.create;
@@ -635,7 +804,7 @@ procedure tsanasto.luesanat(fn:string);
   procedure uusav;
     begin
       avs[cav].vikasana:=csan;
-       //writeln('<li>','<b>av:',avs[cav].v,avs[cav].h,'</b>','..',csan, '   ',sl[2],sl[3],' :::',clka,'/',csis,'/',cav,'/',csan);
+      //writeln('<li>','<b>av:',avs[cav].v,avs[cav].h,'</b>','..',csan, '   ',sl[2],sl[3],' :::',clka,'/',csis,'/',cav,'/',csan);
       cav:=cav+1;
       avs[cav].ekasana:=csan+1;
       avs[cav].takia:=0;  //takavokaalisten m‰‰r‰  .. ei k‰ytet‰ viel‰
@@ -720,14 +889,14 @@ begin
     writeln('<h1>LKS:',CLKa,' /sis:',csis,' /av:',cav,' /w:',csan,'</h1>');
     for i:=0999 to clka do
     begin
-       writeln('<li>',i,'<ul>');
+       writeln('<li>',i, '>',lks[i].vikasana,'<ul>');
        for j:=lks[i].ekasis to lks[i].vikasis  do
        begin
-          writeln('<li>',j,':',siss[j].sis,'<ul>');
+          writeln('<li>',j,'si:<b>',siss[j].sis, '</b> >',siss[j].vikasana,'<ul>');
           for k:=siss[j].ekaav to siss[j].vikaav  do
           begin
-             writeln('<li>',k,':',avs[k].av,avs[k].v,avs[k].h,'<ul>');
-             writeln('<li>',avs[k].ekasana,sans[avs[k].ekasana].san,'',sans[avs[k].ekasana].akon,' ',avs[k].vikasana,sans[avs[k].vikasana].san,sans[avs[k].vikasana].akon);
+             writeln('<li>',k,':av<b>',avs[k].av,avs[k].v,avs[k].h, '</b>>',avs[k].vikasana,'<ul>');
+             writeln('<li>',avs[k].ekasana,reversestring(sans[avs[k].ekasana].san+sans[avs[k].ekasana].akon),' ',avs[k].vikasana,reversestring(sans[avs[k].vikasana].san+sans[avs[k].vikasana].akon));
 
               writeln('</ul>');
           end;

@@ -216,3 +216,194 @@ Y
 Ä
 
     äkki-
+    
+    
+    
+A
+
+    -aali
+    -aani
+    -amiini
+    -an
+
+E
+
+    -e
+    -edri
+    -eeni
+    -einen
+    -en
+
+F
+
+    -fagi
+
+G
+
+    -gate
+    -grammi
+
+H
+
+    -han
+    -hko
+    -hkö
+    -hän
+
+I
+
+    -idi
+    -in
+    -inen
+    -is
+    -isa
+    -isin
+    -ismi
+    -isti
+    -istinen
+    -isä
+
+J
+
+    -ja
+    -jä
+
+K
+
+    -ka
+    -kaan
+    -kas
+    -ke
+    -kin
+    -kka
+    -kko
+    -kku
+    -kky
+    -kkä
+    -kkö
+    -ko
+    -kratia
+    -ks
+    -ksi
+    -kä
+    -käs
+    -kään
+    -kö
+
+L
+
+    -la
+    -lainen
+    -laisuus
+    -latria
+    -lepsia
+    -lla
+    -lle
+    -llinen
+    -llä
+    -logia
+    -lta
+    -lti
+    -ltä
+    -lyysi
+    -lä
+    -läinen
+    -läisyys
+
+M
+
+    -mainen
+    -metri
+    -mme
+    -moinen
+    -mäinen
+    -möinen
+
+N
+
+    -n
+    -nen
+    -ni
+    -nne
+    -nsa
+    -nsä
+    -nyymi
+
+O
+
+    -o
+    -oa
+    -oidi
+    -oli
+    -on
+    -oni
+    -onium
+    -os
+    -osainen
+
+P
+
+    -pa
+    -pas
+    -pi
+    -pä
+    -päs
+
+R
+
+    -ri
+
+S
+
+    -s
+    -si
+    -sidi
+    -silla
+    -sillaan
+    -sillään
+    -skooppi
+    -ssa
+    -ssä
+    -sta
+    -sti
+    -sto
+    -stä
+    -stö
+
+T
+
+    -t
+    -ta
+    -ton
+    -tta
+    -ttaa
+    -tte
+    -ttä
+    -ttää
+    -tä
+    -tön
+
+U
+
+    -un
+    -uri
+    -us
+    -uus
+
+Y
+
+    -yn
+    -yri
+    -ys
+    -yyni
+    -yys
+
+Ä
+
+    -ä
+    -än
+
+Ö
+
+    -ön
+    -ös
