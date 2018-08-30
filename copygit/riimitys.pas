@@ -223,8 +223,8 @@ begin
      begin
        onjolist.clear;
       try
-      WITH THIT(verbit.vhitlist[i]).SANA DO
-      verbit.generate(reversestring(ALKU+AKON),reversestring(SIS),v+h,LUOKKA,sananum,uusHAKULISTA,takvok);
+      //WITH THIT(verbit.vhitlist[i]).SANA DO
+//      verbit.generate(reversestring(ALKU+AKON),reversestring(SIS),v+h,LUOKKA,sananum,uusHAKULISTA,takvok);
       except writeln('<h3>nogo:;',hakusana,'/',verbit.vhitlist.Count,i ,'</h3>');end;
       writeln('<li>verbgens;;',uushakulista.Text);
       //if uushakulista.count>0 then

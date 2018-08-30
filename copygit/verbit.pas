@@ -34,7 +34,8 @@ type tverbit=class(tobject)
      //sanat:array[0..27816] of tsana;
      sanat:array[0..16383] of tvsana;
      procedure genlist;
-    procedure generate(runko,sis,astva:str16;luokka,sana:integer;aresu:tstringlist;hakutakvok:boolean);
+    function generate(snum:word):ansistring;
+    procedure generateold(runko,sis,astva:str16;luokka,sana:integer;aresu:tstringlist;hakutakvok:boolean);
    // procedure etsi(haku:ansistring;aresu:tstringlist;onjolist:tlist);
     procedure listaa;
     procedure siivoosijat;
@@ -73,6 +74,7 @@ vesims: array[1..27] of ansistring =('hioa', 'sulaa', 'pieks‰‰', 'soutaa', 'jauh
 
 
 implementation
+uses riimiuus;
 function red(st:string):string;
 begin result:='<b style="color:red">'+st+'</b>';
 end;
@@ -1254,8 +1256,92 @@ mlist:=tstringlist.create;
   end;
 end;
 
+function tverbit.generate(snum:word):ansistring;
+begin {
+  function red(st:string):string; begin result:='<b style="color:red">'+st+'</b>';  end;
+  function blue(st:string):string;  begin result:='<b style="color:blue">'+st+'</b>';  end;
 
-procedure tverbit.generate(runko,sis,astva:str16;luokka,sana:integer;aresu:tstringlist;hakutakvok:boolean);
+var runko,sisu,astva:str16;aresu:tstringlist;hakutakvok:boolean;
+ lukn,sijax,prlim,x:integer;
+sija,sikanum,ha,lkx:integer;
+sika:tsija;
+ d,vahvaluokka,vahvasija:boolean;
+ gsana:string;
+ luokka,sis,av,san:word;
+ //curlkacursis,cura
+  { $H-}
+  //((lk,sis,av,san,sija:integer;
+  //hakunen:tvhaku;
+  //mymid,mysis,myav,mysana,mysija,lopvok,myend:str16;
+   sikalauma, riimit,xxresu:tstringlist;
+
+function sijaa(curlka:tlka;cursis:tsis;curav:tav;cursan:tsan):ansistring;
+var vokdbl,vokvex,konvex,kondbl:boolean;mid,myav,mysis,myend:ansistring;
+begin
+  try
+
+   mysis:=cursis.sis;
+   vahvasija:=true;
+       myend:=reversestring(sijat[sija].ending);
+       mid:=''+lmmids[luokka-52,sija];
+       if curlka.vahva then begin if  sija in vvahvanheikot then vahvasija:=false;end
+       else  if  sija in vheikonheikot then vahvasija:=false;
+     myav:=ifs(vahvasija,avs[av].v,avs[av].h);     //writeln('[',mid,']');
+     if (mid<>'') and (mid[1]='_') then
+     begin
+        if mysis='' then mysis:='ii' else begin MYSIS:=MYSIS[1]+MYSIS;delete(mid,1,0);end;
+     end;
+     if mid='!' then exit;
+     if (mid<>'') and (mid[1]='*') then //mid[1]:=mysis[1];
+        if mysis='' then  begin delete(mid,1,1);myav:=''; end else mid[1]:=mysis[1];  //loppuii vierasp sanoissa lka 5
+     //if mysis=''then   mysis:='ii' else mySIS:=mySIS[1]+mySIS;  //loppuii vierasp sanoissa lka 5
+     if (mid<>'')  and (mid[1]='-') then  begin delete(mid,1,1);delete(mysis,1,1); end;
+       gsana:=reversestring(mid+mysis+myav+sanasto.sans[snum].san+sans[snum].akon)+myend;
+             //san; if konvex then if curlka.kot=60 then  delete(sana,1,1);  //vain "l‰hte‰" monikot l‰ksin
+             //av:   if konvex then if myav<>'' then begin delete(myav,1,1);end;
+             //sis;          if kondbl then if curlka.kot=67 then mysis:=MYSIS[1]+MYSIS;
+                  //                 if vokdbl then if mysis='' then mysis:='ii' else MYSIS:=MYSIS[1]+MYSIS;  //loppuii vierasp sanoissa lka 5
+            //           if vokvex then f curlka.kot=64 //vied‰ vei then       delete(mysis,2,1) else delete(mysis,1,1);
+         if not sans[snum].takavok then gsana:=etu(gsana);
+         //if taka(gsana)<>taka(sanoja[snum]) then
+             writeln(' ',gsana);//,sija,vahvasija,verbit.lmmids[luokka-52,sija],'/',mid);
+    except writeln('!!!');end;
+end;
+
+var curlka:tlka;
+begin
+  sija:=0;
+  for lUOKKA:=0 to 78 do
+  begin
+    //writeln('<h4>LKA:',luokka,'</h4>');
+    if lks[luokka].vikasana>=snum then
+    begin
+      curlka:=lks[luokka];
+      vahvasija:=true;
+      //if luokka<52 then
+      begin
+        for sis:=lks[lUOKka].ekasis to lks[lUOKka].vikasis do
+        if siss[sis].vikasana>=snum then
+         for AV:=SISS[SIS].ekaAV to SISS[SIS].VIKAAV do
+          if avs[av].vikasana>=snum then
+          //if avs[av].v<>avs[av].h then
+          begin
+           writeln('<li>',luokka,sanoja[snum],';',curlka.kot,'.',reversestring(siss[sis].sis+'_'+avs[av].v+avs[av].h+'.'+sans[snum].san+sans[snum].akon),' ',luokka,curlka.vahva,siss[sis].sis,':');
+           //for sija:=0 to 9 do //sikoja do
+           for sija in [0,5,12,13,16,23,36,37,39,45] do //sikoja do
+              sijaa(curlka,siss[sis],avs[av],sans[snum]);
+              //function sijaa(curlka:tlka;cursis:tsis;curav:tav;cursan:tsan):ansistring;
+              exit;
+          end;
+          exit;
+        end;
+      end;
+         //for SAN:=AVS[AV].ekasana to avs[av].VIKAsana do
+     //writeln('<hr>');
+    end;
+}  end;
+
+procedure tverbit.generateold(runko,sis,astva:str16;luokka,sana:integer;aresu:tstringlist;hakutakvok:boolean);
 var lukn,sijax,prlim,x:integer;
 si,sikanum,ha,lkx:integer;sika:tsija;
  d,vahvaluokka,vahvasija:boolean;         sofar:string;

@@ -15,7 +15,8 @@
         <Filename Value="oldnomi.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="7"/>
-        <CursorPos X="30" Y="41"/>
+        <TopLine Value="12"/>
+        <CursorPos X="3" Y="43"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <EditorIndex Value="-1"/>
@@ -51,8 +52,7 @@
         <Filename Value="oldverbit.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="8"/>
-        <TopLine Value="29"/>
-        <CursorPos X="15" Y="50"/>
+        <CursorPos Y="12"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <EditorIndex Value="-1"/>
@@ -65,16 +65,15 @@
       <Unit5>
         <Filename Value="verbit.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="1275"/>
-        <CursorPos X="19" Y="1258"/>
-        <FoldState Value=" T3\M32 T1\N31!"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1257"/>
+        <CursorPos X="8" Y="1270"/>
         <ExtraEditorCount Value="2"/>
         <ExtraEditor1>
-          <EditorIndex Value="1"/>
-          <WindowIndex Value="1"/>
-          <TopLine Value="623"/>
-          <CursorPos X="29" Y="660"/>
+          <EditorIndex Value="2"/>
+          <TopLine Value="1260"/>
+          <CursorPos X="26" Y="1385"/>
         </ExtraEditor1>
         <ExtraEditor2>
           <EditorIndex Value="-1"/>
@@ -88,8 +87,8 @@
         <Filename Value="riimiutils.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="10"/>
-        <CursorPos Y="47"/>
+        <TopLine Value="73"/>
+        <CursorPos X="8" Y="14"/>
         <UsageCount Value="208"/>
         <Loaded Value="True"/>
       </Unit6>
@@ -97,8 +96,8 @@
         <Filename Value="nominit.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="1240"/>
-        <CursorPos X="20" Y="1255"/>
+        <TopLine Value="26"/>
+        <CursorPos X="22" Y="47"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <WindowIndex Value="1"/>
@@ -112,8 +111,7 @@
         <Filename Value="riimitys.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="91"/>
-        <CursorPos Y="112"/>
+        <CursorPos Y="102"/>
         <UsageCount Value="203"/>
         <Loaded Value="True"/>
       </Unit8>
@@ -128,26 +126,27 @@
         <Filename Value="riimiuus.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="1"/>
-        <TopLine Value="523"/>
-        <CursorPos X="55" Y="544"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="571"/>
+        <CursorPos X="56" Y="600"/>
         <ExtraEditorCount Value="2"/>
         <ExtraEditor1>
           <IsVisibleTab Value="True"/>
-          <EditorIndex Value="6"/>
-          <TopLine Value="1192"/>
-          <CursorPos Y="1228"/>
+          <EditorIndex Value="2"/>
+          <WindowIndex Value="1"/>
+          <TopLine Value="559"/>
+          <CursorPos X="50" Y="667"/>
+          <FoldState Value=" T3u40)}"/>
         </ExtraEditor1>
         <ExtraEditor2>
           <IsVisibleTab Value="True"/>
           <WindowIndex Value="2"/>
-          <TopLine Value="614"/>
-          <CursorPos Y="645"/>
+          <TopLine Value="710"/>
+          <CursorPos Y="742"/>
         </ExtraEditor2>
         <UsageCount Value="215"/>
         <Bookmarks Count="1">
-          <Item0 Y="174" ID="9"/>
+          <Item0 Y="177" ID="9"/>
         </Bookmarks>
         <Loaded Value="True"/>
       </Unit10>
@@ -160,129 +159,126 @@
         <Loaded Value="True"/>
       </Unit11>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="1"/>
-    </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="508" Column="52" TopLine="487"/>
+        <Caret Line="697" Column="22" TopLine="662"/>
       </Position1>
       <Position2>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="953" Column="45" TopLine="922"/>
+        <Caret Line="12" Column="18"/>
       </Position2>
       <Position3>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="54" Column="18" TopLine="33"/>
+        <Caret Line="54" Column="18" TopLine="19"/>
       </Position3>
       <Position4>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="478" Column="26" TopLine="443"/>
+        <Caret Line="55" Column="18" TopLine="20"/>
       </Position4>
       <Position5>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="527" Column="32" TopLine="493"/>
+        <Caret Line="480" Column="26" TopLine="445"/>
       </Position5>
       <Position6>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="484" TopLine="475"/>
+        <Caret Line="589" Column="18" TopLine="579"/>
       </Position6>
       <Position7>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="497" TopLine="495"/>
+        <Caret Line="696" Column="22" TopLine="661"/>
       </Position7>
       <Position8>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="655" Column="21" TopLine="630"/>
+        <Caret Line="709" Column="2" TopLine="571"/>
       </Position8>
       <Position9>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="658" Column="39" TopLine="633"/>
+        <Caret Line="54" Column="18" TopLine="33"/>
       </Position9>
       <Position10>
-        <Filename Value="verbit.pas"/>
-        <Caret Line="1313" Column="28" TopLine="1234"/>
+        <Filename Value="riimiuus.pas"/>
+        <Caret Line="55" Column="18" TopLine="33"/>
       </Position10>
       <Position11>
-        <Filename Value="nominit.pas"/>
-        <Caret Line="70" Column="17" TopLine="40"/>
+        <Filename Value="riimiuus.pas"/>
+        <Caret Line="480" Column="26" TopLine="445"/>
       </Position11>
       <Position12>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="529" Column="26" TopLine="513"/>
+        <Caret Line="633" Column="36" TopLine="597"/>
       </Position12>
       <Position13>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="659" Column="21" TopLine="625"/>
+        <Caret Line="696" Column="22" TopLine="661"/>
       </Position13>
       <Position14>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="662" Column="39" TopLine="628"/>
+        <Caret Line="704" Column="6" TopLine="664"/>
       </Position14>
       <Position15>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="907" Column="29" TopLine="834"/>
+        <Caret Line="720" Column="64" TopLine="693"/>
       </Position15>
       <Position16>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="936" Column="26" TopLine="1120"/>
+        <Caret Line="59" Column="63" TopLine="33"/>
       </Position16>
       <Position17>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="54" Column="18" TopLine="36"/>
+        <Caret Line="480" Column="26" TopLine="445"/>
       </Position17>
       <Position18>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="1181" Column="33" TopLine="1164"/>
+        <Caret Line="563" Column="26" TopLine="528"/>
       </Position18>
       <Position19>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="496" Column="61" TopLine="489"/>
+        <Caret Line="696" Column="22" TopLine="661"/>
       </Position19>
       <Position20>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="497" Column="41" TopLine="483"/>
+        <Caret Line="704" Column="9" TopLine="676"/>
       </Position20>
       <Position21>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="499" Column="63" TopLine="484"/>
+        <Caret Line="522" Column="33" TopLine="493"/>
       </Position21>
       <Position22>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="503" TopLine="485"/>
+        <Caret Line="700" Column="12" TopLine="598"/>
       </Position22>
       <Position23>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="512" Column="4" TopLine="495"/>
+        <Caret Line="704" Column="16" TopLine="669"/>
       </Position23>
       <Position24>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="493" Column="5" TopLine="484"/>
+        <Caret Line="59" Column="64" TopLine="33"/>
       </Position24>
       <Position25>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="506" Column="8" TopLine="489"/>
+        <Caret Line="553" Column="20" TopLine="527"/>
       </Position25>
       <Position26>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="513" Column="29" TopLine="493"/>
+        <Caret Line="705" Column="16" TopLine="670"/>
       </Position26>
       <Position27>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="511" Column="24" TopLine="494"/>
+        <Caret Line="54" Column="23" TopLine="33"/>
       </Position27>
       <Position28>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="536" Column="24" TopLine="519"/>
+        <Caret Line="480" Column="31" TopLine="445"/>
       </Position28>
       <Position29>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="520" TopLine="506"/>
+        <Caret Line="706" Column="7" TopLine="670"/>
       </Position29>
       <Position30>
         <Filename Value="riimiuus.pas"/>
-        <Caret Line="510" Column="26" TopLine="492"/>
+        <Caret Line="55" Column="20" TopLine="34"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
