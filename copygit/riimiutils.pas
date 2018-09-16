@@ -56,7 +56,6 @@ begin
   for i:=length(w) downto 1 do
   begin
      ch:=w[i];                              //vaah-do-ta  ai-o-ta  hau-ista ha-uis-ta
-     //write(ch);//,ifs(voks>0,inttostr(voks),'' ));
      if pos(ch,konsonantit)>0 then
      begin
         if voks>0 then begin tc:=tc+1;//write('_');
@@ -65,14 +64,12 @@ begin
      end
      else
      begin voks:=voks+1;
-          //if (pvok) then writeln('[',nch,ch,isdifto(ch,nch),']');
            if (voks>2) or (pvok and (not isdifto(nch,ch)))
            then begin //write('-');
              tc:=tc+1;//writeln(voks,pvok);
              voks:=0; pvok:=false;end
            else pvok:=true;
      end;
-           //{{inhiboi: ob_i[ib]hni[in]}}
       nch:=ch;
   end;         //     akat aito  aietta
   if voks>0 then if pos(w[1],vokaalit)>0 then tc:=tc+1;
@@ -320,7 +317,7 @@ end;
 function isdifto(c1,c2:ansichar):boolean;
  begin
   result:=false;
-  if c1=c2 then result:=true else                       //arv  i o i da
+  if c1=c2 then result:=true else                       //arv  i o i da                ae ao ea eo ia io oa oe ua ue
   case c1 of
    'a': if pos(c2,'iu')>0 then result:=true;
    'e','i': if pos(c2,'ieuy')>0 then result:=true;

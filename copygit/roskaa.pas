@@ -313,3 +313,316 @@ edsana:=sana;
 end;
 close(inf)
 
+beg7in
+ try
+  lev:=nodes[i].lev;
+  rsana:=copy(slista[i],1,nodes[i].ru_lyh);
+  tm_ero:= (tavus-nodes[i].tavucount);
+  if (tm_ero=1) and (max(tavus,nodes[i].tavucount)<5) then begin writeln('EI:',i);continue;end;
+ //ss:=lets[i].w;
+ //wp:=copy(slista[ss],1,nodes[ss]ru_lyh);
+ //if osa=2 then writeln(i,rsana);
+ ookoo:=true;
+ //if (slen=nodes[i]ru_lyh) or ((osa=1) and ) then
+ if ookoo then
+ begin
+   result:=result+('+'+reversestring(slista[i]));
+   writeln(' +++',blue(reversestring(slista[i])),rsana,'.');//,blue(rsana[slen+1]),slen+1);//,'.',rsana,',',sana);//,nodes[ss].reftavs,'<',tavus);
+ end
+else
+writeln(' -',red(reversestring(slista[i])));//,slen+1);//,pit_ero,rsana,'/',sana);//,'.',rsana,',',sana);//,nodes[ss].reftavs,'<',tavus);
+ // i-a-ri-a-na        sa-na
+ //ap:=reversestring(wp);
+ // if dd then writeln('???',slista[ss], '_',sana);
+ finally
+ try if not (rsana[lev]=sana[lev]) and (nodes[i].jump>i) then i:=nodes[i].jump else
+ i:=i+1;
+  //writeln('!jumpto:',i);
+ except i:=i+1;writeln('????');end;
+   //writeln('!:',i,'.',nodes[i].reftavs,'.',nodes[i].jump,'.',tavus);
+ //if (nodes[i].reftavs>tavus) and (nodes[i].jump<>0) then i:=nodes[i].jump else
+ try  writeln('[',rsana,lev,rsana[lev],sana[lev],']');//,'.',rsana,',',sana)
+ except writeln('###',lev,'/',i,rsana,']');end;
+ end;
+end;
+exit;
+for i:=nodes[snum].lev-1 downto nodes[snum].ru_lyh-1 do
+begin       //etsi ensimmäinen edeltäjä jossa on vähemmän (puunrakent kannalta merkitseviä) tavuja
+  ss:=lets[i].w;
+  let:=let+1;
+  writeln(' ',i,reversestring(slista[ss]));//,ss,'=',copy(slista[ss],1,nodes[ss].ru_lyh)=sana,sana);
+  //writeln(sopii(slista[ss],sana,nodes[i].lev,ok));
+  if i>nodes[snum].ru_lyh-1 then writeln('+') else writeln('?');
+  continue;
+  writeln('===',ss,slista[ss],nodes[ss].ru_pit,nodes[ss].ru_lyh);
+  //if nodes[ss].reftavs<tavus then
+  //if nodes[ss].ru_pit<nodes[snum].ru_lyh then
+  //if sana[i],(slista[],1,nos
+  begin
+     start:=lets[i].w;
+     writeln('===',ss,slista[ss],nodes[ss].ru_pit,nodes[ss].ru_lyh);
+     lev:=i;
+     break;
+  end;
+end;
+//writeln('</ul>');
+exit;
+//for i:=nodes[snum].lev-1 downto 1 do
+i:=start;//ito:=nodes[snum].jump;
+cc:=0;
+while i<snum do  //
+ //result:='!'+result;
+
+
+
+-----------
+,kavatora
+
+function eds2(sana:ansistring;snum,cp:word):ansistring;
+var cc,ss,i,ito,j,tavus,pw,start,slen,tm_ero,xxosa,xxosia:word;wp,ap,lp,rsana:ansistring;dd,ok:boolean;pit_ero:integer;
+    tavs:tstringlist; //not good creating and freeing everytime
+begin
+  tavs:=tstringlist.create;
+  result:='#'+inttostr(nodes[snum].tavucount);//('!!'+sana);
+  //sana:=reversestring(sana);
+  //dd:=sana=reversestring('voipivulla');
+  //while sana<>'' do  if pos(sana[length(sana)],vokaalit)>0 then break else delete(sana,length(sana),1);
+ //if nodes[snum].tavucount>3 then osia:=2 else osia:=1;
+ //for osa:=1 to osia do
+ begin
+   sana:=copy(sana,1,nodes[snum].ru_lyh);
+   slen:=nodes[snum].ru_lyh;
+   tavus:=nodes[snum].tavucount; //huom tavut, ei reftavut
+   {if osa=2 then begin  //täysin kömpelö ja hidas
+       hyphenfirev(sana,tavs);
+       sana:='';
+       tavus:=tavs.count-3;
+       for i:=3 to tavs.count-1  do sana:=reversestring(tavs[i])+sana;
+       while pos(sana[length(sana)],konsonantit)>0 do delete(sana,length(sana),1);
+       //for i:=
+       slen:=length(sana);
+       writeln('<b>lyhyt:'+sana+'</b>',slen);
+       //writeln('::',sana,'/',nodes[snum].tavucount,' ');
+       tavs.free;
+   end;}
+   for i:=nodes[snum].lev-1 downto 1 do
+   begin       //etsi ensimmäinen edeltäjä jossa on vähemmän tavuja
+     ss:=lets[i].w;
+     if nodes[ss].reftavs<tavus then
+     begin
+        start:=lets[i].w;
+        //writeln((sana),':',reversestring(slista[start]),':::');
+        writeln('===',ss,slista[ss]);
+        break;
+     end;
+  end;
+   //for i:=nodes[snum].lev-1 downto 1 do
+   i:=start;//ito:=nodes[snum].jump;
+   while i<snum do  //
+     begin
+      try
+       tm_ero:=abs(tavus-nodes[i].tavucount);
+       if (tm_ero=1) and (max(tavus,nodes[i].tavucount)<5) then begin writeln('EI:',i,'>',nodes[i].jump,'|',nodes[i].reftavs,'>',tavus);continue;end;
+      //ss:=lets[i].w;
+      //wp:=copy(slista[ss],1,nodes[ss]ru_lyh);
+      rsana:=copy(slista[i],1,nodes[i].ru_lyh);
+      //if osa=2 then writeln(i,rsana);
+      cc:=cc+1;
+      if cc>300 then break;
+      {pit_ero:=slen-nodes[i]ru_lyh;
+      //if (rsana=sana) or ((nodes[i].tavucount mod 2 =tavus mod 2 then
+        //if (pos(rsana,sana)=1) or (pos(sana,rsana)=1) or
+        //if riimaa(rsana,sana) then  //vähän turhaakin laskentaa riimaa-funktiossa kun jo tiedetään jotain yht osasta
+         // then  // yhden tavun ero paha .. yli nelitavussissa kyllä poikkeuksia
+          ok:=true;
+          //if (slen<>nodes[i]ru_lyh) then //ei raakata jos ihan samat
+            //and (osa=)  then
+           //  if (slen>nodes[i]ru_lyh) then begin if tavuraja(sana[nodes[i]ru_lyh+1],sana[nodes[i]ru_lyh]) then ok:=false end
+           //  else if tavuraja(rsana[slen+1],rsana[slen]) then ok:=false;
+          if (osa=2) and (sana<>rsana) then ok:=false else
+          if (osia=2) and (osa=1) then // ei huomioida mitään lyhempiä, pidemmistä vain ne jotka jatkuu vasta tavunvaihdon jälkeen
+          begin
+             if (slen>nodes[i]ru_lyh) then ok:=false
+             else if pos(rsana[slen+1],vokaalit)>0 then begin if isdifto(rsana[slen+1],rsana[slen]) then ok:=false;end
+             else //yhtä pitkät
+             if rsana<>sana then ok:=false;
+
+          end
+          else if (slen>nodes[i]ru_lyh) then begin if pos(sana[nodes[i]ru_lyh+1],vokaalit)>0 then if isdifto(sana[nodes[i]ru_lyh+1],sana[nodes[i]ru_lyh]) then ok:=false end
+          else if pos(rsana[slen+1],vokaalit)>0 then if isdifto(rsana[slen+1],rsana[slen]) then ok:=false;
+        }
+         ok:=true;
+          if ok then
+
+          //if (slen=nodes[i]ru_lyh) or ((osa=1) and ) then
+          begin
+            result:=result+('++'+reversestring(slista[i]));
+            writeln(' +',blue(reversestring(slista[i])));//,blue(rsana[slen+1]),slen+1);//,'.',rsana,',',sana);//,nodes[ss].reftavs,'<',tavus);
+          end
+         else
+         writeln(' -',red(reversestring(slista[i])));//,slen+1);//,pit_ero,rsana,'/',sana);//,'.',rsana,',',sana);//,nodes[ss].reftavs,'<',tavus);
+         //writeln(rsana,'/',sana);//,'.',rsana,',',sana)
+          // i-a-ri-a-na        sa-na
+      //ap:=reversestring(wp);
+      // if dd then writeln('???',slista[ss], '_',sana);
+      finally
+        //writeln('!:',i,'.',nodes[i].reftavs,'.',nodes[i].jump,'.',tavus);
+      //if (nodes[i].reftavs>tavus) and (nodes[i].jump<>0) then i:=nodes[i].jump else
+      i:=i+1;
+       //writeln('!jumpto:',i);
+      end;
+     end;
+    //result:='!'+result;
+  end;
+end;
+function sopii(tsana,ana:ansistring;posi:word;var goon:boolean):boolean;
+var i,fitpos:word;
+begin
+ result:=true;
+ writeln(' {<em style="color:red">',tsana,'/',ana,'#',posi,'</em>}');
+ goon:=true;//??
+ //if len(tsana)>posi then
+ for i:=posi+1 to length(ana) do  ////puussa aiemmat joiden jatko voi sopia.. testataan ANA:n loppun asti
+    if i>length(tsana) then break else if ana[i]<>tsana[i] then begin result:=false;exit;end;
+ for i:=length(ana)+1 to length(tsana) do writeln('!',tsana[i]);
+ for i:=length(ana)+1 to length(tsana) do if pos(tsana[i],vokaalit)>0 then begin result:=false;{testaa myös difton} exit;end;
+
+end;
+function edeltajat(sana:ansistring;snum,cp:word):ansistring;
+var ss,i,j:word;wp,ap,lp:ansistring;dd:boolean;
+begin
+  //sana:=reversestring(sana);
+  //dd:=sana=reversestring('voipivulla');
+  //while sana<>'' do  if pos(sana[length(sana)],vokaalit)>0 then break else delete(sana,length(sana),1);
+ sana:=copy(sana,1,nodes[snum].ru_lyh);
+   result:='';//';'+(sana);
+   for i:=1 to nodes[snum].lev-1 do
+     begin
+      ss:=lets[i].w;
+      wp:=copy(slista[ss],1,nodes[ss].ru_lyh);
+      //ap:=reversestring(wp);
+      // if dd then writeln('???',slista[ss], '_',sana);
+      if copy(slista[ss],1,nodes[ss].ru_lyh)=sana then
+      begin
+
+      end;
+      if riimaa(copy(slista[ss],1,nodes[ss].ru_lyh),sana) then
+      //lp:=copy(ap,i+1);ap:=copy(ap,1,i);
+      //result:=' <b>'+ap+'</b>'+lp+' '+result;
+      result:=reversestring(slista[ss])+' '+result;
+     end;
+    //result:='!'+result;
+
+end;
+function riimaa(rev1,rev2:ansistring):boolean;
+var salku,left:ansistring;i,tavs:word;
+begin
+result:=false;                                             // ina,apina   ani,anipa >ipa  //     tae, e  eat, e  -->eat
+//write(' ',rev1);
+//write(' ',reversestring(rev1),'/',copy(rev1,length(rev2)),copy(rev2,length(rev1)));
+if (pos(rev1,rev2)=1) then   begin write('');left:=copy(rev2,length(rev1));end
+ else  if (pos(rev2,rev1)=1)then begin left:=copy(rev1,length(rev2));write('');;end
+  else begin writeln('');exit;end;
+ if length(left)<2 then begin writeln('');result:=true;exit;end;
+ if not tavuraja(left[1],left[2]) then begin exit;writeln(':::',left);exit;end;
+ tavs:=0;
+ for i:=2 to length(left) do  if tavuraja(left[i],left[i+1]) then tavs:=tavs+1;
+ //write(tavs);
+ //writeln(' ',reversestring(rev1),'>',reversestring(left),tavs);
+ if tavs<>1 then result:=true;
+end;
+
+
+
+function testaajatkot(w:word;haku:ansistring;cp:word):boolean;  //yhden noodin alanoodit. rekursio?
+var i,j,upto:word;hk:ansistring;
+begin
+d:=true;
+//d:=false;
+ try
+  upto:=nodes[w].jump;
+    hk:=copy(haku,cp+1);  //haun mahdollinen alkukonsonantti
+   // if d then writeln('<li>trying to find "',reversestring(hk),'" before <b>',reversestring(copy(yy[w],1,cp)),'</b>',cp, ' ',w,'..',nodes[w].jump,yy[w]);
+    //if hk='' then writeln('nothin to find... almost anything goes');
+    w:=w+1;cp:=cp+1;
+    while (w<upto) and (w<>0) do
+    begin
+       if d then writeln('<li>/test:',slista[w][cp],cp, ' ',reversestring(copy(slista[w],1)),' ',w,'!',slista[w][cp],'!',slista[w][cp-1],isdifto(slista[w][cp],slista[w][cp-1]),'<ul>');
+      //if hk='' then if pos(yy[ww]
+      //if hk='' then
+      //begin
+      if (pos(slista[w][cp],konsonantit)<1) and (isdifto(slista[w][cp],slista[w][cp-1])) then
+           //writeln('.. diftonki ', yy[w][cp],yy[w][cp-1],' ei kelpaa')
+      else getword(w,0,cp);
+      if d then writeln('###</ul>');
+      w:=nodes[w].jump;
+      if w=0 then exit;
+    end;  //yhden tason jutut
+   except writeln('<hr>jatko'); end;
+
+end;
+
+
+function getword(ww,tc,cutp:word):boolean;
+var i,j,uto,muntavut,muntavutb:word;a,b:char;
+begin
+       uto:=max(nodes[ww].jump,ww+1);
+       if d then writeln('<li>GW:',ww, '//',uto,copy(reversestring(slista[ww]),3),'//',cutp,'/',tc,'<ul>');
+       while (ww<uto) do // and (ww<>0) do  //käy läpi suorat lapset
+       begin
+         muntavut:=0;//tc;
+         muntavutb:=0;
+         for i:=cutp to length(slista[ww]) do if tavuraja(slista[ww][i-1],slista[ww][i]) then muntavut:=muntavut+1;
+         //if muntavut<4 then
+        if d then  writeln('<li><tt>',reversestring(copy(slista[ww],cutp)),'...  </tt>',muntavut mod 2=1,' ',slista[ww]);
+        try
+        if muntavut mod 2=1 then lres.add(reversestring(slista[ww]));
+         //writeln('////');
+         ww:=ww+1;//nodes[ww].jump;
+         //break;
+         except writeln('<hr>NOGW',muntavut,'/');raise; end;
+       end;
+       if d then writeln('</ul>');
+
+    end;
+procedure knollaa(alku:integer); var ii:integer; begin  for ii:=alku to 23 do begin lets[ii].c:=#0;lets[ii].w:=0;end;  end;
+
+function shorthits(san:ansistring;w,slen,sfar:word):tstringlist; //etsi sanat joissa vain konsonantti tietyn kohdan edellä
+  var i,j,epoint:integer;  //ei huomio tuplakons vielä
+  begin
+    epoint:=nodes[w].jump;
+    try
+    if d then writeln('<li>tryshort@',w,'..',epoint,' ',reversestring(slista[w]),' ',san,'/L:',slen,'/F:',sfar);
+    w:=w+1;
+    while w<=epoint do
+    begin
+      if d then writeln('<li>SHORT',sfar,slen
+      ,'(',w,reversestring(slista[w]),' |',slista[w][SFAR],' |',SAN[SFAR],'<b>',copy(slista[w],1,sfar),'</b>');
+      if   slista[w][sfar]=SAN[sfAR] THEN
+      begin
+        if d then writeln('???',w,reversestring(COPY(slista[w],SFAR)+'/'+SAN),'!');
+        //if length(yy[w])=sfar then writeln('hihithithithit!');
+
+        w:=w+1;sfar:=sfar+1;
+        if sfar+1=slen then
+        begin
+          writeln('<li>?????????',reversestring(slista[w]));//,'...',reversestring(slista[nodes[w].jump]));
+          j:=w+1;epoint:=nodes[w].jump;
+          while j<epoint do
+          begin
+            if j=0 then break;
+            if d then  writeln('<li>--',reversestring(slista[j]),'+',slista[j][slen+1],'/',nodes[w].jump, '#',length(slista[j]),slen);
+            if (length(slista[j])-3=slen) and (pos(slista[j][slen+1],konsonantit)>0) then
+             sres.add(reversestring(slista[j]));//writeln('*************');
+            j:=nodes[j].jump;
+          end;
+          break;
+        end;
+        continue;
+      end;
+      if slista[w][sfar]<SAN[sfAR] then w:=w+1 else  w:=nodes[w].jump;
+      if w=0 then exit;
+    end;
+    except writeln('nono sex act');end;
+end;
+

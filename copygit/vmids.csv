@@ -14,7 +14,7 @@
 61  ;kolhia          ,i              ,i               ,i               ,ii              ,it              ,in              ,                ,it              ,i               ,                ,i               
 62  ;naida           ,d              ,                ,                ,                ,d               ,n               ,-               ,                ,d               ,-               ,                
 63  ;saada           ,d              ,                ,                ,                ,d               ,n               ,-               ,                ,d               ,-               ,                
-64  ;viedä           ,d              ,                ,                ,                ,d               ,n               ,-              ,                ,d              ,-               ,                
+64  ;viedä           ,d              ,                ,                ,                ,d               ,n               ,--              ,                ,d              ,-               ,                
 65  ;käydä           ,ud             ,u               ,u               ,u               ,uda             ,un              ,v               ,u               ,ud              ,v               ,u                
 66  ;päästä          ,st             ,se              ,se              ,see             ,sta             ,ss              ,s               ,s               ,st             ,s               ,se              
 67  ;puhella         ,*              ,e               ,e               ,ee              ,*a              ,*               ,                ,                ,*a              ,                ,e               
