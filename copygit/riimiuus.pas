@@ -4,37 +4,15 @@ unit riimiuus;
 
 interface
 uses
-  Classes, SysUtils,verbit,nominit,strutils,riimiutils;
+  Classes, SysUtils,verbikama,nominit,sanataulu,strutils,riimiutils;
 const vahvatverbiluokat=[52..63,76];
 const vahvatnominiluokat=[1..31,76];
+const rimis=16;
 
 type tlka=record esim:string;kot,ekasis,vikasis:word;vahva:boolean;vikasana:word;end;
 type tsis=record ekaav,vikaav:word;sis:string[8];vikasana:word;end;
 //type tverlvok=record ekaav,vikaav:word;vok:array[0..1] of char;end;
 type tav=record ekasana,takia,vikasana:word;h,v,av:string[1];end;  //lis‰‰ viek‰ .takia - se josta etuvokaalit alkavat
-type tsan=record san:string[15];akon:string[4];takavok:boolean;end;
-type tnod=record ru_lyh,ru_pit,yhted,jump,ed,lev,len,tavucount:word;reftavs:integer;etu,tie:boolean;letter:ansichar;end;
-type txnod=record ch:ansichar;jump,ed,lev,olisana:word;taka:boolean;end;
-type tlet=record c:ansichar;w:word;end;
-type tmuotolista=class(tobject)
-     eds:tstringlist;
-     lets:array[0..64] of tlet;
-     //jumps,palalen:array[1..2068] of word;
-     nodes:array[0..28088] of tnod;
-     //xnodes:array[0..12000] of txnod;
-     //xnn:word;
-     lres,sres:tstringlist;
-     eithits:array[1..30000] of word;
-     hitcount:word;
-     sanalista:tstringlist;
- procedure listaa(slista:tstringlist);
- procedure riimit(slista:tstringlist);
- procedure ETSIlista;
- procedure teetaulu(yy:tstringlist);
-   // procedure do99;
- function sexact(haku:ansistring;yy:tstringlist):word;  //kutsutaan kun haku on edellyt ekaan (k‰‰nt) vokaaliin
-    end;
-
 type tsanasto=class(tobject)
  vcount,ncount:integer;
  lks:array[0..80] of tlka;
@@ -44,13 +22,13 @@ type tsanasto=class(tobject)
  sanataulu:array[0..32767] of string[20];
  verbit:tverbit;
  nominit:tnominit;
- eitaivu:tmuotolista;
+ eitaivu:tstaulu;
  hakulista:tstringlist;
  hitlist:array[1..30000] of word;hitcount:integer;
  sanoja:tstringlist;
  function haenumero(sana:ANSISTRING):word;
  procedure expandlist(wlist:tlist;rlist:tstringlist);
- procedure numeroikaikki;
+//rocedure luohaku;
  //0-pohjasia, mutta data alkaa 1:st‰
  procedure luesanat(fn:string);
  procedure listaa;
@@ -58,565 +36,18 @@ type tsanasto=class(tobject)
  function generateverb(resus:tstringlist;snum:word):ansistring;
  function generatenom(resus:tstringlist;snum:word):ansistring;
  procedure concor;
- function luohaku(fn:string):tstringlist;
+ //function luohaku(fn:string):tstringlist;
  function etsiyks(hakusana,hakuakon,hakukoko:string;hakueietu,hakueitaka:boolean;sika:tsija;aresu:tstringlist;onjolist:tlist;var hits:word):word;
  procedure etsimuodot(hakunen:thakunen;aresu:tstringlist;onjolist:tlist);
  constructor create;
  end;
+var sanasto:tsanaSTO;
 
 implementation
-uses riimitys,math;
-function red(st:string):string; begin result:='<b style="color:red">'+st+'</b>';  end;
-function blue(st:string):string;  begin result:='<b style="color:blue">'+st+'</b>';  end;
-
-procedure tavutnoodi(VAR node:tnod;san:ansistring);
-//type tnod=record rlen,yhted,jump,ed,lev,len,tavucount:word;reftavs:integer;etu,tie:boolean;letter:ansichar;end;
-var i,j,len,tavus,ct,prevok:word;nod:tnod;onkon:boolean;ch:ansichar;cutps:array[0..9] of byte;
-     palat:array[0..4] of string[9];
-     //runks1,runks2:string;
-     //rlen1,rlen2:word;
-begin
- prevok:=0;  tavus:=1;
- fillchar(ct,sizeof(ct),0);
- fillchar(cutps,sizeof(cutps),0);
- fillchar(palat,sizeof(palat),0);
- len:=length(san);
- //writeln(' <h3>',san,'</h3>');
- for i:=1 to len do
- begin  // asia  aisa
-  CH:=san[i];
-  onkon:=pos(ch,vokaalit)<1;
-  //writeln(' <li><b>:',san[i],'/tavus:',tavus,'/pvok:',prevok,'/k:',onkon,':</b>');
-  if prevok=0 then  //ed oli konsonantti
-  begin
-     if not onkon then prevok:=prevok+1;
-  end else
-  begin  //ed oli vokaali
-     //writeln('[',san[i],san[i-1],']');
-     if onkon then //pukiso[n]a ->na
-     begin
-       cutps[tavus]:=i-1;  //ei huomioida konsoinanttia tavun pituuteen
-       tavus:=tavus+1;
-       prevok:=0;
-       //ponkon:=false
-     end
-     else  //vokaali vokaalin j‰lkeen
-     if (prevok>1) or (not isdifto(san[i],san[i-1])) then //as[i]a ->a
-     begin
-       //writeln('<b style="color:red">-',san[i],san[i-1],'</b>');
-       cutps[tavus]:=i-1;
-       tavus:=tavus+1;
-       prevok:=1;
-       //pONKON:=FALSE;
-    end else prevok:=prevok+1;
-
-   END;
-   //ponkon:=onkon;
- END;
-  if pos(san[len],vokaalit)<1 then tavus:=tavus-1  //begin tavus:=tavus+1;cutps[tavus-1]:=len;end;
-  else cutps[tavus]:=len;
-  node.tavucount:=tavus;
-  if tavus>3 then   //ei etsit‰ yhdeb tavun riimej‰. joskus kyll‰ haluttaisiin
-  begin
-   node.ru_lyh:=cutps[tavus-2];
-   node.ru_pit:=cutps[tavus];
-  end
-   else
-   begin
-      node.ru_lyh:=cutps[tavus];
-      node.ru_pit:=cutps[tavus];
-   //rlen2:=0;
-   end;
-  //writeln('<li>',NODE.TAVUCOUNT,' <b>',reversestring(san),' /',reversestring(copy(san,1,node.ru_lyh)),' \',reversestring(copy(san,1,node.ru_lyh)),'</b> ',node.ru_lyh,node.ru_pit);
-end;
-
-function tavuraja(a,b:ansichar):boolean;  //huom k‰‰nteinen suunta
-begin  //
-   result:=false;
-   if pos(a,vokaalit)>0 then //a on normaalij‰rjesyksess‰ seuraava kirjain
-   begin  // vailla -> av
-     if pos(b,konsonantit)>0 then result:=true
-     else if not (isdifto(b,a)) then begin result:=true;;end;
-     //if pos(b,vokaalit)>0 then writeln(a,b,result);
-    end;
-   // writeln(' /',ifs(result,'<b>'+a+b+'</b>',a+b));
-end;
+uses //riimitys,
+  math;
 
 
-function tavusrev(st:ansistring):word;
-var i:word;turha:ansistring;pvok,isvok:boolean;
-begin                                   //  ae ao ea eo ia io oa oe ua ue
-   pvok:=fALSE;
-   result:=0;turha:='';
-   for i:=1 TO length(st) do
-   begin
-    isvok:=pos(st[i],vokaalit)>0;
-    if pvok then
-    begin
-      if (isvok) and (not isdifto(st[i],st[i-1])) then result:=result+1
-      else  if not isvok then  result:=result+1;
-    end;
-    pvok:=isvok;
-    //writeln(' ',st[i-1],'<b>',st[i],'</b>',result);
-   end;
-   if pvok then result:=result+1;
-    //for i:=2 to length(st) do begin  turha:=turha+st[i];if (tavuraja(st[i-1],st[i])) then begin  turha:=turha+'-';result:=result+1;end;end;
-     //writeln(' ',result,pvok);
-    //writeln('<li>',string(turha),st[length(st)],result);
-end;
-
-function tmuotolista.sexact(haku:ansistring;yy:tstringlist):word;  //kutsutaan kun haku on edellyt ekaan (k‰‰nt) vokaaliin
-
-  procedure dofail(haku,edsana,paras:ansistring;t:boolean);
-  var color:string;commons:word;
-  begin
-  try
-  if paras<>'' then edsana:=paras;
-  if pos(copy(haku,1,length(edsana)),edsana)=1 then
-  begin
- //    if (pos(haku[length(edsana)+1],vokaalit+'ns-')>0) then
-     //or (pos(haku[length(edsana)+1],'ns')>0) then
-     //or (haku[length(edsana)-1]='n') then
-      //writeln('(<span style="color:green">',reversestring(haku+':'+edsana),'</span>) ')
-      //else writeln('(<span style="xcolor:red">',reversestring(haku+':'+edsana),'</span> ');
- //     writeln(reversestring(haku),'/',reversestring(edsana),'!')
- //       else
-if 1=0 then        writeln('<span style="color:red" title="',haku,'/',edsana,'">!',reversestring(copy(haku,length(edsana)+1))+'</span>'+copy(reversestring(edsana),1));
-
-     //writeln('!',haku[length(edsana)-1]);//,length(edsana)-2,haku);
-  // color:='red' else color:='blue';
-
-   exit;
-  end;
-  exit;
-  if color='blue' then
-   writeln('(<span style="color:',color,'">',reversestring(haku+':'+edsana),'</span>) ');
-  except writeln('FAIL');end;
-  end;
- var ww,prevww,epoint,cp,hlen,cc:integer;d:boolean;besthit:ansistring;
-  begin
-  d:=false;
-  //d:=true;
-   result:=0;
-     ww:=1;
-    epoint:=27954;hlen:=length(haku);
-    epoint:=3000;
-    cp:=1;cc:=0;
-    besthit:='';   prevww:=0;
-    if d then writeln('.<hr>@',ww,'..',reversestring(haku),' ',cp,' ');//<ul>');
-    try
-    while ww<=epoint do
-    begin
-       try
-       if haku[1]='_' then delete(haku,1,1);
-       //writeln('#',ww,'<b>!',nodes[ww].letter,'</b>');
-       cc:=cc+1;if cc>600 then break;
-       if nodes[ww].letter=haku[cp] then
-       begin
-          try
-          if (nodes[ww].len=hlen) and (pos(haku,yy[ww])=1) then
-          begin if d then writeln('<b style="color:green">',reversestring(yy[ww]),'</b>');result:=ww;
-           hitcount:=hitcount+1;
-           eithits[hitcount]:=ww;exit;
-          end; //fullhit
-          if not nodes[ww].tie then
-           begin cp:=cp+1;
-           if nodes[ww].jump>0 then epoint:=nodes[ww].jump;  //
-           end;
-           if (pos(copy(yy[ww],1,length(yy[ww])-0),haku)=1) then
-            //besthit:=yy[ww];
-              if length(yy[ww])>length(besthit) then besthit:=yy[ww];// else writeln('<li>',reversestring(yy[ww]),'/',reversestring(besthit));
-          if d then writeln('<li>+',haku,cp,'<b>',nodes[ww].letter,'</b>',reversestring(yy[ww]),' ',reversestring(copy(yy[ww],cp,length(yy[ww])-0-cp))
-            ,'|<b>',reversestring(copy(yy[ww],1,cp)),'</b>_',nodes[ww].letter,epoint,' /next:',haku[cp]);//,'<ul>');
-          except writeln('jotainvikaa');end;
-          prevww:=ww;
-          ww:=ww+1;
-       end //ei, koklaa seuraavaa
-       else
-       begin
-          try
-         if d then writeln('-<b>',nodes[ww].letter,'</b>','',reversestring(yy[ww]),epoint);
-         if nodes[ww].jump=0 then begin dofail(haku,yy[prevww],besthit,true);exit;end;
-         ww:=nodes[ww].jump;
-          except writeln('FAILmiss',ww,' ',prevww);raise;end;
-
-       end;
-       if ww>epoint then dofail(haku,yy[prevww],besthit,false);
-       except writeln('FAILSexact',ww,' ',prevww,'!');raise;end;
-   end;
-   finally writeln('</ul>');end;
-  end;
-
- procedure tmuotolista.etsilista;
- var Etsityt:TSTRINGLIST;I:INTEGER;
-begin
-  writeln('wikite sanat');
-  try
-  //sexact(reversestring('hallinnoida'));
-  Etsityt:=TSTRINGLIST.CREATE;
-  //ELI.LOADFROMFILE('wikithe.ansi');
-  Etsityt.LOADFROMFILE('yhdys_all.lst');
-  writeln('<li>etsi: ',etsityt.count,' sanaa');
-  //try sexact(reversestring('suuraakkonen'));except writeln('<li>failetsi;',ELI[I]);end;
-  //exit;
-  for i:=1 to etsityt.count-1 do //5000 do //50000 do
-  begin
-     //if i>4000 then break;
-    //writeln('<li>etsi;',eli[I]);
-    if etsityt[i]='' then // writeln('///<b>',string(eli[i+1]),':</b> ')
- else
-    try sexact(reversestring(etsityt[i]),sanalista);except writeln('<li>failetsi;',Etsityt[I]);end;
-    //writeln('<li>',eli[i]);
-  end;
-
-//   haepa('');
- //for i:=1 to 50 do etsi(ww(yy[random(2068)]));
- except writeln('eietsi<hr>');end;
- writeln('</ul></ul></ul></ul></ul></ul></ul></ul></ul></ul>');
-end;
-
-
-procedure tmuotolista.riimit(slista:tstringlist);
- var      kirs,adss,cc:integer;
-     inf,outf,misfile:textfile;
-     len,edlen,maxlen,curlev:word;
-     a:word;
-     d:boolean;
-     syy:ansistring;
-     resmat:  array of word; //P.O. dynamic packed array
-
-     function ww(www:string):string;
-     begin result:=copy(www,1,length(www)-2);
-     end;
-   procedure addres(r,c:word);
-   var i,rhymecount,rpos,fpos,rivinalku:word; //huom resmat nollapohjainen
-   begin
-     rpos:=(r-1)*64; //nollas arvo on jo lˆydettyjen m‰‰r‰, sarakeindeksit ykkˆspohjaisia
-     rhymecount:=resmat[rpos];
-     if rhymecount>64 then begin writeln('Riimirivi  ',r,' on jo t‰ynn‰');exit;end;
-     resmat[rpos+rhymecount+1]:=c; //arvo talteemn
-     resmat[rpos]:=rhymecount+1; //m‰‰r‰ kasvatetaan
-     exit;
-     writeln('<div>sanan ',r,reversestring(slista[r]), ' arvo ',rhymecount+1,'=',c,reversestring(slista[c]),rpos div 64,': ');
-     for i:=0 to 64 do writeln(resmat[rpos+i]);
-     writeln('<b> ',r,reversestring(slista[r]), ' > ',c,reversestring(slista[c]),' ',rpos div 64,':',rhymecount+1,'</b>');
-     writeln('</div>');
-   end;
-
-  function sopii(vert,kohde:word;kohrpit,kohrlyh:ansistring;var short:boolean):boolean;
-      var nchar:ansistring; mypit,mylyh:ansistring;
-     begin
-       try                 //  k ampe-aisimme  h aisimme
-        result:=false;
-        try
-        mypit:=copy(slista[vert],1,nodes[vert].ru_pit);
-        mylyh:=copy(slista[vert],1,nodes[vert].ru_lyh);
-        if mypit=kohrpit then result:=true
-        else if mypit=kohrlyh then result:=true
-        else if mylyh=kohrpit then result:=true;
-        if abs(nodes[kohde].tavucount-nodes[vert].tavucount)=1 then begin syy:='eritavut';exit;end;
-      exit;
-      except writeln('EIEI:',slista[kohde],'/',slista[vert]);
-     end;
-     finally  writeln('');end;
-  end;
-
-  function eds3(sana:ansistring;snum:word):ansistring;
-  var upto,lev,cc,ss,i,j,tavus,slen,let,alasana,prevlev:word;
-       myshort,wp,ap,lp,lyhr,pitr:ansistring;dd,ookoo,voijatkuu:boolean;pit_ero:integer;
-       //res:tlist;
-
-   function alasanat(alasana,ss:word;short:boolean):ansistring;
-    var ii:word;  d:boolean;
-    begin
-      try
-       d:=false;
-       //d:=true;
-      upto:=snum;//nodes[ss].jump;
-      if d then writeln('<span style="color:blue">[[',alasana,upto,':');
-      while alasana<upto do
-      begin
-         cc:=cc+1;
-         if cc>300000 then break;
-         if short then
-            ookoo:=(nodes[alasana].ru_pit=nodes[snum].ru_lyh) and (alasana<>snum) and (nodes[snum].ru_lyh=nodes[alasana].ru_lyh)
-         else
-           ookoo:=(abs(nodes[alasana].tavucount-tavus)<>1) and (alasana<>snum) and (nodes[snum].ru_pit=nodes[alasana].ru_lyh);
-         //kun pitk‰‰ testaaa, voidaan hyv‰ksy‰ myˆs useampitavuiset muodot
-           if ookoo then if d then
-           writeln('<span style="color:',ifs(short,'magenta','blue'),'">', reversestring(slista[alasana]),
-             nodes[snum].ru_pit,'.',nodes[alasana].ru_lyh,'</span>')
-           else  if d then writeln('!!<span style="background:',ifs(short,'brown','red'),'">', reversestring(slista[alasana]),
-               nodes[snum].ru_pit,'.',nodes[alasana].ru_lyh,'</span>');
-          if d then if ookoo then writeln('>',reversestring(slista[alasana]));
-          if ookoo then addres(snum,alasana);
-         if (nodes[alasana].jump>alasana)
-          and (pos(nodes[alasana].letter,vokaalit)>0)
-            and (short) then alasana:=nodes[alasana].jump
-          else alasana:=alasana+1;
-         if alasana=0 then breAK;
-      end;
-      except writeln('FAIL',alasana,'/',ss,ifs(short,'LY','PI'));end;
-            if d then writeln(']]</span> ');
-    end;
-
-  // tmuotolista.riimit
- var d,short:boolean;
-  begin
-  //res:=tlist.create;
-  //resres:=tlist.create;
-    result:='';//'#'+inttostr(nodes[snum].tavucount);//('!!'+sana);
-   begin
-     d:=false;
-     lets[1].w:=0;
-     cc:=0;
-     slen:=nodes[snum].ru_lyh-1;
-     tavus:=nodes[snum].tavucount; //huom tavut, ei reftavut
-     let:=slen;
-     pitr:=copy(sana,1,nodes[snum].ru_pit);
-     lyhr:=copy(sana,1,nodes[snum].ru_lyh);
-     for i:=nodes[snum].lev-1 downto 1 do //nodes[snum].ru_lyh-1 do
-     begin
-        try
-         ss:=lets[i].w;
-       //jos sana on monitavuinen, loppup‰tk‰styn vrt:n pit‰‰ m‰ts‰t‰ t‰ysin. Kokonaisen vrt:n
-       //sana lyhyt, vertailtava lyhyt: pit‰‰ m‰ts‰t‰ t‰ysin
-        if d then writeln('<div>','#',i,'_',ss);
-        syy:='';
-        ookoo:=sopii(ss,snum,pitr,lyhr,short);
-        if ookoo then addres(snum,ss);
-       if d then
-       if ookoo then writeln(' <span style="color:green">',reversestring(slista[ss]),nodes[ss].ru_pit,'.',nodes[ss].ru_lyh,'</span>')
-       else  writeln(ifs(syy<>'','<span style="color:red">'+syy+'</span>',''),reversestring(slista[ss]));
-       alasana:=ss+1;
-       if d then writeln('</div>');
-       if nodes[snum].ru_pit=nodes[ss].lev then
-            alasanat(alasana,ss,false)
-       else if nodes[snum].ru_lyh<>nodes[snum].ru_pit then if nodes[snum].ru_lyh=nodes[ss].lev then
-       begin  //loppup‰tk‰ sopii, mutta perussana jatkuu. Vertailtavien alasanojem  pit‰‰ mats‰t‰ kokonaan
-         alasanat(alasana,ss,true);
-       end;
-
-        finally prevlev:=ss;end;
-     end;
-    end;
-  end;
- var i,j,sn:integer;edsana,lyh,sana:ansistring;
- begin
-   d:=false;
-   //d:=true;
-    curlev:=01;
-    setlength(resmat,slista.count*64);
-    fillchar(resmat[0],slista.count*64,0);
-    writeln('<li>resmat:', length(resmat),' ',slista.text,lets[1].w);
-    for i:=1 to slista.count-1 do
-    begin
-    try
-     lets[nodes[i].lev].w:=i;
-     lets[nodes[i].lev].c:=nodes[i].letter;
-
-       if d=d then for j:=curlev downto nodes[i].lev do writeln('</div>');
-       try
-       curlev:=nodes[i].lev;
-       except WRITELN('<li>XXXX',i);end;
-
-      sana:=ww(slista[i]);
-      if nodes[i].etu then
-       sana:=etu(sana);
-     except writeln('___');writeln('<li>########',j,'#i:',i,'/nodlev:',' /curlev:',curlev);end;
-     try
-     if d then
-     writeln('<div>',lets[1].w,'>',i,'>',nodes[i].jump,'/',' ',reversestring(copy(slista[i],nodes[i].yhted+1))+'<b>', reversestring(copy(slista[i],1,nodes[i].yhted)),'</b> ',nodes[i].tavucount,' ',red(inttostr(nodes[i].ru_lyh)),nodes[i].ru_pit,nodes[i].ru_lyh,':: ');//,'>',nodes[i].jump,'::');
-     if d then if nodes[i].ru_pit<>nodes[i].ru_lyh then writeln(reversestring(copy(slista[i],1,nodes[i].ru_lyh)));
-     eds3(slista[i],i)
-     //writeln(' ',eds3(slista[i],i));//,nodes[i].lev));
-     except writeln('___fail');writeln('<li>zzz',j,'#i:',i,'/nodlev:',nodes[i].jump,' /curlev:',curlev);raise;end;
-  end;
-    writeln('<h3>lista</h3>');
-     for i:=20 downto 1 do //slista.count-1 do
-     begin
-        //writeln('<li>',i,reversestring(slista[i]),': ');//,'#',resmat[64*(i-1)],':::');
-      for j:=1 to 8 do
-       if (resmat[64*(i-1)+j]<i) then if (resmat[64*(i-1)+j])>0 then//or (resmat[j,i]) then
-         begin
-          addres(resmat[64*(i-1)+j],i);
-          //writeln(resmat[64*(i-1)+j],'/',reversestring(slista[resmat[64*(i-1)+j]]));
-         end;
-     end;
-     writeln('<hr>');
-    for i:=1 to slista.count-1 do //slista.count-1 do
-    begin
-      writeln('<li>',i,reversestring(slista[i]),': ');//,'#',resmat[64*(i-1)],':::');
-      for j:=1 to 16 do
-       if (resmat[64*(i-1)+j])>0 then //or (resmat[j,i]) then
-        writeln(' ',reversestring(slista[resmat[64*(i-1)+j]]),resmat[64*(i-1)+j]);
-       //writeln(' ',i+1,'/',resmat[(64*(i-1))+j],reversestring(slista[resmat[64*(i-1)+j]]),': ');
-    end;
-    writeln('<hr>');
- end;
-
-procedure tmuotolista.listaa(slista:tstringlist);
-var      kirs,adss,cc:integer;
-    inf,outf,misfile:textfile;
-    len,edlen,maxlen,curlev:word;
-    a:word;
-    d:boolean;
-    function ww(www:string):string;begin result:=copy(www,1,length(www)-2);end;
-
-var i,j,sn:integer;edsana,lyh,sana:ansistring;
-begin
-   curlev:=01;
-   //exit;
-   writeln('<li>listaa:',slista.count);
-   for i:=1 to slista.count-1 do
-   begin
-   try
-      for j:=curlev downto nodes[i].lev do writeln('</div>');
-      try
-      curlev:=nodes[i].lev;
-      except WRITELN('<li>XXXX',i);end;
-
-     sana:=ww(slista[i]);
-     if nodes[i].etu then
-      sana:=etu(sana);
-    except writeln('___');writeln('<li>########',j,'#i:',i,'/nodlev:',' /curlev:',curlev);end;
-    try
-    writeln('<div>',reversestring(copy(slista[i],nodes[i].yhted))+'<b>', reversestring(copy(slista[i],1,nodes[i].yhted-1)),'</b> ',nodes[i].lev,' ',reversestring(slista[nodes[i].jump]));
-   // writeln('<div>',i,';',nodes[i].lev,nodes[i].letter,'!',i,' ',nodes[i].lev,' :',nodes[i].yhted,' ',reversestring(copy(sana,nodes[i].yhted+1))
-   //   +'<b style="color:blue">',reversestring(copy(sana,1,nodes[i].yhted)),'</b> ',copy(reversestring(slista[nodes[i].jump]),3),'  ->',nodes[i].jump,' ',nodes[i].yhted,'/',sanalista[i],nodes[i].tie);
-    except writeln('___');writeln('<li>zzz',j,'#i:',i,'/nodlev:',nodes[i].jump,' /curlev:',curlev);raise;end;
- end;
-end;
-
-procedure tmuotolista.teetaulu(yy:tstringlist);
-var      kirs,adss,cc,reftavs:integer;
-    inf,outf,misfile:textfile;
-    len,edlen,maxlen,curlev:word;
-    a:word;
-    d:boolean;
-  procedure nollaa(alku:integer); var ii:integer; begin  for ii:=alku to 23 do begin lets[ii].c:=#0;lets[ii].w:=0;end;  end;
-  function ww(www:string):string;begin result:=copy(www,1,length(www)-2);  end;
-var i,j,sn:integer;edsana,lyh,sana:ansistring;
-begin
-  {yy:=tstringlist.Create;
-  yy.Delimiter:=' ';yy.StrictDelimiter:=true;
-  //yy.LoadFromFile('sanatall.ansi');
-  yy.LoadFromFile('eitaivu.lst');
-  //FOR I:=10000 TO 15000 DO  WRITELN(YY[I]);  EXIT;
-  yy.sort;
-  yy.Insert(0,'');
-  }
-  edsana:=yy[0];edlen:=length(edsana);
-  fillchar(lets,sizeof(lets),0);
-  for i:=1 to 23 do begin lets[i].c:=#0;lets[i].w:=0;end;
-  mAXLEN:=0;curlev:=01;
-  nodes[0].lev:=1;
-  curlev:=0;
-  nodes[0].reftavs:=0;
-  d:=false;
-  //d:=true;
-    nodes[0].yhted:=1;
-  nollaa(curlev+1);
-  writeln('<h3>teetaulu:',yy.count,'</h3><style type="text/css">div { border:1px solid red;margin-left:1em}</style>');
-  for i:=0 to yy.count-1 do
-  begin
-   try
-   //writeln('.',i);
-   sana:=yy[i];//ww(yy[i]);
-   if sana='' then continue;
-   nodes[i].tie:=false;
-   nodes[i].jump:=0;
-   //nodes[i]ru_lyh:=length(sana);for j:=length(sana) downto length(sana)-3  do if pos(yy[i][j],vokaalit)>0 then break else nodes[i]ru_lyh:=nodes[i]ru_lyh-1;
-   nodes[i].len:=length(sana);
-   tavutnoodi(nodes[i],sana);
-   //nodes[i].tavucount:=tavusrev(sana);
-   //nodes[i].reftavs:=reftavs;
-
-   //writeln(' XXX',reversestring(sana),nodes[i].ru_lyh);
-   nodes[i].etu:=yy[i][length(yy[i])]='0';
-   except writeln('???',i,sana);raise;end;
-   try
-   for a:=1 to curlev+1 do //length(sana)+1 do
-   begin
-       if d then write('_',sana[a]);
-      //writeln(a,sana[a],lets[a].c,lets[a].w);
-      if a>length(sana) then //.. //ravakasti r‰v‰k‰sti  .. loppuun asti
-      begin
-         try
-          if d then writeln('<li>koko::',reversestring(yy[i]),'/',reversestring(yy[i-1]),curlev) ;
-          nodes[i].ed:=i-1;
-          nodes[i-1].jump:=i;
-          nodes[i-1].tie:=true;
-          nodes[i].yhted:=nodes[i-1].yhted+1;
-          //nodes[i].reftavs:=nodes[i-1].reftavs+1;
-          nodes[i].lev:=min(a,nodes[i-1].lev);
-          nodes[i].letter:=sana[curlev];
-          lets[curlev].w:=i;
-          //lets[nodes[i].lev-1].w:=i;
-          //writeln('<li>samasana:',sana,a);
-          break;
-         except writeln('N???',i,yy[i]);raise;end;
-      end;
-  try
-      if (lets[a].c=#0) //and (a<=curlev)
-      then  //sana suoraa jatkoa edelliselle  .. ei tarpeen?
-      begin
-       try
-        if d then writeln('//');
-       nodes[i].yhted:=min(a,nodes[i-1].yhted+1);
-       nodes[i].lev:=nodes[i-1].lev+1;
-       //nodes[i].reftavs:=nodes[i-1].reftavs+1;
-       nodes[i].letter:=sana[curlev+1];
-       nollaa(curlev+1);
-       nodes[i].ed:=i-1;
-       if lets[a].w<>i then if nodes[lets[a].w].yhted>=nodes[i].yhted then  nodes[lets[a].w].jump:=i;
-       curlev:=curlev+1;
-       lets[curlev].w:=i;
-       lets[curlev].c:=sana[curlev];
-       nodes[i].lev:=curlev;
-       break;
-       except writeln('??');end;
-      end else
-      if lets[a].c<>sana[a] then  //kohta jossa poikkeaa edelt‰j‰st‰
-      begin
-        try
-          if d then writeln('##',a);
-          nollaa(a+1);
-          nollaa(curlev+1);
-          nodes[i].ed:=lets[a-1].w;
-          nodes[i].yhted:=min(a,nodes[i-1].yhted+1);
-         curlev:=a;//nodes[i].lev;
-         if nodes[lets[a].w].yhted>=nodes[i].yhted then  nodes[lets[a].w].jump:=i;
-         lets[a].c:=sana[a];lets[a].w:=i;
-         nodes[i].lev:=a;//nodes[nodes[i].ed].lev+1;
-         if d then writeln('%',lets[a-1].w);
-         //nodes[i].reftavs:=nodes[lets[a-1].w].reftavs+1;
-         nodes[i].letter:=sana[curlev];
-        break;
-        except writeln('<li>',i,' ',curlev,'?????pieleenmen',a,reversestring(yy[lets[curlev-1].w]));break;end;
-      end
-      else  begin  //keep going
-        if d then writeln('.'); nodes[i].yhted:=a;end;
-   except writeln('X???',i,yy[i]);raise;end;
-   //type tnod=record ru_lyh,ru_pit,yhted,jump,ed,lev,len,tavucount:word;reftavs:integer;etu,tie:boolean;letter:ansichar;end;
-
-   end;
-   //finally //if d then writeln('\',nodes[i].reftavs,'\');      nodes[i].reftavs:=nodes[nodes[i].ed].reftavs;
-   finally
-     try
-      nodes[i].reftavs:=nodes[nodes[i].ed].reftavs;
-       if d then   with nodes[i] do writeln('<li>!:', i,' /lev:',lev,' /r:',ru_lyh,' ',ru_pit,' /yht:',yhted,'/ref',reftavs,'::',reversestring(sana), ' ');
-     //if (pos(nodes[nodes[i].ed].letter,vokaalit)>0) AND (pos(nodes[i].letter,vokaalit)<1) then
-        if (pos(nodes[i].letter,vokaalit)>0) and ((pos(nodes[nodes[i].ed].letter,vokaalit)<1)
-        or (not isdifto(nodes[i].letter,nodes[nodes[i].ed].letter))) then
-        nodes[i].reftavs:=nodes[i].reftavs+1;
-          //nodes[lets[a-1].w].reftavs+1;
-        except writeln('fianally???',i,yy[i]);raise;end;
-
-   end;
-  end;
-  //FOR I:=0 TO 10000 DO WRITELN(yy[I]);
-end;
 procedure tsanasto.concor;
 var numsf:textfile;line,s:ansistring;
     cc:array [0..35000] of array [0..15] of word;
@@ -911,7 +342,7 @@ var eitaka,eietu:boolean;akon,koko,loppu:ansistring;aresu:tstringlist;onjolista:
    hits,myhit:word;
 begin
 akon:='';
-
+sana:=reversestring(sana);
 voksointu(sana,eietu,eitaka);
 koko:=sana;
 while pos(sana[1],konsonantit)>0 do begin akon:=sana[1]+akon;   delete(sana,1,1); end;
@@ -921,13 +352,22 @@ loppu:=taka(reversestring(sana));
 
 //exit;
 //resst:=resst+
-myhit:=etsiyks(loppu+akon,koko,'',eietu,eitaka,verbit.sijat[0],aresu,onjolista,hits);
-if myhit=0 then myhit:=etsiyks (loppu+akon,koko,'',eietu,eitaka,nominit.sijat[0],aresu,onjolista,hits);
+//writeln(verbit.sanat[0].san);
+//verbikama.
+//writeln(verbit.sijat[10].ending+'!');
+//writeln('numeroi;',sana,loppu+akon,koko,'',eietu,eitaka);//,verbit.vesims[1]);//,verbit.sijat[0],aresu,onjolista,hits);
+
+  myhit:=etsiyks(loppu+akon,koko,'',eietu,eitaka,verbit.sijat[0],aresu,onjolista,hits);
+// function etsiyks(hakusana,hakuakon,hakukoko:string;hakueietu,hakueitaka:boolean;sika:tsija;aresu:tstringlist;onjolist:tlist;var hits:word):word;
+//writeln(verbit.sijat[0].ending);
+  if myhit=0 then myhit:=etsiyks (loppu+akon,koko,'',eietu,eitaka,nominit.sijat[0],aresu,onjolista,hits);
 //etsiyks (HAKUNEN.loppu+hakunen.akon,hakunen.koko,'',hakunen.eietu,hakunen.eitaka,sika,aresu,onjolist,hits);
-     writeln('<li>hit;',sana,'#',myhit);
+     writeln('<li>hit;',sana,'######',myhit);
      result:=myhit;
 end;
-procedure tsanasto.numeroikaikki;
+
+{
+procedure tsanasto.luohaku;
 var instream,hitfs,misfs:tfilestream;
      inf,synf,sanaf,misfile,numfile:textfile;
      sana,prevsana,hakurunko,akon,hakukoko,hitline:ansistring;
@@ -937,10 +377,10 @@ var instream,hitfs,misfs:tfilestream;
      linehits,tries:tlist;
      olisana,ekasana:boolean;
      resus:tstringlist;
-     muodot:tmuotolista;
+     muodot:tstaulu;
      //sanalista:tst
 begin
- writeln('<h1>haenum:</h1>',haenumero('voida'));
+ //writeln('<h1>haenum:</h1>',haenumero('voida'));
  sanoja:=tstringlist.create;       ////  ae ao ea eo ia io oa oe ua ue
  sanoja.loadfromfile('haku.lst');
  //sanoja.commatext:='vaaitsemalla,aatos';//paatti,pataraatti,mataatti,tiilla,tialla,raanulla,haella,haulla,hulla,tulla,puraisulla,sulla,muraisulla,voida,voit,puulla,uulla,ulla,alla,olla,talla,tolla,koivulla,voivulla,vuivulla,xulla,knulla,vuikukulla,vaikulla,vavalla,tavalla,kavavalla,zalla,ella,luulla,kuulla,keinulla,stulla,ktulla,voipivulla,katialla';
@@ -963,7 +403,7 @@ expandlist(tries,resus);
 //writeln('<h3>sanoja</h3>',sanoja.text);
 resus.duplicates:=dupIgnore;
 resus.sorted:=true;
- for j:=0 to 20 do //sanoja.count-1
+ for j:=0 to sanoja.count-1 do
    resus.add(trim(reversestring(ansilowercase(sanoja[j]))));//+'al');
 resus.sort;
 //writeln('<h1>expanded</h1>',resus.text);
@@ -974,14 +414,14 @@ resus.sort;
 //for j:=0 to 0 do tries.add(pointer(random(19538)));
 //writeln('<h3>expand:</h3>');
 //for j:=0 to resus.count-1 do writeln(reversestring(resus[j]));
-muodot:=tmuotolista.create;
-writeln('<h3>taulut',resus.count,'</h3>');
+muodot:=tstaulu.create;
+//writeln('<h3>taulut',resus.count,'</h3>');
 
 muodot.teetaulu(resus);
 try
-writeln('<h3>Tehtytaulut',resus.count,'</h3>');
+//writeln('<h3>Tehtytaulut',resus.count,'</h3>');
 
-muodot.riimit(resus);
+//muodot.riimit;;
 except writeln('eionnaa');end;
 exit;
 {for j:=52 to 78 do //26000 do
@@ -1098,7 +538,7 @@ fillchar(sanataulu,sizeof(sanataulu),0);
   for cc:=0 to 30000 do  writeln(sanaf,resus[cc]);
   closefile(sanaf);
 end;
-
+}
 constructor tsanasto.create;
 var i:word;h:thakunen;slist:tstringlist;
 begin
@@ -1112,38 +552,32 @@ writeln('<div> x<div> y<div> z</div></div></div>');
 luesanat('sanatuus.csv');
 verbit:=tverbit.create('sanatuus.csv','vmids.csv','vsijat.csv');
 nominit:=tnominit.create('nomsall.csv','nmids.csv');
-eitaivu:=tmuotolista.create;
-slist:=tstringlist.Create;
-slist.Delimiter:=' ';slist.StrictDelimiter:=true;
-//yy.LoadFromFile('sanatall.ansi');
-slist.LoadFromFile('eitaivu.lst');
-//FOR I:=10000 TO 15000 DO  WRITELN(YY[I]);  EXIT;
-slist.sort;
-slist.Insert(0,'');
-eitaivu.teetaulu(slist);
-writeln('<h3>Numeroi:</h3>');
+eitaivu:=tstaulu.create('eitaivu.lst');
+writeln('<li>sanasto luotu</li>');
+
+
 
 //do99;exit;
-numeroikaikki;
-writeln('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<hr>');
+//numeroikaikki;
 //verbit.listaasijat;//exit;
-exit;
-writeln('ccccccccccccccc',verbit.lmmids[15,0],'!');
+//exit;
+writeln('sanasto luotu');//, verbej‰',verbit.lmmids[15,0],'!');
 //nominit.sanat:=sans^;
 //nominit.listaa;
  //nominit.siivoosijat;
- haemuodot;
+// haemuodot;
 end;
 
 procedure tsanasto.haemuodot;
 var i:word;
 begin
-   luohaku('haku.lst');
+{   luohaku('haku.lst');
     for i:=0 to hakulista.count-1 do
     begin
         etsimuodot(thakunen(hakulista.objects[i]),nil,nil);
-    end;
+    end;0}
 end;
+{
 function tsanasto.luohaku(fn:string):tstringlist;
 var //hakunen:tvhaku;
      ha,i,ohits,hs,hm,hakuluokka:integer;hakusana:string;
@@ -1184,7 +618,7 @@ begin
   result:=hakulista;
   hakulines.free;
 end;
-
+}
 
 
 procedure tsanasto.luesanat(fn:string);
@@ -1278,7 +712,7 @@ begin
     prlim:=prlim+1;  //just for debug to make managable listings .. not used
     except writeln('failav');end;
    end;
-    writeln('<h1>LKS:',CLKa,' /sis:',csis,' /av:',cav,' /w:',csan,'</h1>');
+    writeln('<li>Sanasto luettu ',fn,'  LKS:',CLKa,' /sis:',csis,' /av:',cav,' /w:',csan,'</h1>');
     for i:=0999 to clka do
     begin
        writeln('<li>',i, '>',lks[i].vikasana,'<ul>');
@@ -1395,7 +829,7 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
         //hitlist.add(thishit);
       end;
 
-      procedure fullhit(sana,haku:string;sa:integer);
+      procedure fullhit(sana,sanataulu:string;sa:integer);
       var kokosana,myskip:string;
       begin
         try
@@ -1410,28 +844,28 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
        except writeln('failfull');end;
       end;
 
-      procedure shorthit(sana,haku:string;sa:integer);
+      procedure shorthit(sana,sanataulu:string;sa:integer);
       var epos:word;kokosana:string;
       begin
         epos:=length(sana)+1;
         kokosana:=sikasopi+''+lkasopi+''+sissopi+''+avsopi+''+sans[sa].san+sans[sa].akon;
          if not (sans[sa].takavok) then kokosana:=etu(kokosana);
-       haku:=copy(haku,epos-1);
-       if (sana<>'') and ((pos(haku[1],vokaalit)>0) and (pos(haku[2],vokaalit)>0) and  (isdifto(haku[2],haku[1]))) then   //if pos(kokosana[2],vokaalit)<1 then
+       sanataulu:=copy(sanataulu,epos-1);
+       if (sana<>'') and ((pos(sanataulu[1],vokaalit)>0) and (pos(sanataulu[2],vokaalit)>0) and  (isdifto(sanataulu[2],sanataulu[1]))) then   //if pos(kokosana[2],vokaalit)<1 then
        else //writeln('NOGO:',haku[1],kokosana[1], isdifto(haku[1],kokosana[1]))
        writeln('<b style="color:blue"  title="',inttostr(curlka.kot)+'#',inttostr(sika.num)+'##'+inttostr(sa),'">',
        reversestring(kokosana),'/</b>');//,sa,haku);
       end;
 
 
-      procedure longhit(sana,haku:string;sa:integer);
+      procedure longhit(sana,sanataulu:string;sa:integer);
       var epos:word;kokohaku,kokosana:string;i,tc:integer;olivok:string[2];
       begin
-      kokohaku:=haku+''+avsopi+''+reversestring(sissopi)+''+reversestring(lkasopi)+''+reversestring(sikasopi);
+      kokohaku:=sanataulu+''+avsopi+''+reversestring(sissopi)+''+reversestring(lkasopi)+''+reversestring(sikasopi);
       kokosana:=sikasopi+''+lkasopi+''+sissopi+''+avsopi+''+sans[sa].san+sans[sa].akon;
       if not (sans[sa].takavok) then kokosana:=etu(kokosana);
-       epos:=length(haku)+1;
-       haku:=copy(haku,epos);
+       epos:=length(sanataulu)+1;
+       sanataulu:=copy(sanataulu,epos);
        sana:=copy(sana,epos);
        try               // [u/]usi uusi: [u/]usi       [uo/]husi kuohusi:
        if  (sana<>'') and ((pos(sana[1],vokaalit)>0) and (pos(kokohaku[1],vokaalit)>0) and (isdifto(sana[1],kokohaku[1]))
@@ -1695,14 +1129,16 @@ var i,j,lu:word;
 begin
  try
 try
+ writeln('XXX ',hakusana);
 d:=false;
 resunum:=0;
 //d:=true;
 sikaloppu:= copy(hakusana,length(sika.ending)+1);
 sikasopi:= sika.ending;
+//if sika.num<>0 then continue;
 resst:='';
 //for i:=1 to 58 do writeln(lks[i].kot,lks[i].vahva);
-if d then writeln('<li>etsiyksi:',hakusana,'-->',sikaloppu,'+',sika.ending,sika.onverbi);
+if d then writeln('<li>etsiyksi:',hakusana,'-->',sikaloppu,'+',sika.ending,sika.onverbi,sika.num);
 if sika.onverbi then
  begin for lu:=52 to 78 do if lka_f(lu,sika.num,sikaloppu,'') then begin writeln('HIOT',resunum);result:=resunum;break;end;
 end

@@ -6,7 +6,9 @@ uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
   {$ENDIF}{$ENDIF}
-  Classes, SysUtils, CustApp, riimitys,nominit, riimiutils, verbit, etsi  //, roskaa
+  Classes, SysUtils, CustApp, //riimitys,
+  nominit, riimiutils, verbikama, etsi,
+  prosessi, sanataulu  //, roskaa
   { you can add units after this };
 
 type
@@ -34,7 +36,8 @@ const aste: tasteet=((a:'_';f:'';t:''),(a:'A';f:'kk';t:'k'), (a:'B';f:'pp';t:'p'
 
 procedure TMyApplication.DoRun;
 var
-  ErrorMsg: String;noms:tnominit;verbs:tverbit;riimitin:triimitin;i:word;
+  ErrorMsg: String;noms:tnominit;verbs:tverbit;//riimitin:triimitin;
+  i:word;
 begin
   // quick check parameters
   ErrorMsg:=CheckOptions('h', 'help');
@@ -51,16 +54,18 @@ begin
     Exit;
   end;
   //if HasOption('f', 'fixteet') then begin
-  if paramstr(1)='etsi' then  begin
-    writeln('<li>verbeja');
-    riimei;
+  if paramstr(1)='etsi' then
+  begin
+    //writeln('<li>verbeja');
+    teetemput;
+    //if 'vana'='uusi' then riimei;
     //noms:=tnominit.create;
     //    verbs:=tverbit.create;
    //writeln('<li>Lataa');
    //noms.lataasanat('noms4.csv');
    writeln('<li>....');
    //noms.listaasanat;
-   writeln('<h1>oisko siinä?</h1>');
+   //writeln('<h1>oisko siinä?</h1>');
     Terminate;
     Exit;
   end;
@@ -84,7 +89,7 @@ writeln('<h1>pikalista?</h1>');
   end;
   if paramstr(1)='etsinom' then  begin
     writeln('<li>Luo');
-    riimitin:=triimitin.create;
+    //riimitin:=triimitin.create;
   // noms:=tnominit.create;
    writeln('<li>Luotu');
    //noms.listaasanat;

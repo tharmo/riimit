@@ -18,7 +18,6 @@ type tsija=record
   name,esim:string[16];
 end;
 
-
 type tvhaku=record hakunen:string[15];sija:byte;eietu,eitaka:boolean;end;
 //type tvhakuset=array of tvhaku;
 //type thakunen=record koko,akon,loppu:string;lk,sija:word;eietu,eitaka:boolean;end;
@@ -44,9 +43,50 @@ type tkokosana=record takvok:boolean;akon,alku,sis,h,v,sloppu:str16;luokka,sanan
  function list:string;
 end;
 procedure voksointu(sana:string;vAR eietu,eitaka:boolean);
+function red(st:string):string;
+function blue(st:string):string;
 function tavucount(w:string):integer;
+function tavusrev(st:ansistring):word;
 
 implementation
+function red(st:string):string; begin result:='<b style="color:red">'+st+'</b>';  end;
+function blue(st:string):string;  begin result:='<b style="color:blue">'+st+'</b>';  end;
+//type tnod=record rlen,yhted,jump,ed,lev,len,tavucount:word;reftavs:integer;etu,tie:boolean;letter:ansichar;end;
+
+function tavuraja(a,b:ansichar):boolean;  //huom käänteinen suunta
+begin  //
+   result:=false;
+   if pos(a,vokaalit)>0 then //a on normaalijärjesyksessä seuraava kirjain
+   begin  // vailla -> av
+     if pos(b,konsonantit)>0 then result:=true
+     else if not (isdifto(b,a)) then begin result:=true;;end;
+     //if pos(b,vokaalit)>0 then writeln(a,b,result);
+    end;
+   // writeln(' /',ifs(result,'<b>'+a+b+'</b>',a+b));
+end;
+
+
+function tavusrev(st:ansistring):word;
+var i:word;turha:ansistring;pvok,isvok:boolean;
+begin                                   //  ae ao ea eo ia io oa oe ua ue
+   pvok:=fALSE;
+   result:=0;turha:='';
+   for i:=1 TO length(st) do
+   begin
+    isvok:=pos(st[i],vokaalit)>0;
+    if pvok then
+    begin
+      if (isvok) and (not isdifto(st[i],st[i-1])) then result:=result+1
+      else  if not isvok then  result:=result+1;
+    end;
+    pvok:=isvok;
+    //writeln(' ',st[i-1],'<b>',st[i],'</b>',result);
+   end;
+   if pvok then result:=result+1;
+    //for i:=2 to length(st) do begin  turha:=turha+st[i];if (tavuraja(st[i-1],st[i])) then begin  turha:=turha+'-';result:=result+1;end;end;
+     //writeln(' ',result,pvok);
+    //writeln('<li>',string(turha),st[length(st)],result);
+end;
 function tavucount(w:string):integer;
 var i,tc,voks:word;ch,nch:char;pvok:boolean;
 begin

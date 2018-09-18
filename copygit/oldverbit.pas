@@ -24,7 +24,7 @@ type tvhakuset=array of tvhaku;
   //var protomids:array[0..11] of string[15];
 //type tsana=array[0..15] of ansichar;//record letters:array[0..16] of ansichar;end;
 //  sis:75 av:399 /w:9368
-type tverbit=class(tobject)
+type ztverbit=class(tobject)
     //lmmids:array[0..49] of array[0..24] of array[0..8] oF ANSICHAR;  //would this be more efficient?
     lmmids:array[0..49] of array[0..65] of string[15];
     protomids:array[0..49] of array[0..11] of string[15];

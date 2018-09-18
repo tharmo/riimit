@@ -78,7 +78,7 @@ procedure fixlista(fnin,fnout:string);
 
 
 implementation
-uses riimitys;
+//uses riimitys;
 procedure tnominit.siivoosijat;
 var
   i,j,k,lu,sis:integer;
@@ -332,8 +332,8 @@ begin
   luoks[clka].vikasis:=csis;
   siss[csis].vikaav:=cav;
   avs[cav].vikasana:=csan;
-  //writeln('<h1>lks:',clka,' sis:',csis,' av:',cav,' /w:',csan,'</h1>');
-  for i:=0 to csis do writeln('/',siss[i].sis);
+  writeln('<li>Nominit; luokkia:',clka,' sisuksia:',csis,' astvaih:',cav,' /sanoja:',csan,'</h1>');
+  //for i:=0 to csis do writeln('/',siss[i].sis);
   // exit;
  // writeln('<ul style="line-height:95%"><ul>') ;
 
@@ -405,13 +405,13 @@ end;
 
 constructor tnominit.create(wfile,midfile:string);
 begin
-writeln('luemids');
+//writeln('luemids');
 luemids('nmids.csv');
-writeln('luettu,luesanat');
 //luesanat('nomsall.csv');
 luesanat(wfile);
-writeln('luettu,etsi:');
+//writeln('luettu,luesanat');
 nhitlist:=tlist.create;
+//writeln('<li>nominit luettu:',midfile,' ',wfile);
 //listaasijat;
 exit;
 writeln('<hr>etsi<hr>');
@@ -453,7 +453,7 @@ mlist:=tstringlist.create;
       //protomids[i,j]:=trim(mlist[j]);
      end;
   end;
-  IF D THEN writeln('<hr>LISTSIJAT:::');
+ // IF D THEN writeln('<hr>LISTSIJAT:::');
   for i:=0 to scount do
   begin
     sijat[i].vv:=i in nvahvanvahvat;
@@ -476,7 +476,7 @@ mlist:=tstringlist.create;
      for j:=0 to 33 do write(',*',copy(lmmids[i,j]+'              ',1,6));
      writeln;
   end;
-  writeln('</pre></pre></pre><hr><hr><hr>');
+  writeln(', ',fn,' luettu');
 
 end;
 function red(st:string):string;

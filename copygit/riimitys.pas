@@ -5,14 +5,15 @@ unit riimitys;
 interface
 
 uses
-  Classes, SysUtils,nominit,verbit,//nomutils,
+  Classes, SysUtils,nominit,verbikama,//nomutils,
   strutils,riimiutils,riimiuus;
  procedure nomforms;
  procedure riimei;
 procedure tsekkaatavut(hakunen:ansistring;etuko:boolean;hits,riimit:tstringlist);
 
 type triimitin=class(tobject)
- verbit:tverbit;nominit:tnominit;
+ verbit:tverbit;nominit:tnominit;//eitait:teitaivu;
+
  //hakuset,hakuset2:tvhakuset;
  allresus,riimit:tstringlist;
  procedure etsi(resux:tstringlist);
@@ -28,7 +29,7 @@ implementation
  var i,j:integer;st,res:tstringlist;verbit:tverbit;
  begin
    verbit:=tverbit.create('sanatuus.csv','vmids.csv','vsijat.csv');
-
+  // verbikama.
   //for i:=0 to 65 do begin writeln('<li>',i, ',', sijanimet[i],',',sijaesim[i],verbit.sijat[i].vparad,'/',verbit.sijat[i].hparad,reversestring(verbit.sijat[i].ending));       if (i in  [0,5,9,12,13,16,23,36,37,39,45]) then writeln(' ************');end;
 
   st:=tstringlist.create;
@@ -101,6 +102,7 @@ implementation
 procedure riimei;
 var riimii:triimitin;verbit:tverbit;nominit:tnominit;sanasto:tsanaSTO;//eitait:teitaivu;
 begin
+ exit;
  //ILKO;
 // nomforms;    exit;
  //nominit:=tnominit.create('nomsall.csv','nmids.csv');

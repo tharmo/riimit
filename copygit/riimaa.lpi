@@ -34,7 +34,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="12">
+    <Units Count="14">
       <Unit0>
         <Filename Value="riimaa.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -56,7 +56,7 @@
         <IsPartOfProject Value="True"/>
       </Unit4>
       <Unit5>
-        <Filename Value="verbit.pas"/>
+        <Filename Value="verbikama.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit5>
       <Unit6>
@@ -83,6 +83,14 @@
         <Filename Value="roskaa.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit11>
+      <Unit12>
+        <Filename Value="prosessi.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="sanataulu.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit13>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
