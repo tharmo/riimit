@@ -27,7 +27,7 @@ type tsanasto=class(tobject)
  hitlist:array[1..30000] of word;hitcount:integer;
  sanoja:tstringlist;
  function haenumero(sana:ANSISTRING):word;
- procedure expandlist(wlist:tlist;rlist:tstringlist);
+ procedure generatelist(wlist:tlist;rlist:tstringlist);
 //rocedure luohaku;
  //0-pohjasia, mutta data alkaa 1:stä
  procedure luesanat(fn:string);
@@ -164,7 +164,7 @@ begin
           //           if vokvex then f curlka.kot=64 //viedä vei then       delete(mysis,2,1) else delete(mysis,1,1);
        if not sans[snum].takavok then gsana:=etu(gsana);
        //if taka(gsana)<>taka(sanoja[snum]) then
-       resus.add(gsana);
+       resus.addobject(gsana,tobject(pointer(gsana)));
          //  writeln(' ',gsana);//,sija,vahvasija,verbit.lmmids[luokka-52,sija],'/',mid);
   except writeln('fail!!!');end;
 end;
@@ -245,7 +245,7 @@ begin
      if not sans[snum].takavok then gsana:=etu(gsana);
          //if taka(gsana)<>taka(sanoja[snum]) then
      //writeln(' ',gsana);//,sija,vahvasija,verbit.lmmids[luokka-52,sija],'/',mid);
-     resus.add(gsana);
+     resus.addobject(gsana,tobject(pointer(snum)));
    end;
   except writeln('FAIL!!!');end;
 end;
@@ -323,7 +323,7 @@ begin
    //end;
  }
 //end;
-procedure tsanasto.expandlist(wlist:tlist;rlist:tstringlist);
+procedure tsanasto.generatelist(wlist:tlist;rlist:tstringlist);
 var j,snum:word;
 begin
  //writeln(' _!!!!!!!!',wlist.count);
@@ -356,7 +356,6 @@ loppu:=taka(reversestring(sana));
 //verbikama.
 //writeln(verbit.sijat[10].ending+'!');
 //writeln('numeroi;',sana,loppu+akon,koko,'',eietu,eitaka);//,verbit.vesims[1]);//,verbit.sijat[0],aresu,onjolista,hits);
-
   myhit:=etsiyks(loppu+akon,koko,'',eietu,eitaka,verbit.sijat[0],aresu,onjolista,hits);
 // function etsiyks(hakusana,hakuakon,hakukoko:string;hakueietu,hakueitaka:boolean;sika:tsija;aresu:tstringlist;onjolist:tlist;var hits:word):word;
 //writeln(verbit.sijat[0].ending);
@@ -552,7 +551,7 @@ writeln('<div> x<div> y<div> z</div></div></div>');
 luesanat('sanatuus.csv');
 verbit:=tverbit.create('sanatuus.csv','vmids.csv','vsijat.csv');
 nominit:=tnominit.create('nomsall.csv','nmids.csv');
-eitaivu:=tstaulu.create('eitaivu.lst');
+eitaivu:=tstaulu.create('eitaivu.lst',nil);
 writeln('<li>sanasto luotu</li>');
 
 
@@ -918,7 +917,7 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
       begin
          //fullhit(sana,koita,san);
          hits:=hits+1;
-          if d=d then writeln(' <em style="color:green">',reversestring(lkasopi+''+sissopi+''+avsopi+''+sana+cursan.akon) ,'</em> ');
+          if d=d then writeln(' <em style="color:green">',reversestring(sikasopi+lkasopi+''+sissopi+''+avsopi+''+sana+cursan.akon) ,'</em> ');
           hitcount:=hitcount+1;
           hits:=hits+1;
            hitlist[hitcount]:=san;
@@ -1135,12 +1134,13 @@ resunum:=0;
 //d:=true;
 sikaloppu:= copy(hakusana,length(sika.ending)+1);
 sikasopi:= sika.ending;
-//if sika.num<>0 then continue;
 resst:='';
 //for i:=1 to 58 do writeln(lks[i].kot,lks[i].vahva);
 if d then writeln('<li>etsiyksi:',hakusana,'-->',sikaloppu,'+',sika.ending,sika.onverbi,sika.num);
 if sika.onverbi then
- begin for lu:=52 to 78 do if lka_f(lu,sika.num,sikaloppu,'') then begin writeln('HIOT',resunum);result:=resunum;break;end;
+ begin if sika.num=0 then sikasopi:='a';
+
+    for lu:=52 to 78 do if lka_f(lu,sika.num,sikaloppu,'') then begin writeln('HIOT',resunum);result:=resunum;break;end;
 end
 else for lu:=1 to 50 do if lka_f(lu,sika.num,sikaloppu,'') then begin result:=resunum;break;end; // skipped vois olls <> ''
 //if eitaivu.sexact(hakusana) then writeln('!%%%');

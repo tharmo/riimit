@@ -33,7 +33,7 @@ type tstaulu=class(tobject)
    procedure riimaa;
     // procedure do99;
    function sexact(haku:ansistring;yy:tstringlist):word;  //kutsutaan kun haku on edellyt ekaan (käänt) vokaaliin
-   constructor create(fn:string);
+   constructor create(fn:string;sl:tstringlist);
   end;
   ///type triimihaku=class(tobject)
   //  procedure luohaku;
@@ -101,36 +101,31 @@ begin
   //writeln('<li>',NODE.TAVUCOUNT,' <b>',reversestring(san),' /',reversestring(copy(san,1,node.ru_lyh)),' \',reversestring(copy(san,1,node.ru_lyh)),'</b> ',node.ru_lyh,node.ru_pit);
 end;
 
-constructor tstaulu.create(fn:string);
-var  stmp:tstringlist;j:integer;
+constructor tstaulu.create(fn:string;sl:tstringlist);
+var  //stmp:tstringlist;
+    j:integer;
 begin
-slista:=tstringlist.Create;
-slista.Delimiter:=' ';slistA.StrictDelimiter:=true;
-//yy.LoadFromFile('sanatall.ansi');
-writeln('<h3>luohaku::','</h3>');
-stmp:=tstringlist.create;       ////  ae ao ea eo ia io oa oe ua ue
-stmp.loadfromfile(fn);
- //sanoja.commatext:='vaaitsemalla,aatos';//paatti,pataraatti,mataatti,tiilla,tialla,raanulla,haella,haulla,hulla,tulla,puraisulla,sulla,muraisulla,voida,voit,puulla,uulla,ulla,alla,olla,talla,tolla,koivulla,voivulla,vuivulla,xulla,knulla,vuikukulla,vaikulla,vavalla,tavalla,kavavalla,zalla,ella,luulla,kuulla,keinulla,stulla,ktulla,voipivulla,katialla';
- //sanoja.commatext:='aa,xatora,kavatora,kivatora,ravatora,kvora,kora,vora,xora,atora,autora,avora,vatora,katora,hatora,matora,lavatora,kaora,kura';  //isona,ailla,pukisona,isona,risona,asia,iarilla,taioin,sialla,urha,murha,vurha,kukkavurha,kieltolailla,turha,illa,rilla,osasilla,trilla,arilla,aarilla,villa,loilla,vailla,hilla,krilla,tilla,stilla,ztilla,puttosilla,tuolla,maulla,silla,asasilla,soilla,tsilla,pussilla,risasilla,isasilla,haalla,ahilla';
- //sanoja.commatext:='xaa,jakoon,sorrettakoon, purettakoon, pingottakoon, neuvottakoon, kuivuttakoon';
- // writeln(sanoja.text);//:='ampua';
- //for j:=0 to sanoja.count-1 do begin writeln('<li>',sanoja[j],':');teenoodi(reversestring(sanoja[j])); end; exit;
-
- //tries:=tlist.create;
- //slista:=tstringlist.create;
-
-//slista.LoadFromFile(fn);
-//FOR I:=10000 TO 15000 DO  WRITELN(YY[I]);  EXIT;
-//stmp.sort;
-stmp.Insert(0,'');
-sliSTa.duplicates:=dupIgnore;
-slista.sorted:=true;
-for j:=0 to sTMP.count-1 do
-   slista.add(trim(reversestring(ansilowercase(stmp[j]))));//+'al');
-slista.sort;
+  writeln('<li>SANATAULU:',fn,sl=nil,'!');
+  slista:=tstringlist.Create;
+  sliSTa.duplicates:=dupIgnore;
+  slista.sorted:=true;
+  if sl=nil then
+  begin
+    sl:=tstringlist.Create;
+    //yy.LoadFromFile('sanatall.ansi');
+    sl.Delimiter:=' ';sl.StrictDelimiter:=true;
+    sl.loadfromfile(fn);
+    sl.Insert(0,'');
+    for j:=0 to sl.count-1 do
+       slista.add(trim(reversestring(ansilowercase(sl[j]))));//+'al');
+  end else
+  begin
+   for j:=0 to sl.count-1 do
+      slista.add(trim((ansilowercase(sl[j]))));//+'al');
+   //for j:=0 to sTMP.count-1 do   slista.add(trim(string(ansilowercase(stmp[j]))));//+'al');
+  end;
 //writeln('<li>lista luettu',slista.text);
 //writeln(slista.CommaText);
-stmp.free;
 teetaulu;
 end;
 function tstaulu.numeroi:tlist;
@@ -327,7 +322,7 @@ procedure tstaulu.riimaa;
     begin
       try
        d:=false;
-       d:=true;
+       //d:=true;
       upto:=snum;//nodes[ss].jump;
       //if d then writeln('<span style="color:blue">[[',alasana,upto,':');
       while alasana<upto do
@@ -364,7 +359,7 @@ procedure tstaulu.riimaa;
     result:='';//'#'+inttostr(nodes[snum].tavucount);//('!!'+sana);
    begin
       d:=false;
-      d:=true;
+      //d:=true;
     // lets[1].w:=0;
      cc:=0;
      slen:=nodes[snum].ru_lyh-1;
@@ -372,14 +367,14 @@ procedure tstaulu.riimaa;
      let:=slen;
      pitr:=copy(sana,1,nodes[snum].ru_pit);
      lyhr:=copy(sana,1,nodes[snum].ru_lyh);
-     writeln('(',sana,nodes[snum].lev,'.',lets[i].c,')');
+     //writeln('(',sana,nodes[snum].lev,'.',lets[i].c,')');
      for i:=nodes[snum].lev-1 downto 1 do //nodes[snum].ru_lyh-1 do
      begin
         try
          ss:=lets[i].w;
        //jos sana on monitavuinen, loppupätkästyn vrt:n pitää mätsätä täysin. Kokonaisen vrt:n
        //sana lyhyt, vertailtava lyhyt: pitää mätsätä täysin
-        writeln('!',i,':',ss,slista[ss]);
+        //writeln('!',i,':',ss,slista[ss]);
         if d then writeln('<div>');//,'#',i,'_',ss);
         syy:='';
         ookoo:=sopii(ss,snum,pitr,lyhr,short);
@@ -400,14 +395,15 @@ procedure tstaulu.riimaa;
      end;
     end;
   end;
+   //   procedure tstaulu.riimaa;
  var i,j,sn:integer;edsana,lyh,sana:ansistring;
  begin
    d:=false;
-   d:=true;
+   //d:=true;
     curlev:=01;
     setlength(resmat,slista.count*rimis);
     fillchar(resmat[0],slista.count*rimis,0);
-    writeln('<li>resmat:', length(resmat),' ',slista.text,lets[1].w);
+    writeln('<li>resmat:', length(resmat),' ',slista.count,lets[1].w);
     for i:=1 to slista.count-1 do
     begin
     try
@@ -445,11 +441,11 @@ procedure tstaulu.riimaa;
           //writeln(resmat[64*(i-1)+j],'/',reversestring(slista[resmat[64*(i-1)+j]]));
          end;
      end;
-     writeln('<hr>',slista.text);
+     //writeln('<hr>',slista.text);
     for i:=1 to slista.count-1 do //slista.count-1 do
     begin
       if resmat[rimis*(i-1)]>0 then
-      writeln('<li>',reversestring(slista[i]));//,': ','#',resmat[rimis*(i-1)],':::');
+      writeln('>',reversestring(slista[i]));//,': ','#',resmat[rimis*(i-1)],':::');
       for j:=1 to rimis-1 do
        if (resmat[rimis*(i-1)+j])>0 then //or (resmat[j,i]) then
         writeln(' ',reversestring(slista[resmat[rimis*(i-1)+j]]));//,resmat[64*(i-1)+j]);

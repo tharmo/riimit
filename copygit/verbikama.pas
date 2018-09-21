@@ -981,6 +981,7 @@ var i,lk,hitpos:integer;mylop:ansistring;j:ptrint;a:ansichar;
 begin
  // KAIKKI ON JO REVERSOITU
 //writeln('<hr>HAESIJAT:',reversestring(haku));
+//writeln('<b>?/',haku,'</b>');
 for j:=0 to 66 do
  begin
      //if mylop='*' then
