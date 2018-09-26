@@ -798,7 +798,14 @@ class name="nominit"
          if (match(substr($2,length($2),1),/[aeiou]/)==0)  print
         } 
       '''  
-       
+  sanatvaan     
+    pre
+      xse:gawk in=sanatuus.csv out=sanatvaan.tmp: '''
+        BEGIN { FS=","}
+        { st=substr($8,1,length($8)-2);gsub(/^[ \t]+|[ \t]+$/, "", st);print st 
+            } 
+       '''  
+      xse:shellexec: cat sanatvaan.tmp |iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >sanatvaan.ansi
   etsi
        ###xse:gawk in=noms4.csv: '''
         BEGIN { FS=","}
