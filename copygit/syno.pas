@@ -33,8 +33,9 @@ procedure tmp_num;
 
 implementation
  uses math,riimiutils;
-type tgutcc=array of word;tagut=array[0..15] of byte;
-type  tgutw=array of byte;
+type tgutcc=array of word;
+  tagut=array[0..15] of word;
+type  tgutw=array of word;
 
 
   function tsynonyms.haesynolist(var sanums:tlist;sl:tstringlist):word;
@@ -124,7 +125,7 @@ var ccfile,gutf,outf:textfile;
   s1,s2,line,pline:ansistring;ch:char; sn1,sn2:integer;
   gutbin:file;
   gutcc:tgutcc;//array[0..573] of array[0..5730] of byte;
-  gutarr:tgutw; agut:array[0..15] of byte;//tagut;
+  gutarr:tgutw; agut:array[0..15] of word;//tagut;
   achar:ansichar;
   // cc:array of word:
 begin
