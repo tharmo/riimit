@@ -13,30 +13,58 @@ var //riimii:triimitin;
 
 implementation
 //uses verbit,nominit;
-uses syno;
+uses syno,strutils;
 procedure teetemput;
 var   riiminaiheet,riimaavat:tstaulu;sl:tlist;muolist,riilist:tstringlist;syns:tsynonyms;synarr:tsynarray;
+   i:integer;
+   sans:tstringlist;
+   function sltext:string;
+   var i:word;
+   begin
+      result:='';
+      for i:=0 to sl.count-1 do result:=result+' '+sans[integer(sl[i])];
+   end;
 begin
+  sans:=tstringlist.create;
+  sans.loadfromfile('sanatvaan.ansi');
+  sans.insert(0,'vaarinhousut');
+  writeln(sans[0],'--------------');
   //tmp_num;exit;
   syns:=tsynonyms.create;
-  syns.makelist;exit;
+  //syns.makelist;writeln('list saved to syn.bin');exit;
   //syns.coocs;exit;
   //syns.gutenberg;exit;
   //syns.luegut;exit; //gutenberg concordance is very low quality. Redo completely .. later! proceed with wiktionary related words & synonyms
-  SYNS.read('syns.bin');  // binääri sanat*32 listaa kullekin sanalle liittyvät sanat sanatuus.csv (taivutuskaavat)-järjestysnumeroilla
-  writeln('kerrotaan',length(syns.syns)); //
-  SYNS.kerro; //lisätään liittyvien liittyvät
-  exit;
+  SYNS.read('synmul.bin');  // binääri sanat*32 listaa kullekin sanalle liittyvät sanat sanatuus.csv (taivutuskaavat)-järjestysnumeroilla
+  //****** SYNONYYMIT TIEDOSTOSTA SYNMUL.BIN  (Pitää vielä hioa matriisin "kertomista".. myöhemmin)
+  //syns.list;exit;
+  //writeln('kerrotaan',length(syns.syns)); //
+  //SYNS.kerro; //lisätään liittyvien liittyvät
+  //syns.list;
+  ///***
+  {exit;
   syns.list;exit;
   tmp_getnum;exit;
-  tmp_num;exit;
+  tmp_num;exit;}
   writeln('<li>luo sanasto');
   SANASTO:=tsanasto.create;  //luo myös globaalit verbit, nominit, muodot
+  //jostain syystä käyttää tiedostoa NOMSALL.CSV vaikka kaikki on mukana SANATUUS.CSV'ssä
+  //******'sanatuus.csv','vmids.csv','vsijat.csv';
+  //****  'nomsall.csv','nmids.csv');
   writeln('<li>lue hakusanat',verbikama.vesims[1]);
   riiminaiheet:=tstaulu.create('haku.lst',nil);
+  //*** SIEMENSANAT TIEDOSTOSTA HAKU.LST
   writeln('<h3>//*hae sananumerot perussmuodoille</h3>');
   sl:=riiminaiheet.numeroi;
+  writeln('<hr><h3>haku</h3>',sltext,'<hr>');
+  syns.haesynolist(sl,sans);
+  writeln('<h3>s1:</h3><hr>',sltext);
+  syns.haesynolist(sl,sans);
+  writeln('<h3>s2:</h3><hr>',sltext);
+  writeln('<h1>gotsyns:',sl.count,'</h1>');
+  for i:=0 to sl.count-1 do writeln(sans[integer(sl[i])]);
   muolist:=tstringlist.create;
+
   riilist:=tstringlist.create;
   writeln('<h3>taivuta->muolist</h3>');
   sanasto.generatelist(sl,muolist);  //taivuttaa kaikki ja laittaa taivutetut sanat muolistiin, sananumerot objekteihin

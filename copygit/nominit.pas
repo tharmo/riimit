@@ -408,7 +408,7 @@ begin
 //writeln('luemids');
 luemids('nmids.csv');
 //luesanat('nomsall.csv');
-luesanat(wfile);
+//???luesanat(wfile);
 //writeln('luettu,luesanat');
 nhitlist:=tlist.create;
 //writeln('<li>nominit luettu:',midfile,' ',wfile);

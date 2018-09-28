@@ -23,6 +23,8 @@ procedure delsyn(sa,sy:word);
 function overlaps(s1,s2:word;var isin:boolean):word;
 //function isrel(s1,s2:word):word;
 procedure makelist;
+function haesyno(sanum:word;var res:tlist;sl:tstringlist):integer;
+function haesynolist(var sanums:tlist;sl:tstringlist):word;
 end;
 
 
@@ -34,6 +36,31 @@ implementation
 type tgutcc=array of word;tagut=array[0..15] of byte;
 type  tgutw=array of byte;
 
+
+  function tsynonyms.haesynolist(var sanums:tlist;sl:tstringlist):word;
+  var i,j,seeds:integer;
+  begin
+    seeds:=sanums.count;
+    for i:=0 to seeds-1 do
+    begin
+      //sanums.add(pointer(
+      writeln('<li><b>',sl[integer(sanums[i])],'</b>:');
+      haesyno(integer(sanums[i])-1,sanums,sl);
+      //writeln('%',sanums.count,sanums.count-1]));
+    end;
+  end;
+  function tsynonyms.haesyno(sanum:word;var res:tlist;sl:tstringlist):integer;
+  var i,j:integer;
+  begin
+    for i:=0 to syncols-1 do
+    if syns[sanum*(syncols)+i]=0 then break
+    else begin
+     result:=syns[sanum*(syncols)+i];
+     res.add(pointer(result+1));
+     writeln(',','#',sl[result+1],'/');
+    end;
+  end;
+
 function tsynonyms.asyn(r,c:word):word;
 begin
    result:=syns[r*(syncols)+c];
@@ -41,6 +68,7 @@ end;
 procedure tsynonyms.setsyn(sa,sy:word);
 vaR HIT:WORD;
 begin
+   try
    //writeln('lisää ', sy, 'sanan ', sa,' listaan (' ,length(syns));
    FOR hit:=0 TO SYNCOLS-1 DO
    IF asyn(sa,hit)<>0 then
@@ -51,7 +79,9 @@ begin
        syns[sa*(syncols)+hit]:=sy;//writeln('<sub>',slist[sa],'+',slist[sy],'</sub>');
        break;
    end;
+   except writeln('zzzzzzzzzzzzzzzzzzzzz');end;
 end;
+
 procedure tsynonyms.delsyn(sa,sy:word);
 vaR HIT:WORD;
 begin
@@ -197,7 +227,7 @@ function tsynonyms.read(fn:string):boolean;
 var synos2:array of  word;binfile:file;
 begin
   writeln('<li>lue:');
- setlength(syns,synsans*syncols);
+ setlength(syns,synsans*syncols*2);
  AssignFile(binfile, fn);
  try
      Reset(binfile, length(syns));
@@ -205,40 +235,56 @@ begin
      closefile(binfile);
      writeln('<li>luettu');
  except writeln('failreadsyns');end;
- list;
+ //list;
 end;
 procedure tsynonyms.list;
 var i,j:word;//slist:tstringlist;
 begin
   writeln('<li>list:',length(syns));
   slist:=tstringlist.create;
-  slist.loadfromfile('sanatuus.ansi');
-  writeln('nonllanolla',syns[0],' 0:0 ok');
-      for i:=0 to 27550 do
-      if syns[i*syncols-1]=0 then continue
-      else
+  slist.loadfromfile('sanatvaan.ansi');
+  //writeln('nonllanolla',syns[0],' 0:0 ok');
+      for i:=0 to slist.count-1 do
+      //if asyn(i,0)=0 then continue      else
       begin
-          writeln('<li>',i);//, copy(slist[synarray[i,0]],length(slist[synarray[i,0]])-10),':');
-          break;
+          writeln('<li>',i,slist[i]);//, copy(slist[synarray[i,0]],length(slist[synarray[i,0]])-10),':');
+          //break;
          for j:=0 to 31 do
-         if syns[i*j]=0 then break
-          else writeln(copy(slist[asyn(i,j)
-          ],length(slist[asyn(i,j)])-10));
+         if asyn(i,j)=0 then break
+          else writeln(slist[asyn(i,j)]);
         end;
 end;
 
 procedure tsynonyms.kerro;
-vAR times,i,j,k,dd,myj,myk,OLAPj,olapk,olaps:word;isrel:boolean;toadds:array[0..31] of word;added:word;
+vAR times,i,j,k,myj,myk,OLAPj,olapk,olaps:integer;isrel:boolean;toadds:array[0..31] of word;added:word;
+   x:integer;
+   procedure addadd(sa:word);  var ii,dd:integer;
+   begin
+     if added>=31 then exit;
+             for dd:=0 to added do
+             if dd=added then
+             begin
+               toadds[added]:=sa;added:=added+1;
+               //writeln(slist[i],'+',slist[sa]);
+            end else  if toadds[dd]=sa then break; //was already
+
+   end;
+ var sssi,sssj,sssk:word;
 begin
   writeln('<li>sparcemat mult:',synsans);
   slist:=tstringlist.create;
   slist.loadfromfile('sanatvaan.ansi');
   //readsyno('sanatuus.ansi',syns);
   writeln(slist.count);
-  for i:=0 to slist.count-1 do
+  if 1=0 then for i:=0 to slist.count-1 do
+  begin
+    writeln('<li>',slist[i],':',i,':');
+    for j:=0 to syncols do begin x:=asyn(i,j);if x<1 then break else writeln(slist[x]);end;
+  end;
+  if 1=0 then for i:=0 to slist.count-1 do
   begin
     writeln('<li>',slist[i],':');
-    for j:=1 to syncols do
+    for j:=0 to syncols do
     begin
        olaps:=0;
        myj:=asyn(i,j); if myj=0 then break else writeln(slist[myj]);
@@ -246,29 +292,39 @@ begin
        else olaps:=olaps+overlaps(asyn(myj,k),myj,isrel);
        writeln(olaps);
     end;
-  end;          exit;
-  for times:=1 to 8 do
+  end;
+  for times:=1 to 1 do
   begin
-    for i:=0 to synsans do
+     try
+    for i:=0 to synsans-1 do
     //for i:=4912 to 4920 do
     begin
+     // writeln(i);
+      for j:=0 to syncols-1 do if asyn(i,j)=0 then break else sssi:=j+1;
       fillchar(toadds,sizeof(toadds),0);  //sepoarate for each word. could make it after a whole round of times instead;
       added:=0;
+      //if i=16077 then writeln('<li><b>XYZ:',slist[i],sssi,slist[myj],'</b>');
       //if i>7000 then break;
       //if i<slist.count then writeln('<b>',slist[i],'</b>:');
-      for j:=1 to syncols do
+      try
+      for j:=0 to syncols-1 do
       begin
+       for k:=0 to syncols-2 do if asyn(j,k)=0 then break else sssj:=k+1;
         myj:=asyn(i,j);
+        //if i=16077 then writeln('<li><b>XYZ:',slist[i],sssi,slist[myj],'</b>');
         if myj=0 then break;
+        //writeln('.');
         //writeln(slist[myj]);
         OLAPj:=overlaps(i,myj,isrel);
         olapk:=0;olaps:=olapj;
+        //if not isrel then addadd(myj);
         //if olapj<1 then begin  writeln('<span style="color:red">',slist[i],'-',slist[myj],'</span>');end;
         //if olapj<3 then begin   writeln('');continue;end;//<span style="color:red">',slist[i],'-',slist[myj],'</span>');end;
-        if olapj>2 then
-        for k:=1 to syncols do
+        //if olapj>1 then
+        for k:=0 to syncols-1 do
         begin
            myk:=asyn(myj,k);
+          //if i=16077 then writeln('<li><b>KK:',slist[myj],sssi,slist[myk],'</b>');
           if myk=i then continue;
           if myk=0 then break;
           //IF isrel(i,myk) then break;
@@ -278,14 +334,11 @@ begin
           //writeln('<em style="color:',ifs(olap>1,'green','red'),'">',slist[myk],'</em>:');
           if olapk>2 then
           begin
-            for dd:=0 to added do
-             if dd=added then
-             begin
-               toadds[added]:=myk;added:=added+1;
-               //writeln(slist[i],'+',slist[myk]);
-            end else  if toadds[dd]=myk then break
-             else
-          end;
+             addadd(myk);
+             //else
+          end
+          else if  sssi=1 then begin addadd(myk);end;//writeln('<b>',slist[i]+'>'+slist[myj]+'+'+slist[myk],'</b>');end;
+          //if i=16077 then writeln('<li><b>XXX',slist[i]+'>'+slist[myj]+'+'+slist[myk],'</b>');
           //setsyn(i,myk);
         end;
         //if olaps<1 then writeln('<span style="color:red">',slist[i],'-',slist[myj],'</span>')
@@ -293,19 +346,21 @@ begin
        //setsyn(syns[i,j],syns[i,1]);
 
       end;
-      for j:=0 to added do begin setsyn(i,toadds[j]);setsyn(toadds[j],j);
+      except writeln('!!!?');end;
+      for j:=0 to added do begin setsyn(i,toadds[j]);setsyn(toadds[j],i);
       end;
     end;
+     except writeln('!!!?');end;
     WRITELN('<HR>Uusi KIERROS:',times+1,'<BR>');
    END;
-  for i:=0 to slist.count-1 do
+  for i:=99990 to slist.count-1 do
   begin
   writeln('<li><b>',slist[i],'</b>:');
-  for j:=1 to syncols do
+  for j:=0 to syncols-1 do
     begin
        olaps:=0;
        myj:=asyn(i,j); if myj=0 then break else writeln(slist[myj]);
-       for k:=1 to syncols-1 do if asyn(myj,k)=0 then break
+       for k:=0 to syncols-1 do if asyn(myj,k)=0 then break
        else olaps:=olaps+overlaps(asyn(myj,k),myj,isrel);
        writeln(olaps);
     end;
@@ -313,6 +368,9 @@ begin
   //delsyn(i,asyn(i ,1));
   //for j:=0 to syncols do begin myj:=asyn(i,j); if myj=0 then break else writeln(slist[myj]);end;
  end;
+  savebin(synsans,syncols,syns,'synmul2.bin');
+
+
 end;
 
 procedure big16(var tosort,bigs:pword;bigvals:pword;w:word;sl:tstringlist);
@@ -495,7 +553,7 @@ begin
   assign(synfile,'syn_ok.ansi');  //synonyymit/liittyvät sanat
   reset(synfile);
   fillchar(synarray, sizeof(synarray),0);
-  i:=0;
+ i:=0;
   {while not eof(ifile) do
   begin
    i:=i+1;
@@ -574,38 +632,76 @@ begin
   close(resfile);
 
  end;
+
 procedure tsynonyms.makelist;  //read synlist with 1 wrd/line, \n separating synsets
+  var     binf:file;
+
 var
   //linehits: TList;inf,synf,misfile,sanaf,
-    synsetfile:textfile;
+    synsetfile,resfile:textfile;
     restxt,resnums,sana,ekasana:ansistring;
-    snum,esana:integer;
-    cc:integer;
+    snum,enum:integer;
+    cc:integer;i:integer;
+    test:array of word;
 begin
-   setlength(syns,synsans*syncols);
+try
+  setlength(syns,synsans*syncols);
+  //setlength(syns,10000000);
+  writeln('size',length(syns));
+  assign(resfile,'synlist.ansi');  //kaikki ei-yhdyssanat
+  rewrite(resfile);
+  cc:=0;
+  writeln(resfile,'alkaa');
+  writeln('alkaa');
+  //closefile(resfile);exit;
+  //savebin;exit;
   slist:=tstringlist.create;
   slist.loadfromfile('sanatvaan.ansi');
   assign(synsetfile,'syn_allx.ansi');  //kaikki ei-yhdyssanat
   reset(synsetfile);
-  cc:=0;
+  //if 1=0 then
+  enum:=0;
   while not eof(synsetfile) do
   begin
     cc:=cc+1;
-    if cc>50000 then break;
     readln(synsetfile,sana);
-    if sana='' then
+    //writeln(resfile,sana,cc);
+    //if cc>=373831 then break;
+    //if cc>333 then break;
+    //  writeln(resfile,cc,sana,sana='');
+    //continue;
+    //writeln(resfile,snum,sana,enum);
+    //continue;
+    if (sana='') or (eof(synsetfile)) then
     begin
-
-      writeln('<li>',ekasana,'::',restxt);restxt:='';
-      readln(synsetfile,ekasana);continue;
+      //if enum<0 then continue;
+      //writeln(resfile,ekasana,',',restxt);//,restxt='',enum,'!');
+      restxt:='';
+      if eof(synsetfile) then break;
+      readln(synsetfile,ekasana);
+      enum:=slist.indexof(ekasana);
+      continue;
     end;
     sana:=stringreplace(trim(sana),'_','',[rfReplaceAll]);
     sana:=stringreplace((sana),'-','',[rfReplaceAll]);
+    snum:=slist.indexof(sana);
+    if (snum>=0) and (enum>=0) then
+    begin
+      setsyn(enum,snum);
+      writeln(resfile,enum,sana,snum);
+    end;
     restxt:=restxt+sana+', ';
 
   end;
+  writeln('<li>CLOSE*');
 
-
+  finally
+        savebin(synsans,syncols,syns,'syn.bin');
+        close(resfile);
+        writeln('resclosed');
+        close(synsetfile);
+        writeln('synsetclosed');
+  end;
 end;
   {
  linehits:=tlist.create;

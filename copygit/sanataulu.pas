@@ -297,7 +297,7 @@ procedure tstaulu.riimaa;
             if (pos(kohrpit,mypit)=1) then result:=true;  //
             //if result and (pos(kohrlyh[length(slista[vert])+1],vokaalit)>0) then writeln('avotavunpaino!');
         end
-        else  if (tavuero)>2 then      //kohteessa enem tavuja
+        else  if (tavuero)>20 then      //kohteessa enem tavuja
         begin
          if (pos(mylyh,kohrlyh)=1) then result:=true;
          //if result and (pos(slista[kohde],length(slista[kohde]+1],vokaalit)>0) then writeln('avotavunpaino!');
@@ -328,7 +328,7 @@ procedure tstaulu.riimaa;
       while alasana<upto do
       begin
          cc:=cc+1;
-         if cc>300000 then break;
+         //if cc>300000 then break;
          if short then
             ookoo:=(nodes[alasana].ru_pit=nodes[snum].ru_lyh) and (alasana<>snum) and (nodes[snum].ru_lyh=nodes[alasana].ru_lyh)
          else
@@ -358,6 +358,7 @@ procedure tstaulu.riimaa;
   //resres:=tlist.create;
     result:='';//'#'+inttostr(nodes[snum].tavucount);//('!!'+sana);
    begin
+
       d:=false;
       //d:=true;
     // lets[1].w:=0;
@@ -379,9 +380,9 @@ procedure tstaulu.riimaa;
         syy:='';
         ookoo:=sopii(ss,snum,pitr,lyhr,short);
         if ookoo then addres(snum,ss);
-       if d then
-       if ookoo then writeln(' <span style="color:green">',reversestring(slista[ss]),nodes[ss].ru_pit,'.',nodes[ss].ru_lyh,'</span>')
-       else  writeln(ifs(syy<>'','<span style="color:red">'+syy+'</span>',''),reversestring(slista[ss]));
+       //if d then
+       if ookoo then writeln(' <span style="color:green">',ss,reversestring(slista[ss]),nodes[ss].ru_pit,'.',nodes[ss].ru_lyh,'</span>')
+       ;//else  writeln(ifs(syy<>'','<span style="color:red">'+syy+'</span>',''),reversestring(slista[ss]));
        alasana:=ss+1;
        if d then writeln('</div>');
        if nodes[snum].ru_pit=nodes[ss].lev then
@@ -409,6 +410,7 @@ procedure tstaulu.riimaa;
     try
     if pos('?',slista[i])>0 then continue;
     if length(slista[i])<3 then continue;
+    writeln('<sub>',reversestring(slista[i]),'</sub>');
      lets[nodes[i].lev].w:=i;
      lets[nodes[i].lev].c:=nodes[i].letter;
 
@@ -445,11 +447,20 @@ procedure tstaulu.riimaa;
     for i:=1 to slista.count-1 do //slista.count-1 do
     begin
       if resmat[rimis*(i-1)]>0 then
-      writeln('>',reversestring(slista[i]));//,': ','#',resmat[rimis*(i-1)],':::');
+        begin
+      if length(slista[i])<10 then
+      writeln('<li><b>',reversestring(slista[i]),'</b>')//,': ','#',resmat[rimis*(i-1)],':::');
+      else writeln('<li>',reversestring(slista[i]));//,': ','#',resmat[rimis*(i-1)],':::');
+      end;
       for j:=1 to rimis-1 do
        if (resmat[rimis*(i-1)+j])>0 then //or (resmat[j,i]) then
-        writeln(' ',reversestring(slista[resmat[rimis*(i-1)+j]]));//,resmat[64*(i-1)+j]);
+       begin
+         sana:=reversestring(slista[resmat[rimis*(i-1)+j]]);
+        if length(sana)<10 then
+        writeln('<b> ',sana, '</b>')//,resmat[64*(i-1)+j]);
+        else writeln(sana);
        //writeln(' ',i+1,'/',resmat[(64*(i-1))+j],reversestring(slista[resmat[64*(i-1)+j]]),': ');
+      end;
     end;
     writeln('<hr>');
  end;

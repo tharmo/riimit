@@ -16,6 +16,7 @@ class name="nominit"
                 { if ($2==99) print rev(etu($1)), isetu($0)}
      '''           
      #xse:shellexec: cat sanat99.aou | sort 
+     # set LC_COLLATE=fi_FI.ISO-8859-15 
   partikkelit
     pre
        ###xse:gawk in=wifiana2.txt: '''
@@ -44,11 +45,11 @@ class name="nominit"
     xse:shellexec: cat testisanat.utf | iconv -t ISO-8859-1//TRANSLIT -f UTF-8 >testisanat.ansi
   laskesyno
      xse:shellexec: cat wikithe.ansi syn_fn.ansi >syn_allx.ansi
-     xse:gawk xin=wikithe.ansi in=syn_allx.ansi xin=syn_fn.ansi  out="test.syn": '''
+  x   xse:gawk xin=wikithe.ansi in=syn_allx.ansi xin=syn_fn.ansi  out="test.syn": '''
        { if ($0=="") { print rivi;rivi="";next}
         rivi=rivi "," $0
        
-       }
+       }§
      '''
      pre
        xse:shellexec: cat test.syn | sort

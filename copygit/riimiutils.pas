@@ -47,8 +47,37 @@ function red(st:string):string;
 function blue(st:string):string;
 function tavucount(w:string):integer;
 function tavusrev(st:ansistring):word;
+procedure savebin(rows,cols:integer;arr:array of word;fn:string) ;
 
 implementation
+
+procedure savebin(rows,cols:integer;arr:array of word;fn:string) ;
+   var i,j:integer;  a:array[0..999] of word;p:word;
+   binf:file;
+  begin
+  try
+  AssignFile(binf, fn);  //ei onnistu tstrinlistillä varmaan blockwrite
+  Rewrite(binf, cols*2);
+//  Rewrite(binf, 1000);
+  writeln('binsave:');
+   //for i:=0 to 100 do //synsans-1  do
+   for i:=0 to rows-1 do //writeln(i*syncols,syns[i*syncols]);exit;
+    begin // do
+     //writeln(i*syncols);
+     try
+      //writeln('<li>',i,'=',arr[i*cols]);//for j:=0 to 8 do writeln(syns[i*syncols+j]);
+     //p:=syns[i*synsans];
+      BlockWrite(binf, arr[i*cols], 1);
+     except on e:exception do writeln(e.message);end;
+    end;
+    writeln('binsaved');
+  finally
+    Closefile(binf);
+    writeln('binclosed:',fn);
+
+   end;
+  end;
+
 function red(st:string):string; begin result:='<b style="color:red">'+st+'</b>';  end;
 function blue(st:string):string;  begin result:='<b style="color:blue">'+st+'</b>';  end;
 //type tnod=record rlen,yhted,jump,ed,lev,len,tavucount:word;reftavs:integer;etu,tie:boolean;letter:ansichar;end;

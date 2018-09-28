@@ -155,8 +155,21 @@ begin
    if (mid<>'') and (mid[1]='*') then //mid[1]:=mysis[1];
       if mysis='' then  begin delete(mid,1,1);myav:=''; end else mid[1]:=mysis[1];  //loppuii vierasp sanoissa lka 5
    //if mysis=''then   mysis:='ii' else mySIS:=mySIS[1]+mySIS;  //loppuii vierasp sanoissa lka 5
-   if (mid<>'')  and (mid[1]='-') then  begin delete(mid,1,1);delete(mysis,1,1); end;
-     gsana:=reversestring(myend)+string(mid+mysis+myav+sans[snum].san+sans[snum].akon);
+
+   if (mid<>'')  and (mid[1]='-') then
+   begin
+       if (mid='--') then //writeln('<li>64:mid:',mid,'/sis:',mysis,sija);
+       begin  mid:='';mysis:=mysis[1]; end    ///speak
+       else
+       begin
+           delete(mid,1,1);
+           delete(mysis,1,1);
+       end;
+   end;
+
+   gsana:=reversestring(myend)+string(mid+mysis+myav+sans[snum].san+sans[snum].akon);
+  // writeln('<li>vvv_',reversestring(gsana));
+   //if curlka.kot=64 then writeln('<li>zzx ',reversestring(gsana));
            //san; if konvex then if curlka.kot=60 then  delete(sana,1,1);  //vain "lähteä" monikot läksin
            //av:   if konvex then if myav<>'' then begin delete(myav,1,1);end;
            //sis;          if kondbl then if curlka.kot=67 then mysis:=MYSIS[1]+MYSIS;
@@ -165,7 +178,8 @@ begin
        if not sans[snum].takavok then gsana:=etu(gsana);
        //if taka(gsana)<>taka(sanoja[snum]) then
        resus.addobject(gsana,tobject(pointer(gsana)));
-         //  writeln(' ',gsana);//,sija,vahvasija,verbit.lmmids[luokka-52,sija],'/',mid);
+       //if reversestring(gsana)='jöittä' then
+        // writeln('<li>:',reversestring(gsana),':',sija,vahvasija,verbit.lmmids[luokka-52,sija],'/',mid);
   except writeln('fail!!!');end;
 end;
 
@@ -917,7 +931,7 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
       begin
          //fullhit(sana,koita,san);
          hits:=hits+1;
-          if d=d then writeln(' <em style="color:green">',reversestring(sikasopi+lkasopi+''+sissopi+''+avsopi+''+sana+cursan.akon) ,'</em> ');
+          if d=d then writeln(' <em style="color:green">!!!',reversestring(sikasopi+lkasopi+''+sissopi+''+avsopi+''+sana+cursan.akon) ,'</em> ');
           hitcount:=hitcount+1;
           hits:=hits+1;
            hitlist[hitcount]:=san;
