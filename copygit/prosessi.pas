@@ -9,11 +9,28 @@ var //riimii:triimitin;
   //verbs:tverbit;
   noms:tnominit;
   muuts:tstaulu;  //muissa sanaluokissa kaikki muodot luetellaan listassa, ei generoida
-
+procedure teegut;
 
 implementation
+
+
 //uses verbit,nominit;
 uses syno,strutils;
+
+procedure teegut;
+var syns:tsynonyms;  I:INTEGER;
+begin
+  //OR I:=0 TO 16 DO IF I<>809 THEN WRITELN(I,' ',1+(8 - (abs(i-8))) DIV 3);EXIT;
+  syns:=tsynonyms.create;
+  // did this at first passa:
+  //syns.readgutansi;
+  //syns.countguts;
+  //syns.gutextract;
+  //syns.gutmatrix;
+  syns.gutscarse;
+end;
+
+
 procedure teetemput;
 var   riiminaiheet,riimaavat:tstaulu;sl:tlist;muolist,riilist:tstringlist;syns:tsynonyms;synarr:tsynarray;
    i:integer;
@@ -28,6 +45,7 @@ begin
   sans:=tstringlist.create;
   sans.loadfromfile('sanatvaan.ansi');
   sans.insert(0,'vaarinhousut');
+  syns.gutcoocs;exit;
   writeln(sans[0],'--------------');
   //tmp_num;exit;
   syns:=tsynonyms.create;

@@ -54,6 +54,12 @@ begin
     Exit;
   end;
   //if HasOption('f', 'fixteet') then begin
+  if paramstr(1)='gut' then
+  begin
+    teegut;
+    Terminate;
+    Exit;
+  end;
   if paramstr(1)='etsi' then
   begin
     //writeln('<li>verbeja');

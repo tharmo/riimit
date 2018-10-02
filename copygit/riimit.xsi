@@ -1,4 +1,13 @@
 class name="nominit"
+  gut
+     #xse:gawk in="gut.fi" out="gutpairs.tmp": { print $1 " " $2 "\n" $2 " " $1}
+     #xse:shellexec: export LC_COLLATE=fi_FI.ISO-8859-15; cat gutpairs.tmp |sort >gutpairs.lst  
+     #xse:shellexec: ./riimaa gut
+     #xse:shellexec: cat gutx2.fi |sort -V|uniq -c >gutx2.nums 
+     #pre
+     #  xse:gawk in=gutx2.nums out=gutx.nums: BEGIN { FS=" "}{ print $1, $2, $3} 
+     xse:shellexec: ./riimaa gut
+    
   99
     h1: äällösiä
     pre  # sanat all= 
