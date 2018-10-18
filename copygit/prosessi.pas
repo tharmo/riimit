@@ -21,13 +21,16 @@ procedure teegut;
 var syns:tsynonyms;  I:INTEGER;
 begin
   //OR I:=0 TO 16 DO IF I<>809 THEN WRITELN(I,' ',1+(8 - (abs(i-8))) DIV 3);EXIT;
+  ngrams;exit;
   syns:=tsynonyms.create;
   // did this at first passa:
   //syns.readgutansi;
   //syns.countguts;
-  //syns.gutextract;
-  //syns.gutmatrix;
-  syns.gutscarse;
+  //syns.gutextract;   exit;
+  //syns.gutmatrix;exit;
+  syns.gutsparse;
+  //syns.gutkerro;
+
 end;
 
 

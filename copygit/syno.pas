@@ -26,12 +26,15 @@ function overlaps(s1,s2:word;var isin:boolean):word;
 procedure makelist;
 procedure readgutansi;
 procedure countguts;
-procedure gutscarse;
+procedure gutsparse;
 procedure gutextract;
 procedure gutmatrix;
+procedure gutkerro;
 function haesyno(sanum:word;var res:tlist;sl:tstringlist):integer;
 function haesynolist(var sanums:tlist;sl:tstringlist):word;
 end;
+procedure ngrams;
+procedure ngramlemmas(fil:string);
 
 
 procedure tmp_getnum;
@@ -43,6 +46,241 @@ type tgutcc=array of word;
   tagut=array[0..15] of word;
 type  tgutw=array of word;
 
+procedure ngrams;
+var slist,ihte:tstringlist;
+    ngf:textfile; ch:ansichar; ind:word;
+    line:array[0..2] of ansistring;ok:boolean;
+    pp,ss:longword;
+begin
+slist:=tstringlist.create;
+ihte:=tstringlist.create;
+ihte.sorted:=true;
+slist.loadfromfile('sanatvaan.ansi');
+//ihte.loadfromfile('klklemmas.lst');
+  assign(ngf,'klk_siivo1.srt.iso');
+  reset(ngf);
+  ind:=0;
+  //writeln(ihte.commatext);
+  while not eof(ngf) do
+  begin
+      read(ngf,ch);
+    if pos(ch,' '+^j)>0 then
+    begin
+    if (ch=^j) then
+    begin
+     ind:=0;
+     //if not ok then write('.');
+     //if ihte.indexof(line[0])>=0 then writeln(line[0],' ',line[2])
+     ;//else writeln(line[0]);
+
+     //if line[1][1]=ansilowercase(line[1][1]) // then writeln('!!!');
+     if ok then if length(line[0])<16 then if length(line[1])<16 then
+     writeln(line[0],' ',line[1],' ',line[2]);
+     line[0]:='';line[1]:='';line[2]:='';ok:=true;
+     end else
+    if ind=0 then ind:=1 else ind:=2;
+     continue;
+    end else
+     if ind=0 then line[0]:=line[0]+ansilowercase(ch) else  //sana 1 voi olla isolla lauseen alusta
+     line[ind]:=line[ind]+ch;
+     if ind<2 then if pos(ch,'qwertyuiop‰ˆlkjhgfdsazxcvbnm')<1 then ok:=false;
+     //if ind<2 then if pos(ch,'qwertyuiop‰ˆlkjhgfdsazxcvbnm')<1then if ind=1 then write(ch);
+  end;
+     //slist.loadfromfile('gutsanat.ansi');
+
+end;
+procedure ngramlemmas(fil:string);
+var ihte,slist:tstringlist;
+    ngf:textfile; ch:ansichar;
+    part,i,j:integer;inwrd:boolean;
+    line:array[0..20] of ansistring;skip:boolean;//hits:tstringlist;
+    hits:array[0..20] of ansistring;hitfreqs:array[0..20] of longword;hitnums:array[0..20] of word;
+    hitcount:word;
+    xlens:array[0..20] of word;
+    wnum:integer;
+    sana:ansistring;
+    posi,runsaus,runsain:integer;
+    pp,ss:longword;
+    freqs:boolean;
+    myfreq:longint;
+    freqar:array of longint;
+    procedure addfreqs;
+    var i,wf:integer;
+    begin
+       for i:=0 to hitcount-1 do
+       begin
+          wf:=hitnums[i];//integer(pointer(hits.objects[i]));
+          try
+          freqar[wf]:=freqar[wf]+myfreq; //hits[i]+1;
+          //write(hits[i],freqar[wn],' ');
+          except writeln('nono',wf,'/',myfreq);end;
+       end;
+     end;
+    procedure haerunsain;
+    var i:integer;
+    begin
+      try
+      runsain:=hitnums[0];
+      runsaus:=freqar[hitnums[0]];//integer(pointer(hits.objects[0]));
+      if hitcount>1 then
+      begin
+       //for i:=0 to hitcount-1 do write('+',hitnums[i]);
+       //for i:=0 to hits.count-1 do write(i,hits[i],integer(pointer(hits.objects[i])),'>');
+        //for i:=1 to hits.count-1 do if length(pisin)<length(hits[i]) then pisin:=hits[i];
+        for i:=1 to hitcount-1 do
+          if runsaus<freqar[hitnums[i]] then //integer(pointer(hits.objects[i])) then
+           begin
+             runsain:=hitnums[i];runsaus:=freqar[hitnums[i]];//integer(pointer(hits.objects[i]));
+           end;
+       end;
+       //if hitcount>1 then write('/',runsain);
+      except writeln('***********',runsain);end;
+    end;
+   function oldhit(w:string):boolean;
+   var j:integer;
+   begin
+     result:=true;
+     for j:=0 to hitcount-1 do if hits[j]=w then exit;
+     result:=false;
+   end;
+   var ffile:file;freqfile:textfile;  freqst:string;exitus:boolean;
+begin
+writeln(fil+'.iso');
+ihte:=tstringlist.create;
+slist:=tstringlist.create;
+//hits:=tstringlist.create;
+slist.sorted:=true;
+//exitus:=false;
+//reset(ngf);
+part:=0;
+{while not eof(freqf) do  //add words and their freqs from vocabulary
+begin
+  readln(freqf,sana);
+   posi:=pos(' ',sana);
+   slist.addobject(copy(sana,1,posi-1),tobject(pointer(integer(strtointdef(copy(sana,posi+1),0)))));
+   //writeln('<li>[',copy(sana,1,posi-1),'/',copy(sana,posi+1),'@',posi,'!',sana,']');
+end;
+//exit;}
+slist.loadfromfile('sanatvaan.ansi');
+freqs:=fileexists(fil+'.bin');
+setlength(freqar,slist.count);
+//writeln('freqs,',freqs);
+  if  freqs then
+  begin
+    TRY
+    assign(ffile,fil+'.bin');
+    reset(ffile,slist.count*4);
+    except writeln('failfile ', fileexists(fil+'.bin'),slist.count*4);end;
+    blockread(ffile,freqar[0],1);
+    closefile(ffile);
+    for i:=0 to slist.count-1 do slist.objects[i]:=TOBJECT(pointeR(freqar[i]));
+    //for i:=0 to slist.count-1 do if freqar[i]>500 then writeln(slist[i],freqar[i],' ');
+  end;
+  assign(ngf,'klk_ana2.iso');
+   writeln(fil+'.iso');
+  reset(ngf);
+  assign(freqfile,fil+'.num');
+  //assign(freqf,'klklemma.freqs');
+  reset(freqfile);
+  //writeln('freread');
+  //reset(freqfile);
+  part:=0;   //readln(ngf,freqst); readln(ngf,freqst);//writeln(';',freqst);; //readln(freqfile,freqst);
+  while not eof(ngf) do
+  begin
+   read(ngf,ch);
+      if (ch=^j) then
+      begin
+         try
+           readln(freqfile,freqst);
+           try
+           //for i:=0 to part-1 do write(line[i],'/');
+           myfreq:=strtointdef(freqst,0);
+           //fillchar(hits,sizeof(hits),0);//hits.clear;
+           //fillchar(hitfreqs,sizeof(hitfreqs),0);//hit-words not cleared .. nothing really need to be
+           //writeln(line[0]);
+           hitcount:=0;
+           if (part<1) or (line[1][1]='*') then continue;
+           for i:=part downto 2 do for j:=i-1 downto 1 do if line[i]=line[j] then line[i]:='';
+           // begin //write('-',i,line[i],j,line[j]);line[i]:='';end;
+           for i:=1 to part do
+           try
+             //if hits.indexof(line[i])<0 then //similar lemmas skipped
+              //if not oldhit(line[i]) then //similar lemmas skipped
+            if line[i]<>'' then
+             begin
+              //if line[i]=line[0] then ihte.add(line[0]);
+              wnum:=slist.indexof(line[i]);
+              if wnum>=0 then
+              begin hitnums[hitcount]:=wnum;hitcount:=hitcount+1;
+              end;
+              //write(^j,line[0],hitcount);
+              //IF FREQS THEN if wnum>=0 then
+              //  begin hitnums[hitcount]:=wnum;hitcount:=hitcount+1;end;
+              //  //hits.addobject(line[i],tobject(pointer(slist.objects[wnum])));//,tobject(pointer(wnum)));
+              //IF NOT FREQS THEN if wnum>=0 then
+              //  begin hitnums[hitcount]:=wnum;hitcount:=hitcount+1;end;//hits.addobject(line[i],tobject(pointer(slist.objects[wnum])));//,tobject(pointer(wnum)));
+                //hits.addobject(line[i],tobject(pointer(wnum)));//,tobject(pointer(wnum)));
+              //if freqs then if  wnum>=0 then writeln(',',wnum,'/',line[i]);
+             end;
+           except writeln('FAILfreqs:',line[0],runsain);;end;
+           if hitcount>0 then
+           begin
+            if freqs then haerunsain else addfreqs;
+               //if random(1000)=1 then
+             //if hitcount>99990 then       //debuggin lim
+             if freqs then if hitcount>0 then
+             begin
+              //write(^j,line[0],hitcount,'::');//,hits.commatext,slist.indexof(hits[1]),'/',slist.indexof(hits[2]),'/');
+              //for i:=0 to hitcount-1 do try write(' >>',hitnums[i],slist[hitnums[i]],freqar[hitnums[i]]);except writeln('xx',runsaus,'/',runsain);end;
+              //write('      =',slist[runsain],' ');
+             end;
+           end;// else writeln(line[0]);
+           finally
+            try //writeln(runsain,line[0],line[1],'//',slist[runsain]);
+            if runsain>-1 then
+             writeln(line[0], ' ',slist[runsain]) else writeln(line[0],' ','*');
+            //if line[0]='ahjoja' then exitus:=true;
+           except writeln('FAIL:',line[0],runsain);;end;
+           hitcount:=0;
+           runsain:=-1;
+           for j:=0 to 20 do begin line[j]:='';xlens[j]:=0;end;
+           part:=0;
+           skip:=false;
+           end;
+           except writeln('***');end;//writeln('fail - hit key');readln;end;
+
+      end else
+      begin
+        if ch='$' then continue else
+        if ch='/' then begin part:=part+1;skip:=false;end
+        else
+         if ch=' ' then skip:=true
+        else if skip then  xlens[part]:=xlens[part]+1 else
+          if ch='#' then begin  line[PART]:='';PART:=PART-1;skip:=true;end else
+         if ch<>'^' then line[part]:=line[part]+ch;
+       end;
+         //if ind<2 then if pos(ch,'qwertyuiop‰ˆlkjhgfdsazxcvbnm')<1 then ok:=false;
+         //if ok=false then if ind=1 then write(ch);
+         //if exitus then exit;
+   end;
+     //slist.loadfromfile('gutsanat.ansi');
+//   ihte.savetofile('klklemmas2.lst');
+   //writeln('dadsdfasd');
+   close(ngf);
+   if not freqs then
+   begin
+     //writeln('gogogog');readln;
+     assign(ffile,fil+'.bin');
+     rewrite(ffile,length(freqar)*4);
+     blockwrite(ffile,freqar[0],1);
+     closefile(ffile);
+     for i:=0 to slist.count-1 do if freqar[i]>=0 then writeln('<li>',slist[i],freqar[i]);
+   end;
+   exit;
+   //assign(ngf,'klk.srt');
+   //reset(ngf);
+   //for ss:=ihte
+end;
 
   function tsynonyms.haesynolist(var sanums:tlist;sl:tstringlist):word;
   var i,j,seeds:integer;
@@ -76,10 +314,10 @@ procedure tsynonyms.setsyn(sa,sy:word);
 vaR HIT:WORD;
 begin
    try
-   //writeln('lis√§√§ ', sy, 'sanan ', sa,' listaan (' ,length(syns));
+   //writeln('lis‰‰ ', sy, 'sanan ', sa,' listaan (' ,length(syns));
    FOR hit:=0 TO SYNCOLS-1 DO
    IF asyn(sa,hit)<>0 then
-   begin  //etsit√§√§n eka vapaa paikka. Jos oli valmiiksi, keskeytet√§√§n
+   begin  //etsit‰‰n eka vapaa paikka. Jos oli valmiiksi, keskeytet‰‰n
      if asyn(sa,hit)=sy then break else continue
    end
    else begin
@@ -92,7 +330,7 @@ end;
 procedure tsynonyms.delsyn(sa,sy:word);
 vaR HIT:WORD;
 begin
-   //writeln('lis√§√§ ', sy, 'sanan ', sa,' listaan (' ,length(syns));
+   //writeln('lis‰‰ ', sy, 'sanan ', sa,' listaan (' ,length(syns));
    FOR hit:=0 TO SYNCOLS-1 DO
    begin
      IF asyn(sa,hit)=0 then break;
@@ -123,7 +361,7 @@ begin
    end;
 
 end;
-procedure tsynonyms.teegut; //lue .gutenbergin tuottama bin√§√§ri
+procedure tsynonyms.teegut; //lue .gutenbergin tuottama bin‰‰ri
 var ccfile,gutf,outf:textfile;
   gutlist,guttmp:tstringlist;i,j,spos,occurs:integer;
   nn:word;
@@ -142,7 +380,7 @@ begin
      end;
       setlength(gutcc,5730*5730*2);
       setlength(gutarr,5730*16);
-      AssignFile(gutbin, 'gutcc.bin');  //ei onnistu tstrinlistill√§ varmaan blockwrite
+      AssignFile(gutbin, 'gutcc.bin');  //ei onnistu tstrinlistill‰ varmaan blockwrite
         writeln('ass');
         Reset(gutbin, length(gutarr));
         //Reset(gutbin, 16);//length(agut));
@@ -168,7 +406,7 @@ begin
 
 end;
 
-procedure tsynonyms.luegut; //lue .gutenbergin tuottama bin√§√§ri
+procedure tsynonyms.luegut; //lue .gutenbergin tuottama bin‰‰ri
 var ccfile,gutf,outf:textfile;
   gutlist,guttmp:tstringlist;i,j,spos,occurs:integer;
   nn:word;
@@ -181,7 +419,7 @@ var ccfile,gutf,outf:textfile;
 begin
       setlength(gutcc,5730*5730*2);
       setlength(gutarr,5730*16);
-      AssignFile(gutbin, 'guttext.bin');  //ei onnistu tstrinlistill√§ varmaan blockwrite
+      AssignFile(gutbin, 'guttext.bin');  //ei onnistu tstrinlistill‰ varmaan blockwrite
         writeln('ass');
         Reset(gutbin, length(gutarr));
         //Reset(gutbin, 16);//length(agut));
@@ -250,7 +488,7 @@ begin
     //close(outf);close(gutf)
         gutlist.savetofile('gutsanat.ansi');
         writeln('finallyy',length(gutarr));
-        AssignFile(gutbin, 'guttext.bin');  //ei onnistu tstrinlistill√§ varmaan blockwrite
+        AssignFile(gutbin, 'guttext.bin');  //ei onnistu tstrinlistill‰ varmaan blockwrite
         writeln('ass');
         Rewrite(gutbin, length(gutarr));
         writeln('reset');
@@ -261,7 +499,7 @@ begin
         writeln('<li>luettu');
 
 
-    except writeln('jotain m√§tti',length(gutarr),'!!!');end;
+    except writeln('jotain m‰tti',length(gutarr),'!!!');end;
     for i:=0 to 5729 do
     begin
         move(gutarr[i*16],nn,2);
@@ -420,7 +658,7 @@ begin
   //delsyn(i,asyn(i ,1));
   //for j:=0 to syncols do begin myj:=asyn(i,j); if myj=0 then break else writeln(slist[myj]);end;
  end;
-  savebin(synsans,syncols,syns,'synmul2.bin');
+  savebin(synsans,syncols,2,syns,'synmul2.bin');
 
 
 end;
@@ -464,15 +702,17 @@ end;
 procedure tsynonyms.gutextract;
 var gutf,outf:textfile;i:longword;j,occurs:integer;s:string[15];
    //ss:array[0..32] of string[23];
-    got:word;
+    got:longword;
     ss,gutlist:tstringlist;
-    wnum:word;//integer;
+    wnum:word;
     ostr:tfilestream;
     pw:pword;
+    sysmis:word;
 
 begin
-  pw:=@wnum;
-    gutlist:=tstringlist.create;
+  sysmis:=5730;
+   pw:=@wnum;
+   gutlist:=tstringlist.create;
    gutlist.sorted:=true;
    gutlist.loadfromfile('gutsanat.ansi');
    ostr:=TFileStream.Create('gutnums.bin', fmcreate or  fmShareExclusive);
@@ -486,17 +726,18 @@ begin
     while not eof(gutf) do
     begin
      try
-     got:=0;
-     i:=i+1;
+     //got:=;
      //if i>1000000 then break;
-     //got:=got+1;
      readln(gutf,s);
-     if length(s)<2 then begin got:=got+1;continue; end;//penaltia v√§lily√∂nneist√§
-     if length(s)>15 then continue;
      try
+     if s='' then begin ostr.writeword(sysmis);ostr.writeword(sysmis);continue;end;
+     if length(s)<2 then begin wnum:=sysmis; end else//penaltia v‰lilyˆnneist‰
+     if length(s)>15 then wnum:=sysmis else
      wnum:=gutlist.indexof(s);
-     except continue;end;
-     //if wnum<0 then continue;
+     //if got<100 then begin got:=got+1;writeln('<li>',s,wnum,gutlist[wnum]);end;
+     except wnum:=sysmis;end;
+
+     //if wnum<0 then wnum:=5730;
      //writeln(pw^);
      //WRITE(' ',i);
      try
@@ -505,7 +746,7 @@ begin
      //ss.add(s);
      //write(wnum,' ');
      //if got>16 then begin  writeln(ss.commatext,got);got:=0;ss.clear; end;
-     except writeln('ERROR ',s,ss.count);end;
+     finally i:=i+1;end;
     end;
     finally WRITELN('DONE');ostr.free;end;
 end;
@@ -646,157 +887,375 @@ type string16=string[15];
 
 procedure tsynonyms.gutmatrix;
 var instr:tfilestream;binf:file;i:word;matr:array of longword;    prevs:array[0..31] of word;
-    we:longint;
+    we:longint; av:word;gutlist:tstringlist;
+    sysmis:word;     cc:longword;
 begin
+  writeln('gutmatrix');
+  sysmis:=5730;
    fillchar(prevs,sizeof(prevs),0);
-   //gutlist:=tstringlist.create;
-   //gutlist.loadfromfile('gutsanat.ansi');
+   gutlist:=tstringlist.create;
+   gutlist.loadfromfile('gutsanat.ansi');
    setlength(matr,5730*5730);
    instr:=tfilestream.create('gutnums.bin',fmopenread);
    AssignFile(binf, 'guts.mat');
-   fillchar(prevs,sizeof(prevs),0);
+   //fillchar(prevs,sizeof(prevs),sysmis);
+   for i:=0 to 31 do prevs[i]:=sysmis;
+  // writeln(
 
+  cc:=0;
    while instr.Position<instr.Size do
     begin
+     //writeln(instr.readword);continue;
+     //if instr.Position>100000 then break;;
+     av:=instr.readword;
+     //if av=0 then continue;
+    //matr[prevs[16]*5730+prevs[i]] write(^j^j,gutlist[av]);
+    //if cc<100 then begin if av<>sysmis then writeln(av,gutlist[av]);cc:=cc+1;cc:=cc+1;end else exit;
      move(prevs[0],prevs[1],31*2);
-     prevs[0]:=instr.readword;
-      //if prevs[0]=3 then write(^j,gutlist[prevs[16]],gutlist[prevs[0]],': ');
-      if prevs[16]=0 then continue;
-      if prevs[0]=0 then continue;
-      we:=0;
+     prevs[0]:=av;
+
+     //write(' .',av);   continue;
+     //if prevs[16]=9999 then prevs[i]:=0;//write('. ');
+     //if prevs[0]=3 then write(^j,gutlist[prevs[16]],gutlist[prevs[0]],': ');
+     // if prevs[0]=5730 then prevs[0]:=9999;
+      //if prevs[0]=9999 then continue;
+      //we:=0;
       //for i:=99990 to 16 do if i<>8 then //we:=we+(16 div (abs(i-16)));
       //  IF I<>8999 THEN matr[prevs[8]*5730+prevs[i]]:=matr[prevs[8]*5730+prevs[i]]
       //   +1+(8 - (abs(i-8))) DIV 3;
-         //+(16-abs(i-16) div 8)+1;//lis√§pojot l√§himmille
+         //+(16-abs(i-16) div 8)+1;//lis‰pojot l‰himmille
      //for i:=0 to 31 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+4;
-     for i:=0 to 31 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis√§pojot l√§himmille
-     for i:=8 to 24 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis√§pojot l√§himmille
-     for i:=12 to 20 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis√§pojot l√§himmille
-     for i:=14 to 18 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis√§pojot l√§himmille
-     //for i:=15 to 17 do  IF I<>16 THEN  matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+2;//lis√§pojot l√§himmille
+     //for i:=0 to 31 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis‰pojot l‰himmille
+     //for i:=8 to 24 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis‰pojot l‰himmille
+//     for i:=12 to 20 do  if (av<5730)  then
+    try
+    if (prevs[16]<>sysmis)  then
+    for i:=8 to 24 do
+    begin
+     if prevs[i]=sysmis then continue;
+     if (i>12) and (i<20) then
+     matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+2 //lis‰pojot l‰himmille
+    else
+     matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis‰pojot l‰himmille
+     //if matr[prevs[16]*5730+prevs[i]]>10 then  //    if prevs[i]<>0 then if prevs[16]<>0 then
+     //write('  ',gutlist[prevs[16]],'/',gutlist[prevs[i]],matr[prevs[16]*5730+prevs[i]]);
+    end;
+    //try if prevs[16]=3 then writeln('*',gutlist[prevs[15]],'/',gutlist[prevs[17]]);    except write('!aaaa',i,':');end;
+    except write('!',i,':');end;
+
+     //for i:=14 to 18 do    matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+1;//lis‰pojot l‰himmille
+     //for i:=15 to 17 do  IF I<>16 THEN  matr[prevs[16]*5730+prevs[i]]:=matr[prevs[16]*5730+prevs[i]]+2;//lis‰pojot l‰himmille
      //for i:=8 to 24 do write(' ',gutlist[prevs[i]],matr[prevs[16]*5730+prevs[i]]);}
     end;
+           for i:=0 to 5730 do writeln('<li>',i,gutlist[i],matr[i*5730+(i)],'/',matr[i*5730+(3)]);
+
     writeln('donereadmatrix');
-    try
+    try                try
          Rewrite(binf, length(matr)*4);
-         Blockwrite(binf, matr[0], 1);
+         Blockwrite(binf, matr[0], 1);except writeln('nononowritematr');end;
        finally
          writeln('writtem');
          CloseFile(binf);end;
 end;
 
    procedure getbigs(var tosort:pword;bigs,bigvals:pword;w:word;sl:tstringlist);
-   var i,j,posi,fils:word;d:boolean;
+   var i,j,posi,fils:word;d:boolean;test:longword;
    begin
      //exit;
      //d:=false;//w=21;
+    test:=99265;
     //if d then writeln('+++',word((tosort)^),sl[w],'<hr>');
-    fillchar(bigs^,32*2,0);
-    fillchar(bigvals^,32*2,0);
-    //if d then for i:=0 to 50 do if (tosort+i)^>0 then writeln(i,sl[i],' <b>',i,'=',(tosort+i)^,'</b>');// else writeln(sl[i]);
+    fillchar(bigs^,32*2*2,0);
+    fillchar(bigvals^,32*2*2,0);
+    //if w=test then writeln(^j,'!!! ',sl[w],'','=');//,(tosort+i)^,' !');
 
+    //if d then for i:=0 to 50 do if (tosort+i)^>0 then writeln(i,sl[i],' <b>',i,'=',(tosort+i)^,'</b>');// else writeln(sl[i]);
+    try
     for i:=0 to 5730 do
     begin
-      posi:=31;//fils:=0;
+     if i=w then continue;
+      //if w=test then if (tosort+i)^>bigvals[31] then begin write(^j,'###',(tosort+i)^,' !');   for j:=0 to 31 do write(' ',(bigvals+j)^);end;
+      try
+      posi:=32*2;//fils:=0;
       if (tosort+i)^>0 then //(bigvals+10)^ then
       begin
-      //writeln('<li>',i,sl[i],' <b>',i,'=',(tosort+i)^,'</b>');
-      for j:=0 to 31 do
+      for j:=0 to 63 do
        begin
+        //if w=17 then write(' ? ',(bigvals+j)^);
         //if d then writeln(' /',j,'.',(bigvals+j)^,'/ ');//,(tosort+i)^>(bigvals+j)^);
         if (tosort+i)^>(bigvals+j)^ then begin //if d then writeln(j,'.',(bigs+j)^);
-          posi:=j;break;end;
+          if w=test then writeln(' !',posi);posi:=j;break;end;
        end;
       end;
-      if posi<31 then
+      except writeln('failbigs1:',w);end;
+      try
+      //if w=I THEN WRITE(^J,SL[I],POSI,'/',(TOSORT+i)^,': ');
+      if posi<64 then
       begin
-       fils:=fils+1;
-       move((bigs+posi)^,(bigs+posi+1)^,(31-posi));
-       move((bigvals+posi)^,(bigvals+posi+1)^,(31-posi));
+       //fils:=fils+1;
+       try
+       move((bigs+posi)^,(bigs+posi+1)^,(63-posi)*2);
+       except writeln('faila:',w,'/',posi);end;try
+       move((bigvals+posi)^,(bigvals+posi+1)^,(63-posi)*2);
+       except writeln('failb:',w,'/',posi);end;try
        move(i,(bigs+posi)^,2);
+       except writeln('faild:',w,'/',posi);end;try
        move((tosort+i)^,(bigvals+posi)^,2);
+       except writeln('failg:',w,'/',posi);end;
       end;
+      except writeln('failbigs2:',w,'/',posi);end;
     end;
+    except writeln('failbigs:::','@',w);end;
+    //WRITE('/',sl[bigs^],bigvals^,': ');
+
 end;
 
-procedure tsynonyms.gutscarse;
+
+
+procedure tsynonyms.gutsparse;
 var //instr:tfilestream;
     prevs:array[0..31] of word;
-   i,j,k,m:word;
+   i,j,k,m:longword;
    w,ocs,rowoc:longword;
-   rel:longword;
+   rel:double;
    matr:array of longword;
-   relmatr:array of word;
+   relmatr:array of word;   //'standardized'
    gutlist:tstringlist;
    ppp,  sss,vvv:pword;
-   bigvars,bigvals:array[0..31] of word;
-   scarmat:array of word;
-   scarf,binf:file;
+   bigvars,bigvals:array[0..63] of word;
+   sparmat:array of word;
+   sparf,binf:file;
    begin
-     fillchar(prevs,sizeof(prevs),0);
+    writeln('gutsparse');
+    fillchar(prevs,sizeof(prevs),0);
     gutlist:=tstringlist.create;
+    gutlist.sorted:=true;
     gutlist.loadfromfile('gutsanat.ansi');
     setlength(matr,5730*5730);
-    setlength(scarmat,5730*32);
+    setlength(sparmat,5730*64*2);
     setlength(relmatr,5730*5730);
      ppp:=@bigvars;
      vvv:=@bigvals;
      try
-       AssignFile(binf, 'guts.mat');
+          AssignFile(binf, 'guts.mat');
           Reset(binf, length(matr)*4);
           Blockread(binf, matr[0], 1);
         finally
           writeln('countsread');
           CloseFile(binf);end;
 
-     writeln('donereadmatrix');
+     writeln('donereadmatrix',gutlist.count);
+        writeln(gutlist.indexof('olla'), gutlist.indexof('aallokko'));
+       // for i:=0 to 5730 do writeln('<li>',i,gutlist[i],matr[i*5730+(i)],'/',matr[i*5730+(3)]);
+
+     //exit;
      //readln;
-    for i:=0 to 5728 do
+    for i:=0 to 5728 do //5728 do
     begin
      rowoc:=matr[i*5730+i];
-     //write('',^j,^j,gutlist[i],rowoc,':');
+    // writeln('<li><li>',i,':',gutlist[i],':',matr[i*5730+i]);
+     //write(' ',matr[^j,^j,gutlist[i],rowoc,':');
      for j:=0 to 5728 do
      begin
-       ocs:=matr[i*5730+j];
+      try
+      ocs:=matr[i*5730+j];
+      //writeln(gutlist[j],ocs,'/',matr[j*5730+j],'=',round(ocs*100000/matr[j*5730+j]));
+      //if ocs>10000 then writeln(gutlist[i],'_',gutlist[j],ocs);
+      //continue;
        //rel:=matr[j*5730+j];
        //if ocs<3 then continue;
-       rel:=((ocs)*10000) div round(sqrt(rowoc*matr[j*5730+j]+1));
+      except writeln('NO:',ocs,'/',matr[j*5730+j]);end;
+       if ocs<2 then rel:=0 else
+       if i=j then rel:=ocs div 10 else
+       begin //rel:=((ocs)*10000) div (round(sqrt(rowoc*matr[j*5730+j])+1));
+         try
+         //rel:=(ocs*10000000/(matr[j*5730+j]*rowoc+1));
+         rel:=(ocs*ocs*1000000)/(matr[j*5730+j]*rowoc+1);
+         //rel:=(ln(rel+1));
+         except writeln('toobig:',ocs,'/',matr[j*5730+j]);end;
+           //if ocs>100 then if i<>j then     writeln(round(ocs*100000/matr[j*5730+j]));
+       end;
+       //if j=i then writeln(ocs,':',rel,' ');
        //rel:=200000*ocs div (rowoc*matr[j*5730+j]+1);
+      //if j=4269 then
+    //  if ocs>10 then    write(' ',ocs);
 
        //if rel>150 then write(ocs,gutlist[j],rel,' ');
        try
-       relmatr[i*5730+j]:=rel;
-       //if rel>500 then write(gutlist[j],ocs,'/',rel,' ');
-
-      except   write(i*5730+j,'!!!!!!!! ',rel,' ');end;
+       relmatr[i*5730+j]:=round(rel);// div 5;
+       // write(rel);
+      except
+        relmatr[i*5730+j]:= 65535;
+        write('<li>fail:',i,'/',j,gutlist[i],':',gutlist[j],'=',ocs,'>',round(rel));end;
      end;
+       //for j:=0 to 5728 do if relmatr[i*5730+j]>10 then writeln(gutlist[j], relmatr[i*5730+j],' ');
+       //if i>50 then break;
+       //continue;
 
+     //if i=3034 then writeln('<h1>olla?',gutlist[i],matr[i*5730+i],'/',rowoc,'</h1>');
      //               mysyn[ps1*5730+ps2]:=mysyn[ps1*5730+ps2]+occurs+1;
 
     // procedure big16(var tosort,bigs:pword;bigvals:pword;w:word;sl:tstringlist);
 
     end;
-    for i:=0 to 5730 do
+    writeln('matrix standardized');
+    for i:=0 to 5728 do
     begin
+      try
+     // sleep(100);
       sss:=pword(relmatr)+i*5730;
-      write(^j,^j,gutlist[i],sss^,':');
+      //write(' ',gutlist[i],sss^,':');
       getbigs(sss,ppp,vvv,i,gutlist);
+      except writeln('??',i,'failbigs',BIGVAlS[J]);end;
       TRY
-      for j:=0 to 31 do if bigvars[j]>0 then IF BIGVARS[J]< 5730 THEN write(' ',gutlist[bigvars[j]],bigvals[j]);
-     except writeln('failbigs',BIGVARS[J]);end;
+     // for j:=0 to 31 do if bigvars[j]>0 then IF BIGVARS[J]< 5730 THEN write(' ',gutlist[bigvars[j]],bigvals[j]);
+      //sparmat[(i*64)+1]:=relmatr[i*5730+(i)];    sparmat[i*64]:=i;
+      bigvars[0]:=i;bigvals[0]:=relmatr[i*5730+(i)] div 1;
+      for j:=0 to 63 do begin
+       try
+       sparmat[(i*64*2)+(j*2)]:=bigvars[j];
+       sparmat[i*64*2+(j*2)+1]:=bigvals[j];
+       except writeln('???');end;
+       //if sparmat[(i*64)+(j*2)]>20 then
+      end;
+      //writeln(' ',gutlist[i],'/',gutlist[bigvars[0]],' //',bigvals[0],'//',gutlist[bigvars[1]],' //',bigvals[1]);
+     except writeln('!!',i,':',j,'=',(i*64)+(j*2),'/',length(sparmat),'failbigs',BIGVAlS[J]);end;
 
     end;
+    //exit;
+    //for i:=0 to 5729 do if sparmat[i*64*2+1]>1000 then writeln('<li>',gutlist[i],matr[i*5730+(i)],'/',relmatr[i*5730+(i)],'/sp:',sparmat[i*64*2],':',sparmat[i*64*2+1]);
+    try
+    writeln('donematrxs');
+    savebin(5730,5730,2,relmatr,'gutrel.mat');
+    except writeln('failsaverel');end;
+
+    writeln('DODODODOD');
+    try
+    begin
+      try
+      AssignFile(binf, 'gutspar.mat');  //ei onnistu tstrinlistill‰ varmaan blockwrite
+      Rewrite(binf, 64*4);
+      writeln('binsave:');
+       for i:=0 to 5729 do //writeln(i*syncols,syns[i*syncols]);exit;
+        begin // do
          try
-       AssignFile(binf, 'guts.mat');
-          Reset(binf, length(matr)*4);
-          Blockread(binf, matr[0], 1);
-        finally
-          writeln('countsread');
-          CloseFile(binf);end;
+          BlockWrite(binf, sparmat[i*64*2], 1);
+         except on e:exception do writeln(e.message);end;
+        // if i=3 then     for j:=0 to 31 do write(' ',gutlist[sparmat[i*64+j*2]],' ');//,':',sparmat[i*64+j*2+1],' ');
+        end;
+        writeln('binsaved');
+      finally
+        Closefile(binf);
+        writeln('binclosed:');
 
+       end;
+      end;
 
+    for i:=0 to  5730 do //if sparmat[i*64*2+1]>1000 then
+      begin writeln('<li><li>:',i,';<b>',gutlist[i],'</b>:',sparmat[i*64*2+1]);
+       for j:=1 to 63 do
+       begin w:=sparmat[i*64*2+j*2];
+       if (w<>5730)  then if sparmat[i*64*2+j*2+1]<00 then break else write(' ',gutlist[w],sparmat[i*64*2+j*2+1]);end;
+      end;
 
+    //savebin(5730,32,4,sparmat,'gutspar.mat');
+    except writeln('failsavesparce');end;
+    writeln('DODODODOD');
   end;
+
+procedure tsynonyms.gutkerro;
+   var i,j,k,m:word;
+       we:longint;         cols:word;
+       gutlist:tstringlist;binf:file;
+       sparmat:array of word;
+       hithits,ni,nj,nk,nij,njk,nik:longword;subi,subj,subk,subm:word;
+   begin
+     cols:=64;
+     gutlist:=tstringlist.create;
+     gutlist.loadfromfile('gutsanat.ansi');
+     setlength(sparmat,5730*64*2);
+     try
+      //gutlist.insert(0,'.'); //
+      AssignFile(binf, 'gutspar.mat');  //ei onnistu tstrinlistill‰ varmaan blockwrite
+      Reset(binf, 64*4);
+      //writeln('binread:',fn);
+       for i:=0 to 5729 do //writeln(i*syncols,syns[i*syncols]);exit;
+        begin // do
+         try
+          Blockread(binf, sparmat[i*64*2], 1);
+           //IF I=3058  THEN write(^j^j,'*',i,gutlist[i],' ');
+            //if i=3058 THEN for j:=0 to 31 do write(gutlist[sparmat[i*64+j*2]],' ');//,':',sparmat[i*64+j*2+1],' ');
+          //end;
+         except on e:exception do writeln(e.message);end;
+        end;
+        writeln('binread');
+      finally
+        Closefile(binf);
+        writeln('binclosed:');
+
+       end;
+
+      //readbin(5730,32,4,sparmat,'gutspar.mat');;
+     // exit;
+
+      writeln('<ul>');
+      for i:=1 to 57 do // 5729 do
+      begin
+        try
+        ni:=sparmat[i*64*2+1];
+
+       // for j:=0 to 31 do if bigvars[j]>0 then IF BIGVARS[J]< 5730 THEN write(' ',gutlist[bigvars[j]],bigvals[j]);
+        write('<li>:',gutlist[i],':');//,'/',sparmat[i*64*2+1],'; ');
+              //if i>2800 then //writeln(' ?',i,'/',sparmat[i*cols],':',sparmat[i*cols+1],'.',sparmat[i*cols+2],':',sparmat[i*cols+3],'.',sparmat[i*cols+4],':',sparmat[i*cols+5],' ');
+        //if i>00 then   for j:=0 to 31 do IF sparmat[i*64+j*2]<5730 then write(gutlist[sparmat[i*64+j*2]],':',sparmat[i*64+j*2+1],' ');
+                  //for j:=0 to 32 do write(' ',gutlist[sparmat[i*32+j*2]],':',sparmat[i*32+j*2+1],' ');
+                 // for j:=0 to cols do write(i,'/',sparmat[i*32+j],':',sparmat[i*32+j+1],' ');
+               if ni=0 then continue;
+        for j:=1 to 63 do
+        begin
+         subj:=sparmat[i*64*2+j*2];
+         nj:=  sparmat[i*64*2+j*2+1];
+         nij:=sparmat[subj*64*2+1];
+         hithits:=0;
+         IF subj=5730 then continue;
+         IF subj=i then continue;
+         write(' ',gutlist[subj],' ');//,nj,'/');
+         //continue;
+         for k:=1 to 63 do
+         begin
+          subk:=sparmat[subj*64*2+k*2];
+          njk:=sparmat[subj*64*2+k*2+1];
+          if subk=5730 then continue;
+          if subk=subi then begin write(' ');continue;end;
+          //if subk=i then begin hithits:=hithits+nk;continue;write('<b> ',gutlist[subk],'</b>');continue;end;
+          //if sparmat[subk]=i then hithits:=hithits+2;// writeln(i*64+(j*2),'/',length(sparmat)) else
+          for m:=1 to 63 do
+           begin
+               try
+               try subm:=sparmat[i*64*2+m*2];except write('!!',subj);end;
+               if subm=5730 then continue;
+               //if subj=subi then continue;
+               //write(' ',gutlist[subk],' ');
+               if subm=subk then begin hithits:=hithits+nij*njk*sparmat[i*64*2+m*2+1]; continue;write('<em>',gutlist[subk],'</em> ') end;
+               except  write('??',subk);end;
+           end;
+           //write('</ul>');
+          end;
+          if hithits>10 then write('<b>',hithits div (ni*nj),'</b> ') else write('<em style="font-size:0.5 em">',gutlist[subj],hithits,'</em> ');
+         //write('</ul>');
+        end;
+
+         //if i>00 then   for j:=0 to 31 do
+         //if (hithits=0) then
+         //write(' -',gutlist[subi]);
+         //for k:=0 to 31 do write(' ',sparmat[subw*64+(k*2)]);
+         //write(' ',gutlist[sparmat[(i*64)+(j*2)]],'=',  sparmat[i*64+(j*2)+1]);
+       except writeln('!!',i,':',j,'=',(i*64)+(j*2),'/','fail!</b>');end;
+       //write('</ul>');
+
+      end;
+   end;
+
  { procedure splitl(line:string16;var snum,len:longint);
   var i:word;pastsp:boolean;s1,s2:string16;
   begin
@@ -829,7 +1288,7 @@ begin
       finally
         writeln('countsread');
         CloseFile(binfile);end;
-  //assignfile(outfile,'gutx2.sums');//numeroina, tuplana, vaatii sorttaamisen my√∂hemmin
+  //assignfile(outfile,'gutx2.sums');//numeroina, tuplana, vaatii sorttaamisen myˆhemmin
   //rewrite(outfile);i:=0;
   linesplit.Delimiter:=' ';
   //linesplit.StrictDelimiter:=true;
@@ -901,7 +1360,7 @@ begin
   reset(parifile);
   assign(outfile,'gutlines.nums');
   rewrite(outfile);
-  //assignfile(outfile,'gutx2.sums');//numeroina, tuplana, vaatii sorttaamisen my√∂hemmin
+  //assignfile(outfile,'gutx2.sums');//numeroina, tuplana, vaatii sorttaamisen myˆhemmin
   //rewrite(outfile);i:=0;
   linesplit.Delimiter:=' ';
   //linesplit.StrictDelimiter:=true;
@@ -964,7 +1423,7 @@ begin
  //writeln('disabled tmp');exit;
   assign(parifile,'gut.fi');
   reset(parifile);
-  assignfile(outfile,'gutx2.fi');//numeroina, tuplana, vaatii sorttaamisen my√∂hemmin
+  assignfile(outfile,'gutx2.fi');//numeroina, tuplana, vaatii sorttaamisen myˆhemmin
   rewrite(outfile);
   pn1:=0;pn2:=0;
   gutlist:=tstringlist.create;
@@ -1036,11 +1495,11 @@ begin
   linelist:=tstringlist.create;
   //linelist.StrictDelimiter:=true;
   linelist.Delimiter:=' ';
-  //assign(ifile,'sanatvaan.ansi');  //synonyymit/liittyv√§t sanat
+  //assign(ifile,'sanatvaan.ansi');  //synonyymit/liittyv‰t sanat
   //reset(ifile);
-  assign(resfile,'sanatnum.ansi');  //synonyymit/liittyv√§t sanat
+  assign(resfile,'sanatnum.ansi');  //synonyymit/liittyv‰t sanat
   rewrite(resfile);
-  assign(synfile,'syn_ok.ansi');  //synonyymit/liittyv√§t sanat
+  assign(synfile,'syn_ok.ansi');  //synonyymit/liittyv‰t sanat
   reset(synfile);
   fillchar(synarray, sizeof(synarray),0);
  i:=0;
@@ -1077,7 +1536,7 @@ begin
    //linelist.Delete(0);
    //linelist.sort;
    //try   writeln('<li><b>',psan,reslist[psan],'</b> ',linelist.commatext,' ///',rivi);   except writeln('</b>--',linelist.Text);end;   continue;
-   if psan>=0 then  //pit√§is saada talteen my√∂s tieto synonyymien keskin√§isist√§ yhteyksist√§
+   if psan>=0 then  //pit‰is saada talteen myˆs tieto synonyymien keskin‰isist‰ yhteyksist‰
    begin
     writeln(resfile);
    for j:=0 to linelist.count-2 do
@@ -1092,7 +1551,7 @@ begin
           hits:=hits+1;
         end;
    end
-   end else    //eka sana (jonka synonyymej√§ rivill√§ listataan) ei esiinny sanalistassa
+   end else    //eka sana (jonka synonyymej‰ rivill‰ listataan) ei esiinny sanalistassa
    begin
      writeln('<li>?',linelist[0],':');
      for j:=1 to linelist.count-2 do
@@ -1186,7 +1645,7 @@ try
   writeln('<li>CLOSE*');
 
   finally
-        savebin(synsans,syncols,syns,'syn.bin');
+        savebin(synsans,syncols,2,syns,'syn.bin');
         close(resfile);
         writeln('resclosed');
         close(synsetfile);
@@ -1195,19 +1654,19 @@ try
 end;
   {
  linehits:=tlist.create;
-//inf:=tfilestream.create('wikithe.txt',fmopenread);  //synonyymit/liittyv√§t sanat
-//assign(inf,'gutsanat.iso');  //synonyymit/liittyv√§t sanat
-//assign(inf,'sense.nums');  //synonyymit/liittyv√§t sanat
-//assign(inf,'wikithe.ansi');  //synonyymit/liittyv√§t sanat
-assign(inf,'syn_allx.ansi');  //synonyymit/liittyv√§t sanat
+//inf:=tfilestream.create('wikithe.txt',fmopenread);  //synonyymit/liittyv‰t sanat
+//assign(inf,'gutsanat.iso');  //synonyymit/liittyv‰t sanat
+//assign(inf,'sense.nums');  //synonyymit/liittyv‰t sanat
+//assign(inf,'wikithe.ansi');  //synonyymit/liittyv‰t sanat
+assign(inf,'syn_allx.ansi');  //synonyymit/liittyv‰t sanat
 //assign(inf,'sanatall.arev');  //kaikki ei-yhdyssanat
 reset(inf);
-assign(synf,'syn_ok.ansi');  //synonyymit/liittyv√§t sanat
+assign(synf,'syn_ok.ansi');  //synonyymit/liittyv‰t sanat
 rewrite(synf);
-assign(sanaf,'sanat_ok.ansi');  //synonyymit/liittyv√§t sanat
+assign(sanaf,'sanat_ok.ansi');  //synonyymit/liittyv‰t sanat
 rewrite(sanaf);
-assign(misfile,'testimiss.the');  //synonyymit/liittyv√§t sanat
-assign(numfile,'syn_ok.num');  //synonyymit/liittyv√§t sanat
+assign(misfile,'testimiss.the');  //synonyymit/liittyv‰t sanat
+assign(numfile,'syn_ok.num');  //synonyymit/liittyv‰t sanat
 rewrite(misfile);
 rewrite(numfile);
 
@@ -1242,7 +1701,7 @@ fillchar(sanataulu,sizeof(sanataulu),0);
           ghits:=0;hitline:='';
         linehits.clear; olisana:=false;ekasana:=true;continue;
     end;
-    //if sana<>'tyt√§r' then continue;
+    //if sana<>'tyt‰r' then continue;
     sana:=stringreplace(trim(sana),'_','',[rfReplaceAll]);
     sana:=stringreplace((sana),'-','',[rfReplaceAll]);
 
@@ -1251,7 +1710,7 @@ fillchar(sanataulu,sizeof(sanataulu),0);
     akon:='';
     //if sana='' then begin writeln(outf,'*****');continue;end else
     voksointu(sana,hakueietu,hakueitaka);
-    if hakueitaka and hakueietu then   continue;   //autorit√§√§risten harmiksi
+    if hakueitaka and hakueietu then   continue;   //autorit‰‰risten harmiksi
     hakurunko:=taka((sana));
     hakukoko:=sana;
     hits:=0;
@@ -1259,7 +1718,7 @@ fillchar(sanataulu,sizeof(sanataulu),0);
     if hakurunko[1]='a' then
     //res:=res+
     if hitnum=0 then hitnum:= etsiyks(hakurunko,akon,hakukoko,hakueietu,hakueitaka,
-    verbit.sijat[0],nil,nil,hits); //verb permuo p√§√§ttyy "a"
+    verbit.sijat[0],nil,nil,hits); //verb permuo p‰‰ttyy "a"
     if hitnum=0 then begin hitnum:=eitaivu.sexact(sana,eitaivu.sanalista);if hitnum<>0 then hitnum:=26000+hitnum;end;
     //if hits>0 then writeln('!!!',hitlist[hitcount],sans[hitlist[hitcount]].san,sans[hitlist[hitcount]].akon);//<li>H: ',sans[hitlist[hitcount]].san,sans[hitlist[hitcount]].akon,'#',hitlist[hitcount]);
     if hits=0 then if hitnum>0 then hits:=hits+1;// else writeln('<li>;:',reversestring(sana),'</li>');

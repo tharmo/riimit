@@ -1,4 +1,303 @@
 class name="nominit"
+  env 
+    xse:gawk env="LC_ALL=fi_FI.ISO-8859-15":  BEGIN   { print toupper("ääkkösiä"); }
+    
+  # pois kommentoidut enimmäkseen jo läpikäytyjä hitaita juttuja (tarpeellisia ennakkotehtäviä)
+   # enimmäkseen niitä kannattaa ajaa shellissä, tämä on enemmän muistilistaa
+
+  ### poistaa lyhkäset (välimerkit), järjestää sarakkeet, sortaa rivit ekan sanan mukaan
+  klk_alkusiivo out=klk.srt/klkutf.srt
+        xse:gawk in=klk_fi_2grams_all: '''  
+          BEGIN { FS=" "}
+          {  if (length($2)>2)  if (length($3)>2) print $2,$3,$1 >"klk_siivo1.utf";
+          }
+          ''' 
+        ### sortataan, kestää n. 10 min  
+        xse:shellexec: export LC_ALL=C;export LC_COLLATE=fi_FI.utf8;sort -f klk.clst>klk_siivo1.srt.utf
+        xse:shellexec: iconv -t ISO-8859-1//TRANSLIT -f UTF-8  klk_siivo1.srt.utf > klk_siivo1.srt.iso
+  
+  klk_tofiana in=klk_siivo1.srt                    
+    pre
+       ### POIMII UNIIKIT SANAT, poistaa isolla alkavat  (erisnimet) ja erikoismerkkejä sisältävät kakkossanat (isolatinia, muista sorsan enkoodaus)
+       ### pitäis käyttää unicodea, vaan voi olla ongelmia (length, stringlist?)
+       # IN=klk.srt //iso-89
+       #xse:shellexec: ./riimaa klksiivo >klk_siivo2.srt.iso
+       #JOSSAIN VÄLISSÄ SORTTAUS MENNYT PIELEEN, tehdään siivo3
+       #export LC_ALL=C;export LC_COLLATE=fi_FI.ISO-8859-1;cat klk_siivo2.srt.iso |sort -f >klk_siivo3.srt.iso
+       xse:gawk in=klk_siivo3.srt.iso: '''        {
+                if (prev!=$1) {   print prev>"klk_ws.iso";print num>"klk_ns.num";num=0}
+                num=num+1;
+                prev=$1 
+               } 
+               ''' 
+       xse:shellexec: iconv -f ISO-8859-1//TRANSLIT -t UTF-8  klk_ws.iso > klktofiana.lst 
+       ### frekvenssit talteen myöhemmin yhdistettäviksi, lemmat utf:änä hfst fianan purtaviksi        
+  klk_fiana     
+       ### AJA HFST FI ANALYYSI, >UTF
+       xse:shellexec: cat klktofiana.lst |./fiana >klk_ana.utf 
+       #|gawk '{if (NF>1) print >"klk_ana.utf" }'
+       xse:shellexec: iconv -t ISO-8859-1//TRANSLIT -f UTF-8  klk_ana.utf >klk_ana.iso 
+       ### utftoiso ... ?vois sisäänrakentaa pascal-funtioihin tuon utf-muunnoksen 
+  klk_lemmaa     
+       ### 
+       ### valitse mahd vaihtoehdoista ne joiden lemma esiintyy sanatvain.lst:ssä.  }
+       # in=klk_ana.iso
+       xse:shellexec: rm klk_lemmacounts.bin
+       ## eka kierros - kun lemmacountsia ei vielä ole. laskee esiintymiä klk_lemmacounts.bin'iin
+       xse:shellexec: ./riimaa klk_lemmaa >klk_lemmas.iso
+       ### toka kierros. testaa joko analyysirivin lemmat löytyvät slistissä, valitsee isoimman lemmacountsin. jos ei löydy sanavainista, laittaa "*" klemmaksi 
+       xse:shellexec: ./riimaa klk_lemmaa >klk_lemmas.iso
+       ## 
+       #|uniq  >klk_lemmas.iso
+       # word and its lemmanumber in sanatansi.srt
+       
+  
+  klk_joinlemma1
+   pre 
+    xse:gawk in=klk_lemmas.hits env="LC_ALL=fi_FI.ISO-8859-15": '''
+     BEGIN { getline}
+     {           
+          
+        lemma=$2;sana=$1;freq=$3
+        if (p1==sana) {
+             print p2,lemma,p3 >"klk_newhits.tmp";print p2> "klk_tofiana2.lst" 
+             #print "***",$0 "  //",p1,p2,plemma
+        }     
+        while (1) {
+             getline< "klk_siivo3.srt.iso"  
+             #print $1,"?",sana, ($1 > sana)
+             if ($1 > sana) { #print $0,"\\",lemma, sana;
+             p1=$1;p2=$2;p3=$3;plemma=lemma;break;  }
+             #ss=ss+1;if (ss>20000) exit 
+             if (sana==$1) #print sana,$0
+             print $2,lemma ,$3, sana  > "klk_newhits.tmp";print $2 >"klk_tofiana2.lst" 
+         
+         }        
+         #if (NR>1000) exit
+       
+     }  
+     '''  
+  klk_joinlemma1rikki
+   pre 
+   
+    xse:gawk in=klk_siivo3.srt.iso  env="LC_ALL=fi_FI.ISO-8859-15": '''
+     { 
+       if ($1==cursana) { print $2 ,curlemma , $1, $3 > "klk_newhits.tmp";print $2 >"klk_tofiana2.lst" }
+       else if ($1==nexthit || nexthit=="") {  ##uusi sana
+           thishit=nexthit
+           getline< "klk_lemmas.hits"  
+           nexthit=$1
+           plemma=lemma
+           lemma=$2
+          
+        }        
+   
+       }  
+     '''  
+  klk_tofiana2
+       xse:shellexec: export LC_ALL=C;export LC_COLLATE=fi_FI.ISO-8859-1;cat klk_newhits.tmp |sort -f >klk_sanat2.srt.iso
+       #xse:shellexec: export LC_ALL=C;export LC_COLLATE=fi_FI.ISO-8859-1;   gawk  '{ print $1}' klk_sanat2.srt.iso |uniq  > klktofiana2.iso
+       xse:gawk in=klk_sanat2.srt.iso: '''        {
+                if (prev!=$1) {   print prev>"klk_ana2.wrd";print num>"klk_ana2.num";num=0}
+                num=num+1;
+                prev=$1 
+               } 
+               ''' 
+       xse:shellexec: iconv -f ISO-8859-1//TRANSLIT -t UTF-8  klktofiana2.iso > klk_tofiana2.utf 
+       xse:shellexec: iconv -f ISO-8859-1//TRANSLIT -t UTF-8  klk_sanat2.str.iso > klk_sanat2.srt.utf 
+       #xse:shellexec: gawk  '{ print $1}' klk_sanat2.srt.utf |uniq  > klktofiana2.utf
+       xse:shellexec: cat klk_tofiana2.utf |./fiana >klk_ana2.utf
+       xse:shellexec: iconv -t ISO-8859-1//TRANSLIT -f UTF-8  klk_ana2.utf > klk_ana2.iso
+  klk_lemmaa2
+       ### valitse mahd vaihtoehdoista ne joiden lemma esiintyy sanatvain.lst:ssä.  }
+       # in=klk_ana.iso
+       xse:shellexec: rm klk_ana2.bin
+       ## eka kierros -        kun lemmacountsia ei vielä ole. laskee esiintymiä klk_lemmacounts.bin'iin
+       xse:shellexec: ./riimaa    klk_lemmaa klk_ana2>klk_lemmas2.iso
+       ### toka kierros. testaa joko analyysirivin lemmat löytyvät slistissä, valitsee isoimman lemmacountsin. jos ei löydy sanavainista, laittaa "*" klemmaksi 
+       xse:shellexec: ./riimaa klk_lemmaa klk_ana2>klk_lemmas2.iso
+       ## 
+       #|uniq  >klk_lemmas.iso
+       # word and its lemmanumber in sanatansi.srt
+  klk_count1 
+   pre 
+     xse:gawk in=klk_newhits.tmp: '''
+      {
+       #if (NR>10000) exit
+       if (p2!=$2)  { print p2, count >" "; p2=$2;count=0}
+       count=count+1
+       }
+      ''' 
+  klk_joinlemma2
+   pre 
+   
+      #gawk -f join.awk klk_lemmas.iso >klk_lemmas.hits
+    xse:gawk in=klk_lemmas2.iso  env="LC_ALL=fi_FI.ISO-8859-15": '''
+  
+         BEGIN { getline;print;print "---------------"}
+        { 
+         v1=$1;v2=$2;
+         #getline <"klk_w2.iso"; 
+         getline <"klk_lemmas2.iso"; 
+         if (v1!=$1) 
+          print "**********", NR ,$1 "///" v1,v2,$1
+         getline <"klk_ns.num"
+         if (v2=="*") next
+         print v1,v2,$1 > "klk_lemmas2.hits"
+        }
+
+     '''
+  klk_joinlemmas
+   pre
+    xse:gawk in=klk_sanat2.srt.iso  env="LC_ALL=fi_FI.ISO-8859-15": '''
+         BEGIN { for (i=1;i<5;i++) { getline <"klk_lemmas2.iso";print;print "---------------"}}
+         #BEGIN { for (i=1;i<2;i++) { getline <"klk_w2.iso";print;print "---------------"}}
+        {  
+         #if ($1==v1) { n=n+$3;  next}
+         #print
+         v2=$2;v3=$3;v4=$4
+         n=$3
+         #if (NR>11111) exit
+         if (v1!=$1)
+         {
+         v1=$1;
+         getline <"klk_lemmas2.iso"; 
+           #kk=kk+1;        if (kk>9999) exit
+           if (v1!=$1)           print "<li>**************", NR ,$0 "///<b>" v1,"</b>" v2
+           lemma= $2;sana=$1
+          } 
+           #if (NR>1000) exit
+          
+        if (lemma!="*")
+           print lemma,v2,n> "lemmapareja.iso"
+           }
+       '''    
+    #xse:shellexec: export LC_ALL=C;export LC_COLLATE=fi_FI.ISO-8859-1;cat lemmapareja.iso |sort -f >lemmapareja.srt.iso
+  klk_lemmaparicounts  
+    #xse:gawk in=lemmapareja.srt.iso out=klk_lemmaparit.iso: { if ($1==p1 && $2==p2) { n=n+$3 }   else { print p1,p2,n;n=$3;p1=$1;p2=$2 }}
+    h1: do
+    #xse:gawk in=klk_lemmaparit.iso out=klk_lemmaparit.counts: { if ($1==p1) { n=n+$3 }   else { print p1,n;n=$3;p1=$1 }}
+    # tried it - files are symmetical, no need to count second words xse:gawk in=klk_lemmaparit.iso out=lemmaparit.tmp: { print $2,$1,$3}
+    xse:gawk in=klk_lemmaparit.iso: '''
+      BEGIN { print "ikätaasä"
+      while (getline<"klk_lemmaparit.counts") c[$1]=$2;
+      while (getline<"klk_lemmas1.counts") c[$1]=c[$1]+$2 
+      }
+      {  
+       #if (NR>380000) exit; 
+      
+        if ($1!=p1) { wc=c[$1];print "<li><b>" $1, wc "</b>"; }
+        #print $2 "<b>" $3 "</b>." c[$2] ;
+        p1=$1 
+        std=int((10000000*$3*$3) / ((100+c[$2])*(100+wc)));
+        #if (std>200) print $3 $2 "<b>" std "</b>7." c[$2] # >"klk_parit.iso";
+        if (std>20) print $2 ;#>>"klk_parit.iso"
+     }
+    '''   
+  hr    
+   
+   pre: **'{?read('vitut')}
+         
+    ###xse:gawk in=vitut  env="LC_ALL=fi_FI.ISO-8859-15": '''
+       { 
+         if ($1==p1 &&  $2 == p2) { n=n+$3; print $0, n,p1,p2>"tuplat";next}
+         print p1, p2, n+$3 >"lemmaparit.lst"
+         p1=$1;p2=$2;n=0 
+         #if (NR>1000) exit
+         }
+       '''  
+  vv  xse:gawk in=klk_sanat.srt.iso  env="LC_ALL=fi_FI.ISO-8859-15": '''
+     { 
+       if ($1==thishit) { print $2 ,lemma , $1, $3 > "klk_newhits.tmp";print $2 >"klk_tofiana2.lst" }
+       else if ($1==nexthit || nexthit=="") {  ##uusi sana
+           thishit=nexthit
+           getline< "klk_lemmas.iso"  
+           nexthit=$1
+           plemma=lemma
+           lemma=$2
+          
+        }        
+   
+       }  
+     '''  
+     BEGIN { getline;print;print "---------------"}
+{ v1=$1;v2=$2;
+ getline <"klk_ws.iso"; 
+ if (v1!=$1) 
+  print "**********", NR ,$0 "///" v1,v2
+ getline <"klk_ns.num"
+ if (v2=="*") next
+ print v1,v2,$1 >"vitut"
+ print "*"
+}
+     
+  mikalie 
+       { if ($1!=v1) {
+             print v2, lemma, n
+             v1=$1;v2=$2;n=$3;  
+             while (getline< "klk_lemmas.hits") {
+               if ($1==v) { 
+                 lemma=$2
+                 break;
+               } else {
+                if ($1>v) {  print  "???" v ,fr }
+               } 
+             }
+          }      
+          n=n+1
+        }  
+       '''   
+  klk
+          ### trying to create a list with three columns: second word, ordinal of first word's lemma (in alphabetic listing), number of occurrences 
+         ### list of all words and their (guessed) lemmas 
+         xse:shellexec: ./riimaa klk > 
+
+  klkcount 
+     #xse:shellexec: export LC_COLLATE=fi_FI.ISO-8859-15; cat sanatvaan.ansi |sort >sanatansi.srt  
+     ### add occurances of pos1-words over all pos2's 
+     ###xse:gawk env="LC_ALL=fi_FI.ISO-8859-15" in=klk.srt xout=klk.freqs: '''
+       { n=($1); if (prev!=n) { print prev, c >"klk2.freqs"; c=0}
+         prev=n;c=c+$3
+      
+       }
+      '''   
+     xse:gawk in=klklemmas.lst env="LC_ALL=fi_FI.ISO-8859-1": '''
+       { v=$1; fr=0;  
+        while (getline< "klk2.freqs") {
+            if ($1==v) { 
+              fr=fr+$2
+            } else {
+                if (tolower($1)>v) {  print  v ,fr > "klklemma.freqs";break}
+              } 
+          }
+       }      
+       '''   
+       
+  tri
+     pre
+       #xse:shellexec: head -10000 5grams.04.txt >5gram.lyh
+       xse:gawk in=triarcs.04.txt xout=5grams.csv: '''
+        BEGIN { FS=" "}
+        {  for (i=2;i<6;i++) 
+            { split($i,ww,"/");ws=ws "(" ww[2] ") " }
+            print (ws "#                " $6)>"tri.csv";ws="";if (NR % 10000==1) print NR
+          }
+       ''' 
+  ftb
+     pre
+       #xse:shellexec: head -10000 5grams.04.txt >5gram.lyh
+       xse:gawk in=5grams.04.txt xout=5grams.csv: '''
+        {  for (i=1;i<6;i++) 
+            { split($i,ww,"/");ws=ws "," ww[2] }
+            print (ws "," $6)>"5gram.csv";ws="";if (NR % 10000==1) print NR
+          }
+       ''' 
+        
+  pre
+      xse:gawk in="../turku/gut/xx_ab.con" xout="gutpairs.tmp": BEGIN { FS=" "} { print $2, $3}
+  jj    
+      xse:gawk in="ftb1-2014.tsv" xout="gutpairs.tmp": BEGIN { FS=" "} { print $3}
+      ../turku/gut/xx_ab.con
   gut
      #xse:gawk in="gut.fi" out="gutpairs.tmp": { print $1 " " $2 "\n" $2 " " $1}
      #xse:shellexec: export LC_COLLATE=fi_FI.ISO-8859-15; cat gutpairs.tmp |sort >gutpairs.lst  

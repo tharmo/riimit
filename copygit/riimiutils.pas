@@ -47,26 +47,22 @@ function red(st:string):string;
 function blue(st:string):string;
 function tavucount(w:string):integer;
 function tavusrev(st:ansistring):word;
-procedure savebin(rows,cols:integer;arr:array of word;fn:string) ;
+procedure savebin(rows,cols,usiz:integer;arr:array of word;fn:string) ;
+procedure readbin(rows,cols,usiz:integer;var arr:array of word;fn:string) ;
 
 implementation
 
-procedure savebin(rows,cols:integer;arr:array of word;fn:string) ;
+procedure savebin(rows,cols,usiz:integer;arr:array of word;fn:string) ;
    var i,j:integer;  a:array[0..999] of word;p:word;
    binf:file;
   begin
   try
   AssignFile(binf, fn);  //ei onnistu tstrinlistillä varmaan blockwrite
-  Rewrite(binf, cols*2);
-//  Rewrite(binf, 1000);
+  Rewrite(binf, cols*usiz);
   writeln('binsave:');
-   //for i:=0 to 100 do //synsans-1  do
    for i:=0 to rows-1 do //writeln(i*syncols,syns[i*syncols]);exit;
     begin // do
-     //writeln(i*syncols);
      try
-      //writeln('<li>',i,'=',arr[i*cols]);//for j:=0 to 8 do writeln(syns[i*syncols+j]);
-     //p:=syns[i*synsans];
       BlockWrite(binf, arr[i*cols], 1);
      except on e:exception do writeln(e.message);end;
     end;
@@ -76,6 +72,44 @@ procedure savebin(rows,cols:integer;arr:array of word;fn:string) ;
     writeln('binclosed:',fn);
 
    end;
+  end;
+procedure readbin(rows,cols,usiz:integer;var arr:array of word;fn:string) ;
+   var i,j:integer;  a:array[0..999] of word;p:word;
+   binf:file;
+  begin
+  try
+  AssignFile(binf, fn);  //ei onnistu tstrinlistillä varmaan blockwrite
+  Reset(binf, cols*usiz);
+  writeln('binread:',fn);
+   for i:=0 to rows-1 do //writeln(i*syncols,syns[i*syncols]);exit;
+    begin // do
+     try
+      Blockread(binf, arr[i*cols], 1);
+       //if i>5700 then write(^j^j,i);
+       //if i>5700 then     for j:=0 to cols do write(' /',arr[i*cols+j],':',arr[i*cols+j+1],' ');
+      //end;
+     except on e:exception do writeln(e.message);end;
+    end;
+    writeln('binread');
+  finally
+    Closefile(binf);
+    writeln('binclosed:',fn);
+
+   end;
+    exit;
+      for i:=5726 to 5728 do
+      begin
+        try
+       // for j:=0 to 31 do if bigvars[j]>0 then IF BIGVARS[J]< 5730 THEN write(' ',gutlist[bigvars[j]],bigvals[j]);
+        write(^j^j,i);
+        //if i>2800 then writeln(' ?',i,'/',sparmat[i*cols],':',sparmat[i*cols+1],'.',sparmat[i*cols+2],':',sparmat[i*cols+3],'.',sparmat[i*cols+4],':',sparmat[i*cols+5],' ');
+        for j:=0 to cols do write(' ///',arr[i*cols+j],':',arr[i*cols+j+1],' ');
+
+        //for j:=0 to 31 do begin      ((if arr[i*64+(j*2)]>0 then // writeln(i*64+(j*2),'/',length(arr)) else
+        // write(' ',arr[(i*64)+(j*2)],'=',  arr[i*64+(j*2)+1]);
+        //end;
+       except writeln('!!',i,':',j,'=',(i*64)+(j*2),'/',length(arr),'fail');end;
+       end;
   end;
 
 function red(st:string):string; begin result:='<b style="color:red">'+st+'</b>';  end;

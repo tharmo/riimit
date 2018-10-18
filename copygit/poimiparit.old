@@ -1,13 +1,13 @@
-  # reading klk_siivo2.srt.iso
+  # reading klk_siivo3.srt.iso
  {  
-   if ($1!=v1) {
+   if ($1!=v1) {  ##uusi sana
              v1=$1;  v2=$2
              while (1) {
                 getline< "klk_lemmas.hits"  
                 rr=rr+1
                 if (v1!=$1){
-                  print "EI:" v1,NR , $1,rr;
-                  getline < "/dev/tty"
+                  print "             EI:" v1,NR , $1,rr;
+                  #getline < "/dev/tty"
                   if (v1 >  $1) break
                 } else break
               }  
@@ -27,3 +27,5 @@
     #if (lemma!="*") 
     print  $2, lemma, $3 >"klk_revpairs.lst"
   }  
+##klk_siivo2.iso ei ole oikein sortattu ...aamupäiwään ennen aamupöio
+#export LC_ALL=C;export LC_COLLATE=fi_FI.ISO-8859-1;head -28000 klk_siivo2.iso |sort -f >klk_siivo3.srt.iso

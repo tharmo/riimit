@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Classes, SysUtils, CustApp, //riimitys,
-  nominit, riimiutils, verbikama, etsi,
+  nominit, riimiutils, verbikama, etsi,syno,
   prosessi, sanataulu  //, roskaa
   { you can add units after this };
 
@@ -54,9 +54,30 @@ begin
     Exit;
   end;
   //if HasOption('f', 'fixteet') then begin
+  if paramstr(1)='test' then
+  begin
+    writeln('PARAMS:',paramstr(1),' ',paramstr(2),' ',paramstr(3),' ');
+    Terminate;
+    Exit;
+  end;
   if paramstr(1)='gut' then
   begin
     teegut;
+    Terminate;
+    Exit;
+  end;
+  if paramstr(1)='klk_lemmaa' then
+  begin
+    //writeln('lemmaa');
+    //ngrams; //siivoa ngram-tiedostoa ajettavaksi hfts/figen läpi
+    ngramlemmas(paramstr(2));
+    Terminate;
+    Exit;
+  end;
+  if paramstr(1)='klksiivo' then
+  begin
+    //ngrams; //siivoa ngram-tiedostoa ajettavaksi hfts/figen läpi
+    ngrams;
     Terminate;
     Exit;
   end;

@@ -3,12 +3,12 @@
   <ProjectSession>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="16">
+    <Units Count="15">
       <Unit0>
         <Filename Value="riimaa.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="34"/>
-        <CursorPos X="12" Y="59"/>
+        <TopLine Value="56"/>
+        <CursorPos X="20" Y="73"/>
         <UsageCount Value="219"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -88,8 +88,8 @@
         <Filename Value="riimiutils.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="8"/>
-        <TopLine Value="43"/>
-        <CursorPos X="3" Y="59"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="76"/>
         <UsageCount Value="208"/>
         <Loaded Value="True"/>
       </Unit6>
@@ -127,15 +127,15 @@
       <Unit10>
         <Filename Value="riimiuus.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="160"/>
-        <CursorPos X="5" Y="171"/>
+        <IsVisibleTab Value="True"/>
+        <WindowIndex Value="2"/>
+        <TopLine Value="30"/>
+        <CursorPos X="7" Y="42"/>
         <ExtraEditorCount Value="2"/>
         <ExtraEditor1>
-          <IsVisibleTab Value="True"/>
-          <WindowIndex Value="2"/>
-          <TopLine Value="30"/>
-          <CursorPos X="32" Y="30"/>
+          <EditorIndex Value="3"/>
+          <TopLine Value="220"/>
+          <CursorPos X="5" Y="171"/>
         </ExtraEditor1>
         <ExtraEditor2>
           <EditorIndex Value="3"/>
@@ -161,13 +161,12 @@
         <Filename Value="prosessi.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="7"/>
-        <CursorPos X="5" Y="30"/>
+        <CursorPos X="11" Y="24"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <EditorIndex Value="5"/>
           <WindowIndex Value="1"/>
-          <CursorPos X="27" Y="75"/>
+          <CursorPos X="27" Y="78"/>
         </ExtraEditor1>
         <UsageCount Value="218"/>
         <Loaded Value="True"/>
@@ -186,148 +185,137 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="690"/>
-        <CursorPos X="50" Y="715"/>
+        <TopLine Value="217"/>
+        <CursorPos X="50" Y="241"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <IsVisibleTab Value="True"/>
           <EditorIndex Value="4"/>
           <WindowIndex Value="1"/>
-          <TopLine Value="568"/>
-          <CursorPos X="15" Y="536"/>
+          <TopLine Value="157"/>
+          <CursorPos X="27" Y="179"/>
         </ExtraEditor1>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit14>
-      <Unit15>
-        <Filename Value="../fpcupdeluxe/fpcsrc/rtl/objpas/classes/classesh.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="697"/>
-        <CursorPos X="14" Y="710"/>
-        <UsageCount Value="25"/>
-      </Unit15>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="syno.pas"/>
-        <Caret Line="705" TopLine="693"/>
+        <Caret Line="162" Column="12" TopLine="153"/>
       </Position1>
       <Position2>
         <Filename Value="syno.pas"/>
-        <Caret Line="907" Column="41" TopLine="685"/>
+        <Caret Line="224" Column="45" TopLine="203"/>
       </Position2>
       <Position3>
         <Filename Value="syno.pas"/>
-        <Caret Line="700" Column="39" TopLine="673"/>
+        <Caret Line="107" Column="23" TopLine="89"/>
       </Position3>
       <Position4>
         <Filename Value="syno.pas"/>
-        <Caret Line="477" Column="30" TopLine="466"/>
+        <Caret Line="224" Column="51" TopLine="195"/>
       </Position4>
       <Position5>
         <Filename Value="syno.pas"/>
-        <Caret Line="700" Column="19" TopLine="696"/>
+        <Caret Line="114" Column="38" TopLine="89"/>
       </Position5>
       <Position6>
-        <Filename Value="prosessi.pas"/>
-        <Caret Line="12" Column="11"/>
+        <Filename Value="syno.pas"/>
+        <Caret Line="199" Column="27" TopLine="190"/>
       </Position6>
       <Position7>
         <Filename Value="syno.pas"/>
-        <Caret Line="487" Column="19" TopLine="430"/>
+        <Caret Line="153" Column="70" TopLine="142"/>
       </Position7>
       <Position8>
         <Filename Value="syno.pas"/>
-        <Caret Line="696" Column="40" TopLine="667"/>
+        <Caret Line="198" Column="32" TopLine="169"/>
       </Position8>
       <Position9>
         <Filename Value="syno.pas"/>
-        <Caret Line="787" Column="11" TopLine="757"/>
+        <Caret Line="183" Column="3" TopLine="141"/>
       </Position9>
       <Position10>
         <Filename Value="syno.pas"/>
-        <Caret Line="748" TopLine="714"/>
+        <Caret Line="186" Column="19" TopLine="157"/>
       </Position10>
       <Position11>
         <Filename Value="syno.pas"/>
-        <Caret Line="708" TopLine="677"/>
+        <Caret Line="187" Column="96" TopLine="158"/>
       </Position11>
       <Position12>
         <Filename Value="syno.pas"/>
-        <Caret Line="673" Column="21" TopLine="649"/>
+        <Caret Line="17" Column="26" TopLine="2"/>
       </Position12>
       <Position13>
         <Filename Value="syno.pas"/>
-        <Caret Line="682" Column="23" TopLine="662"/>
+        <Caret Line="94" Column="8" TopLine="64"/>
       </Position13>
       <Position14>
         <Filename Value="syno.pas"/>
-        <Caret Line="31" Column="20"/>
+        <Caret Line="184" Column="18" TopLine="160"/>
       </Position14>
       <Position15>
         <Filename Value="syno.pas"/>
-        <Caret Line="682" Column="63" TopLine="679"/>
+        <Caret Line="196" Column="20" TopLine="178"/>
       </Position15>
       <Position16>
         <Filename Value="syno.pas"/>
-        <Caret Line="683" TopLine="670"/>
+        <Caret Line="186" TopLine="185"/>
       </Position16>
       <Position17>
         <Filename Value="syno.pas"/>
-        <Caret Line="687" Column="6" TopLine="668"/>
+        <Caret Line="187" Column="62" TopLine="180"/>
       </Position17>
       <Position18>
         <Filename Value="syno.pas"/>
-        <Caret Line="710" Column="24" TopLine="684"/>
+        <Caret Line="203" Column="19" TopLine="195"/>
       </Position18>
       <Position19>
         <Filename Value="syno.pas"/>
-        <Caret Line="707" Column="31" TopLine="689"/>
+        <Caret Line="205" Column="28" TopLine="195"/>
       </Position19>
       <Position20>
         <Filename Value="syno.pas"/>
-        <Caret Line="724" Column="14" TopLine="691"/>
+        <Caret Line="223" Column="53" TopLine="195"/>
       </Position20>
       <Position21>
-        <Filename Value="prosessi.pas"/>
-        <Caret Line="28" Column="17"/>
+        <Filename Value="syno.pas"/>
+        <Caret Line="225" Column="24" TopLine="196"/>
       </Position21>
       <Position22>
         <Filename Value="syno.pas"/>
-        <Caret Line="749" Column="21" TopLine="726"/>
+        <Caret Line="254" Column="37" TopLine="237"/>
       </Position22>
       <Position23>
         <Filename Value="syno.pas"/>
-        <Caret Line="755" Column="35" TopLine="737"/>
+        <Caret Line="164" Column="31" TopLine="158"/>
       </Position23>
       <Position24>
         <Filename Value="syno.pas"/>
-        <Caret Line="776" Column="26" TopLine="758"/>
+        <Caret Line="166" Column="23" TopLine="158"/>
       </Position24>
       <Position25>
         <Filename Value="syno.pas"/>
-        <Caret Line="700" Column="89" TopLine="681"/>
+        <Caret Line="172" Column="22" TopLine="158"/>
       </Position25>
       <Position26>
         <Filename Value="syno.pas"/>
-        <Caret Line="706" Column="7" TopLine="676"/>
+        <Caret Line="173" Column="61" TopLine="158"/>
       </Position26>
       <Position27>
         <Filename Value="syno.pas"/>
-        <Caret Line="761" Column="65" TopLine="742"/>
+        <Caret Line="176" Column="39" TopLine="158"/>
       </Position27>
       <Position28>
         <Filename Value="syno.pas"/>
-        <Caret Line="787" Column="81" TopLine="755"/>
+        <Caret Line="177" Column="71" TopLine="158"/>
       </Position28>
       <Position29>
         <Filename Value="syno.pas"/>
-        <Caret Line="674" Column="24" TopLine="650"/>
+        <Caret Line="208" Column="32" TopLine="192"/>
       </Position29>
-      <Position30>
-        <Filename Value="syno.pas"/>
-        <Caret Line="748" Column="32" TopLine="726"/>
-      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
