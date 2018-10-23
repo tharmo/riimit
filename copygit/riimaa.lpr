@@ -74,6 +74,14 @@ begin
     Terminate;
     Exit;
   end;
+  if paramstr(1)='grammat' then
+  begin
+    //writeln('lemmaa');
+    //ngrams; //siivoa ngram-tiedostoa ajettavaksi hfts/figen läpi
+    grammat(paramstr(2));
+    Terminate;
+    Exit;
+  end;
   if paramstr(1)='klksiivo' then
   begin
     //ngrams; //siivoa ngram-tiedostoa ajettavaksi hfts/figen läpi

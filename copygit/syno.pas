@@ -35,6 +35,7 @@ function haesynolist(var sanums:tlist;sl:tstringlist):word;
 end;
 procedure ngrams;
 procedure ngramlemmas(fil:string);
+procedure grammat(fil:string);
 
 
 procedure tmp_getnum;
@@ -89,17 +90,165 @@ slist.loadfromfile('sanatvaan.ansi');
      //slist.loadfromfile('gutsanat.ansi');
 
 end;
+
+procedure listgrams;
+VAR I,J:WORD;    vars,vals:array of word;
+    slist:tstringlist;
+
+begin
+slist:=tstringlist.create;
+slist.loadfromfile('sanatvaan.ansi');
+setlength(vars,30001*32);
+setlength(vals,30001*32);
+READbin(SLIST.COUNT,32,2,vals,'wvals.scar') ;
+READbin(SLIST.COUNT,32,2,vars,'wvars.scar') ;
+for i:=0 to 1000 do
+ begin                        //  ,word((bigs+j)^),'=',word((bigvals+j)^),'</b>');
+  try
+  write('<li>',slist[i],':<ul>');
+  for j:=0 to 31 do
+   if (vals[i*31+j])<>0 then if vals[i*32+j]=0 then break else
+     write('<li>',j,' ',slist[vars[i*32+j]],'\',vals[i*32+j],' ');
+  writeln('</ul>');
+  except writeln(^j'???');end;
+ end;
+END;
+
+procedure grammat(fil:string);
+
+   procedure big32(bigs,bigvals:pword;bwrd,wrd,freq:word;sl:tstringlist);
+   var i,j,posi,fils:word;d:boolean;slots:word;
+   begin
+     //d:=false;//w=21;
+    //if d then writeln('+++',word((tosort)^),sl[w],'<hr>');
+    //fillchar(bigs^,16,0);
+    //fillchar(bigvals^,16,0);
+    //if d then for i:=0 to 50 do if (tosort+i)^>0 then writeln(i,sl[i],' <b>',i,'=',(tosort+i)^,'</b>');// else writeln(sl[i]);
+      slots:=32;//fils:=0;
+      posi:=32;
+      try
+      if freq>0 then //(bigvals+10)^ then
+      begin
+      //write(^j'>',wrd,sl[wrd]);//,' <b>',i,'=',(tosort+i)^,'</b>');
+      for j:=0 to slots-1 do
+       begin
+        if freq>(bigvals+j)^ then
+        begin //if d then writeln(j,'.',(bigs+j)^);
+          posi:=j;break;end;
+       end;
+      end;
+      //write(freq,'=',posi);
+      if posi<32 then
+      begin
+       move((bigs+posi)^,(bigs+posi+1)^,(2*(slots-posi-1)));
+       move((bigvals+posi)^,(bigvals+posi+1)^,2*(slots-1-posi));
+       //move(i,(bigs+posi)^,2);
+       (bigs+posi)^:=wrd;
+       (bigvals+posi)^:=freq;
+       //move((tosort+i)^,(bigvals+posi)^,2);
+      end;
+      except writeln('*******************nopiso');end;
+   // if bwrd=227  then for j:=0 to 15 do    writeln(j,'==<b>',word((bigs+j)^),sl[(bigs+j)^],'=',word((bigvals+j)^),'</b>');
+   // if bwrd=227  then writeln('@@',posi);
+   end;
+
+var slist:tstringlist;
+   numfile,freqfile:textfile;
+   freqs:array[0..30000] of longword;
+   freqlist:tstringlist;
+   i,j,part:integer;
+   sana1,sana2,s1f,s2f:array of integer;
+   //sss:array of tlist;
+   s1,s2,p1,p2:word;
+   mainfreq,s1s2,cc,s3,tot:longword;
+   sline,xx:string;
+   sparts:array[1..3] of string;
+   subws:tstringlist;
+   // bigvars,bigvals:array[0..31] of word;
+    vars,vals:array of word;
+    myval,numer,denom:Qword;
+    curtarget:word;
+begin
+ LISTGRAMS;EXIT;
+  freqlist:=tstringlist.create;
+  slist:=tstringlist.create;
+  subws:=tstringlist.create;
+  freqlist.loadfromfile('counts.tmp');
+  for i:=0 to freqlist.count-1 do  freqs[i]:=strtointdef(freqlist[i],0) DIV 10;
+  slist.loadfromfile('sanatvaan.ansi');
+  setlength(vars,30001*32);
+  setlength(vals,30001*32);
+  assign(numfile,fil);
+  reset(numfile);
+  cc:=0;
+  tot:=0;
+  curtarget:=30000;
+  writeln('gogogo');
+  while not eof(numfile) do
+  begin
+   part:=1;sparts[1]:='';sparts[2]:='';sparts[3]:='';
+   readln(numfile,sline);
+   if trim(sline)='' then continue;
+   //writeln('***',sline,'///');
+   for i:=1 to length(sline) do
+     if sline[i]=' ' then part:=part+1 else
+     sparts[part]:=sparts[part]+sline[i];
+    if sparts[1]='' then continue;
+    s1:=strtointdef(sparts[1],0);
+    s2:=strtointdef(sparts[2],0);
+    s3:=strtointdef(sparts[3],0) div 2;
+    //if s3>65535 then s3:=65535;
+     if s1<>p1 then
+     begin
+         curtarget:=s1;mainfreq:=freqs[s1];
+     end;
+     try
+     //tot:=tot+s3;
+     //try
+     //numer:=ROUND(POWER(s3,1.7));
+     numer:=1000*s3;
+     //except NUMER:=1000000;  end;
+     try
+     denom:=max(1,(mainfreq) *  (freqs[s2]));
+     except DENOM:=1000000;  end;
+     TRY
+     //myval:=(((100000000*s3) div (mainfreq*mainfreq+10) div (freqs[s2]*freqs[s2]+10)));
+     myval:=round((numer/denom));
+     except MYVAL:=10000;writeln('???val:',numer,'/',denom,'=',myval,'???');  end;
+     //IF MYVAL>1000 THEN  writeln('val:',numer,'/',denom,'=           ',myval);
+     //WRITE(' ',MYVAL);
+     if myval>65535 then
+     begin
+     writeln('<li>',sline,':::', slist[s1],slist[s2],' ', s3, ' // ',myval);
+     myval:=65535;
+     end;
+     if myval>0 then
+     big32(@vars[curtarget*32],
+           @vals[curtarget*32],
+           s1,s2,word(myval),slist);
+     //      write(' ',s1,'.',s2,',',s3);
+     //if s3>10 then subws.addobject(xx,tobject(pointer(s3)));
+     except writeln(^j'NOBIGS!!!!!!',curtarget,'/',s1,'/',s2,'/',s3,' ',myval);end;
+   p1:=s1;
+   //if s1>1000 then break;
+  end;
+  //for i:=0 to slist.count-1 do
+  savebin(SLIST.COUNT,32,2,vals,'wvals.scar') ;
+  savebin(SLIST.COUNT,32,2,vars,'wvars.scar') ;
+
+end;
+
 procedure ngramlemmas(fil:string);
 var ihte,slist:tstringlist;
     ngf:textfile; ch:ansichar;
     part,i,j:integer;inwrd:boolean;
     line:array[0..20] of ansistring;skip:boolean;//hits:tstringlist;
-    hits:array[0..20] of ansistring;hitfreqs:array[0..20] of longword;hitnums:array[0..20] of word;
+    hits:array[0..20] of ansistring;hitfreqs:array[0..20] of longword;hitnums:array[0..20] of word;hitkots:array[0..20] of word;
     hitcount:word;
     xlens:array[0..20] of word;
     wnum:integer;
     sana:ansistring;
-    posi,runsaus,runsain:integer;
+    posi,runsaus,runsain,hitkot:integer;
     pp,ss:longword;
     freqs:boolean;
     myfreq:longint;
@@ -148,7 +297,12 @@ begin
 writeln(fil+'.iso');
 ihte:=tstringlist.create;
 slist:=tstringlist.create;
+slist.loadfromfile('sanatvaan.ansi');
 //hits:=tstringlist.create;
+for i:=0 to slist.count-1 do
+slist.objects[i]:=tobject(pointer(i));
+//writeln(slist[0],integer(pointer(slist.objects[0])));
+slist.sort;
 slist.sorted:=true;
 //exitus:=false;
 //reset(ngf);
@@ -161,7 +315,7 @@ begin
    //writeln('<li>[',copy(sana,1,posi-1),'/',copy(sana,posi+1),'@',posi,'!',sana,']');
 end;
 //exit;}
-slist.loadfromfile('sanatvaan.ansi');
+//writeln(slist[21],integer(pointer(slist.objects[21])));exit;
 freqs:=fileexists(fil+'.bin');
 setlength(freqar,slist.count);
 //writeln('freqs,',freqs);
@@ -173,13 +327,15 @@ setlength(freqar,slist.count);
     except writeln('failfile ', fileexists(fil+'.bin'),slist.count*4);end;
     blockread(ffile,freqar[0],1);
     closefile(ffile);
-    for i:=0 to slist.count-1 do slist.objects[i]:=TOBJECT(pointeR(freqar[i]));
+    //for i:=0 to slist.count-1 do slist.objects[i]:=TOBJECT(pointeR(freqar[i]));
     //for i:=0 to slist.count-1 do if freqar[i]>500 then writeln(slist[i],freqar[i],' ');
   end;
-  assign(ngf,'klk_ana2.iso');
-   writeln(fil+'.iso');
+  try
+  assign(ngf,fil+'.iso');
   reset(ngf);
+  except writeln('not found fil ',fil);raise;end;
   assign(freqfile,fil+'.num');
+  //writeln('xxx'+fil+'.iso');
   //assign(freqf,'klklemma.freqs');
   reset(freqfile);
   //writeln('freread');
@@ -238,7 +394,7 @@ setlength(freqar,slist.count);
            finally
             try //writeln(runsain,line[0],line[1],'//',slist[runsain]);
             if runsain>-1 then
-             writeln(line[0], ' ',slist[runsain]) else writeln(line[0],' ','*');
+             writeln(line[0], ' ',slist[runsain],' ',integer(pointer(slist.objects[runsain]))) else writeln(line[0],' ','*');
             //if line[0]='ahjoja' then exitus:=true;
            except writeln('FAIL:',line[0],runsain);;end;
            hitcount:=0;
