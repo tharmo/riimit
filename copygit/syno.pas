@@ -36,16 +36,435 @@ end;
 procedure ngrams;
 procedure ngramlemmas(fil:string);
 procedure grammat(fil:string);
-
+procedure listgrams;
+procedure lastenlapset;
 
 procedure tmp_getnum;
 procedure tmp_num;
 
+type tilist=class(tobject)
+ vars,vals:array[0..4095] of word; //tee myöh dynaaminen.
+ count:word;
+function get(wi:word):word;
+procedure add(wi,inc:word);
+procedure clear;
+procedure list(slist:tstringlist);
+
+constructor create;
+end;
+
 implementation
- uses math,riimiutils;
+  uses math,riimiutils;
+procedure tilist.clear;
+begin
+fillchar(vars[0],4096*2,0);
+fillchar(vals[0],4096*2,0);
+count:=0;
+end;
+constructor tilist.create;
+begin
+fillchar(vals,4096*2,0);
+fillchar(vars,4096*2,0);
+count:=0;
+randomize;
+end;
+
+function tilist.get(wi:word):word;
+  var i:word;
+  begin
+   //writeln('<li>get:',wi,':');
+   result:=0;
+   for i:=0 to count-1 do
+     if wi=vars[i] then
+      begin  result:=vals[i];break;
+   end;// else writeln('##',vars[i]);
+
+  end;
+
+procedure tilist.add(wi,inc:word);
+  var i:integer;
+  begin
+    if wi=0 then exit;
+    i:=0;
+    try
+    while i<count do //                                      0 0   0 1  0 1                                 v
+      if wi=vars[i] then //                                  a     a a  a b                             v
+      begin  vals[i]:=vals[i]+inc;exit;//                                                           v
+      end else i:=i+1;
+    vars[i]:=wi;  //i=count, eol
+    vals[i]:=vals[i]+inc;
+    if count>4094 then writeln('HORROR') else
+    count:=count+1;
+    except writeln('!:',wi,'#',count,' ');  end;
+  end;
+
+procedure tilist.list(slist:tstringlist);
+var i:integer;
+begin
+  if count<1 then exit;
+  for i:=0 to count-1 do if vars[i]=0 then break else if vals[i]>100 then writeln(' ',slist[vars[i]],'/',vals[i]);
+end;
 type tgutcc=array of word;
   tagut=array[0..15] of word;
 type  tgutw=array of word;
+
+function big64(bigs,bigvals:pword;bwrd,wrd,freq:word;sl:tstringlist):word;
+var i,j,posi,fils:word;d:boolean;slots:word;
+begin
+   slots:=64;//fils:=0;
+   posi:=64;
+   try
+   //if freq>0 then //(bigvals+10)^ then
+   begin
+   for j:=1 to slots-1 do
+    begin
+     if freq>=(bigvals+j)^ then
+     begin //if d then writeln(j,'.',(bigs+j)^);
+       posi:=j;break;end;
+    end;
+   end;
+
+   //if posi=0 then
+   //write(sl[wrd],freq,'=',posi,'?/??');
+   if posi<slots then
+   begin
+    move((bigs+posi)^,   (bigs   +posi+1)^,  2*(slots-posi-1));
+    move((bigvals+posi)^,(bigvals+posi+1)^,2*(slots-posi-1));
+    (bigs+posi)^:=wrd;
+    (bigvals+posi)^:=freq;
+   end;
+   result:=posi;
+   //if wrd=7305 then writeln('<li>',sl[wrd],freq,'@',posi,'|||');
+   except writeln('*******************nopiso');end;
+end;
+function kerropari(ii,jj:word;vars1,vals1,vars2,vals2:pword;slist:tstringlist):word;
+var ci,cj,thisi,thisival,thisj:word;
+begin
+  try
+  result:=0;
+ //rite('<li><b>',slist[ii],'/',slist[jj],'</b> ');
+  for ci:=1 to 63 do
+  begin
+   //thisi:=round((vals[ii*64+ci]));
+   //write('#',(vars2+ci)^,'<b>',slist[(vars2+ci)^],'</b>: ');
+   thisi:=vars1[ci];
+   thisival:=round((vals1[ci]));
+   if thisi<1 then continue else
+   for cj:=1 to 63 do
+   begin
+       if vals2[cj]<1 then continue;
+       if vars1[ci]=vars2[cj] then // ij:=ij+1;//   inc(cous[i*31+j]);
+          begin
+            //writeln(',');
+           result:=result+min(vals2[cj],thisi);//+100;
+           //write(' *',cj,slist[(vars2+cj)^],result);
+           //ij:=ij+min(vals[j*64+cj],thisi)+100;
+            //rap:=rap+' '+slist[vars[i*64+ci]]+inttostr(vals[i*64+ci])
+            //+'/'+inttostr(vals[j*64+cj])
+
+          end;
+    end;
+  end;
+  //writeln('==',result);
+  except writeln('eikerro',ii,'/',jj);end;
+end;
+
+
+procedure lastenlapset;
+var gchils:tilist; avar:word;
+VAR i,ii,J1,jj1,J2,jj2,k1,m,mm,kk1,k2,kk2,jj,ci,cj,jval,n,wcount:WORD;
+    vars,vals,nvars,nvals:array of word;nvars2,nvals2:array of word;
+    slist:tstringlist;
+    nrel,orel,ntot,otot,thisi,thisj,ij:longword;
+    rap:string;
+    hits:array[0..30000] of word;
+    hitlist:tlist;
+    posi,thisold,ivali,jvali,paino:word;
+begin
+ slist:=tstringlist.create;
+slist.loadfromfile('sanatvaan.ansi');
+wcount:=slist.count;
+setlength(vars,30001*64);
+setlength(vals,30001*64);
+setlength(nvars,30001*64);
+setlength(nvals,30001*64);
+//setlength(nvars2,64);
+//setlength(nvals2,64);
+READbin(SLIST.COUNT,64,2,vals,'wvals4.spar') ;
+READbin(SLIST.COUNT,64,2,vars,'wvars4.spar') ;
+//fillchar(nvars[0],sizeof(nvars),0);
+//fillchar(nvals[0],sizeof(nvals),0);
+
+ gchils:=tilist.create;
+// wcount:=25; //tmp
+ writeln('<hr>herego');
+for ii:=1 to slist.count-1 do //3 to 100 do
+  begin
+  try
+   try
+   i:=ii;//*255;///ii*250;
+   //if vals[64*i]<200 then continue;
+   //writeln('<hr>');     for j1:=0 to 63 do writeln(slist[vars[i*64+j1]],vals[i*64+j1]);    writeln('<hr>');
+   gchils.clear;
+   //writeln('<li><b>',vars[64*i],slist[vars[64*i]],vals[64*i],'</b>:');
+   //hitlist.Clear;
+   except writeln('****fail');end;
+   try
+   for j1:=1 to 63 do
+   begin
+     try
+      jj1:=vars[i*64+j1];
+      jvali:=vals[64*i+j1];
+      if jj1=0 then break;
+      paino:=0;
+      //for kk2:=1 to 63 do if (vars[jj1*64+kk2]=i)  then gchils.add(jj1,JVALI);
+        //paino:=paino+1;
+      //writeln(' ',slist[jj1],'/',jvali,'::');
+      //writeln('<b>',slist[jj1],vals[64*i+j1],'</b>');
+      //if vals[i*64+j1]*2>itoival then chils.add(jj1,1);
+      //jvali:=min(vals[64*j1+2],ivali);
+      //if paino>0 then
+       //if jj1<>i then gchils.add(jj1,JVALI);
+       except  writeln(i,'???--- ',j1,slist[i],jj1);end;
+      for k1:=1 to 63 do
+      begin
+       try
+        kk1:=vars[jj1*64+k1];
+        if kk1=0 then break;
+        if kk1=i then begin
+         gchils.add(jj1,3*min(jvali,vals[jj1*64+k1]));
+         //writeln('@',slist[jj1],jvali,'/',vals[jj1*64+k1]);
+         continue;end;
+
+        //if kk1=1349 then writeln('<li>',slist[kk1],vals[jj1*64+k1],'/',slist[jj1],jvali,':');
+        //paino:=0;
+        for kk2:=1 to 63 do if (vars[kk1*64+kk2]=i) //or (vars[kk1*64+kk2]=jj1)
+          then begin
+           paino:=paino+1;
+           gchils.add(kk1,min(jvali,vals[jj1*64+k1]));
+           //writeln('*',slist[kk1],jvali,'/',vals[jj1*64+k1]);
+          end;
+        if paino=0 then continue;
+        //write(' ',kk1,slist[kk1]);
+        if kk1=i then continue;
+        //gchils.add(kk1,min(jvali,vals[jj1*64+k1]));
+    //    gchils.add(kk1,paino*min(jvali,vals[jj1*64+k1]));
+        //if vals[jj1*64+k1]*2>jtoival then    gchils.add(kk1,1);
+        {for j2:=0 to 31 do
+        begin
+           jj2:=vars[i*64+j2];
+           if jj2=0 then break;
+           for k2:=0 to 31 do
+           begin
+              kk2:=vars[jj2*64+k2];
+              if kk2=0 then break;
+              if kk1=kk2 then gchils.add(kk1,1);
+           end;
+         end;}
+         except  writeln(i,'!!!??? ',gchils.vars[j1],' ',gchils.vals[j1],slist[gchils.vars[j1]]);end;
+      end;
+      //except  writeln(i,'!!!??? ',gchils.vars[j1],' ',gchils.vals[j1],slist[gchils.vars[j1]]);end;
+
+    end;
+   except writeln('iiiiiiiiiiiiiiii'); end;
+   try
+   if gchils.count>0 then
+   for j1:=0 to gchils.count-1 do
+    begin
+      if (gchils.vars[j1]=0) or (gchils.vals[j1]=0) then continue else
+           begin
+            posi:=big64(@nvars[i*64],@nvals[i*64],i,gchils.vars[j1],gchils.vals[j1],slist);
+            //if posi<64 then write(posi,'|',slist[gchils.vars[j1]],gchils.vals[j1],' /');
+            //if slist[gchils.vars[j1]]='suksi' then writeln('<li>',gchils.vars[j1],'/',gchils.vals[j1],'!?');
+           end;
+    end;
+     except  writeln(i,'!!!BIGS ',gchils.count,'/',gchils.vars[j1],' ',gchils.vals[j1],slist[gchils.vars[j1]]);end;
+    continue;
+    {
+    //for j1:=1 to 63 do writeln('**',slist[nvars[i*64+j1]],nvals[i*64+j1]);
+    otot:=0;ntot:=0;
+    for j1:=1 to 63 do otot:=otot+vals[i*64+j1];
+    for j1:=1 to 63 do ntot:=ntot+nvals[i*64+j1];
+    write('<li><li>:::<b>',slist[i],' ',vals[i*64],' : ',ntot,'/',otot,'</b>:::');
+    for j1:=1 to 63 do
+     //if nvals[i*64+j1]=0 then break else
+     begin
+      thisold:=0;
+      for k1:=1 to 63 do if vars[i*64+k1]=nvars[i*64+j1] then begin thisold:=k1;break;end;
+      nrel:=(1000*nvals[i*64+j1]) div (1+ntot);
+      if thisold=0 then orel:=0 else orel:=(1000*vals[i*64+thisold]) div (1+otot);
+      if (orel=0)  then
+      write(' <span style="color:blue">',slist[nvars[i*64+j1]],'</span>') //,'\',nrel,'/',orel,'</span> ')
+      else if nrel>1.5*orel then
+      //write('<span style="color:green">',slist[nvars[i*64+j1]],'</span> ')
+      write('<span style="color:green"> ',slist[nvars[i*64+j1]],'</span>')//,'\',nrel,'/',orel,'</span> ')
+      else if orel>1.5*nrel then
+      //write('<span style="color:red">',j1,slist[nvars[i*64+j1]],'</span> ')
+      write('<span style="color:red"> ',slist[nvars[i*64+j1]],'</span>')//,'\',nrel,'/',orel,'</span> ')
+      else writeln(' ',slist[nvars[i*64+j1]]);//,'\',nrel,'/',orel);
+      //if (orel<>0) and  (nrel<>0) then writeln('***');
+     end;
+    //writeln('<li>POIS:');
+     for j1:=1 to 63 do
+     begin
+      try
+      thisold:=0;
+      if vals[i*64+j1]=0 then continue else
+      for k1:=1 to 63 do
+      //if nvals[i*64+k1]=0 then continue else
+      //if nvars[i*64+k1]=0 then continue else
+      if vars[i*64+j1]=nvars[i*64+k1] then
+          begin
+            //writeln('+',k1,slist[nvars[i*64+k1]],j1);
+            thisold:=k1;break;
+          end;
+      except end;
+      //if thisold=0 then  writeln('>',slist[vars[i*64+j1]],vals[vars[i*64+j1]*64]);
+     end;
+
+     //gchils.list(slist);
+     }
+  except writeln('FAIL::',slist[i]);end;
+  end;
+      savebin(SLIST.COUNT,64,2,nvals,'wvals5.spar') ;
+      savebin(SLIST.COUNT,64,2,nvars,'wvars5.spar') ;
+ //if 1=0 then
+ // for i:=0 to 10000000 do
+ //   gchils.add(random(1000)+random(1000)+random(1000),1);
+  writeln('<hr>done<hr>');
+  {for ii:=3 to 100 do
+    begin
+     i:=ii*270;
+   //  try        //continue;
+   except writeln('FAIL',slist[i]);end;
+   }
+end;
+  //for i:=0 to 3000 do    writeln(gchils.get(i));
+
+
+procedure listgrams;
+VAR ii,I,J,jj,ci,cj,jval,n,biggest:WORD;
+    vars,vals,nvars,nvals:array of word;//,nvars2,nvals2
+    slist:tstringlist;
+    tot,thisi,thisj,ij:longword;
+    rap:string;
+    //cous:array of byte;
+
+begin
+ // setlength(cous,30001*30001);
+slist:=tstringlist.create;
+slist.loadfromfile('sanatvaan.ansi');
+setlength(vars,30001*64);
+setlength(vals,30001*64);
+setlength(nvars,30001*64);
+setlength(nvals,30001*64);
+//setlength(nvars2,64);
+//setlength(nvals2,64);
+READbin(SLIST.COUNT,64,2,vals,'wvals2.spar') ;
+READbin(SLIST.COUNT,64,2,vars,'wvars2.spar') ;
+fillchar(nvars[0],sizeof(nvars),0);
+fillchar(nvals[0],sizeof(nvals),0);
+writeln('<style type="text/css">  li {margin:1em} </style>');
+//for (ii in [250,13502]) //to 24500 to 25000 do
+//writeln('<pre>');
+//for i:=1 to slist.count-1 do
+ //begin                        //  ,word((bigs+j)^),'=',word((bigvals+j)^),'</b>');
+
+  for ii:=1 to slist.count-1 do
+    begin
+     i:=ii;//*270;
+
+  try        //continue;
+  //if vals[i*64]>200 then break;
+  //if i>200 then break;
+  //if not (i=250)// or (i=13502) or (i=13519) or (i=24554))
+  //then continue;
+  //i:=ii;//*50;
+  biggest:=vals[i*64+1] div 10;
+  write(^j^j^j'<li>',slist[i],'#',vals[i*64],':');
+  for j:=1 to 61 do
+   if (vars[i*64+j])=0 then break else
+   if vals[i*64+j]<biggest then break else
+   write(slist[vars[i*64+j]],' ');//,vals[i*64+j],' ');
+   //write('',vars[i*64+j],' ',slist[vars[i*64+j]],'\',vals[i*64+j],' ');
+  //write('<li>',vars[i*64+j],' ',slist[vars[i*64+j]],'\',vals[i*64+j],' ');
+  //writeln('</ul>');
+  except writeln(^j'???');end;
+ end;
+  exit;
+ //writeln('<hr>');
+if false then FOR i:=0 to SLIST.COUNT-1 DO
+begin
+  ij:=0;
+  try
+  for j:=1 to 63 do ij:=ij+vals[i*64+j];
+  //writeln('<li>[',slist[i],'] /tot:', vals[i*64],' /ocs:', ij+10  ,' <b>', sqr(vals[i*64]) div (ij+10),'</b>');
+  //vals[i*64]:=ij+10;
+  except writeln('!!!!!!');end;
+end;
+ //writeln('<ul>++++++++++++');
+ //FOR I:=1 to SLIST.COUNT-1 DO
+ //FOR Ii:=1 to 300 do //SLIST.COUNT-1 DO
+ i:=slist.indexof('älykäs');
+  begin
+     //i:=50*ii;
+     //if not ((i=250) or (i=13502) or (i=13519) or (i=24554))
+    //if (i<15000) or (i>15500)     then continue;
+
+     write(^j,^j,^j'<li>',slist[i],vals[i*64],': ');
+     //FOR j:=0 to SLIST.COUNT-1 DO // if i<>j then
+     FOR jj:=1 to 63 DO // if i<>j then
+     begin
+      try
+       j:=vars[i*64+jj];
+       //ij:=0;
+       rap:='';
+       jval:=kerropari(i,j,@vars[i*64],@vals[i*64],@vars[j*64],@vals[j*64],slist);
+       //jval:=1000*ij div vals[j*64];
+       //if (jval>10) then writeln('<li>','  <b style="color:green">===',jval,' ',slist[j],' /yht:',ij ,'/tot:',vals[j*64],'</b> '+rap) //+'</ul>');
+       ;//else writeln('<li>','<em style="color:red">===',jval,'/',' ',slist[j],' /yht:',ij ,'/tot:',vals[j*64],'</em>',rap);//+'</ul>');
+       if jval>0 then
+       big64(@nvars[i*64],@nvals[i*64],i,j,jval,slist);
+            //big64(@vars[curtarget*64],     @vals[curtarget*64],      s1,s2,word(myval),slist);
+       nvals[i*64+0]:=nvals[i*64+0]+(jval div 10);
+      except writeln('---------------',jval);end;
+
+    end;
+     tot:=0;
+    nvars[i*64]:=i;
+    for j:=0 to 63 do begin try if nvals[i*64+j]=0 then break else
+   begin tot:=tot+nvals[i*64+j]; writeln(' ',slist[nvars[i*64+j]],' ');end;except writeln('noigi',i,' ',j);end end;
+    writeln('<b>',tot,'</b><hr>');//<hr><hr><ul><li>');
+    {fillchar(nvars2[0],sizeof(nvars),0);
+    fillchar(nvals2[0],sizeof(nvals),0);
+    //for jj:=1 to 63 do
+    for jj:=1 to 63 do //if  nvals[jj]=0 then break else
+    begin
+       j:=nvars[jj];//if j=0 then break;
+       try
+       jval:=kerropari(i,j,@nvars[0],@nvals[0],@vars[j*64],@vals[j*64],slist);
+       writeln(slist[j],'===',jval,'!');
+       except writeln('nokerro');end;
+       try
+       //for n:=0 to 63 do begin try if nvals[n]=0 then break else writeln(' #',n,slist[nvars[n]],nvals[n],' ');except writeln('noigi');end end;
+       big64(@nvars2[0],@nvals2[0],i,j,jval,slist);
+       except writeln('Nobigs',j,slist[j],jval);end;
+       //for j:=0 to 32 do writeln(nvars2
+         //big64(@vars[curtarget*64],     @vals[curtarget*64],      s1,s2,word(myval),slist);
+    end;
+      writeln('<hr>did 2*<hr><li>');
+
+         for j:=0 to 63 do begin try //if nvals[j]=0 then continue else
+         writeln(' /',j,slist[nvars[j]],nvals[j],' ');except writeln('noigi');end end;
+         writeln('<hr><hr><li>');
+        // for j:=0 to 63 do writeln(' ',j,slist[nvars2[j]],nvals2[j],' ');
+         //writeln('</ul><hr>');
+      }
+  end;
+ // savebin(SLIST.COUNT,64,2,vals,'wvals2.spar') ;
+ // savebin(SLIST.COUNT,64,2,vars,'wvars2.spar') ;
+
+END;
 
 procedure ngrams;
 var slist,ihte:tstringlist;
@@ -91,66 +510,9 @@ slist.loadfromfile('sanatvaan.ansi');
 
 end;
 
-procedure listgrams;
-VAR I,J:WORD;    vars,vals:array of word;
-    slist:tstringlist;
 
-begin
-slist:=tstringlist.create;
-slist.loadfromfile('sanatvaan.ansi');
-setlength(vars,30001*32);
-setlength(vals,30001*32);
-READbin(SLIST.COUNT,32,2,vals,'wvals.scar') ;
-READbin(SLIST.COUNT,32,2,vars,'wvars.scar') ;
-for i:=0 to 1000 do
- begin                        //  ,word((bigs+j)^),'=',word((bigvals+j)^),'</b>');
-  try
-  write('<li>',slist[i],':<ul>');
-  for j:=0 to 31 do
-   if (vals[i*31+j])<>0 then if vals[i*32+j]=0 then break else
-     write('<li>',j,' ',slist[vars[i*32+j]],'\',vals[i*32+j],' ');
-  writeln('</ul>');
-  except writeln(^j'???');end;
- end;
-END;
 
 procedure grammat(fil:string);
-
-   procedure big32(bigs,bigvals:pword;bwrd,wrd,freq:word;sl:tstringlist);
-   var i,j,posi,fils:word;d:boolean;slots:word;
-   begin
-     //d:=false;//w=21;
-    //if d then writeln('+++',word((tosort)^),sl[w],'<hr>');
-    //fillchar(bigs^,16,0);
-    //fillchar(bigvals^,16,0);
-    //if d then for i:=0 to 50 do if (tosort+i)^>0 then writeln(i,sl[i],' <b>',i,'=',(tosort+i)^,'</b>');// else writeln(sl[i]);
-      slots:=32;//fils:=0;
-      posi:=32;
-      try
-      if freq>0 then //(bigvals+10)^ then
-      begin
-      //write(^j'>',wrd,sl[wrd]);//,' <b>',i,'=',(tosort+i)^,'</b>');
-      for j:=0 to slots-1 do
-       begin
-        if freq>(bigvals+j)^ then
-        begin //if d then writeln(j,'.',(bigs+j)^);
-          posi:=j;break;end;
-       end;
-      end;
-      //write(freq,'=',posi);
-      if posi<32 then
-      begin
-       move((bigs+posi)^,(bigs+posi+1)^,(2*(slots-posi-1)));
-       move((bigvals+posi)^,(bigvals+posi+1)^,2*(slots-1-posi));
-       //move(i,(bigs+posi)^,2);
-       (bigs+posi)^:=wrd;
-       (bigvals+posi)^:=freq;
-       //move((tosort+i)^,(bigvals+posi)^,2);
-      end;
-      except writeln('*******************nopiso');end;
-   // if bwrd=227  then for j:=0 to 15 do    writeln(j,'==<b>',word((bigs+j)^),sl[(bigs+j)^],'=',word((bigvals+j)^),'</b>');
-   // if bwrd=227  then writeln('@@',posi);
-   end;
 
 var slist:tstringlist;
    numfile,freqfile:textfile;
@@ -160,24 +522,24 @@ var slist:tstringlist;
    sana1,sana2,s1f,s2f:array of integer;
    //sss:array of tlist;
    s1,s2,p1,p2:word;
-   mainfreq,s1s2,cc,s3,tot:longword;
+   s1s2,cc,s3,tot:longword;
    sline,xx:string;
    sparts:array[1..3] of string;
    subws:tstringlist;
    // bigvars,bigvals:array[0..31] of word;
     vars,vals:array of word;
-    myval,numer,denom:Qword;
+    mainfreq,myval,numer,denom:Qword;
     curtarget:word;
 begin
- LISTGRAMS;EXIT;
+ //LISTGRAMS;EXIT;
   freqlist:=tstringlist.create;
   slist:=tstringlist.create;
   subws:=tstringlist.create;
   freqlist.loadfromfile('counts.tmp');
-  for i:=0 to freqlist.count-1 do  freqs[i]:=strtointdef(freqlist[i],0) DIV 10;
+  for i:=0 to freqlist.count-1 do  freqs[i]:=max(1,strtointdef(freqlist[i],0) DIV 1);
   slist.loadfromfile('sanatvaan.ansi');
-  setlength(vars,30001*32);
-  setlength(vals,30001*32);
+  setlength(vars,30001*64);
+  setlength(vals,30001*64);
   assign(numfile,fil);
   reset(numfile);
   cc:=0;
@@ -201,30 +563,38 @@ begin
      if s1<>p1 then
      begin
          curtarget:=s1;mainfreq:=freqs[s1];
+         if mainfreq>5000 then writeln('MANY:',slist[s1],'=',mainfreq);
+         vars[s1*64]:=s1;
+         vals[s1*64]:=min(freqs[s1],65535);
+         //writeln(vars[p1*32],' ',vals[p1*32])
+         //write(mainfreq,'.');
      end;
      try
      //tot:=tot+s3;
-     //try
-     //numer:=ROUND(POWER(s3,1.7));
-     numer:=1000*s3;
-     //except NUMER:=1000000;  end;
      try
-     denom:=max(1,(mainfreq) *  (freqs[s2]));
-     except DENOM:=1000000;  end;
+     //numer:=ROUND(POWER(s3,1.6));
+     numer:=10000000000*s3;
+     except writeln('numer:',numer);NUMER:=1000000;  end;
+     try
+     //denom:=max(1,(mainfreq) *  (freqs[s2]));
+     denom:=sqr(mainfreq+8) *  sqr(freqs[s2]+8);
+     if denom=0 then denom:=1;
+     except writeln(^j,'wrd:',round(mainfreq),'/sw:',round((freqs[s2])),'/num:',numer);DENOM:=100001;  end;
      TRY
      //myval:=(((100000000*s3) div (mainfreq*mainfreq+10) div (freqs[s2]*freqs[s2]+10)));
-     myval:=round((numer/denom));
-     except MYVAL:=10000;writeln('???val:',numer,'/',denom,'=',myval,'???');  end;
+      myval:=round((sqrt(numer/denom)));
+     except MYVAL:=10002;writeln(^j,'???val:',numer,'/',denom,'=',myval,'???' );  end;
      //IF MYVAL>1000 THEN  writeln('val:',numer,'/',denom,'=           ',myval);
      //WRITE(' ',MYVAL);
-     if myval>65535 then
+     if myval>1000 then
      begin
-     writeln('<li>',sline,':::', slist[s1],slist[s2],' ', s3, ' // ',myval);
+     writeln('<li>',s3 ,' ',slist[s1],mainfreq,' ',slist[s2],freqs[s2],'=',myval);
+    // ,'  ',s3,'/(',mainfreq,'*',freqs[s2],')');
      myval:=65535;
      end;
      if myval>0 then
-     big32(@vars[curtarget*32],
-           @vals[curtarget*32],
+     big64(@vars[curtarget*64],
+           @vals[curtarget*64],
            s1,s2,word(myval),slist);
      //      write(' ',s1,'.',s2,',',s3);
      //if s3>10 then subws.addobject(xx,tobject(pointer(s3)));
@@ -233,9 +603,9 @@ begin
    //if s1>1000 then break;
   end;
   //for i:=0 to slist.count-1 do
-  savebin(SLIST.COUNT,32,2,vals,'wvals.scar') ;
-  savebin(SLIST.COUNT,32,2,vars,'wvars.scar') ;
-
+  savebin(SLIST.COUNT,64,2,vals,'wvals.spar') ;
+  savebin(SLIST.COUNT,64,2,vars,'wvars.spar') ;
+  //listgrams;
 end;
 
 procedure ngramlemmas(fil:string);
@@ -445,7 +815,7 @@ end;
     for i:=0 to seeds-1 do
     begin
       //sanums.add(pointer(
-      writeln('<li><b>',sl[integer(sanums[i])],'</b>:');
+      writeln('<li><b>__',sl[integer(sanums[i])],'</b>:');
       haesyno(integer(sanums[i])-1,sanums,sl);
       //writeln('%',sanums.count,sanums.count-1]));
     end;
@@ -458,7 +828,7 @@ end;
     else begin
      result:=syns[sanum*(syncols)+i];
      res.add(pointer(result+1));
-     writeln(',','#',sl[result+1],'/');
+     //writeln(',','#',sl[result+1],'/');
     end;
   end;
 

@@ -49,7 +49,7 @@ type tnominit=class(tobject)
     procedure luemids(fn:string);
     procedure siivoosijat;
     procedure listaa;
-    constructor create(wfile,midfile:string);
+    constructor create(midfile:string);
     procedure haesijat(haku:ansistring;sikalauma:tstringlist);
 end;
 
@@ -403,7 +403,7 @@ end;  writeln('</ul>');
 end;
 
 
-constructor tnominit.create(wfile,midfile:string);
+constructor tnominit.create(midfile:string);
 begin
 //writeln('luemids');
 luemids('nmids.csv');

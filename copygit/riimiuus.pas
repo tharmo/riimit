@@ -25,7 +25,8 @@ type tsanasto=class(tobject)
  eitaivu:tstaulu;
  hakulista:tstringlist;
  hitlist:array[1..30000] of word;hitcount:integer;
- sanoja:tstringlist;
+ //sanoja:tstringlist;
+ slist:tstringlist;
  function haenumero(sana:ANSISTRING):word;
  procedure generatelist(wlist:tlist;rlist:tstringlist);
 //rocedure luohaku;
@@ -564,7 +565,8 @@ writeln('<div> x<div> y<div> z</div></div></div>');
 //do99;exit;
 luesanat('sanatuus.csv');
 verbit:=tverbit.create('sanatuus.csv','vmids.csv','vsijat.csv');
-nominit:=tnominit.create('nomsall.csv','nmids.csv');
+//nominit:=tnominit.create('nomsall.csv','nmids.csv');
+nominit:=tnominit.create('nmids.csv'); //'nomsall.csv'
 eitaivu:=tstaulu.create('eitaivu.lst',nil);
 writeln('<li>sanasto luotu</li>');
 
@@ -787,7 +789,8 @@ begin
    with sika do  result:=' [['+inttostr(num)+' '+ name+' ('+esim+') '+inttostr(vparad)+' '+inttostr(hparad)+'):<b>'+ending+'</b>]] ';
 end;
 
-function tsanasto.etsiyks(hakusana,hakuakon,hakukoko:string;hakueietu,hakueitaka:boolean;sika:tsija;aresu:tstringlist;onjolist:tlist;var hits:word):word;
+function tsanasto.etsiyks(hakusana,hakuakon,hakukoko:string;hakueietu,hakueitaka:boolean;sika:tsija;
+  aresu:tstringlist;onjolist:tlist;var hits:word):word;
 var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikaloppu,sikasopi:string;
     curlka:tlka;cursis:tsis;curav:tav;cursan:tsan;
     resunum:word;//mysika:tsija;
@@ -841,7 +844,7 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
         end;
         //hitlist.add(thishit);
       end;
-
+      {
       procedure fullhit(sana,sanataulu:string;sa:integer);
       var kokosana,myskip:string;
       begin
@@ -869,9 +872,9 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
        writeln('<b style="color:blue"  title="',inttostr(curlka.kot)+'#',inttostr(sika.num)+'##'+inttostr(sa),'">',
        reversestring(kokosana),'/</b>');//,sa,haku);
       end;
+     }
 
-
-      procedure longhit(sana,sanataulu:string;sa:integer);
+    {  procedure longhit(sana,sanataulu:string;sa:integer);
       var epos:word;kokohaku,kokosana:string;i,tc:integer;olivok:string[2];
       begin
       kokohaku:=sanataulu+''+avsopi+''+reversestring(sissopi)+''+reversestring(lkasopi)+''+reversestring(sikasopi);
@@ -908,7 +911,7 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
        end;
        except writeln('FAIL:',kokohaku,'!');end;
       end;
-
+    }
       function sana_f(san:integer;koita,skipped:string):boolean;
       var i,j:word;hakujatko,sana,kokosana:string;yhtlen,slen,hlen:word;//osataka,osaetu:boolean;
       begin
@@ -931,7 +934,7 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
       begin
          //fullhit(sana,koita,san);
          hits:=hits+1;
-          if d=d then writeln(' <em style="color:green">!!!',reversestring(sikasopi+lkasopi+''+sissopi+''+avsopi+''+sana+cursan.akon) ,'</em> ');
+          if d=d then writeln(' <em style="color:green">!!!',reversestring(sikasopi+lkasopi+''+sissopi+''+avsopi+''+sana+cursan.akon) ,san,'</em> ');
           hitcount:=hitcount+1;
           hits:=hits+1;
            hitlist[hitcount]:=san;
@@ -1003,7 +1006,7 @@ var sanasopi,sanajatko,avsopi,avjatko,sissopi,sisjatko,lkasopi,lkajatko,sikalopp
           //if d then  for san:=curav.ekasana to min(curav.vikasana,curav.ekasana+50) do write('/',sanat[san].san);
            writeln('?',result);
           for san:=curav.ekasana to curav.vikasana do //!!!
-                if sana_f(san,avjatko,skipped) then begin write('gotsana');result:=true;exit;end;
+                if sana_f(san,avjatko,skipped) then begin write('Gotsana');result:=true;exit;end;
            if d then writeln('...',result,'</ul>');
         except writeln('faILAV!!!');end;
       end;

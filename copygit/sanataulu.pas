@@ -3,6 +3,11 @@ unit sanataulu;
 {$mode objfpc}{$H+}
 
 interface
+//OTUS joka tallettaa trie-tyyppisiin nodeihinsa sanansa  reversoituna(trie muuten, mutta 1-1 -suhteessa sanoihin. jos eroa enemmän kuin
+// yksi kirjain edelliseen, vain se yksi tulee noodin letteriksi  ja jatko jää sanalistasta kaivettavaksi)
+//osaa palauttaa yhdelle sanalle kaikki riimaavat (ja sopivalla virittelyllä myös puolisointuja).
+
+//yhdessä taulussa aina joukko sanoja
 //voi olla ettei tästä omaa luokkaa kantsuis tehdä
 //tai ehkä luokka pitäis tehdä  sanatauluista, hakutaulu on vain yksi.
 //taipumattamattomat sanat ovat toinen. Eli yhdistetään luokkaan teitaivu
@@ -31,6 +36,7 @@ type tstaulu=class(tobject)
    procedure teetaulu;
    function numeroi:tlist;
    procedure riimaa;
+   procedure list(hitlist:tlist;kaikkisanat:tstringlist);
     // procedure do99;
    function sexact(haku:ansistring;yy:tstringlist):word;  //kutsutaan kun haku on edellyt ekaan (käänt) vokaaliin
    constructor create(fn:string;sl:tstringlist);
@@ -115,7 +121,7 @@ begin
     //yy.LoadFromFile('sanatall.ansi');
     sl.Delimiter:=' ';sl.StrictDelimiter:=true;
     sl.loadfromfile(fn);
-    sl.Insert(0,'');
+    //sl.Insert(0,'');
     for j:=0 to sl.count-1 do
        slista.add(trim(reversestring(ansilowercase(sl[j]))));//+'al');
   end else
@@ -133,9 +139,29 @@ var i:integer;hitlist:tlist;muolist:tstringlist;
 begin
 hitlist:=tlist.Create;
 //muolist:=tstringlist.create;
-for i:=1 to slista.count-1 do
+for i:=0 to slista.count-1 do
+ begin
+ try
  hitlist.add(pointer(sanasto.haenumero(slista[i])));
+except writeln('failnum:',i);end;
+end;
 result:=hitlist;
+//for i:=1 to muolist.Count-1 do writeln(reversestring(muolist[i]));
+writeln('<li>taulu:',slista.count,'/',hitlist.count);
+end;
+procedure tstaulu.list(hitlist:tlist;kaikkisanat:tstringlist);
+var i:integer;
+begin
+//muolist:=tstringlist.create;
+writeln('<li>taulu:',slista.count,'/',hitlist.count);
+
+for i:=1 to slista.count-1 do
+begin
+ try
+writeln('<li>:',slista[i],':');
+writeln(integer(hitlist[i]),' ');
+except writeln('faillistnum:',i);end;
+end;
 //for i:=1 to muolist.Count-1 do writeln(reversestring(muolist[i]));
 end;
 
@@ -266,10 +292,12 @@ procedure tstaulu.riimaa;
    var i,rhymecount,rpos,fpos,rivinalku:integer; //huom resmat nollapohjainen
    begin
       if pos('?',slista[r]+slista[c])>0 then exit;
+      //writeln(' zxc ',reversestring(slista[r]),'/',reversestring(slista[c]));
 
      rpos:=(r-1)*rimis; //nollas arvo on jo löydettyjen määrä, sarakeindeksit ykköspohjaisia
      rhymecount:=resmat[rpos];
-     if rhymecount>rimis then begin writeln('Riimirivi  ',r,' on jo täynnä');exit;end;
+     if rhymecount>rimis then begin //writeln('Riimirivi  ',r,' on jo täynnä');
+      exit;end;
      resmat[rpos+rhymecount+1]:=c; //arvo talteemn
      resmat[rpos]:=rhymecount+1; //määrä kasvatetaan
     // writeln('<br><b>; ',r,':',rhymecount,'=',rpos+rhymecount+1,'</b> ',rpos,reversestring(slista[r]), ' arvo ',rhymecount+1,'=',c,reversestring(slista[c]),rpos div 64,':<br> ');
@@ -292,7 +320,7 @@ procedure tstaulu.riimaa;
         else if mypit=kohrlyh then result:=true
         else if mylyh=kohrpit then result:=true
         else
-        if tavuero<-2 then
+        if tavuero<-20 then
         begin
             if (pos(kohrpit,mypit)=1) then result:=true;  //
             //if result and (pos(kohrlyh[length(slista[vert])+1],vokaalit)>0) then writeln('avotavunpaino!');
@@ -335,7 +363,7 @@ procedure tstaulu.riimaa;
            ookoo:=(abs(nodes[alasana].tavucount-tavus)<>1) and (alasana<>snum) and (nodes[snum].ru_pit=nodes[alasana].ru_lyh);
          //kun pitkää testaaa, voidaan hyväksyä myös useampitavuiset muodot
            if ookoo then if d then
-           writeln('<span style="color:',ifs(short,'magenta','blue'),'">', reversestring(slista[alasana]),
+           if d then writeln('<span style="color:',ifs(short,'magenta','blue'),'">', reversestring(slista[alasana]),
              nodes[snum].ru_pit,'.',nodes[alasana].ru_lyh,'</span>')
            else  if d then writeln('!!<span style="background:',ifs(short,'brown','red'),'">', reversestring(slista[alasana]),
                nodes[snum].ru_pit,'.',nodes[alasana].ru_lyh,'</span>');
@@ -380,7 +408,7 @@ procedure tstaulu.riimaa;
         syy:='';
         ookoo:=sopii(ss,snum,pitr,lyhr,short);
         if ookoo then addres(snum,ss);
-       //if d then
+       if d then
        if ookoo then writeln(' <span style="color:green">',ss,reversestring(slista[ss]),nodes[ss].ru_pit,'.',nodes[ss].ru_lyh,'</span>')
        ;//else  writeln(ifs(syy<>'','<span style="color:red">'+syy+'</span>',''),reversestring(slista[ss]));
        alasana:=ss+1;
@@ -410,7 +438,7 @@ procedure tstaulu.riimaa;
     try
     if pos('?',slista[i])>0 then continue;
     if length(slista[i])<3 then continue;
-    writeln('<sub>',reversestring(slista[i]),'</sub>');
+    if d then writeln('<sub>',reversestring(slista[i]),'</sub>');
      lets[nodes[i].lev].w:=i;
      lets[nodes[i].lev].c:=nodes[i].letter;
 
@@ -433,7 +461,7 @@ procedure tstaulu.riimaa;
      except writeln('___fail');writeln('<li>zzz',j,'#i:',i,'/nodlev:',nodes[i].jump,' /curlev:',curlev);raise;end;
   end;
     writeln('<h3>lista</h3>');
-     for i:=1 to slista.count-1 do
+     for i:=99991 to slista.count-1 do
      begin
         //writeln('<li>',i,reversestring(slista[i]),': ');//,'#',resmat[64*(i-1)],':::');
       for j:=1 to rimis-1 do
