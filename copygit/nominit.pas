@@ -45,7 +45,7 @@ type tnominit=class(tobject)
     procedure etsi(hakunen:thakunen;aresu:tstringlist;onjolist:tlist);
     procedure etsiold(hakunen:thakunen;aresu:tstringlist;onjolist:tlist);
     procedure generate(runko,sis,astva:str16;luokka:integer;aresu:tstringlist;hakutakvok:boolean);
-    procedure luesanat(fn:string);
+    //procedure luesanat(fn:string);
     procedure luemids(fn:string);
     procedure siivoosijat;
     procedure listaa;
@@ -229,7 +229,7 @@ for j:=0 to scount do
    end;
  end;
 end;
-
+  {
 procedure tnominit.luesanat(fn:string);
 var sl:tstringlist;
  ms:tsija;sanafile:textfile;
@@ -338,18 +338,41 @@ begin
  // writeln('<ul style="line-height:95%"><ul>') ;
 
 end;
+}
 procedure tnominit.listaa;
-var lk,sis,av,san,sija,prlim,x:integer;
+var lk,sis,av,san,sija,prlim,x,i,j,k:integer;
   //((lk,sis,av,san,sija:integer;
   mysis,myav,mysana,mysija:string;
+  sames:array[0..33] of array[0..33] of byte;
 begin
+ fillchar(sames,sizeof(sames),0);
+ write('<pre>');
  luoks[0].ekasis:=0;
+ writeln('<style type="text/css">  .g1 {background-color:green} </style>');
+ for lk:=0 to 48 do //clka do
+ for i:=0 to 33 do
+  for j:=0 to 33 do
+  begin
+       if LMMIDS[LK,i]=LMMIDS[LK,j] then sames[i,j]:=sames[i,j]+1;
+  end;
+ writeln('<table border="1"><tr>');
+ for i:=0 to 33 do
+      write( '<td>', sijat[i].ending,'</td>');
+   write( '</tr>');
+ for i:=0 to 33 do
+     begin
+        write( '<tr>');
+        write( '<td>',i,' ' ,sijat[i].ending,'</td>');
+      for j:=0 to 33 do
+      write( '<td>', sames[i,j],'</td>');
+      write( '</tr>');
+     end;
+ writeln('</table>');
+ exit;
 for lk:=0 to 48 do //clka do
-
 begin
-    writeln('<li><b>lk: ',lk+1,' ',luoks[lk].ekasis,'...',luoks[lk].vikasis,' ',luoks[lk].kot,'</b>');//,'<ul>');
-    for sis:=luoks[lk].ekasis to luoks[lk].vikasis  do write(siss[sis].sis,' /');
-    write('<pre>');
+    write(^j,' <b class="g1">lk: ',lk+1,' ',luoks[lk].ekasis,'...',luoks[lk].vikasis,' ',luoks[lk].kot,'</b>');//,'<ul>');
+    //for sis:=luoks[lk].ekasis to luoks[lk].vikasis  do write(sis,siss[sis].sis,' /');
     for sis:=luoks[lk].ekasis to luoks[lk].vikasis  do
       begin     prlim:=0;
         //if lk=38 then mysis:='' else
@@ -366,20 +389,22 @@ begin
             if (prlim<4) or  (avs[av].h<>avs[av].v) or (lk=0) then
             begin
             //        writeln('<li>',reversestring(sanat[san].san+sanat[san].akon),', ');
-               writeln;
+              // writeln;
             for sija:=0 to scount do
             begin
-              mysija:=LMMIDS[LK,SIJA];
+
               if (lk<31) or (lk+1=489) then myav:=ifs(sijat[sija].vv,avs[av].v,avs[av].h)
               else myav:=ifs(sijat[sija].hv,avs[av].v,avs[av].h);
               //else myav:=ifs(sijat[sija].hv,avs[av].hxxx,avs[av].vxxx);
               mysana:=sanat[san].san;
+              try
               if pos('*',mysija)>0 then
               begin //write(':',mysija,'[',myav,']');
                 //delete(mysija,length(mysija),1);
                 mysija[length(mysija)]:='-';
-                myav:=mysana[1];//write(':',mysija,'[',myav,']');
+                if mysana<>'' then myav:=mysana[1];//write(':',mysija,'[',myav,']');
               end;
+              except write('xxxxxxx');end;
               mysana:=mysis+''+myav+''+mysana+sanat[san].akon;
               //writeln(mysana+' ');continue;
               //myssis:=sanat[san].san;
@@ -391,15 +416,15 @@ begin
               //while (mysija<>'') and (pos('-',mySIJA)>0) do begin x:=pos('-',mySIJA);  write(x);delete(mysija,x,1);delete(mysana,x,1);end;
               //while pos('-',mysis)=length(mysi) do begin delete(mysis,,1)end;
               //write(' ',reversestring(mysana),'<B>',mysija,'</B>'+sijat[sija].ending,',');
-              write(copy(reversestring(mysija+mysana)+''+''+sijat[sija].ending+'                      ',1,16));
+              write(copy(reversestring(mysija+mysana)+'                      ',1,8)); //''+sijat[sija].ending+
               //writeln(' ',reversestring(mysana+sanat[san].akon),'',myav,siss[sis].sis,'<B>',LMMIDS[LK-1,SIJA],'</B>'+sijat[sija].ending);
               prlim:=prlim+1;
             end;
             end;
           end; //writeln('</pre><hr>');
         end; // writeln('</pre></ul>');
-      end;  writeln('</pre>');
-end;  writeln('</ul>');
+      end;
+end;  writeln('</ul></pre>');
 end;
 
 
@@ -412,7 +437,7 @@ luemids('nmids.csv');
 //writeln('luettu,luesanat');
 nhitlist:=tlist.create;
 //writeln('<li>nominit luettu:',midfile,' ',wfile);
-//listaasijat;
+//listaa;
 exit;
 writeln('<hr>etsi<hr>');
 //etsi;

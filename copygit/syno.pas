@@ -33,7 +33,7 @@ procedure gutkerro;
 function haesyno(sanum:word;var res:tlist;sl:tstringlist):integer;
 function haesynolist(var sanums:tlist;sl:tstringlist):word;
 end;
-procedure ngrams;
+procedure getngrams;
 procedure ngramlemmas(fil:string);
 procedure grammat(fil:string);
 procedure listgrams;
@@ -466,7 +466,7 @@ end;
 
 END;
 
-procedure ngrams;
+procedure getngrams;
 var slist,ihte:tstringlist;
     ngf:textfile; ch:ansichar; ind:word;
     line:array[0..2] of ansistring;ok:boolean;
@@ -823,11 +823,14 @@ end;
   function tsynonyms.haesyno(sanum:word;var res:tlist;sl:tstringlist):integer;
   var i,j:integer;
   begin
+    result:=-1;
     for i:=0 to syncols-1 do
     if syns[sanum*(syncols)+i]=0 then break
     else begin
      result:=syns[sanum*(syncols)+i];
-     res.add(pointer(result+1));
+     if res.indexof(tobject(pointer(result+1)))<1 then res.add(pointer(result+1))
+     ;//else writeln('<li>no:',)
+
      //writeln(',','#',sl[result+1],'/');
     end;
   end;

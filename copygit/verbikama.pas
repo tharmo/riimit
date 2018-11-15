@@ -41,7 +41,7 @@ type tverbit=class(tobject)
     procedure siivoosijat;
     procedure etsi(hakunen:thakunen;aresu:tstringlist;onjolist:tlist);
     procedure etsiold(hakunen:thakunen;aresu:tstringlist;onjolist:tlist);
-    procedure luesanat(fn:string);
+    //procedure luesanat(fn:string);
     procedure luesijat(fn:string);
     procedure listsijat;
     procedure luemids(fn:string);
@@ -1004,7 +1004,7 @@ for j:=0 to 66 do
  end;
 end;
 
-procedure tverbit.luesanat(fn:string);
+{procedure tverbit.luesanat(fn:string);
 var sl:tstringlist;ms:tsija;sanafile:textfile;sana,konsti,myav:ansistring;
 i,j,k,l:word;differ:byte;
   prevsl:tstringlist;
@@ -1025,6 +1025,7 @@ try
 except writeln('faillka');end;
 
 end;
+
 procedure uussis;
 begin
 siss[csis].vikaav:=cav;
@@ -1127,7 +1128,7 @@ begin
    end;
 
 end;
-
+}
 
 
 constructor tverbit.create(wfile,midfile,sijafile:string);

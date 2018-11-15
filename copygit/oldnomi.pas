@@ -753,7 +753,7 @@ begin
      aw[5]:=aw[5]+ifs(aw[3]='','',thisav)+copy(aw[2],1,cut);
      aw[3]:='';
      aw[2]:=copy(aw[2],cut+1);  //astevaihtelu x/x siirret‰‰n runkoon
-     writeln('<li>X:',aw[0]+','+aw[1]+','+aw[2]+','+aw[3]+','+aw[4]+','+aw[5]);
+     //writeln('<li>X:',aw[0]+','+aw[1]+','+aw[2]+','+aw[3]+','+aw[4]+','+aw[5]);
      //aw[5]:=aw[5]+ifs(aw[3]='','','aw[3][1]')+aw[2];aw[3]:='';aw[2]:='';
 
      end

@@ -7,6 +7,11 @@ interface
 uses
   Classes, SysUtils,strutils;
 const konsonantit ='bcdfghjklmnpqrstvwxz'''; vokaalit='aeiouyäö';
+  //used in sanataulu
+
+  type tsan=record san:string[15];akon:string[4];takavok:boolean;end;
+  type tnod=record ru_lyh,ru_pit,ru_lyly,yhted,jump,ed,lev,len,tavucount,snum:word;xreftavs:integer;etu,tie:boolean;letter:ansichar;sanainf:pointer;end;
+  type tlet=record c:ansichar;w:word;end;
 
 type tvsana=record san:string[15];akon:string[4];takavok:boolean;end;
 type tsija=record
@@ -80,7 +85,7 @@ procedure readbin(rows,cols,usiz:integer;var arr:array of word;fn:string) ;
   try
   AssignFile(binf, fn);  //ei onnistu tstrinlistillä varmaan blockwrite
   Reset(binf, cols*usiz);
-  writeln('binread:',fn);
+  writeln('binread:',fn,' ',rows,'*',cols,'*',usiz,'=',rows*cols*usiz);
    for i:=0 to rows-1 do //writeln(i*syncols,syns[i*syncols]);exit;
     begin // do
      try

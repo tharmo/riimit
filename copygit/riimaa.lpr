@@ -8,7 +8,7 @@ uses
   {$ENDIF}{$ENDIF}
   Classes, SysUtils, CustApp, //riimitys,
   nominit, riimiutils, verbikama, etsi,syno,
-  prosessi, sanataulu, cluster  //, roskaa
+  prosessi, sanataulu, ngrams  //, roskaa
   { you can add units after this };
 
 type
@@ -78,7 +78,8 @@ begin
   begin
     //writeln('lemmaa',paramstr(0),'\1',paramstr(1),'/2',paramstr(2),'/3',paramstr(3),'!');     //readln;
     //ngrams; //siivoa ngram-tiedostoa ajettavaksi hfts/figen läpi
-    //lastenlapset;terminate;exit;
+    lastenlapset;terminate;exit;
+
     if paramstr(3)='x' then grammat(paramstr(2)) else
       listgrams;
     Terminate;
@@ -87,7 +88,7 @@ begin
   if paramstr(1)='klksiivo' then
   begin
     //ngrams; //siivoa ngram-tiedostoa ajettavaksi hfts/figen läpi
-    ngrams;
+    getngrams;
     Terminate;
     Exit;
   end;
