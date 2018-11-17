@@ -1,29 +1,3 @@
-  # reading klk_siivo2.srt.iso
- {  
-   if ($1!=v1) {
-             v1=$1;  v2=$2
-             while (1) {
-                getline< "klk_lemmas.hits"  
-                rr=rr+1
-                if (v1!=$1){
-                  print "EI:" v1,NR , $1,rr;
-                  getline < "/dev/tty"
-                  if (v1 >  $1) break
-                } else break
-              }  
-              print v1,NR , $1,rr;
-             #next
-               if ($1==v1) { 
-                  lemma=$2;
-               }
-               else {
-               
-                 print  "PARI:" v1 "/" v2 "@" NR ,  "lemma:" $0 "@" rr "   ppari::"  prevpari "   p1emma:" prevlemma >"error.lst" 
-               }
-               prevlemma="(" $0 ")"
-               #break
-    }
-    prevpari=v1 "/" v2
-    #if (lemma!="*") 
-    print  $2, lemma, $3 >"klk_revpairs.lst"
-  }  
+paska
+jaska
+

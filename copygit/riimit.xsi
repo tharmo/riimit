@@ -244,7 +244,7 @@ class name="nominit"
     
     '''
   grammat
-    xse:shellexec: ./riimaa grammat klk_parit12.nums   
+    xse:shellexec: ./riimaa grammat klk_parit12.nums x 
   hr    
     pre
      xse:gawk: '''

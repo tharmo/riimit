@@ -59,15 +59,22 @@ implementation
 uses strutils,riimiuus,math;
 FUNCTION tstaulu.st_san(ind:word):string;
 begin
+ try
   result:=sanasto.resutaulu.taulu[ind].sana;
+ except writeln('nogo');end;
 end;
 FUNCTION tstaulu.st_lemma(ind:word):word;
 begin
+  try
   result:=sanasto.resutaulu.taulu[ind].num;
+  except writeln('nogolemma');end;
 end;
 FUNCTION tstaulu.st_muoto(ind:word):word;
 begin
+   try
   result:=sanasto.resutaulu.taulu[ind].sija;
+   except writeln('nogom');end;
+
 end;
 
 procedure tavutnoodi(VAR node:tnod;san:ansistring);
@@ -452,10 +459,12 @@ procedure tstaulu.riimaa;
       //if pos('?',trylista[r]+trylista[c])>0 then exit;
       //writeln(' zxc ',reversestring(trylista[r]),'/',reversestring(trylista[c]));
       //if (trylista[c]='anakhaah')  then writeln('haahkako:',trylista[r],'/',trylista[c]);
-     //writeln('<li>++',reversestring(trylista[c]),'/',integer(pointer(trylista.objects[c])),sanalista[integer(pointer(trylista.objects[c]))],'!</li>');
+     //writeln('<li>++',reversestring(trylista[c]),'/',integer(pointer(trylista.objects[c])));//,sanalista[integer(pointer(trylista.objects[c]))],'!</li>');
      rpos:=(r)*rimis; //nollas arvo on jo löydettyjen määrä, sarakeindeksit ykköspohjaisia
      sofar:=resmat[rpos];
-     if sofar>rimis then
+     //writeln('<span style="color:green">',r,reversestring(st_san(aindex[r])),'</span>');
+     //writeln('<span style="color:blue">',c,reversestring(st_san(aindex[c])),'</span>');
+     if sofar>=rimis then
       begin
          writeln('<span style="color:red">',r,reversestring(st_san(aindex[r])),'</span>');
          exit;
@@ -525,7 +534,8 @@ procedure tstaulu.riimaa;
          cc:=cc+1;
          //if cc>300000 then break;
          if short then
-            ookoo:=(nodes[alasana].ru_pit=nodes[snum].ru_lyh) and (alasana<>snum) and (nodes[snum].ru_lyh=nodes[alasana].ru_lyh)
+            ookoo:=(nodes[alasana].ru_pit=nodes[snum].ru_lyh) and ((alasana=600000) or  (alasana<>snum))
+            and (nodes[snum].ru_lyh=nodes[alasana].ru_lyh)
          else
            ookoo:=(abs(nodes[alasana].tavucount-tavus)<>1) and (alasana<>snum) and (nodes[snum].ru_pit=nodes[alasana].ru_lyh);
          //kun pitkää testaaa, voidaan hyväksyä myös useampitavuiset muodot
@@ -569,7 +579,7 @@ procedure tstaulu.riimaa;
      pitr:=copy(sana,1,nodes[snum].ru_pit);
      lyhr:=copy(sana,1,nodes[snum].ru_lyh);
      //riteln('(',sana,nodes[snum].lev,'.',lets[i].c,')');
-     //writeln('(*',reversestring(sana),'.',(sanalista[mylemmanum]),')');
+     //writeln('<li>*',reversestring(sana),'.',mylemmanum,'...');
      for i:=nodes[snum].lev-1 downto 1 do //nodes[snum].ru_lyh-1 do
      begin
         try
@@ -578,7 +588,7 @@ procedure tstaulu.riimaa;
          try
          //otherlemmanum:=integer(pointer(trylista.objects[ss]));
          otherlemmanum:=st_lemma(aindex[ss]);
-         if mylemmanum=otherlemmanum then continue;//writeln('?',otherlemmanum,sanalista[otherlemmanum]);
+         if (mylemmanum<>60000)  and (mylemmanum=otherlemmanum) then continue;//writeln('?',otherlemmanum,sanalista[otherlemmanum]);
          except writeln('fail***',ss,'!');end;
          //if ss=integer(pointer(trylista.objects[i])) then continue;
        //jos sana on monitavuinen, loppupätkästyn vrt:n pitää mätsätä täysin. Kokonaisen vrt:n
@@ -588,7 +598,7 @@ procedure tstaulu.riimaa;
         syy:='';
         ookoo:=sopii(ss,snum,pitr,lyhr,short);
         //if ookoo then
-        //writeln('<li>sopi? ',ookoo,ss,'/',snum,reversestring(st_san(aindex[ss])),'/',reversestring(st_san(aindex[snum])), '-',mylemmanum,'.',otherlemmanum);
+        //writeln('<li>sopi? ',ookoo,snum,'/',snum,reversestring(st_san(aindex[snum])),'/',reversestring(st_san(aindex[ss])),ss, '-',mylemmanum,'.',otherlemmanum);
         if ookoo then addres(snum,ss);
        //if d then    if ookoo then writeln(' <span style="color:green">',ss,reversestring(trylista[ss]),nodes[ss].ru_pit,'.',nodes[ss].ru_lyh,'</span>')
        ;//else  writeln(ifs(syy<>'','<span style="color:red">'+syy+'</span>',''),reversestring(slista[ss]));
@@ -606,14 +616,14 @@ procedure tstaulu.riimaa;
     end;
   end;
    //   procedure tstaulu.riimaa;
- var i,ii,j,sn,rep:integer;edsana,ednum,lyh,sana:ansistring;
-      lemma,plemma,asani,ssani,msani:word;
+ var i,ii,j,sn,rep:integer;edsana,ednum,lyh,sana,psana:ansistring;
+      lemma,plemma,asani,ssani,msani,pmuoto:word;
       txt:string;riimahti:boolean;
 
  begin
   //listaa;
    d:=false;
-   //for i:=0 to trylista.count-1 do writeln('<li>T/S:',trylista[i],':',st_san(aindex[i]));exit;
+   //for i:=0 to sanascount-1 do writeln('<li>T/S:',':',sanasto.resutaulu.taulu[i].sana);
 
    //d:=true;
     curlev:=01;
@@ -626,7 +636,7 @@ procedure tstaulu.riimaa;
     try
     //if pos('?',trylista[i])>0 then continue;
     //if length(trylista[i])<3 then continue;
-    //if d then writeln('<sub>',reversestring(trylista[i]),integer(pointer(trylista.objects[i])),'</sub>');
+    //if d thenwriteln('<sub>',reversestring(trylista[i]),integer(pointer(trylista.objects[i])),'</sub>');
     lets[nodes[i].lev].w:=i;
     lets[nodes[i].lev].c:=nodes[i].letter;
     if d then for j:=curlev downto nodes[i].lev do writeln('</div>');
@@ -669,7 +679,7 @@ procedure tstaulu.riimaa;
   //trylista.customsort(@sortnume);
   //getsortlist(trylista,sanalista);
   //for i:=99999 to trylista.count-1 do writeln('<li>@@@',trylista[i],integer(pointer(trylista.objects[i]))   ,'//',sanalista[sanasto.resutaulu.taulu[integer(pointer(trylista.objects[i]))].num ]);
-  writeln('symmertisoitu:',sanascount);
+  writeln('symmetrisoitu:',sanascount);
   {for ii:=0 to sanascount-1 do // käydään lpi alkuperäisessä järjestyksessä
   begin
    asani:=aindex[ii];
@@ -686,34 +696,51 @@ procedure tstaulu.riimaa;
   begin
    ssani:=ii;//sindex[ii];
    lemma:=st_lemma(ssani);
+   //writeln('%',lemma,st_san());
    asani:=arindex[ii];   //aakkos?
-   if plemma<>lemma THEN
+   if (plemma<>lemma) or (lemma=60000) THEN
    begin
      //writeln('</dd><dt><b>:',sanalista[vls[ii]],'</b>: ',vls[ii],'</dt><dd>');
-    //if riimahti then writeln(txt);
-    txt:='<li><b>'+string(sanalista[lemma])+'</b> '+': ';
+    //if riimahti then    writeln(txt);
+     try
+      if lemma=60000 then txt:='<li><b>'+reversestring(st_san(ii))+'</b>' else
+      txt:='<li><b>'+string(sanalista[lemma])+'</b> '+': ';
+      txt:=txt+'_'+inttostr(resmat[rimis*asani]);
+     //writeln(txt);
+     except writeln('nogo');end;
+
      plemma:=lemma;
      riimahti:=false;
    end;// else
-   writeln('@',ii,reversestring(st_san(asani)),asani);
+   //writeln('@',ii,reversestring(st_san(ssani)),ssani,string(sanalista[lemma]));
    begin
     if resmat[rimis*asani]<1 then continue;
     riimahti:=true;
-     writeln(txt);//+'[',ii,'.',asani,'.',reversestring(st_san(ii)),st_muoto(ii),']');
+    writeln(txt);txt:='';
+     //txt:='';
+     psana:=reversestring(st_san(ii));
+     pmuoto:=st_muoto(st_muoto(ii));
       //asani:=ssani;
-     //writeln(' ',ii,reversestring(st_san(ssani)),asani,'/');
-     for j:=1 to resmat[rimis*asani] do
+     //writeln(' <li>!!',ii,reversestring(st_san(ssani)),asani,'/');
+     for j:=1 to (resmat[rimis*asani]) do
      begin
         sana:=reversestring(st_san(aindex[resmat[rimis*asani+j]]));
-        lemma:=st_lemma(resmat[rimis*asani+j]);//sanalista[integer(pointer(trylista.objects[resmat[rimis*(i-1)+j]]))]
+        lemma:=st_lemma(aindex[resmat[rimis*asani+j]]);//sanalista[integer(pointer(trylista.objects[resmat[rimis*(i-1)+j]]))]
+        try
        //if length(sana)<10 then
        //writeln(' ',sana,'/',lemma);
-       writeln(' <em title="',reversestring(st_san(asani)),st_muoto(aindex[resmat[rimis*asani+j]]),'">',sana,'</em> ');//,resmat[rimis*asani+j],'#',st_muoto(aindex[resmat[rimis*asani+j]]));//,sanalista[lemma]);
+       if lemma=60000 then
+       writeln(' <em title="',psana,':',sana,',">',sana,'</em> ') //,resmat[rimis*asani+j],'#',st_muoto(aindex[resmat[rimis*asani+j]]));//,sanalista[lemma])
+       else
+       writeln(' <em title="',psana,':',string(sanalista[lemma]),st_muoto(aindex[resmat[rimis*asani+j]]),'">',sana,'</em> ');//,resmat[rimis*asani+j],'#',st_muoto(aindex[resmat[rimis*asani+j]]));//,sanalista[lemma]);
         //'</b>',resmat[rimis*(resmat[rimis*i+j])] //, resmat[rimis*(i-1)+j]
         // ,']');
        ;//else writeln(sana);
       //writeln(' ',i+1,'/',resmat[(64*(i-1))+j],reversestring(slista[resmat[64*(i-1)+j]]),': ');
+       except writeln('<li>nogor:',sana,lemma,' ',st_san(aindex[resmat[rimis*asani+j]]));end;
+
      end;
+     //writeln('???');//continue;
      for j:=1999 to resmat[rimis*asani] do
      begin
        writeln('<em style="color:red">',reversestring(st_san(aindex[resmat[rimis*asani+j]])),'</em> ');
@@ -722,6 +749,7 @@ procedure tstaulu.riimaa;
    end;
 
   end;
+  listaa;
   exit;
   //for ii:=0 to trylista.count-1 do //slista.count-1 do
   for ii:=0 to SANAScount-1 do //slista.count-1 do
@@ -810,7 +838,7 @@ begin
 end;
 
 procedure tstaulu.teetaulu;//(yy:tstringlist);
-//PITÄÄ JOSKUS PANNA UUSIKSI. NYT SEKASOTKU TRYLISTA/SANASTO.RESUTAULU KANSSA
+//PITÄÄ JOSKUS PANNA UUSIKSI. NYT SEKASOTKU TRYLISTA/SANASTO.RESUTAULU KANSSA.. trylista poistettu,mutts sotku jäi
 var      kirs,adss,cc,reftavs:integer;
     inf,outf,misfile:textfile;
     len,xedlen,maxlen,curlev:word;
@@ -848,6 +876,8 @@ begin
    //i:=integer(pointer(trylista.objects[ii]));
    //sana:=trylista[i];//ww(yy[i]);
    sana:=(st_san(ii));//sanasto.resutaulu.taulu[ii].sana;
+   //writeln('<li>\\',reversestring(sana),'//');
+
    //writeln('<li>',sana,'//',sanalista[taulu[ii].num]);
    //sana:=mysana.sana;
    if sana='' then continue;
@@ -855,7 +885,7 @@ begin
    nodes[i].jump:=0;
    //nodes[i].snum:=integer(pointer(trylista.objects[i]));
    //nodes[i]ru_lyh:=length(sana);for j:=length(sana) downto length(sana)-3  do if pos(yy[i][j],vokaalit)>0 then break else nodes[i]ru_lyh:=nodes[i]ru_lyh-1;
-   except writeln('====',i,sana);raise;end;
+   except writeln('====',i,sana);;end;
    try
    nodes[i].len:=length(sana);
    tavutnoodi(nodes[i],sana);   //laitetaan noodiin lyh/pit //2 kohtaa joissa riimityksen kannalta mahd. tavujakopaikka
@@ -894,7 +924,6 @@ begin
       then  //sana suoraa jatkoa edelliselle  .. ei tarpeen?
       begin
        try
-        if d then writeln('//');
        nodes[i].yhted:=min(a,nodes[i-1].yhted+1);
        nodes[i].lev:=nodes[i-1].lev+1;
        //nodes[i].reftavs:=nodes[i-1].reftavs+1;

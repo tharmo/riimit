@@ -603,8 +603,8 @@ begin
    //if s1>1000 then break;
   end;
   //for i:=0 to slist.count-1 do
-  savebin(SLIST.COUNT,64,2,vals,'wvals.spar') ;
-  savebin(SLIST.COUNT,64,2,vars,'wvars.spar') ;
+  savebin(SLIST.COUNT,64,2,vals,'wvars1_v.spar') ;
+  savebin(SLIST.COUNT,64,2,vars,'wvars1.spar') ;
   //listgrams;
 end;
 

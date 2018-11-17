@@ -376,7 +376,7 @@ begin
     begin
           konstikas:=true;
 
-      if pos(luomuo[lknum-1][5]+'t',itesana)<1 then writeln('<li>+++',itesana,'|',luomuo[lknum-1][5]+'t');
+      //if pos(luomuo[lknum-1][5]+'t',itesana)<1 then writeln('<li>+++',itesana,'|',luomuo[lknum-1][5]+'t');
 
      lopkon:=itesana[length(itesana)];delete(itesana,length(itesana),1);
      //writeln('<h4>lopkon',lopkon,'</h4>');

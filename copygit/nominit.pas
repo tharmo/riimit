@@ -1080,8 +1080,7 @@ begin
   if not sanat[san].takavok then target:=etu(target);
   //aresu.add(target);
   if onjolist<>nil then onjolist.add(pointer(san));
-  if d then
-  writeln('<li>hit:=',copy(target,1,length(target)-length(hakunen.loppu)-1),'<b>',copy(target,length(target)-length(hakunen.loppu),15) ,'</b>//san:',sanat[san].san, '/todo:',todo,'/',san,'//',hakunen.akon,reversestring(hakunen.loppu),' ',hakunen.koko,'</li>');//,'</ul>');
+  //if d then  writeln('<li>hit:=',copy(target,1,length(target)-length(hakunen.loppu)-1),'<b>',copy(target,length(target)-length(hakunen.loppu),15) ,'</b>//san:',sanat[san].san, '/todo:',todo,'/',san,'//',hakunen.akon,reversestring(hakunen.loppu),' ',hakunen.koko,'</li>');//,'</ul>');
   //if pos(sanat[san].akon,todo)=1 then
   //if sanat[san].akon=hakunen.akon then
   //if hakukonst+reversestring(haku)=target then

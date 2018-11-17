@@ -38,7 +38,8 @@ type tsanasto=class(tobject)
  slist:tstringlist;
  resutaulu:tsinfotaulu;
  function haenumero(sana:ANSISTRING;rev:boolean):word;
- procedure generatelist(wlist:tlist;all:boolean);
+  procedure generatelist(wlist:tlist;all:boolean);
+  procedure addtolist(sana:ansistring);
 //rocedure luohaku;
  //0-pohjasia, mutta data alkaa 1:stä
  procedure luesanat(fn:string);
@@ -201,7 +202,9 @@ begin
            delete(mysis,1,1);
        end;
    end;
+  except writeln('failvs:<b>',cursan.san,cursan.akon,sija,'</b>');end;
 
+   try
    gsana:=reversestring(myend)+string(mid+mysis+myav+sans[snum].san+sans[snum].akon);
   // writeln('<li>vvv_',reversestring(gsana));
    //if curlka.kot=64 then writeln('<li>zzx ',reversestring(gsana));
@@ -216,7 +219,7 @@ begin
        resutaulu.add(gsana,snum,curlka.kot,sija,2);
        //if reversestring(gsana)='jöittä' then
         // writeln('<li>:',reversestring(gsana),':',sija,vahvasija,verbit.lmmids[luokka-52,sija],'/',mid);
-  except writeln('failverb!!!');end;
+  except writeln('failverb!!!',gsana);end;
 end;
 
 var curlka:tlka;
@@ -238,7 +241,7 @@ begin
           //if avs[av].v<>avs[av].h then
           begin
            //writeln('<li>',snum,'#',luokka,sanoja[snum],';',curlka.kot,'.',reversestring(siss[sis].sis+'_'+avs[av].v+avs[av].h+'.'+sans[snum].san+sans[snum].akon),' ',luokka,curlka.vahva,siss[sis].sis,':');
-           for sija:=0 to 67 do //sikoja do
+           for sija:=0 to 66 do //sikoja do
            //for sija in [0,5,12,13,16,23,36,37,39,45] do //sikoja do
               sijaa(sija,curlka,siss[sis],avs[av],sans[snum]);
               //function sijaa(curlka:tlka;cursis:tsis;curav:tav;cursan:tsan):ansistring;
@@ -302,7 +305,7 @@ begin
      //resus.addobject(gsana,tobject(pointer(snum)));
      resutaulu.add(gsana,snum,curlka.kot,sija,1);
        //procedure add(nnum:word;nlka:tlka;nsija:word;nsanalka:byte;);
-      //writeln('<li>HIT:',snum,':',myend,',',mid,',',vahvasija,',',myav,'!',luokka,'/',sija,'=',resutaulu.taulu[resutaulu.wcount-1].num);
+      if snum=8035 then      writeln('<li>HIT:',gsana,snum,':',myend,',',mid,',',vahvasija,',',myav,'!',luokka,'/',sija,'=',resutaulu.taulu[resutaulu.wcount-1].num);
 
    end;
   except writeln('FAILnom!!!',snum);end;
@@ -381,25 +384,40 @@ begin
    //end;
  }
 //end;
+procedure tsanasto.addtolist(sana:ansistring);
+begin
+ resutaulu.add(sana,9999,99,1,3);
+ //resutaulu.
+ //listaa;
+end;
+
 procedure tsanasto.generatelist(wlist:tlist;all:boolean);
-var j,snum:word;
+var j,snum:word;  parts:tstringlist;
 begin
  writeln(' _!!!!!!!!',wlist.count);
 
   for j:=0 to wlist.count-1 do
   begin
     snum:=integer(wlist[j]);
-    writeln(' <li>++',snum,slist[snum], ' ');
     if snum<19547 then
      //generatenom(turharesulist,snum,false)
      generatenom(snum,false)
     else if snum<25484 then
      generateverb(snum)
     else
-    begin resutaulu.add(slist[snum],snum,99,1,3);end;
+    begin //writeln('<li>xxx:',snum,slist[snum]);
+       resutaulu.add(reversestring(slist[snum]),snum,99,1,3);end;
    // begin rlist.addobject(slist[j],tobject(pointer(j)));end;
+   //writeln(' <li>++',snum,string(slist[snum]),resutaulu.wcount, ' ');
 
   end;
+  //exit;
+  parts:=tstringlist.create;
+  parts.loadfromfile('partikkelit.lst');
+  //parts.loadfromfile('turha');
+  for j:=0 to parts.count-1 do
+  //resutaulu.add(reversestring(parts[j]),60000,99,0,3);
+  resutaulu.add(string(parts[j]),60000,99,0,3);
 end;
 function tsanasto.haenumero(sana:ANSISTRING;rev:boolean):word;
 var eitaka,eietu:boolean;akon,koko,loppu:ansistring;aresu:tstringlist;onjolista:tlist;

@@ -60,18 +60,36 @@ begin
   hlist:=tlist.create;
   //aho(690);
   sans.insert(0,'vaarinhousut');
-  //aho('valaista');
-  //aho('tulla');
-  aho('valaa');
-  aho('kala');
-  //aho('vala');
-  sims:=tsimmat.create(sans.count-1,64,'wvars',sans);
-  sims.haegramlist(0,hlist,sans,glist);
+  aho('sauna');
+  aho('helvetti');
+  aho('taivas');
+  aho('nauttia');
+  aho('autuus');
+  aho('tuska');
+  {aho('vala');
+  aho('valo');
+  aho('valta');
+  aho('valtava');
+  aho('kasvo');
+  aho('kasvi');
+  aho('kasvaa');}
+  //aho('kissa');
+  //aho('pissa');
+  //aho('tähti');
+ // sims:=tsimmat.create(sans.count-1,64,'wvars',sans);
+ // sims:=tsimmat.create(sans.count-1,64,'wvars',sans);
+  sims:=tsimmat.create(27550,64,'wvars1',sans);
+  //sims.kerro(64,glist2,sans,nil);  exit;
+  //listgrams;
+  //sims:=tsimmat.create(27550,64,'wvars',sans);
+  sims.haegramlist(16,hlist,sans,glist);
   //glist2:=glist;
   sims.haegramlist(0,glist,sans,glist2);
-  //exit;
+  sims.kerro(64,glist2,sans,nil);
+
+  exit;
   //writeln('<hr>');
-  //for i:=0 to glist2.count-1 do writeln(sans[integer(glist2[i])]);//,integer(glist2[i]));
+  //for i:=0 to glist2.count-1 do writeln('aaaaaaa',sans[integer(glist2[i])]);//,integer(glist2[i]));
   //writeln('<hr>');
  // for i:=0 to glist.count-1 do writeln(sans[integer(glist[i])]);//,integer(glist[i]));
   writeln('<hr>');
@@ -110,7 +128,8 @@ begin
   riilist:=tstringlist.create;
   writeln('<h3>taivuta->muolist',glist2.count,'</h3>');
   sanasto.generatelist(glist2,false);  //taivuttaa kaikki ja laittaa taivutetut sanat muolistiin, sananumerot objekteihin
-  //for i:=0 to 10 do writeln('<li>resta:',sanasto.resutaulu.taulu[i].sana,'#',sanasto.resutaulu.taulu[i].sija);
+  //sanasto.addtolist('koskaan');
+  for i:=0 to 10 do writeln('<li>resta:',sanasto.resutaulu.taulu[i].sana,'#',sanasto.resutaulu.taulu[i].sija);
   //writeln('zxczzzzzzzzz');
 //EXIT;
   //for i:=0 to muolist.count-1 do try writeln(' ',reversestring(muolist[i]),':',sans[integer(pointer(muolist.objects[i]))],'!!');except writeln('#'); end;
