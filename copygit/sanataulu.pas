@@ -141,17 +141,17 @@ constructor tstaulu.create(fn:string;etsilist,sans:tstringlist);
 var  //stmp:tstringlist;
     j:integer; wo:tobject;
 begin
-  writeln('<li>SANATAULU:',fn,etsilist.commatext,'!',etsilist.count);
+  //writeln('<li>SANATAULU:',fn,etsilist.commatext,'!',etsilist.count);
   sanalista:=sans;
   sanascount:=sanasto.resutaulu.wcount;
 
-  if etsilist=nil then
+  {if etsilist=nil then
   begin
     etsilist:=tstringlist.Create;
     //yy.LoadFromFile('sanatall.ansi');
     etsilist.Delimiter:=' ';etsilist.StrictDelimiter:=true;
     etsilist.loadfromfile(fn);
-  end;
+  end;}
   {trylista:=tstringlist.Create;
   tryliSTa.duplicates:=dupaccept;
   trylista.sorted:=true;
@@ -464,7 +464,7 @@ procedure tstaulu.riimaa;
      sofar:=resmat[rpos];
      //writeln('<span style="color:green">',r,reversestring(st_san(aindex[r])),'</span>');
      //writeln('<span style="color:blue">',c,reversestring(st_san(aindex[c])),'</span>');
-     if sofar>=rimis then
+     if sofar+1>=rimis then
       begin
          writeln('<span style="color:red">',r,reversestring(st_san(aindex[r])),'</span>');
          exit;
@@ -492,7 +492,7 @@ procedure tstaulu.riimaa;
         if mypit=kohrpit then result:=true
         else if mypit=kohrlyh then result:=true
         else if mylyh=kohrpit then result:=true
-        else
+      ;{  else
         if tavuero<-20 then
         begin
             if (pos(kohrpit,mypit)=1) then result:=true;  //
@@ -504,6 +504,7 @@ procedure tstaulu.riimaa;
          //if result and (pos(slista[kohde],length(slista[kohde]+1],vokaalit)>0) then writeln('avotavunpaino!');
         end;
     //    writeln(reversestring(trylista[vert]),'_',reversestring(trylista[kohde]),result);//,':',mypit,'.',kohrpit);
+    }
      exit;
         //if abs(tavuero)>2 then writeln('<hr>,!!',mypit,'|',kohrpit,tavuero);
         //if abs(tavuero) mod 2=1 then if result then writeln('eee');
@@ -634,15 +635,15 @@ procedure tstaulu.riimaa;
     for i:=1 to sanascount-1 do
     begin
     try
-    //if pos('?',trylista[i])>0 then continue;
-    //if length(trylista[i])<3 then continue;
-    //if d thenwriteln('<sub>',reversestring(trylista[i]),integer(pointer(trylista.objects[i])),'</sub>');
-    lets[nodes[i].lev].w:=i;
-    lets[nodes[i].lev].c:=nodes[i].letter;
-    if d then for j:=curlev downto nodes[i].lev do writeln('</div>');
-       try
-       curlev:=nodes[i].lev;
-       except WRITELN('<li>XXXX',i);end;
+      //if pos('?',trylista[i])>0 then continue;
+      //if length(trylista[i])<3 then continue;
+      //if d thenwriteln('<sub>',reversestring(trylista[i]),integer(pointer(trylista.objects[i])),'</sub>');
+      lets[nodes[i].lev].w:=i;
+      lets[nodes[i].lev].c:=nodes[i].letter;
+      if d then for j:=curlev downto nodes[i].lev do writeln('</div>');
+      try
+      curlev:=nodes[i].lev;
+      except WRITELN('<li>XXXX',i);end;
 
       sana:=st_san(aindex[i]);//ww(trylista[i]);
       if nodes[i].etu then
@@ -663,18 +664,19 @@ procedure tstaulu.riimaa;
   //for rep:=1 to 2 do
   begin
      //writeln('<hr>',trylista.text);
-  for i:=0 to sanascount-1 do
-   if resmat[rimis*(i)]>0 then
-   begin
-    //writeln('<li>!',i,reversestring(trylista[i]),integer(pointer(trylista.objects[i])),': ');//,'#',resmat[64*(i-1)],':::');
-    for j:=1 to rimis-1 do
-     //if (resmat[rimis*(i)+j]<i) then
-     if (resmat[rimis*(i)+j])>0 then//or (resmat[j,i]) then
-     begin
-        addres(resmat[rimis*(i)+j],i);
-        //writeln(reversestring(trylista[i]),'+/',reversestring(trylista[resmat[rimis*(i)+j]]));//,'/',i,reversestring(trylista[i]));
-     end;
-   end;
+    if true then
+    for i:=0 to sanascount-1 do
+    if resmat[rimis*(i)]>0 then
+    begin
+      //writeln('<li>!',i,reversestring(trylista[i]),integer(pointer(trylista.objects[i])),': ');//,'#',resmat[64*(i-1)],':::');
+      for j:=1 to rimis-1 do
+       //if (resmat[rimis*(i)+j]<i) then
+       if (resmat[rimis*(i)+j])>0 then//or (resmat[j,i]) then
+       begin
+          addres(resmat[rimis*(i)+j],i);
+          //writeln(reversestring(trylista[i]),'+/',reversestring(trylista[resmat[rimis*(i)+j]]));//,'/',i,reversestring(trylista[i]));
+       end;
+    end;
   //trylista.sorted:=false;
   //trylista.customsort(@sortnume);
   //getsortlist(trylista,sanalista);
@@ -696,7 +698,7 @@ procedure tstaulu.riimaa;
   begin
    ssani:=ii;//sindex[ii];
    lemma:=st_lemma(ssani);
-   //writeln('%',lemma,st_san());
+   //writeln('%',lemma,st_san(ii));
    asani:=arindex[ii];   //aakkos?
    if (plemma<>lemma) or (lemma=60000) THEN
    begin
@@ -740,8 +742,8 @@ procedure tstaulu.riimaa;
        except writeln('<li>nogor:',sana,lemma,' ',st_san(aindex[resmat[rimis*asani+j]]));end;
 
      end;
-     //writeln('???');//continue;
-     for j:=1999 to resmat[rimis*asani] do
+     //writeln('.!');//continue;
+     if 1=0 then for j:=1999 to resmat[rimis*asani] do
      begin
        writeln('<em style="color:red">',reversestring(st_san(aindex[resmat[rimis*asani+j]])),'</em> ');
        // TÄN PITI OLLA YKSINKERTAISTUS st_san(aindex[resmat[rimis*asani+j]]) !!!
@@ -749,7 +751,7 @@ procedure tstaulu.riimaa;
    end;
 
   end;
-  listaa;
+  //listaa;
   exit;
   //for ii:=0 to trylista.count-1 do //slista.count-1 do
   for ii:=0 to SANAScount-1 do //slista.count-1 do

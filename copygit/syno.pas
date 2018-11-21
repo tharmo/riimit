@@ -560,10 +560,10 @@ begin
     s2:=strtointdef(sparts[2],0);
     s3:=strtointdef(sparts[3],0) div 2;
     //if s3>65535 then s3:=65535;
-     if s1<>p1 then
+     if s1<>p1 then    //uusi ensimmäinen sana
      begin
          curtarget:=s1;mainfreq:=freqs[s1];
-         if mainfreq>5000 then writeln('MANY:',slist[s1],'=',mainfreq);
+         //if mainfreq>2000 then writeln('MANY:',slist[s1],'=',mainfreq);
          vars[s1*64]:=s1;
          vals[s1*64]:=min(freqs[s1],65535);
          //writeln(vars[p1*32],' ',vals[p1*32])
@@ -573,24 +573,24 @@ begin
      //tot:=tot+s3;
      try
      //numer:=ROUND(POWER(s3,1.6));
-     numer:=10000000000*s3;
+     numer:=1000000*s3*s3;
      except writeln('numer:',numer);NUMER:=1000000;  end;
      try
      //denom:=max(1,(mainfreq) *  (freqs[s2]));
-     denom:=sqr(mainfreq+8) *  sqr(freqs[s2]+8);
-     if denom=0 then denom:=1;
+     denom:=10+sqr(mainfreq+4) *  sqr(freqs[s2]+4);
+     if denom<1 then denom:=1;
      except writeln(^j,'wrd:',round(mainfreq),'/sw:',round((freqs[s2])),'/num:',numer);DENOM:=100001;  end;
      TRY
      //myval:=(((100000000*s3) div (mainfreq*mainfreq+10) div (freqs[s2]*freqs[s2]+10)));
-      myval:=round((sqrt(numer/denom)));
-     except MYVAL:=10002;writeln(^j,'???val:',numer,'/',denom,'=',myval,'???' );  end;
+      myval:=round((lnxp1(numer/denom)));
+     except MYVAL:=10002;writeln(^j,'???val:',numer,'/',denom,'=',numer/denom,'???' );  end;
      //IF MYVAL>1000 THEN  writeln('val:',numer,'/',denom,'=           ',myval);
      //WRITE(' ',MYVAL);
-     if myval>1000 then
+     if myval>10 then
      begin
-     writeln('<li>',s3 ,' ',slist[s1],mainfreq,' ',slist[s2],freqs[s2],'=',myval);
+     writeln('<li>',s3 ,' ',slist[s1],' ',mainfreq,' ',slist[s2],' ',freqs[s2],'=',myval);
     // ,'  ',s3,'/(',mainfreq,'*',freqs[s2],')');
-     myval:=65535;
+      if myval>65535 then myval:=65535;
      end;
      if myval>0 then
      big64(@vars[curtarget*64],

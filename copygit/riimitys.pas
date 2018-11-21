@@ -134,9 +134,8 @@ riimit:=tstringlist.create;
 verbit:=tverbit.create('sanatuus.csv','vmids.csv','vsijat.csv');
 //verbit.listaa;
 //verbit.numtowrd(4907);verbit.numtowrd(4908);verbit.numtowrd(4909);verbit.numtowrd(4910);
-randomize;
- for r:=0 to 1000000 do
- h:=verbit.numtowrd(random(5935));
+//randomize;
+ //for r:=0 to 1000000 do  h:=verbit.numtowrd(random(5935));
    //writeln(h.lk,'/',h.si,'/',h.av,'/',h.san,'  ',h.san+19548);
    //h:=verbit.numtowrd(10);
 exit;

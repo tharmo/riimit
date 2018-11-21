@@ -392,26 +392,32 @@ begin
 end;
 
 procedure tsanasto.generatelist(wlist:tlist;all:boolean);
-var j,snum:word;  parts:tstringlist;
+var j,snum:integer;  parts:tstringlist;
 begin
  writeln(' _!!!!!!!!',wlist.count);
 
   for j:=0 to wlist.count-1 do
   begin
+
+    //writeln('"""');
     snum:=integer(wlist[j]);
+    //writeln(' <li>++',snum);//,string(slist[snum]),resutaulu.wcount, ' ');
+    if (snum<0) or (snum>65000) then continue;
+    //continue;
     if snum<19547 then
      //generatenom(turharesulist,snum,false)
      generatenom(snum,false)
     else if snum<25484 then
      generateverb(snum)
     else
-    begin //writeln('<li>xxx:',snum,slist[snum]);
-       resutaulu.add(reversestring(slist[snum]),snum,99,1,3);end;
+    begin
+       resutaulu.add(reversestring(slist[snum]),snum,99,1,3);
+    end;
    // begin rlist.addobject(slist[j],tobject(pointer(j)));end;
-   //writeln(' <li>++',snum,string(slist[snum]),resutaulu.wcount, ' ');
+      //writeln('<li>xxx:',snum,slist[snum]);
 
   end;
-  //exit;
+  exit;
   parts:=tstringlist.create;
   parts.loadfromfile('partikkelit.lst');
   //parts.loadfromfile('turha');

@@ -11,10 +11,11 @@ type tsimmat=class(tobject)
   rows,cols:word;
   vals,vars:array of word;
 
-  kertotaulu:array of byte;
+  kertotaulu:array of word;
   slist:tstringlist;
+  procedure list(sl:tstringlist);
   function haegramlist(luku:word;var sanums:tlist;sl:tstringlist;res:tlist):word;
-  function kerro(luku:word;var sanums:tlist;sl:tstringlist;res:tlist):word;
+  function kerro(luku:word;var sanums:tlist;sl:tstringlist;res:tlist):tlist;
   constructor create(r,c:word;fn:string;sl:tstringlist);
 end;
 type tsimisanat=class(tobject)
@@ -28,13 +29,22 @@ end;
 implementation
  uses riimiutils,math,syno;
 
- function tsimmat.kerro(luku:word;var sanums:tlist;sl:tstringlist;res:tlist):word;
+ procedure tsimmat.list(sl:tstringlist);
+ var i,j:word;
+ begin
+   for i:=5190 to 5200 do
+   begin
+      writeln('<li>',i,'<b>',sl[i+1],'</b>::');
+      for j:=1 to cols-1 do if vars[(i)*cols+j]=0 then break else writeln(sl[vars[i*cols+j]+1],vals[i*cols+j]);
+   end;
+ end;
+ function tsimmat.kerro(luku:word;var sanums:tlist;sl:tstringlist;res:tlist):tlist;
  var w,ss,sanum,sanz,maxi:word;
  begin
   maxi:=0;
   writeln('<h3>:kerro ',sl.count,'</h3>');
   cols:=64;
-  for w:=58 to 60 do
+  for w:=70 to 60 do
   begin
     //sanz:=integer(sanums[w]);
     writeln('<li>',W,'.',sl[w+1],'/',sl[vars[w*cols]],vars[w*cols],':');
@@ -45,25 +55,31 @@ implementation
       //    writeLN(slist[vars[W*64+33]],' /');//,vals[i*64+j],' ');
   end;
   setlength(kertotaulu,30000);
-  writeln('<h3>:kerro ',luku,'</h3>');
+  //writeln('<h3>:kerro ',luku,'</h3>');
   for w:=0 to sanums.count-1 do
   begin
     sanz:=integer(sanums[w]-1);
-    writeln('<li>',sanz,sl[sanz+1],'/',sl[vars[sanz*cols]+1],':');
-    for ss:=0 to luku do
+    //writeln('<li>',sl[sanz+1]);
+    for ss:=1 to luku do
     if vars[sanz*cols+ss]=0 then break else
     begin
       sanum:=integer(vars[sanz*cols+ss]+1);
-      writeln(sanum,sl[sanum]);
-      inc(kertotaulu[sanum]);
-      maxi:=max(maxi,kertotaulu[sanum])
+      if sanum>=24555 then continue;
+      try
+      //writeln(sanum);//,sl[sanum]);
+      kertotaulu[sanum]:=kertotaulu[sanum]+integer(vals[sanz*cols+ss])+1;
+      //if maxi<kertotaulu[sanum] then writeln(sl[sanz+1],'/',sl[vars[sanz*cols+ss]+1],':');
+      maxi:=max(maxi,kertotaulu[sanum]);
+      except writeln('FAILW:',sanz,'/',sanum);//,sl[sanz+1],'/',sl[vars[sanz*cols]+1],':');
+      end;
     end;
  end;
  writeln('<h1>max:',maxi,'</h1>');
  for w:=0 to 27551 do
- if kertotaulu[w]*5>maxi  then
+ if kertotaulu[w]*10>maxi  then
  try
- writeln('<li>',sl[w],' ',kertotaulu[w]);
+ writeln('<li>;;',sl[w],' ',kertotaulu[w]);
+ res.add(tobject(pointer(w)));
  except writeln('<li>,xxx:', sl[w]);end;
 end;
 
@@ -76,12 +92,18 @@ function tsimmat.haegramlist(luku:word;var sanums:tlist;sl:tstringlist;res:tlist
    for w:=0 to sanums.count-1 do
    begin
    sanum:=integer(sanums[w]);
-    if res.indexof(tobject(pointer(sanum)))<0 then res.add(pointer(sanum));
+
+   writeln('<b>',sl[sanum],'</b>');
+    //if res.indexof(tobject(pointer(sanum)))<0 then
+    res.add(pointer(sanum));
     //sanum:=sanum-1;
+    //writeln('<li>',i,'<b>',sl[i+1],'</b>::');
+    //for j:=1 to cols-1 do if vars[(i)*cols+j]=0 then break else writeln(sl[vars[i*cols+j]+1],vals[i*cols+j]);
    for i:=1 to luku do //cols-1 do
-   if vals[sanum*(cols)+i]=0 then break
+   if vars[(sanum-1)*cols+i]=0 then continue
    else begin
     hit:=vars[(sanum-1)*cols+i];   //vitun zerobase
+    //writeln(sl[hit+1],vals[(sanum-1)*cols+i]);
     if hit<0 then continue;
     if res.indexof(tobject(pointer(hit+1)))<0 then res.add(pointer(hit+1));
 

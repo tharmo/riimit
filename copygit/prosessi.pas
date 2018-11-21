@@ -61,21 +61,38 @@ begin
   //aho(690);
   sans.insert(0,'vaarinhousut');
   aho('sauna');
-  aho('helvetti');
-  aho('taivas');
+  aho('olut');
+  aho('tuska');
+  aho('löyly');
+  aho('ihana');
+  aho('nautinto');
+  aho('palella');
+  aho('jää');
+  //aho('maksaa');}
+  {aho('helvetti');
+  aho('sauna');
+  aho('kärsimys');
   aho('nauttia');
+  aho('kuolla');
+  aho('nauttia');
+  aho('pakkanen');
+  aho('kuuma');
+  aho('helvetti');
+  aho('ikuinen');
   aho('autuus');
   aho('tuska');
-  {aho('vala');
-  aho('valo');
-  aho('valta');
-  aho('valtava');
-  aho('kasvo');
-  aho('kasvi');
-  aho('kasvaa');}
+  Aho('löyly');
+  aho('kiuas');
+  aho('alaston');
+  //aho('kaunis');
+
+  //aho('kasvo');
+  //aho('kasvi');
+  //aho('kasvaa');
   //aho('kissa');
   //aho('pissa');
   //aho('tähti');
+  }
  // sims:=tsimmat.create(sans.count-1,64,'wvars',sans);
  // sims:=tsimmat.create(sans.count-1,64,'wvars',sans);
   sims:=tsimmat.create(27550,64,'wvars1',sans);
@@ -83,17 +100,19 @@ begin
   //listgrams;
   //sims:=tsimmat.create(27550,64,'wvars',sans);
   sims.haegramlist(16,hlist,sans,glist);
+  //sims.list(sans);
+  writeln('<<hr>tuttuja:',glist.count);
   //glist2:=glist;
-  sims.haegramlist(0,glist,sans,glist2);
-  sims.kerro(64,glist2,sans,nil);
-
-  exit;
+  sims.haegramlist(16,glist,sans,glist2);
+  writeln('<hr>tutuntuttuja:',glist2.count);
+  glist.clear;
+  sims.kerro(64,glist2,sans,glist);
+  //GLIST2:=GLIST;
   //writeln('<hr>');
-  //for i:=0 to glist2.count-1 do writeln('aaaaaaa',sans[integer(glist2[i])]);//,integer(glist2[i]));
+  for i:=0 to glist2.count-1 do writeln('>',sans[integer(glist2[i])]);//,integer(glist2[i]));
   //writeln('<hr>');
  // for i:=0 to glist.count-1 do writeln(sans[integer(glist[i])]);//,integer(glist[i]));
   writeln('<hr>');
-  //exit;
 //!  syns.gutcoocs;//exit;
 //!  writeln(sans[0],'<li>createsyns');
   //tmp_num;exit;
@@ -123,22 +142,22 @@ begin
   //writeln('<h3>s2:</h3><hr>',sltext);
  //! writeln('<h1>gotsyns:',sl.count,'</h1>');
  //! for i:=0 to sl.count-1 do writeln((sans[integer(sl[i])]));
-  muolist:=tstringlist.create;
+  //muolist:=tstringlist.create;
 
   riilist:=tstringlist.create;
-  writeln('<h3>taivuta->muolist',glist2.count,'</h3>');
+  writeln('<h3>generatelist:',glist2.count,'</h3>');
   sanasto.generatelist(glist2,false);  //taivuttaa kaikki ja laittaa taivutetut sanat muolistiin, sananumerot objekteihin
+  writeln('<li>got:',sanasto.resutaulu.wcount);
   //sanasto.addtolist('koskaan');
-  for i:=0 to 10 do writeln('<li>resta:',sanasto.resutaulu.taulu[i].sana,'#',sanasto.resutaulu.taulu[i].sija);
+  //for i:=0 to sanasto.resutaulu.wcount-1 do writeln('<li>resta:',reversestring(sanasto.resutaulu.taulu[i].sana),'#',sanasto.resutaulu.taulu[i].sija);
   //writeln('zxczzzzzzzzz');
-//EXIT;
+  //EXIT;
   //for i:=0 to muolist.count-1 do try writeln(' ',reversestring(muolist[i]),':',sans[integer(pointer(muolist.objects[i]))],'!!');except writeln('#'); end;
   //for i:=0 to muolist.count-1 do writeln('<sub>',reversestring(muolist[i]),integer(pointer(muolist.objects[i])),'</sub>');exit;
    // writeln('<hr><small>taivutettuja:',muolist.text,'</small>');
-   muolist.insert(0,'');
+   //muolist.insert(0,'');
    //riimaavat:=tstaulu.create('',muolist);
    riimaavat:=tstaulu.create('',muolist,sans);
-  //exit;
   //riimaavat.listaa;
   //tstaulu on otus joka sisältää trien sanoista (vs. lemma) joiden keskenäisiä riimejä haetaan. Myös taipumattomat sanat (adverbit yms) hoidetaan tstauluna.
   writeln('<h3>//* riimaa muolist &lt; riimaavat.slista</h3>');
