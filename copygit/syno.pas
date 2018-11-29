@@ -114,7 +114,7 @@ begin
    slots:=64;//fils:=0;
    posi:=64;
    try
-   //if freq>0 then //(bigvals+10)^ then
+   if freq>10 then writeln('<li>TOOBIG');
    begin
    for j:=1 to slots-1 do
     begin
@@ -360,8 +360,8 @@ setlength(nvars,30001*64);
 setlength(nvals,30001*64);
 //setlength(nvars2,64);
 //setlength(nvals2,64);
-READbin(SLIST.COUNT,64,2,vals,'wvals2.spar') ;
-READbin(SLIST.COUNT,64,2,vars,'wvars2.spar') ;
+READbin(SLIST.COUNT,64,2,vals,'wvars1_v.spar') ;
+READbin(SLIST.COUNT,64,2,vars,'wvars1.spar') ;
 fillchar(nvars[0],sizeof(nvars),0);
 fillchar(nvals[0],sizeof(nvals),0);
 writeln('<style type="text/css">  li {margin:1em} </style>');
@@ -384,8 +384,11 @@ writeln('<style type="text/css">  li {margin:1em} </style>');
   write(^j^j^j'<li>',slist[i],'#',vals[i*64],':');
   for j:=1 to 61 do
    if (vars[i*64+j])=0 then break else
-   if vals[i*64+j]<biggest then break else
-   write(slist[vars[i*64+j]],' ');//,vals[i*64+j],' ');
+   begin
+   //if vals[i*64+j]<biggest then break else
+   write(slist[vars[i*64+j]],'',vals[i*64+j],' ');
+   if vals[i*64+j]>6 then writeln('<b>*****</b>',vals[i*64+j]);
+   end;
    //write('',vars[i*64+j],' ',slist[vars[i*64+j]],'\',vals[i*64+j],' ');
   //write('<li>',vars[i*64+j],' ',slist[vars[i*64+j]],'\',vals[i*64+j],' ');
   //writeln('</ul>');
@@ -590,8 +593,10 @@ begin
      begin
      writeln('<li>',s3 ,' ',slist[s1],' ',mainfreq,' ',slist[s2],' ',freqs[s2],'=',myval);
     // ,'  ',s3,'/(',mainfreq,'*',freqs[s2],')');
-      if myval>65535 then myval:=65535;
+      myval:=6;
+      //if myval>65535 then myval:=0;
      end;
+     //myval:=min(6,myval);
      if myval>0 then
      big64(@vars[curtarget*64],
            @vals[curtarget*64],
@@ -605,7 +610,7 @@ begin
   //for i:=0 to slist.count-1 do
   savebin(SLIST.COUNT,64,2,vals,'wvars1_v.spar') ;
   savebin(SLIST.COUNT,64,2,vars,'wvars1.spar') ;
-  //listgrams;
+ // listgrams;
 end;
 
 procedure ngramlemmas(fil:string);
