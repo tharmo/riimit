@@ -56,7 +56,9 @@ begin
   //if HasOption('f', 'fixteet') then begin
   if paramstr(1)='test' then
   begin
-    writeln('PARAMS:',paramstr(1),' ',paramstr(2),' ',paramstr(3),' ');
+    //writeln('PARAMS:',paramstr(1),' ',paramstr(2),' ',paramstr(3),' ');
+    turkuana;
+
     Terminate;
     Exit;
   end;

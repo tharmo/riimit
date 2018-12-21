@@ -37,6 +37,8 @@ type tsanasto=class(tobject)
  //sanoja:tstringlist;
  slist:tstringlist;
  resutaulu:tsinfotaulu;
+ isad: bitpacked array [0..27546] of Boolean;   //risadjbin;
+  procedure readadjbin;
  function haenumero(sana:ANSISTRING;rev:boolean):word;
   procedure generatelist(wlist:tlist;all:boolean);
   procedure addtolist(sana:ansistring);
@@ -61,6 +63,24 @@ var sanasto:tsanaSTO;
 implementation
 uses //riimitys,
   math;
+procedure tsanasto.readadjbin;
+var
+     ch:char;adf:text;c:word;   //   cat san_ana.tmp |grep -n " A Pos Nom Sg"|gawk ' BEGIN { FS=":"} { for (i=prev;i<$1;i++) { print i;s=s "0"}; s=s "1" ;print $0; prev=$1+1} END { print s>"adj.bins"}'
+begin
+   c:=0;
+   writeln('adj:');
+   assign(adf,'adj.bins');
+   reset(adf);
+   while not eof(adf) do
+   begin
+      read(adf,ch);
+      c:=c+1;
+      if ch='1' then isad[c]:=true else isad[c]:=false;
+       //if ch='1' then writeln(c,slist[c]);
+   end;
+   for c:=1 to 27545 do
+    if isad[c] then writeln(c,slist[c]);
+end;
 
 procedure tsinfotaulu.add(gsana:string31;nnum,nlka,nsija:word;nsanalka:byte);
 var rec:tsanainfo;
@@ -642,6 +662,7 @@ writeln('xdiv div div:hover div div{ display:block;font-size:0.5em;background:#f
 {//exit;0}
 //do99;exit;
 luesanat('sanatuus.csv');
+//readadjbin;
 verbit:=tverbit.create('sanatuus.csv','vmids.csv','vsijat.csv');
 //nominit:=tnominit.create('nomsall.csv','nmids.csv');
 nominit:=tnominit.create('nmids.csv'); //'nomsall.csv'

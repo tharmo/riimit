@@ -26,8 +26,219 @@ type tsimisanat=class(tobject)
   slist:tstringlist;
   constructor create(c:word;fn,sfn:string);
 end;
+procedure turkuana;
 implementation
  uses riimiutils,math,syno;
+ type  thava=class(tobject)
+   ocs:array[0..17] of word;
+   constructor create;
+ end;
+constructor thava.create;
+begin
+    fillchar(ocs,sizeof(ocs),0);
+end;
+procedure turkuana;
+var inf:textfile;spari,vormu,luokat,lnames,sijat,havas:tstringlist;rivi,keissi:ansistring;
+    vocs:array of integer;
+
+  procedure kirjaa(verbi,nomform,nom:string);
+  var vnum,nfnum:integer;hava:thava;
+  begin
+   vnum:=havas.indexof(verbi);
+   nfnum:=sijat.indexof(nomform);
+   if nfnum<1 then  writeln('??????????',vnum,verbi,nfnum,nomform);
+   try
+   if vnum<0 then
+   begin
+    //writeln('new:',verbi,' ',nomform);
+    hava:=thava.create;
+    havas.addobject(verbi,hava);
+    vnum:=havas.indexof(verbi);
+   end else hava:=thava(havas.objects[vnum]);
+   inc(hava.ocs[nfnum]);
+   inc(hava.ocs[0]);
+   //if verbi='astua' then if nomform='Aux' then writeln(verbi,' ',nom);
+   except writeln('?!!!!',vnum,verbi,nfnum,nomform);end;
+
+  end;
+  function regp(lka,frm:string):tstringlist;
+  var i,lnum:integer;
+  begin
+   lnum:=luokat.indexof(lka);
+   if lnum<0 then begin result:=tstringlist.create;result.duplicates:=dupignore;RESULT.SORTED:=TRUE;luokat.addobject(lka,result);exit; end
+   else result:=tstringlist(luokat.objects[lnum]);
+   result.add(frm);
+  end;
+  function dowrd(lk,frm:string):string;
+  var vf:string;
+      procedure reg(st,x:string);
+      begin result:=st;keissi:=frm; end;
+  begin
+       result:='';
+       vormu.delimitedtext:=frm;
+       try
+       if (lk='NOUN') or (lk='PROPN') then reg('Nou',vormu.values['Case']) else
+       if lk='ADJ' then reg('Adj',vormu.values['Case']) else
+       if lk='PRON' then reg('Pro',vormu.values['Case']) else
+       if lk='NUM' then reg('Num',vormu.values['Case']) else
+       if (lk='VERB') or (lk='AUX') then
+       begin
+         vf:=vormu.values['VerbForm'];
+         if vf='Fin' then reg('V'+ifs(vormu.values['Negative']='','fi','ei'),vormu.values['Mood'])
+         else if vf='Inf' then reg('VI'+vormu.values['InfForm'],vormu.values['Case'])
+         else if vf='Part' then reg('V'+vormu.values['PartForm'],vormu.values['Case'])      //past.pres,agt,neg (1kpl)
+         else if vf='Past' then reg('V'+vormu.values['PastForm'],vormu.values['Case']);
+
+       end else reg(lk,'-');//+'_'+spari[2]+'xxxxxx';
+       except writeln('--------------------------');end;
+   end;
+  type stex=string[255];
+  var i,j,ii,prs,a1,a2:integer;thislka,alk:tstringlist;vf,att1,att2,lk,apair:string;
+      freqs:array[0..24] of array[0..24] of longword;
+      marg1,marg2:array[0..24] of longword;
+      exs:array[0..24] of array[0..24] of stex;
+      elen:word;  sum,exces:integer;
+      expec:longint;
+      loput:tstringlist;
+      pstart:word;
+
+begin
+ setlength(vocs,10000);
+ fillchar(exs,sizeof(exs),0);
+ fillchar(freqs,sizeof(freqs),0);
+ fillchar(marg1,sizeof(marg1),0);
+ fillchar(marg2,sizeof(marg2),0);
+ havas:=tstringlist.create;
+ assign(inf,'lauseet.turku');
+ reset(inf);
+ spari:=tstringlist.Create;
+ spari.Delimiter:='&';
+ spari.strictDelimiter:=true;
+ alk:=tstringlist.Create;
+ vormu:=tstringlist.Create;
+ luokat:=tstringlist.Create;
+ sijat:=tstringlist.Create;
+ loput:=tstringlist.Create;
+ luokat.sorted:=true;
+ vormu.Delimiter:='|';
+ vormu.sorted:=true;
+ alk.sorted:=true;
+ havas.sorted:=true;
+ luokat.sorted:=true;
+ alk.duplicates:=dupignore;
+ luokat.duplicates:=dupignore;
+ ii:=0;
+ //quic & dirty ... ei v‰li‰
+ lnames:=tstringlist.Create;
+ lnames.commatext:='Adj,ADP,ADV,CONJ,INTJ,Nou,Num,Pro,PUNCT,SCONJ,SYM,VAgt,Vei,Vfi,VI1,VI2,VI3,VNeg,VPast,VPres,X';
+ sijat.commatext:='A,Abe,Abl,Acc,Ade,All,Aux,Com,Ela,Ess,Gen,Ill,Ine,Ins,Nom,Par,Tra';
+ loput.commatext:='tot,tta,lta,acc,lla,lle,Aux,ine,sta,na,N,han,ssa,oin,===,a,ksi';
+ while not eof(inf) do
+ begin
+    ii:=ii+1;if ii>1000000 then break;
+     readln(inf,rivi);
+     spari.delimitedtext:=rivi;
+   if spari[1]='VERB' then  //m‰‰re on verbi
+   if spari[3]='VERB' then  //p‰‰sna  verbi
+   if pos('Case=',rivi)<1 then  //p‰‰sna  verbi
+   if spari[0]<>'neg' then
+   if spari[0]<>'advcl' then
+   if spari[0]<>'conj' then
+   if spari[0]<>'cop' then //continue;
+   if (spari[5]<>'ei') and (spari[6]<>'ei') then
+   begin
+        kirjaa(spari[6],'Aux',spari[5]+'.'+spari[6]+'.'+spari[7]+'.'+spari[8]+'.'+spari[9]+'//'+spari[0]);
+      //writeln(^j,spari[0],': ',spari[5],' ',spari[6],'      ' ,spari[9] ); //verbi m‰‰reen‰
+       continue;
+   end;
+     //writeln(spari.count);continue;
+     if spari[3]<>'VERB' then  continue;//p‰‰sana ei ole verbi
+     if (spari[1]='') or (spari[3]='') then   continue;
+     att2:=dowrd(spari[3],spari[4]);
+     if att2<>'Vfi' then continue;
+      att1:=dowrd(spari[1],spari[2]);
+      a1:=lnames.indexof(att1);
+      a2:=lnames.indexof(att2);
+      try
+      if pos('#',spari[6])>0 then continue;
+      if pos(spari[6][length(spari[6])],'a‰')<=0 then
+      begin continue;end;
+      except writeln('*****,',spari[6],spari.count,'    ',rivi);end;
+try      if vormu.values['Case']='' then continue;
+      //writeln(spari[6]);//,' ',vormu.values['Case']);//,'  #',spari[6][length(spari[6])],pos(spari[6][length(spari[6])],'a‰'));//,' ',spari[5]);
+      //writeln(vormu.values['Case']);//,'  #',spari[6][length(spari[6])],pos(spari[6][length(spari[6])],'a‰'));//,' ',spari[5]);
+      kirjaa(spari[6],vormu.values['Case'],spari[5]);
+except writeln('!!,',spari[6],spari.count,'    ',rivi);end;
+      continue;
+
+      try  //muillekin kuin verbeille, skipataan toistaiseksi
+      if a1>=0 then if a2>=0 then
+      begin
+       inc(freqs[a1,a2]);inc(marg1[a1]);inc(marg2[a2]);
+       elen:=length(exs[a1,a2]);
+       //writeln(a1,' ',a2,' ',ii,' ',elen);
+       //if ii>1000 then if elen<240 then
+       begin exs[a1,a2]:=exs[a1,a2]+' '+copy(spari[5],1,255-elen);end;
+      end;
+      except writeln(a1,' . ',a2);end;
+
+ end;
+  for i:=0 to havas.count-1 do
+  //if thava(havas.objects[i]).ocs[0]>1000 then
+  begin
+    try
+    write(^j,havas[i],',');
+    for j:=0 to 16 do //if thava(havas.objects[i]).ocs[j]>-990 then write(' ',loput[j],'/',thava(havas.objects[i]).ocs[j]);
+    write(',',thava(havas.objects[i]).ocs[j]);
+    except writeln('???',expec);end;
+  end;
+
+ exit;
+ writeln('<h3>mink‰ sarakkeita rivit m‰‰ritt‰v‰t</h3><table border="1"><tr><td>=</td>');
+ for i:=0 to lnames.count-1 do writeln('<td>',lnames[i],'<br>',marg2[i],'</td>');
+ writeln('</tr><tr>');
+ for i:=0 to lnames.count-1 do
+ begin
+  writeln('<td>',lnames[i],'</td>');
+  for j:=0 to lnames.count-1 do
+  begin
+    try
+  expec:=round((marg1[i]*marg2[j] /10000000));//+(marg2[i]*marg2[j] div 1000000));
+    except writeln('<td>???',expec);end;
+  try
+  exces:=1*freqs[i,j] div (expec+1);
+  writeln('<td title="',inttostr(exces div 10)+exs[i,j],'">',ifs(exces>50, inttostr(exces div 10),''),'</td>');//lnames[i],' ', marg1[i],' ',marg2[i]);
+  except writeln('<td>!!!',expec);end;
+  end;
+  //writeln('<td title="',exs[i,j],'">',ifs(exp>1,inttostr(freqs[i,j]*100 div (marg1[i]+1)),''),'</td>');//lnames[i],' ', marg1[i],' ',marg2[i]);
+  writeln('<td>',marg1[i],'</td></tr><tr>');
+ end;
+ writeln('</table>-------------------------');
+ exit;
+ writeln('<h3>mit‰ rivej‰  mitk‰ sarakkeet m‰‰ritt‰v‰t</h3>P‰‰sana rivill‰, m‰‰re sarakkeella<table border="1"><tr><td>=</td>');
+ for i:=0 to lnames.count-1 do writeln('<td>',lnames[i],'<br>',marg1[i],'</td>');
+ writeln('</tr><tr>');
+ for i:=0 to lnames.count-1 do
+ begin
+  writeln('<td>',lnames[i],'</td>');
+  sum:=0;
+  for j:=0 to lnames.count-1 do
+  begin
+   writeln('<td title="',exs[j,i],'">'//,(freqs[j,i]*100) div (marg2[i]+1),'</td>');//lnames[i],' ', marg1[i],' ',marg2[i]);
+  ,ifs(100*freqs[j,i]/(1+marg2[i])>1,inttostr(freqs[j,i]*100 div (marg2[i]+1)),''),'</td>');
+   sum:=sum+freqs[j,i]
+
+  end;
+  writeln('<td>',marg2[i],'</td><td>',sum,'</td></tr><tr>');
+
+ end;
+ writeln('</table>-------------------------');
+  exit;
+ for i:=0 to luokat.count-1 do writeln(^j,luokat[i],':',tstringlist(luokat.OBJECTS[I]).commatext);
+ writeln(^j,'KAIKKI ',luokat.count,': ',luokat.commatext);
+ //for i:=0 to luokat.count-1 do writeln(luokat[i]);
+
+end;
 
  procedure tsimmat.list(sl:tstringlist);
  var i,j:word;
@@ -50,7 +261,7 @@ implementation
      //for i:=0 to
 
    end;
-   var ykshits:double;w:word;
+   var ykshits:double;w:word;d:boolean;
  begin   //res ei oo tulos vaan eka, lyhyt lista. tulosta ei viel‰ tuukaan
   //maxi:=0;
   // listgrams;
@@ -61,19 +272,21 @@ implementation
   writeln('kerro:',sanums.Count,'<ul>');
   for w1:=0 to sanums.count-1 do
   begin
+     d:=w1>9999;
     //if w1>20 then break;
     san1:=integer(sanums[w1]);
     if san1=0 then continue;
     saf1:=integer(safreks[w1]);
-    writeln('<h3><b>',sl[san1],'</b>', saf1,'</h3><ul title="',SL[SAN1],'">');//sl[vars[(w+1)*cols]],vars[(w+1)*cols],':');
+    writeln('<h3><b>',sl[san1],'</b>', saf1,'/',integer(vals[(san1-1)*cols]),'</h3><ul title="',SL[SAN1],'">');//sl[vars[(w+1)*cols]],vars[(w+1)*cols],':');
     for w2:=1 to 63  do
     begin
+
      hits:=0; misses:=0;
      try
      san2:=integer(vars[(san1-1)*cols+w2]);
      if san2=0 THEN continue;
      saf2:=integer(vals[(saN1-1)*cols+w2]);
-     //writeln('<li><b>',sl[san2+1],saf2,'</b> ',vals[san2*cols],'<ul>');
+     if d then writeln('<li><b>',sl[san2+1],saf2,'</b> ',vals[san2*cols],'<ul></ul>');
      if saf2=0 then continue;
      //if res.indexof(pointer(sanum))>0 then hits:=hits+(1) else misses:=misses+safre;
      except writeln('failw2:',w3);end;
@@ -115,14 +328,16 @@ implementation
        ;//else writeln('.');//<LI> ',sl[sanz],'/',hits,'/',sapaino, '=<em>', (hits*sapaino),'</em> ',misses);
     end;
    //if (hits*sapaino>45) then
+   if d then
+   begin
       //    writeLN(slist[vars[W*64+33]],' /');//,vals[i*64+j],' ');
      // if (sanums.indexof(pointer(san2+1))<0) then
-{     if 10*hits/vals[san2*cols]>1 then
+     //if 10*hits/vals[san2*cols]>1 then
      writeln('<li><b  style="color:green">',sl[san2+1],round(10*hits/vals[san2*cols]),'</b>',  '>',hits,'/',vals[san2*cols],' ',saf2, '=', (hits*saf1),'<b> ','</b> ',st)
-     else
-     writeln('<li><b  style="color:red">',sl[san2+1],round(10*hits/vals[san2*cols]),'</b>',  '>',hits,'/',vals[san2*cols],' ',saf2, '=', (hits*saf1),'<b> ','</b> ',st);
+     //else     writeln('<li><b  style="color:red">',sl[san2+1],round(10*hits/vals[san2*cols]),'</b>',  '>',hits,'/',vals[san2*cols],' ',saf2, '=', (hits*saf1),'<b> ','</b> ',st);
      // writeln('</ul>');
-}     try
+    end;
+     try
      kertotaulu[san2+1]:=kertotaulu[san2+1]+hits;
      except writeln( san1*cols+san2+1,'>',hits);end;
    end;
@@ -156,6 +371,7 @@ implementation
  for w:=0 to 27551 do
  if kertotaulu[w]>10  then
  try
+ if kertotaulu[w]>100  then
  writeln('<li>',sl[w],' ',kertotaulu[w]);
  res.add(tobject(pointer(w)));
  resfreks.add(tobject(pointer(w)));

@@ -66,15 +66,17 @@ begin
   sans.insert(0,'vaarinhousut');
   aho('sauna');
   aho('kiuas');
-  aho('laude');
   aho('löyly');
-  aho('kuuma');
+  //aho('kuuma');
   aho('helvetti');
+  aho('kärsimys');
   aho('nautinto');
   aho('autuus');
-  aho('olut');
+  //aho('olut');
   aho('kärsimys');
   aho('pätsi');
+  //aho('olla');
+  //aho('sisäänlämpiävä');
   {aho('helvetti');
   aho('kärsimys');
   aho('nauttia');
@@ -140,13 +142,14 @@ begin
   //exit;
   //sims.list(sans);
   writeln('<hr>tutuntuttuja:',hlist.count);
-  //glist.clear;gplist.clear;
-  sims.kerro(64,hlist,hplist,sans,hlist,hplist);
+  glist.clear;gplist.clear;
+  sims.kerro(64,hlist,hplist,sans,glist,gplist);
+  sims.kerro(64,glist,gplist,sans,glist2,gplist2);
   //GLIST:=GLIST2;gplist2:=gplist;
   writeln('<hr>');
   //for i:=0 to glist.count-1 do if integer(gplist[i])>10 then writeln('&lt;',sans[integer(glist[i])],integer(gplist[i]));//,integer(glist2[i]));
   writeln('<hr>');
-  exit;
+  //exit;
  // for i:=0 to glist.count-1 do writeln(sans[integer(glist[i])]);//,integer(glist[i]));
   writeln('<hr>');
 //!  syns.gutcoocs;//exit;
@@ -162,6 +165,8 @@ begin
   writeln('<li>luo sanasto');
   SANASTO:=tsanasto.create;  //luo myös globaalit verbit, nominit, muodot
   sanasto.slist:=sans;
+  sanasto.readadjbin;
+  exit;
   //jostain syystä käyttää tiedostoa NOMSALL.CSV vaikka kaikki on mukana SANATUUS.CSV'ssä.. EI KÄYTÄ
   //******'sanatuus.csv','vmids.csv','vsijat.csv';
   //****  'nomsall.csv','nmids.csv');
@@ -181,8 +186,8 @@ begin
   //muolist:=tstringlist.create;
 
   riilist:=tstringlist.create;
-  writeln('<h3>generatelist:',glist.count,'</h3>');
-  sanasto.generatelist(glist,false);  //taivuttaa kaikki ja laittaa taivutetut sanat muolistiin, sananumerot objekteihin
+  writeln('<h3>generatelist:',glist2.count,'</h3>');
+  sanasto.generatelist(glist2,false);  //taivuttaa kaikki ja laittaa taivutetut sanat muolistiin, sananumerot objekteihin
   writeln('<li>got:',sanasto.resutaulu.wcount);
   //sanasto.addtolist('koskaan');
   //for i:=0 to sanasto.resutaulu.wcount-1 do writeln('<li>resta:',reversestring(sanasto.resutaulu.taulu[i].sana),'#',sanasto.resutaulu.taulu[i].sija);

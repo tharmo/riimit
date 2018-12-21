@@ -7,8 +7,9 @@
       <Unit0>
         <Filename Value="riimaa.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="67"/>
-        <CursorPos X="16" Y="84"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="47"/>
+        <CursorPos X="7" Y="59"/>
         <UsageCount Value="219"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -38,10 +39,9 @@
       <Unit3>
         <Filename Value="oldrimmaa.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="200"/>
+        <TopLine Value="191"/>
         <CursorPos X="28" Y="218"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
@@ -131,17 +131,19 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <WindowIndex Value="2"/>
+        <TopLine Value="28"/>
+        <CursorPos X="123" Y="28"/>
         <ExtraEditorCount Value="3"/>
         <ExtraEditor1>
-          <EditorIndex Value="4"/>
-          <TopLine Value="382"/>
-          <CursorPos X="7" Y="406"/>
-        </ExtraEditor1>
-        <ExtraEditor2>
+          <IsVisibleTab Value="True"/>
           <EditorIndex Value="2"/>
           <WindowIndex Value="1"/>
-          <TopLine Value="290"/>
-          <CursorPos X="21" Y="306"/>
+          <TopLine Value="275"/>
+          <CursorPos X="21" Y="326"/>
+        </ExtraEditor1>
+        <ExtraEditor2>
+          <EditorIndex Value="4"/>
+          <CursorPos X="10" Y="82"/>
         </ExtraEditor2>
         <ExtraEditor3>
           <EditorIndex Value="-1"/>
@@ -167,13 +169,12 @@
         <Filename Value="prosessi.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="96"/>
-        <CursorPos X="24" Y="110"/>
+        <CursorPos X="8" Y="24"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <EditorIndex Value="6"/>
           <WindowIndex Value="1"/>
-          <CursorPos X="27" Y="171"/>
+          <CursorPos X="27" Y="176"/>
         </ExtraEditor1>
         <UsageCount Value="218"/>
         <Loaded Value="True"/>
@@ -181,15 +182,15 @@
       <Unit13>
         <Filename Value="sanataulu.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <WindowIndex Value="1"/>
-        <TopLine Value="547"/>
-        <CursorPos X="13" Y="577"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="25"/>
+        <CursorPos Y="62"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
-          <EditorIndex Value="6"/>
-          <TopLine Value="451"/>
-          <CursorPos X="50" Y="471"/>
+          <EditorIndex Value="3"/>
+          <WindowIndex Value="1"/>
+          <TopLine Value="551"/>
+          <CursorPos X="13" Y="581"/>
         </ExtraEditor1>
         <UsageCount Value="215"/>
         <Loaded Value="True"/>
@@ -198,8 +199,7 @@
         <Filename Value="syno.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="586"/>
-        <CursorPos Y="600"/>
+        <CursorPos X="33" Y="483"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <EditorIndex Value="5"/>
@@ -213,134 +213,133 @@
       <Unit15>
         <Filename Value="ngrams.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="126"/>
-        <CursorPos X="15" Y="159"/>
+        <TopLine Value="47"/>
+        <CursorPos X="6" Y="60"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit15>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="syno.pas"/>
-        <Caret Line="430" Column="13" TopLine="402"/>
+        <Filename Value="ngrams.pas"/>
+        <Caret Line="113" Column="7" TopLine="82"/>
       </Position1>
       <Position2>
-        <Filename Value="syno.pas"/>
-        <Caret Line="431" Column="20" TopLine="403"/>
+        <Filename Value="ngrams.pas"/>
+        <Caret Line="76" Column="15" TopLine="74"/>
       </Position2>
       <Position3>
-        <Filename Value="syno.pas"/>
-        <Caret Line="453" Column="13" TopLine="425"/>
+        <Filename Value="ngrams.pas"/>
+        <Caret Line="95" Column="12" TopLine="73"/>
       </Position3>
       <Position4>
-        <Filename Value="syno.pas"/>
-        <Caret Line="456" Column="17" TopLine="428"/>
+        <Filename Value="ngrams.pas"/>
+        <Caret Line="111" Column="7" TopLine="83"/>
       </Position4>
       <Position5>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="275" Column="24" TopLine="245"/>
+        <Caret Line="113" Column="7" TopLine="85"/>
       </Position5>
       <Position6>
-        <Filename Value="riimiutils.pas"/>
-        <Caret Line="12" Column="10"/>
+        <Filename Value="ngrams.pas"/>
+        <Caret Line="126" Column="7" TopLine="98"/>
       </Position6>
       <Position7>
-        <Filename Value="riimiutils.pas"/>
-        <Caret Line="55" Column="11" TopLine="38"/>
+        <Filename Value="ngrams.pas"/>
+        <Caret Line="142" Column="52" TopLine="134"/>
       </Position7>
       <Position8>
-        <Filename Value="syno.pas"/>
-        <Caret Line="600" Column="15" TopLine="567"/>
+        <Filename Value="ngrams.pas"/>
+        <Caret Line="110" TopLine="79"/>
       </Position8>
       <Position9>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="56" Column="6" TopLine="43"/>
+        <Caret Line="58" Column="38" TopLine="39"/>
       </Position9>
       <Position10>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="68" Column="23" TopLine="38"/>
+        <Caret Line="71" Column="21" TopLine="38"/>
       </Position10>
       <Position11>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="113" Column="21" TopLine="104"/>
+        <Caret Line="37" Column="18" TopLine="32"/>
       </Position11>
       <Position12>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="76" Column="47" TopLine="60"/>
+        <Caret Line="41" Column="49" TopLine="32"/>
       </Position12>
       <Position13>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="120" Column="71" TopLine="103"/>
+        <Caret Line="48" Column="16" TopLine="32"/>
       </Position13>
       <Position14>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="121" Column="76" TopLine="104"/>
+        <Caret Line="44" Column="37" TopLine="43"/>
       </Position14>
       <Position15>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="122" Column="39" TopLine="104"/>
+        <Caret Line="60" Column="55" TopLine="48"/>
       </Position15>
       <Position16>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="64" Column="12" TopLine="43"/>
+        <Caret Line="150" Column="39" TopLine="134"/>
       </Position16>
       <Position17>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="109" Column="51" TopLine="90"/>
+        <Caret Line="161" Column="25" TopLine="120"/>
       </Position17>
       <Position18>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="106" Column="50" TopLine="89"/>
+        <Caret Line="60" Column="62" TopLine="53"/>
       </Position18>
       <Position19>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="90" Column="25" TopLine="80"/>
+        <Caret Line="88" Column="31" TopLine="78"/>
       </Position19>
       <Position20>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="83" Column="24" TopLine="80"/>
+        <Caret Line="150" Column="77" TopLine="122"/>
       </Position20>
       <Position21>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="155" TopLine="133"/>
+        <Caret Line="104" Column="30" TopLine="92"/>
       </Position21>
       <Position22>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="154" Column="20" TopLine="137"/>
+        <Caret Line="82" Column="15" TopLine="55"/>
       </Position22>
       <Position23>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="53" Column="30" TopLine="35"/>
+        <Caret Line="93" Column="20" TopLine="65"/>
       </Position23>
       <Position24>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="156" Column="20" TopLine="139"/>
+        <Caret Line="151" Column="14" TopLine="123"/>
       </Position24>
       <Position25>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="59" Column="19" TopLine="53"/>
+        <Caret Line="154" Column="13" TopLine="126"/>
       </Position25>
       <Position26>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="127" Column="21" TopLine="97"/>
+        <Caret Line="166" Column="19" TopLine="138"/>
       </Position26>
       <Position27>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="59" Column="17" TopLine="34"/>
+        <Caret Line="174" Column="14" TopLine="155"/>
       </Position27>
       <Position28>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="14" Column="9"/>
+        <Caret Line="179" Column="15" TopLine="155"/>
       </Position28>
       <Position29>
         <Filename Value="ngrams.pas"/>
-        <Caret Line="59" Column="19" TopLine="31"/>
+        <Caret Line="192" Column="38" TopLine="172"/>
       </Position29>
       <Position30>
-        <Filename Value="ngrams.pas"/>
-        <Caret Line="126" Column="42" TopLine="98"/>
+        <Filename Value="riimaa.lpr"/>
+        <Caret Line="60" Column="13" TopLine="47"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

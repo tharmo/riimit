@@ -1,4 +1,22 @@
 class name="nominit"
+  test
+      xse:shellexec: ./riimaa test 
+
+  muodota
+    xse:shellexec: cat ../runokone/isogut.con |gawk -f gut.awk > lauseet.lst
+    xse:shellexec: ./riimaa test >lauseet.srt1
+    xse:shellexec:  cat lauseet.srt1 | sort -d >lauseet.srt
+    xse:shellexec: cat lauseet.srt |uniq >lauseet.uniq
+  adj
+   xse:shellexec: cat san_ana.tmp |grep -n " A Pos Nom Sg"|gawk ' BEGIN { FS=":"} { for (i=prev;i<$1;i++) { print i;s=s "0"}; s=s "1" ;print $0; prev=$1+1} END { print s>"adj.bins"}'
+  gutforms
+    xse:gawk in= ../runokone/isogut.con: '''
+      { if ($1=="1" || $2==".") { if (ok) print para;para="";ok=1} 
+       if ($2==".") ok=0
+      
+      }
+     
+     '''
   env 
     xse:gawk env="LC_ALL=fi_FI.ISO-8859-15":  BEGIN   { print toupper("ääkkösiä"); }
     

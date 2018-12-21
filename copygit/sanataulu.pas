@@ -57,8 +57,12 @@ type tstaulu=class(tobject)
   //end;
 implementation
 uses strutils,riimiuus,math;
+
+
+
 FUNCTION tstaulu.st_san(ind:word):string;
 begin
+
  try
   result:=sanasto.resutaulu.taulu[ind].sana;
  except writeln('nogo');end;
