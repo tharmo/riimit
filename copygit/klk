@@ -1,0 +1,5 @@
+ gensub(/^[ \t]+|[ \t]+$/, "","g",$i) 
+          } 
+          if (res!="") print $1 : 6:  gensub(/^[ \t]+|[ \t]+$/, "","g",$i) 
+          } 
+          if (res!="") print $1 : Syntax error: Unterminated quoted string

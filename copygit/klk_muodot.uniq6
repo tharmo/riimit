@@ -1,0 +1,325 @@
+ 13104
+A 8540
+A Comp Abl Pl 188
+A Comp Abl Sg 368
+A Comp Ade Pl 222
+A Comp Ade Sg 310
+A Comp All Pl 122
+A Comp All Sg 286
+A Comp Ela Pl 128
+A Comp Ela Sg 262
+A Comp Ess Pl 224
+A Comp Ess Sg 296
+A Comp Gen Pl 316
+A Comp Gen Sg 1480
+A Comp Ill Pl 240
+A Comp Ill Sg 380
+A Comp Ine Pl 266
+A Comp Ine Sg 286
+A Comp Ins Pl 300
+A Comp Nom Pl 1916
+A Comp Nom Sg 1928
+A Comp Par Pl 1730
+A Comp Par Sg 886
+A Comp Tra Pl 128
+A Comp Tra Sg 352
+Adp Po 11732
+Adp Po Px3 1206
+Adp Po PxPl1 88
+Adp Po PxSg2 48
+Adp Pr 11732
+Adp Pr Px3 1012
+Adp Pr PxSg2 48
+Adv 3336
+Adv Px3 58
+Adv PxPl1 220
+AgPrc Pos Abe Pl 34
+AgPrc Pos Abe Sg Px3 246
+AgPrc Pos Abl Sg 26
+AgPrc Pos Ade Sg Px3 296
+AgPrc Pos All Pl 46
+AgPrc Pos All Sg 22
+AgPrc Pos Ela Pl Px3 496
+AgPrc Pos Ela Sg Px3 64
+AgPrc Pos Ess Pl 242
+AgPrc Pos Ess Sg 50
+AgPrc Pos Gen Pl 132
+AgPrc Pos Gen Sg 66
+AgPrc Pos Gen Sg Px3 204
+AgPrc Pos Ill Pl 40
+AgPrc Pos Ill Sg Px3 674
+AgPrc Pos Ine Sg Px3 70
+AgPrc Pos Ins Pl 58
+AgPrc Pos Nom Pl 1296
+AgPrc Pos Nom Sg 10122
+AgPrc Pos Par Pl 292
+AgPrc Pos Par Sg 202
+AgPrc Superl Nom Sg 58
+A Pos Abe Pl 68
+A Pos Abe Sg 32
+A Pos Abl Pl 194
+A Pos Abl Sg 364
+A Pos Ade Pl 544
+A Pos Ade Pl Px3 1126
+A Pos Ade Sg 814
+A Pos All Pl 390
+A Pos All Sg 418
+A Pos Ela Pl 474
+A Pos Ela Pl PxPl1 324
+A Pos Ela Sg 498
+A Pos Ess Pl 536
+A Pos Ess Sg 712
+A Pos Gen Pl 1126
+A Pos Gen Sg 2588
+A Pos Gen Sg Px3 52
+A Pos Gen Sg PxPl1 28
+A Pos Gen Sg PxSg1 24
+A Pos Gen Sg PxSg2 44
+A Pos Ill Pl 396
+A Pos Ill Sg 682
+A Pos Ine Pl 276
+A Pos Ine Sg 830
+A Pos Ins Pl 1608
+A Pos Nom Pl 3708
+A Pos Nom Pl Px3 52
+A Pos Nom Pl PxPl1 28
+A Pos Nom Pl PxSg1 24
+A Pos Nom Pl PxSg2 44
+A Pos Nom Sg 11716
+A Pos Nom Sg Px3 52
+A Pos Nom Sg PxPl1 28
+A Pos Nom Sg PxSg1 24
+A Pos Nom Sg PxSg2 44
+A Pos Par Pl 5216
+A Pos Par Sg 2542
+A Pos Par Sg Px3 36
+A Pos Tra Pl 98
+A Pos Tra Sg 382
+A Superl Abl Pl 22
+A Superl Ade Pl 24
+A Superl Ade Sg 50
+A Superl Ess Pl 30
+A Superl Gen Pl 40
+A Superl Gen Sg 374
+A Superl Ine Pl 30
+A Superl Ine Sg 36
+A Superl Ins Pl 48
+A Superl Nom Pl 450
+A Superl Nom Sg 438
+A Superl Par Pl 68
+A Superl Par Sg 228
+CS 28
+N Abe Pl 232
+N Abe Sg 528
+N Abl Pl 286
+N Abl Pl Px3 44
+N Abl Sg 658
+N Ade Pl 1104
+N Ade Pl Px3 34
+N Ade Sg 2422
+N Ade Sg Px3 140
+N All Pl 1140
+N All Sg 1200
+NegPrc Pos Nom Sg 66
+NegPrc Pos Par Pl 26
+NegPrc Pos Par Sg 40
+N Ela Pl 1234
+N Ela Sg 2236
+N Ela Sg Px3 102
+N Ela Sg PxPl1 34
+N Ess Pl 398
+N Ess Pl Px3 22
+N Ess Sg 972
+N Ess Sg Px3 40
+N Gen Pl 1268
+N Gen Pl Px3 186
+N Gen Pl PxPl1 88
+N Gen Pl PxSg1 26
+N Gen Pl PxSg2 136
+N Gen Sg 8740
+N Gen Sg Px3 1302
+N Gen Sg PxPl1 590
+N Gen Sg PxPl2 384
+N Gen Sg PxSg1 404
+N Gen Sg PxSg2 728
+N Ill Pl Px3 42
+N Ill Sg 3076
+N Ill Sg Px3 1474
+N Ill Sg PxPl1 658
+N Ill Sg PxPl2 192
+N Ill Sg PxSg1 442
+N Ill Sg PxSg2 728
+N Ine Pl 1206
+N Ine Pl Px3 78
+N Ine Sg 1058
+N Ine Sg Px3 144
+N Ine Sg PxPl1 42
+N Ins Pl 1370
+N Nom Pl 8760
+N Nom Pl Px3 1302
+N Nom Pl PxPl1 590
+N Nom Pl PxPl2 384
+N Nom Pl PxSg1 404
+N Nom Pl PxSg2 728
+N Nom Sg 16056
+N Nom Sg Px3 1302
+N Nom Sg PxPl1 590
+N Nom Sg PxPl2 384
+N Nom Sg PxSg1 404
+N Nom Sg PxSg2 728
+N Par Pl 3944
+N Par Pl Px3 70
+N Par Pl PxPl1 38
+N Par Sg 7842
+N Par Sg Px3 192
+N Par Sg PxPl1 64
+N Par Sg PxSg1 40
+N Tra Pl 122
+N Tra Pl Px3 34
+N Tra Sg 590
+N Tra Sg Px3 36
+Num All Pl 40
+Num Ess Pl 28
+Num Gen Sg 52
+Num Ins Pl 40
+Num Nom Sg 52
+Num Ord Abe Sg 52
+Num Ord Nom Sg 26
+Num Par Sg 44
+Ord# 26
+Par# 44
+PrfPrc Act Pos Ess Sg 40
+PrfPrc Act Pos Gen Pl 56
+PrfPrc Act Pos Gen Sg 244
+PrfPrc Act Pos Gen Sg Px3 44
+PrfPrc Act Pos Ins Pl 36
+PrfPrc Act Pos Nom Pl 924
+PrfPrc Act Pos Nom Pl Px3 44
+PrfPrc Act Pos Nom Sg 2028
+PrfPrc Act Pos Nom Sg Px3 44
+PrfPrc Act Pos Par Pl 82
+PrfPrc Act Pos Par Sg 32
+PrfPrc Act Superl Nom Sg 36
+PrfPrc Pass Pos Ela Sg 118
+PrfPrc Pass Pos Ess Pl 28
+PrfPrc Pass Pos Ess Sg 150
+PrfPrc Pass Pos Gen Pl 54
+PrfPrc Pass Pos Gen Sg 198
+PrfPrc Pass Pos Ill Sg 26
+PrfPrc Pass Pos Ine Sg 68
+PrfPrc Pass Pos Ins Pl 176
+PrfPrc Pass Pos Nom Pl 2150
+PrfPrc Pass Pos Nom Sg 908
+PrfPrc Pass Pos Par Pl 62
+PrfPrc Pass Pos Par Sg 334
+PrfPrc Pass Pos Par Sg Px3 92
+PrfPrc Pass Pos Tra Sg 58
+PrfPrc Pass Superl Nom Sg 176
+Pron A Gen Sg 24
+Pron A Nom Sg 38
+Pron A Par Pl 38
+Pron A Par Sg 36
+Pron Dem Ela Sg 32
+Pron Dem Gen Pl 26
+Pron Dem Gen Sg Px3 28
+Pron Dem Gen Sg PxPl2 24
+Pron Dem Ill Sg 26
+Pron Dem Ins Pl 504
+Pron Dem Nom Pl PxPl2 24
+Pron Dem Nom Sg 90
+Pron Dem Nom Sg PxPl2 24
+Pron Dem Par Pl Px3 22
+Pron Interr Ade Sg 34
+Pron Interr All Sg 22
+Pron Interr Ela Sg 26
+Pron Interr Ine Sg 22
+Pron Interr Nom Sg 26
+Pron Interr Par Sg 26
+Pron Pers Ade Sg 36
+Pron Pers Ela Sg 22
+Pron Pers Gen Sg Px3 24
+Pron Pers Nom Pl Px3 24
+Pron Pers Nom Sg 48
+Pron Pers Nom Sg Px3 24
+Pron Pers Par Pl 56
+Pron Qnt Ade Sg 32
+Pron Qnt Ine Sg 26
+Pron Qnt Nom Pl 22
+Pron Qnt Nom Sg 54
+Pron Qnt Par Sg 24
+PrsPrc Act Pos All Pl 32
+PrsPrc Act Pos All Sg 22
+PrsPrc Act Pos Gen Pl 72
+PrsPrc Act Pos Gen Sg 242
+PrsPrc Act Pos Gen Sg Px3 28
+PrsPrc Act Pos Ill Pl 36
+PrsPrc Act Pos Ill Sg 46
+PrsPrc Act Pos Ine Pl 30
+PrsPrc Act Pos Ine Sg 48
+PrsPrc Act Pos Ins Pl 58
+PrsPrc Act Pos Nom Pl 2732
+PrsPrc Act Pos Nom Pl Px3 28
+PrsPrc Act Pos Nom Sg 104
+PrsPrc Act Pos Par Pl 126
+PrsPrc Act Pos Par Sg 106
+PrsPrc Act Superl Nom Sg 58
+PrsPrc Pass Pos Gen Sg 48
+PrsPrc Pass Pos Nom Pl 84
+PrsPrc Pass Pos Nom Sg 114
+PrsPrc Pass Pos Par Pl 34
+PrsPrc Pass Pos Par Sg 44
+V Cond Act ConNeg 1994
+V Cond Act Pl1 302
+V Cond Act Pl2 188
+V Cond Act Pl3 560
+V Cond Act Sg1 484
+V Cond Act Sg2 420
+V Cond Act Sg3 1994
+V Cond Pass Pe4 216
+V Cond Pass Pe4 ConNeg 164
+V Gen Sg 54
+V Impv Act Pl1 64
+V Impv Act Pl2 292
+V Impv Act Pl3 522
+V Impv Act Sg2 2642
+V Impv Act Sg3 64
+V Impv ConNeg 86
+V Impv Neg Pl1 58
+V Impv Pass Pe4 118
+V Inf1 Lat 3328
+V Inf2 Act Ine Sg 46
+V Inf2 Act Ins 284
+V Inf2 Pass Ine 46
+V Neg Sg1 24
+V Neg Sg3 22
+V N Gen Sg 264
+V N Ill Sg 72
+V N Nom Sg 380
+V Nom Sg 78
+V N Par Sg Px3 496
+V Par Sg 42
+V Pot Act ConNeg 100
+V Pot Act Pl1 24
+V Pot Act Pl2 46
+V Pot Act Pl3 78
+V Pot Act Sg1 72
+V Pot Act Sg2 80
+V Pot Act Sg3 440
+V Pot Pass Pe4 48
+V Prs Act ConNeg 2642
+V Prs Act Pl1 1028
+V Prs Act Pl2 1678
+V Prs Act Pl3 2758
+V Prs Act Sg1 1510
+V Prs Act Sg2 1228
+V Prs Act Sg3 2182
+V Prs Pass ConNeg 314
+V Prs Pass Pe4 1784
+V Pst Act ConNeg 2028
+V Pst Act Pl1 470
+V Pst Act Pl2 348
+V Pst Act Pl3 2436
+V Pst Act Sg1 984
+V Pst Act Sg2 510
+V Pst Act Sg3 5108
+V Pst Pass ConNeg 850

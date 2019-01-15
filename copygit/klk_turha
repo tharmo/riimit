@@ -1,0 +1,5 @@
+ $1 #gensub(/^[ \t]+|[ \t]+$/, "","g",$i) 
+          } 
+          if (res!="") print $1 : 5:  $1 #gensub(/^[ \t]+|[ \t]+$/, "","g",$i) 
+          } 
+          if (res!="") print $1 : Syntax error: Unterminated quoted string

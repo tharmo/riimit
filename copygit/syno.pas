@@ -615,9 +615,10 @@ end;
 
 procedure ngramlemmas(fil:string);
 var ihte,slist:tstringlist;
-    ngf:textfile; ch:ansichar;
+    inputf,muotof:textfile; ch:ansichar;
     part,i,j:integer;inwrd:boolean;
     line:array[0..20] of ansistring;skip:boolean;//hits:tstringlist;
+    muodot,mhits:array[0..20] of ansistring;
     hits:array[0..20] of ansistring;hitfreqs:array[0..20] of longword;hitnums:array[0..20] of word;hitkots:array[0..20] of word;
     hitcount:word;
     xlens:array[0..20] of word;
@@ -636,7 +637,7 @@ var ihte,slist:tstringlist;
           wf:=hitnums[i];//integer(pointer(hits.objects[i]));
           try
           freqar[wf]:=freqar[wf]+myfreq; //hits[i]+1;
-          //write(hits[i],freqar[wn],' ');
+          //write(hits[i],' ');,freqar[wn],' ');
           except writeln('nono',wf,'/',myfreq);end;
        end;
      end;
@@ -645,20 +646,25 @@ var ihte,slist:tstringlist;
     begin
       try
       runsain:=hitnums[0];
+      try
+      if line[0]='tai' then write(^j,'????',hitnums[0],'/',wnum,'#',hitcount);
       runsaus:=freqar[hitnums[0]];//integer(pointer(hits.objects[0]));
+      except writeln('&',length(freqar),'XX:',hitnums[0],'%');end;
       if hitcount>1 then
       begin
        //for i:=0 to hitcount-1 do write('+',hitnums[i]);
        //for i:=0 to hits.count-1 do write(i,hits[i],integer(pointer(hits.objects[i])),'>');
         //for i:=1 to hits.count-1 do if length(pisin)<length(hits[i]) then pisin:=hits[i];
         for i:=1 to hitcount-1 do
+          try
           if runsaus<freqar[hitnums[i]] then //integer(pointer(hits.objects[i])) then
            begin
              runsain:=hitnums[i];runsaus:=freqar[hitnums[i]];//integer(pointer(hits.objects[i]));
            end;
+          except writeln(i,'#',hitnums[i],'%');end;
        end;
        //if hitcount>1 then write('/',runsain);
-      except writeln('***********',runsain);end;
+      except writeln('***********',runsain,'/',slist.count,'/',hitcount);end;
     end;
    function oldhit(w:string):boolean;
    var j:integer;
@@ -668,10 +674,19 @@ var ihte,slist:tstringlist;
      result:=false;
    end;
    var ffile:file;freqfile:textfile;  freqst:string;exitus:boolean;
+       pairs:textfile;turha:string;tothits:integer;     cc:integer;
+       muodossa:boolean;
 begin
-writeln(fil+'.iso');
+tothits:=0;
+// writeln(fil+'.iso');
 ihte:=tstringlist.create;
 slist:=tstringlist.create;
+//// testaa nopeurra / muistia
+slist.loadfromfile('klk_ws.iso');
+{for i:=0  to  slist.count-1 do
+ if i mod 10000=1 then writeln(' ',slist[i],i);
+
+exit;}
 slist.loadfromfile('sanatvaan.ansi');
 //hits:=tstringlist.create;
 for i:=0 to slist.count-1 do
@@ -693,12 +708,17 @@ end;
 //writeln(slist[21],integer(pointer(slist.objects[21])));exit;
 freqs:=fileexists(fil+'.bin');
 setlength(freqar,slist.count);
+freqs:=false;
 //writeln('freqs,',freqs);
+cc:=0;
   if  freqs then
   begin
     TRY
-    assign(ffile,fil+'.bin');
-    reset(ffile,slist.count*4);
+     assign(pairs,fil+'.pairs1ok');
+     rewrite(pairs);
+     assign(ffile,fil+'.bin');
+     reset(ffile,(slist.count-1)*4);
+     writeln('<<<<<<<<<<<<',slist.count);
     except writeln('failfile ', fileexists(fil+'.bin'),slist.count*4);end;
     blockread(ffile,freqar[0],1);
     closefile(ffile);
@@ -706,89 +726,112 @@ setlength(freqar,slist.count);
     //for i:=0 to slist.count-1 do if freqar[i]>500 then writeln(slist[i],freqar[i],' ');
   end;
   try
-  assign(ngf,fil+'.iso');
-  reset(ngf);
+   assign(inputf,fil+'.iso');
+   reset(inputf);
+   assign(muotof,fil+'_muodot.iso');
+   rewrite(muotof);
   except writeln('not found fil ',fil);raise;end;
+  try
   assign(freqfile,fil+'.num');
-  //writeln('xxx'+fil+'.iso');
+  writeln('xxx'+fil+'.iso');
+  muodossa:=false;
   //assign(freqf,'klklemma.freqs');
   reset(freqfile);
   //writeln('freread');
   //reset(freqfile);
   part:=0;   //readln(ngf,freqst); readln(ngf,freqst);//writeln(';',freqst);; //readln(freqfile,freqst);
-  while not eof(ngf) do
+  while not eof(inputf) do
   begin
-   read(ngf,ch);
+   read(inputf,ch);
+   //write(ch,'.');
       if (ch=^j) then
       begin
-         try
+         //try
+         //if part>4 then        writeln(^j^J,'*************',turha,'  ',part);;
+          cc:=cc+1;
+          //if cc>999999 then break;
            readln(freqfile,freqst);
            try
            //for i:=0 to part-1 do write(line[i],'/');
            myfreq:=strtointdef(freqst,0);
-           //fillchar(hits,sizeof(hits),0);//hits.clear;
-           //fillchar(hitfreqs,sizeof(hitfreqs),0);//hit-words not cleared .. nothing really need to be
-           //writeln(line[0]);
            hitcount:=0;
-           if (part<1) or (line[1][1]='*') then continue;
-           for i:=part downto 2 do for j:=i-1 downto 1 do if line[i]=line[j] then line[i]:='';
-           // begin //write('-',i,line[i],j,line[j]);line[i]:='';end;
-           for i:=1 to part do
-           try
-             //if hits.indexof(line[i])<0 then //similar lemmas skipped
-              //if not oldhit(line[i]) then //similar lemmas skipped
-            if line[i]<>'' then
+           {           if (part>0) and (line[1][1]<>'*') then //todettu sanaksi
              begin
-              //if line[i]=line[0] then ihte.add(line[0]);
-              wnum:=slist.indexof(line[i]);
-              if wnum>=0 then
-              begin hitnums[hitcount]:=wnum;hitcount:=hitcount+1;
-              end;
-              //write(^j,line[0],hitcount);
-              //IF FREQS THEN if wnum>=0 then
-              //  begin hitnums[hitcount]:=wnum;hitcount:=hitcount+1;end;
-              //  //hits.addobject(line[i],tobject(pointer(slist.objects[wnum])));//,tobject(pointer(wnum)));
-              //IF NOT FREQS THEN if wnum>=0 then
-              //  begin hitnums[hitcount]:=wnum;hitcount:=hitcount+1;end;//hits.addobject(line[i],tobject(pointer(slist.objects[wnum])));//,tobject(pointer(wnum)));
-                //hits.addobject(line[i],tobject(pointer(wnum)));//,tobject(pointer(wnum)));
-              //if freqs then if  wnum>=0 then writeln(',',wnum,'/',line[i]);
-             end;
-           except writeln('FAILfreqs:',line[0],runsain);;end;
-           if hitcount>0 then
-           begin
-            if freqs then haerunsain else addfreqs;
-               //if random(1000)=1 then
-             //if hitcount>99990 then       //debuggin lim
-             if freqs then if hitcount>0 then
+             //for i:=1 to part do   write(muotof,muodot[i],',');// else writeln(line[0],' ','*');
+             for i:=part downto 2 do for j:=i-1 downto 1 do if line[i]=line[j] then line[i]:='';
+             for i:=1 to part do
+             try
+              if line[i]<>'' then
+               begin
+                wnum:=slist.indexof(line[i]);
+                {if wnum>=0 then
+                begin //hitnums[hitcount]:=wnum;hitcount:=hitcount+1;
+                 write(muotof,muodot[i],',');
+                 writeln(muotof);
+                end;}
+               end;
+             except writeln('FAILfreqs:',line[0],runsain);;end;
+           end;
+         finally}
+         if (part>0) and (line[1][1]<>'*') then //todettu sanaksi
+         begin
+            write(muotof,^J,line[0],',');
+            write(^J,line[0],',');
+            for i:=1 to part do
+            begin
+             write(muotof,muodot[i],',');
+             write(line[i],',');
+            end;
+            {if hitcount>0 then
+            begin
+             //writeln(^j,'__',line[1],'=',muodot[1],'   ',turha);
+             //write(^j,line[0]  );
+             for i:=0 to hitcount-1 do
              begin
-              //write(^j,line[0],hitcount,'::');//,hits.commatext,slist.indexof(hits[1]),'/',slist.indexof(hits[2]),'/');
-              //for i:=0 to hitcount-1 do try write(' >>',hitnums[i],slist[hitnums[i]],freqar[hitnums[i]]);except writeln('xx',runsaus,'/',runsain);end;
-              //write('      =',slist[runsain],' ');
+              //tuplat: write(' ',slist[hitnums[i]],' ',integer(pointer(slist.objects[hitnums[i]])));// else writeln(line[0],' ','*');
+             //lemmat:
+              try
+              write(^j,line[0],' ',slist[hitnums[i]],' ',integer(pointer(slist.objects[hitnums[i]])));// else writeln(line[0],' ','*');
+             //muodot
+              //write(^j,hitnums[i],': ',slist[hitnums[i]],muodot[hitnums[i]],hitcount);// else writeln(line[0],' ','*');
+              except writeln('***');end;
              end;
-           end;// else writeln(line[0]);
-           finally
-            try //writeln(runsain,line[0],line[1],'//',slist[runsain]);
-            if runsain>-1 then
-             writeln(line[0], ' ',slist[runsain],' ',integer(pointer(slist.objects[runsain]))) else writeln(line[0],' ','*');
-            //if line[0]='ahjoja' then exitus:=true;
-           except writeln('FAIL:',line[0],runsain);;end;
-           hitcount:=0;
+            end;
            runsain:=-1;
-           for j:=0 to 20 do begin line[j]:='';xlens[j]:=0;end;
+           }
+         end;  //
+           for j:=0 to 20 do begin line[j]:='';muodot[j]:='';xlens[j]:=0;end;
            part:=0;
            skip:=false;
-           end;
-           except writeln('***');end;//writeln('fail - hit key');readln;end;
+           muodossa:=false;
+           turha:='';
+           except writeln('FAIL***');end;//writeln('fail - hit key');readln;end;
 
-      end else
+      end else  //rivi jatkuu
       begin
-        if ch='$' then continue else
-        if ch='/' then begin part:=part+1;skip:=false;end
-        else
-         if ch=' ' then skip:=true
-        else if skip then  xlens[part]:=xlens[part]+1 else
-          if ch='#' then begin  line[PART]:='';PART:=PART-1;skip:=true;end else
-         if ch<>'^' then line[part]:=line[part]+ch;
+        try
+        if ch='$' then continue else  //rivin lopussa usein $
+        if (ch='/') and (not muodossa) then   begin part:=part+1;skip:=false;muodossa:=false;end
+        else  if muodossa then
+        begin
+         try
+         if ch='/' then
+          begin
+           //if part>1 then writeln(^j,turha);
+           muodossa:=false;
+           part:=part+1;skip:=false;
+           //writeln(muodot[part],' ',line[part],part);
+          end
+          else if not skip then muodot[part]:=muodot[part]+ch;
+         except writeln('failmuoto',part);raise;end;
+        end
+        else  if ch=' ' then begin muodossa:=true;end // ei välitetä sijatiedoista. lasketaan jostain syystä pituus.. valitaan lyhyin sijanselitys??
+        //else if skip then  xlens[part]:=xlens[part]+1 else
+        else if (ch='#') and (part>0) then begin line[PART]:='';muodot[part]:='';PART:=PART-1;skip:=true;end   //oli yhdyssana, skipataan
+        else if not skip then if ch<>'^' then line[part]:=line[part]+ch; //skipattin alkucaret
+          turha:=turha+ch;
+         except writeln('***',part);raise;end;
+
        end;
          //if ind<2 then if pos(ch,'qwertyuiopäölkjhgfdsazxcvbnm')<1 then ok:=false;
          //if ok=false then if ind=1 then write(ch);
@@ -796,8 +839,12 @@ setlength(freqar,slist.count);
    end;
      //slist.loadfromfile('gutsanat.ansi');
 //   ihte.savetofile('klklemmas2.lst');
-   //writeln('dadsdfasd');
-   close(ngf);
+  finally
+   //writeln('<li>DIDRUN');
+    close(inputf);
+    close(muotof);
+   end;
+  exit;
    if not freqs then
    begin
      //writeln('gogogog');readln;
@@ -807,6 +854,7 @@ setlength(freqar,slist.count);
      closefile(ffile);
      for i:=0 to slist.count-1 do if freqar[i]>=0 then writeln('<li>',slist[i],freqar[i]);
    end;
+  // writeln('hits:',tothits);
    exit;
    //assign(ngf,'klk.srt');
    //reset(ngf);

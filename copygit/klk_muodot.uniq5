@@ -1,0 +1,866 @@
+,107
+,1134
+,122
+,1321
+,15
+,189
+,3154
+,510
+,6552
+A,188
+A,4082
+A,4270
+A Comp Abl Pl,18
+A Comp Abl Pl,76
+A Comp Abl Pl,94
+A Comp Abl Sg,110
+A Comp Abl Sg,184
+A Comp Abl Sg,27
+A Comp Abl Sg,47
+A Comp Ade Pl,111
+A Comp Ade Pl,111
+A Comp Ade Sg,134
+A Comp Ade Sg,155
+A Comp Ade Sg,21
+A Comp All Pl,61
+A Comp All Pl,61
+A Comp All Sg,143
+A Comp All Sg,32
+A Comp All Sg,32
+A Comp All Sg,79
+A Comp Ela Pl,64
+A Comp Ela Pl,64
+A Comp Ela Sg,131
+A Comp Ela Sg,31
+A Comp Ela Sg,31
+A Comp Ela Sg,69
+A Comp Ess Pl,112
+A Comp Ess Pl,112
+A Comp Ess Sg,111
+A Comp Ess Sg,148
+A Comp Ess Sg,37
+A Comp Gen Pl,135
+A Comp Gen Pl,158
+A Comp Gen Pl,23
+A Comp Gen Sg,136
+A Comp Gen Sg,604
+A Comp Gen Sg,740
+A Comp Ill Pl,120
+A Comp Ill Pl,51
+A Comp Ill Pl,69
+A Comp Ill Sg,190
+A Comp Ill Sg,51
+A Comp Ill Sg,69
+A Comp Ill Sg,70
+A Comp Ine Pl,117
+A Comp Ine Pl,133
+A Comp Ine Pl,16
+A Comp Ine Sg,129
+A Comp Ine Sg,14
+A Comp Ine Sg,143
+A Comp Ins Pl,150
+A Comp Ins Pl,75
+A Comp Ins Pl,75
+A Comp Nom Pl,138
+A Comp Nom Pl,820
+A Comp Nom Pl,958
+A Comp Nom Sg,39
+A Comp Nom Sg,39
+A Comp Nom Sg,886
+A Comp Nom Sg,964
+A Comp Par Pl,187
+A Comp Par Pl,678
+A Comp Par Pl,865
+A Comp Par Sg,149
+A Comp Par Sg,294
+A Comp Par Sg,443
+A Comp Tra Pl,15
+A Comp Tra Pl,49
+A Comp Tra Pl,64
+A Comp Tra Sg,141
+A Comp Tra Sg,176
+A Comp Tra Sg,35
+Adp Po,111
+Adp Po,15
+Adp Po,152
+Adp Po,162
+Adp Po,173
+Adp Po,227
+Adp Po,3745
+Adp Po,5866
+Adp Po,70
+Adp Po,73
+Adp Po,83
+Adp Po,870
+Adp Po,88
+Adp Po,97
+Adp Po Px3,14
+Adp Po Px3,19
+Adp Po Px3,242
+Adp Po Px3,35
+Adp Po Px3,39
+Adp Po Px3,41
+Adp Po Px3,56
+Adp Po Px3,603
+Adp Po Px3,78
+Adp Po Px3,79
+Adp Po PxPl1,44
+Adp Po PxPl1,44
+Adp Po PxSg2,24
+Adp Po PxSg2,24
+Adp Pr,111
+Adp Pr,15
+Adp Pr,152
+Adp Pr,162
+Adp Pr,173
+Adp Pr,227
+Adp Pr,3745
+Adp Pr,5866
+Adp Pr,70
+Adp Pr,73
+Adp Pr,83
+Adp Pr,870
+Adp Pr,88
+Adp Pr,97
+Adp Pr Px3,14
+Adp Pr Px3,242
+Adp Pr Px3,35
+Adp Pr Px3,39
+Adp Pr Px3,41
+Adp Pr Px3,506
+Adp Pr Px3,56
+Adp Pr Px3,79
+Adp Pr PxSg2,24
+Adp Pr PxSg2,24
+Adv,110
+Adv,13
+Adv,134
+Adv,1668
+Adv,18
+Adv,20
+Adv,252
+Adv,311
+Adv,43
+Adv,604
+Adv,75
+Adv,88
+Adv Px3,29
+Adv Px3,29
+Adv PxPl1,110
+Adv PxPl1,110
+AgPrc Pos Abe Pl,17
+AgPrc Pos Abe Pl,17
+AgPrc Pos Abe Sg Px3,123
+AgPrc Pos Abe Sg Px3,123
+AgPrc Pos Abl Sg,13
+AgPrc Pos Abl Sg,13
+AgPrc Pos Ade Sg Px3,148
+AgPrc Pos Ade Sg Px3,148
+AgPrc Pos All Pl,23
+AgPrc Pos All Pl,23
+AgPrc Pos All Sg,11
+AgPrc Pos All Sg,11
+AgPrc Pos Ela Pl Px3,248
+AgPrc Pos Ela Pl Px3,248
+AgPrc Pos Ela Sg Px3,32
+AgPrc Pos Ela Sg Px3,32
+AgPrc Pos Ess Pl,121
+AgPrc Pos Ess Pl,121
+AgPrc Pos Ess Sg,25
+AgPrc Pos Ess Sg,25
+AgPrc Pos Gen Pl,33
+AgPrc Pos Gen Pl,33
+AgPrc Pos Gen Pl,66
+AgPrc Pos Gen Sg,33
+AgPrc Pos Gen Sg,33
+AgPrc Pos Gen Sg Px3,102
+AgPrc Pos Gen Sg Px3,102
+AgPrc Pos Ill Pl,20
+AgPrc Pos Ill Pl,20
+AgPrc Pos Ill Sg Px3,337
+AgPrc Pos Ill Sg Px3,337
+AgPrc Pos Ine Sg Px3,35
+AgPrc Pos Ine Sg Px3,35
+AgPrc Pos Ins Pl,29
+AgPrc Pos Ins Pl,29
+AgPrc Pos Nom Pl,186
+AgPrc Pos Nom Pl,231
+AgPrc Pos Nom Pl,231
+AgPrc Pos Nom Pl,648
+AgPrc Pos Nom Sg,181
+AgPrc Pos Nom Sg,4750
+AgPrc Pos Nom Sg,5061
+AgPrc Pos Nom Sg,65
+AgPrc Pos Nom Sg,65
+AgPrc Pos Par Pl,14
+AgPrc Pos Par Pl,146
+AgPrc Pos Par Pl,66
+AgPrc Pos Par Pl,66
+AgPrc Pos Par Sg,101
+AgPrc Pos Par Sg,25
+AgPrc Pos Par Sg,38
+AgPrc Pos Par Sg,38
+AgPrc Superl Nom Sg,29
+AgPrc Superl Nom Sg,29
+A Pos Abe Pl,34
+A Pos Abe Pl,34
+A Pos Abe Sg,16
+A Pos Abe Sg,16
+A Pos Abl Pl,21
+A Pos Abl Pl,76
+A Pos Abl Pl,97
+A Pos Abl Sg,135
+A Pos Abl Sg,182
+A Pos Abl Sg,47
+A Pos Ade Pl,111
+A Pos Ade Pl,161
+A Pos Ade Pl,272
+A Pos Ade Pl Px3,15
+A Pos Ade Pl Px3,548
+A Pos Ade Pl Px3,563
+A Pos Ade Sg,134
+A Pos Ade Sg,273
+A Pos Ade Sg,407
+A Pos All Pl,134
+A Pos All Pl,195
+A Pos All Pl,61
+A Pos All Sg,130
+A Pos All Sg,209
+A Pos All Sg,79
+A Pos Ela Pl,173
+A Pos Ela Pl,237
+A Pos Ela Pl,64
+A Pos Ela Pl PxPl1,162
+A Pos Ela Pl PxPl1,162
+A Pos Ela Sg,180
+A Pos Ela Sg,249
+A Pos Ela Sg,69
+A Pos Ess Pl,112
+A Pos Ess Pl,156
+A Pos Ess Pl,268
+A Pos Ess Sg,111
+A Pos Ess Sg,245
+A Pos Ess Sg,356
+A Pos Gen Pl,135
+A Pos Gen Pl,36
+A Pos Gen Pl,392
+A Pos Gen Pl,563
+A Pos Gen Sg,122
+A Pos Gen Sg,1294
+A Pos Gen Sg,189
+A Pos Gen Sg,213
+A Pos Gen Sg,604
+A Pos Gen Sg,80
+A Pos Gen Sg,86
+A Pos Gen Sg Px3,26
+A Pos Gen Sg Px3,26
+A Pos Gen Sg PxPl1,14
+A Pos Gen Sg PxPl1,14
+A Pos Gen Sg PxSg1,12
+A Pos Gen Sg PxSg1,12
+A Pos Gen Sg PxSg2,22
+A Pos Gen Sg PxSg2,22
+A Pos Ill Pl,108
+A Pos Ill Pl,198
+A Pos Ill Pl,21
+A Pos Ill Pl,69
+A Pos Ill Sg,271
+A Pos Ill Sg,341
+A Pos Ill Sg,70
+A Pos Ine Pl,117
+A Pos Ine Pl,138
+A Pos Ine Pl,21
+A Pos Ine Sg,129
+A Pos Ine Sg,286
+A Pos Ine Sg,415
+A Pos Ins Pl,15
+A Pos Ins Pl,219
+A Pos Ins Pl,570
+A Pos Ins Pl,804
+A Pos Nom Pl,1854
+A Pos Nom Pl,397
+A Pos Nom Pl,576
+A Pos Nom Pl,61
+A Pos Nom Pl,820
+A Pos Nom Pl Px3,26
+A Pos Nom Pl Px3,26
+A Pos Nom Pl PxPl1,14
+A Pos Nom Pl PxPl1,14
+A Pos Nom Pl PxSg1,12
+A Pos Nom Pl PxSg1,12
+A Pos Nom Pl PxSg2,22
+A Pos Nom Pl PxSg2,22
+A Pos Nom Sg,15
+A Pos Nom Sg,27
+A Pos Nom Sg,4082
+A Pos Nom Sg,57
+A Pos Nom Sg,5858
+A Pos Nom Sg,791
+A Pos Nom Sg,886
+A Pos Nom Sg Px3,26
+A Pos Nom Sg Px3,26
+A Pos Nom Sg PxPl1,14
+A Pos Nom Sg PxPl1,14
+A Pos Nom Sg PxSg1,12
+A Pos Nom Sg PxSg1,12
+A Pos Nom Sg PxSg2,22
+A Pos Nom Sg PxSg2,22
+A Pos Par Pl,1515
+A Pos Par Pl,2608
+A Pos Par Pl,31
+A Pos Par Pl,321
+A Pos Par Pl,63
+A Pos Par Pl,678
+A Pos Par Sg,1271
+A Pos Par Sg,294
+A Pos Par Sg,40
+A Pos Par Sg,417
+A Pos Par Sg,520
+A Pos Par Sg Px3,18
+A Pos Par Sg Px3,18
+A Pos Tra Pl,49
+A Pos Tra Pl,49
+A Pos Tra Sg,141
+A Pos Tra Sg,191
+A Pos Tra Sg,50
+A Superl Abl Pl,11
+A Superl Abl Pl,11
+A Superl Ade Pl,12
+A Superl Ade Pl,12
+A Superl Ade Sg,25
+A Superl Ade Sg,25
+A Superl Ess Pl,15
+A Superl Ess Pl,15
+A Superl Gen Pl,20
+A Superl Gen Pl,20
+A Superl Gen Sg,187
+A Superl Gen Sg,187
+A Superl Ine Pl,15
+A Superl Ine Pl,15
+A Superl Ine Sg,18
+A Superl Ine Sg,18
+A Superl Ins Pl,24
+A Superl Ins Pl,24
+A Superl Nom Pl,225
+A Superl Nom Pl,225
+A Superl Nom Sg,219
+A Superl Nom Sg,219
+A Superl Par Pl,34
+A Superl Par Pl,34
+A Superl Par Sg,114
+A Superl Par Sg,114
+CS,14
+CS,14
+N Abe Pl,116
+N Abe Pl,17
+N Abe Pl,99
+N Abe Sg,227
+N Abe Sg,264
+N Abe Sg,37
+N Abl Pl,111
+N Abl Pl,143
+N Abl Pl,32
+N Abl Pl Px3,22
+N Abl Pl Px3,22
+N Abl Sg,256
+N Abl Sg,329
+N Abl Sg,73
+N Ade Pl,552
+N Ade Pl,552
+N Ade Pl Px3,17
+N Ade Pl Px3,17
+N Ade Sg,1211
+N Ade Sg,1211
+N Ade Sg Px3,29
+N Ade Sg Px3,41
+N Ade Sg Px3,70
+N All Pl,321
+N All Pl,570
+N All Pl,83
+N All Pl,83
+N All Pl,83
+N All Sg,600
+N All Sg,600
+NegPrc Pos Nom Sg,33
+NegPrc Pos Nom Sg,33
+NegPrc Pos Par Pl,13
+NegPrc Pos Par Pl,13
+NegPrc Pos Par Sg,20
+NegPrc Pos Par Sg,20
+N Ela Pl,15
+N Ela Pl,602
+N Ela Pl,617
+N Ela Sg,1118
+N Ela Sg,1118
+N Ela Sg Px3,14
+N Ela Sg Px3,37
+N Ela Sg Px3,51
+N Ela Sg PxPl1,17
+N Ela Sg PxPl1,17
+N Ess Pl,121
+N Ess Pl,199
+N Ess Pl,78
+N Ess Pl Px3,11
+N Ess Pl Px3,11
+N Ess Sg,173
+N Ess Sg,313
+N Ess Sg,486
+N Ess Sg Px3,20
+N Ess Sg Px3,20
+N Gen Pl,30
+N Gen Pl,604
+N Gen Pl,634
+N Gen Pl Px3,15
+N Gen Pl Px3,78
+N Gen Pl Px3,93
+N Gen Pl PxPl1,44
+N Gen Pl PxPl1,44
+N Gen Pl PxSg1,13
+N Gen Pl PxSg1,13
+N Gen Pl PxSg2,68
+N Gen Pl PxSg2,68
+N Gen Sg,103
+N Gen Sg,121
+N Gen Sg,122
+N Gen Sg,3154
+N Gen Sg,4370
+N Gen Sg,870
+N Gen Sg Px3,651
+N Gen Sg Px3,651
+N Gen Sg PxPl1,295
+N Gen Sg PxPl1,295
+N Gen Sg PxPl2,192
+N Gen Sg PxPl2,96
+N Gen Sg PxPl2,96
+N Gen Sg PxSg1,202
+N Gen Sg PxSg1,202
+N Gen Sg PxSg2,364
+N Gen Sg PxSg2,364
+N Ill Pl Px3,21
+N Ill Pl Px3,21
+N Ill Sg,1402
+N Ill Sg,1538
+N Ill Sg,17
+N Ill Sg,32
+N Ill Sg,87
+N Ill Sg Px3,11
+N Ill Sg Px3,651
+N Ill Sg Px3,737
+N Ill Sg Px3,75
+N Ill Sg PxPl1,295
+N Ill Sg PxPl1,329
+N Ill Sg PxPl1,34
+N Ill Sg PxPl2,96
+N Ill Sg PxPl2,96
+N Ill Sg PxSg1,19
+N Ill Sg PxSg1,202
+N Ill Sg PxSg1,221
+N Ill Sg PxSg2,364
+N Ill Sg PxSg2,364
+N Ine Pl,162
+N Ine Pl,441
+N Ine Pl,603
+N Ine Pl Px3,39
+N Ine Pl Px3,39
+N Ine Sg,529
+N Ine Sg,529
+N Ine Sg Px3,16
+N Ine Sg Px3,56
+N Ine Sg Px3,72
+N Ine Sg PxPl1,21
+N Ine Sg PxPl1,21
+N Ins Pl,134
+N Ins Pl,41
+N Ins Pl,510
+N Ins Pl,685
+N Nom Pl,255
+N Nom Pl,4082
+N Nom Pl,43
+N Nom Pl,4380
+N Nom Pl Px3,651
+N Nom Pl Px3,651
+N Nom Pl PxPl1,295
+N Nom Pl PxPl1,295
+N Nom Pl PxPl2,192
+N Nom Pl PxPl2,96
+N Nom Pl PxPl2,96
+N Nom Pl PxSg1,202
+N Nom Pl PxSg1,202
+N Nom Pl PxSg2,364
+N Nom Pl PxSg2,364
+N Nom Sg,107
+N Nom Sg,169
+N Nom Sg,28
+N Nom Sg,2974
+N Nom Sg,4750
+N Nom Sg,8028
+N Nom Sg Px3,651
+N Nom Sg Px3,651
+N Nom Sg PxPl1,295
+N Nom Sg PxPl1,295
+N Nom Sg PxPl2,192
+N Nom Sg PxPl2,96
+N Nom Sg PxPl2,96
+N Nom Sg PxSg1,202
+N Nom Sg PxSg1,202
+N Nom Sg PxSg2,364
+N Nom Sg PxSg2,364
+N Par Pl,14
+N Par Pl,14
+N Par Pl,1944
+N Par Pl,1972
+N Par Pl Px3,35
+N Par Pl Px3,35
+N Par Pl PxPl1,19
+N Par Pl PxPl1,19
+N Par Sg,176
+N Par Sg,3745
+N Par Sg,3921
+N Par Sg Px3,17
+N Par Sg Px3,79
+N Par Sg Px3,96
+N Par Sg PxPl1,32
+N Par Sg PxPl1,32
+N Par Sg PxSg1,20
+N Par Sg PxSg1,20
+N Tra Pl,18
+N Tra Pl,43
+N Tra Pl,61
+N Tra Pl Px3,17
+N Tra Pl Px3,17
+N Tra Sg,207
+N Tra Sg,295
+N Tra Sg,88
+N Tra Sg Px3,18
+N Tra Sg Px3,18
+Num All Pl,20
+Num All Pl,20
+Num Ess Pl,14
+Num Ess Pl,14
+Num Gen Sg,26
+Num Gen Sg,26
+Num Ins Pl,20
+Num Ins Pl,20
+Num Nom Sg,26
+Num Nom Sg,26
+Num Ord Abe Sg,26
+Num Ord Abe Sg,26
+Num Ord Nom Sg,13
+Num Ord Nom Sg,13
+Num Par Sg,22
+Num Par Sg,22
+Ord#,13
+Ord#,13
+Par#,22
+Par#,22
+PrfPrc Act Pos Ess Sg,20
+PrfPrc Act Pos Ess Sg,20
+PrfPrc Act Pos Gen Pl,28
+PrfPrc Act Pos Gen Pl,28
+PrfPrc Act Pos Gen Sg,122
+PrfPrc Act Pos Gen Sg,122
+PrfPrc Act Pos Gen Sg Px3,22
+PrfPrc Act Pos Gen Sg Px3,22
+PrfPrc Act Pos Ins Pl,18
+PrfPrc Act Pos Ins Pl,18
+PrfPrc Act Pos Nom Pl,462
+PrfPrc Act Pos Nom Pl,462
+PrfPrc Act Pos Nom Pl Px3,22
+PrfPrc Act Pos Nom Pl Px3,22
+PrfPrc Act Pos Nom Sg,1014
+PrfPrc Act Pos Nom Sg,1014
+PrfPrc Act Pos Nom Sg Px3,22
+PrfPrc Act Pos Nom Sg Px3,22
+PrfPrc Act Pos Par Pl,41
+PrfPrc Act Pos Par Pl,41
+PrfPrc Act Pos Par Sg,16
+PrfPrc Act Pos Par Sg,16
+PrfPrc Act Superl Nom Sg,18
+PrfPrc Act Superl Nom Sg,18
+PrfPrc Pass Pos Ela Sg,59
+PrfPrc Pass Pos Ela Sg,59
+PrfPrc Pass Pos Ess Pl,14
+PrfPrc Pass Pos Ess Pl,14
+PrfPrc Pass Pos Ess Sg,75
+PrfPrc Pass Pos Ess Sg,75
+PrfPrc Pass Pos Gen Pl,27
+PrfPrc Pass Pos Gen Pl,27
+PrfPrc Pass Pos Gen Sg,19
+PrfPrc Pass Pos Gen Sg,80
+PrfPrc Pass Pos Gen Sg,99
+PrfPrc Pass Pos Ill Sg,13
+PrfPrc Pass Pos Ill Sg,13
+PrfPrc Pass Pos Ine Sg,34
+PrfPrc Pass Pos Ine Sg,34
+PrfPrc Pass Pos Ins Pl,88
+PrfPrc Pass Pos Ins Pl,88
+PrfPrc Pass Pos Nom Pl,1014
+PrfPrc Pass Pos Nom Pl,1075
+PrfPrc Pass Pos Nom Pl,61
+PrfPrc Pass Pos Nom Sg,29
+PrfPrc Pass Pos Nom Sg,425
+PrfPrc Pass Pos Nom Sg,454
+PrfPrc Pass Pos Par Pl,31
+PrfPrc Pass Pos Par Pl,31
+PrfPrc Pass Pos Par Sg,15
+PrfPrc Pass Pos Par Sg,152
+PrfPrc Pass Pos Par Sg,167
+PrfPrc Pass Pos Par Sg Px3,11
+PrfPrc Pass Pos Par Sg Px3,35
+PrfPrc Pass Pos Par Sg Px3,46
+PrfPrc Pass Pos Tra Sg,29
+PrfPrc Pass Pos Tra Sg,29
+PrfPrc Pass Superl Nom Sg,88
+PrfPrc Pass Superl Nom Sg,88
+Pron A Gen Sg,12
+Pron A Gen Sg,12
+Pron A Nom Sg,19
+Pron A Nom Sg,19
+Pron A Par Pl,19
+Pron A Par Pl,19
+Pron A Par Sg,18
+Pron A Par Sg,18
+Pron Dem Ela Sg,16
+Pron Dem Ela Sg,16
+Pron Dem Gen Pl,13
+Pron Dem Gen Pl,13
+Pron Dem Gen Sg Px3,14
+Pron Dem Gen Sg Px3,14
+Pron Dem Gen Sg PxPl2,12
+Pron Dem Gen Sg PxPl2,12
+Pron Dem Ill Sg,13
+Pron Dem Ill Sg,13
+Pron Dem Ins Pl,252
+Pron Dem Ins Pl,252
+Pron Dem Nom Pl PxPl2,12
+Pron Dem Nom Pl PxPl2,12
+Pron Dem Nom Sg,18
+Pron Dem Nom Sg,27
+Pron Dem Nom Sg,45
+Pron Dem Nom Sg PxPl2,12
+Pron Dem Nom Sg PxPl2,12
+Pron Dem Par Pl Px3,11
+Pron Dem Par Pl Px3,11
+Pron Interr Ade Sg,17
+Pron Interr Ade Sg,17
+Pron Interr All Sg,11
+Pron Interr All Sg,11
+Pron Interr Ela Sg,13
+Pron Interr Ela Sg,13
+Pron Interr Ine Sg,11
+Pron Interr Ine Sg,11
+Pron Interr Nom Sg,13
+Pron Interr Nom Sg,13
+Pron Interr Par Sg,13
+Pron Interr Par Sg,13
+Pron Pers Ade Sg,18
+Pron Pers Ade Sg,18
+Pron Pers Ela Sg,11
+Pron Pers Ela Sg,11
+Pron Pers Gen Sg Px3,12
+Pron Pers Gen Sg Px3,12
+Pron Pers Nom Pl Px3,12
+Pron Pers Nom Pl Px3,12
+Pron Pers Nom Sg,24
+Pron Pers Nom Sg,24
+Pron Pers Nom Sg Px3,12
+Pron Pers Nom Sg Px3,12
+Pron Pers Par Pl,14
+Pron Pers Par Pl,14
+Pron Pers Par Pl,28
+Pron Qnt Ade Sg,16
+Pron Qnt Ade Sg,16
+Pron Qnt Ine Sg,13
+Pron Qnt Ine Sg,13
+Pron Qnt Nom Pl,11
+Pron Qnt Nom Pl,11
+Pron Qnt Nom Sg,27
+Pron Qnt Nom Sg,27
+Pron Qnt Par Sg,12
+Pron Qnt Par Sg,12
+PrsPrc Act Pos All Pl,16
+PrsPrc Act Pos All Pl,16
+PrsPrc Act Pos All Sg,11
+PrsPrc Act Pos All Sg,11
+PrsPrc Act Pos Gen Pl,36
+PrsPrc Act Pos Gen Pl,36
+PrsPrc Act Pos Gen Sg,121
+PrsPrc Act Pos Gen Sg,35
+PrsPrc Act Pos Gen Sg,86
+PrsPrc Act Pos Gen Sg Px3,14
+PrsPrc Act Pos Gen Sg Px3,14
+PrsPrc Act Pos Ill Pl,18
+PrsPrc Act Pos Ill Pl,18
+PrsPrc Act Pos Ill Sg,23
+PrsPrc Act Pos Ill Sg,23
+PrsPrc Act Pos Ine Pl,15
+PrsPrc Act Pos Ine Pl,15
+PrsPrc Act Pos Ine Sg,24
+PrsPrc Act Pos Ine Sg,24
+PrsPrc Act Pos Ins Pl,29
+PrsPrc Act Pos Ins Pl,29
+PrsPrc Act Pos Nom Pl,1366
+PrsPrc Act Pos Nom Pl,486
+PrsPrc Act Pos Nom Pl,880
+PrsPrc Act Pos Nom Pl Px3,14
+PrsPrc Act Pos Nom Pl Px3,14
+PrsPrc Act Pos Nom Sg,25
+PrsPrc Act Pos Nom Sg,27
+PrsPrc Act Pos Nom Sg,52
+PrsPrc Act Pos Par Pl,63
+PrsPrc Act Pos Par Pl,63
+PrsPrc Act Pos Par Sg,13
+PrsPrc Act Pos Par Sg,40
+PrsPrc Act Pos Par Sg,53
+PrsPrc Act Superl Nom Sg,29
+PrsPrc Act Superl Nom Sg,29
+PrsPrc Pass Pos Gen Sg,24
+PrsPrc Pass Pos Gen Sg,24
+PrsPrc Pass Pos Nom Pl,42
+PrsPrc Pass Pos Nom Pl,42
+PrsPrc Pass Pos Nom Sg,57
+PrsPrc Pass Pos Nom Sg,57
+PrsPrc Pass Pos Par Pl,17
+PrsPrc Pass Pos Par Pl,17
+PrsPrc Pass Pos Par Sg,22
+PrsPrc Pass Pos Par Sg,22
+V Cond Act ConNeg,997
+V Cond Act ConNeg,997
+V Cond Act Pl1,151
+V Cond Act Pl1,151
+V Cond Act Pl2,94
+V Cond Act Pl2,94
+V Cond Act Pl3,140
+V Cond Act Pl3,140
+V Cond Act Pl3,280
+V Cond Act Sg1,219
+V Cond Act Sg1,23
+V Cond Act Sg1,242
+V Cond Act Sg2,210
+V Cond Act Sg2,66
+V Cond Act Sg2,72
+V Cond Act Sg2,72
+V Cond Act Sg3,997
+V Cond Act Sg3,997
+V Cond Pass Pe4,108
+V Cond Pass Pe4,108
+V Cond Pass Pe4 ConNeg,82
+V Cond Pass Pe4 ConNeg,82
+V Gen Sg,27
+V Gen Sg,27
+V Impv Act Pl1,32
+V Impv Act Pl1,32
+V Impv Act Pl2,146
+V Impv Act Pl2,146
+V Impv Act Pl3,191
+V Impv Act Pl3,261
+V Impv Act Pl3,70
+V Impv Act Sg2,1321
+V Impv Act Sg2,1321
+V Impv Act Sg3,32
+V Impv Act Sg3,32
+V Impv ConNeg,14
+V Impv ConNeg,29
+V Impv ConNeg,43
+V Impv Neg Pl1,29
+V Impv Neg Pl1,29
+V Impv Pass Pe4,59
+V Impv Pass Pe4,59
+V Inf1 Lat,149
+V Inf1 Lat,1515
+V Inf1 Lat,1664
+V Inf2 Act Ine Sg,23
+V Inf2 Act Ine Sg,23
+V Inf2 Act Ins,142
+V Inf2 Act Ins,45
+V Inf2 Act Ins,97
+V Inf2 Pass Ine,23
+V Inf2 Pass Ine,23
+V Neg Sg1,12
+V Neg Sg1,12
+V Neg Sg3,11
+V Neg Sg3,11
+V N Gen Sg,11
+V N Gen Sg,121
+V N Gen Sg,132
+V N Ill Sg,36
+V N Ill Sg,36
+V N Nom Sg,169
+V N Nom Sg,190
+V N Nom Sg,21
+V Nom Sg,11
+V Nom Sg,28
+V Nom Sg,39
+V N Par Sg Px3,248
+V N Par Sg Px3,248
+V Par Sg,21
+V Par Sg,21
+V Pot Act ConNeg,50
+V Pot Act ConNeg,50
+V Pot Act Pl1,12
+V Pot Act Pl1,12
+V Pot Act Pl2,23
+V Pot Act Pl2,23
+V Pot Act Pl3,39
+V Pot Act Pl3,39
+V Pot Act Sg1,36
+V Pot Act Sg1,36
+V Pot Act Sg2,40
+V Pot Act Sg2,40
+V Pot Act Sg3,220
+V Pot Act Sg3,220
+V Pot Pass Pe4,24
+V Pot Pass Pe4,24
+V Prs Act ConNeg,1321
+V Prs Act ConNeg,1321
+V Prs Act Pl1,162
+V Prs Act Pl1,352
+V Prs Act Pl1,514
+V Prs Act Pl2,15
+V Prs Act Pl2,412
+V Prs Act Pl2,412
+V Prs Act Pl2,839
+V Prs Act Pl3,13
+V Prs Act Pl3,1379
+V Prs Act Pl3,486
+V Prs Act Pl3,880
+V Prs Act Sg1,242
+V Prs Act Sg1,513
+V Prs Act Sg1,755
+V Prs Act Sg2,38
+V Prs Act Sg2,576
+V Prs Act Sg2,614
+V Prs Act Sg3,1091
+V Prs Act Sg3,520
+V Prs Act Sg3,571
+V Prs Pass ConNeg,157
+V Prs Pass ConNeg,157
+V Prs Pass Pe4,344
+V Prs Pass Pe4,548
+V Prs Pass Pe4,892
+V Pst Act ConNeg,1014
+V Pst Act ConNeg,1014
+V Pst Act Pl1,110
+V Pst Act Pl1,125
+V Pst Act Pl1,235
+V Pst Act Pl2,174
+V Pst Act Pl2,174
+V Pst Act Pl3,1218
+V Pst Act Pl3,246
+V Pst Act Pl3,486
+V Pst Act Pl3,486
+V Pst Act Sg1,240
+V Pst Act Sg1,252
+V Pst Act Sg1,492
+V Pst Act Sg2,255
+V Pst Act Sg2,255
+V Pst Act Sg3,1134
+V Pst Act Sg3,1369
+V Pst Act Sg3,24
+V Pst Act Sg3,2554
+V Pst Act Sg3,27
+V Pst Pass ConNeg,425
+V Pst Pass ConNeg,425
+V Pst Pass Pe4,585
+V Pst Pass Pe4,672
+V Pst Pass Pe4,87

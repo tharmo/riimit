@@ -20,19 +20,20 @@ indent_mode=2
 [project]
 name=riimit
 base_path=/home/t/riimitin/
+description=
 
 [long line marker]
 long_line_behaviour=1
 long_line_column=99
 
 [files]
-current_page=5
-FILE_NAME_0=682;None;0;EISO-8859-1;1;1;0;%2Fhome%2Ft%2Friimitin%2Friimit.xsi;0;8
-FILE_NAME_1=903380;None;0;EUTF-8;1;1;0;%2Fhome%2Ft%2Friimitin%2Fsanatuus.csv;0;8
-FILE_NAME_2=3569;None;0;EISO-8859-1;1;1;0;%2Fhome%2Ft%2Friimitin%2Fadv.lst;0;8
-FILE_NAME_3=4959;None;0;EISO-8859-1;1;1;0;%2Fhome%2Ft%2Friimitin%2Fsanatvaan.ansi;0;8
-FILE_NAME_4=0;None;0;EUTF-8;0;1;0;%2Fhome%2Ft%2Friimitin%2Fgut2.awk;0;3
-FILE_NAME_5=0;None;0;EUTF-8;0;1;0;%2Fhome%2Ft%2Friimitin%2Fgut.awk;0;3
+current_page=6
+FILE_NAME_0=3686;None;0;EISO-8859-1;1;1;0;%2Fhome%2Ft%2Friimitin%2Friimit.xsi;0;8
+FILE_NAME_1=1106071;None;0;EUTF-8;1;1;0;%2Fhome%2Ft%2Friimitin%2Fsanatuus.csv;0;8
+FILE_NAME_2=2061;None;0;EISO-8859-1;1;1;0;%2Fhome%2Ft%2Friimitin%2Fadv.lst;0;8
+FILE_NAME_3=269218;None;0;EISO-8859-1;1;1;0;%2Fhome%2Ft%2Friimitin%2Fsanatvaan.ansi;0;8
+FILE_NAME_4=1342;None;0;EUTF-8;0;1;0;%2Fhome%2Ft%2Friimitin%2Fgut2.awk;0;3
+FILE_NAME_5=504;None;0;EUTF-8;0;1;0;%2Fhome%2Ft%2Friimitin%2Fgut.awk;0;3
 
 [VTE]
 last_dir=/home/t

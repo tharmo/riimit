@@ -1,53 +1,25 @@
-:::::,0 	,1 ,14 ,31 ,32
-x 	ex ,ilot ,iloja ulapoita
-x 	mto ,NomPl ,GenPl ,IllPl
-x 	paa ,t ,ten ,in
-01 	ukko , ,! ,!
-02 	kotelo , ,! ,!
-03 	avio , ,! ,!
-04 	elikko , ,! ,!
-05 	h‰kki , ,! ,!
-06 	vokaali , ,! ,!
-07 	hanhi ,e- ,! ,
-08 	nukke , , ,!
-09 	ankka , ,! ,
-10 	fokka , ,! ,i-
-11 	itara , ,! ,i-
-12 	urea , ,! ,!
-13 	aluna , ,! ,i-
-14 	ulappa , ,! ,i-
-15 	upea , ,! ,isi-
-16 	aiempi ,a- ,! ,
-17 	keruu , ,! ,isi-
-18 	j‰‰ , ,! ,!
-19 	suo , ,! ,!
-20 	filee , ,! ,isi-
-21 	gay , ,! ,!
-22 	buffet , ,! ,!
-23 	lohi ,e- ,! ,
-24 	uni ,e- ,- ,
-25 	liemi ,e- ,n-- ,
-26 	veri ,e- ,- ,
-27 	mesi ,de-- ,t-- ,
-28 	kansi ,e* ,t-- ,
-29 	lapsi ,e- ,sX ,
-30 	peitsi ,e- ,sX ,
-31 	yksi ,hde-- ,! ,
-32 	tyt‰r ,e , ,i
-33 	asetin ,me ,n ,mi
-34 	hapan ,ma ,n ,mi
-35 	l‰mmin ,ma ,n ,mi
-36 	alin ,mma ,n ,mpi
-37 	vasen ,mma ,n ,mpi
-38 	ˆinen ,se ,s ,si
-39 	ajos ,kse ,s ,ksi
-40 	etuus ,de ,! ,ksi
-41 	rakas ,_ ,! ,isi
-42 	mies ,he ,s ,hi
-43 	immyt ,e ,! ,isi
-44 	kev‰t ,a ,! ,isi
-45 	sadas ,nne ,! ,nsi
-46 	tuhat ,nne ,n ,nsi
-47 	mennyt ,ee- ,! ,eisi-
-48 	hake ,_ ,! ,eisi
-49 	kinner ,ee , ,i
+     BEGIN { getline;print}
+     {           
+        # if (NR>200) exit 
+        print "<li>#" NR 
+        next        
+        lemma=$2;sana=$1;#freq=$3; no freqs in this one
+        kot=$3
+        if (p1==sana) {
+             print p2,lemma,kot,p3 >"klk_newhits.tmp";print p2> "klk_tofiana2.lst"    ## newhits.tmp sis‰lt‰‰ tiedot san 1 j‰rj, san 2 ekana
+             print "***",$0 "  //",p1,p2,plemma
+             
+        }    
+        while (1) {
+             getline< "klk_siivo3.srt.iso"  
+             #print $1,"?",sana, ($1 > sana)
+             if ($1 > sana) { #print $0,"\\",lemma, sana;
+             p1=$1;p2=$2;p3=$3;break;  }
+             #ss=ss+1;if (ss>20000) exit 
+             if (sana==$1) #print sana,$0
+             print $2,lemma,kot,$3, sana  > "klk_newhits.tmp";print $2 >"klk_tofiana2.lst" 
+         
+         }        
+         #if (NR>1000) exit
+       
+     }  
