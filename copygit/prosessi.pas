@@ -33,13 +33,12 @@ begin
 
 end;
 
-
 procedure teetemput;
 var   riiminaiheet,riimaavat:tstaulu;sl:tlist;muolist,riilist:tstringlist;syns:tsynonyms;synarr:tsynarray;
    i,siz:integer;
    sans:tstringlist;
    sims:tsimmat;
-   hlist,hplist,glist,glist2,gplist,gplist2:tlist;
+   hlist,hplist,glist,glist2,gplist,gplist2:tlist; asani:tsanainfo;
    function sltext:string;
    var i:word;
    begin
@@ -52,8 +51,23 @@ var   riiminaiheet,riimaavat:tstaulu;sl:tlist;muolist,riilist:tstringlist;syns:t
        hplist.add(pointer(10));
      writeln('///',w,sans.indexof(w));
    end;
+   var inf:text;ss:string;
 begin
+  assign(inf,'klk_tofiana2.lst');
+  reset(inf);
   sans:=tstringlist.create;  //pitäis laittaa classiin
+  sans.Duplicates:=dupignore;
+  sans.sorted:=true;
+  i:=0;
+  while not eof(inf) do  //erillinen tmp testi
+  begin
+     readln(inf,ss);
+     //ss:=copy(ss,1,pos(' ',ss)-1);
+     sans.add(ss);
+     i:=i+1;if i mod 5000=1 then write(sans.count,ss, ', ');
+  end;
+  writeln(sans.commatext);
+  exit;
   sans.loadfromfile('sanatvaan.ansi');
   //sans.insert(0,'');
   glist:=tlist.create;
@@ -166,6 +180,18 @@ begin
   SANASTO:=tsanasto.create;  //luo myös globaalit verbit, nominit, muodot
   sanasto.slist:=sans;
   sanasto.readadjbin;
+  glist.clear;
+  glist.add(pointer(19982));
+  writeln('generoi:');
+  sanasto.generatelist(glist,true);
+  writeln('gggggg');
+  for i:=0 to sanasto.resutaulu.wcount-1 do
+  begin
+    asani:=sanasto.resutaulu.taulu[i];
+
+    writeln('<li>',reversestring(asani.sana));//,' ',asani.sija);
+  end;
+  exit;
   exit;
   //jostain syystä käyttää tiedostoa NOMSALL.CSV vaikka kaikki on mukana SANATUUS.CSV'ssä.. EI KÄYTÄ
   //******'sanatuus.csv','vmids.csv','vsijat.csv';

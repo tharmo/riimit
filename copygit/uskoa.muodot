@@ -1,0 +1,70 @@
+Checking whether the transducer accepts a single blank as a word...
+Transducer successfully loaded
+^uopua/*uopua$
+^juopuaksemme/juopua V Inf1 Act Tra Sg PxPl1$
+^juopuakseni/juopua V Inf1 Act Tra Sg PxSg1$
+^juopuaksenne/juopua V Inf1 Act Tra Sg PxPl2$
+^juopuaksesi/juopua V Inf1 Act Tra Sg PxSg2$
+^juovu/juopua V Impv Act Sg2/juopua V Prs Act ConNeg$
+^juovumme/juopua V Prs Act Pl1$
+^juovun/juopua V Prs Act Sg1$
+^juovut/juopua V Prs Act Sg2$
+^juovutte/juopua V Prs Act Pl2$
+^juopuvat/juopua PrsPrc Act Pos Nom Pl/juopua V Prs Act Pl3$
+^juopuu/juopua V Prs Act Sg3$
+^juovuta/juopua V Prs Pass ConNeg/juovuttaa V Impv Act Sg2/juovuttaa V Prs Act ConNeg$
+^juovutaan/juopua V Prs Pass Pe4$
+^juovutut/juopua PrfPrc Pass Pos Nom Pl$
+^juopunee/juopua V Pot Act Sg3$
+^juopunemme/juopua V Pot Act Pl1$
+^juopunen/juopua V Pot Act Sg1$
+^juopunet/juopua V Pot Act Sg2$
+^juopunette/juopua V Pot Act Pl2$
+^juopunevat/juopua V Pot Act Pl3$
+^juopunut/juopua PrfPrc Act Pos Nom Sg/juopua V Pst Act ConNeg/juopunut A Pos Nom Sg$
+^juopui/juopua V Pst Act Sg3$
+^juovuimme/juopua V Pst Act Pl1$
+^juovuin/juopua V Pst Act Sg1$
+^juovuit/juopua V Pst Act Sg2$
+^juovuitte/juopua V Pst Act Pl2$
+^juopuivat/juopua V Pst Act Pl3$
+^juovuttaessa/juopua V Inf2 Pass Ine/juovuttaa V Inf2 Act Ine Sg$
+^juovuttaisiin/juopua V Cond Pass Pe4$
+^juovuttakoon/juopua V Impv Pass Pe4/juovuttaa V Impv Act Sg3$
+^juovuttaman/juopua V Inf3 Pass Ins/juovuttaa AgPrc Pos Gen Sg/juovuttaa V Inf3 Man$
+^juovuttaneen/juopua V Pot Pass Pe4/juovuttaa PrfPrc Act Pos Gen Sg$
+^juovuttava/juopua PrsPrc Pass Pos Nom Sg/juovuttaa PrsPrc Act Pos Nom Sg$
+^juovuttiin/juopua V Pst Pass Pe4$
+^juovuttu/juopua PrfPrc Pass Pos Nom Sg/juopua V Pst Pass ConNeg$
+^juopuen/juopua V Inf2 Act Ins$
+^juopuessa/juopua V Inf2 Act Ine Sg$
+^juopuisi/juopua V Cond Act ConNeg/juopua V Cond Act Sg3$
+^juopuisimme/juopua V Cond Act Pl1$
+^juopuisin/juopua V Cond Act Sg1$
+^juopuisit/juopua V Cond Act Sg2$
+^juopuisitte/juopua V Cond Act Pl2$
+^juopuisivat/juopua V Cond Act Pl3$
+^juopuma/juopua AgPrc Pos Nom Sg$
+^juopumaan/juopua AgPrc Pos Ill Sg/juopua V Inf3 Ill$
+^juopumaisillaan/juopua V Act Inf5 Px3$
+^juopumaisillamme/juopua V Act Inf5 PxPl1$
+^juopumaisillani/juopua V Act Inf5 PxSg1$
+^juopumaisillanne/juopua V Act Inf5 PxPl2$
+^juopumaisillasi/juopua V Act Inf5 PxSg2$
+^juopumalla/juopua AgPrc Pos Ade Sg/juopua V Inf3 Ade$
+^juopuman/juopua AgPrc Pos Gen Sg/juopua V Inf3 Man$
+^juopumassa/juopua AgPrc Pos Ine Sg/juopua V Inf3 Ine$
+^juopumasta/juopua AgPrc Pos Ela Sg/juopua V Inf3 Ela$
+^juopumatta/juopua AgPrc Pos Abe Sg/juopua V Inf3 Abe$
+^juopuminen/juopua V N Nom Sg/juopuminen N Nom Sg$
+^juopumista/juopua AgPrc Pos Ela Pl/juopua V N Par Sg/juopuminen N Par Sg$
+^juopumista/juopua AgPrc Pos Ela Pl/juopua V N Par Sg/juopuminen N Par Sg$
+^juopuva/juopua PrsPrc Act Pos Nom Sg$
+^juopuvat/juopua PrsPrc Act Pos Nom Pl/juopua V Prs Act Pl3$
+^juopukaa/juopua V Impv Act Pl2$
+^juopukaamme/juopua V Impv Act Pl1$
+^juopukoon/juopua V Impv Act Sg3$
+^juopukoot/juopua V Impv Act Pl3$ 
+
+
+Got None/EOF symbol; done.

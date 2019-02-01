@@ -1,25 +1,4 @@
-     BEGIN { getline;print}
-     {           
-        # if (NR>200) exit 
-        print "<li>#" NR 
-        next        
-        lemma=$2;sana=$1;#freq=$3; no freqs in this one
-        kot=$3
-        if (p1==sana) {
-             print p2,lemma,kot,p3 >"klk_newhits.tmp";print p2> "klk_tofiana2.lst"    ## newhits.tmp sis‰lt‰‰ tiedot san 1 j‰rj, san 2 ekana
-             print "***",$0 "  //",p1,p2,plemma
-             
-        }    
-        while (1) {
-             getline< "klk_siivo3.srt.iso"  
-             #print $1,"?",sana, ($1 > sana)
-             if ($1 > sana) { #print $0,"\\",lemma, sana;
-             p1=$1;p2=$2;p3=$3;break;  }
-             #ss=ss+1;if (ss>20000) exit 
-             if (sana==$1) #print sana,$0
-             print $2,lemma,kot,$3, sana  > "klk_newhits.tmp";print $2 >"klk_tofiana2.lst" 
-         
-         }        
-         #if (NR>1000) exit
-       
-     }  
+a,beevittu,c
+d,e
+f
+

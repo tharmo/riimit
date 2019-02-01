@@ -1,4 +1,6 @@
 class name="nominit"
+
+  #cat  ../runokone/conlus/5*-8.txt.utf |gawk '{print $4}' |sort >testi.lst
   test
     pre
       xse:shellexec: ./riimaa test
@@ -107,6 +109,7 @@ class name="nominit"
          FS="\x20"
          cc=0
          if (sana==p1) print p2,p3,$0 >"klk.koko1"
+         while (getline< "klk_siivo3.srt.iso") {
          while (getline< "klk_siivo3.srt.iso") {
            cc=cc+1
            if ($1==sana) {
@@ -247,8 +250,8 @@ class name="nominit"
    '''
   gensome
    pre
-     xse:gawk in=klk_msums2.tmp: '''
-      BEGIN {  FS=","
+     xse:gawk in=: '''
+      BEGIN {  FS=",";OFS=","
             es["V"]="ostaa";
             es["N"]="poika";
             es["PrsPrc"]="auttava";
@@ -263,29 +266,101 @@ class name="nominit"
             es["AgPrc"]="tulla";
             es["Abbr"]="esim.";
             es["Adv"]="aina";
-    
+            es["Adp"]="kanssa";
+          } xaaltoilla AgPrc Act Pos Abe Sgx
+       function pron(cla) {   
+         if (index(cla,"Pers")>0) return "minä" 
+         if (index(cla,"Interr")>0) return "kuka" 
+         if (index(cla,"Dem")>0) return "tuo" 
+         if (index(cla,"Qnt")>0) return "monta" 
+         if (index(cla,"Refl")>0) return "itse" 
+         if (index(cla,"Rel")>0) return "joka" 
+         if (index(cla,"Indef")>0) return "joku" 
+         if (index(cla,"_A_")>0) return "sellainen" 
+         return "usea"
+         #p["Interr"]="kuka"
+         #p["Dem"]="tuo"
+         #p["Qnt"]="monta"
+         #p["Refl"]="itse"
+         #p["Rel"]="joka"
        }
-     {  if ($6<100) next
-      print $3 >"gen.nums" 
+     {  #if (NR>10000) exit
+      print int(100000*$3*$3/($5*$4+1)) >"gen.nums" 
+      #print int(100000*$3*$3/($5*$4+1)) >"gen.nums" 
       s1=substr($1,1,index($1,"_")-1)
+      
+      if (s1=="Pron") { san1=pron($1); } else san1=es[s1]
+      if (index($1,"Adv")>0) $1="Adv"
       $1=gensub(/_$/,"","1",$1)
-       print es[s1] " " gensub(/_/," ","g",$1) > "tofigen.lst"
+       print san1 " " gensub(/_/," ","g",$1) > "tofigen.lst"
       s2=substr($2,1,index($2,"_")-1)
       $2=gensub(/_$/,"","1",$2)
-       print es[s2] " " gensub(/_/," ","g",$2) > "tofigen2.lst"
-       
+      if (s2=="Pron") { san2=pron($2) } else san2=es[s2]
+      if (index($1,"Adv")>0) $1="Adv"
+      
+        #print s2,es[s2],$0
+       print san2 " " gensub(/_/," ","g",$2) > "tofigen2.lst"
+       #print NR,$0      
        
      }
    
-   '''     
+   ''' 
+  muodot     
+   pre
+    xse:gawk in=gen.lst BEGIN="FS='\t';OFS=','": '''
+     {
+      if ($0=="") next
+      if ($2 " " $1==prev) next
+      if (index($0,"?")>0) next
+      print $2,$1 >"muo.tmp"
+      prev=$2 " " $1
+     } 
+    '''
+    xse:shellexec: cat  muo.tmp| sort -d| uniq >muo.uniq
+    pre
+      xse:shellexec: cat muo.uniq
   gen 
-   xse:shellexec: cat tofigen.lst | ./figen >"gen.lst"
-   xse:shellexec: cat tofigen2.lst | ./figen >"gen2.lst"
-   
-   
+   xse:shellexec: cat tofigen.lst |iconv -f ISO-8859-1//TRANSLIT -t UTF-8 | ./figen |iconv -t ISO-8859-1//TRANSLIT -f UTF-8  >"gen.lst"
+   xse:shellexec: cat tofigen2.lst |iconv -f ISO-8859-1//TRANSLIT -t UTF-8 | ./figen |iconv -t ISO-8859-1//TRANSLIT -f UTF-8  >"gen2.lst"
+
+
   pairex
    pre
+    xse:gawk in=gen.lst: '''  BEGIN {  FS="\t"}
+     {
+     if ($0=="") {
+       while (getline < "gen2.lst") {
+         nr=nr+1
+         if ($0=="") { nr2++;break  }  
+         if (index($0,"\?")==0) { w2[n2]=$2; n2++;}
+        #if (index($0,"\?")==0) {       split($0,ww,"\t");   w2[n2]=ww[2]      }
+       } 
+       getline n<"gen.nums"
+       
+       if (n>1250) 
+       { #if (w1[1]=="aina") 
+       #if (prev!=w1[1]) print "<hr>"
+       for (i in w1) for (j in w2) print nr1,nr2,"/" w1[i],"/", w2[j],"/        ",n
+       prev=w1[1]
+       }
+       delete(w1)
+       delete(w2)
+       n1=1
+       n2=1
+       nr1++
+       next
+     }
+     if (index($0,"\?")==0) { w1[n1]=$2; n1++ }
+                              #if (index($0,"\?")!=0) {  split($0,ww,"\t"); w1[n1]=ww[2] "#" NR; n1++ }
+     #print "- " NR,gensub("\t","!","g", $0),n1, "?" index($0,"\?"),".", w1[1],n1,"_", $2
+     #if (NR>20000) exit
+    }
+     
+    ''' 
+  pairsort
+   pre
     xse:gawk in=gen.lst: '''  BEGIN {  FS=","}
+     function cmp(a,b,
      {
      if ($0=="") {
        while (getline < "gen2.lst") {
@@ -296,9 +371,9 @@ class name="nominit"
          }
        } 
        getline n<"gen.nums"
-       if (n>10000)
+       if (n>20) #if (w1[1]=="aina")
        for (i in w1) for (j in w2) print w1[i],"  ", w2[j],"        ",n
-       delete(w1)
+        delete(w1)
        delete(w2)
        n1=1
        n2=1
@@ -355,7 +430,64 @@ class name="nominit"
        #xse:shellexec: gawk  '{ print $1}' klk_sanat2.srt.utf |uniq  > klktofiana2.utf
        xse:shellexec: cat klk_tofiana2.utf |./fiana >klk_ana2.utf
        xse:shellexec: iconv -t ISO-8859-1//TRANSLIT -f UTF-8  klk_ana2.utf > klk_ana2.iso
-
+  klk_sanat  #meni homonyymihauksi... po alkua sense differentiation (?)
+      pre
+      xse:gawk in=klk_ana2.iso env="LC_ALL=fi_FI.ISO-8859-1" : '''
+      BEGIN { print "<table>"; FS="/";rx="/"}
+         /\/[^\#\*/]*[/$]/ { 
+          go=0
+          if (NR>100000) exit 
+          if (index($0,"AgPrc")<1 ) next #&& index($0,"PrsPrc")<1) next 
+          tx="<td>" $1 "</td>"
+          if (NF<2) next
+          for (i=2;i<=NF;i++) {
+            #if (index($i,"AgPrc")>0) print
+            if (index($i,"#")>0) next
+            #continue
+            color="gray"
+            # sanai=substr($i,index($i," "),2)
+            sanai=substr($i,1,index($i," "))
+            slk=substr($i,index($i," ")+1,2)
+            if (slk=="V ") color="green"
+            else if (slk=="Ag") color="red"
+            else if (slk=="A ") color="brown"
+            else if (slk=="N ") color="black"
+            #tx=tx $i "#" slk color
+            tx=tx "<td><b style=\"color:" color "\">" slk "</b> " $i "</td>"
+            continue
+            if (index($i,"#")<1) 
+             #if (index($i," Px")<1) 
+            for (j=i+1;j<=NF;j++) {
+              #if (index($j,"#")<1) 
+              #if (index($j," Px")<1) 
+              #if  (index($j,substr($i,index($i," "),2))!=1) #eri sanaluokka
+              if (sanai!=substr($j,1,index($j," "))) {
+                 tuplat[substr($i,index($i," "))]=substr($j,index($j," "))
+                 hit=substr($i,index($i," ")) "_" substr($j,index($j," "))
+                 hits[hit]=hits[hit]+1
+                 #print $i,"   /   " $j, $1
+                if (index($0,"AgPrc")<1) 
+                  print $1, "#" substr($i,index($i," "),2) , substr($j,index($j," "),2) "," $0
+                if (index($0," V ")>1) 
+                  print $1, "#" substr($i,index($i," "),2) , substr($j,index($j," "),2) "," $0
+              #  go=1
+              
+              } 
+            }  
+          }
+           print "<tr>" tx "</tr>"
+           #if (go)  print sanai "/" $3 "/"  
+           #if (substr(index($i,"#")>0) 
+           #if (index($0,"#")>0) 
+          print substr($0,2)>"klk_vainsanat2.iso"  #vain jos saman lekseemin eri muotoja
+         } 
+         END { 
+          #for (s in tuplat) print s "=" tuplat[s] 
+          print "<hr>"
+          for (h in hits) print "<b>" hits[h] "</b> " h
+          }
+        
+      '''
   klk_lemmaa2
        ### valitse mahd vaihtoehdoista ne joiden lemma esiintyy sanatvain.lst:ssä.  }
        # in=klk_ana.iso
@@ -485,8 +617,73 @@ class name="nominit"
 
 
   klk_combine
-    xse:shellexec: cat klk_parit.1_nums.srt klk_parit.2_nums.srt  |sort -V >klk_parit.12_nums.srt
-
+   pre
+    #xse:shellexec: cat klk_parit.1_nums.srt klk_parit.2_nums.srt  |sort -V >klk_parit.12_nums.srt
+    xse:gawk in=klk_parit.12_nums.srt: '''
+      { if ($4=="saldo") print n, ":", $0 ,NR,p1,p2
+        if ($1==p1 && $2==p2)
+          { n=n+$3}
+            else 
+             { print p1,p2,n,p4,p5 >"klk_parit.iso";
+             n=$3;p1=$1;p2=$2;p4=$4;p5=$5
+             } 
+      }
+      '''  
+  guts
+   pre
+    ###xse:gawk in=gutpairs.lst: '''
+     BEGIN { OFS=",";FS=" "; while (getline<"sanatvaan.ansi") {  s[$1]=i;i=i+1 } }
+     {
+     #if (NR>10000) exit
+     if ($1==p1 && $2==p2) { n++;next}
+     if ($1!=p1) { print p2,p1,sn,n >"gutpairs2.tmp";p1=$1;p2=$2;sn=s[$1];n=1;next}
+     if ($2!=p2) { print p2,p1,sn,n >"gutpairs2.tmp";p2=$2;n=1 }
+     }
+     
+     '''
+    ###xse:shellexec: LC_ALL=fi_FI.ISO-8859-1;cat gutpairs2.tmp| sort -d >gutpairs2.srt
+    xse:gawk in=gutpairs2.srt: '''
+     BEGIN { FS=","; OFS=","; while (getline<"sanatvaan.ansi") {  s[$1]=i;i=i+1 } }
+     {
+     #if (NR>10000) exit
+     if ($1==p1 && $2==p2) { print "EI pitäis olla tuplia",$0;n=$4;next}
+     if ($1!=p1) { sn=s[$1];p1=$1}
+     print sn,$3,$4,$1,$2 >"gutpairs3.tmp";
+     #if ($2!=p2) { p2=$2;n=1 }
+     }
+     '''
+    xse:shellexec: LC_ALL=fi_FI.ISO-8859-1;cat gutpairs3.tmp| sort -V >gutpairs.all
+     
+     
+  klk_asort  
+   pre
+    xse:gawk in=klk_parit.iso BEGIN="p1='xxx';while (getline<'klk_sanat.counts') { c[$1]=$3}": '''
+    
+     { 
+       n2=c[$2]
+       
+       if ($1==p1)  {  if ($3<10) next
+        fr= 1000*$3*$3/(n1+10)
+        fr=int(1000*fr/(n2+10))
+        #print NR,$4,$5,fr,":",n1,n2,$3
+       idx=sprintf("%06i",fr) "_" NR
+       #if (NR>150000) exit
+       if (fr<5) next 
+       #if ($3>100)
+       nn[idx]= " " $5 fr "/" n2 "/" $3
+      } else { 
+       asorti(nn,sorted)
+       for (i=1;i<length(nn);i++) {  st=st " " nn[sorted[i]] }
+             print p4,n1 ": " st "\n\n"> "klk_asort.iso"           
+       st=""      
+       #print "******" p1, n1, "       next:" $1,$3,$4,c[$1], "#" $5 #> "klk_asort.iso"  
+       n1=c[$1]
+       delete(nn) 
+       p1=$1;p4=$4
+     }
+    } 
+    
+    '''
   tuplat
    xse:shellexec: ./riimaa klk_lemmaa klk_ana >tuplat.1
    xse:shellexec: ./riimaa klk_lemmaa klk_ana2 >tuplat.2
@@ -507,8 +704,8 @@ class name="nominit"
           }
          else {
            #if ($1-1!=p1) print p1 , $1, s[$1-1];
-           if ($1-1!=p1) for (mis=p1+1 ;mis<$1;mis++) { if (tupla[s[mis]]>0) { print "***" mis, s[mis] } else print  mis, s[mis],n;}
-           print p1,",",n> "klk_sanat.counts" ;n=$3;p1=$1
+           #if ($1-1!=p1) for (mis=p1+1 ;mis<$1;mis++) { if (tupla[s[mis]]>0) { print "***" mis, s[mis] } else print  mis, s[mis],n;}
+           print p1,p4,n> "klk_sanat.counts" ;n=$3;p1=$1;p4=$4
          }
          
         }
